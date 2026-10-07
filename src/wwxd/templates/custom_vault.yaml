@@ -11,7 +11,7 @@ domains: []
 discovery:
   youtube_channels: []   # the person's OWN channels, e.g. https://www.youtube.com/@handle
   youtube_queries: []    # extra searches; "<name> interview/podcast/talk" are added automatically
-  feeds: []              # RSS/Atom: blogs, Substack, podcast feeds
+  feeds: []              # RSS/Atom: their blog, Substack, podcast. Someone else's show: {url: ..., own: false}
   link_indexes: []       # pages that list articles: {url: ..., pattern: <regex for article urls>}
   min_duration: 240      # seconds; skips Shorts and clips
   per_query: 15

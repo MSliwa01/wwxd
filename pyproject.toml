@@ -15,7 +15,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-whisper = ["faster-whisper>=1.0.0"]
+whisper = ["faster-whisper>=1.0.0", "av<18"]  # faster-whisper 1.2.1 passes metadata_errors, which PyAV 19 removed
 diarize = ["pyannote.audio>=3.1"]
 
 [project.scripts]

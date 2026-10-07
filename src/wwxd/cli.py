@@ -151,7 +151,7 @@ def reject(
 ) -> None:
     """Reject candidates. Rejected ids are never re-added by discovery."""
     v = _vault(vault)
-    n = _set_status(v, ids or [], hint or [], "rejected", ("candidate", "approved"))
+    n = _set_status(v, ids or [], hint or [], "rejected", ("candidate", "approved", "failed"))
     typer.echo(f"Rejected {n}")
 
 

@@ -114,7 +114,20 @@ def _channel_videos_url(url: str) -> str:
     return url + "/videos"
 
 
-def _feed_sources(vault: Vault, url: str, limit: int) -> list[Source]:
+def _itunes_duration(value: str | None) -> float | None:
+    if not value:
+        return None
+    try:
+        seconds = 0.0
+        for part in value.strip().split(":"):
+            seconds = seconds * 60 + float(part)
+        return seconds
+    except ValueError:
+        return None
+
+
+def _feed_sources(vault: Vault, url: str, limit: int, *, own: bool = True) -> list[Source]:
+    """own: the feed belongs to the member(s). Set `own: false` for someone else's show they guest on."""
     request = urllib.request.Request(url, headers={"User-Agent": "wwxd"})
     with urllib.request.urlopen(request, timeout=30) as response:
         root = ET.fromstring(response.read())
@@ -137,7 +150,11 @@ def _feed_sources(vault: Vault, url: str, limit: int) -> list[Source]:
                 pass
         else:
             date = (item.findtext(f"{atom}published") or item.findtext(f"{atom}updated") or "")[:10]
-        speakers = _mentioned_members(title, vault) or [m.id for m in vault.members if len(vault.members) == 1]
+        mentioned = _mentioned_members(title, vault)
+        speakers = mentioned or ([m.id for m in vault.members] if own and len(vault.members) == 1 else [])
+        if not own and not mentioned:
+            continue  # someone else's show and the episode doesn't name a member
+        hint = "own" if own else _hint(title, mentioned, own=False)
         enclosure = item.find("enclosure")
         if enclosure is not None and (enclosure.get("type") or "").startswith("audio"):
             audio_url = enclosure.get("url", "")
@@ -147,9 +164,10 @@ def _feed_sources(vault: Vault, url: str, limit: int) -> list[Source]:
                     type="podcast",
                     url=audio_url,
                     title=title,
-                    hint=_hint(title, speakers, own=False) if speakers else "unknown",
+                    hint=hint,
                     channel=channel_title,
                     date=date,
+                    duration=_itunes_duration(item.findtext("{http://www.itunes.com/dtds/podcast-1.0.dtd}duration")),
                     expected_speakers=speakers,
                     found_via=f"feed:{url}",
                 )
@@ -161,7 +179,7 @@ def _feed_sources(vault: Vault, url: str, limit: int) -> list[Source]:
                     type="web",
                     url=link,
                     title=title,
-                    hint="own",
+                    hint=hint,
                     channel=channel_title,
                     date=date,
                     expected_speakers=speakers,
@@ -226,7 +244,8 @@ def discover(vault: Vault, *, per_query: int | None = None) -> tuple[list[Source
             own=False, found_via=f"search:{query}")
 
     for feed in cfg.get("feeds") or []:
-        run(feed, _feed_sources, vault, feed, cfg.get("per_feed", 100))
+        feed_url, own = (feed, True) if isinstance(feed, str) else (feed["url"], feed.get("own", True))
+        run(feed_url, _feed_sources, vault, feed_url, cfg.get("per_feed", 100), own=own)
 
     for index in cfg.get("link_indexes") or []:
         run(index["url"], _link_index_sources, vault, index["url"], index["pattern"], index.get("limit", 500))

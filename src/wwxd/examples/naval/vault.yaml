@@ -12,9 +12,9 @@ discovery:
   youtube_queries:
     - Naval Ravikant podcast
     - Naval How to Get Rich every episode
-  feeds: []
-  link_indexes:
-    - url: https://nav.al/archive
-      pattern: '^https://nav\.al/[a-z0-9-]+$'
+  feeds:
+    - https://nav.al/feed           # essays and posts
+    - https://nav.al/podcast/feed   # Naval podcast (audio; needs wwxd[whisper])
+  link_indexes: []
   min_duration: 600
   per_query: 15

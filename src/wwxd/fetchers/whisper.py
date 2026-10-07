@@ -20,11 +20,11 @@ def _resolve_device(device: str) -> str:
     if device != "auto":
         return device
     try:
-        import torch
+        import ctranslate2
 
-        if torch.cuda.is_available():
+        if ctranslate2.get_cuda_device_count() > 0:
             return "cuda"
-    except ImportError:
+    except Exception:  # missing CUDA libraries look like "no GPU"
         pass
     return "cpu"
 
@@ -40,7 +40,7 @@ def _get_model():
         ) from exc
     settings = get_settings()
     device = _resolve_device(settings.whisper_device)
-    compute_type = "float16" if device == "cuda" else "int8"
+    compute_type = "auto"  # fastest type the hardware supports (older GPUs lack fast float16)
     logger.info("Loading Whisper '%s' on %s (%s)", settings.whisper_model, device, compute_type)
     return WhisperModel(settings.whisper_model, device=device, compute_type=compute_type)
 
