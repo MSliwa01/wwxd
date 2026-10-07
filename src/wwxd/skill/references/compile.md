@@ -9,6 +9,11 @@ work out every speaker before reading the body: the members, hosts and guests.
 Write it down for yourself, e.g. "host: Vivian Shen (not a member); guest: Paul
 Graham = `pg`".
 
+Check the `date` too, since `tensions.md` depends on it. Article dates from metadata
+can be wrong (an essay dated "July 2023" in its own text may come through as
+`2023-01-01`). If the source's own dateline disagrees, fix `date` for that source
+in `sources.yaml` (raw docs are immutable) and use the corrected date in the wiki.
+
 ## 2. Segment turns and attribute them
 
 Read the transcript in order. Caption tracks often mark speaker changes with

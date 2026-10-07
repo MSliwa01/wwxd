@@ -18,6 +18,9 @@ STATEMENT = re.compile(r'^- "(?P<quote>.+)" \((?P<cite>\[\[[^\]]+\]\][^()]*)\)\s
 CITATION = re.compile(
     r"^\[\[(?P<src>[^\]]+)\]\](?:\s*@\s*(?P<ts>\d+(?::\d{2}){1,2}))?(?P<attrs>(?:\s*;\s*[^;]+)*)$"
 )
+INLINE_QUOTE = re.compile(
+    r'"(?P<quote>[^"]+)" \((?P<cite>\[\[(?:' + "|".join(SOURCE_PREFIXES) + r')[^\]]+\]\][^()]*)\)'
+)
 CITED_LINE = re.compile(r"\((?P<cite>\[\[(?:" + "|".join(SOURCE_PREFIXES) + r")[^\]]+\]\][^()]*)\)")
 SECTION = re.compile(r"^##\s+(.+?)\s*$")
 CONFIDENCES = ("high", "medium", "low")
@@ -37,7 +40,8 @@ class Issue:
 
 
 def normalize(text: str) -> str:
-    text = text.lower().replace("’", "'").replace("'", "")
+    text = re.sub(r"\[[a-z ]+\]", " ", text.lower())  # caption tags: [laughter], [music], [snorts]
+    text = text.replace("’", "'").replace("'", "")
     text = re.sub(r"[^\w\s]", " ", text)
     return re.sub(r"\s+", " ", text).strip()
 
@@ -185,7 +189,12 @@ def lint(vault: Vault) -> list[Issue]:
             if statement:
                 statements += in_statements
                 _check_statement(statement, line_no, add, raw, member_ids, check_quote=True)
-            elif section == "actions" and line.startswith("- "):
+                continue
+            # Quotes woven into prose (stance, caveats, profile, tensions) are checked too.
+            inline = list(INLINE_QUOTE.finditer(line))
+            for match in inline:
+                _check_statement(match, line_no, add, raw, member_ids, check_quote=True)
+            if not inline and section == "actions" and line.startswith("- "):
                 cite = CITED_LINE.search(line)
                 if not cite:
                     add("warning", line_no, "action without a source citation")

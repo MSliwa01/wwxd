@@ -28,7 +28,7 @@ def vault(tmp_path: Path):
         segments=[
             Segment(0, "So welcome. >> Thanks for having me."),
             Segment(31, "I think you can still start a startup on not much money."),
-            Segment(65, "Everything technology always gets cheaper, right?"),
+            Segment(65, "Everything technology always gets [laughter] cheaper, right?"),
             Segment(120, "The fear of failure is what motivates founders day-to-day."),
         ],
     )
@@ -110,3 +110,14 @@ def test_derived_and_missing_raw(vault):
 
 def test_template_comments_ignored(vault):
     assert messages(vault) == []
+
+
+def test_inline_quotes_in_prose_are_checked(vault):
+    write_leaf(
+        vault,
+        f'- "you can still start a startup on not much money" ([[{SRC}]] @ 0:31; by: pg; conf: high)',
+        extra=f'\n## Caveats\n- He adds that "money grows on trees" ([[{SRC}]] @ 1:05; by: pg; conf: high).\n'
+        f'- But "everything technology always gets cheaper" ([[{SRC}]] @ 1:05; by: pg; conf: high).\n',
+    )
+    errs = messages(vault)
+    assert len(errs) == 1 and "quote not in source" in errs[0]

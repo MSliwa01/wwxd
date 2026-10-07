@@ -108,7 +108,7 @@ def update(vault: VaultArg) -> None:
 def sources(
     vault: VaultArg,
     status: Annotated[str | None, typer.Option(help=f"Filter: {', '.join(STATUSES)}")] = None,
-    hint: Annotated[str | None, typer.Option(help="Filter: own, appearance, maybe-about, unknown, manual")] = None,
+    hint: Annotated[str | None, typer.Option(help="Filter: own, channel, appearance, maybe-about, unknown, manual")] = None,
 ) -> None:
     """List sources."""
     v = _vault(vault)

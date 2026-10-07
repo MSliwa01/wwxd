@@ -114,6 +114,10 @@ One statement per line, inside `## Statements`:
 
 `## Actions` lines use the same citation, but the text is a paraphrase, not a quote.
 
+A quote inside prose (Stance, Caveats, profile, tensions) followed directly by a
+full citation, as in `he said "…" ([[yt-…]] @ 1:23; by: pg; conf: high)`, is checked
+the same way as a statement.
+
 ### Citations elsewhere
 
 Any `[[<source-id>]]` anywhere in `wiki/` must point to an existing raw doc.
