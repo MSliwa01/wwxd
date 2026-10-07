@@ -35,3 +35,15 @@ over many clips.
 Present the candidates as a short grouped list ("12 own long-form talks:
 approve; 7 third-party summaries: reject; 3 panels: your call") rather than
 dumping every row.
+
+## Using a cheaper model for triage
+
+Triage only reads titles, channels and durations, so a cheaper, faster model does
+it well. In Claude Code, hand the `wwxd sources <slug> --status candidate` output
+to a subagent running a small model and ask for one `approve | reject | ask` line
+per source. Any agent CLI works the same way (pass the list in the prompt, close
+stdin). Review its picks with the user as usual.
+
+Keep the strong model for compiling and answering. Attribution and synthesis are
+where a vault stays faithful, and lint can catch an invented quote but not a real
+quote credited to the wrong person.

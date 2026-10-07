@@ -35,8 +35,16 @@
 Clearly labelled reasoning from their principles, citing the principles used.
 ```
 
+Outside Obsidian, readers can't open `[[yt-…]]` links, so add the real URL next to
+each source the first time you cite it. It's in the raw doc's front matter. For
+YouTube, link to the moment: `https://www.youtube.com/watch?v=<id>&t=<seconds>s`.
+
 Rules:
 
+- Commit to their position. Lead with what they'd actually tell the user, as
+  bluntly as they'd say it, with their numbers and reasoning. Don't soften it into
+  balanced generic advice or add your own "on the other hand". If you disagree,
+  say so in one separate line after the answer.
 - No source, no claim. If they never addressed it, say "No source in the vault
   covers this", then offer to extrapolate.
 - Don't use `reported` statements as the member's own view.

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import datetime as dt
+import html
 import json
 import logging
 import time
@@ -52,7 +53,7 @@ def parse_json3(data: dict) -> list[Segment]:
     for event in data.get("events") or []:
         if event.get("aAppend") or "segs" not in event:
             continue
-        text = "".join(seg.get("utf8", "") for seg in event["segs"]).replace("\n", " ").strip()
+        text = html.unescape("".join(seg.get("utf8", "") for seg in event["segs"])).replace("\n", " ").strip()
         if text:
             segments.append(Segment(start=event.get("tStartMs", 0) / 1000.0, text=text))
     return segments
