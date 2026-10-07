@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "What would X do? Build a cited knowledge wiki of anyone's thinking from their talks, podcasts and writing."
 readme = "README.md"
 license = "MIT"
-requires-python = ">=3.12"
+requires-python = ">=3.10"
 keywords = ["llm", "knowledge-base", "wiki", "claude-code", "youtube", "transcripts", "agents"]
 dependencies = [
     "typer>=0.12.0",

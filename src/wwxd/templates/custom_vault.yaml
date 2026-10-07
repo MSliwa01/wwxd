@@ -9,6 +9,7 @@ members:
 # Seed domains; the agent adds more as it compiles.
 domains: []
 discovery:
+  # Each channel/feed/index is a URL, or {url: ..., speakers: [member ids]} in group vaults.
   youtube_channels: []   # the person's OWN channels, e.g. https://www.youtube.com/@handle
   youtube_queries: []    # extra searches; "<name> interview/podcast/talk" are added automatically
   feeds: []              # RSS/Atom: their blog, Substack, podcast. Someone else's show: {url: ..., own: false}

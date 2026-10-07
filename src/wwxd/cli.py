@@ -222,7 +222,7 @@ def fetch(
             doc = fetchers.fetch(source, v, whisper=whisper)
             rawdoc.write(doc, v.raw_path(source.id))
             source.status, source.error = "fetched", ""
-            source.date = source.date or str(doc.meta.get("date") or "")
+            source.date = str(doc.meta.get("date") or source.date or "")  # the fetcher saw the page; it knows better
             source.title = source.title or str(doc.meta.get("title") or "")
             done += 1
             typer.echo(f"    -> raw/{source.id}.md ({doc.meta.get('transcript')})")
@@ -330,28 +330,59 @@ def install_skill(
 def bench_run(
     vault: VaultArg,
     gold: Annotated[Path, typer.Option(help="Gold questions YAML")],
-    prompt: Annotated[Path, typer.Option(help="Answer prompt template")] = Path("bench/prompts/answer.md"),
+    arm: Annotated[str, typer.Option(help="Arm name, e.g. raw or wwxd")],
+    prompt: Annotated[Path, typer.Option(help="Prompt template ({{question}}, {{vault}}, {{slug}})")],
     agent: Annotated[str, typer.Option(help="Agent command; '{prompt}' placeholder or stdin")] = "claude -p {prompt}",
-    out: Annotated[Path | None, typer.Option(help="Results dir")] = None,
+    cwd: Annotated[Path | None, typer.Option(help="Working dir for the agent (default: vault's parent)")] = None,
+    out: Annotated[Path, typer.Option(help="Results dir")] = Path("bench/results"),
+    jobs: Annotated[int, typer.Option(help="Questions in parallel")] = 4,
 ) -> None:
-    """Ask every gold question through the agent and save the answers."""
+    """Answer every gold question through one arm. Re-running resumes."""
     from wwxd import bench
 
     v = _vault(vault)
-    out = out or Path("bench/results") / f"{v.slug}-{time.strftime('%Y%m%d-%H%M%S')}"
-    path = bench.run(v, gold, prompt, out, agent=agent)
-    typer.echo(f"Answers: {path}\nScore them with `wwxd bench judge --gold {gold} --answers {path}`")
+    arm_dir = out / v.slug / arm
+    path = bench.run_arm(v, gold, prompt, arm_dir, agent=agent, cwd=(cwd or v.path.parent).resolve(), jobs=jobs)
+    typer.echo(f"Answers: {path}")
 
 
 @bench_app.command("judge")
 def bench_judge(
+    vault: VaultArg,
     gold: Annotated[Path, typer.Option()],
-    answers: Annotated[Path, typer.Option()],
-    prompt: Annotated[Path, typer.Option(help="Judge prompt template")] = Path("bench/prompts/judge.md"),
+    a: Annotated[str, typer.Option(help="First arm name")],
+    b: Annotated[str, typer.Option(help="Second arm name")],
+    prompt: Annotated[Path, typer.Option(help="Pairwise judge prompt")] = Path("bench/prompts/judge_pairwise.md"),
     agent: Annotated[str, typer.Option()] = "claude -p {prompt}",
+    cwd: Annotated[Path | None, typer.Option(help="Working dir for the judge (default: the vault, so it can check raw/)")] = None,
+    out: Annotated[Path, typer.Option()] = Path("bench/results"),
+    jobs: Annotated[int, typer.Option()] = 4,
 ) -> None:
-    """Score saved answers with a judge prompt; writes scores.jsonl and summary.json."""
+    """Blind pairwise judging of two arms (order shuffled, citations stripped)."""
     from wwxd import bench
 
-    path = bench.judge(gold, answers, prompt, agent=agent)
-    typer.echo((path.parent / "summary.json").read_text(encoding="utf-8"))
+    v = _vault(vault)
+    base = out / v.slug
+    path = bench.judge_pairs(v, gold, base / a, base / b, prompt, base / f"judge-{a}-vs-{b}.jsonl",
+                             agent=agent, cwd=(cwd or v.path).resolve(), jobs=jobs)
+    typer.echo(f"Judgments: {path}")
+
+
+@bench_app.command("report")
+def bench_report(
+    vault: VaultArg,
+    gold: Annotated[Path, typer.Option()],
+    arms: Annotated[list[str], typer.Option("--arm", help="Arm names to include")],
+    judgments: Annotated[Path | None, typer.Option()] = None,
+    out: Annotated[Path, typer.Option()] = Path("bench/results"),
+) -> None:
+    """Mechanical quote check per arm, plus judge averages by category."""
+    import json as _json
+
+    from wwxd import bench
+
+    v = _vault(vault)
+    base = out / v.slug
+    summary = bench.summarize(v, gold, [base / a for a in arms], judgments)
+    (base / "summary.json").write_text(_json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+    typer.echo(_json.dumps(summary, indent=2, ensure_ascii=False))

@@ -32,3 +32,11 @@ def test_chunking_roughly_30s():
     segs = [Segment(float(i * 5), f"w{i}") for i in range(20)]
     chunks = chunk_segments(segs)
     assert chunks[0].start == 0 and chunks[1].start == 35
+
+
+def test_article_dateline():
+    from wwxd.fetchers.web import dateline
+
+    assert dateline("July 2023\n\nIf you collected lists...") == "2023-07-01"
+    assert dateline("March 4, 2026\nText") == "2026-03-04"
+    assert dateline("No date here\nat all") == ""

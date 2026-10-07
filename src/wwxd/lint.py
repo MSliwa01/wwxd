@@ -162,6 +162,7 @@ def lint(vault: Vault) -> list[Issue]:
             issues.append(Issue(level, rel, line_no, message))
 
         for line_no, line in enumerate(text.splitlines(), 1):
+            line = re.sub(r"`[^`]*`", "", line)  # inline code is an example, not a link
             heading = SECTION.match(line)
             if heading:
                 section = heading.group(1).lower()

@@ -21,13 +21,22 @@ domains: [startups, fundraising, product, hiring, founders, growth]
 discovery:
   youtube_channels:
     - https://www.youtube.com/@ycombinator
+    - url: https://www.youtube.com/@daltonmichael
+      speakers: [caldwell, seibel]
+    - url: https://www.youtube.com/@garrytan
+      speakers: [tan]
   youtube_queries:
     - Startup School lecture
     - How to Start a Startup Stanford CS183B
+    - Michael Seibel Y Combinator
+    - Dalton Caldwell Michael Seibel
+    - Jessica Livingston Y Combinator
+    - Garry Tan Y Combinator
   feeds: []
   link_indexes:
     - url: https://paulgraham.com/articles.html
       pattern: '^https?://(www\.)?paulgraham\.com/(?!index|articles|rss|bio|faq|books|arc|lisp|raq|quo)[a-z0-9]+\.html$'
+      speakers: [pg]
   auto_queries: false   # six members x 3 auto searches is mostly noise; the channel covers it
   min_duration: 300
   per_query: 20

@@ -75,7 +75,16 @@ def _flat_entries(url: str, limit: int) -> list[dict]:
     return flat[:limit]
 
 
-def _youtube_sources(vault: Vault, url: str, limit: int, *, own: bool, found_via: str) -> list[Source]:
+def _owners(vault: Vault, configured: list[str] | None) -> list[str]:
+    """Who a channel/feed/site belongs to: configured `speakers`, or the only member."""
+    if configured:
+        return list(configured)
+    return [vault.members[0].id] if len(vault.members) == 1 else []
+
+
+def _youtube_sources(
+    vault: Vault, url: str, limit: int, *, own: bool, found_via: str, owners: list[str] | None = None
+) -> list[Source]:
     min_duration = vault.discovery.get("min_duration", 240)
     sources = []
     for entry in _flat_entries(url, limit):
@@ -87,8 +96,8 @@ def _youtube_sources(vault: Vault, url: str, limit: int, *, own: bool, found_via
             continue
         title = entry.get("title") or video_id
         speakers = _mentioned_members(title, vault)
-        if own and not speakers and len(vault.members) == 1:
-            speakers = [vault.members[0].id]
+        if own and not speakers:
+            speakers = list(owners or [])
         # In a group vault the shared channel also hosts outside guests.
         hint = _hint(title, speakers, None if own and not speakers else own)
         sources.append(
@@ -126,7 +135,7 @@ def _itunes_duration(value: str | None) -> float | None:
         return None
 
 
-def _feed_sources(vault: Vault, url: str, limit: int, *, own: bool = True) -> list[Source]:
+def _feed_sources(vault: Vault, url: str, limit: int, *, own: bool = True, owners: list[str] | None = None) -> list[Source]:
     """own: the feed belongs to the member(s). Set `own: false` for someone else's show they guest on."""
     request = urllib.request.Request(url, headers={"User-Agent": "wwxd"})
     with urllib.request.urlopen(request, timeout=30) as response:
@@ -151,7 +160,7 @@ def _feed_sources(vault: Vault, url: str, limit: int, *, own: bool = True) -> li
         else:
             date = (item.findtext(f"{atom}published") or item.findtext(f"{atom}updated") or "")[:10]
         mentioned = _mentioned_members(title, vault)
-        speakers = mentioned or ([m.id for m in vault.members] if own and len(vault.members) == 1 else [])
+        speakers = mentioned or (list(owners or []) if own else [])
         if not own and not mentioned:
             continue  # someone else's show and the episode doesn't name a member
         hint = "own" if own else _hint(title, mentioned, own=False)
@@ -189,7 +198,7 @@ def _feed_sources(vault: Vault, url: str, limit: int, *, own: bool = True) -> li
     return sources
 
 
-def _link_index_sources(vault: Vault, url: str, pattern: str, limit: int) -> list[Source]:
+def _link_index_sources(vault: Vault, url: str, pattern: str, limit: int, owners: list[str] | None = None) -> list[Source]:
     request = urllib.request.Request(url, headers={"User-Agent": "wwxd"})
     with urllib.request.urlopen(request, timeout=30) as response:
         html = response.read().decode("utf-8", errors="replace")
@@ -209,7 +218,7 @@ def _link_index_sources(vault: Vault, url: str, pattern: str, limit: int) -> lis
                 url=absolute,
                 title=title,
                 hint="own",
-                expected_speakers=[m.id for m in vault.members if len(vault.members) == 1],
+                expected_speakers=list(owners or []),
                 found_via=f"index:{url}",
             )
         )
@@ -231,9 +240,11 @@ def discover(vault: Vault, *, per_query: int | None = None) -> tuple[list[Source
         except Exception as exc:  # one broken feed shouldn't stop discovery
             errors.append(f"{label}: {exc}")
 
+    # Channels, feeds and indexes are a URL string or {url: ..., speakers: [member ids]}.
     for channel in cfg.get("youtube_channels") or []:
-        run(channel, _youtube_sources, vault, _channel_videos_url(channel), cfg.get("per_channel", 100),
-            own=True, found_via=f"channel:{channel}")
+        url, owners = (channel, None) if isinstance(channel, str) else (channel["url"], channel.get("speakers"))
+        run(url, _youtube_sources, vault, _channel_videos_url(url), cfg.get("per_channel", 100),
+            own=True, found_via=f"channel:{url}", owners=_owners(vault, owners))
 
     queries = list(cfg.get("youtube_queries") or [])
     if cfg.get("auto_queries", True):
@@ -244,11 +255,13 @@ def discover(vault: Vault, *, per_query: int | None = None) -> tuple[list[Source
             own=False, found_via=f"search:{query}")
 
     for feed in cfg.get("feeds") or []:
-        feed_url, own = (feed, True) if isinstance(feed, str) else (feed["url"], feed.get("own", True))
-        run(feed_url, _feed_sources, vault, feed_url, cfg.get("per_feed", 100), own=own)
+        feed = {"url": feed} if isinstance(feed, str) else feed
+        run(feed["url"], _feed_sources, vault, feed["url"], cfg.get("per_feed", 100),
+            own=feed.get("own", True), owners=_owners(vault, feed.get("speakers")))
 
     for index in cfg.get("link_indexes") or []:
-        run(index["url"], _link_index_sources, vault, index["url"], index["pattern"], index.get("limit", 500))
+        run(index["url"], _link_index_sources, vault, index["url"], index["pattern"], index.get("limit", 500),
+            owners=_owners(vault, index.get("speakers")))
 
     known = {s.id for s in vault.load_sources()}
     new: dict[str, Source] = {}
