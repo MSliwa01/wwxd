@@ -1,0 +1,24 @@
+# Gold questions for the YC example vault. Hand-written; expand as more sources get compiled.
+# expect: answer (default) | abstain
+questions:
+  - id: yc-001
+    question: What actually motivates startup founders day to day, according to Paul Graham?
+    stance: Fear of failure (disaster, looking like a fool), not the prospect of becoming rich.
+    must_cite: [yt-5bxp78i96S8]
+  - id: yc-002
+    question: Does PG think you still need a lot of money to start a startup in the AI era?
+    stance: No. Technology keeps getting cheaper; do what you can with the money you have and raise at milestones.
+    must_cite: [yt-5bxp78i96S8]
+  - id: yc-003
+    question: What does "formidable" mean at YC?
+    stance: Someone who gets what they want in any situation; investors want this because their interests are aligned.
+    must_cite: [yt-5bxp78i96S8]
+  - id: yc-004
+    question: Who coined the term "jagged frontier" in PG's interview with Vivian Shen, and does PG endorse it?
+    stance: The host (Vivian Shen) says "jagged frontier"; PG didn't coin it. He frames AGI as a "smear" instead.
+    must_cite: [yt-5bxp78i96S8]
+    tests: attribution
+  - id: yc-005
+    question: What does Paul Graham think about the ideal cap table split between co-founders?
+    expect: abstain
+    stance: The vault has no source on this.

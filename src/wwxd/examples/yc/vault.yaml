@@ -1,0 +1,34 @@
+# Example recipe: source config only, no content. Edit freely; these are
+# starting points, not endorsements.
+name: Y Combinator
+slug: yc
+layout: tree
+members:
+  - id: pg
+    name: Paul Graham
+    aliases: [PG]
+  - id: livingston
+    name: Jessica Livingston
+  - id: seibel
+    name: Michael Seibel
+  - id: caldwell
+    name: Dalton Caldwell
+  - id: tan
+    name: Garry Tan
+  - id: altman
+    name: Sam Altman
+domains: [startups, fundraising, product, hiring, founders, growth]
+discovery:
+  youtube_channels:
+    - https://www.youtube.com/@ycombinator
+  youtube_queries:
+    - Startup School lecture
+    - How to Start a Startup Stanford CS183B
+  feeds: []
+  link_indexes:
+    - url: https://paulgraham.com/articles.html
+      pattern: '^https?://(www\.)?paulgraham\.com/(?!index|articles|rss|bio|faq|books|arc|lisp|raq|quo)[a-z0-9]+\.html$'
+  auto_queries: false   # six members x 3 auto searches is mostly noise; the channel covers it
+  min_duration: 300
+  per_query: 20
+  per_channel: 150

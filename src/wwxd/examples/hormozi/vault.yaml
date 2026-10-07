@@ -1,0 +1,19 @@
+# Example recipe: source config only, no content. A starting point, not an endorsement.
+name: Alex Hormozi
+slug: hormozi
+layout: tree
+members:
+  - id: hormozi
+    name: Alex Hormozi
+    aliases: [Hormozi]
+domains: [business, sales, marketing, pricing, hiring, mindset]
+discovery:
+  youtube_channels:
+    - https://www.youtube.com/@AlexHormozi
+  youtube_queries:
+    - Alex Hormozi podcast interview
+  feeds: []
+  link_indexes: []
+  min_duration: 600     # his channel has many short clips; long-form is where the reasoning is
+  per_query: 15
+  per_channel: 100

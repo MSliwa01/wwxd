@@ -1,0 +1,20 @@
+# Example recipe: source config only, no content. A starting point, not an endorsement.
+name: Andrej Karpathy
+slug: karpathy
+layout: tree
+members:
+  - id: karpathy
+    name: Andrej Karpathy
+    aliases: [Karpathy]
+domains: [learning, deep-learning, llms, software, education]
+discovery:
+  youtube_channels:
+    - https://www.youtube.com/@AndrejKarpathy
+  youtube_queries:
+    - Andrej Karpathy interview
+    - Andrej Karpathy podcast
+  feeds:
+    - https://karpathy.github.io/feed.xml
+  link_indexes: []
+  min_duration: 600
+  per_query: 15

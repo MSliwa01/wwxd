@@ -1,0 +1,20 @@
+# Example recipe: source config only, no content. A starting point, not an endorsement.
+# Few long-form sources exist in English; expect a small vault and lean on curation.
+name: Dieter Rams
+slug: rams
+layout: tree
+members:
+  - id: rams
+    name: Dieter Rams
+    aliases: [Rams]
+domains: [design, product, sustainability]
+discovery:
+  youtube_channels: []
+  youtube_queries:
+    - Dieter Rams interview
+    - Dieter Rams lecture
+    - Dieter Rams talk design
+  feeds: []
+  link_indexes: []
+  min_duration: 300
+  per_query: 20

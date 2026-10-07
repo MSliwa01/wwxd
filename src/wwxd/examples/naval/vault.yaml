@@ -1,0 +1,20 @@
+# Example recipe: source config only, no content. A starting point, not an endorsement.
+name: Naval Ravikant
+slug: naval
+layout: tree
+members:
+  - id: naval
+    name: Naval Ravikant
+    aliases: [Naval]
+domains: [wealth, happiness, startups, investing, philosophy]
+discovery:
+  youtube_channels: []
+  youtube_queries:
+    - Naval Ravikant podcast
+    - Naval How to Get Rich every episode
+  feeds: []
+  link_indexes:
+    - url: https://nav.al/archive
+      pattern: '^https://nav\.al/[a-z0-9-]+$'
+  min_duration: 600
+  per_query: 15
