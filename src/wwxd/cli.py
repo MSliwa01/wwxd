@@ -218,6 +218,9 @@ def fetch(
     vault: VaultArg,
     ids: Annotated[list[str] | None, typer.Argument(help="Only these ids")] = None,
     whisper: Annotated[str, typer.Option(help="auto (fallback when no captions) | always | never")] = "auto",
+    whisper_model: Annotated[
+        str | None, typer.Option(help="Whisper model for this run, e.g. large-v3 (default: $WWXD_WHISPER_MODEL or small)")
+    ] = None,
     limit: Annotated[int | None, typer.Option(help="Fetch at most N sources")] = None,
     retry_failed: Annotated[bool, typer.Option(help="Also retry sources that failed before")] = False,
     force: Annotated[bool, typer.Option(help="Re-fetch the given ids even if already fetched")] = False,
@@ -237,11 +240,14 @@ def fetch(
         typer.echo("Nothing to fetch. Approve candidates first (`wwxd approve`).")
         return
     delay = get_settings().download_delay
+    options: dict[str, object] = {"whisper": whisper}
+    if whisper_model:
+        options["whisper_model"] = whisper_model  # only when set, so older plugins never see it
     done = 0
     for i, source in enumerate(todo, 1):
         typer.echo(f"[{i}/{len(todo)}] {source.id} {source.title[:60]}")
         try:
-            doc = fetchers.fetch(source, v, whisper=whisper)
+            doc = fetchers.fetch(source, v, **options)
             rawdoc.write(doc, v.raw_path(source.id))
             source.status, source.error = "fetched", ""
             source.date = str(doc.meta.get("date") or source.date or "")  # the fetcher saw the page; it knows better

@@ -79,8 +79,11 @@ def extract_info(url: str) -> dict:
     return info
 
 
-def fetch(source: Source, vault: Vault, *, whisper: str = "auto") -> RawDoc:
-    """whisper: 'auto' (fallback when no captions), 'always', or 'never'."""
+def fetch(
+    source: Source, vault: Vault, *, whisper: str = "auto", whisper_model: str | None = None, **_: object
+) -> RawDoc:
+    """whisper: 'auto' (fallback when no captions), 'always', or 'never'. whisper_model overrides
+    WWXD_WHISPER_MODEL."""
     video_id = source.id.removeprefix("yt-")
     url = video_url(video_id)
     with ytdl.new_ydl(skip_download=True) as ydl:
@@ -99,7 +102,7 @@ def fetch(source: Source, vault: Vault, *, whisper: str = "auto") -> RawDoc:
         from wwxd.fetchers import whisper as whisper_mod
 
         audio = whisper_mod.download_youtube_audio(url, video_id, vault.cache_dir / "audio")
-        segments, language = whisper_mod.transcribe(audio)
+        segments, language = whisper_mod.transcribe(audio, whisper_model)
         transcript_kind = "whisper"
 
     meta = {

@@ -9,11 +9,14 @@ from wwxd.rawdoc import RawDoc, Segment
 from wwxd.vault import Source, Vault
 
 
-def fetch(source: Source, vault: Vault, *, whisper: str = "auto", **_: object) -> RawDoc:
+def fetch(
+    source: Source, vault: Vault, *, whisper: str = "auto", whisper_model: str | None = None, **_: object
+) -> RawDoc:
     """Use the feed's own transcript (<podcast:transcript>) when it has one, else Whisper.
 
     whisper: 'auto' (Whisper when there's no usable feed transcript), 'always' (ignore the feed
-    transcript, e.g. to re-transcribe with a bigger model), or 'never'.
+    transcript, e.g. to re-transcribe with a bigger model), or 'never'. whisper_model overrides
+    WWXD_WHISPER_MODEL.
     """
     segments: list[Segment] = []
     kind, language = "", ""
@@ -29,7 +32,7 @@ def fetch(source: Source, vault: Vault, *, whisper: str = "auto", **_: object) -
         if whisper == "never":
             raise RuntimeError("no feed transcript and Whisper disabled")
         audio = whisper_mod.download_audio_url(source.url, source.id, vault.cache_dir / "audio")
-        segments, language = whisper_mod.transcribe(audio)
+        segments, language = whisper_mod.transcribe(audio, whisper_model)
         kind = "whisper"
     meta = {
         "id": source.id,

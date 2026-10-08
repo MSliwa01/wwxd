@@ -28,8 +28,13 @@ def _resolve_device(device: str) -> str:
     return "cpu"
 
 
+def model_name(override: str | None = None) -> str:
+    """`wwxd fetch --whisper-model`, else WWXD_WHISPER_MODEL, else 'small'."""
+    return override or get_settings().whisper_model
+
+
 @lru_cache
-def _get_model():
+def _get_model(name: str):
     try:
         from faster_whisper import WhisperModel
     except ImportError as exc:
@@ -40,12 +45,12 @@ def _get_model():
     settings = get_settings()
     device = _resolve_device(settings.whisper_device)
     compute_type = "auto"  # fastest type the hardware supports (older GPUs lack fast float16)
-    logger.info("Loading Whisper '%s' on %s (%s)", settings.whisper_model, device, compute_type)
-    return WhisperModel(settings.whisper_model, device=device, compute_type=compute_type)
+    logger.info("Loading Whisper '%s' on %s (%s)", name, device, compute_type)
+    return WhisperModel(name, device=device, compute_type=compute_type)
 
 
-def transcribe(audio_path: Path) -> tuple[list[Segment], str]:
-    model = _get_model()
+def transcribe(audio_path: Path, model: str | None = None) -> tuple[list[Segment], str]:
+    model = _get_model(model_name(model))
     segments_iter, info = model.transcribe(str(audio_path), vad_filter=True)
     segments = [Segment(s.start, s.text.strip()) for s in segments_iter if s.text.strip()]
     return segments, getattr(info, "language", "") or ""
