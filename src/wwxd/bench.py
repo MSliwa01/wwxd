@@ -22,7 +22,27 @@ from wwxd.lint import MATCH_THRESHOLD, RawIndex, normalize
 from wwxd.vault import Vault
 
 DEFAULT_AGENT = "claude -p {prompt}"
-QUOTE = re.compile(r'["“]([^"”]{25,400})["”]')
+QUOTE_MARKS = re.compile(r'["“”]')
+# A quote counts as attributed when the text just before it hands the floor to someone.
+ATTRIBUTION_CUE = re.compile(
+    r"(said|says|say|put it|puts it|told|tells|telling|calls it|called it|in (his|her|their) words|line|quote|"
+    r"words|wrote|writes|argues|argued|admits|admitted|asks|asked)\W{0,3}$|[:—–]\s*\**\s*$",
+    re.IGNORECASE,
+)
+
+
+def attributed_quotes(answer: str) -> list[str]:
+    """Quoted spans presented as someone's words. Pairs quote marks within a line."""
+    quotes = []
+    for line in answer.splitlines():
+        marks = [m.start() for m in QUOTE_MARKS.finditer(line)]
+        for open_at, close_at in zip(marks[::2], marks[1::2]):
+            span = line[open_at + 1 : close_at].strip()
+            if len(span.split()) < 5 or "](" in span or "**" in span or "http" in span:
+                continue
+            if ATTRIBUTION_CUE.search(line[max(0, open_at - 60) : open_at]):
+                quotes.append(span)
+    return quotes
 CITATION_MARKUP = re.compile(r"\s*\(\s*\[\[[^\]]+\]\][^()]*\)|\[\[([^\]|]+)(?:\|[^\]]*)?\]\]")
 
 
@@ -90,7 +110,7 @@ def verify_quotes(vault: Vault, answer: str) -> dict:
     raw = RawIndex(vault)
     ids = [p.stem for p in vault.raw_dir.glob("*.md")]
     corpus = {i: raw.get(i)[1] for i in ids}
-    quotes = [q.strip() for q in QUOTE.findall(answer) if len(q.split()) >= 5]
+    quotes = attributed_quotes(answer)
     found = []
     for quote in quotes:
         parts = [normalize(p) for p in re.split(r"\.\.\.|…", quote) if normalize(p)]
@@ -100,10 +120,14 @@ def verify_quotes(vault: Vault, answer: str) -> dict:
 
 
 def strip_citations(answer: str) -> str:
-    """Remove wiki citation markup so the judge can't tell which arm used the vault."""
+    """Remove citation markup, links and timestamps so the judge can't tell which arm used the vault."""
     text = CITATION_MARKUP.sub(lambda m: m.group(1) or "", answer)
+    text = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", text)  # markdown links keep their text
+    text = re.sub(r"https?://\S+", "", text)
     text = re.sub(r"\b(yt|web|pod|file)-[\w-]+\b", "", text)
+    text = re.sub(r"@\s*\d+(:\d{2}){1,2}", "", text)
     text = re.sub(r"(?i)\b(the )?(wwxd )?vault\b", "my sources", text)
+    text = re.sub(r"\(\s*[,;]?\s*\)", "", text)  # parentheses emptied by the steps above
     return re.sub(r"[ \t]+\n", "\n", text)
 
 

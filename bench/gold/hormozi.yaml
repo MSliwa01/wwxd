@@ -1,0 +1,446 @@
+questions:
+- id: hz-01
+  category: known
+  person: hormozi
+  question: How do I make my offer more valuable without just cutting the price? What would Alex Hormozi say?
+  stance: 'Value is a fraction: dream outcome x perceived likelihood of achievement on top, divided by time delay
+    x effort & sacrifice on the bottom. Raise the top two and shrink the bottom two. His example: people haggle
+    over a 20-pack of personal training sessions but pay 20x that for liposuction because the time delay is near
+    zero.'
+  must_cite:
+  - yt-x3e73Qn6NOo
+  evidence:
+  - source: yt-x3e73Qn6NOo
+    at: '1:20:32'
+    quote: on the bottom half of the equation so it's a fraction there's two on the top two on the bottom you have
+      time delay between when they buy and when they get
+  - source: yt-x3e73Qn6NOo
+    at: '1:21:04'
+    quote: buy a 20 pack of trading trading sessions whereas women walk into the doctor's office to do liposuction
+      and drop 20 times that amount of money because the time delay is nothing
+  - source: yt-x3e73Qn6NOo
+    at: '1:21:04'
+    quote: the last variable is uh effort and sacrifice which is two sides of the same coin
+  generic_trap: Add more features and bonuses, or run a discount, so the customer feels they get more for their
+    money.
+- id: hz-02
+  category: known
+  person: hormozi
+  question: Should my ads admit the weaknesses of my product, and if so how do I word it? What would Alex Hormozi
+    say?
+  stance: 'Yes: use damaging admissions and own your flaws up front, because what you give up in promise you gain
+    in trust. Order matters: put the flaw first and the benefit after ''but'', because people believe the clause
+    after ''but'' (''write four times longer but smell like crap'' stresses the smell).'
+  must_cite:
+  - yt-JDR-R--4HhM
+  evidence:
+  - source: yt-JDR-R--4HhM
+    at: '12:30'
+    quote: you want to always own your flaws of course you have them  of course your product isn't perfect say so
+      and
+  - source: yt-JDR-R--4HhM
+    at: '13:09'
+    quote: what you'll sacrifice in promise you'll gain in  trust and trust trumps promise
+  - source: yt-JDR-R--4HhM
+    at: '14:26'
+    quote: these markers write four times longer than others but they smell like crap what am I emphasizing i'm 
+      actually emphasizing the fact that they smell bad not the fact that they write longer
+  generic_trap: Lead with your strengths and benefits. Don't draw attention to weaknesses in ads; deal with objections
+    only when the prospect raises them.
+- id: hz-03
+  category: known
+  person: hormozi
+  question: My customers are educated business owners. What reading level should my ad copy be written at? What
+    would Alex Hormozi say?
+  stance: Third grade, whatever the audience. He runs every ad through a free reading-level tool and edits until
+    it reads at third grade. Ninth-grade copy shuts out about two-thirds of readers ('fancy equals friction, simple
+    equals sales'), and simplicity trumps concision.
+  must_cite:
+  - yt-JDR-R--4HhM
+  evidence:
+  - source: yt-JDR-R--4HhM
+    at: '32:07'
+    quote: if we want to automatically disqualify twothirds of the people who read the copy keep it at  nth grade
+      but if you want everyone who can read to read then keep it at third grade
+  - source: yt-JDR-R--4HhM
+    at: '32:07'
+    quote: so fancy equals friction  simple equals sales i put every ad that I write through free reading level
+      tool
+  - source: yt-JDR-R--4HhM
+    at: '32:43'
+    quote: at the highest levels I will never prioritize concision  over simplicity so simplicity trumps concision
+  generic_trap: 'Match your audience''s sophistication: use a professional, industry-appropriate tone for an educated
+    B2B audience.'
+- id: hz-04
+  category: known
+  person: hormozi
+  question: A month ago I kicked off a big recruiting push to fix our technician shortage and it hasn't produced
+    hires yet. Should I start two or three other approaches in parallel? What would Alex Hormozi say?
+  stance: 'No: decide the one thing that, if it were true 12 months from now, would change everything, commit to
+    it, and sometimes let the little fires burn. Trying to solve it two or three ways just pulls resources from
+    the one approach that will work but needs time (he admits he is guilty of this himself).'
+  must_cite:
+  - yt--JLN1d1ZKUU
+  evidence:
+  - source: yt--JLN1d1ZKUU
+    at: '3:52'
+    quote: what one thing if it were true 12 months from now would change everything for our business
+  - source: yt--JLN1d1ZKUU
+    at: '6:04'
+    quote: sometimes you have to let the little fires burn
+  - source: yt--JLN1d1ZKUU
+    at: '6:04'
+    quote: me trying to solve it in two or three ways ends up just pulling resources from the one way that I know
+      will work but will take time
+  generic_trap: 'Hedge your bets: run several recruiting channels and experiments in parallel and double down on
+    whichever works first.'
+- id: hz-05
+  category: fresh
+  person: hormozi
+  question: What's a good monthly churn rate for a paid online community, and when should I worry about it? What
+    would Alex Hormozi say?
+  stance: 'Using Skool platform data: the average is 80% monthly retention (20% churn), the best groups are under
+    10% churn, and below 70% retention means retention is your highest-ROI fix. Churn depends on cohort age: 20%+
+    in months 1-3, about 10% or less once someone passes day 90, and about 2% by month 6. So don''t overhaul the
+    business because month-one churn is high; focus on getting people past day 90 and month 6.'
+  must_cite:
+  - yt--j8_YCWZ05Q
+  evidence:
+  - source: yt--j8_YCWZ05Q
+    at: '1:39'
+    quote: the platform average across School is 80% monthly retention. So said differently, it's 20% churn.
+  - source: yt--j8_YCWZ05Q
+    at: '1:39'
+    quote: Now the best groups have less than 10% churn, aka 90% retention month over month. The not good groups
+      have less than 70% retention
+  - source: yt--j8_YCWZ05Q
+    at: '3:53'
+    quote: Now, if you keep someone 90 days, which seems to be the first kind of big churn drop-off point, it drops
+      to around 10% or less.
+  generic_trap: Aim for SaaS-style benchmarks of about 3-7% monthly churn and work to lower your average churn number
+    across the board.
+- id: hz-06
+  category: fresh
+  person: hormozi
+  question: A client offered me either a percentage of profit or a percentage of revenue for my consulting. Which
+    should I take? What would Alex Hormozi say?
+  stance: 'Take the revenue share. Profit can be played with (the client can overspend), but top line is top line,
+    so a rev share sits higher in the money flow, like a royalty. It fits his ranking of six deal structures, from
+    ''I work, then you pay'' up to ''no matter what, you pay me'': you get paid in proportion to the risk you take,
+    and you want to be paid first.'
+  must_cite:
+  - yt-rMJIOK_FgJk
+  evidence:
+  - source: yt-rMJIOK_FgJk
+    at: '12:38'
+    quote: So, if you're doing a profit share, it's way better to have a rev
+  - source: yt-rMJIOK_FgJk
+    at: '13:10'
+    quote: Because somebody can play around their profit. They can overspend. But, a rev share is the revenue, right?
+      Top line's top line.
+  - source: yt-rMJIOK_FgJk
+    at: '7:43'
+    quote: it's that you will be compensated in proportion to the risk you're willing
+  generic_trap: Profit share aligns incentives better because you only win when the client truly profits; pick whichever
+    percentage yields more expected dollars.
+- id: hz-07
+  category: fresh
+  person: hormozi
+  question: For my first business, should I raise money from investors or bootstrap? What would Alex Hormozi say?
+  stance: 'Bootstrap your first business so you ''pay off ignorance debt'' before losing friends'' and family''s
+    money. But bootstrapping is the slowest of his four paths, and it piles up more non-money debt than any other
+    path: management/leadership debt (you can''t afford star talent), technical debt and data debt. Raise capital
+    only when the business can''t become profitable without outside money.'
+  must_cite:
+  - yt-sL16tsGafcQ
+  evidence:
+  - source: yt-sL16tsGafcQ
+    at: '2:42'
+    quote: So if this is your first business I recommend starting with bootstrapping. And the main reason is just
+      like you want to pay off ignorance debt.
+  - source: yt-sL16tsGafcQ
+    at: '4:19'
+    quote: When you bootstrap, you incur more debt than any other vehicle.
+  - source: yt-sL16tsGafcQ
+    at: '4:52'
+    quote: So you incur lots of management and leadership debt.
+  generic_trap: It depends on your risk tolerance; raising a seed round lets you move faster and keep your savings
+    safe.
+- id: hz-08
+  category: fresh
+  person: hormozi
+  question: I don't have a day job anymore and my business is making some money, but not enough. How should I structure
+    my workday? What would Alex Hormozi say?
+  stance: 'Use a 4-4-4 split: the first 4 hours of the day go to promotion (letting people know about your stuff,
+    done first thing), the next 4 to delivery, and the last 4 to building (finding and prioritizing the next opportunities).
+    Keep maker and manager time in separate blocks. His rule for what to sell is ''111'': one product, one avatar,
+    one channel until $1M.'
+  must_cite:
+  - yt-jfW6gL6hKhk
+  evidence:
+  - source: yt-jfW6gL6hKhk
+    at: '4:49'
+    quote: I like to do 4 hours of promotion. First thing I do when I get up is let people know about my stuff because
+      if nobody knows about your stuff, they can't give you money.
+  - source: yt-jfW6gL6hKhk
+    at: '4:49'
+    quote: The second 4-hour chunk is delivery.
+  - source: yt-jfW6gL6hKhk
+    at: '8:09'
+    quote: I have a a a 111 rule, which is you want to sell one product or service to one avatar on one channel
+      until you make $1 million.
+  generic_trap: Time-block your day around your top three priorities, protect work-life balance, and batch admin
+    tasks.
+- id: hz-09
+  category: fresh
+  person: hormozi
+  question: My service business is profitable, but I'm carrying about $60k of debt. Should I pay it off or keep
+    the cash for growth? What would Alex Hormozi say?
+  stance: 'Pay it off: he skews ''very close to the Ramsey side'' of the Dave Ramsey-to-Wall Street spectrum, because
+    debt increases risk and risk over a long time horizon tends to come due, since businesses have seasons and volatility.
+    He points to enduring debt-free companies like Chick-fil-A, and says paying it off adds only about 5% to profit
+    but removes ''100% in headache''.'
+  must_cite:
+  - yt-OQf2Ba-Lp_4
+  evidence:
+  - source: yt-OQf2Ba-Lp_4
+    at: '8:37'
+    quote: I tend to skew like very close to the Ramsey side and the single argument that I have around it is basically
+      debt
+  - source: yt-OQf2Ba-Lp_4
+    at: '9:10'
+    quote: increases risk. Risk when multiplied over a long time horizon tends to come due.
+  - source: yt-OQf2Ba-Lp_4
+    at: '9:10'
+    quote: If you look at some of the most enduring companies, a lot of like Chick-fil-A operate debt free.
+  generic_trap: If your return on capital beats the interest rate, keep the cheap debt and invest the cash in growth;
+    leverage is a tool.
+- id: hz-10
+  category: fresh
+  person: hormozi
+  question: How often should I refresh the copy and hooks in my Facebook ads to avoid ad fatigue? What would Alex
+    Hormozi say?
+  stance: 'Rarely: once copy wins, keep running it: the School Games ran one version of copy for 6 months and a
+    second for three, and a portfolio company spending a couple hundred thousand a day still has only three hooks
+    after 5 years. What changes constantly is creative: ''kaleidoscope'' the winners into 20-30 variations (AI filters,
+    remakes). Good video beats images, but images beat bad video.'
+  must_cite:
+  - yt-MH-IMJxbUY4
+  evidence:
+  - source: yt-MH-IMJxbUY4
+    at: '9:50'
+    quote: when you do have copy that wins, you don't need to change it nearly as often as you think. So like when
+      we ran The School Games all last year and pushed it really really hard, we had one version of the copy that
+      we ran for 6 months
+  - source: yt-MH-IMJxbUY4
+    at: '10:23'
+    quote: there's three hooks. There's three like when you find the winners, you just run them.
+  - source: yt-MH-IMJxbUY4
+    at: '10:56'
+    quote: Yeah, good video beats images, but images beat bad videos.
+  generic_trap: Refresh ad copy and hooks every 2-4 weeks, because audiences fatigue quickly and new messaging keeps
+    CPMs and CPAs down.
+- id: hz-11
+  category: applied
+  person: hormozi
+  question: I own a residential HVAC duct-cleaning company doing about $1.2M a year at a 38% net margin, and we
+    close about 82% of in-home inspections. Should I keep prices where they are so I don't hurt the close rate?
+    What would Alex Hormozi say?
+  stance: No, raise prices (he penciled in about 10%), because a close rate of 80% or more tells him there is room
+    on price. At these numbers a 10% raise gives roughly 25% more net profit and still makes more money as long
+    as close rate stays above about 65%. For a normal (non-luxury) service, a higher price can even raise the close
+    rate, because it increases the customer's belief that you can deliver.
+  must_cite:
+  - yt-OQf2Ba-Lp_4
+  evidence:
+  - source: yt-OQf2Ba-Lp_4
+    at: '8:06'
+    quote: So whenever I hear 80% or over 80% close rates, I usually know that there's room in sale.
+  - source: yt-OQf2Ba-Lp_4
+    at: '8:06'
+    quote: As long as we close more than 65%, we make more money. Thing is is that 10% price raise for you equals
+      roughly a 25% increase in net profit.
+  - source: yt-OQf2Ba-Lp_4
+    at: '7:00'
+    quote: if you raise your prices, what sometimes happens is that the conviction of the customer that you can
+      actually deliver on the promise you're making goes up.
+  generic_trap: If it isn't broken don't fix it; benchmark against competitors and only raise prices cautiously
+    with a small test so you don't lose deals.
+- id: hz-12
+  category: applied
+  person: hormozi
+  question: I started a roofing company two months ago and I'm at about $20k a month. I land roughly one sale for
+    every 20 doors I knock. Full replacements are $18-25k tickets and repairs are around $1,500. Should I start
+    running ads and focus on landing more replacements? What would Alex Hormozi say?
+  stance: 'No: go all in on door-to-door, because it''s what works, and build a door-knocking sales team (commissions
+    make each door worth a known amount). Build the business around high-volume repairs that competitors ignore:
+    systemize them, raise the repair ticket to about $2.5-5k with a menu upsell, and add a maintenance membership
+    and a priority (speed) fee. High volume gives reliability and cash flow, and replacement upsells come later.'
+  must_cite:
+  - yt-o64cI6tebnU
+  evidence:
+  - source: yt-o64cI6tebnU
+    at: '9:49'
+    quote: Now I think that in terms of scale, you should go all in door to door.
+  - source: yt-o64cI6tebnU
+    at: '4:23'
+    quote: Is there a world where you think you could sell three times as many repairs as you could replacements?
+  - source: yt-o64cI6tebnU
+    at: '4:55'
+    quote: these should really be selling for like 2500 to 5K.
+  generic_trap: Diversify lead generation with Google Ads, SEO and a referral program, and focus sales on high-ticket
+    full replacements, where the profit is.
+- id: hz-13
+  category: applied
+  person: hormozi
+  question: I run a $100/month online community for freelancers. Is it worth adding a much more expensive premium
+    tier, or will that just distract from the core product? What would Alex Hormozi say?
+  stance: Add it, even if it's unscalable one-on-one time (something at $1,000/month and something at $10,000),
+    because if 10 of 100 buyers take a $1,000 tier, revenue doubles and about three-quarters of profit comes from
+    that tier. Name the high price out loud and stop talking; if they balk, offer a version with 90% of the elements.
+    Cap your hours and design it for a different avatar than your $100 buyer; the high anchor also raises the perceived
+    value of the cheap tier.
+  must_cite:
+  - yt-uWdIgftpvBI
+  evidence:
+  - source: yt-uWdIgftpvBI
+    at: '9:13'
+    quote: Let's say you have a $100 thing and you have a $1,000 thing. And let's say of the 100 people, 10 of the
+      hundred are buying the really expensive thing. So 90% of people buy the $100 thing. What does that do to your
+      business? Guess what it does? It doubles the revenue of your business.
+  - source: yt-uWdIgftpvBI
+    at: '10:19'
+    quote: have something that's $1,000 a month. Have something that's $10,000 one time. Have it up there. just
+      make it available.
+  - source: yt-uWdIgftpvBI
+    at: '8:09'
+    quote: You must confront the high price. You have to confront it.
+  generic_trap: Stay focused on your core product; only add a premium tier once you've validated demand and can
+    deliver it scalably without burning out.
+- id: hz-14
+  category: applied
+  person: hormozi
+  question: My info-product business does about $500k a month and roughly 85% of customers come from Meta ads. When
+    I push spend past about $100k a month, results hit a wall. Should I shift budget into new channels like affiliates
+    and podcasts? What would Alex Hormozi say?
+  stance: 'No: the business is demand-constrained, the real cap is creative quality rather than the channel, and
+    a new channel is ''a little too hard for right now''. Get more from the existing channel by fixing creative:
+    build a UGC loop from customers, ''kaleidoscope'' your winners, hire a very online 20-year-old for short-form,
+    use more diverse avatars in ads, and repurpose winning organic posts as ads. Also lead-score and work leads
+    with a parallel dialer.'
+  must_cite:
+  - yt-MH-IMJxbUY4
+  evidence:
+  - source: yt-MH-IMJxbUY4
+    at: '5:27'
+    quote: I feel like there's a lot more that you can work on the existing one by like a lot.
+  - source: yt-MH-IMJxbUY4
+    at: '12:00'
+    quote: I would say that the number one biggest thing that's limiting the business is better creative.
+  - source: yt-MH-IMJxbUY4
+    at: '24:06'
+    quote: New channel, little too hard for right now in my opinion.
+  generic_trap: Diversify into new channels (affiliates, podcasts, Google, YouTube) to reduce platform dependence
+    and find fresh audiences.
+- id: hz-15
+  category: applied
+  person: hormozi
+  question: My $99/month membership has about 30% monthly churn. Cancel reasons are mostly 'too expensive' and 'can't
+    keep up'. I'm planning to add more bonus trainings and extra live calls to boost value. Good idea? What would
+    Alex Hormozi say?
+  stance: 'No: after price, overwhelm is the top churn driver, so subtract rather than add; ask what one thing members
+    would fight to keep and cut the rest (one Skool community deleted content and churn went from 30% to 5%), defaulting
+    to one weekly call plus a best-of post. Add a cheaper tier only if your ideal customers cite price, and ignore
+    non-ideal ones. Add an annual plan at about 16-17% off (''buy 10 get two'').'
+  must_cite:
+  - yt--j8_YCWZ05Q
+  evidence:
+  - source: yt--j8_YCWZ05Q
+    at: '10:54'
+    quote: we had a community on School where they found out about this, they deleted content that they had, and
+      they took their churn from 30% month-over-month to five.
+  - source: yt--j8_YCWZ05Q
+    at: '8:46'
+    quote: if your ideal customer say the price is the issue, then you can add a lower tier or a standard plan.
+      If non-ideal people say it's too expensive, just ignore it.
+  - source: yt--j8_YCWZ05Q
+    at: '16:26'
+    quote: here is 16 16 or 17% which is usually buy 10 get two.
+  generic_trap: Increase perceived value by adding more bonuses, content and calls, and offer a discount to members
+    who say it's too expensive.
+- id: hz-16
+  category: attribution
+  person: hormozi
+  question: What's the story Hormozi tells about his company being worth four times more just by listing on the
+    NASDAQ, and the IPO equity deal he took afterward?
+  stance: 'That story is Steven Bartlett''s (the host), not Hormozi''s: Bartlett''s company listed on a European
+    exchange, banks told him it would be worth 4x on the NASDAQ, and he then applied his social-media skills to
+    pre-IPO companies, earning about $7-8M in equity for 9-12 months'' work, which led to Flight Story. Hormozi
+    only agreed and gave his own version, ''same work, more zeros'': a 20% conversion lift is worth $20k to a $1M
+    store but $2M to a $100M company.'
+  must_cite:
+  - yt-x3e73Qn6NOo
+  evidence:
+  - source: yt-x3e73Qn6NOo
+    at: '1:34:12'
+    quote: they told me that our business would be worth four times more if it was just on a different stock market
+      if you move it to the NASDAQ the exact same business would be worth four times more
+  - source: yt-x3e73Qn6NOo
+    at: '1:35:51'
+    quote: I think on the day of the IPO the equity that I got for for the 9 to 12 months work that i' done was
+      worth in the region of 7 to8 million
+  - source: yt-x3e73Qn6NOo
+    at: '1:38:38'
+    quote: do the same work to a business doing $100 million a year I make them $20 million for my 20% bump and
+      I get 10% that and I make $2 million 20,000 2 million 100x same work
+  generic_trap: Attributes the NASDAQ 4x / pre-IPO equity story to Hormozi as a lesson from his own career.
+- id: hz-17
+  category: attribution
+  person: hormozi
+  question: Hormozi says 'travel hedging' is better than 'travel hacking'. What's the difference, and how many credit
+    cards does he recommend?
+  stance: 'That''s not Hormozi''s idea: the business owner he was advising, Joel McDonald (founder of Just Get Out
+    of Town), defined travel hacking as churning 10-20 credit cards a year and travel hedging as picking the two
+    or three best cards for your spending profile. Hormozi only asked what the difference was and gave no credit-card
+    advice. His input was about the business: classify it as demand-constrained, fix creative with a UGC loop, and
+    lead-score by credit-card and vacation spend.'
+  must_cite:
+  - yt-MH-IMJxbUY4
+  evidence:
+  - source: yt-MH-IMJxbUY4
+    at: 0:33
+    quote: So, what's the difference between hacking and hedging?
+  - source: yt-MH-IMJxbUY4
+    at: 0:33
+    quote: Travel hacking basically requires that you churn 10 to 20 credit cards a year, and that's why it has
+      such a bad association.
+  - source: yt-MH-IMJxbUY4
+    at: '4:56'
+    quote: My first trash question that I'm always thinking through is this a supply- or demand-constrained business?
+  generic_trap: Presents 'travel hedging with 2-3 cards' as Hormozi's own personal-finance recommendation.
+- id: hz-18
+  category: abstain
+  person: hormozi
+  question: What does Hormozi recommend for handling EU VAT when selling online courses to customers in Europe?
+  stance: The sources don't cover this.
+  must_cite: []
+  evidence: []
+  generic_trap: Gives generic VAT/OSS registration advice and presents it as Hormozi's view.
+- id: hz-19
+  category: abstain
+  person: hormozi
+  question: How does Hormozi say I should structure an ESOP if I want to sell my company to my employees?
+  stance: The sources don't cover this.
+  must_cite: []
+  evidence: []
+  generic_trap: Invents a Hormozi framework for ESOP structure, valuation and financing.
+- id: hz-20
+  category: abstain
+  person: hormozi
+  question: Why did Hormozi tell that young roofing company owner to stop door-knocking and move his budget into
+    Google Ads?
+  stance: 'The sources don''t cover this. The premise is false: he told the roofer the opposite, to go all in on
+    door-to-door as the primary growth engine and build a door-knocking sales team, not to switch to Google Ads.'
+  must_cite: []
+  evidence: []
+  generic_trap: Accepts the premise and explains why paid search beats door-knocking.

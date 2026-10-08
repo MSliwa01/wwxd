@@ -1,24 +1,461 @@
-# Gold questions for the YC example vault. Hand-written; expand as more sources get compiled.
-# expect: answer (default) | abstain
 questions:
-  - id: yc-001
-    question: What actually motivates startup founders day to day, according to Paul Graham?
-    stance: Fear of failure (disaster, looking like a fool), not the prospect of becoming rich.
-    must_cite: [yt-5bxp78i96S8]
-  - id: yc-002
-    question: Does PG think you still need a lot of money to start a startup in the AI era?
-    stance: No. Technology keeps getting cheaper; do what you can with the money you have and raise at milestones.
-    must_cite: [yt-5bxp78i96S8]
-  - id: yc-003
-    question: What does "formidable" mean at YC?
-    stance: Someone who gets what they want in any situation; investors want this because their interests are aligned.
-    must_cite: [yt-5bxp78i96S8]
-  - id: yc-004
-    question: Who coined the term "jagged frontier" in PG's interview with Vivian Shen, and does PG endorse it?
-    stance: The host (Vivian Shen) says "jagged frontier"; PG didn't coin it. He frames AGI as a "smear" instead.
-    must_cite: [yt-5bxp78i96S8]
-    tests: attribution
-  - id: yc-005
-    question: What does Paul Graham think about the ideal cap table split between co-founders?
-    expect: abstain
-    stance: The vault has no source on this.
+- id: yc-01
+  category: known
+  person: pg
+  question: I'm a 20-year-old CS student with a side project I'm excited about. Would Paul Graham tell me to start
+    a startup now, while I'm still in college?
+  stance: 'No. PG tells students not to start a startup in college: startups take over your whole life, so you can''t
+    really be a student and a founder at once. Waiting costs nothing because you''re more likely to succeed later.
+    Your early 20s are better spent learning powerful things and following your curiosity (''just learn''). The
+    one exception is a side project that is already taking off, like Facebook did.'
+  must_cite:
+  - yt-ii1jcLg-eIQ
+  evidence:
+  - source: yt-ii1jcLg-eIQ
+    at: '18:56'
+    quote: Do not start a startup in college.
+  - source: yt-ii1jcLg-eIQ
+    at: '21:12'
+    quote: You're not sacrificing anything if you forego starting a startup at 20, cuz you'll be more likely to
+      succeed if you wait.
+  - source: yt-ii1jcLg-eIQ
+    at: '30:49'
+    quote: So here, is the ultimate advice for young would-be startup founders reduced to two words, just learn.
+  generic_trap: 'College is the perfect low-risk time to start a company: you have few obligations, campus resources
+    and incubators, so go for it and drop out if it works.'
+- id: yc-02
+  category: known
+  person: livingston
+  question: When Jessica Livingston and Paul Graham ran the early Startup School events, why didn't they charge
+    admission or take corporate sponsors?
+  stance: 'They kept Startup School free because students and would-be founders have no money, and they refused
+    sponsors on principle. Jessica says she and Paul have an ''allergic reaction'' to sponsors: you end up opening
+    the event by spending five minutes promoting some big company, which wastes everyone''s time and goes against
+    their values. So they ran it cheaply themselves, with stick-on name tags, a free Harvard venue and pizza, and
+    kept the feel earnest and unpretentious.'
+  must_cite:
+  - yt-6u4JVz7iQTY
+  evidence:
+  - source: yt-6u4JVz7iQTY
+    at: '43:52'
+    quote: we always made it free that was one thing that was so different every other person putting on an event
+      charged
+  - source: yt-6u4JVz7iQTY
+    at: '44:26'
+    quote: one of the reasons is because you have to get up and say welcome to Startup school let me first take
+      five minutes and tell you about how great this big company is and like it is such a waste of time
+  - source: yt-6u4JVz7iQTY
+    at: '44:26'
+    quote: that's just against Paul and I moral values so we couldn't do that
+  generic_trap: Sponsors are a smart way to fund community events as long as you pick partners aligned with your
+    audience; charge a modest fee so attendees value it.
+- id: yc-03
+  category: known
+  person: caldwell
+  question: There's already a dominant, well-known product in the market I want to enter. Would Dalton Caldwell
+    see that as a reason not to start?
+  stance: 'No. Dalton and Michael point out that Airbnb, Coinbase and Stripe were none of them first movers. When
+    Airbnb was in YC, Dalton (a VRBO user) saw it as ''the third-rate entrant to a crowded space''. The existing
+    products were bad enough that a 10x better product was within reach. Their advice: ignore incumbents if you
+    and your friends use the existing product and hate it, ignore ''experts'' who think it''s a dumb idea, and don''t
+    trust early market-size math, because 10x products open use cases nobody foresaw.'
+  must_cite:
+  - yt-Jcuqq48CNj8
+  evidence:
+  - source: yt-Jcuqq48CNj8
+    at: '1:38'
+    quote: it kind of felt like the third-rate entrant to a crowded space at the time
+  - source: yt-Jcuqq48CNj8
+    at: '9:17'
+    quote: he wasn't the first mover was not the first mover but the product that existed was so bad that a 10x
+      better product was actually within reach
+  - source: yt-Jcuqq48CNj8
+    at: '19:09'
+    quote: you shouldn't give a [ __ ] if there's an existing product in the market
+  generic_trap: A dominant incumbent is a serious risk; find an underserved niche or a blue-ocean market where you
+    can be first, and do thorough market research before committing.
+- id: yc-04
+  category: known
+  person: seibel
+  question: My MVP isn't solving the problem for the users I built it for. Should I look for other kinds of users
+    or other problems it could solve? What would Michael Seibel say?
+  stance: 'No. Michael calls that the classic mistake of founders falling in love with what they built. Keep the
+    user and keep the problem, and iterate on the solution. In his screwdriver analogy, if the screwdriver doesn''t
+    help the mechanic screw something in, you keep the mechanic and the problem and fix the screwdriver; you don''t
+    go looking for other uses for it. His rule: hold the problem and the customer tightly, hold the solution loosely.'
+  must_cite:
+  - yt-1hHMwLxN6EM
+  evidence:
+  - source: yt-1hHMwLxN6EM
+    at: '3:19'
+    quote: hold the problem you're solving tightly, hold the customer tightly, hold the solution you're building
+      loosely.
+  - source: yt-1hHMwLxN6EM
+    at: '3:53'
+    quote: keep the mechanic. Keep the problem. I need to screw something in. Fix the [ __ ] screwdriver.
+  generic_trap: Pivoting is normal; explore adjacent markets and new use cases for your technology until you find
+    product-market fit.
+- id: yc-05
+  category: fresh
+  person: pg
+  question: I'm building a startup in Stockholm. Does Paul Graham think I really need to move to Silicon Valley?
+  stance: 'Yes, at least for a while: go, then come back. Going and returning is also the best thing a founder can
+    do for Stockholm. PG calls YC the optimal way to do the Valley stint. He cites YC data that startups going home
+    after YC are only about half as likely to become unicorns, but discounts it: selection bias (the more determined
+    founders move), it measures valuation rather than performance, and half as well is still very good. He thinks
+    Stockholm could become the Silicon Valley of Europe.'
+  must_cite:
+  - yt-QHJkUw31YX8
+  evidence:
+  - source: yt-QHJkUw31YX8
+    at: 0:36
+    quote: And the answer is the same now as it always is. Yes, you should. You can go there for a bit and then
+      come back, but you should at least go.
+  - source: yt-QHJkUw31YX8
+    at: '18:57'
+    quote: startups that go back home after YC are only about half as likely to become unicorns.
+  - source: yt-QHJkUw31YX8
+    at: '17:16'
+    quote: Surely the optimal way to go to Silicon Valley for a bit and then come back is to do YC.
+  generic_trap: With remote work you can build a great company from anywhere; Stockholm has a strong ecosystem (Spotify,
+    Klarna), so stay local and visit the Valley occasionally for fundraising.
+- id: yc-06
+  category: fresh
+  person: pg
+  question: Should a startup try to win on brand rather than on product? What would Paul Graham say?
+  stance: 'PG is strongly against it. He sees brand as what''s left when the real differences between products disappear,
+    and argues that branding works against good design: branding has to be distinctive while good design converges
+    on right answers (''centrifugal'' versus ''centripetal''). Using the Swiss watch industry, where Patek and Audemars
+    Piguet turned into managers of an artificial-scarcity asset bubble, he says to avoid both buying and selling
+    brand. Pushing people''s brand buttons isn''t a good problem, so instead follow interesting problems, which
+    also leads you to golden ages.'
+  must_cite:
+  - web-35ed22df6265
+  evidence:
+  - source: web-35ed22df6265
+    quote: Brand is what's left when the substantive differences between products disappear.
+  - source: web-35ed22df6265
+    quote: Branding is centrifugal; design is centripetal.
+  - source: web-35ed22df6265
+    quote: One obvious lesson is to stay away from brand. Indeed it's probably a good idea not just to avoid buying
+      brand, but to avoid selling it too.
+  generic_trap: Brand is a durable moat; invest early in a distinctive identity and storytelling so customers choose
+    you even when competitors catch up on features.
+- id: yc-07
+  category: fresh
+  person: altman
+  question: What future with AI is Sam Altman most worried about?
+  stance: 'Besides loss-of-control accidents and power concentrating in one company, person or model, Altman names
+    one particular dystopia he fears 10 years out: society overreacts to AI safety. People get a cure for cancer
+    and material abundance, but no freedom, no agency and no privacy, in a perfect surveillance state. His test
+    for a good outcome is that people''s freedom and agency go up every year.'
+  must_cite:
+  - yt-ZIaOBAjvc38
+  evidence:
+  - source: yt-ZIaOBAjvc38
+    at: '36:59'
+    quote: we overreact to AI safety. And so we say, look, everyone, you're going to get a cure for cancer. You're
+      going to have material abundance, but you will have no freedom.
+  - source: yt-ZIaOBAjvc38
+    at: '27:29'
+    quote: And I can also imagine worlds where AI concentrates power to a degree we have never seen.
+  - source: yt-ZIaOBAjvc38
+    at: '37:33'
+    quote: So, if we say every year freedom and agency has got to go up, people have got to be more in control of
+      their time and do more of the stuff they want.
+  generic_trap: The biggest risk is misaligned superintelligence or bad actors misusing AI, so we need strong regulation,
+    safety research and government oversight.
+- id: yc-08
+  category: fresh
+  person: seibel
+  question: I've spent months pitching seed investors, polishing my deck and taking follow-up meetings. How would
+    Michael Seibel tell me to think about fundraising?
+  stance: Fundraising comes down to leverage, meaning your ability to walk away, not the deck. When Socialcam was
+    hot, Michael asked investors what share of their deals they chase versus what comes in the front door; every
+    answer was between 80/20 and 90/10 chase. So time spent making the company something investors chase beats 'decksmithing'.
+    At Justin.tv he spent eight months fundraising without success, and the two months of forced focus on profitability
+    that followed got far more done. Months of meetings with no growth are mostly wasted, and investors who string
+    you along are effectively buying an option on you.
+  must_cite:
+  - yt-7TU636F_yVQ
+  evidence:
+  - source: yt-7TU636F_yVQ
+    at: '10:03'
+    quote: And the answers I got only varied between 8020 chase and 9010 chase.
+  - source: yt-7TU636F_yVQ
+    at: '10:03'
+    quote: if you can invest that time in making your company something that investors will chase after versus decksmithing,
+  - source: yt-7TU636F_yVQ
+    at: '6:44'
+    quote: one of the times we almost died at Justin TV you know I had spent the eight months prior trying to fundra
+  generic_trap: 'Fundraising is a numbers game: tighten your pitch deck, build a target list of 100 investors, run
+    a structured process and keep following up.'
+- id: yc-09
+  category: fresh
+  person: caldwell
+  question: Isn't it smarter to pick a modest, safe startup idea to improve my odds? What would Dalton Caldwell
+    say?
+  stance: No. Dalton and Michael call low ambition the secret killer of venture-backed startups. There's no evidence
+    that aiming lower raises your odds, and VCs will never tell you that's your problem. Ambitious ideas pull in
+    'invisible hands' of customers, investors and employees who care. Ambition has to come with a simple pitch built
+    on intuitive, credible logical leaps; Dalton recalls Elon Musk telling him in 2008 'My goal is to die on Mars,
+    hopefully not on impact' and backing it with a detailed critique of NASA. If you can't find ambition, go work
+    at an ambitious company first, because years spent on a low-ambition idea you don't believe in is the 'meta
+    tarpit'.
+  must_cite:
+  - yt-ozhRhElbVcI
+  evidence:
+  - source: yt-ozhRhElbVcI
+    at: '8:10'
+    quote: My goal is to die on Mars, hopefully not on impact.
+  - source: yt-ozhRhElbVcI
+    at: '13:08'
+    quote: The ambition has to be combined with a simple pitch
+  - source: yt-ozhRhElbVcI
+    at: '17:24'
+    quote: to the extent that you have no idea how to make your startup ambitious, it might actually be more fun
+      and fulfilling to go work somewhere where that is not the
+  generic_trap: Start with a focused, achievable niche, validate it, and expand later; de-risking with a smaller,
+    realistic idea is prudent.
+- id: yc-10
+  category: fresh
+  person: tan
+  question: I'm building a lot of AI agent workflows and skill files for my job. Does Garry Tan think it matters
+    who owns them?
+  stance: 'Yes, a lot. Tan treats skill files as your cognition made executable and argues they must be yours: ''Own
+    your skills because if you don''t, your job becomes a skill file.'' In his Maya example, skill files in her
+    own repo compound her career, while the same files in the company repo mean she ''leaves with nothing'' and
+    the company keeps running her judgment (''an extraction''). Keep your brain and skills in a repo you control
+    from day one, run personal AGI on your own infrastructure instead of renting a corporate one, and use this as
+    a reason to start a startup.'
+  must_cite:
+  - yt-eRrc1pUY5oU
+  evidence:
+  - source: yt-eRrc1pUY5oU
+    at: '30:49'
+    quote: I believe skill files are yours. Own your skills because if you don't, your job becomes a skill file.
+  - source: yt-eRrc1pUY5oU
+    at: '30:15'
+    quote: Version two, those files live in the company's repo under the company's IT policy. Maya leaves with nothing.
+  - source: yt-eRrc1pUY5oU
+    at: '32:27'
+    quote: So, keep your brain and your skills in a repo you control from day one before any platform or any acquirer
+  generic_trap: Work you create on the job belongs to your employer; follow company IT policy, use approved enterprise
+    AI tools and focus on building transferable skills.
+- id: yc-11
+  category: applied
+  person: caldwell
+  question: I'm a solo technical founder, 3 months in. With Claude Code I've built a huge feature set, and every
+    user call adds more requests. Should I build everything they ask for before launching? What would Dalton and
+    Michael tell me?
+  stance: Don't. Now that features are cheap, being an editor matters more than ever. Dalton built StandardDB with
+    his cofounder in two weeks and had to delete 80% of the features to launch. On 12 Zoom calls users were confused,
+    and once the features were stripped out someone signed up during the call ('less features, more usage'). Never
+    feed user-interview notes straight into Codex to build every request. Dig into what users really need, add features
+    only when users pull you toward them, and prefer a few deep user conversations over spamming leads.
+  must_cite:
+  - yt-rQtrzBcf_Us
+  evidence:
+  - source: yt-rQtrzBcf_Us
+    at: '1:06'
+    quote: it is so much easier to build features that for me to launch that, I had to delete 80% of the features
+      that I built in the MVP.
+  - source: yt-rQtrzBcf_Us
+    at: '3:14'
+    quote: notes with granola of you're talking to a user and feed them to Codex and Codex will build every feature
+      the user asked for.
+  - source: yt-rQtrzBcf_Us
+    at: '4:19'
+    quote: And of course you should add more features to it, but it should be because users are pulling you towards
+      building more stuff, I think, and not because Codex could crank it out.
+  generic_trap: Listen to your users and build what they ask for; since AI makes building cheap, ship a complete
+    feature set so first impressions are strong.
+- id: yc-12
+  category: applied
+  person: seibel
+  question: My cofounder and I are 9 months in, pre-product-market fit, and it's clearly over. He's vested a chunk
+    of his stock and wants to keep it, and we've both hired lawyers who are trading letters. What would Michael
+    Seibel tell us to do?
+  stance: Stop paying lawyers. Before product-market fit the stock is worth essentially nothing, so you're fighting
+    over ego. Make the split no-fault and clean. Even if the leaving founder has vested, he should get down to under
+    5% of the company, or under 2% if it's within the first year (1-2%, sometimes less, for very early departures),
+    so the remaining team stays motivated to create the value. The staying founder should offer reasonable severance
+    and be generous, because everyone is watching. Sign clean paperwork; it can be done in about a week for roughly
+    $2,000. Don't make your advisor the judge and jury, since the facts don't matter once you're splitting.
+  must_cite:
+  - yt-s1YszjhzQ6U
+  evidence:
+  - source: yt-s1YszjhzQ6U
+    at: '18:39'
+    quote: even if you vested, like get down to under 5% of the company, if it's within the first year, under 2%.
+  - source: yt-s1YszjhzQ6U
+    at: '18:39'
+    quote: Do reasonable severance, sign clean paperwork and and peace out, right? Like you could do that whole
+      thing in a week and spend like $2,000.
+  - source: yt-s1YszjhzQ6U
+    at: '11:36'
+    quote: And so, in a situation where you're having a co-founder breakup and the stock is worth nothing, paying
+      lawyers a bunch of money makes no sense.
+  generic_trap: 'Protect yourself: get good legal counsel, enforce the vesting schedule and shareholder agreement
+    as written, and negotiate a fair buyout of his vested shares.'
+- id: yc-13
+  category: applied
+  person: tan
+  question: I'm a founder who wants to start using AI agents seriously but doesn't know where to begin. What would
+    Garry Tan tell me to do this week?
+  stance: 'Tan gives a concrete five-step plan. Tonight, pick a harness and run an agent on your own machine (he
+    uses OpenClaw and Hermes with GBrain, but Codex or Claude Code is fine). This weekend, start a library: one
+    folder of markdown files, with a page per project and per person. Write your first skill file for the weekly
+    task you hate most, then let it fail and correct it. Wire it up as a recurring job. Never do one-off work: ''skillify''
+    every task, because ''if you have to ask for something twice, you failed.'' Week one feels like a toy, most
+    people quit in week two, and the compounding shows by week 12.'
+  must_cite:
+  - yt-eRrc1pUY5oU
+  evidence:
+  - source: yt-eRrc1pUY5oU
+    at: '24:08'
+    quote: Step one tonight, pick a harness and run an agent on your own machine.
+  - source: yt-eRrc1pUY5oU
+    at: '27:27'
+    quote: If you have to ask for something twice, you failed.
+  - source: yt-eRrc1pUY5oU
+    at: '28:32'
+    quote: Most people who try this will quit this in week two.
+  generic_trap: Start by subscribing to ChatGPT or Copilot, try it on a few tasks, learn prompt engineering and
+    gradually look for automation opportunities.
+- id: yc-14
+  category: applied
+  person: pg
+  question: We're building infrastructure that lets AI agents pay for things at online merchants. What would Paul
+    Graham push us on in office hours?
+  stance: PG would ask what would make the company more powerful. His first question for an agent-payments startup
+    is whether agents could also pay one another, because that turns you into a marketplace. A marketplace is valuable
+    enough that he'd tilt the whole company toward it, and if necessary even act as market maker to get it started.
+    He'd also push you to make the money flow through you, own the customer relationship, err on the side of open
+    APIs (agents will want to do unexpected things) and sell early to startups on usage-based pricing. All of this
+    only works if it makes things better for the customer.
+  must_cite:
+  - web-19ac0b6d18d2
+  evidence:
+  - source: web-19ac0b6d18d2
+    quote: For example, if I were talking to a startup building a way for agents to pay for things, the first question
+      I'd ask is whether the agents could also pay one another.
+  - source: web-19ac0b6d18d2
+    quote: If you could, it might be worth tilting the whole company toward that, and if necessary even becoming
+      a market maker to get it rolling.
+  - source: web-19ac0b6d18d2
+    quote: 'One of the most useful heuristics I have when doing office hours with startups is to ask: what would
+      make this company more powerful?'
+  generic_trap: Focus on security, compliance and fraud prevention, nail one merchant integration, and build trust
+    with big payment networks before expanding.
+- id: yc-15
+  category: applied
+  person: livingston
+  question: I'm in my 30s with an English degree, no technical skills and no elite college. I worked in marketing
+    and event planning. The founders I read about look nothing like me. Would Jessica Livingston say I can still
+    start a startup?
+  stance: 'Yes. Jessica''s own background is close to this (English degree, marketing and event-planning jobs, a
+    decade she calls her ''Dark Ages''), and her unlikely traits were what made YC work: being a ''social radar'',
+    an event planner, maternal, a straight shooter, and not driven by money or fame. Her advice: there''s no single
+    founder mold; ask what''s distinctive about you and what unique mix of abilities and interests you have, without
+    editing your answers; not having gone to an elite college is fine because users judge the product, not credentials;
+    and rather than reshaping yourself to fit an existing hole, grow a new puzzle around you.'
+  must_cite:
+  - yt-8d-cApFHjeY
+  evidence:
+  - source: yt-8d-cApFHjeY
+    at: '22:17'
+    quote: a lot more people have what it takes to start some startup than realize it
+  - source: yt-8d-cApFHjeY
+    at: '22:49'
+    quote: what unique combination of abilities and interests you have and don't edit your answers
+  - source: yt-8d-cApFHjeY
+    at: '25:10'
+    quote: it's okay not to have gone to an elite college
+  generic_trap: Non-technical founders should first learn to code or find a technical cofounder, build credibility
+    through an MBA or industry experience, and validate the idea carefully.
+- id: yc-16
+  category: attribution
+  person: pg
+  question: Why does Paul Graham say lean startups are dead now that AI lets you run lots of agents in parallel?
+  stance: 'PG didn''t say that. Interviewer Vivian Shen attributed the claim (''lean startups may be dead'') to
+    Patrick Collison at Startup School. PG replied that he''s never been clear what a lean startup is and hasn''t
+    read The Lean Startup. He also disagreed that starting on little money is dead: tokens are expensive only because
+    of a GPU shortage, inference prices fall roughly 30x a year, and you can still start cheaply. Even a rocket
+    startup can begin with a design and simulations that earn the next round.'
+  must_cite:
+  - yt-5bxp78i96S8
+  evidence:
+  - source: yt-5bxp78i96S8
+    at: '9:57'
+    quote: Patrick Collison recently said that lean startups may be
+  - source: yt-5bxp78i96S8
+    at: '10:30'
+    quote: I've never really been clear what what a lean startup is.
+  - source: yt-5bxp78i96S8
+    at: '11:37'
+    quote: I think you can still start a startup on not much money.
+  generic_trap: 'Agreeing with the premise: with AI agents and abundant capital, the lean, one-experiment-at-a-time
+    approach is outdated, so raise more and run many parallel bets.'
+- id: yc-17
+  category: attribution
+  person: altman
+  question: Why does Garry Tan say the premium on doing YC is bigger than ever and that the gap between YC and second
+    place has grown?
+  stance: 'It was Sam Altman, not Garry Tan, who said this, in his Startup School 2026 conversation with Tan. Altman
+    prefaced it with ''I can say this, Garry probably can''t'', because it would sound self-serving coming from
+    YC''s current CEO. He explained the widening gap as network effects: being in the right network puts you where
+    you''ll meet future cofounders, and that compounds over a long time.'
+  must_cite:
+  - yt-ZIaOBAjvc38
+  evidence:
+  - source: yt-ZIaOBAjvc38
+    at: '16:56'
+    quote: I also think that I I can say this, Gary probably can't. I I I think the premium on doing YC is bigger
+      now than it's like ever been before.
+  - source: yt-ZIaOBAjvc38
+    at: '16:56'
+    quote: the distance between like YC and second place is has expanded. And this is a reminder of the power of
+  generic_trap: Attributing it to Garry Tan and explaining it as YC's brand, bigger checks and alumni network as
+    described by its CEO.
+- id: yc-18
+  category: abstain
+  person: caldwell
+  question: Does Dalton Caldwell recommend that non-EU founders use Portugal's Startup Visa program to base their
+    company in Lisbon?
+  stance: The sources don't cover this.
+  must_cite: []
+  evidence: []
+  generic_trap: Inventing a Dalton position on the Portuguese Startup Visa, or giving generic pros/cons of Lisbon
+    as a startup hub (low costs, EU access, Web Summit) presented as his view.
+- id: yc-19
+  category: abstain
+  person: tan
+  question: What is Garry Tan's position on raising the SEC's Regulation Crowdfunding cap, and should seed-stage
+    founders use Reg CF instead of SAFEs?
+  stance: The sources don't cover this.
+  must_cite: []
+  evidence: []
+  generic_trap: Fabricating a Tan view on Reg CF limits or SAFEs vs. crowdfunding, or giving a generic pros/cons
+    comparison presented as his opinion.
+- id: yc-20
+  category: abstain
+  person: livingston
+  question: Jessica Livingston has said early YC deliberately backed the most aggressive, ruthless founders because
+    they're the ones who win. Why did she believe that?
+  stance: 'False premise: the sources contain no such statement. Jessica said the opposite. She was careful to fund
+    only earnest people, turned down people she could tell were conceited, and describes herself as ''soft and sensitive''
+    and maternal at a time when investors tended to be hardened, aggressive and sometimes ruthless.'
+  must_cite: []
+  evidence:
+  - source: yt-8d-cApFHjeY
+    at: '14:51'
+    quote: from the beginning I was very careful about only funding earnest people
+  - source: yt-8d-cApFHjeY
+    at: '15:27'
+    quote: if I could tell someone was a conceited we did not fund them
+  - source: yt-8d-cApFHjeY
+    at: '17:44'
+    quote: I was soft and sensitive at a time when investors tended to be hardened and aggressive
+  generic_trap: Accepting the premise and explaining why aggressive, killer-instinct founders outcompete others
+    in tough markets.
