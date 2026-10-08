@@ -58,10 +58,13 @@ preferred the wwxd answer every time.
 | Faithfulness | 3.2 | 4.6 |
 | Preferred by the judge | 0 of 40 | 40 of 40 |
 
-160 quotes in the wwxd answers were checked against the transcripts by a script, and
-158 were found verbatim. The other 2 were video titles. Raw Opus rarely quoted
-anyone. It lost on specifics, on anything from 2026, and on attribution traps. Full
-numbers, setup and caveats are in [bench/RESULTS.md](bench/RESULTS.md).
+A second judge from a different model family (NVIDIA Nemotron 3 Ultra, run through
+opencode) scored the same pairs and preferred wwxd 39 times out of 40, so this isn't
+Claude grading Claude. 160 quotes in the wwxd answers were checked against the
+transcripts by a script, and 158 were found verbatim. The other 2 were video titles.
+Raw Opus rarely quoted anyone. It lost on specifics, on anything from 2026, and on
+attribution traps. Full numbers, setup and caveats are in
+[bench/RESULTS.md](bench/RESULTS.md).
 
 ## How it works
 
@@ -99,6 +102,35 @@ subject is one person.
   right person.
 - The agent's own extrapolations go to `derived/`, and lint stops them from being
   cited as evidence later.
+
+## Check who said it, by voice
+
+Lint proves a quote exists. It can't prove who said it, and that's the mistake that
+matters most. A real quote credited to the wrong person looks exactly like a good
+one. `wwxd voice <slug>` checks attribution by sound. It finds the second each quote
+is spoken, embeds that audio with a speaker-verification model, and compares it with
+each member's voiceprint. The voiceprints come from the vault itself, so there's
+nothing to enroll.
+
+On our test vaults it checked 1,423 statements from 26 videos in under 4 minutes on
+CPU. It flagged 9 as spoken by someone else. We could verify 6 of them:
+
+- In a Sam Altman and Garry Tan conversation, 3 lines the compile credited to Tan
+  were Altman's. The official speaker-labelled transcript confirms all 3. Across the
+  54 statements from that episode we could match to the official transcript, the
+  compile got 51 right and the voice check got all 54.
+- In a Dalton Caldwell and Michael Seibel episode, 2 teaser lines credited to Dalton
+  match Michael's voice, and the intro right after them is "hey this is Michael
+  Seibel with Dalton Caldwell".
+- In a Hormozi consulting call, a line credited to Hormozi sits in the business
+  owner's turn, where he explains his own sales process.
+
+The other 3 flags are in Dalton and Michael episodes with no official transcript, so
+they're still unconfirmed.
+
+The voice check is optional: `uv tool install "wwxd[voice] @ git+https://github.com/MSliwa01/wwxd"`.
+It runs on CPU with a small open model and needs no account or API key. Lint shows
+its mismatches as warnings until someone fixes the attribution.
 
 ## Quick start
 
@@ -215,6 +247,7 @@ example into your notes app's folder.
 | `wwxd digest <slug> --since YYYY-MM-DD` | Markdown note on what's new since a date |
 | `wwxd search <slug> "query"` | Keyword search over the wiki (`--raw` adds transcripts) |
 | `wwxd status <slug>` | Summary |
+| `wwxd voice <slug> [ids]` | Check who is speaking in each quote, by voice (needs `wwxd[voice]`) |
 | `wwxd doctor` | Check yt-dlp, the JS runtime, ffmpeg, Whisper and `$WWXD_HOME` |
 | `wwxd bench run`, `judge`, `report` | [Benchmarks](bench/README.md) |
 
@@ -254,7 +287,8 @@ at most a minute apart.
 ## Roadmap
 
 - A read-only MCP server for chat apps
-- Audio diarization as an option (`wwxd[diarize]`)
+- Word-level timings for Whisper transcripts, so the voice check is as precise on
+  podcasts as it is on YouTube captions
 - Tree versus flat layout results in the bench
 - Fetchers for X threads and Substack archives
 
