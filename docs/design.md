@@ -48,8 +48,11 @@ Differences:
   (`wwxd lint`), not just by the model.
 - **Speaker attribution**: metadata → LLM turn segmentation with confidence →
   hard filter (no low-confidence or `reported` statements as evidence) →
-  mechanical quote check. Audio diarization is an optional extra (`wwxd[diarize]`,
-  not implemented yet).
+  mechanical quote check → optional voice check (`wwxd voice`, the `wwxd[voice]`
+  extra). The voice check embeds each quote's audio with TitaNet-small and compares
+  it with per-member voiceprints built from the vault's own statements (a robust
+  mean, so a minority of wrong attributions doesn't shape it). No enrollment, no
+  gated models, CPU only.
 - **Acts over words.** Each leaf has an `Actions` section, and `tensions.md` tracks
   how views changed over time.
 - **Query answers go to `derived/`**, never into the wiki as evidence, so the
@@ -90,4 +93,4 @@ way.
 
 ## Not in v1
 
-MCP server, diarization implementation, pre-built vaults, book fetching, GUI.
+MCP server, full diarization, pre-built vaults, book fetching, GUI.

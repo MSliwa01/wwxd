@@ -25,6 +25,23 @@ vaults pass `wwxd lint` with no errors.
 | Usefulness | 3.20 | 4.60 | 2.95 | 4.70 |
 | Judge preferred | 0 of 20 | 20 of 20 | 0 of 20 | 20 of 20 |
 
+### A second judge from another model family
+
+To check that this isn't Claude preferring Claude, NVIDIA Nemotron 3 Ultra (free,
+through opencode) judged the same 40 pairs with the same prompt and the same access
+to the transcripts.
+
+| Nemotron judge, 1 to 5 | Hormozi raw | Hormozi wwxd | YC raw | YC wwxd |
+|---|---|---|---|---|
+| Accuracy | 2.75 | 4.95 | 2.75 | 5.00 |
+| Specificity | 2.40 | 4.85 | 2.30 | 5.00 |
+| Faithfulness | 3.10 | 4.90 | 3.00 | 5.00 |
+| Usefulness | 3.40 | 4.85 | 3.10 | 4.85 |
+| Judge preferred | 1 of 20 | 19 of 20 | 0 of 20 | 20 of 20 |
+
+The two judges picked the same answer on 39 of 40 questions. The one split is
+`hz-01`, where Nemotron preferred raw Opus.
+
 ### By category (accuracy, raw vs wwxd)
 
 | Category | Hormozi | YC |
@@ -70,6 +87,23 @@ A typical pair, from `hz-11` (HVAC company, 82% close rate, should it raise pric
 Attribution traps are where raw Opus did worst. Asked why Garry Tan thinks the YC
 premium is bigger than ever, raw Opus explained Tan's reasoning. Sam Altman said it,
 in a 2026 YC interview.
+
+## Attribution check by voice
+
+`wwxd voice` compares the audio of every quoted statement with the members'
+voiceprints (TitaNet-small through sherpa-onnx, CPU only).
+
+| Vault | Statements checked | Match | Weak | Mismatch | Time |
+|---|---|---|---|---|---|
+| hormozi | 779 | 774 | 4 | 1 | 1 min 53 s |
+| yc | 644 | 635 | 1 | 8 | 1 min 53 s |
+
+Times include downloading the audio. One Sam Altman and Garry Tan episode has an
+official transcript with speaker labels. Of the 54 statements from that episode we
+could match to it, the compile credited 51 correctly. The voice check got all 54
+right, including the 3 the compile got wrong. Of the 9 mismatches in total, 6 are
+confirmed by an official transcript or by the surrounding turns, and 3 are still
+unconfirmed.
 
 ## Limits of this run
 
