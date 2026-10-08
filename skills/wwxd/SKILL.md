@@ -10,7 +10,7 @@ immutable `raw/` sources, a `wiki/` tree that you maintain, and `derived/` answe
 The `wwxd` CLI does the mechanical work (discover, fetch, lint, search). You do the
 judgment work (curate with the user, compile, answer).
 
-Run the CLI as `wwxd`. If it isn't installed, use `uvx wwxd`. Vaults live in
+Run the CLI as `wwxd`. If it isn't installed, use `uvx --from git+https://github.com/MSliwa01/wwxd wwxd`. Vaults live in
 `$WWXD_HOME` (default `./vaults`).
 
 **Before writing anything into a vault, read `references/format.md`.** It is the
