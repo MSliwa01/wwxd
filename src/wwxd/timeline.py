@@ -91,7 +91,7 @@ def render(vault: Vault, entries: list[Entry], query: str | None = None, skipped
         out.append(f"  {entry.date or UNDATED:10}  \"{s.text}\" {s.cite()}")
         out.append(f"  {'':10}  {', '.join(entry.leaves)}")
     if skipped:
-        out += ["", f"Left out {_n(skipped, 'reported statement')}, since they relay someone else's view. Add --reported to see them."]
+        out += ["", f"Left out {_n(skipped, 'reported statement')}, since reported statements relay someone else's view. Add --reported to see them."]
     if not entries:
         out.append("No statements match.")
     return "\n".join(out)

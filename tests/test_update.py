@@ -21,14 +21,14 @@ def test_update_approves_only_new_candidates_and_fetches(vault, tmp_path, monkey
 
     result = CliRunner().invoke(app, ["update", str(vault.path), "--approve-hint", "own", "--fetch"])
     assert result.exit_code == 0, result.output
-    assert "Approved 1 new candidates with hint own" in result.output
+    assert "Approved 1 new candidate with hint own" in result.output
     status = {s.id: s.status for s in vault.load_sources()}
     assert status["file-new-talk"] == "fetched"
     assert status["file-old"] == "candidate"  # left pending by the user, not auto-approved
     assert status["file-summary"] == "candidate"
     assert vault.raw_path("file-new-talk").exists()
     log = (vault.path / "log.md").read_text()
-    assert "auto-approved 1 new candidates (own)" in log and "fetched 1 sources" in log
+    assert "auto-approved 1 new candidate (own)" in log and "fetched 1 sources" in log
 
 
 def test_update_without_options_only_discovers(vault, monkeypatch):  # noqa: F811

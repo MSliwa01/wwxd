@@ -88,5 +88,5 @@ def render(d: Digest) -> str:
     if not d.statements:
         out.append("None.")
     if d.reported:
-        out += ["", f"Left out {_n(d.reported, 'reported statement')}, since they relay someone else's view."]
+        out += ["", f"Left out {_n(d.reported, 'reported statement')}, since reported statements relay someone else's view."]
     return "\n".join(out) + "\n"

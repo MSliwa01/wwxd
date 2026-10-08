@@ -115,9 +115,10 @@ def update(
         # Only this run's candidates: older ones may have been left pending on purpose.
         new_ids = [s.id for s in v.load_sources() if s.id not in before and s.hint in approve_hint]
         n = _set_status(v, new_ids, [], "approved", ("candidate",))
-        typer.echo(f"Approved {n} new candidates with hint {', '.join(approve_hint)}")
+        noun = "candidate" if n == 1 else "candidates"
+        typer.echo(f"Approved {n} new {noun} with hint {', '.join(approve_hint)}")
         if n:
-            v.append_log(f"auto-approved {n} new candidates ({', '.join(approve_hint)})")
+            v.append_log(f"auto-approved {n} new {noun} ({', '.join(approve_hint)})")
     if fetch_after:
         fetch(vault)
 
