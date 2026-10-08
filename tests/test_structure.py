@@ -131,3 +131,12 @@ def test_frontmatter_that_does_not_parse(vault):  # noqa: F811
     assert found and found[0].startswith("wiki/startups/money/cheap.md")
     # The reader still treats it as a leaf.
     assert [leaf.title for leaf in read_leaves(vault)] == ["Cheap: is it possible?"]
+
+
+def test_distinct_from_silences_a_reviewed_pair(vault):  # noqa: F811
+    leaf(vault, "startups/money/raising-prices", "Raising prices", CHEAP)
+    leaf(vault, "startups/money/raising-your-prices", "Raising your prices", TECH)
+    assert len(near_duplicates(read_leaves(vault))) == 1
+    page = vault.wiki_dir / "startups" / "money" / "raising-your-prices.md"
+    page.write_text(page.read_text().replace("type: leaf\n", "type: leaf\ndistinct_from: [startups/money/raising-prices]\n"))
+    assert near_duplicates(read_leaves(vault)) == []

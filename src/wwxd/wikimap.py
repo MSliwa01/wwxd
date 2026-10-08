@@ -57,6 +57,7 @@ class Leaf:
     statements: list[Citation] = field(default_factory=list)
     actions: list[Citation] = field(default_factory=list)
     stance_sources: set[str] = field(default_factory=set)
+    distinct_from: set[str] = field(default_factory=set)  # leaves reviewed and kept apart on purpose
 
     @property
     def folder(self) -> str:
@@ -102,6 +103,9 @@ def read_leaf(page: Path, wiki: Path) -> Leaf | None:
     rel = page.relative_to(wiki).with_suffix("").as_posix()
     heading = next((ln[2:].strip() for ln in text.splitlines() if ln.startswith("# ")), "")
     leaf = Leaf(page, rel, str(front.get("title") or heading or page.stem), str(front.get("updated") or ""))
+    distinct = front.get("distinct_from") or []
+    for target in [distinct] if isinstance(distinct, str) else distinct:
+        leaf.distinct_from.add(str(target).strip().strip("[]").removeprefix("wiki/").removesuffix(".md"))
     section = ""
     for line_no, line in enumerate(_clean(text).splitlines(), 1):
         line = re.sub(r"`[^`]*`", "", line)
@@ -283,6 +287,8 @@ def near_duplicates(leaves: list[Leaf], threshold: float = DUPLICATE_THRESHOLD) 
     norm = {id(s): normalize(s.text) for leaf in leaves for s in leaf.statements}
     pairs = []
     for (i, a), (j, b) in itertools.combinations(enumerate(leaves), 2):
+        if a.rel in b.distinct_from or b.rel in a.distinct_from:
+            continue
         shared_a = {w for w in words[i] if any(_same_word(w, v) for v in words[j])}
         shared_b = {w for w in words[j] if any(_same_word(w, v) for v in words[i])}
         total = sum(idf[w] for w in words[i]) + sum(idf[w] for w in words[j])
