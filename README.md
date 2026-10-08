@@ -100,7 +100,9 @@ subject is one person.
 ## Quick start
 
 ```bash
-uv tool install "git+https://github.com/MSliwa01/wwxd"        # add [whisper] for podcasts
+uv tool install "git+https://github.com/MSliwa01/wwxd"
+# with local Whisper for podcasts and videos without captions:
+# uv tool install "wwxd[whisper] @ git+https://github.com/MSliwa01/wwxd"
 wwxd install-skill                                            # into ~/.claude/skills/wwxd
 
 wwxd new hormozi --example hormozi
