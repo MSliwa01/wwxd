@@ -9,7 +9,7 @@ keywords = ["llm", "knowledge-base", "wiki", "claude-code", "youtube", "transcri
 dependencies = [
     "typer>=0.12.0",
     "pyyaml>=6.0",
-    "yt-dlp>=2025.1.0",
+    "yt-dlp[default]>=2025.11.12",  # [default] brings yt-dlp-ejs, the challenge solver node and bun need
     "trafilatura>=1.12.0",
     "rapidfuzz>=3.0.0",
 ]
