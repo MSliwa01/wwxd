@@ -76,7 +76,9 @@ For every leaf you touched:
   inline citations. In group vaults, say who holds which view ("PG and Seibel
   agree…; Caldwell differs…").
 - Note any conflict with earlier statements in **Caveats**, and add a dated entry
-  to `wiki/tensions.md` (when did they say what?).
+  to `wiki/tensions.md` (when did they say what?). Run
+  `wwxd timeline <slug> <leaf path or keyword>` to list the earlier statements on
+  the topic by source date, with citations you can copy.
 - Update each touched `_overview.md` (tree layout) with a one-paragraph summary of
   that level and links to its children. Every domain has one. A topic gets one once
   it has two or more leaves.
@@ -93,3 +95,6 @@ wwxd mark-compiled <slug> <source-id> --note "+N leaves, updated …"
 
 If lint says a quote isn't in the source, re-read the raw doc and copy the actual
 words. Don't loosen the quote.
+
+Every 10 compiled sources, run `wwxd health <slug>`. If it flags near-duplicates,
+oversize leaves, missing overviews or index gaps, follow `consolidate.md`.
