@@ -1,6 +1,6 @@
 import json
 
-import numpy as np
+import pytest
 
 from tests.test_lint import SRC, vault, write_leaf  # noqa: F401  (fixture)
 from wwxd import voice
@@ -28,6 +28,7 @@ def test_verdict_rules():
 
 
 def test_voiceprint_ignores_a_minority_of_wrong_attributions():
+    np = pytest.importorskip("numpy")
     rng = np.random.default_rng(0)
     a, b = rng.normal(size=16), rng.normal(size=16)
     vecs = [a + rng.normal(scale=0.1, size=16) for _ in range(9)] + [b]

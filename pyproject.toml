@@ -22,7 +22,7 @@ voice = ["sherpa-onnx>=1.12", "sherpa-onnx-core>=1.12", "numpy", "av<18"]  # spe
 wwxd = "wwxd.cli:app"
 
 [dependency-groups]
-dev = ["pytest>=8.0"]
+dev = ["pytest>=8.0", "numpy"]
 
 [build-system]
 requires = ["hatchling"]
