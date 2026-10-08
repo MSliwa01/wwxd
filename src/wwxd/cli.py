@@ -65,6 +65,24 @@ def version() -> None:
 
 
 @app.command()
+def doctor() -> None:
+    """Check what fetching needs: yt-dlp, a JS runtime, ffmpeg, Whisper, WWXD_HOME. Exits 1 on FAIL."""
+    from wwxd.doctor import FAIL, run_checks
+
+    checks = run_checks()
+    colors = {"OK": "green", "WARN": "yellow", "FAIL": "red"}
+    width = max(len(c.name) for c in checks)
+    for check in checks:
+        typer.secho(f"{check.status:<4}", fg=colors[check.status], nl=False)
+        typer.echo(f"  {check.name:<{width}}  {check.detail}")
+    failed = sum(c.status == FAIL for c in checks)
+    warned = sum(c.status == "WARN" for c in checks)
+    typer.echo(f"{failed} failed, {warned} warnings")
+    if failed:
+        raise typer.Exit(1)
+
+
+@app.command()
 def examples() -> None:
     """List bundled example recipes (source configs only, no content)."""
     for name in list_examples():
