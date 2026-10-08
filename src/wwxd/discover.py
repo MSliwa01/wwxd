@@ -49,7 +49,7 @@ def _hint(title: str, speakers: list[str], own: bool) -> str:
 
 def _flat_entries(url: str, limit: int) -> list[dict]:
     with ytdl.new_ydl(extract_flat="in_playlist", skip_download=True, playlistend=limit) as ydl:
-        info = ydl.extract_info(url, download=False)
+        info = ytdl.with_backoff(lambda: ydl.extract_info(url, download=False), "listing videos")
     if not info:
         return []
     entries = info.get("entries")

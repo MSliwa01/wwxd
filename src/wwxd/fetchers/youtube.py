@@ -4,12 +4,10 @@ import datetime as dt
 import html
 import json
 import logging
-import time
 
 import yt_dlp
 
 from wwxd import ytdl
-from wwxd.config import get_settings
 from wwxd.rawdoc import RawDoc, Segment
 from wwxd.vault import Source, Vault
 
@@ -61,19 +59,21 @@ def _download_captions(ydl: yt_dlp.YoutubeDL, formats: list[dict]) -> list[Segme
     fmt = next((f for f in formats if f.get("ext") == "json3"), None)
     if fmt is None:
         raise RuntimeError("no json3 caption format offered")
-    last_error: Exception | None = None
-    for attempt in range(3):
-        try:
-            return parse_json3(json.loads(ydl.urlopen(fmt["url"]).read()))
-        except Exception as exc:  # network hiccups, 429s
-            last_error = exc
-            time.sleep(get_settings().download_delay * (attempt + 1))
-    raise RuntimeError(f"caption download failed: {last_error}")
+    try:
+        return ytdl.with_backoff(
+            lambda: parse_json3(json.loads(ydl.urlopen(fmt["url"]).read())), "downloading captions", retry_other=True
+        )
+    except Exception as exc:
+        raise RuntimeError(f"caption download failed: {exc}") from exc
+
+
+def _extract(ydl: yt_dlp.YoutubeDL, url: str) -> dict:
+    return ytdl.with_backoff(lambda: ydl.extract_info(url, download=False), "reading video info")
 
 
 def extract_info(url: str) -> dict:
     with ytdl.new_ydl(skip_download=True) as ydl:
-        info = ydl.extract_info(url, download=False)
+        info = _extract(ydl, url)
     if info is None:
         raise ValueError(f"Could not resolve {url}")
     return info
@@ -84,7 +84,7 @@ def fetch(source: Source, vault: Vault, *, whisper: str = "auto") -> RawDoc:
     video_id = source.id.removeprefix("yt-")
     url = video_url(video_id)
     with ytdl.new_ydl(skip_download=True) as ydl:
-        info = ydl.extract_info(url, download=False)
+        info = _extract(ydl, url)
         track = None if whisper == "always" else _pick_caption_track(info)
         segments: list[Segment] = []
         transcript_kind = ""

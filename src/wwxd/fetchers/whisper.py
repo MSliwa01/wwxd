@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import logging
-import time
 import urllib.request
 from functools import lru_cache
 from pathlib import Path
@@ -72,19 +71,15 @@ def download_youtube_audio(url: str, video_id: str, directory: Path) -> Path:
         "retries": 5,
         "fragment_retries": 5,
     }
-    delay = get_settings().download_delay
-    last_error: Exception | None = None
-    for attempt in range(3):
-        try:
-            with ytdl.new_ydl(**opts) as ydl:
-                ydl.download([url])
-            break
-        except Exception as exc:
-            last_error = exc
-            logger.warning("Audio download failed (attempt %d/3): %s", attempt + 1, exc)
-            time.sleep(delay * (attempt + 1))
-    else:
-        raise RuntimeError(f"Failed to download {url}") from last_error
+
+    def download() -> None:
+        with ytdl.new_ydl(**opts) as ydl:
+            ydl.download([url])
+
+    try:
+        ytdl.with_backoff(download, "downloading audio", retry_other=True)
+    except Exception as exc:
+        raise RuntimeError(f"Failed to download {url}: {exc}") from exc
     path = _find_cached(directory, video_id)
     if path is None:
         raise FileNotFoundError(f"Audio not found after download for {video_id}")
