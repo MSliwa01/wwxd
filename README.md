@@ -1,5 +1,7 @@
 # wwxd
 
+[![CI](https://github.com/MSliwa01/wwxd/actions/workflows/ci.yml/badge.svg)](https://github.com/MSliwa01/wwxd/actions/workflows/ci.yml)
+
 What would X do? wwxd turns a person's talks, podcasts and essays into a wiki of
 their actual positions, with every quote checked against the source. Your agent then
 answers the way that person would, and shows you where they said it.
@@ -104,7 +106,23 @@ uv tool install "git+https://github.com/MSliwa01/wwxd"
 # with local Whisper for podcasts and videos without captions:
 # uv tool install "wwxd[whisper] @ git+https://github.com/MSliwa01/wwxd"
 wwxd install-skill                                            # into ~/.claude/skills/wwxd
+```
 
+If you use Claude Code plugins, you can install the skill as a plugin instead of
+running `wwxd install-skill`. Run these two commands in Claude Code.
+
+```
+/plugin marketplace add MSliwa01/wwxd
+/plugin install wwxd@wwxd
+```
+
+The plugin installs the skill only. Keep the `uv tool install` line for the CLI;
+without it, the agent falls back to `uvx`, which needs [uv](https://docs.astral.sh/uv/).
+Don't use both `install-skill` and the plugin, or Claude Code loads the skill twice.
+
+Then create a vault and find candidate sources.
+
+```bash
 wwxd new hormozi --example hormozi
 wwxd discover hormozi                                         # nothing is downloaded yet
 ```
