@@ -321,7 +321,10 @@ def install_skill(
             typer.secho(f"{target} exists; pass --force to overwrite.", fg="yellow", err=True)
             raise typer.Exit(1)
         shutil.rmtree(target)
-    with resources.as_file(resources.files("wwxd") / "skill") as src:
+    skill = resources.files("wwxd") / "skill"  # the wheel ships skills/wwxd here
+    if not skill.is_dir():  # editable install or source checkout
+        skill = Path(__file__).resolve().parents[2] / "skills" / "wwxd"
+    with resources.as_file(skill) as src:
         shutil.copytree(src, target)
     typer.echo(f"Installed skill to {target}")
 

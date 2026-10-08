@@ -15,7 +15,7 @@ uv run pytest
 uv run wwxd --help
 ```
 
-The vault grammar lives in `src/wwxd/skill/references/format.md`. If you change it,
+The vault grammar lives in `skills/wwxd/references/format.md`. If you change it,
 change `src/wwxd/lint.py` and the tests in the same PR.
 
 ## Fetcher plugins

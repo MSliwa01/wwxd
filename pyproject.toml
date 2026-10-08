@@ -30,3 +30,8 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/wwxd"]
+
+# The skill lives at skills/wwxd so the repo root works as a Claude Code plugin.
+# The wheel ships it as wwxd/skill for `wwxd install-skill`.
+[tool.hatch.build.targets.wheel.force-include]
+"skills/wwxd" = "wwxd/skill"
