@@ -29,7 +29,7 @@ way they would, with sources.
 
 - **CLI** (`wwxd`): `new`, `discover`, `sources`, `approve`/`reject`, `add`,
   `fetch`, `pending`, `mark-compiled`, `lint`, `search`, `status`, `update`,
-  `install-skill`, `bench`.
+  `health`, `timeline`, `digest`, `install-skill`, `bench`.
 - **Skill** (`src/wwxd/skill/`): procedures for curating, compiling, asking and
   linting. Installed with `wwxd install-skill`.
 - **No MCP server in v1.** Vaults are plain markdown, so any agent with file access

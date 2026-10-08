@@ -146,19 +146,54 @@ Keep the strong model for compiling and answering. That's where attribution happ
 and lint can catch an invented quote but not a real quote credited to the wrong
 person.
 
+## Keep a vault current
+
+People keep publishing, so a vault goes stale. `wwxd update` finds new sources.
+`--approve-hint own` approves the new ones from the person's own channels and feeds,
+and `--fetch` downloads them. Candidates you left pending before stay pending, and
+the other new ones wait for your review.
+
+A weekly cron line covers the CLI part.
+
+```cron
+# Mondays at 7:00
+0 7 * * 1  WWXD_HOME=$HOME/vaults $HOME/.local/bin/wwxd update hormozi --approve-hint own --fetch >> $HOME/vaults/hormozi-update.log 2>&1
+```
+
+Compiling needs an agent. A Claude Code scheduled agent (`/schedule`) can run the
+whole loop. It needs `wwxd` installed and access to the vault. Give it a prompt like
+this one.
+
+> Keep the hormozi wwxd vault current. Run
+> `wwxd update hormozi --approve-hint own --fetch`, and list the other new
+> candidates for me without approving them. Compile every source in
+> `wwxd pending hormozi` with the wwxd skill (references/compile.md), running
+> `wwxd lint hormozi` and `wwxd mark-compiled` after each one. Then run
+> `wwxd health hormozi`, and if it asks for a consolidation pass, follow
+> references/consolidate.md. Finish with `wwxd digest hormozi --days 7` and show
+> me the digest.
+
+`wwxd digest` writes a markdown note on what's new: the sources compiled, the leaves
+created or updated, and new statements grouped by leaf. `--out` saves it, for
+example into your notes app's folder.
+
 ## CLI
 
 | Command | What it does |
 |---|---|
 | `wwxd new <slug> --example X` or `--name "Full Name"` | Create a vault |
 | `wwxd discover <slug>`, `wwxd update <slug>` | Find new candidate sources |
+| `wwxd update <slug> --approve-hint own --fetch` | Also approve new candidates with that hint and fetch them |
 | `wwxd sources <slug> --status candidate` | List sources |
 | `wwxd approve <slug> <ids>`, `wwxd reject <slug> <ids>` | Curate |
 | `wwxd add <slug> <url or file>` | Add a source by hand |
 | `wwxd fetch <slug>` | Download captions and articles into `raw/` |
 | `wwxd pending <slug>` | Sources fetched but not compiled |
 | `wwxd mark-compiled <slug> <id>` | Record a compiled source in `log.md` |
-| `wwxd lint <slug>` | Check quotes, citations, attribution and links |
+| `wwxd lint <slug>` | Check quotes, citations, attribution and links, and flag drift such as near-duplicate leaves |
+| `wwxd health <slug>` | Report on the wiki: size, attribution, coverage, near-duplicates, oversize leaves |
+| `wwxd timeline <slug> [query]` | Statements by source date and member, to see how views changed |
+| `wwxd digest <slug> --since YYYY-MM-DD` | Markdown note on what's new since a date |
 | `wwxd search <slug> "query"` | Keyword search over the wiki (`--raw` adds transcripts) |
 | `wwxd status <slug>` | Summary |
 | `wwxd bench run`, `judge`, `report` | [Benchmarks](bench/README.md) |
