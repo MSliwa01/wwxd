@@ -24,7 +24,8 @@ exact grammar that `wwxd lint` enforces.
 | A vault for a new person or group | **Set up** below, then curate, fetch, compile |
 | To refresh a vault | `wwxd update <slug>`, then curate, fetch, compile |
 | Pending sources compiled | `references/compile.md` |
-| A vault health check | `wwxd lint <slug>`, then fix what it reports |
+| A vault health check | `wwxd health <slug>` and `wwxd lint <slug>`, then fix what they report |
+| To clean up a drifting wiki (health flags it, or ~10 sources since the last pass) | `references/consolidate.md` |
 
 ## Set up
 

@@ -15,8 +15,9 @@
    the tree's `_overview.md` pages and the leaves' Related links. Read the leaves.
 3. If the leaves are thin, check the raw sources: `wwxd search <slug> "<terms>" --raw`.
    Anything you use from raw must be quoted and cited the same way.
-4. Check `wiki/tensions.md` for anything that changed over time. Prefer their more
-   recent view and say that it changed.
+4. Check `wiki/tensions.md` for anything that changed over time, and run
+   `wwxd timeline <slug> "<keyword>"` to see each member's statements on it by
+   source date. Prefer their more recent view and say that it changed.
 
 ## Answer format
 

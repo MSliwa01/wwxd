@@ -92,6 +92,13 @@ Two or three sentences synthesizing the position, citing sources inline
 - [[business/pricing/value-equation]]
 ```
 
+Quote front matter values that contain a colon (`title: "Pricing: when to raise"`).
+Otherwise the YAML doesn't parse and lint skips the page's leaf checks.
+
+`distinct_from` (optional) lists leaves you compared with this one and kept apart on
+purpose, e.g. `distinct_from: [business/pricing/premium-tiers]`. `wwxd lint` and
+`wwxd health` then stop reporting that pair as near-duplicates.
+
 ### Statement grammar
 
 One statement per line, inside `## Statements`:
@@ -147,4 +154,9 @@ still says the same `by`. Don't edit it by hand; re-run `wwxd voice`.
 
 ```
 - 2026-10-07 compiled yt-0lJKucu6HJc: +3 leaves, updated profile, tensions
+- 2026-10-08 consolidated: merged 2 leaves, split 1, 3 overviews, index
 ```
+
+`wwxd mark-compiled` writes the `compiled` lines. Write the `consolidated` line
+yourself after a consolidation pass (`references/consolidate.md`); `wwxd health`
+counts compiled sources since the last one.

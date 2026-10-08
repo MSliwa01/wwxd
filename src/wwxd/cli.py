@@ -99,9 +99,28 @@ def discover(vault: VaultArg, per_query: Annotated[int | None, typer.Option()] =
 
 
 @app.command()
-def update(vault: VaultArg) -> None:
-    """Re-run discovery to pick up new material. Same as `discover`; nothing is fetched."""
+def update(
+    vault: VaultArg,
+    approve_hint: Annotated[
+        list[str] | None,
+        typer.Option("--approve-hint", help="Approve the new candidates with this hint, e.g. own (repeatable)"),
+    ] = None,
+    fetch_after: Annotated[bool, typer.Option("--fetch", help="Fetch approved sources right after")] = False,
+) -> None:
+    """Re-run discovery to pick up new material. Nothing is approved or fetched unless you ask."""
+    v = _vault(vault)
+    before = {s.id for s in v.load_sources()}
     discover(vault)
+    if approve_hint:
+        # Only this run's candidates: older ones may have been left pending on purpose.
+        new_ids = [s.id for s in v.load_sources() if s.id not in before and s.hint in approve_hint]
+        n = _set_status(v, new_ids, [], "approved", ("candidate",))
+        noun = "candidate" if n == 1 else "candidates"
+        typer.echo(f"Approved {n} new {noun} with hint {', '.join(approve_hint)}")
+        if n:
+            v.append_log(f"auto-approved {n} new {noun} ({', '.join(approve_hint)})")
+    if fetch_after:
+        fetch(vault)
 
 
 @app.command()
@@ -333,6 +352,57 @@ def voice(
                         fg="red" if r["voice"] == "mismatch" else "yellow")
     typer.echo(", ".join(f"{k}={counts.get(k, 0)}" for k in ("match", "weak", "mismatch", "unchecked")) + f"  -> {path}")
     v.append_log(f"voice check: {dict(counts)}")
+
+
+@app.command()
+def health(vault: VaultArg) -> None:
+    """Report on the wiki: size, attribution, coverage, near-duplicates, oversize leaves."""
+    from wwxd.health import check, render
+
+    typer.echo(render(check(_vault(vault))))
+
+
+@app.command()
+def timeline(
+    vault: VaultArg,
+    query: Annotated[str | None, typer.Argument(help="Leaf path or folder (with a /), or keywords matched against leaf paths and quotes")] = None,
+    member: Annotated[str | None, typer.Option(help="Only this member id")] = None,
+    reported: Annotated[bool, typer.Option(help="Include reported statements (someone else's view, relayed)")] = False,
+) -> None:
+    """Statements sorted by source date and grouped by member, to see how views changed."""
+    from wwxd.timeline import collect, render
+
+    v = _vault(vault)
+    entries, skipped = collect(v, query, member=member, reported=reported)
+    typer.echo(render(v, entries, query, skipped))
+
+
+@app.command()
+def digest(
+    vault: VaultArg,
+    since: Annotated[str | None, typer.Option(help="YYYY-MM-DD: report what's new on or after this date")] = None,
+    days: Annotated[int | None, typer.Option(help="Same as --since, counted back from today (handy in cron)")] = None,
+    out: Annotated[Path | None, typer.Option(help="Write the markdown here instead of printing it")] = None,
+) -> None:
+    """Markdown summary of what's new: sources compiled, leaves updated, new statements by leaf."""
+    import datetime as dt
+
+    from wwxd.digest import build, render
+
+    if days is not None:
+        since = (dt.date.today() - dt.timedelta(days=days)).isoformat()
+    try:
+        since = dt.date.fromisoformat(since or "").isoformat()
+    except ValueError as exc:
+        typer.secho("Pass --since YYYY-MM-DD or --days N.", fg="red", err=True)
+        raise typer.Exit(1) from exc
+    text = render(build(_vault(vault), since))
+    if out:
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(text, encoding="utf-8")
+        typer.echo(f"Wrote {out}")
+    else:
+        typer.echo(text, nl=False)
 
 
 @app.command("install-skill")
