@@ -79,3 +79,7 @@ show that following this advice works. The judge shares a model with both arms, 
 vault answers quote more, so the blinding is imperfect. It's one run with 20
 questions per vault. The direction of the result is clear. The exact numbers are
 rough.
+
+The YC wwxd answers (all except `yc-04`) and Hormozi `hz-16` to `hz-20` were produced
+before we added `--strict-mcp-config`. None of them mention an MCP server. Every raw
+answer and every other wwxd answer ran with the flag.
