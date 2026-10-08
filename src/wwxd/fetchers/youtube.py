@@ -13,6 +13,14 @@ from wwxd.vault import Source, Vault
 
 logger = logging.getLogger(__name__)
 
+
+def __getattr__(name: str) -> object:
+    # `yt_dlp.YoutubeDL(YDL_BASE)` keeps working for older callers and gets the same JS runtime and
+    # cookies as ytdl.new_ydl. A fresh dict each time, since YoutubeDL writes into the params it's given.
+    if name == "YDL_BASE":
+        return ytdl.ydl_opts(skip_download=True)
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
+
 def video_url(video_id: str) -> str:
     return f"https://www.youtube.com/watch?v={video_id}"
 

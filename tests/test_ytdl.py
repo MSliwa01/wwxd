@@ -157,3 +157,20 @@ def test_cli_rejects_bad_browser(tmp_path, monkeypatch):
         result = runner.invoke(app, [command, "t", "--cookies-from-browser", "netscape"])
         assert result.exit_code == 1, command
         assert "unsupported browser" in result.output
+
+
+def test_names_other_modules_import_still_exist(monkeypatch):
+    """wwxd.voice imports these; keep them importable."""
+    from wwxd.fetchers.whisper import download_audio_url, download_youtube_audio  # noqa: F401
+    from wwxd.fetchers.youtube import _pick_caption_track, video_url  # noqa: F401
+
+    fake_runtimes(monkeypatch, {"node": True})
+    from wwxd.fetchers.youtube import YDL_BASE
+
+    assert YDL_BASE["skip_download"] is True and YDL_BASE["quiet"] is True
+    assert YDL_BASE["js_runtimes"] == {"node": {"path": "/opt/bin/node"}}
+    with yt_dlp.YoutubeDL(YDL_BASE) as ydl:
+        ydl.params["js_runtimes"]["node"]["path"] = "changed"
+    from wwxd.fetchers.youtube import YDL_BASE as again
+
+    assert again["js_runtimes"] == {"node": {"path": "/opt/bin/node"}}
