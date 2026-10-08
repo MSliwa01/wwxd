@@ -316,6 +316,21 @@ def health(vault: VaultArg) -> None:
     typer.echo(render(check(_vault(vault))))
 
 
+@app.command()
+def timeline(
+    vault: VaultArg,
+    query: Annotated[str | None, typer.Argument(help="Leaf path or folder (with a /), or keywords matched against leaf paths and quotes")] = None,
+    member: Annotated[str | None, typer.Option(help="Only this member id")] = None,
+    reported: Annotated[bool, typer.Option(help="Include reported statements (someone else's view, relayed)")] = False,
+) -> None:
+    """Statements sorted by source date and grouped by member, to see how views changed."""
+    from wwxd.timeline import collect, render
+
+    v = _vault(vault)
+    entries, skipped = collect(v, query, member=member, reported=reported)
+    typer.echo(render(v, entries, query, skipped))
+
+
 @app.command("install-skill")
 def install_skill(
     project: Annotated[bool, typer.Option(help="Install into ./.claude/skills instead of ~/.claude/skills")] = False,
