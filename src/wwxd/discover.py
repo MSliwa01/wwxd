@@ -11,6 +11,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 
 from wwxd import ytdl
+from wwxd.fetchers.transcripts import best_transcript
 from wwxd.vault import Source, Vault
 
 logger = logging.getLogger(__name__)
@@ -134,6 +135,7 @@ def _feed_sources(vault: Vault, url: str, limit: int, *, own: bool = True, owner
         root = ET.fromstring(response.read())
     atom = "{http://www.w3.org/2005/Atom}"
     channel_title = root.findtext("channel/title") or root.findtext(f"{atom}title") or ""
+    feed_language = root.findtext("channel/language") or ""
     items = root.findall("channel/item") or root.findall(f"{atom}entry")
     sources = []
     for item in items[:limit]:
@@ -159,6 +161,7 @@ def _feed_sources(vault: Vault, url: str, limit: int, *, own: bool = True, owner
         enclosure = item.find("enclosure")
         if enclosure is not None and (enclosure.get("type") or "").startswith("audio"):
             audio_url = enclosure.get("url", "")
+            transcript_url, transcript_type = best_transcript(item, feed_language) or ("", "")
             sources.append(
                 Source(
                     id="pod-" + hashlib.sha1(audio_url.encode()).hexdigest()[:12],
@@ -171,6 +174,8 @@ def _feed_sources(vault: Vault, url: str, limit: int, *, own: bool = True, owner
                     duration=_itunes_duration(item.findtext("{http://www.itunes.com/dtds/podcast-1.0.dtd}duration")),
                     expected_speakers=speakers,
                     found_via=f"feed:{url}",
+                    transcript_url=transcript_url,
+                    transcript_type=transcript_type,
                 )
             )
         elif link:

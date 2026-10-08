@@ -38,6 +38,8 @@ class Source:
     duration: float | None = None
     expected_speakers: list[str] = field(default_factory=list)
     found_via: str = ""
+    transcript_url: str = ""  # podcasts: the feed's <podcast:transcript>, used instead of Whisper
+    transcript_type: str = ""  # its MIME type as the feed gives it
     error: str = ""
 
     def to_dict(self) -> dict:
