@@ -1,0 +1,15 @@
+{
+  "name": "wwxd",
+  "description": "The wwxd skill for building and querying cited knowledge wikis of a person's thinking.",
+  "owner": {
+    "name": "MSliwa01",
+    "url": "https://github.com/MSliwa01"
+  },
+  "plugins": [
+    {
+      "name": "wwxd",
+      "source": "./",
+      "description": "What would X do? Build and query cited knowledge wikis of a person's talks, podcasts and essays."
+    }
+  ]
+}
