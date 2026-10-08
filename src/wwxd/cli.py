@@ -24,6 +24,11 @@ bench_app = typer.Typer(help="Benchmark answers against a gold question set.", n
 app.add_typer(bench_app, name="bench")
 
 VaultArg = Annotated[str, typer.Argument(help="Vault slug (under $WWXD_HOME, default ./vaults) or path")]
+CookiesOpt = Annotated[
+    str | None,
+    typer.Option(help="Let yt-dlp use a browser's YouTube cookies, e.g. 'firefox' or 'chrome:Profile 1' "
+                 "(default: $WWXD_COOKIES_FROM_BROWSER)"),
+]
 
 
 def _vault(name: str) -> Vault:
@@ -31,6 +36,16 @@ def _vault(name: str) -> Vault:
         return resolve_vault(name)
     except FileNotFoundError as exc:
         typer.secho(str(exc), fg="red", err=True)
+        raise typer.Exit(1) from exc
+
+
+def _use_cookies(spec: str | None) -> None:
+    from wwxd import ytdl
+
+    try:
+        ytdl.use_cookies_from_browser(spec)
+    except ValueError as exc:
+        typer.secho(f"--cookies-from-browser: {exc}", fg="red", err=True)
         raise typer.Exit(1) from exc
 
 
@@ -82,10 +97,15 @@ def new(
 
 
 @app.command()
-def discover(vault: VaultArg, per_query: Annotated[int | None, typer.Option()] = None) -> None:
+def discover(
+    vault: VaultArg,
+    per_query: Annotated[int | None, typer.Option()] = None,
+    cookies_from_browser: CookiesOpt = None,
+) -> None:
     """Find candidate sources and add them to sources.yaml as `candidate`."""
     from wwxd.discover import discover as run_discover
 
+    _use_cookies(cookies_from_browser)
     v = _vault(vault)
     new_sources, errors = run_discover(v, per_query=per_query)
     v.save_sources(v.load_sources() + new_sources)
@@ -99,9 +119,9 @@ def discover(vault: VaultArg, per_query: Annotated[int | None, typer.Option()] =
 
 
 @app.command()
-def update(vault: VaultArg) -> None:
+def update(vault: VaultArg, cookies_from_browser: CookiesOpt = None) -> None:
     """Re-run discovery to pick up new material. Same as `discover`; nothing is fetched."""
-    discover(vault)
+    discover(vault, cookies_from_browser=cookies_from_browser)
 
 
 @app.command()
@@ -201,10 +221,12 @@ def fetch(
     limit: Annotated[int | None, typer.Option(help="Fetch at most N sources")] = None,
     retry_failed: Annotated[bool, typer.Option(help="Also retry sources that failed before")] = False,
     force: Annotated[bool, typer.Option(help="Re-fetch the given ids even if already fetched")] = False,
+    cookies_from_browser: CookiesOpt = None,
 ) -> None:
     """Download approved sources into raw/ (captions first, Whisper fallback)."""
     from wwxd import fetchers, rawdoc
 
+    _use_cookies(cookies_from_browser)
     v = _vault(vault)
     all_sources = v.load_sources()
     wanted = ("approved", "failed") if retry_failed else ("approved",)

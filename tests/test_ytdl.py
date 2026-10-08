@@ -10,10 +10,13 @@ from wwxd.ytdl import JsRuntime
 
 
 @pytest.fixture(autouse=True)
-def fresh_runtime_cache():
+def fresh_state(monkeypatch):
+    monkeypatch.delenv("WWXD_COOKIES_FROM_BROWSER", raising=False)
     ytdl.find_js_runtimes.cache_clear()
+    ytdl.use_cookies_from_browser(None)
     yield
     ytdl.find_js_runtimes.cache_clear()
+    ytdl.use_cookies_from_browser(None)
 
 
 def fake_runtimes(monkeypatch, found: dict[str, bool | None]) -> None:
@@ -110,3 +113,47 @@ def test_every_call_site_uses_the_factory(monkeypatch, tmp_path):
 
 def test_real_yt_dlp_class_is_what_we_patch():
     assert ytdl.yt_dlp.YoutubeDL is yt_dlp.YoutubeDL
+
+
+@pytest.mark.parametrize(
+    ("spec", "expected"),
+    [
+        ("firefox", ("firefox", None, None, None)),
+        ("Chrome:Profile 1", ("chrome", "Profile 1", None, None)),
+        ("chromium+gnomekeyring:Default", ("chromium", "Default", "GNOMEKEYRING", None)),
+        ("firefox:default-release::Work", ("firefox", "default-release", None, "Work")),
+    ],
+)
+def test_cookie_spec_matches_yt_dlp_tuple(spec, expected):
+    assert ytdl.parse_cookies_spec(spec) == expected
+    # Same tuple yt-dlp's own command line builds for --cookies-from-browser.
+    assert yt_dlp.parse_options(["--cookies-from-browser", spec]).ydl_opts["cookiesfrombrowser"] == expected
+
+
+@pytest.mark.parametrize("spec", ["netscape", "chrome+nokeyring", ""])
+def test_bad_cookie_spec(spec):
+    with pytest.raises(ValueError):
+        ytdl.parse_cookies_spec(spec)
+
+
+def test_cookies_from_env_and_cli_override(monkeypatch):
+    fake_runtimes(monkeypatch, {})
+    assert "cookiesfrombrowser" not in ytdl.ydl_opts()
+    monkeypatch.setenv("WWXD_COOKIES_FROM_BROWSER", "firefox")
+    assert ytdl.ydl_opts()["cookiesfrombrowser"] == ("firefox", None, None, None)
+    ytdl.use_cookies_from_browser("chrome:Profile 1")
+    assert ytdl.ydl_opts()["cookiesfrombrowser"] == ("chrome", "Profile 1", None, None)
+
+
+def test_cli_rejects_bad_browser(tmp_path, monkeypatch):
+    from typer.testing import CliRunner
+
+    from wwxd.cli import app
+
+    monkeypatch.setenv("WWXD_HOME", str(tmp_path))
+    runner = CliRunner()
+    assert runner.invoke(app, ["new", "t", "--name", "Paul Graham"]).exit_code == 0
+    for command in ("discover", "update", "fetch"):
+        result = runner.invoke(app, [command, "t", "--cookies-from-browser", "netscape"])
+        assert result.exit_code == 1, command
+        assert "unsupported browser" in result.output
