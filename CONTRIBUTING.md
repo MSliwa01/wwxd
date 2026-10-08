@@ -15,7 +15,7 @@ uv run pytest
 uv run wwxd --help
 ```
 
-The vault grammar lives in `src/wwxd/skill/references/format.md`. If you change it,
+The vault grammar lives in `skills/wwxd/references/format.md`. If you change it,
 change `src/wwxd/lint.py` and the tests in the same PR.
 
 ## Fetcher plugins
@@ -65,3 +65,43 @@ or linked from it.
 - Never commit vault content (`vaults/` is gitignored).
 - Keep the CLI deterministic; judgment belongs in the skill.
 - Every claim in a vault must stay checkable against `raw/`.
+
+## Releasing
+
+`.github/workflows/release.yml` publishes to PyPI with trusted publishing, so the repo
+holds no PyPI token.
+
+One-time setup:
+
+1. On pypi.org, open [Publishing](https://pypi.org/manage/account/publishing/) in your
+   account and add a pending GitHub publisher with these values.
+
+   | Field | Value |
+   |---|---|
+   | PyPI project name | `wwxd` |
+   | Owner | `MSliwa01` |
+   | Repository name | `wwxd` |
+   | Workflow name | `release.yml` |
+   | Environment name | `pypi` |
+
+2. On GitHub, create an environment named `pypi` (Settings > Environments). Add
+   yourself as a required reviewer if you want to approve each upload.
+
+The first upload turns the pending publisher into a regular one.
+
+To cut a release:
+
+1. Set the new version in `pyproject.toml` and `src/wwxd/__init__.py` (a test fails
+   if they differ), then run `uv lock`.
+2. Merge to `main` and wait for CI to pass.
+3. Tag the merge commit and push the tag.
+
+   ```bash
+   git tag v0.2.0
+   git push origin v0.2.0
+   ```
+
+The workflow checks that the tag matches the version, runs the tests, builds and
+uploads. PyPI rejects a version it already has, so fix a bad release with a new
+version, not a moved tag. The Claude Code plugin has no version of its own and
+tracks `main`.

@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10
+        with:
+          python-version: ${{ matrix.python-version }}  # sets UV_PYTHON, which overrides .python-version
+      - run: uv sync --locked --group dev
+      - run: uv run --group dev pytest -q
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10
+      - run: uv build
+      - name: Check the wheel ships the skill, examples and templates
+        run: |
+          files=$(unzip -Z1 dist/*.whl)
+          missing=0
+          for f in wwxd/skill/SKILL.md wwxd/skill/references/format.md wwxd/examples/yc/vault.yaml \
+                   $(cd src && find wwxd/templates -type f | sort); do
+            grep -qxF "$f" <<< "$files" || { echo "::error::missing from wheel: $f"; missing=1; }
+          done
+          exit $missing
+      - name: Install the skill from the wheel
+        run: |
+          cd "$(mktemp -d)"
+          uvx --from "$GITHUB_WORKSPACE"/dist/*.whl wwxd install-skill --project
+          test -f .claude/skills/wwxd/references/format.md

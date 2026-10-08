@@ -1,0 +1,12 @@
+{
+  "name": "wwxd",
+  "description": "What would X do? Build and query cited knowledge wikis of a person's talks, podcasts and essays.",
+  "author": {
+    "name": "MSliwa01",
+    "url": "https://github.com/MSliwa01"
+  },
+  "homepage": "https://github.com/MSliwa01/wwxd",
+  "repository": "https://github.com/MSliwa01/wwxd",
+  "license": "MIT",
+  "keywords": ["knowledge-base", "wiki", "transcripts", "podcasts", "youtube", "citations"]
+}

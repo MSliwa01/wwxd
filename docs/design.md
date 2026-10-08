@@ -30,7 +30,7 @@ way they would, with sources.
 - **CLI** (`wwxd`): `new`, `discover`, `sources`, `approve`/`reject`, `add`,
   `fetch`, `pending`, `mark-compiled`, `lint`, `search`, `status`, `update`,
   `health`, `timeline`, `digest`, `voice`, `install-skill`, `doctor`, `bench`.
-- **Skill** (`src/wwxd/skill/`): procedures for curating, compiling, asking and
+- **Skill** (`skills/wwxd/`): procedures for curating, compiling, asking and
   linting. Installed with `wwxd install-skill`.
 - **No MCP server in v1.** Vaults are plain markdown, so any agent with file access
   can use them, and they open directly in Obsidian. A read-only MCP server may come
@@ -60,7 +60,7 @@ Differences:
 
 ## Vault format
 
-Canonical spec: [`src/wwxd/skill/references/format.md`](../src/wwxd/skill/references/format.md).
+Canonical spec: [`skills/wwxd/references/format.md`](../skills/wwxd/references/format.md).
 
 ## Sources
 
