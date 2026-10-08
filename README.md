@@ -172,6 +172,8 @@ wwxd fetches public captions, articles and podcast audio for your own use. It do
 fetch books, and this repo ships no content. You can add books you own as text files
 (`wwxd add <slug> book.txt`) or write a [fetcher plugin](CONTRIBUTING.md#fetcher-plugins).
 Don't publish vaults built from material you don't have the right to share.
+[ETHICS.md](ETHICS.md) has the rules for using vaults and explains how a person can
+have their recipe removed.
 
 ## Requirements
 
