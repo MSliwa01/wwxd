@@ -331,6 +331,34 @@ def timeline(
     typer.echo(render(v, entries, query, skipped))
 
 
+@app.command()
+def digest(
+    vault: VaultArg,
+    since: Annotated[str | None, typer.Option(help="YYYY-MM-DD: report what's new on or after this date")] = None,
+    days: Annotated[int | None, typer.Option(help="Same as --since, counted back from today (handy in cron)")] = None,
+    out: Annotated[Path | None, typer.Option(help="Write the markdown here instead of printing it")] = None,
+) -> None:
+    """Markdown summary of what's new: sources compiled, leaves updated, new statements by leaf."""
+    import datetime as dt
+
+    from wwxd.digest import build, render
+
+    if days is not None:
+        since = (dt.date.today() - dt.timedelta(days=days)).isoformat()
+    try:
+        since = dt.date.fromisoformat(since or "").isoformat()
+    except ValueError as exc:
+        typer.secho("Pass --since YYYY-MM-DD or --days N.", fg="red", err=True)
+        raise typer.Exit(1) from exc
+    text = render(build(_vault(vault), since))
+    if out:
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(text, encoding="utf-8")
+        typer.echo(f"Wrote {out}")
+    else:
+        typer.echo(text, nl=False)
+
+
 @app.command("install-skill")
 def install_skill(
     project: Annotated[bool, typer.Option(help="Install into ./.claude/skills instead of ~/.claude/skills")] = False,
