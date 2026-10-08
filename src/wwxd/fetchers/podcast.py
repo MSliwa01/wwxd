@@ -1,19 +1,36 @@
 from __future__ import annotations
 
 import datetime as dt
+import sys
 
-from wwxd.fetchers import whisper
-from wwxd.rawdoc import RawDoc
+from wwxd.fetchers import transcripts
+from wwxd.fetchers import whisper as whisper_mod
+from wwxd.rawdoc import RawDoc, Segment
 from wwxd.vault import Source, Vault
 
 
-def fetch(source: Source, vault: Vault, **_: object) -> RawDoc:
-    """Podcast episodes rarely ship transcripts, so this always goes through Whisper.
+def fetch(source: Source, vault: Vault, *, whisper: str = "auto", **_: object) -> RawDoc:
+    """Use the feed's own transcript (<podcast:transcript>) when it has one, else Whisper.
 
-    TODO: use <podcast:transcript> tags from the feed when present (Podcasting 2.0).
+    whisper: 'auto' (Whisper when there's no usable feed transcript), 'always' (ignore the feed
+    transcript, e.g. to re-transcribe with a bigger model), or 'never'.
     """
-    audio = whisper.download_audio_url(source.url, source.id, vault.cache_dir / "audio")
-    segments, language = whisper.transcribe(audio)
+    segments: list[Segment] = []
+    kind, language = "", ""
+    if source.transcript_url and whisper != "always":
+        try:
+            segments = transcripts.load_transcript(source.transcript_url, source.transcript_type)
+            kind = "feed-transcript"
+        except Exception as exc:
+            if whisper == "never":
+                raise RuntimeError(f"feed transcript unusable ({exc}) and Whisper disabled") from exc
+            print(f"    feed transcript unusable ({exc}); using Whisper", file=sys.stderr, flush=True)
+    if not segments:
+        if whisper == "never":
+            raise RuntimeError("no feed transcript and Whisper disabled")
+        audio = whisper_mod.download_audio_url(source.url, source.id, vault.cache_dir / "audio")
+        segments, language = whisper_mod.transcribe(audio)
+        kind = "whisper"
     meta = {
         "id": source.id,
         "type": "podcast",
@@ -23,8 +40,11 @@ def fetch(source: Source, vault: Vault, **_: object) -> RawDoc:
         "date": source.date,
         "duration": source.duration,
         "language": language,
-        "transcript": "whisper",
+        "transcript": kind,
+        "transcript_url": source.transcript_url,
         "expected_speakers": source.expected_speakers,
         "fetched": dt.date.today().isoformat(),
     }
+    if kind != "feed-transcript":
+        del meta["transcript_url"]
     return RawDoc(meta=meta, segments=segments)
