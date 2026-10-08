@@ -70,7 +70,7 @@ Canonical spec: [`src/wwxd/skill/references/format.md`](../src/wwxd/skill/refere
 | Articles / essays | RSS/Atom feeds, link-index pages | trafilatura |
 | Podcasts (RSS) | feeds with audio enclosures | audio download → Whisper |
 | Local files | `wwxd add` | `.txt` / `.md` |
-| Anything else | — | fetcher plugins (`wwxd.fetchers` entry point) |
+| Anything else | none | fetcher plugins (`wwxd.fetchers` entry point) |
 
 Books are never fetched. Users can add files they own, or write a plugin.
 

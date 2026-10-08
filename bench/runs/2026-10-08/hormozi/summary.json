@@ -1,0 +1,144 @@
+{
+  "vault": "hormozi",
+  "questions": 20,
+  "arms": {
+    "raw": {
+      "quotes": 8,
+      "quotes_verified": 0,
+      "quote_precision": 0.0,
+      "median_seconds": 17.4,
+      "unverified_examples": [
+        {
+          "id": "hz-01",
+          "quote": "I don't know what to write,"
+        },
+        {
+          "id": "hz-02",
+          "quote": "Flaw → because → benefit"
+        },
+        {
+          "id": "hz-02",
+          "quote": "We're No. 2. We try harder."
+        },
+        {
+          "id": "hz-02",
+          "quote": "The taste you hate, twice a day."
+        },
+        {
+          "id": "hz-03",
+          "quote": "Write so a third grader could understand it."
+        },
+        {
+          "id": "hz-09",
+          "quote": "If the debt is expensive, kill it. If it's cheap and you have a proven machine that returns way more than the rate, feed the machine. If you don't have a proven machine, you don't have a growth opportunity yet, so go build one."
+        },
+        {
+          "id": "hz-12",
+          "quote": "your $1,500 repair counts toward a replacement within 12 months"
+        },
+        {
+          "id": "hz-13",
+          "quote": "I'm opening a 10-person group with biweekly calls, I'll personally review your pricing and pipeline, and the goal is X in 90 days. It's $500–1,000/month."
+        }
+      ]
+    },
+    "wwxd": {
+      "quotes": 77,
+      "quotes_verified": 75,
+      "quote_precision": 0.974,
+      "median_seconds": 31.9,
+      "unverified_examples": [
+        {
+          "id": "hz-17",
+          "quote": "Building a $12,000,000 Business for a Stranger in 25 Minutes"
+        },
+        {
+          "id": "hz-20",
+          "quote": "How I Would Build a $10M Service Business (If I Had to Start Over)"
+        }
+      ]
+    }
+  },
+  "judge": {
+    "all": {
+      "raw.accuracy": 2.85,
+      "raw.faithfulness": 3.15,
+      "raw.specificity": 1.9,
+      "raw.usefulness": 3.2,
+      "wwxd.accuracy": 4.95,
+      "wwxd.faithfulness": 4.7,
+      "wwxd.specificity": 4.9,
+      "wwxd.usefulness": 4.6
+    },
+    "known": {
+      "raw.accuracy": 3.25,
+      "raw.faithfulness": 3.0,
+      "raw.specificity": 2.25,
+      "raw.usefulness": 3.75,
+      "wwxd.accuracy": 5.0,
+      "wwxd.faithfulness": 4.75,
+      "wwxd.specificity": 5.0,
+      "wwxd.usefulness": 4.5
+    },
+    "fresh": {
+      "raw.accuracy": 2.33,
+      "raw.faithfulness": 3.0,
+      "raw.specificity": 2.33,
+      "raw.usefulness": 3.17,
+      "wwxd.accuracy": 4.83,
+      "wwxd.faithfulness": 4.5,
+      "wwxd.specificity": 5.0,
+      "wwxd.usefulness": 4.5
+    },
+    "applied": {
+      "raw.accuracy": 3.0,
+      "raw.faithfulness": 3.2,
+      "raw.specificity": 2.0,
+      "raw.usefulness": 3.6,
+      "wwxd.accuracy": 5.0,
+      "wwxd.faithfulness": 4.6,
+      "wwxd.specificity": 5.0,
+      "wwxd.usefulness": 5.0
+    },
+    "attribution": {
+      "raw.accuracy": 1.5,
+      "raw.faithfulness": 3.0,
+      "raw.specificity": 1.0,
+      "raw.usefulness": 1.5,
+      "wwxd.accuracy": 5.0,
+      "wwxd.faithfulness": 5.0,
+      "wwxd.specificity": 5.0,
+      "wwxd.usefulness": 5.0
+    },
+    "abstain": {
+      "raw.accuracy": 4.0,
+      "raw.faithfulness": 3.67,
+      "raw.specificity": 1.0,
+      "raw.usefulness": 3.0,
+      "wwxd.accuracy": 5.0,
+      "wwxd.faithfulness": 5.0,
+      "wwxd.specificity": 4.33,
+      "wwxd.usefulness": 4.0
+    }
+  },
+  "preferred": {
+    "all": {
+      "wwxd": 20
+    },
+    "known": {
+      "wwxd": 4
+    },
+    "fresh": {
+      "wwxd": 6
+    },
+    "applied": {
+      "wwxd": 5
+    },
+    "attribution": {
+      "wwxd": 2
+    },
+    "abstain": {
+      "wwxd": 3
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "vault": "yc",
+  "questions": 20,
+  "arms": {
+    "raw": {
+      "quotes": 2,
+      "quotes_verified": 0,
+      "quote_precision": 0.0,
+      "median_seconds": 15.9,
+      "unverified_examples": [
+        {
+          "id": "yc-05",
+          "quote": "visit, and pay attention to how it changes your ambition."
+        },
+        {
+          "id": "yc-07",
+          "quote": "if this technology goes wrong, it can go quite wrong."
+        }
+      ]
+    },
+    "wwxd": {
+      "quotes": 83,
+      "quotes_verified": 83,
+      "quote_precision": 1.0,
+      "median_seconds": 28.1,
+      "unverified_examples": []
+    }
+  },
+  "judge": {
+    "all": {
+      "raw.accuracy": 2.6,
+      "raw.faithfulness": 3.15,
+      "raw.specificity": 2.0,
+      "raw.usefulness": 2.95,
+      "wwxd.accuracy": 5.0,
+      "wwxd.faithfulness": 4.55,
+      "wwxd.specificity": 4.85,
+      "wwxd.usefulness": 4.7
+    },
+    "known": {
+      "raw.accuracy": 3.0,
+      "raw.faithfulness": 3.5,
+      "raw.specificity": 2.5,
+      "raw.usefulness": 3.0,
+      "wwxd.accuracy": 5.0,
+      "wwxd.faithfulness": 4.5,
+      "wwxd.specificity": 5.0,
+      "wwxd.usefulness": 4.75
+    },
+    "fresh": {
+      "raw.accuracy": 2.17,
+      "raw.faithfulness": 3.33,
+      "raw.specificity": 1.83,
+      "raw.usefulness": 2.83,
+      "wwxd.accuracy": 5.0,
+      "wwxd.faithfulness": 4.67,
+      "wwxd.specificity": 5.0,
+      "wwxd.usefulness": 4.67
+    },
+    "applied": {
+      "raw.accuracy": 2.4,
+      "raw.faithfulness": 3.0,
+      "raw.specificity": 2.0,
+      "raw.usefulness": 3.2,
+      "wwxd.accuracy": 5.0,
+      "wwxd.faithfulness": 4.4,
+      "wwxd.specificity": 5.0,
+      "wwxd.usefulness": 5.0
+    },
+    "attribution": {
+      "raw.accuracy": 1.5,
+      "raw.faithfulness": 2.5,
+      "raw.specificity": 1.5,
+      "raw.usefulness": 2.0,
+      "wwxd.accuracy": 5.0,
+      "wwxd.faithfulness": 4.0,
+      "wwxd.specificity": 5.0,
+      "wwxd.usefulness": 5.0
+    },
+    "abstain": {
+      "raw.accuracy": 4.0,
+      "raw.faithfulness": 3.0,
+      "raw.specificity": 2.0,
+      "raw.usefulness": 3.33,
+      "wwxd.accuracy": 5.0,
+      "wwxd.faithfulness": 5.0,
+      "wwxd.specificity": 4.0,
+      "wwxd.usefulness": 4.0
+    }
+  },
+  "preferred": {
+    "all": {
+      "wwxd": 20
+    },
+    "known": {
+      "wwxd": 4
+    },
+    "fresh": {
+      "wwxd": 6
+    },
+    "applied": {
+      "wwxd": 5
+    },
+    "attribution": {
+      "wwxd": 2
+    },
+    "abstain": {
+      "wwxd": 3
+    }
+  }
+}

@@ -1,155 +1,195 @@
-# wwxd: What Would X Do?
+# wwxd
 
-**Build a cited knowledge wiki of anyone's thinking from their talks, podcasts and writing. Then ask your agent what they'd do.**
+What would X do? wwxd turns a person's talks, podcasts and essays into a wiki of
+their actual positions, with every quote checked against the source. Your agent then
+answers the way that person would, and shows you where they said it.
 
-LLMs give average advice about business, design, learning and careers. wwxd lets
-you ask a specific person instead, using what they've actually said and done, not
-what the model thinks they're like.
+## Why
 
-```
-> What would Paul Graham say about raising a big round before launch?
+Ask a chatbot whether to raise your prices and you get the average of the internet.
+It lists considerations, recommends testing, warns you to communicate value, and
+commits to nothing. Models are trained to be balanced and safe, so their advice comes
+out smooth and generic. That's fine for facts. It's weak for decisions in business,
+design, careers or learning, where the useful advice comes from people with strong
+opinions and a track record.
 
-Short answer: Don't plan around a big early round. Do what you can with the money you
-have and raise at each milestone.
+You can ask the model to answer "as Alex Hormozi". It will give you a plausible
+impression, built from whatever it remembers, with the gaps filled by its own
+guesses. It can't know anything the person said after its training cutoff. It also
+mixes up who said what, crediting a podcast host's line to the guest.
 
-What he's said
-- "So you just do what you can on the money you got. As long as you can get to some kind
-  of milestone, then you can convince investors to give you more." ([[yt-5bxp78i96S8]] @ 12:09)
-- "everything technology always gets cheaper" ([[yt-5bxp78i96S8]] @ 11:37)
+wwxd gives the agent the person's own words instead. Here is the same question
+answered both ways by Claude Opus 5.5 in Claude Code.
 
-Where this is uncertain: one 2026 interview so far; his essays aren't compiled yet.
-```
+> I own a residential HVAC duct-cleaning company doing about $1.2M a year at a 38%
+> net margin, and we close about 82% of in-home inspections. Should I keep prices
+> where they are so I don't hurt the close rate? What would Alex Hormozi say?
+
+Without a vault, Opus says an 82% close rate usually means underpricing, then
+suggests a "healthy" 40 to 60 percent close rate and builds a table on a margin it
+assumed.
+
+With the vault, the answer starts like this:
+
+> **Short answer:** No. Hormozi would tell you to raise prices. An 82% close rate
+> is, in his words, the sign you're underpriced. His suggested step is about 10%,
+> and it's only worth it if your close rate stays above roughly 65%.
+>
+> Your numbers are almost the same as a business he consulted on in 2026: ProShine,
+> an HVAC duct-cleaning company doing $1.25M a year at a 38% net margin with an 82%
+> close rate. So this isn't a guess from his general principles. He has already given
+> this advice to a business like yours.
+>
+> - **A close rate over 80% means you're underpriced:** "So whenever I hear 80% or
+>   over 80% close rates, I usually know that there's room in sale."
+>   ([@ 8:06](https://www.youtube.com/watch?v=OQf2Ba-Lp_4&t=486s))
+
+## Results
+
+On 40 questions across a Hormozi vault and a Y Combinator vault, a blind judge
+preferred the wwxd answer every time.
+
+| Blind judge, 1 to 5 | Opus 5.5 alone | Opus 5.5 + wwxd |
+|---|---|---|
+| Accuracy | 2.7 | 5.0 |
+| Specificity (vs. generic advice) | 2.0 | 4.9 |
+| Faithfulness | 3.2 | 4.6 |
+| Preferred by the judge | 0 of 40 | 40 of 40 |
+
+160 quotes in the wwxd answers were checked against the transcripts by a script, and
+158 were found verbatim. The other 2 were video titles. Raw Opus rarely quoted
+anyone. It lost on specifics, on anything from 2026, and on attribution traps. Full
+numbers, setup and caveats are in [bench/RESULTS.md](bench/RESULTS.md).
 
 ## How it works
 
-wwxd follows Andrej Karpathy's [LLM wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
-pattern. Raw sources are compiled by an LLM into a wiki that keeps improving with
-each source, instead of being re-searched from scratch on every question. On top of
-that, wwxd is tuned for one question: *what does this exact person think?*
-
 ```
 discover ──▶ you approve ──▶ fetch ──▶ compile ──▶ lint ──▶ ask
- (CLI)         (CLI)          (CLI)    (agent)     (CLI)    (agent)
+  (CLI)         (CLI)         (CLI)    (agent)     (CLI)   (agent)
 ```
 
-- **The CLI** does the mechanical work. It finds sources (the person's YouTube
-  channel, podcast appearances, blog/RSS, essay index pages), downloads existing
-  captions (falling back to local Whisper), and checks the wiki.
-- **Your agent** (Claude Code, via the bundled skill) does the thinking. It works
-  out who's speaking, extracts verbatim quotes, and files them into a topic tree.
-  No API keys needed.
-- **Lint checks every quote against the source text in code.** A quote that isn't
-  in the transcript fails the check, however plausible it sounds.
+The `wwxd` CLI does the mechanical work. It finds sources (the person's YouTube
+channels, podcast feeds, blog RSS, essay index pages), downloads existing captions,
+falls back to local Whisper when there are none, and checks the wiki.
 
-### What's different from a plain LLM wiki
+Your agent does the reading. A Claude Code skill tells it how to work out who's
+speaking in each transcript, pull out verbatim quotes, and file them into a topic
+tree. You don't need an API key, because it runs on the agent you already use.
 
-| | |
-|---|---|
-| **Content by X, not about X** | Discovery flags "summary/reaction/lessons from" videos, and you approve sources before anything is fetched. |
-| **Speaker attribution** | In a podcast, half the words are the host's. Every statement records who said it and how sure the agent is. Low-confidence and second-hand ("my friend says…") lines never count as the person's view. |
-| **Verbatim, timestamped quotes** | `"…" ([[yt-id]] @ 12:34; by: pg; conf: high)`, checked against the raw transcript. |
-| **Acts over words** | Each topic page separates what they *said* from what they *did*. `tensions.md` tracks how views changed over time. |
-| **A tree, not a pile** | person → domain → topic → leaf (`layout: flat` is available for comparison). |
-| **Groups** | One vault can hold a school of thought (e.g. YC partners) and still credit each statement to its speaker. |
-| **No self-contamination** | The model's own extrapolations go in `derived/`, and lint stops them being cited as evidence. |
+The design follows Andrej Karpathy's
+[LLM wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f).
+Raw sources never change, the LLM maintains a wiki on top of them, and every new
+source updates what's already there. wwxd adds the parts that matter when the
+subject is one person.
+
+- Discovery flags summaries, reactions and "lessons from" videos, so you only approve
+  content by the person, not about them.
+- Every statement records who said it and how sure the agent is. Low-confidence lines
+  and second-hand claims ("my mentor told me...") never count as the person's view.
+- Each quote carries a timestamp, and `wwxd lint` checks it against the transcript in
+  code. A quote that isn't in the source fails, however plausible it sounds.
+- Topic pages keep what the person said apart from what they did. `tensions.md`
+  tracks how their views changed over time.
+- The wiki is a tree (person, domain, topic, page). `layout: flat` is available if
+  you want to compare.
+- A vault can hold a group, like the YC partners, and still credit every line to the
+  right person.
+- The agent's own extrapolations go to `derived/`, and lint stops them from being
+  cited as evidence later.
 
 ## Quick start
 
 ```bash
-# install (or run any command with `uvx wwxd ...`)
-uv tool install wwxd            # add the local Whisper fallback: uv tool install 'wwxd[whisper]'
-wwxd install-skill              # installs the Claude Code skill into ~/.claude/skills/wwxd
+uv tool install "git+https://github.com/MSliwa01/wwxd"        # add [whisper] for podcasts
+wwxd install-skill                                            # into ~/.claude/skills/wwxd
 
-# create a vault from an example recipe
-wwxd new yc --example yc
-wwxd discover yc                # finds candidates; nothing is downloaded yet
-wwxd sources yc --status candidate
+wwxd new hormozi --example hormozi
+wwxd discover hormozi                                         # nothing is downloaded yet
 ```
 
 Then, in Claude Code:
 
-> Help me curate the yc vault, fetch what we approve, and compile it.
+> Help me curate the hormozi vault, fetch what we approve, and compile it.
 
-The skill walks the agent through curating with you, `wwxd fetch`, compiling each
-source, and `wwxd lint`. When it's done:
+The agent goes through the candidates with you, runs `wwxd fetch`, compiles each
+source and runs `wwxd lint`. Each source takes it a few minutes. After that:
 
-> What would Michael Seibel say about my plan to spend 6 months building before talking to users?
+> My agency does $40k a month with three people. Should I add a second service line?
+> What would Hormozi say?
 
-### For your own person
-
-```bash
-wwxd new hormozi --example hormozi        # or: wwxd new jane --name "Jane Doe"
-```
-
-Edit `vaults/<slug>/vault.yaml` to list their own channels, feeds and article
-index pages, or ask the agent to find them for you.
+For someone without a recipe, run `wwxd new jane --name "Jane Doe"` and ask the agent
+to find her channels and feeds.
 
 ## Example recipes
 
-`wwxd examples` lists them. They contain **source configs only, never content**:
+`wwxd examples` lists them. A recipe is a source config, never content.
 
-| Recipe | Domain | Why it's a good demo |
+| Recipe | Topics | Notes |
 |---|---|---|
-| `yc` | startups | A group vault (Paul Graham, Jessica Livingston, Michael Seibel, Dalton Caldwell, Garry Tan, Sam Altman). Lots of public lectures, plus PG's essays. |
-| `hormozi` | business, sales | Huge, consistent long-form output. |
-| `naval` | wealth, philosophy | Podcasts, plus an essay archive. |
-| `karpathy` | learning, AI | Lectures, a blog, interviews. |
-| `rams` | design | Few sources. Shows what a thin vault looks like. |
+| `yc` | startups | A group vault covering Paul Graham, Jessica Livingston, Michael Seibel, Dalton Caldwell, Garry Tan and Sam Altman, plus PG's essays. |
+| `hormozi` | business, sales, pricing | Long-form videos and podcast appearances. |
+| `naval` | wealth, philosophy | His podcast feed and posts. |
+| `karpathy` | learning, AI | Lectures, blog, interviews. |
+| `rams` | design | Few English sources, so expect a small vault. |
 
-> These are **starting points, not endorsements.** You don't have to agree with any
-> of them, and the most useful vault is probably the one for the person *you*
-> learn from. Swap them out, fork the recipes, and add your own.
+These are starting points, not endorsements. You don't have to agree with any of
+these people. The vault worth building is the one for the person you learn from.
+
+## Use a cheaper model for triage
+
+Deciding which candidate videos to keep only needs titles, channels and durations.
+A small, cheap model does it well. In our test, a free model triaged 39 candidates
+for the Dieter Rams vault in 20 seconds, and its picks held up on review.
+Keep the strong model for compiling and answering. That's where attribution happens,
+and lint can catch an invented quote but not a real quote credited to the wrong
+person.
 
 ## CLI
 
 | Command | What it does |
 |---|---|
-| `wwxd new <slug> [--example X \| --name "Full Name"]` | Create a vault |
-| `wwxd discover <slug>` / `update` | Find new candidate sources |
-| `wwxd sources <slug> [--status] [--hint]` | List sources |
-| `wwxd approve/reject <slug> <ids…> [--hint own]` | Curate |
+| `wwxd new <slug> --example X` or `--name "Full Name"` | Create a vault |
+| `wwxd discover <slug>`, `wwxd update <slug>` | Find new candidate sources |
+| `wwxd sources <slug> --status candidate` | List sources |
+| `wwxd approve <slug> <ids>`, `wwxd reject <slug> <ids>` | Curate |
 | `wwxd add <slug> <url or file>` | Add a source by hand |
-| `wwxd fetch <slug> [--whisper auto\|always\|never]` | Download captions/articles into `raw/` |
-| `wwxd pending <slug>` | Fetched but not yet compiled |
+| `wwxd fetch <slug>` | Download captions and articles into `raw/` |
+| `wwxd pending <slug>` | Sources fetched but not compiled |
 | `wwxd mark-compiled <slug> <id>` | Record a compiled source in `log.md` |
 | `wwxd lint <slug>` | Check quotes, citations, attribution and links |
-| `wwxd search <slug> "query" [--raw]` | Keyword search over the wiki |
+| `wwxd search <slug> "query"` | Keyword search over the wiki (`--raw` adds transcripts) |
 | `wwxd status <slug>` | Summary |
-| `wwxd bench run/judge` | [Benchmarks](bench/README.md) |
+| `wwxd bench run`, `judge`, `report` | [Benchmarks](bench/README.md) |
 
-Vaults are plain markdown and open directly in Obsidian. `$WWXD_HOME` sets where
-they live (default `./vaults`).
+Vaults are plain markdown folders and open in Obsidian. `$WWXD_HOME` sets where they
+live (default `./vaults`).
 
 ## Sources and copyright
 
-wwxd fetches publicly available captions, articles and podcast audio for your
-personal use. It doesn't fetch books, and the repo never ships content.
+wwxd fetches public captions, articles and podcast audio for your own use. It doesn't
+fetch books, and this repo ships no content. You can add books you own as text files
+(`wwxd add <slug> book.txt`) or write a [fetcher plugin](CONTRIBUTING.md#fetcher-plugins).
+Don't publish vaults built from material you don't have the right to share.
 
-**Books** are often the best source. Add files you own (`wwxd add <slug> book.txt`)
-or write a [fetcher plugin](CONTRIBUTING.md#fetcher-plugins) for your own setup.
-Respect the copyright of the people you study, and don't publish vaults built from
-material you don't have the rights to share.
+## Requirements
 
-## Requirements and notes
-
-- Python 3.12+
-- YouTube extraction works best with a JavaScript runtime installed for yt-dlp
-  (e.g. [deno](https://deno.com)). Without one, yt-dlp warns, and some videos may fail.
-- Whisper is only needed when a source has no captions (most podcasts from RSS).
-  CPU works; a GPU is much faster (`WWXD_WHISPER_MODEL`, `WWXD_WHISPER_DEVICE`).
+- Python 3.10 or newer
+- A JavaScript runtime such as [deno](https://deno.com) helps yt-dlp with YouTube.
+  Without one, yt-dlp prints a warning and some videos may fail.
+- Whisper is only needed for sources without captions, which covers most podcast
+  feeds. It runs on CPU, and much faster on a GPU (`WWXD_WHISPER_MODEL`,
+  `WWXD_WHISPER_DEVICE`).
 
 ## Roadmap
 
-- [ ] Read-only MCP server for chat apps (Claude Desktop, etc.)
-- [ ] Optional audio diarization (`wwxd[diarize]`)
-- [ ] Podcast 2.0 transcript tags (skip Whisper when the feed has transcripts)
-- [ ] Published bench results: tree vs. flat, prompt variants
-- [ ] More fetchers: X/Twitter threads, Substack archives
+- A read-only MCP server for chat apps
+- Audio diarization as an option (`wwxd[diarize]`)
+- Podcast 2.0 transcript tags, to skip Whisper when a feed has transcripts
+- Tree versus flat layout results in the bench
+- Fetchers for X threads and Substack archives
 
 ## Credits
 
-The core loop (raw → compiled wiki → ingest/query/lint) is Andrej Karpathy's
-LLM-wiki idea. wwxd adds sourcing, speaker attribution and verification for the
-"one specific person" use case. See [docs/design.md](docs/design.md).
-
-MIT licensed.
+The raw-sources-plus-compiled-wiki loop is Andrej Karpathy's LLM wiki idea. wwxd adds
+sourcing, speaker attribution and quote checking for the one-person case. Design notes
+are in [docs/design.md](docs/design.md). MIT licensed.
