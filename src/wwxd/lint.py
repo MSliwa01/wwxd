@@ -216,6 +216,33 @@ def lint(vault: Vault) -> list[Issue]:
             continue
         if rel_name not in linked and page.stem not in linked:
             issues.append(Issue("warning", page.relative_to(vault.path).as_posix(), 1, "orphan page: nothing links here (add it to index.md)"))
+    issues.extend(_voice_issues(vault))
+    return issues
+
+
+def _voice_issues(vault: Vault) -> list[Issue]:
+    """Warnings from the last `wwxd voice` run, for statements that are still in the wiki."""
+    path = vault.path / "attribution.jsonl"
+    if not path.exists():
+        return []
+    import json
+
+    issues = []
+    for row in map(json.loads, path.read_text(encoding="utf-8").splitlines()):
+        if row.get("voice") != "mismatch":
+            continue
+        page = vault.path / row["page"]
+        if not page.exists():
+            continue
+        lines = page.read_text(encoding="utf-8").splitlines()
+        target = normalize(row["quote"])
+        line_no = next((i for i, ln in enumerate(lines, 1) if STATEMENT.match(ln) and normalize(STATEMENT.match(ln).group("quote")) == target
+                        and f"by: {row['by']}" in ln), None)
+        if line_no is None:
+            continue  # fixed since the check ran
+        who = f"sounds like {row['sounds_like']}" if row.get("sounds_like") else "doesn't sound like them"
+        issues.append(Issue("warning", row["page"], line_no,
+                            f"voice check: credited to {row['by']} but {who} (similarity {row.get('own')}); re-read the transcript"))
     return issues
 
 

@@ -88,8 +88,18 @@ For every leaf you touched:
 
 ```
 wwxd lint <slug>              # fix every error; read the warnings
+wwxd voice <slug> <source-id> # audio sources with more than one speaker, if wwxd[voice] is installed
 wwxd mark-compiled <slug> <source-id> --note "+N leaves, updated …"
 ```
 
 If lint says a quote isn't in the source, re-read the raw doc and copy the actual
 words. Don't loosen the quote.
+
+`wwxd voice` listens to each quote and compares the speaker with the members'
+voiceprints. On a labelled test episode it caught every wrong attribution the
+compile made, with no false alarms. When it reports a mismatch, re-read the turns
+around that timestamp: credit the line to the member it names, or drop it if the
+speaker isn't a member. A `weak` result only means the audio was unclear (music,
+crosstalk, a very short quote); check it, but don't change it on that alone.
+Voiceprints come from all statements credited to each member, so the check works
+best once a vault has a few sources per member.

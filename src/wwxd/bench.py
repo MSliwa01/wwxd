@@ -48,12 +48,13 @@ CITATION_MARKUP = re.compile(r"\s*\(\s*\[\[[^\]]+\]\][^()]*\)|\[\[([^\]|]+)(?:\|
 
 def run_agent(command: str, prompt: str, cwd: Path, timeout: int = 1200) -> str:
     args = shlex.split(command)
-    stdin = None
     if "{prompt}" in command:
         args = [prompt if a == "{prompt}" else a for a in args]
+        # Some agent CLIs (opencode) wait on an open stdin forever, so close it.
+        stdin_kwargs: dict = {"stdin": subprocess.DEVNULL}
     else:
-        stdin = prompt
-    result = subprocess.run(args, input=stdin, capture_output=True, text=True, cwd=cwd, timeout=timeout)
+        stdin_kwargs = {"input": prompt}
+    result = subprocess.run(args, capture_output=True, text=True, cwd=cwd, timeout=timeout, **stdin_kwargs)
     if result.returncode != 0:
         raise RuntimeError(f"agent exited {result.returncode}: {(result.stderr or result.stdout)[-500:]}")
     return result.stdout.strip()

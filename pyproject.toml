@@ -16,7 +16,7 @@ dependencies = [
 
 [project.optional-dependencies]
 whisper = ["faster-whisper>=1.0.0", "av<18"]  # faster-whisper 1.2.1 passes metadata_errors, which PyAV 19 removed
-diarize = ["pyannote.audio>=3.1"]
+voice = ["sherpa-onnx>=1.12", "sherpa-onnx-core>=1.12", "numpy", "av<18"]  # speaker check: wwxd voice
 
 [project.scripts]
 wwxd = "wwxd.cli:app"

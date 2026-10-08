@@ -308,6 +308,33 @@ def status(vault: VaultArg) -> None:
     typer.echo(f"wiki pages: {len(leaves)} (+ index/profile/tensions)")
 
 
+@app.command()
+def voice(
+    vault: VaultArg,
+    ids: Annotated[list[str] | None, typer.Argument(help="Only these source ids")] = None,
+    model: Annotated[str, typer.Option(help="sherpa-onnx speaker model")] = "nemo_en_titanet_small.onnx",
+) -> None:
+    """Check who is speaking in each quoted statement, by voice. Needs: pip install 'wwxd[voice]'."""
+    from wwxd import voice as voice_mod
+
+    v = _vault(vault)
+    try:
+        results = voice_mod.check(v, ids=ids, model_name=model)
+    except RuntimeError as exc:
+        typer.secho(str(exc), fg="red", err=True)
+        raise typer.Exit(1) from exc
+    path = voice_mod.save(v, results)
+    counts = Counter(r["voice"] for r in results)
+    for r in results:
+        if r["voice"] in ("mismatch", "weak"):
+            who = f" (sounds like {r['sounds_like']})" if r.get("sounds_like") else ""
+            typer.secho(f"{r['voice'].upper():8} {r['own']:.2f} {r['page']}:{r['line']} by {r['by']}{who}  "
+                        f"{r['src']} @ {r.get('ts')}  \"{r['quote'][:70]}\"",
+                        fg="red" if r["voice"] == "mismatch" else "yellow")
+    typer.echo(", ".join(f"{k}={counts.get(k, 0)}" for k in ("match", "weak", "mismatch", "unchecked")) + f"  -> {path}")
+    v.append_log(f"voice check: {dict(counts)}")
+
+
 @app.command("install-skill")
 def install_skill(
     project: Annotated[bool, typer.Option(help="Install into ./.claude/skills instead of ~/.claude/skills")] = False,
@@ -357,13 +384,14 @@ def bench_judge(
     cwd: Annotated[Path | None, typer.Option(help="Working dir for the judge (default: the vault, so it can check raw/)")] = None,
     out: Annotated[Path, typer.Option()] = Path("bench/results"),
     jobs: Annotated[int, typer.Option()] = 4,
+    name: Annotated[str, typer.Option(help="Judge label, so several judges can score the same pairs")] = "",
 ) -> None:
     """Blind pairwise judging of two arms (order shuffled, citations stripped)."""
     from wwxd import bench
 
     v = _vault(vault)
     base = out / v.slug
-    path = bench.judge_pairs(v, gold, base / a, base / b, prompt, base / f"judge-{a}-vs-{b}.jsonl",
+    path = bench.judge_pairs(v, gold, base / a, base / b, prompt, base / f"judge-{a}-vs-{b}{'-' + name if name else ''}.jsonl",
                              agent=agent, cwd=(cwd or v.path).resolve(), jobs=jobs)
     typer.echo(f"Judgments: {path}")
 

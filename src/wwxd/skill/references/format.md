@@ -50,7 +50,7 @@ channel: Y Combinator
 date: 2018-08-29
 duration: 967
 language: en
-transcript: auto-captions      # captions | auto-captions | whisper | article | file
+transcript: auto-captions      # captions | auto-captions | feed-transcript | whisper | article | file
 expected_speakers: [altman]    # member ids the source is expected to contain
 description: ...
 ---
@@ -135,6 +135,13 @@ date: 2026-10-07
 ---
 ```
 Free-form answer. Can cite raw docs and wiki pages. Never cited as evidence.
+
+## attribution.jsonl
+
+Written by `wwxd voice`. One line per checked statement: the page, quote, source,
+`by`, and a `voice` verdict (`match`, `weak`, `mismatch` or `unchecked`) with the
+similarity scores. `wwxd lint` turns mismatches into warnings while the statement
+still says the same `by`. Don't edit it by hand; re-run `wwxd voice`.
 
 ## log.md
 
