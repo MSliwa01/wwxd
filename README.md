@@ -69,8 +69,9 @@ discover ──▶ you approve ──▶ fetch ──▶ compile ──▶ lint 
 ```
 
 The `wwxd` CLI does the mechanical work. It finds sources (the person's YouTube
-channels, podcast feeds, blog RSS, essay index pages), downloads existing captions,
-falls back to local Whisper when there are none, and checks the wiki.
+channels, podcast feeds, blog RSS, essay index pages), downloads existing captions
+and podcast transcripts, falls back to local Whisper when there are none, and checks
+the wiki.
 
 Your agent does the reading. A Claude Code skill tells it how to work out who's
 speaking in each transcript, pull out verbatim quotes, and file them into a topic
@@ -187,7 +188,7 @@ example into your notes app's folder.
 | `wwxd sources <slug> --status candidate` | List sources |
 | `wwxd approve <slug> <ids>`, `wwxd reject <slug> <ids>` | Curate |
 | `wwxd add <slug> <url or file>` | Add a source by hand |
-| `wwxd fetch <slug>` | Download captions and articles into `raw/` |
+| `wwxd fetch <slug>` | Download captions, transcripts and articles into `raw/` |
 | `wwxd pending <slug>` | Sources fetched but not compiled |
 | `wwxd mark-compiled <slug> <id>` | Record a compiled source in `log.md` |
 | `wwxd lint <slug>` | Check quotes, citations, attribution and links, and flag drift such as near-duplicate leaves |
@@ -196,6 +197,7 @@ example into your notes app's folder.
 | `wwxd digest <slug> --since YYYY-MM-DD` | Markdown note on what's new since a date |
 | `wwxd search <slug> "query"` | Keyword search over the wiki (`--raw` adds transcripts) |
 | `wwxd status <slug>` | Summary |
+| `wwxd doctor` | Check yt-dlp, the JS runtime, ffmpeg, Whisper and `$WWXD_HOME` |
 | `wwxd bench run`, `judge`, `report` | [Benchmarks](bench/README.md) |
 
 Vaults are plain markdown folders and open in Obsidian. `$WWXD_HOME` sets where they
@@ -210,18 +212,29 @@ Don't publish vaults built from material you don't have the right to share.
 
 ## Requirements
 
-- Python 3.10 or newer
-- A JavaScript runtime such as [deno](https://deno.com) helps yt-dlp with YouTube.
-  Without one, yt-dlp prints a warning and some videos may fail.
-- Whisper is only needed for sources without captions, which covers most podcast
-  feeds. It runs on CPU, and much faster on a GPU (`WWXD_WHISPER_MODEL`,
-  `WWXD_WHISPER_DEVICE`).
+Run `wwxd doctor` to check your setup. It marks each item below OK, WARN or FAIL and
+makes no network calls.
+
+- Python 3.10 or newer.
+- A JavaScript runtime for YouTube: [deno](https://deno.com), node 22 or newer, or
+  [bun](https://bun.sh). wwxd picks the first of these on your PATH for yt-dlp.
+  Without one, some videos lose formats or fail.
+- Whisper, for sources without captions. Most podcasts need it, unless the feed
+  publishes transcripts (`podcast:transcript` tags), which wwxd uses instead. Whisper
+  runs on CPU, and much faster on a GPU. `WWXD_WHISPER_MODEL` and
+  `WWXD_WHISPER_DEVICE` set the defaults, and `wwxd fetch --whisper-model large-v3`
+  changes the model for one run.
+- Browser cookies, only if YouTube asks you to sign in. Set
+  `WWXD_COOKIES_FROM_BROWSER=firefox` (or `chrome:Profile 1`), or pass
+  `--cookies-from-browser` to `discover`, `update` or `fetch`.
+
+When YouTube rate limits a fetch (HTTP 429), wwxd waits and retries up to 3 times,
+at most a minute apart.
 
 ## Roadmap
 
 - A read-only MCP server for chat apps
 - Audio diarization as an option (`wwxd[diarize]`)
-- Podcast 2.0 transcript tags, to skip Whisper when a feed has transcripts
 - Tree versus flat layout results in the bench
 - Fetchers for X threads and Substack archives
 

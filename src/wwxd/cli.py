@@ -24,6 +24,11 @@ bench_app = typer.Typer(help="Benchmark answers against a gold question set.", n
 app.add_typer(bench_app, name="bench")
 
 VaultArg = Annotated[str, typer.Argument(help="Vault slug (under $WWXD_HOME, default ./vaults) or path")]
+CookiesOpt = Annotated[
+    str | None,
+    typer.Option(help="Let yt-dlp use a browser's YouTube cookies, e.g. 'firefox' or 'chrome:Profile 1' "
+                 "(default: $WWXD_COOKIES_FROM_BROWSER)"),
+]
 
 
 def _vault(name: str) -> Vault:
@@ -31,6 +36,16 @@ def _vault(name: str) -> Vault:
         return resolve_vault(name)
     except FileNotFoundError as exc:
         typer.secho(str(exc), fg="red", err=True)
+        raise typer.Exit(1) from exc
+
+
+def _use_cookies(spec: str | None) -> None:
+    from wwxd import ytdl
+
+    try:
+        ytdl.use_cookies_from_browser(spec)
+    except ValueError as exc:
+        typer.secho(f"--cookies-from-browser: {exc}", fg="red", err=True)
         raise typer.Exit(1) from exc
 
 
@@ -47,6 +62,24 @@ def main(verbose: Annotated[bool, typer.Option("--verbose", "-v")] = False) -> N
 def version() -> None:
     """Print the version."""
     typer.echo(__version__)
+
+
+@app.command()
+def doctor() -> None:
+    """Check what fetching needs: yt-dlp, a JS runtime, ffmpeg, Whisper, WWXD_HOME. Exits 1 on FAIL."""
+    from wwxd.doctor import FAIL, run_checks
+
+    checks = run_checks()
+    colors = {"OK": "green", "WARN": "yellow", "FAIL": "red"}
+    width = max(len(c.name) for c in checks)
+    for check in checks:
+        typer.secho(f"{check.status:<4}", fg=colors[check.status], nl=False)
+        typer.echo(f"  {check.name:<{width}}  {check.detail}")
+    failed = sum(c.status == FAIL for c in checks)
+    warned = sum(c.status == "WARN" for c in checks)
+    typer.echo(f"{failed} failed, {warned} warnings")
+    if failed:
+        raise typer.Exit(1)
 
 
 @app.command()
@@ -82,10 +115,15 @@ def new(
 
 
 @app.command()
-def discover(vault: VaultArg, per_query: Annotated[int | None, typer.Option()] = None) -> None:
+def discover(
+    vault: VaultArg,
+    per_query: Annotated[int | None, typer.Option()] = None,
+    cookies_from_browser: CookiesOpt = None,
+) -> None:
     """Find candidate sources and add them to sources.yaml as `candidate`."""
     from wwxd.discover import discover as run_discover
 
+    _use_cookies(cookies_from_browser)
     v = _vault(vault)
     new_sources, errors = run_discover(v, per_query=per_query)
     v.save_sources(v.load_sources() + new_sources)
@@ -106,11 +144,12 @@ def update(
         typer.Option("--approve-hint", help="Approve the new candidates with this hint, e.g. own (repeatable)"),
     ] = None,
     fetch_after: Annotated[bool, typer.Option("--fetch", help="Fetch approved sources right after")] = False,
+    cookies_from_browser: CookiesOpt = None,
 ) -> None:
     """Re-run discovery to pick up new material. Nothing is approved or fetched unless you ask."""
     v = _vault(vault)
     before = {s.id for s in v.load_sources()}
-    discover(vault)
+    discover(vault, cookies_from_browser=cookies_from_browser)
     if approve_hint:
         # Only this run's candidates: older ones may have been left pending on purpose.
         new_ids = [s.id for s in v.load_sources() if s.id not in before and s.hint in approve_hint]
@@ -120,7 +159,7 @@ def update(
         if n:
             v.append_log(f"auto-approved {n} new {noun} ({', '.join(approve_hint)})")
     if fetch_after:
-        fetch(vault)
+        fetch(vault, cookies_from_browser=cookies_from_browser)
 
 
 @app.command()
@@ -217,13 +256,18 @@ def fetch(
     vault: VaultArg,
     ids: Annotated[list[str] | None, typer.Argument(help="Only these ids")] = None,
     whisper: Annotated[str, typer.Option(help="auto (fallback when no captions) | always | never")] = "auto",
+    whisper_model: Annotated[
+        str | None, typer.Option(help="Whisper model for this run, e.g. large-v3 (default: $WWXD_WHISPER_MODEL or small)")
+    ] = None,
     limit: Annotated[int | None, typer.Option(help="Fetch at most N sources")] = None,
     retry_failed: Annotated[bool, typer.Option(help="Also retry sources that failed before")] = False,
     force: Annotated[bool, typer.Option(help="Re-fetch the given ids even if already fetched")] = False,
+    cookies_from_browser: CookiesOpt = None,
 ) -> None:
     """Download approved sources into raw/ (captions first, Whisper fallback)."""
     from wwxd import fetchers, rawdoc
 
+    _use_cookies(cookies_from_browser)
     v = _vault(vault)
     all_sources = v.load_sources()
     wanted = ("approved", "failed") if retry_failed else ("approved",)
@@ -234,11 +278,14 @@ def fetch(
         typer.echo("Nothing to fetch. Approve candidates first (`wwxd approve`).")
         return
     delay = get_settings().download_delay
+    options: dict[str, object] = {"whisper": whisper}
+    if whisper_model:
+        options["whisper_model"] = whisper_model  # only when set, so older plugins never see it
     done = 0
     for i, source in enumerate(todo, 1):
         typer.echo(f"[{i}/{len(todo)}] {source.id} {source.title[:60]}")
         try:
-            doc = fetchers.fetch(source, v, whisper=whisper)
+            doc = fetchers.fetch(source, v, **options)
             rawdoc.write(doc, v.raw_path(source.id))
             source.status, source.error = "fetched", ""
             source.date = str(doc.meta.get("date") or source.date or "")  # the fetcher saw the page; it knows better

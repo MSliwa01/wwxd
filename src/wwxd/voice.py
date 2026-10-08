@@ -163,18 +163,18 @@ class Embedder:
 def _youtube_words(video_id: str, cache: Path) -> list[tuple[float, str]] | None:
     path = cache / f"{video_id}.json3"
     if not path.exists():
-        import yt_dlp
+        from wwxd import ytdl
+        from wwxd.fetchers.youtube import _pick_caption_track, video_url
 
-        from wwxd.fetchers.youtube import YDL_BASE, _pick_caption_track, video_url
-
-        with yt_dlp.YoutubeDL(YDL_BASE) as ydl:
-            info = ydl.extract_info(video_url(video_id), download=False)
+        with ytdl.new_ydl(skip_download=True) as ydl:
+            info = ytdl.with_backoff(lambda: ydl.extract_info(video_url(video_id), download=False), f"captions for {video_id}")
             track = _pick_caption_track(info)
             fmt = next((f for f in (track[1] if track else []) if f.get("ext") == "json3"), None)
             if fmt is None:
                 return None
-            path.parent.mkdir(parents=True, exist_ok=True)
-            path.write_bytes(ydl.urlopen(fmt["url"]).read())
+            data = ytdl.with_backoff(lambda: ydl.urlopen(fmt["url"]).read(), f"captions for {video_id}")
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(data)
     return words_from_json3(json.loads(path.read_text(encoding="utf-8")))
 
 

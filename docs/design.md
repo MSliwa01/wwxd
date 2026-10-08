@@ -29,7 +29,7 @@ way they would, with sources.
 
 - **CLI** (`wwxd`): `new`, `discover`, `sources`, `approve`/`reject`, `add`,
   `fetch`, `pending`, `mark-compiled`, `lint`, `search`, `status`, `update`,
-  `health`, `timeline`, `digest`, `install-skill`, `bench`.
+  `health`, `timeline`, `digest`, `voice`, `install-skill`, `doctor`, `bench`.
 - **Skill** (`src/wwxd/skill/`): procedures for curating, compiling, asking and
   linting. Installed with `wwxd install-skill`.
 - **No MCP server in v1.** Vaults are plain markdown, so any agent with file access
@@ -68,9 +68,14 @@ Canonical spec: [`src/wwxd/skill/references/format.md`](../src/wwxd/skill/refere
 |------|----------|-------|
 | YouTube (own channels, searches) | yt-dlp | captions (manual > auto original language) → Whisper fallback |
 | Articles / essays | RSS/Atom feeds, link-index pages | trafilatura |
-| Podcasts (RSS) | feeds with audio enclosures | audio download → Whisper |
+| Podcasts (RSS) | feeds with audio enclosures, plus the best `podcast:transcript` (json > vtt > srt > html > text) | feed transcript (JSON, VTT or SRT; speaker changes become `>>`) → Whisper fallback |
 | Local files | `wwxd add` | `.txt` / `.md` |
 | Anything else | none | fetcher plugins (`wwxd.fetchers` entry point) |
+
+Every yt-dlp call goes through `src/wwxd/ytdl.py`. It passes the first JS runtime it
+finds (deno, node, then bun) that yt-dlp supports, adds browser cookies when
+`WWXD_COOKIES_FROM_BROWSER` or `--cookies-from-browser` is set, and retries HTTP 429
+responses with exponential backoff and jitter (3 retries, at most 60 s apart).
 
 Books are never fetched. Users can add files they own, or write a plugin.
 

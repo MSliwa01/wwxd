@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import logging
-import time
 import urllib.request
 from functools import lru_cache
 from pathlib import Path
@@ -29,8 +28,13 @@ def _resolve_device(device: str) -> str:
     return "cpu"
 
 
+def model_name(override: str | None = None) -> str:
+    """`wwxd fetch --whisper-model`, else WWXD_WHISPER_MODEL, else 'small'."""
+    return override or get_settings().whisper_model
+
+
 @lru_cache
-def _get_model():
+def _get_model(name: str):
     try:
         from faster_whisper import WhisperModel
     except ImportError as exc:
@@ -41,12 +45,12 @@ def _get_model():
     settings = get_settings()
     device = _resolve_device(settings.whisper_device)
     compute_type = "auto"  # fastest type the hardware supports (older GPUs lack fast float16)
-    logger.info("Loading Whisper '%s' on %s (%s)", settings.whisper_model, device, compute_type)
-    return WhisperModel(settings.whisper_model, device=device, compute_type=compute_type)
+    logger.info("Loading Whisper '%s' on %s (%s)", name, device, compute_type)
+    return WhisperModel(name, device=device, compute_type=compute_type)
 
 
-def transcribe(audio_path: Path) -> tuple[list[Segment], str]:
-    model = _get_model()
+def transcribe(audio_path: Path, model: str | None = None) -> tuple[list[Segment], str]:
+    model = _get_model(model_name(model))
     segments_iter, info = model.transcribe(str(audio_path), vad_filter=True)
     segments = [Segment(s.start, s.text.strip()) for s in segments_iter if s.text.strip()]
     return segments, getattr(info, "language", "") or ""
@@ -60,33 +64,27 @@ def _find_cached(directory: Path, stem: str) -> Path | None:
 
 
 def download_youtube_audio(url: str, video_id: str, directory: Path) -> Path:
-    import yt_dlp
+    from wwxd import ytdl
 
     directory.mkdir(parents=True, exist_ok=True)
     cached = _find_cached(directory, video_id)
     if cached:
         return cached
     opts = {
-        "quiet": True,
-        "no_warnings": True,
         "format": "bestaudio/best",
         "outtmpl": str(directory / f"{video_id}.%(ext)s"),
         "retries": 5,
         "fragment_retries": 5,
     }
-    delay = get_settings().download_delay
-    last_error: Exception | None = None
-    for attempt in range(3):
-        try:
-            with yt_dlp.YoutubeDL(opts) as ydl:
-                ydl.download([url])
-            break
-        except Exception as exc:
-            last_error = exc
-            logger.warning("Audio download failed (attempt %d/3): %s", attempt + 1, exc)
-            time.sleep(delay * (attempt + 1))
-    else:
-        raise RuntimeError(f"Failed to download {url}") from last_error
+
+    def download() -> None:
+        with ytdl.new_ydl(**opts) as ydl:
+            ydl.download([url])
+
+    try:
+        ytdl.with_backoff(download, "downloading audio", retry_other=True)
+    except Exception as exc:
+        raise RuntimeError(f"Failed to download {url}: {exc}") from exc
     path = _find_cached(directory, video_id)
     if path is None:
         raise FileNotFoundError(f"Audio not found after download for {video_id}")
