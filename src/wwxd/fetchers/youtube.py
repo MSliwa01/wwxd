@@ -8,14 +8,12 @@ import time
 
 import yt_dlp
 
+from wwxd import ytdl
 from wwxd.config import get_settings
 from wwxd.rawdoc import RawDoc, Segment
 from wwxd.vault import Source, Vault
 
 logger = logging.getLogger(__name__)
-
-YDL_BASE = {"quiet": True, "no_warnings": True, "skip_download": True}
-
 
 def video_url(video_id: str) -> str:
     return f"https://www.youtube.com/watch?v={video_id}"
@@ -74,7 +72,7 @@ def _download_captions(ydl: yt_dlp.YoutubeDL, formats: list[dict]) -> list[Segme
 
 
 def extract_info(url: str) -> dict:
-    with yt_dlp.YoutubeDL(YDL_BASE) as ydl:
+    with ytdl.new_ydl(skip_download=True) as ydl:
         info = ydl.extract_info(url, download=False)
     if info is None:
         raise ValueError(f"Could not resolve {url}")
@@ -85,7 +83,7 @@ def fetch(source: Source, vault: Vault, *, whisper: str = "auto") -> RawDoc:
     """whisper: 'auto' (fallback when no captions), 'always', or 'never'."""
     video_id = source.id.removeprefix("yt-")
     url = video_url(video_id)
-    with yt_dlp.YoutubeDL(YDL_BASE) as ydl:
+    with ytdl.new_ydl(skip_download=True) as ydl:
         info = ydl.extract_info(url, download=False)
         track = None if whisper == "always" else _pick_caption_track(info)
         segments: list[Segment] = []

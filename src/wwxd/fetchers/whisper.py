@@ -60,15 +60,13 @@ def _find_cached(directory: Path, stem: str) -> Path | None:
 
 
 def download_youtube_audio(url: str, video_id: str, directory: Path) -> Path:
-    import yt_dlp
+    from wwxd import ytdl
 
     directory.mkdir(parents=True, exist_ok=True)
     cached = _find_cached(directory, video_id)
     if cached:
         return cached
     opts = {
-        "quiet": True,
-        "no_warnings": True,
         "format": "bestaudio/best",
         "outtmpl": str(directory / f"{video_id}.%(ext)s"),
         "retries": 5,
@@ -78,7 +76,7 @@ def download_youtube_audio(url: str, video_id: str, directory: Path) -> Path:
     last_error: Exception | None = None
     for attempt in range(3):
         try:
-            with yt_dlp.YoutubeDL(opts) as ydl:
+            with ytdl.new_ydl(**opts) as ydl:
                 ydl.download([url])
             break
         except Exception as exc:

@@ -10,8 +10,7 @@ import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 
-import yt_dlp
-
+from wwxd import ytdl
 from wwxd.vault import Source, Vault
 
 logger = logging.getLogger(__name__)
@@ -49,14 +48,7 @@ def _hint(title: str, speakers: list[str], own: bool) -> str:
 
 
 def _flat_entries(url: str, limit: int) -> list[dict]:
-    opts = {
-        "quiet": True,
-        "no_warnings": True,
-        "extract_flat": "in_playlist",
-        "skip_download": True,
-        "playlistend": limit,
-    }
-    with yt_dlp.YoutubeDL(opts) as ydl:
+    with ytdl.new_ydl(extract_flat="in_playlist", skip_download=True, playlistend=limit) as ydl:
         info = ydl.extract_info(url, download=False)
     if not info:
         return []
