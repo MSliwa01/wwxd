@@ -216,6 +216,7 @@ def lint(vault: Vault) -> list[Issue]:
             continue
         if rel_name not in linked and page.stem not in linked:
             issues.append(Issue("warning", page.relative_to(vault.path).as_posix(), 1, "orphan page: nothing links here (add it to index.md)"))
+    issues.extend(structure_warnings(vault, issues))
     return issues
 
 
@@ -251,3 +252,102 @@ def _check_statement(match: re.Match, line_no: int, add, raw: RawIndex, member_i
             add("error", line_no, f"quote not in source: {detail}")
         elif verdict == "moved":
             add("warning", line_no, f"quote timestamp off: {detail}")
+
+
+# --- Structure and drift warnings --------------------------------------------------
+# Warnings only. Each source is compiled by a fresh agent session, and over many
+# sources the wiki drifts: near-duplicate leaves, leaves missing from index.md,
+# folders without an overview, compiled sources that nothing cites. These checks
+# read the wiki as a whole; the per-line checks above don't depend on them.
+
+
+def structure_warnings(vault: Vault, issues: list[Issue]) -> list[Issue]:
+    from wwxd.wikimap import read_leaves
+
+    leaves = read_leaves(vault)
+    orphans = {i.path for i in issues if i.message.startswith("orphan page")}
+    return [
+        *frontmatter_warnings(vault),
+        *index_warnings(vault, leaves, skip=orphans),
+        *overview_warnings(vault),
+        *uncited_source_warnings(vault),
+        *near_duplicate_warnings(vault, leaves),
+    ]
+
+
+def frontmatter_warnings(vault: Vault) -> list[Issue]:
+    """Front matter that YAML can't parse hides the page's type and date from every check."""
+    found = []
+    for page in sorted(vault.wiki_dir.rglob("*.md")):
+        text = page.read_text(encoding="utf-8")
+        if not text.startswith("---\n") or text.count("---\n") < 2:
+            continue
+        try:
+            yaml.safe_load(text.split("---\n", 2)[1])
+        except yaml.YAMLError as exc:
+            mark = getattr(exc, "problem_mark", None)
+            line = mark.line + 2 if mark is not None else 1
+            found.append(Issue("warning", page.relative_to(vault.path).as_posix(), line,
+                               "front matter isn't valid YAML, so leaf checks skip this page "
+                               "(put values that contain a colon in quotes)"))
+    return found
+
+
+def index_warnings(vault: Vault, leaves, skip: set[str] = frozenset()) -> list[Issue]:
+    """Every leaf should be listed in wiki/index.md."""
+    index = vault.wiki_dir / "index.md"
+    listed = {t.strip() for t in WIKILINK.findall(index.read_text(encoding="utf-8"))} if index.exists() else set()
+    found = []
+    for leaf in leaves:
+        rel = leaf.path.relative_to(vault.path).as_posix()
+        if rel not in skip and leaf.rel not in listed and leaf.slug not in listed:
+            found.append(Issue("warning", rel, 1, f"not listed in wiki/index.md: add - [[{leaf.rel}]] (one-line summary)"))
+    return found
+
+
+def overview_warnings(vault: Vault) -> list[Issue]:
+    """Tree layout: every domain folder has an _overview.md, and so does every topic with 2+ leaves."""
+    if vault.layout != "tree":
+        return []
+    found = []
+    for domain in sorted(p for p in vault.wiki_dir.iterdir() if p.is_dir() and not p.name.startswith(".")):
+        if not any(domain.rglob("*.md")):
+            continue
+        rel = domain.relative_to(vault.path).as_posix()
+        if not (domain / "_overview.md").exists():
+            found.append(Issue("warning", f"{rel}/_overview.md", 1, "missing: every domain folder needs an _overview.md"))
+        for topic in sorted(p for p in domain.iterdir() if p.is_dir()):
+            leaves = [p for p in topic.glob("*.md") if p.stem != "_overview"]
+            if len(leaves) >= 2 and not (topic / "_overview.md").exists():
+                found.append(Issue("warning", f"{topic.relative_to(vault.path).as_posix()}/_overview.md", 1,
+                                   f"missing: topic folder has {len(leaves)} leaves and no _overview.md"))
+    return found
+
+
+def uncited_source_warnings(vault: Vault) -> list[Issue]:
+    """A source marked compiled should be cited somewhere in wiki/."""
+    from wwxd.wikimap import cited_sources
+
+    cited = cited_sources(vault)
+    path = vault.path / "sources.yaml"
+    lines = path.read_text(encoding="utf-8").splitlines() if path.exists() else []
+    found = []
+    for source in vault.load_sources():
+        if source.status == "compiled" and source.id not in cited:
+            line = next((n for n, text in enumerate(lines, 1) if text.strip() == f"- id: {source.id}"), 1)
+            found.append(Issue("warning", "sources.yaml", line,
+                               f"{source.id} is compiled but no wiki page cites it: compile it again, "
+                               "or reject it if nothing in it was usable"))
+    return found
+
+
+def near_duplicate_warnings(vault: Vault, leaves) -> list[Issue]:
+    """Leaves that probably answer the same question. Thresholds: see wikimap.near_duplicates."""
+    from wwxd.wikimap import near_duplicates
+
+    return [
+        Issue("warning", pair.a.path.relative_to(vault.path).as_posix(), 1,
+              f"near-duplicate of [[{pair.b.rel}]] (score {pair.score:.2f}: {pair.reason()}); "
+              "merge them or make the difference clear (see references/consolidate.md)")
+        for pair in near_duplicates(leaves)
+    ]
