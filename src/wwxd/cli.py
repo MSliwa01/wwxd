@@ -308,6 +308,14 @@ def status(vault: VaultArg) -> None:
     typer.echo(f"wiki pages: {len(leaves)} (+ index/profile/tensions)")
 
 
+@app.command()
+def health(vault: VaultArg) -> None:
+    """Report on the wiki: size, attribution, coverage, near-duplicates, oversize leaves."""
+    from wwxd.health import check, render
+
+    typer.echo(render(check(_vault(vault))))
+
+
 @app.command("install-skill")
 def install_skill(
     project: Annotated[bool, typer.Option(help="Install into ./.claude/skills instead of ~/.claude/skills")] = False,

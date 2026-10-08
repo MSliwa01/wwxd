@@ -160,18 +160,18 @@ def compile_log(vault: Vault) -> list[LogEntry]:
     return entries
 
 
-def compiles_since_consolidation(vault: Vault) -> int:
-    """Sources compiled after the last `consolidated` line in log.md (all of them if there is none)."""
+def last_consolidation(vault: Vault) -> tuple[str | None, int]:
+    """Date of the last `consolidated` line in log.md, and how many sources were compiled after it."""
     path = vault.path / "log.md"
     if not path.exists():
-        return 0
-    count = 0
+        return None, 0
+    date, count = None, 0
     for line in path.read_text(encoding="utf-8").splitlines():
-        if LOG_CONSOLIDATED.match(line.strip()):
-            count = 0
+        if match := LOG_CONSOLIDATED.match(line.strip()):
+            date, count = match.group("date"), 0
         elif LOG_COMPILED.match(line.strip()):
             count += 1
-    return count
+    return date, count
 
 
 # --- Near-duplicate leaves ------------------------------------------------------
