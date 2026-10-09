@@ -235,6 +235,9 @@ source and runs `wwxd lint`. Each source takes it a few minutes. After that:
 > My agency does $40k a month with three people. Should I add a second service line?
 > What would Hormozi say?
 
+Put URLs in quotes (`wwxd add jane "https://www.youtube.com/watch?v=…"`). On macOS
+the default shell, zsh, treats the `?` as a filename pattern otherwise.
+
 For someone without a recipe, run `wwxd new jane --name "Jane Doe"` and ask the agent
 to find her channels and feeds.
 
