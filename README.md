@@ -58,26 +58,26 @@ preferred the wwxd answer every time.
 | Faithfulness | 3.2 | 4.6 |
 | Preferred by the judge | 0 of 40 | 40 of 40 |
 
-Two judges from other model families, NVIDIA Nemotron 3 Ultra and Muse Spark 1.3
-(both free through opencode), scored the same pairs and preferred wwxd 39 of 40 and
-35 of 36 times, so this isn't Claude grading Claude. 160 quotes in the wwxd answers
+Three more judges scored the same pairs: Claude Haiku 5.5 (40 of 40 for wwxd), and
+from other model families NVIDIA Nemotron 3 Ultra (39 of 40) and Muse Spark 1.3 (35
+of 36), so this isn't one model grading itself. 160 quotes in the wwxd answers
 were checked against the transcripts by a script, and 158 were found verbatim. The
 other 2 were video titles.
 
 ### Opinionated isn't the same as right
 
 The obvious fix for bland answers is to tell the model to be decisive. We tried it
-on 24 "should I do X or Y?" questions, with three judges ranking three answers to
+on 24 "should I do X or Y?" questions, with four judges ranking three answers to
 each: raw Opus, Opus told to answer decisively as the person would, and Opus with
 the vault.
 
-| Mean of three judges, 1 to 5 | Raw | "Be decisive, as X" | wwxd |
+| Mean of four judges, 1 to 5 | Raw | "Be decisive, as X" | wwxd |
 |---|---|---|---|
-| Decisiveness | 3.4 | 4.8 | 4.7 |
-| Distinctiveness | 2.9 | 3.1 | 4.9 |
-| Grounding (reasons they really hold) | 2.8 | 2.7 | 5.0 |
-| Ranked best | 0 | 0 | 69 of 69 |
-| Pick contradicts the person | 7 | 6 | 0 |
+| Decisiveness | 3.5 | 4.8 | 4.7 |
+| Distinctiveness | 2.8 | 3.0 | 4.8 |
+| Grounding (reasons they really hold) | 2.8 | 2.6 | 4.9 |
+| Ranked best | 0 | 0 | 93 of 93 |
+| Pick contradicts the person | 9 | 8 | 0 |
 
 The persona prompt stops the hedging, but its reasons are generic or invented. Asked
 "I have $50k saved, should I pay off my car loan or put it into my business?", it
@@ -85,12 +85,21 @@ said to keep the low-rate loan, the standard financial-advice answer. Hormozi sa
 "ideally just pay off your car so you don't have to think about it again" and that
 he skews "very close to the Ramsey side". wwxd quoted both.
 
+### Questions they never answered
+
+On 16 questions the people never addressed ("would Hormozi buy a Lamborghini after
+his first $1M?"), wwxd works it out from the nearest thing they did say and the rule
+behind it. Every judgment ranked a wwxd answer first. Grounding was 4.7 against 2.3
+for the persona prompt, and the inference itself scored 4.5 of 5 with thinking
+pages.
+
 ### What wwxd doesn't do
 
 It doesn't predict. We rebuilt both vaults from pre-2026 sources only and asked about
 positions the people first took in 2026. The vault answers were no better than raw
-Opus: one judge called it even, and two judges from other model families preferred
-raw Opus. A vault keeps answers faithful to what someone has said. It can't know
+Opus: one judge called it even, and three others preferred raw Opus. Thinking pages
+didn't change that. A thinking style settles a judgment call; it can't recover a
+fact or a number the person hadn't said yet. A vault keeps answers faithful to what someone has said. It can't know
 what they'll say next, so keep it current with `wwxd update`. Full numbers, setup
 and caveats are in [bench/RESULTS.md](bench/RESULTS.md).
 
@@ -124,6 +133,13 @@ subject is one person.
   code. A quote that isn't in the source fails, however plausible it sounds.
 - Topic pages keep what the person said apart from what they did. `tensions.md`
   tracks how their views changed over time.
+- Each person gets a thinking page: what they optimize for, the rules they decide
+  by, how they reason, and their strong likes and dislikes, each with the reason
+  they gave and verbatim quotes. When you ask about something they never mentioned,
+  the agent reasons from it the way they would. If they call McDonald's poison
+  because it's food engineered to be cheap and addictive, the answer about KFC says
+  they'd most likely hate it too, quotes the McDonald's line, names the rule, gives a
+  confidence and says what would break the inference.
 - The wiki is a tree (person, domain, topic, page). `layout: flat` is available if
   you want to compare.
 - A vault can hold a group, like the YC partners, and still credit every line to the

@@ -1,44 +1,44 @@
 {
-  "questions": 9,
+  "questions": 12,
   "arms": {
     "op-raw": {
-      "decisiveness": 3.67,
-      "distinctiveness": 3.56,
-      "grounding": 3.33,
-      "usefulness": 4.44,
+      "decisiveness": 3.42,
+      "distinctiveness": 2.75,
+      "grounding": 2.67,
+      "usefulness": 3.83,
       "ranked_first": 0,
       "consistent_with_person": {
         "yes": 8,
-        "no": 0,
-        "unknown": 1
+        "no": 1,
+        "unknown": 3
       },
       "median_words": 484,
       "hedges_per_100_words": 0.16
     },
     "op-persona": {
-      "decisiveness": 4.67,
-      "distinctiveness": 3.56,
-      "grounding": 3.22,
-      "usefulness": 4.22,
+      "decisiveness": 4.92,
+      "distinctiveness": 3.08,
+      "grounding": 2.83,
+      "usefulness": 4.0,
       "ranked_first": 0,
       "consistent_with_person": {
-        "yes": 7,
+        "yes": 9,
         "no": 0,
-        "unknown": 2
+        "unknown": 3
       },
       "median_words": 363,
       "hedges_per_100_words": 0.0
     },
     "op-wwxd": {
-      "decisiveness": 4.89,
-      "distinctiveness": 4.89,
-      "grounding": 5.0,
-      "usefulness": 4.67,
-      "ranked_first": 9,
+      "decisiveness": 4.67,
+      "distinctiveness": 4.58,
+      "grounding": 4.67,
+      "usefulness": 4.25,
+      "ranked_first": 12,
       "consistent_with_person": {
-        "yes": 9,
+        "yes": 11,
         "no": 0,
-        "unknown": 0
+        "unknown": 1
       },
       "median_words": 579,
       "hedges_per_100_words": 0.01

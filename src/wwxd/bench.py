@@ -134,7 +134,7 @@ def strip_citations(answer: str) -> str:
 
 def judge_pairs(
     vault: Vault, gold_path: Path, arm_a: Path, arm_b: Path, prompt_path: Path, out_path: Path,
-    *, agent: str, cwd: Path, jobs: int = 4, seed: int = 0,
+    *, agent: str, cwd: Path, jobs: int = 4, seed: int = 0, timeout: int = 1200,
 ) -> Path:
     """Blind pairwise judging. Answer order is shuffled per question; the judge sees no citations."""
     gold = {q["id"]: q for q in load_gold(gold_path)}
@@ -155,11 +155,11 @@ def judge_pairs(
         prompt = _fill(template, question=item["question"], expected=yaml.safe_dump(expected, sort_keys=False, allow_unicode=True),
                        answer_a=texts[0], answer_b=texts[1], vault=str(vault.path))
         try:
-            raw = run_agent(agent, prompt, cwd=cwd)
+            raw = run_agent(agent, prompt, cwd=cwd, timeout=timeout)
             match = re.search(r"\{.*\}", raw, re.DOTALL)
             verdict = json.loads(match.group(0)) if match else {"error": "no JSON", "raw": raw[-500:]}
         except Exception as exc:
-            verdict = {"error": str(exc)}
+            verdict = {"error": str(exc)[-300:]}
         # Map A/B back to arm names.
         mapping = {"A": order[0], "B": order[1]}
         scores = {mapping[k]: verdict.get(k) for k in ("A", "B") if isinstance(verdict.get(k), dict)}
@@ -234,7 +234,7 @@ def opinion_stats(answer: str) -> dict:
 
 def judge_ranked(
     vault: Vault, gold_path: Path, arm_dirs: list[Path], prompt_path: Path, out_path: Path,
-    *, agent: str, cwd: Path, jobs: int = 3, seed: int = 0,
+    *, agent: str, cwd: Path, jobs: int = 3, seed: int = 0, timeout: int = 1200,
 ) -> Path:
     """Show the judge every arm's answer to a question at once, shuffled and blind; it scores each and ranks them."""
     gold = {q["id"]: q for q in load_gold(gold_path)}
@@ -257,11 +257,11 @@ def judge_ranked(
         )
         prompt = _fill(template, question=item["question"], person=str(item.get("person", "")), answers=block)
         try:
-            raw = run_agent(agent, prompt, cwd=cwd)
+            raw = run_agent(agent, prompt, cwd=cwd, timeout=timeout)
             match = re.search(r"\{.*\}", raw, re.DOTALL)
             verdict = json.loads(match.group(0)) if match else {"error": "no JSON", "raw": raw[-500:]}
         except Exception as exc:
-            verdict = {"error": str(exc)}
+            verdict = {"error": str(exc)[-300:]}
         mapping = {letters[i]: arm for i, arm in enumerate(order)}
         scores = {mapping[k]: v for k, v in verdict.items() if k in mapping and isinstance(v, dict)}
         ranking = [mapping[k] for k in verdict.get("ranking", []) if k in mapping]

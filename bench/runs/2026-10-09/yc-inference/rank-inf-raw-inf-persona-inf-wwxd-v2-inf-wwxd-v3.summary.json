@@ -1,0 +1,65 @@
+{
+  "questions": 8,
+  "arms": {
+    "inf-raw": {
+      "decisiveness": 3.88,
+      "grounding": 3.0,
+      "inference": 3.5,
+      "likely_right": 4.12,
+      "usefulness": 3.25,
+      "ranked_first": 0,
+      "consistent_with_person": {
+        "yes": 0,
+        "no": 0,
+        "unknown": 8
+      },
+      "median_words": 433,
+      "hedges_per_100_words": 0.05
+    },
+    "inf-persona": {
+      "decisiveness": 4.62,
+      "grounding": 2.62,
+      "inference": 3.5,
+      "likely_right": 4.12,
+      "usefulness": 3.12,
+      "ranked_first": 0,
+      "consistent_with_person": {
+        "yes": 0,
+        "no": 0,
+        "unknown": 8
+      },
+      "median_words": 335,
+      "hedges_per_100_words": 0.05
+    },
+    "inf-wwxd-v2": {
+      "decisiveness": 4.62,
+      "grounding": 4.75,
+      "inference": 4.12,
+      "likely_right": 4.38,
+      "usefulness": 4.25,
+      "ranked_first": 3,
+      "consistent_with_person": {
+        "yes": 0,
+        "no": 0,
+        "unknown": 8
+      },
+      "median_words": 572,
+      "hedges_per_100_words": 0.08
+    },
+    "inf-wwxd-v3": {
+      "decisiveness": 4.75,
+      "grounding": 4.5,
+      "inference": 4.25,
+      "likely_right": 4.38,
+      "usefulness": 4.62,
+      "ranked_first": 5,
+      "consistent_with_person": {
+        "yes": 0,
+        "no": 0,
+        "unknown": 8
+      },
+      "median_words": 644,
+      "hedges_per_100_words": 0.05
+    }
+  }
+}

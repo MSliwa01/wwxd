@@ -42,7 +42,7 @@ to the transcripts.
 The two judges picked the same answer on 39 of 40 questions. The one split is
 `hz-01`, where Nemotron preferred raw Opus. A third judge, Muse Spark 1.3 (free,
 through opencode), preferred wwxd on 35 of the 36 pairs it scored; 4 Hormozi pairs
-failed on opencode errors.
+failed on opencode errors. A fourth, Claude Haiku 5.5, preferred wwxd on all 40.
 
 ### By category (accuracy, raw vs wwxd)
 
@@ -102,18 +102,19 @@ Y?" questions (12 for Hormozi, 12 for Paul Graham), each ending with "What would
   what they've actually said and done. Be decisive: pick one option and say why."
 - wwxd: the question plus the vault.
 
-Three judges from three model families saw each question's three answers together,
-shuffled and with citations stripped. They scored each answer from 1 to 5, ranked
-them, and said whether its pick matched what the person's transcripts show.
+Four judges (Opus 5.5, Haiku 5.5, Nemotron 3 Ultra and Muse Spark 1.3) saw each
+question's three answers together, shuffled and with citations stripped. They scored
+each answer from 1 to 5, ranked them, and said whether its pick matched what the
+person's transcripts show.
 
-| Mean of three judges | raw | persona | wwxd |
+| Mean of four judges | raw | persona | wwxd |
 |---|---|---|---|
-| Decisiveness | 3.4 | 4.8 | 4.7 |
-| Distinctiveness | 2.9 | 3.1 | 4.9 |
-| Grounding (reasons they really hold) | 2.8 | 2.7 | 5.0 |
-| Usefulness | 4.1 | 4.0 | 4.4 |
-| Ranked best | 0 | 0 | 69 of 69 |
-| Pick contradicts the person | 7 | 6 | 0 |
+| Decisiveness | 3.5 | 4.8 | 4.7 |
+| Distinctiveness | 2.8 | 3.0 | 4.8 |
+| Grounding (reasons they really hold) | 2.8 | 2.6 | 4.9 |
+| Usefulness | 4.0 | 4.0 | 4.4 |
+| Ranked best | 0 | 0 | 93 of 93 |
+| Pick contradicts the person | 9 | 8 | 0 |
 
 The persona prompt fixes the hedging. It's even slightly more decisive than wwxd,
 which sometimes gives the person's own deciding rule ("under about 5 reps, manage
@@ -180,9 +181,10 @@ doesn't open with "not covered". On the same held-out questions:
 | Opus | 5 of 10 | 4 of 10 |
 | Nemotron | 3 of 7 | 2 of 9 |
 | Muse Spark | 3 of 10 | 3 of 8 |
+| Haiku 5.5 | 3 of 10 | 4 of 10 |
 
 The Opus judge now calls it even, with vault accuracy slightly ahead (2.9 vs 2.8 and
-2.6 vs 2.5). The two non-Claude judges still prefer raw Opus. The change narrowed
+2.6 vs 2.5). The other three judges still prefer raw Opus. The change narrowed
 the gap without closing it, and it kept honesty intact: on the attribution traps and
 false premises the new skill scored 4.8 to 5.0, as before.
 
@@ -191,6 +193,44 @@ actually said and done. It isn't a forecast of what they'll say about something 
 and people change their minds. In this very test, Dalton Caldwell and Michael Seibel
 reversed their own MVP advice in 2026. Keep vaults current with `wwxd update`, and
 treat extrapolations as the guesses they are.
+
+## Inference bench: reasoning from how they think
+
+Most useful questions are ones the person never answered directly: "would Hormozi
+buy a Lamborghini after his first $1M?", "what would Paul Graham think of a startup
+that sells AI-written admission essays?". The skill handles these by finding the
+nearest case the person did address, the rule behind their view, and why the new
+case falls under it. Each vault also has thinking pages (`wiki/thinking/<member>.md`):
+the person's values, decision rules, reasoning habits and strong views, each with
+verbatim quotes.
+
+16 such questions (8 per vault), four arms: raw Opus, the "be decisive" persona
+prompt, wwxd without thinking pages, and wwxd with them. Opus 5.5 and Haiku 5.5
+judged all 16; Muse Spark judged the 8 Hormozi ones before its free tier slowed to a
+stop. Judges checked each answer's premises against the transcripts.
+
+| Mean of three judges | raw | persona | wwxd | wwxd + thinking pages |
+|---|---|---|---|---|
+| Decisiveness | 3.8 | 4.9 | 4.7 | 4.9 |
+| Grounding (premises they really said) | 2.7 | 2.3 | 4.7 | 4.7 |
+| Inference (does the conclusion follow?) | 3.3 | 3.1 | 4.3 | 4.5 |
+| Likely right (judge's estimate) | 4.2 | 4.1 | 4.4 | 4.4 |
+| Usefulness | 3.2 | 3.0 | 4.5 | 4.8 |
+| Ranked best | 0 | 0 | 19 | 21 |
+
+Every judgment ranked one of the wwxd arms first. Thinking pages add a small edge on
+inference and usefulness; with 40 judgments that's suggestive, not proven. Note that
+"likely right" is close for all arms: on questions like these, raw Opus usually gets
+the direction right. What it lacks is the person's actual premises, and the persona
+prompt invents them (grounding 2.3).
+
+Thinking pages didn't help the held-out test. Built from pre-2026 sources and used to
+predict 2026 positions, the vault with thinking pages was preferred over raw Opus 3
+of 10 times per vault by Opus and 4 and 2 of 10 by Haiku, no better than without
+them. The held-out questions ask for specific positions the person first stated
+later (a churn benchmark, a fear about AI policy). A thinking style can settle a
+judgment call like the Lamborghini. It can't recover a fact or a number nobody
+recorded yet.
 
 ## Attribution check by voice
 

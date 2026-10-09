@@ -505,6 +505,7 @@ def bench_judge(
     out: Annotated[Path, typer.Option()] = Path("bench/results"),
     jobs: Annotated[int, typer.Option()] = 4,
     name: Annotated[str, typer.Option(help="Judge label, so several judges can score the same pairs")] = "",
+    timeout: Annotated[int, typer.Option(help="Seconds per judgment (free models can be slow)")] = 1200,
 ) -> None:
     """Blind pairwise judging of two arms (order shuffled, citations stripped)."""
     from wwxd import bench
@@ -512,7 +513,7 @@ def bench_judge(
     v = _vault(vault)
     base = out / v.slug
     path = bench.judge_pairs(v, gold, base / a, base / b, prompt, base / f"judge-{a}-vs-{b}{'-' + name if name else ''}.jsonl",
-                             agent=agent, cwd=(cwd or v.path).resolve(), jobs=jobs)
+                             agent=agent, cwd=(cwd or v.path).resolve(), jobs=jobs, timeout=timeout)
     typer.echo(f"Judgments: {path}")
 
 
@@ -527,6 +528,7 @@ def bench_rank(
     out: Annotated[Path, typer.Option()] = Path("bench/results"),
     jobs: Annotated[int, typer.Option()] = 3,
     name: Annotated[str, typer.Option(help="Judge label")] = "",
+    timeout: Annotated[int, typer.Option(help="Seconds per judgment (free models can be slow)")] = 1200,
 ) -> None:
     """Judge several arms at once, blind and shuffled: scores per answer plus a ranking."""
     import json as _json
@@ -537,7 +539,7 @@ def bench_rank(
     base = out / v.slug
     arm_dirs = [base / a for a in arms]
     path = bench.judge_ranked(v, gold, arm_dirs, prompt, base / f"rank-{'-'.join(arms)}{'-' + name if name else ''}.jsonl",
-                              agent=agent, cwd=(cwd or v.path).resolve(), jobs=jobs)
+                              agent=agent, cwd=(cwd or v.path).resolve(), jobs=jobs, timeout=timeout)
     summary = bench.summarize_ranked(arm_dirs, path)
     path.with_suffix(".summary.json").write_text(_json.dumps(summary, indent=2), encoding="utf-8")
     typer.echo(_json.dumps(summary, indent=2))
