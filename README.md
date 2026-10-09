@@ -6,6 +6,8 @@ What would X do? wwxd turns a person's talks, podcasts and essays into a wiki of
 their actual positions, with every quote checked against the source. Your agent then
 answers the way that person would, and shows you where they said it.
 
+![Opus told to answer as Hormozi contradicts him; Opus with a wwxd vault quotes him](docs/img/wwxd-vs-persona.png)
+
 ## Why
 
 Ask a chatbot whether to raise your prices and you get the average of the internet.
