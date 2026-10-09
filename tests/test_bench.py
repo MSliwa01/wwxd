@@ -65,3 +65,14 @@ def _prompt(tmp_path):
     p = tmp_path / "prompt.md"
     p.write_text("{{question}} {{person}}\n{{answers}}")
     return p
+
+
+def test_cost_model_matches_a_measured_session():
+    from wwxd import costs
+
+    # A real 4,303-word compile on Opus 5.5 cost $0.97 (59k cache write, 759k cache read, 17k output).
+    measured = {"cache_write": 59013, "cache_read": 758708, "output": 17142}
+    assert abs(costs.dollars(measured, "opus") - 0.967) < 0.01
+    est = costs.dollars(costs.compile_tokens(4303), "opus")
+    assert 0.5 < est < 1.5
+    assert costs.dollars(costs.compile_tokens(4303), "haiku") < est / 20

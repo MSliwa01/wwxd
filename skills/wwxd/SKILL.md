@@ -51,6 +51,12 @@ Summarize the candidates for the user in groups, recommend what to approve and
 what to reject, and wait for their decision. Then run `wwxd approve <slug> <ids…>`
 (or `--hint own`) and `wwxd reject …`.
 
+## Before you compile
+
+Run `wwxd estimate <slug>` and show the user the token and dollar estimate for what's
+approved. On a subscription, tokens come out of their usage limits; let them decide
+how many sources to compile now.
+
 ## Fetch
 
 `wwxd fetch <slug>` (existing captions first; Whisper fallback, which needs

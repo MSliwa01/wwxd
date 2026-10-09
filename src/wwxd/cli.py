@@ -363,6 +363,46 @@ def search(
 
 
 @app.command()
+def estimate(
+    vault: VaultArg,
+    status: Annotated[list[str] | None, typer.Option(help="Which sources (repeatable). Default: approved and fetched, i.e. what's left to compile")] = None,
+    asks: Annotated[int, typer.Option(help="Also price this many questions to the vault")] = 0,
+) -> None:
+    """Estimate tokens, list-price dollars and time to compile sources (and ask questions), per model."""
+    from wwxd import costs
+
+    v = _vault(vault)
+    wanted = status or ["approved", "fetched"]
+    items = [costs.words_for(v, s) for s in v.load_sources() if s.status in wanted]
+    if not items and not asks:
+        typer.echo(f"No sources with status {', '.join(wanted)}.")
+        return
+    words = sum(i.words for i in items)
+    guessed = sum(1 for i in items if not i.measured)
+    typer.echo(f"{len(items)} sources, about {words:,} words"
+               + (f" ({guessed} estimated from duration, {costs.WORDS_PER_MINUTE} words/min)" if guessed else ""))
+    tokens = {k: 0.0 for k in costs.COMPILE_TOKENS}
+    seconds = 0.0
+    for item in items:
+        for k, t in costs.compile_tokens(item.words).items():
+            tokens[k] += t
+        seconds += costs.compile_seconds(item.words)
+    for k, t in costs.ASK_TOKENS.items():
+        tokens[k] = tokens.get(k, 0) + t * asks
+    total = sum(tokens.values())
+    typer.echo(f"tokens: {total / 1e6:.1f}M total ({tokens['cache_read'] / 1e6:.1f}M cache reads, "
+               f"{tokens['cache_write'] / 1e6:.2f}M cache writes, {tokens['output'] / 1e6:.2f}M output)")
+    if items:
+        typer.echo(f"time: about {seconds / 60:.0f} min of agent work (one source at a time)")
+    typer.echo("list price if billed per token (the real number can be about 50% lower or higher):")
+    for model, price in costs.PRICES.items():
+        typer.echo(f"  {model:7} {price['id']:18} ${costs.dollars(tokens, model):8.2f}")
+    typer.echo("With an advisor model enabled in Claude Code, expect about double. "
+               "On a Claude subscription this comes out of your usage limits instead of dollars. "
+               "Fetching, lint and the voice check run locally and cost nothing.")
+
+
+@app.command()
 def vaults() -> None:
     """List vaults under $WWXD_HOME with their members and thinking pages (for panels)."""
     from wwxd.vault import Vault

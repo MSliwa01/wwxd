@@ -241,6 +241,41 @@ the default shell, zsh, treats the `?` as a filename pattern otherwise.
 For someone without a recipe, run `wwxd new jane --name "Jane Doe"` and ask the agent
 to find her channels and feeds.
 
+## What it costs
+
+Fetching, lint and the voice check run on your machine and cost nothing. Compiling
+and asking run on your agent, so they cost tokens: dollars on the API, usage limits
+on a Claude subscription. wwxd is built for Claude Code on a subscription, and you
+should know what you're spending before you start. `wwxd estimate <slug>` prices what
+you've approved, before anything is fetched:
+
+```
+$ wwxd estimate hormozi
+13 sources, about 87,336 words
+tokens: 17.1M total (15.8M cache reads, 0.96M cache writes, 0.28M output)
+time: about 65 min of agent work (one source at a time)
+list price if billed per token (the real number can be about 50% lower or higher):
+  opus    claude-opus-5-5    $   16.50
+  sonnet  claude-sonnet-5-5  $    9.83
+  haiku   claude-haiku-5-5   $    0.49
+```
+
+Rough numbers from our runs on Opus 5.5:
+
+| | Tokens | Time | Opus 5.5 | Sonnet 5.5 | Haiku 5.5 |
+|---|---|---|---|---|---|
+| Compile a 20-minute video (about 3,000 words) | about 1M | 4 min | $1.06 | $0.63 | $0.03 |
+| Compile a 2-hour podcast (about 18,000 words) | about 2.1M | 8 min | $1.91 | $1.15 | $0.06 |
+| One question to a vault | about 0.3M | 30 s | $0.41 | $0.23 | $0.01 |
+
+A panel of three people costs roughly three questions.
+
+Most of the compile cost is fixed: the agent rereads the skill, the index and the
+pages it touches for every source. So a vault of 15 long videos costs about $20 to
+$30 on Opus. Our benchmarks only measured quality on Opus 5.5; Sonnet and Haiku cost
+less but are untested for compiling. If your Claude Code uses an advisor model, the
+cost roughly doubles.
+
 ## Example recipes
 
 `wwxd examples` lists them. A recipe is a source config, never content.
