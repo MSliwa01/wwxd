@@ -16,6 +16,7 @@ vaults/<slug>/
     index.md        # map of every page
     profile.md      # who they are, track record, biases, what they're NOT credible on
     tensions.md     # contradictions and views that changed over time (dated)
+    thinking/<member-id>.md  # how they think: values, decision rules, habits, strong views
     <domain>/<topic>/<leaf>.md   # layout: tree
     <leaf>.md                    # layout: flat
 ```

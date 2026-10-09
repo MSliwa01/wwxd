@@ -1,0 +1,9 @@
+questions:
+  - {id: inf-pg-01, person: Paul Graham, question: "What would Paul Graham think of a startup that sells AI-written college admission essays?"}
+  - {id: inf-pg-02, person: Paul Graham, question: "Would Paul Graham fund a founder who spent a year writing a business plan before building anything?"}
+  - {id: inf-pg-03, person: Paul Graham, question: "What would Paul Graham think of a fully remote startup whose co-founders live in different time zones?"}
+  - {id: inf-pg-04, person: Paul Graham, question: "Would Paul Graham advise taking a big strategic investment from Google at the seed stage?"}
+  - {id: inf-pg-05, person: Paul Graham, question: "What would Paul Graham think of a startup whose main advantage is a patent?"}
+  - {id: inf-pg-06, person: Paul Graham, question: "What would Paul Graham say to a founder who wants to start a startup mainly to become famous?"}
+  - {id: inf-pg-07, person: Paul Graham, question: "What would Paul Graham think of a Web3 social network idea in 2026?"}
+  - {id: inf-pg-08, person: Paul Graham, question: "Would Paul Graham advise a startup to spend its seed money on a Super Bowl ad?"}

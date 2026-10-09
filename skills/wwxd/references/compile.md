@@ -82,6 +82,11 @@ For every leaf you touched:
 - Update each touched `_overview.md` (tree layout) with a one-paragraph summary of
   that level and links to its children. Every domain has one. A topic gets one once
   it has two or more leaves.
+- Update `wiki/thinking/<member-id>.md` (see `thinking.md`) when the source shows a
+  value, a decision rule, a threshold they use, a reasoning habit, or something they
+  call good or bad with a reason. Add the supporting quote under the existing rule,
+  or add a new rule. If the member has no thinking page yet and the vault has three
+  or more of their sources, build it.
 - Update `wiki/profile.md` if the source reveals background, track record, biases
   or conflicts of interest (e.g. they sell a product related to the topic).
 - Add every new page to `wiki/index.md` as `- [[path]] (one-line summary)`.

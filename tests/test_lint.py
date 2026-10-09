@@ -121,3 +121,19 @@ def test_inline_quotes_in_prose_are_checked(vault):
     )
     errs = messages(vault)
     assert len(errs) == 1 and "quote not in source" in errs[0]
+
+
+def test_thinking_page_quotes_are_checked(vault):
+    page = vault.wiki_dir / "thinking" / "pg.md"
+    page.parent.mkdir(parents=True, exist_ok=True)
+    page.write_text(
+        "---\ntype: thinking\nmember: pg\n---\n# How PG thinks\n\n## Rules they decide by\n"
+        "- **Start cheap.** Technology keeps getting cheaper.\n"
+        f'  - "you can still start a startup on not much money" ([[{SRC}]] @ 0:31; by: pg; conf: high)\n'
+        f'  - "always raise as much as you can" ([[{SRC}]] @ 0:31; by: pg; conf: high)\n',
+        encoding="utf-8",
+    )
+    index = vault.wiki_dir / "index.md"
+    index.write_text(index.read_text() + "\n- [[thinking/pg]]\n")
+    errs = [i for i in lint(vault) if i.level == "error"]
+    assert len(errs) == 1 and "quote not in source" in errs[0].message and errs[0].line == 10

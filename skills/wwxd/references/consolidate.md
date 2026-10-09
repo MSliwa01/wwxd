@@ -12,6 +12,12 @@ statements live, never what they say.
 - About every 10 compiled sources. `wwxd health` counts them since the last pass.
 - Before you share a vault or run the bench on it.
 
+## 0. Thinking pages
+
+Rebuild each member's `wiki/thinking/<member-id>.md` from the current leaves, as
+described in `thinking.md`. Rules drift as sources accumulate; a rebuild keeps the
+strongest ones on top.
+
 ## 1. Take stock
 
 ```
