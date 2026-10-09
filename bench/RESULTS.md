@@ -152,6 +152,10 @@ vault answers quote more, so the blinding is imperfect. It's one run with 20
 questions per vault. The direction of the result is clear. The exact numbers are
 rough.
 
+The pre-2026 vaults for the held-out test were compiled partly before and partly after
+we added the voice and consolidate steps to the skill. Both versions use the same
+compile procedure for statements.
+
 The YC wwxd answers (all except `yc-04`) and Hormozi `hz-16` to `hz-20` were produced
 before we added `--strict-mcp-config`. None of them mention an MCP server. Every raw
 answer and every other wwxd answer ran with the flag.

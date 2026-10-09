@@ -103,8 +103,10 @@ compile made, with no false alarms. When it reports a mismatch, re-read the turn
 around that timestamp: credit the line to the member it names, or drop it if the
 speaker isn't a member. A `weak` result only means the audio was unclear (music,
 crosstalk, a very short quote); check it, but don't change it on that alone.
-Voiceprints come from all statements credited to each member, so the check works
-best once a vault has a few sources per member.
+With source ids, `wwxd voice` builds voiceprints from those sources only, which is
+noisy for a member with just a few lines there. Run it on the whole vault
+(`wwxd voice <slug>`) every 10 sources or so, alongside `wwxd health`, so each
+voiceprint draws on everything credited to that member.
 
 Every 10 compiled sources, run `wwxd health <slug>`. If it flags near-duplicates,
 oversize leaves, missing overviews or index gaps, follow `consolidate.md`.
