@@ -1,0 +1,248 @@
+questions:
+- id: hz-05
+  category: fresh
+  person: hormozi
+  question: What's a good monthly churn rate for a paid online community, and when should I worry about it? What
+    would Alex Hormozi say?
+  stance: 'Using Skool platform data: the average is 80% monthly retention (20% churn), the best groups are under
+    10% churn, and below 70% retention means retention is your highest-ROI fix. Churn depends on cohort age: 20%+
+    in months 1-3, about 10% or less once someone passes day 90, and about 2% by month 6. So don''t overhaul the
+    business because month-one churn is high; focus on getting people past day 90 and month 6.'
+  must_cite:
+  - yt--j8_YCWZ05Q
+  evidence:
+  - source: yt--j8_YCWZ05Q
+    at: '1:39'
+    quote: the platform average across School is 80% monthly retention. So said differently, it's 20% churn.
+  - source: yt--j8_YCWZ05Q
+    at: '1:39'
+    quote: Now the best groups have less than 10% churn, aka 90% retention month over month. The not good groups
+      have less than 70% retention
+  - source: yt--j8_YCWZ05Q
+    at: '3:53'
+    quote: Now, if you keep someone 90 days, which seems to be the first kind of big churn drop-off point, it drops
+      to around 10% or less.
+  generic_trap: Aim for SaaS-style benchmarks of about 3-7% monthly churn and work to lower your average churn number
+    across the board.
+- id: hz-06
+  category: fresh
+  person: hormozi
+  question: A client offered me either a percentage of profit or a percentage of revenue for my consulting. Which
+    should I take? What would Alex Hormozi say?
+  stance: 'Take the revenue share. Profit can be played with (the client can overspend), but top line is top line,
+    so a rev share sits higher in the money flow, like a royalty. It fits his ranking of six deal structures, from
+    ''I work, then you pay'' up to ''no matter what, you pay me'': you get paid in proportion to the risk you take,
+    and you want to be paid first.'
+  must_cite:
+  - yt-rMJIOK_FgJk
+  evidence:
+  - source: yt-rMJIOK_FgJk
+    at: '12:38'
+    quote: So, if you're doing a profit share, it's way better to have a rev
+  - source: yt-rMJIOK_FgJk
+    at: '13:10'
+    quote: Because somebody can play around their profit. They can overspend. But, a rev share is the revenue, right?
+      Top line's top line.
+  - source: yt-rMJIOK_FgJk
+    at: '7:43'
+    quote: it's that you will be compensated in proportion to the risk you're willing
+  generic_trap: Profit share aligns incentives better because you only win when the client truly profits; pick whichever
+    percentage yields more expected dollars.
+- id: hz-07
+  category: fresh
+  person: hormozi
+  question: For my first business, should I raise money from investors or bootstrap? What would Alex Hormozi say?
+  stance: 'Bootstrap your first business so you ''pay off ignorance debt'' before losing friends'' and family''s
+    money. But bootstrapping is the slowest of his four paths, and it piles up more non-money debt than any other
+    path: management/leadership debt (you can''t afford star talent), technical debt and data debt. Raise capital
+    only when the business can''t become profitable without outside money.'
+  must_cite:
+  - yt-sL16tsGafcQ
+  evidence:
+  - source: yt-sL16tsGafcQ
+    at: '2:42'
+    quote: So if this is your first business I recommend starting with bootstrapping. And the main reason is just
+      like you want to pay off ignorance debt.
+  - source: yt-sL16tsGafcQ
+    at: '4:19'
+    quote: When you bootstrap, you incur more debt than any other vehicle.
+  - source: yt-sL16tsGafcQ
+    at: '4:52'
+    quote: So you incur lots of management and leadership debt.
+  generic_trap: It depends on your risk tolerance; raising a seed round lets you move faster and keep your savings
+    safe.
+- id: hz-08
+  category: fresh
+  person: hormozi
+  question: I don't have a day job anymore and my business is making some money, but not enough. How should I structure
+    my workday? What would Alex Hormozi say?
+  stance: 'Use a 4-4-4 split: the first 4 hours of the day go to promotion (letting people know about your stuff,
+    done first thing), the next 4 to delivery, and the last 4 to building (finding and prioritizing the next opportunities).
+    Keep maker and manager time in separate blocks. His rule for what to sell is ''111'': one product, one avatar,
+    one channel until $1M.'
+  must_cite:
+  - yt-jfW6gL6hKhk
+  evidence:
+  - source: yt-jfW6gL6hKhk
+    at: '4:49'
+    quote: I like to do 4 hours of promotion. First thing I do when I get up is let people know about my stuff because
+      if nobody knows about your stuff, they can't give you money.
+  - source: yt-jfW6gL6hKhk
+    at: '4:49'
+    quote: The second 4-hour chunk is delivery.
+  - source: yt-jfW6gL6hKhk
+    at: '8:09'
+    quote: I have a a a 111 rule, which is you want to sell one product or service to one avatar on one channel
+      until you make $1 million.
+  generic_trap: Time-block your day around your top three priorities, protect work-life balance, and batch admin
+    tasks.
+- id: hz-09
+  category: fresh
+  person: hormozi
+  question: My service business is profitable, but I'm carrying about $60k of debt. Should I pay it off or keep
+    the cash for growth? What would Alex Hormozi say?
+  stance: 'Pay it off: he skews ''very close to the Ramsey side'' of the Dave Ramsey-to-Wall Street spectrum, because
+    debt increases risk and risk over a long time horizon tends to come due, since businesses have seasons and volatility.
+    He points to enduring debt-free companies like Chick-fil-A, and says paying it off adds only about 5% to profit
+    but removes ''100% in headache''.'
+  must_cite:
+  - yt-OQf2Ba-Lp_4
+  evidence:
+  - source: yt-OQf2Ba-Lp_4
+    at: '8:37'
+    quote: I tend to skew like very close to the Ramsey side and the single argument that I have around it is basically
+      debt
+  - source: yt-OQf2Ba-Lp_4
+    at: '9:10'
+    quote: increases risk. Risk when multiplied over a long time horizon tends to come due.
+  - source: yt-OQf2Ba-Lp_4
+    at: '9:10'
+    quote: If you look at some of the most enduring companies, a lot of like Chick-fil-A operate debt free.
+  generic_trap: If your return on capital beats the interest rate, keep the cheap debt and invest the cash in growth;
+    leverage is a tool.
+- id: hz-10
+  category: fresh
+  person: hormozi
+  question: How often should I refresh the copy and hooks in my Facebook ads to avoid ad fatigue? What would Alex
+    Hormozi say?
+  stance: 'Rarely: once copy wins, keep running it: the School Games ran one version of copy for 6 months and a
+    second for three, and a portfolio company spending a couple hundred thousand a day still has only three hooks
+    after 5 years. What changes constantly is creative: ''kaleidoscope'' the winners into 20-30 variations (AI filters,
+    remakes). Good video beats images, but images beat bad video.'
+  must_cite:
+  - yt-MH-IMJxbUY4
+  evidence:
+  - source: yt-MH-IMJxbUY4
+    at: '9:50'
+    quote: when you do have copy that wins, you don't need to change it nearly as often as you think. So like when
+      we ran The School Games all last year and pushed it really really hard, we had one version of the copy that
+      we ran for 6 months
+  - source: yt-MH-IMJxbUY4
+    at: '10:23'
+    quote: there's three hooks. There's three like when you find the winners, you just run them.
+  - source: yt-MH-IMJxbUY4
+    at: '10:56'
+    quote: Yeah, good video beats images, but images beat bad videos.
+  generic_trap: Refresh ad copy and hooks every 2-4 weeks, because audiences fatigue quickly and new messaging keeps
+    CPMs and CPAs down.
+- id: hz-11
+  category: applied
+  person: hormozi
+  question: I own a residential HVAC duct-cleaning company doing about $1.2M a year at a 38% net margin, and we
+    close about 82% of in-home inspections. Should I keep prices where they are so I don't hurt the close rate?
+    What would Alex Hormozi say?
+  stance: No, raise prices (he penciled in about 10%), because a close rate of 80% or more tells him there is room
+    on price. At these numbers a 10% raise gives roughly 25% more net profit and still makes more money as long
+    as close rate stays above about 65%. For a normal (non-luxury) service, a higher price can even raise the close
+    rate, because it increases the customer's belief that you can deliver.
+  must_cite:
+  - yt-OQf2Ba-Lp_4
+  evidence:
+  - source: yt-OQf2Ba-Lp_4
+    at: '8:06'
+    quote: So whenever I hear 80% or over 80% close rates, I usually know that there's room in sale.
+  - source: yt-OQf2Ba-Lp_4
+    at: '8:06'
+    quote: As long as we close more than 65%, we make more money. Thing is is that 10% price raise for you equals
+      roughly a 25% increase in net profit.
+  - source: yt-OQf2Ba-Lp_4
+    at: '7:00'
+    quote: if you raise your prices, what sometimes happens is that the conviction of the customer that you can
+      actually deliver on the promise you're making goes up.
+  generic_trap: If it isn't broken don't fix it; benchmark against competitors and only raise prices cautiously
+    with a small test so you don't lose deals.
+- id: hz-12
+  category: applied
+  person: hormozi
+  question: I started a roofing company two months ago and I'm at about $20k a month. I land roughly one sale for
+    every 20 doors I knock. Full replacements are $18-25k tickets and repairs are around $1,500. Should I start
+    running ads and focus on landing more replacements? What would Alex Hormozi say?
+  stance: 'No: go all in on door-to-door, because it''s what works, and build a door-knocking sales team (commissions
+    make each door worth a known amount). Build the business around high-volume repairs that competitors ignore:
+    systemize them, raise the repair ticket to about $2.5-5k with a menu upsell, and add a maintenance membership
+    and a priority (speed) fee. High volume gives reliability and cash flow, and replacement upsells come later.'
+  must_cite:
+  - yt-o64cI6tebnU
+  evidence:
+  - source: yt-o64cI6tebnU
+    at: '9:49'
+    quote: Now I think that in terms of scale, you should go all in door to door.
+  - source: yt-o64cI6tebnU
+    at: '4:23'
+    quote: Is there a world where you think you could sell three times as many repairs as you could replacements?
+  - source: yt-o64cI6tebnU
+    at: '4:55'
+    quote: these should really be selling for like 2500 to 5K.
+  generic_trap: Diversify lead generation with Google Ads, SEO and a referral program, and focus sales on high-ticket
+    full replacements, where the profit is.
+- id: hz-14
+  category: applied
+  person: hormozi
+  question: My info-product business does about $500k a month and roughly 85% of customers come from Meta ads. When
+    I push spend past about $100k a month, results hit a wall. Should I shift budget into new channels like affiliates
+    and podcasts? What would Alex Hormozi say?
+  stance: 'No: the business is demand-constrained, the real cap is creative quality rather than the channel, and
+    a new channel is ''a little too hard for right now''. Get more from the existing channel by fixing creative:
+    build a UGC loop from customers, ''kaleidoscope'' your winners, hire a very online 20-year-old for short-form,
+    use more diverse avatars in ads, and repurpose winning organic posts as ads. Also lead-score and work leads
+    with a parallel dialer.'
+  must_cite:
+  - yt-MH-IMJxbUY4
+  evidence:
+  - source: yt-MH-IMJxbUY4
+    at: '5:27'
+    quote: I feel like there's a lot more that you can work on the existing one by like a lot.
+  - source: yt-MH-IMJxbUY4
+    at: '12:00'
+    quote: I would say that the number one biggest thing that's limiting the business is better creative.
+  - source: yt-MH-IMJxbUY4
+    at: '24:06'
+    quote: New channel, little too hard for right now in my opinion.
+  generic_trap: Diversify into new channels (affiliates, podcasts, Google, YouTube) to reduce platform dependence
+    and find fresh audiences.
+- id: hz-15
+  category: applied
+  person: hormozi
+  question: My $99/month membership has about 30% monthly churn. Cancel reasons are mostly 'too expensive' and 'can't
+    keep up'. I'm planning to add more bonus trainings and extra live calls to boost value. Good idea? What would
+    Alex Hormozi say?
+  stance: 'No: after price, overwhelm is the top churn driver, so subtract rather than add; ask what one thing members
+    would fight to keep and cut the rest (one Skool community deleted content and churn went from 30% to 5%), defaulting
+    to one weekly call plus a best-of post. Add a cheaper tier only if your ideal customers cite price, and ignore
+    non-ideal ones. Add an annual plan at about 16-17% off (''buy 10 get two'').'
+  must_cite:
+  - yt--j8_YCWZ05Q
+  evidence:
+  - source: yt--j8_YCWZ05Q
+    at: '10:54'
+    quote: we had a community on School where they found out about this, they deleted content that they had, and
+      they took their churn from 30% month-over-month to five.
+  - source: yt--j8_YCWZ05Q
+    at: '8:46'
+    quote: if your ideal customer say the price is the issue, then you can add a lower tier or a standard plan.
+      If non-ideal people say it's too expensive, just ignore it.
+  - source: yt--j8_YCWZ05Q
+    at: '16:26'
+    quote: here is 16 16 or 17% which is usually buy 10 get two.
+  generic_trap: Increase perceived value by adding more bonuses, content and calls, and offer a discount to members
+    who say it's too expensive.

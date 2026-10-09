@@ -63,7 +63,13 @@ opencode) scored the same pairs and preferred wwxd 39 times out of 40, so this i
 Claude grading Claude. 160 quotes in the wwxd answers were checked against the
 transcripts by a script, and 158 were found verbatim. The other 2 were video titles.
 Raw Opus rarely quoted anyone. It lost on specifics, on anything from 2026, and on
-attribution traps. Full numbers, setup and caveats are in
+attribution traps.
+
+What wwxd doesn't do is predict. We rebuilt both vaults from pre-2026 sources only
+and asked about positions the people first took in 2026. There the vault answers
+were no better than raw Opus, and for YC they were worse. A vault keeps answers
+faithful to what someone has said. It can't know what they'll say next, so keep it
+current with `wwxd update`. Full numbers, setup and caveats are in
 [bench/RESULTS.md](bench/RESULTS.md).
 
 ## How it works

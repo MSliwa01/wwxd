@@ -52,15 +52,25 @@ wwxd bench report hormozi --gold gold/hormozi.yaml --arm raw --arm wwxd \
 Any agent CLI works. Pass `{prompt}` where the prompt goes, or leave it out to send
 the prompt on stdin. Runs resume, so a rate limit only costs the unfinished questions.
 
+## Held-out test
+
+To test prediction rather than recall, build a second vault from sources before a
+cutoff date (`wwxd new <slug>-pre`, copy the older raw docs, compile), then ask only
+the questions whose `must_cite` sources are all after the cutoff, with
+`prompts/answer_wwxd_extrapolate.md`. Our runs are in `runs/2026-10-09/`.
+
 ## Known biases
 
 - The gold sets come from the same sources the vault was built from. The bench
   measures whether an agent can recover this person's documented positions. It
   doesn't measure whether those positions are good advice.
-- The judge is the same model family as both arms. Self-preference should affect both
-  arms equally, but it's not zero.
+- An Opus judge grading Opus answers may prefer its own style. We also judge every
+  pair with a model from another family (`--name nemotron` with an opencode model)
+  and report both.
 - Blinding is imperfect. Answers built from a vault tend to quote more and name
   specific videos, and a judge can notice that.
-- One run per arm, 20 questions per vault. Treat differences of a few tenths as noise.
+- Few runs, 20 questions per vault. Treat differences of a few tenths as noise.
+- A model's training data can include sources you think of as held out. Check the
+  model's cutoff against your source dates.
 
 Results from our runs are in [RESULTS.md](RESULTS.md).

@@ -88,6 +88,44 @@ Attribution traps are where raw Opus did worst. Asked why Garry Tan thinks the Y
 premium is bigger than ever, raw Opus explained Tan's reasoning. Sam Altman said it,
 in a 2026 YC interview.
 
+## Held-out test: can a vault predict what someone says next?
+
+The main bench asks about things the vault contains. This test asks about things it
+doesn't. We rebuilt both vaults from pre-2026 sources only (6 Hormozi videos, 12 YC
+videos and essays), then asked the 20 questions whose answers appear only in 2026
+sources. The vault arm was told to extrapolate from the person's earlier views when
+the vault didn't cover something. Raw Opus answered from memory, three separate
+times. Opus judged two independent pairs of runs, and Nemotron judged a third.
+
+| Judge picks the vault answer | Hormozi | YC |
+|---|---|---|
+| Opus, run 1 | 4 of 10 | 3 of 10 |
+| Opus, run 2 | 4 of 10 | 3 of 10 |
+| Nemotron | 6 of 10 | 3 of 10 |
+
+Mean accuracy (Opus judge, both runs) was 2.9 for raw Opus and 2.7 for the vault on
+Hormozi, and 2.55 vs 2.0 on YC. So a vault of someone's older material doesn't
+predict their newer positions better than the model's own reasoning. For YC it did
+worse.
+
+Two things explain most of it.
+
+- Raw Opus wasn't fully blind. Its training data runs to mid-2026, and the judge
+  noticed it using the real "The Brand Age" essay from March 2026. On the 8 questions
+  from sources after June 2026, which neither arm could have seen, raw Opus still won
+  16 judgments to 8, but both arms scored low (accuracy 2.4 vs 2.0). Nobody predicted
+  Sam Altman's fear of a surveillance-state overreaction to AI safety, or Garry Tan's
+  "own your skill files".
+- The vault arm is built to say when its sources don't cover something. It often
+  opened with "the vault doesn't cover this" before extrapolating, and the judge
+  rewarded confident guesses that landed closer.
+
+What this means for using wwxd. A vault makes answers faithful to what a person has
+actually said and done. It isn't a forecast of what they'll say about something new,
+and people change their minds. In this very test, Dalton Caldwell and Michael Seibel
+reversed their own MVP advice in 2026. Keep vaults current with `wwxd update`, and
+treat extrapolations as the guesses they are.
+
 ## Attribution check by voice
 
 `wwxd voice` compares the audio of every quoted statement with the members'
