@@ -1,0 +1,13 @@
+questions:
+  - {id: op-pg-01, person: Paul Graham, question: "I'm a college sophomore with a startup idea. Should I drop out now or finish college first? What would Paul Graham say?"}
+  - {id: op-pg-02, person: Paul Graham, question: "Should I raise a seed round now or keep bootstrapping until I have revenue? What would Paul Graham say?"}
+  - {id: op-pg-03, person: Paul Graham, question: "I'm a founder in Berlin. Should I build my startup here or move to San Francisco? What would Paul Graham say?"}
+  - {id: op-pg-04, person: Paul Graham, question: "My co-founder wants to pivot and I want to keep going. Should we pivot or persist? What would Paul Graham say?"}
+  - {id: op-pg-05, person: Paul Graham, question: "Should I build a full-featured product before launching or launch a tiny version this week? What would Paul Graham say?"}
+  - {id: op-pg-06, person: Paul Graham, question: "Should I take a job at Google for a few years to learn, or start a startup now? What would Paul Graham say?"}
+  - {id: op-pg-07, person: Paul Graham, question: "Should I work on an AI tool that makes money now or a hard, ambitious idea that might take years? What would Paul Graham say?"}
+  - {id: op-pg-08, person: Paul Graham, question: "As a founder, should I spend time writing essays and posting online, or just focus on building? What would Paul Graham say?"}
+  - {id: op-pg-09, person: Paul Graham, question: "We just raised a seed round. Should we hire fast or stay small? What would Paul Graham say?"}
+  - {id: op-pg-10, person: Paul Graham, question: "Should I work on the idea I'm passionate about or the one with the bigger market? What would Paul Graham say?"}
+  - {id: op-pg-11, person: Paul Graham, question: "Should I apply to Y Combinator or raise directly from angel investors? What would Paul Graham say?"}
+  - {id: op-pg-12, person: Paul Graham, question: "Should I start as a solo founder or find a co-founder first? What would Paul Graham say?"}

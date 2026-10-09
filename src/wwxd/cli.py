@@ -516,6 +516,33 @@ def bench_judge(
     typer.echo(f"Judgments: {path}")
 
 
+@bench_app.command("rank")
+def bench_rank(
+    vault: VaultArg,
+    gold: Annotated[Path, typer.Option()],
+    arms: Annotated[list[str], typer.Option("--arm", help="Arm names to compare (2 to 8)")],
+    prompt: Annotated[Path, typer.Option(help="Ranking judge prompt")] = Path("bench/prompts/judge_opinion.md"),
+    agent: Annotated[str, typer.Option()] = "claude -p {prompt}",
+    cwd: Annotated[Path | None, typer.Option(help="Working dir for the judge (default: the vault)")] = None,
+    out: Annotated[Path, typer.Option()] = Path("bench/results"),
+    jobs: Annotated[int, typer.Option()] = 3,
+    name: Annotated[str, typer.Option(help="Judge label")] = "",
+) -> None:
+    """Judge several arms at once, blind and shuffled: scores per answer plus a ranking."""
+    import json as _json
+
+    from wwxd import bench
+
+    v = _vault(vault)
+    base = out / v.slug
+    arm_dirs = [base / a for a in arms]
+    path = bench.judge_ranked(v, gold, arm_dirs, prompt, base / f"rank-{'-'.join(arms)}{'-' + name if name else ''}.jsonl",
+                              agent=agent, cwd=(cwd or v.path).resolve(), jobs=jobs)
+    summary = bench.summarize_ranked(arm_dirs, path)
+    path.with_suffix(".summary.json").write_text(_json.dumps(summary, indent=2), encoding="utf-8")
+    typer.echo(_json.dumps(summary, indent=2))
+
+
 @bench_app.command("report")
 def bench_report(
     vault: VaultArg,

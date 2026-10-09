@@ -25,3 +25,43 @@ def test_attributed_quotes_skips_example_copy():
         '- "a quote with a link](http://x) inside it here" and "second one is fine words here"'
     )
     assert attributed_quotes(text) == ["charge more than you think you should"]
+
+
+def test_opinion_stats_counts_hedges():
+    from wwxd.bench import opinion_stats
+
+    assert opinion_stats("Raise your prices today.")["hedges"] == 0
+    assert opinion_stats("It depends. On the other hand, you might keep them.")["hedges"] == 3
+
+
+def test_judge_ranked_maps_letters_back_to_arms(tmp_path, monkeypatch):
+    import json
+
+    from wwxd import bench
+
+    gold = tmp_path / "gold.yaml"
+    gold.write_text("questions:\n  - {id: q1, person: PG, question: 'X or Y?'}\n")
+    arms = []
+    for name, text in (("raw", "Maybe X, maybe Y."), ("wwxd", "Y. He said so.")):
+        d = tmp_path / name
+        d.mkdir()
+        (d / "answers.jsonl").write_text(json.dumps({"id": "q1", "answer": text, "error": "", "seconds": 1}) + "\n")
+        arms.append(d)
+
+    def fake_agent(command, prompt, cwd, timeout=1200):
+        # Score whichever letter holds the wwxd answer as best.
+        best = "A" if "Answer A:\n<<<\nY. He said so." in prompt else "B"
+        other = "B" if best == "A" else "A"
+        return json.dumps({best: {"decisiveness": 5}, other: {"decisiveness": 1}, "ranking": [best, other]})
+
+    monkeypatch.setattr(bench, "run_agent", fake_agent)
+    out = bench.judge_ranked(None, gold, arms, _prompt(tmp_path), tmp_path / "rank.jsonl", agent="x", cwd=tmp_path)
+    summary = bench.summarize_ranked(arms, out)
+    assert summary["arms"]["wwxd"]["decisiveness"] == 5 and summary["arms"]["wwxd"]["ranked_first"] == 1
+    assert summary["arms"]["raw"]["decisiveness"] == 1
+
+
+def _prompt(tmp_path):
+    p = tmp_path / "prompt.md"
+    p.write_text("{{question}} {{person}}\n{{answers}}")
+    return p

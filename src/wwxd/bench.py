@@ -213,3 +213,89 @@ def summarize(vault: Vault, gold_path: Path, arms: list[Path], judgments: Path |
         }
         summary["preferred"] = {cat: dict(v) for cat, v in prefs.items()}
     return summary
+
+
+# --- opinion bench: how decisive and distinctive are the answers? ---------------------
+
+HEDGES = (
+    "it depends", "depending on", "on the other hand", "however", "that said", "pros and cons",
+    "no one-size", "no right answer", "trade-off", "tradeoff", "either way", "both options",
+    "it's up to you", "there's a case for", "consider ", "you might", "you could", "may want",
+)
+
+
+def opinion_stats(answer: str) -> dict:
+    """Mechanical signals of fence-sitting. No model involved."""
+    text = strip_citations(answer).lower()
+    words = len(text.split())
+    hedges = sum(text.count(h) for h in HEDGES)
+    return {"words": words, "hedges": hedges, "hedges_per_100_words": round(100 * hedges / max(words, 1), 2)}
+
+
+def judge_ranked(
+    vault: Vault, gold_path: Path, arm_dirs: list[Path], prompt_path: Path, out_path: Path,
+    *, agent: str, cwd: Path, jobs: int = 3, seed: int = 0,
+) -> Path:
+    """Show the judge every arm's answer to a question at once, shuffled and blind; it scores each and ranks them."""
+    gold = {q["id"]: q for q in load_gold(gold_path)}
+    answers = {d.name: _read_jsonl(d / "answers.jsonl") for d in arm_dirs}
+    template = prompt_path.read_text(encoding="utf-8")
+    rng = random.Random(seed)
+    letters = "ABCDEFGH"
+    tasks = []
+    for qid, item in gold.items():
+        order = [d.name for d in arm_dirs]
+        rng.shuffle(order)
+        tasks.append((qid, item, order))
+    done = _read_jsonl(out_path) if out_path.exists() else {}
+
+    def judge(task) -> dict:
+        qid, item, order = task
+        block = "\n\n".join(
+            f"Answer {letters[i]}:\n<<<\n{strip_citations(answers[arm][qid]['answer']) or '(no answer)'}\n>>>"
+            for i, arm in enumerate(order)
+        )
+        prompt = _fill(template, question=item["question"], person=str(item.get("person", "")), answers=block)
+        try:
+            raw = run_agent(agent, prompt, cwd=cwd)
+            match = re.search(r"\{.*\}", raw, re.DOTALL)
+            verdict = json.loads(match.group(0)) if match else {"error": "no JSON", "raw": raw[-500:]}
+        except Exception as exc:
+            verdict = {"error": str(exc)}
+        mapping = {letters[i]: arm for i, arm in enumerate(order)}
+        scores = {mapping[k]: v for k, v in verdict.items() if k in mapping and isinstance(v, dict)}
+        ranking = [mapping[k] for k in verdict.get("ranking", []) if k in mapping]
+        return {"id": qid, "order": order, "scores": scores, "ranking": ranking,
+                "notes": verdict.get("notes", ""), "error": verdict.get("error", "")}
+
+    todo = [t for t in tasks if t[0] not in done or done[t[0]].get("error")]
+    with ThreadPoolExecutor(max_workers=jobs) as pool:
+        for row in pool.map(judge, todo):
+            done[row["id"]] = row
+            out_path.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in done.values()), encoding="utf-8")
+    return out_path
+
+
+def summarize_ranked(arm_dirs: list[Path], judgments: Path) -> dict:
+    rows = [r for r in _read_jsonl(judgments).values() if not r.get("error")]
+    out: dict = {"questions": len(rows), "arms": {}}
+    for d in arm_dirs:
+        arm = d.name
+        answers = _read_jsonl(d / "answers.jsonl")
+        stats = [opinion_stats(a["answer"]) for a in answers.values() if a["answer"]]
+        metrics: dict[str, list[float]] = defaultdict(list)
+        consistent = {"yes": 0, "no": 0, "unknown": 0}
+        for r in rows:
+            for k, v in (r["scores"].get(arm) or {}).items():
+                if isinstance(v, (int, float)) and not isinstance(v, bool):
+                    metrics[k].append(float(v))
+            c = str((r["scores"].get(arm) or {}).get("consistent_with_person", "unknown")).lower()
+            consistent[c if c in consistent else "unknown"] += 1
+        out["arms"][arm] = {
+            **{k: round(sum(v) / len(v), 2) for k, v in sorted(metrics.items())},
+            "ranked_first": sum(1 for r in rows if r["ranking"][:1] == [arm]),
+            "consistent_with_person": consistent,
+            "median_words": sorted(s["words"] for s in stats)[len(stats) // 2] if stats else None,
+            "hedges_per_100_words": round(sum(s["hedges_per_100_words"] for s in stats) / len(stats), 2) if stats else None,
+        }
+    return out
