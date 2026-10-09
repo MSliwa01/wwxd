@@ -147,6 +147,27 @@ subject is one person.
 - The agent's own extrapolations go to `derived/`, and lint stops them from being
   cited as evidence later.
 
+## Ask a panel
+
+Ask several people at once ("what would Hormozi, Paul Graham and Garry Tan tell me?")
+and the agent answers for each one separately, from their own vault, then maps where
+they agree and where they split. For each split it names the reason from their
+thinking pages: a value they rank differently, a rule only one of them holds. A
+debate round gives each person's reply to the other's strongest point, built only
+from their own words and labelled as inferred. Last comes a synthesis in the agent's
+own voice: which advice fits which situation.
+
+Asked by someone who loves building AI tools but fears AI will take their income,
+the panel split cleanly. Hormozi: sell one AI skill people already pay for, expensive
+and one-on-one, before building any app ("The middle is where people die"). Graham:
+follow your curiosity, because for someone young and good at technology "working on
+what you're most interested in becomes a good idea again". Tan: own your tools,
+because "if you don't, your job becomes a skill file". They agreed that fear is the
+wrong response, each for a different reason, which the synthesis treats as the
+strongest signal in the answer.
+
+`wwxd vaults` lists every vault, its members and which ones have thinking pages.
+
 ## Check who said it, by voice
 
 Lint proves a quote exists. It can't prove who said it, and that's the mistake that

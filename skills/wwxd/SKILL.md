@@ -25,6 +25,7 @@ exact grammar that `wwxd lint` enforces.
 | To refresh a vault | `wwxd update <slug>`, then curate, fetch, compile |
 | Pending sources compiled | `references/compile.md` |
 | A vault health check | `wwxd health <slug>` and `wwxd lint <slug>`, then fix what they report |
+| What several people would say, compared or debated ("ask Hormozi and PG", "the panel") | `references/panel.md` |
 | To build or refresh how a member thinks (values, rules, strong views) | `references/thinking.md` |
 | To clean up a drifting wiki (health flags it, or ~10 sources since the last pass) | `references/consolidate.md` |
 

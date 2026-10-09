@@ -363,6 +363,25 @@ def search(
 
 
 @app.command()
+def vaults() -> None:
+    """List vaults under $WWXD_HOME with their members and thinking pages (for panels)."""
+    from wwxd.vault import Vault
+
+    home = get_settings().home
+    found = sorted(p.parent for p in home.glob("*/vault.yaml")) if home.exists() else []
+    if not found:
+        typer.echo(f"No vaults in {home}")
+        return
+    for path in found:
+        v = Vault(path)
+        compiled = sum(1 for s in v.load_sources() if s.status == "compiled")
+        typer.echo(f"{v.slug:16} {v.config.get('name', v.slug)} ({compiled} sources compiled)")
+        for m in v.members:
+            thinking = "thinking page" if (v.wiki_dir / "thinking" / f"{m.id}.md").exists() else "no thinking page"
+            typer.echo(f"    {m.id:12} {m.name}  [{thinking}]")
+
+
+@app.command()
 def status(vault: VaultArg) -> None:
     """Summary of a vault."""
     v = _vault(vault)
