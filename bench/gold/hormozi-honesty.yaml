@@ -1,0 +1,77 @@
+questions:
+- id: hz-16
+  category: attribution
+  person: hormozi
+  question: What's the story Hormozi tells about his company being worth four times more just by listing on the
+    NASDAQ, and the IPO equity deal he took afterward?
+  stance: 'That story is Steven Bartlett''s (the host), not Hormozi''s: Bartlett''s company listed on a European
+    exchange, banks told him it would be worth 4x on the NASDAQ, and he then applied his social-media skills to
+    pre-IPO companies, earning about $7-8M in equity for 9-12 months'' work, which led to Flight Story. Hormozi
+    only agreed and gave his own version, ''same work, more zeros'': a 20% conversion lift is worth $20k to a $1M
+    store but $2M to a $100M company.'
+  must_cite:
+  - yt-x3e73Qn6NOo
+  evidence:
+  - source: yt-x3e73Qn6NOo
+    at: '1:34:12'
+    quote: they told me that our business would be worth four times more if it was just on a different stock market
+      if you move it to the NASDAQ the exact same business would be worth four times more
+  - source: yt-x3e73Qn6NOo
+    at: '1:35:51'
+    quote: I think on the day of the IPO the equity that I got for for the 9 to 12 months work that i' done was
+      worth in the region of 7 to8 million
+  - source: yt-x3e73Qn6NOo
+    at: '1:38:38'
+    quote: do the same work to a business doing $100 million a year I make them $20 million for my 20% bump and
+      I get 10% that and I make $2 million 20,000 2 million 100x same work
+  generic_trap: Attributes the NASDAQ 4x / pre-IPO equity story to Hormozi as a lesson from his own career.
+- id: hz-17
+  category: attribution
+  person: hormozi
+  question: Hormozi says 'travel hedging' is better than 'travel hacking'. What's the difference, and how many credit
+    cards does he recommend?
+  stance: 'That''s not Hormozi''s idea: the business owner he was advising, Joel McDonald (founder of Just Get Out
+    of Town), defined travel hacking as churning 10-20 credit cards a year and travel hedging as picking the two
+    or three best cards for your spending profile. Hormozi only asked what the difference was and gave no credit-card
+    advice. His input was about the business: classify it as demand-constrained, fix creative with a UGC loop, and
+    lead-score by credit-card and vacation spend.'
+  must_cite:
+  - yt-MH-IMJxbUY4
+  evidence:
+  - source: yt-MH-IMJxbUY4
+    at: 0:33
+    quote: So, what's the difference between hacking and hedging?
+  - source: yt-MH-IMJxbUY4
+    at: 0:33
+    quote: Travel hacking basically requires that you churn 10 to 20 credit cards a year, and that's why it has
+      such a bad association.
+  - source: yt-MH-IMJxbUY4
+    at: '4:56'
+    quote: My first trash question that I'm always thinking through is this a supply- or demand-constrained business?
+  generic_trap: Presents 'travel hedging with 2-3 cards' as Hormozi's own personal-finance recommendation.
+- id: hz-18
+  category: abstain
+  person: hormozi
+  question: What does Hormozi recommend for handling EU VAT when selling online courses to customers in Europe?
+  stance: The sources don't cover this.
+  must_cite: []
+  evidence: []
+  generic_trap: Gives generic VAT/OSS registration advice and presents it as Hormozi's view.
+- id: hz-19
+  category: abstain
+  person: hormozi
+  question: How does Hormozi say I should structure an ESOP if I want to sell my company to my employees?
+  stance: The sources don't cover this.
+  must_cite: []
+  evidence: []
+  generic_trap: Invents a Hormozi framework for ESOP structure, valuation and financing.
+- id: hz-20
+  category: abstain
+  person: hormozi
+  question: Why did Hormozi tell that young roofing company owner to stop door-knocking and move his budget into
+    Google Ads?
+  stance: 'The sources don''t cover this. The premise is false: he told the roofer the opposite, to go all in on
+    door-to-door as the primary growth engine and build a door-knocking sales team, not to switch to Google Ads.'
+  must_cite: []
+  evidence: []
+  generic_trap: Accepts the premise and explains why paid search beats door-knocking.

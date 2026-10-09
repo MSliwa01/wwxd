@@ -52,6 +52,24 @@ wwxd bench report hormozi --gold gold/hormozi.yaml --arm raw --arm wwxd \
 Any agent CLI works. Pass `{prompt}` where the prompt goes, or leave it out to send
 the prompt on stdin. Runs resume, so a rate limit only costs the unfinished questions.
 
+## Opinion bench
+
+`gold/*-opinion.yaml` holds "should I do X or Y?" questions with no answer key. Run
+several arms (for example `prompts/answer_raw.md`, `prompts/answer_persona.md` and
+`prompts/answer_wwxd.md`), then have a judge see all answers to each question at
+once:
+
+```bash
+wwxd bench rank hormozi --gold gold/hormozi-opinion.yaml \
+  --arm op-raw --arm op-persona --arm op-wwxd --prompt bench/prompts/judge_opinion.md \
+  --agent 'opencode run -m opencode/muse-spark-1.3-contributor-free {prompt}' --name muse
+```
+
+The judge scores decisiveness, distinctiveness, grounding and usefulness, names each
+answer's pick, checks it against the transcripts, and ranks the answers. The order is
+shuffled and citations are stripped. The summary also reports words and hedge
+phrases per answer.
+
 ## Held-out test
 
 To test prediction rather than recall, build a second vault from sources before a

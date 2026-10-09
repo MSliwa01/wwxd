@@ -40,7 +40,9 @@ to the transcripts.
 | Judge preferred | 1 of 20 | 19 of 20 | 0 of 20 | 20 of 20 |
 
 The two judges picked the same answer on 39 of 40 questions. The one split is
-`hz-01`, where Nemotron preferred raw Opus.
+`hz-01`, where Nemotron preferred raw Opus. A third judge, Muse Spark 1.3 (free,
+through opencode), preferred wwxd on 35 of the 36 pairs it scored; 4 Hormozi pairs
+failed on opencode errors.
 
 ### By category (accuracy, raw vs wwxd)
 
@@ -88,6 +90,54 @@ Attribution traps are where raw Opus did worst. Asked why Garry Tan thinks the Y
 premium is bigger than ever, raw Opus explained Tan's reasoning. Sam Altman said it,
 in a 2026 YC interview.
 
+## Opinion bench: does it actually take a side?
+
+Models hedge. The obvious fix is to tell the model to be decisive and answer as the
+person would. This bench checks whether that's enough. It asks 24 "should I do X or
+Y?" questions (12 for Hormozi, 12 for Paul Graham), each ending with "What would
+<name> say?", and compares three arms in Claude Code with Opus 5.5:
+
+- raw: the question alone, no tools.
+- persona: the question plus "Answer the way the person named below would, based on
+  what they've actually said and done. Be decisive: pick one option and say why."
+- wwxd: the question plus the vault.
+
+Three judges from three model families saw each question's three answers together,
+shuffled and with citations stripped. They scored each answer from 1 to 5, ranked
+them, and said whether its pick matched what the person's transcripts show.
+
+| Mean of three judges | raw | persona | wwxd |
+|---|---|---|---|
+| Decisiveness | 3.4 | 4.8 | 4.7 |
+| Distinctiveness | 2.9 | 3.1 | 4.9 |
+| Grounding (reasons they really hold) | 2.8 | 2.7 | 5.0 |
+| Usefulness | 4.1 | 4.0 | 4.4 |
+| Ranked best | 0 | 0 | 69 of 69 |
+| Pick contradicts the person | 7 | 6 | 0 |
+
+The persona prompt fixes the hedging. It's even slightly more decisive than wwxd,
+which sometimes gives the person's own deciding rule ("under about 5 reps, manage
+them yourself") instead of a flat pick. But its reasons are generic or made up, and
+it scores no better than raw Opus on grounding. Telling a model to be opinionated
+makes it confident, not right.
+
+The clearest case is `op-hz-06`: "I have $50k saved. Should I pay off my car loan and
+credit cards or put it all into my business?" Raw Opus and the persona prompt both
+said to keep a low-rate car loan, which is the standard financial-advice answer.
+Every judge marked that as contradicting Hormozi. In his 2026 videos he says
+"ideally just pay off your car so you don't have to think about it again" and "I
+tend to skew like very close to the Ramsey side". wwxd said to pay off both and
+quoted him.
+
+Two other findings.
+
+- A word-count measure of hedging ("it depends", "on the other hand", "you might")
+  found almost none in any arm, about 0.1 per 100 words. Opus 5.5 doesn't hedge with
+  stock phrases. It hedges by laying out conditions, which only the judges caught.
+- We tested a shorter answer format for wwxd (about 250 words instead of about
+  600). The Opus judge preferred the full answer on all 24 questions: the short one
+  lost the specific examples and numbers. We kept the full format.
+
 ## Held-out test: can a vault predict what someone says next?
 
 The main bench asks about things the vault contains. This test asks about things it
@@ -119,6 +169,22 @@ Two things explain most of it.
 - The vault arm is built to say when its sources don't cover something. It often
   opened with "the vault doesn't cover this" before extrapolating, and the judge
   rewarded confident guesses that landed closer.
+
+We then changed how the skill handles questions the vault doesn't cover. It now
+leads with a verdict, says whether it rests on something the person said, a
+principle of theirs applied to the case, or knowledge from outside the vault, and
+doesn't open with "not covered". On the same held-out questions:
+
+| Judge picks the vault answer, new skill | Hormozi | YC |
+|---|---|---|
+| Opus | 5 of 10 | 4 of 10 |
+| Nemotron | 3 of 7 | 2 of 9 |
+| Muse Spark | 3 of 10 | 3 of 8 |
+
+The Opus judge now calls it even, with vault accuracy slightly ahead (2.9 vs 2.8 and
+2.6 vs 2.5). The two non-Claude judges still prefer raw Opus. The change narrowed
+the gap without closing it, and it kept honesty intact: on the attribution traps and
+false premises the new skill scored 4.8 to 5.0, as before.
 
 What this means for using wwxd. A vault makes answers faithful to what a person has
 actually said and done. It isn't a forecast of what they'll say about something new,

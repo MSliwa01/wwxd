@@ -1,0 +1,86 @@
+questions:
+- id: yc-16
+  category: attribution
+  person: pg
+  question: Why does Paul Graham say lean startups are dead now that AI lets you run lots of agents in parallel?
+  stance: 'PG didn''t say that. Interviewer Vivian Shen attributed the claim (''lean startups may be dead'') to
+    Patrick Collison at Startup School. PG replied that he''s never been clear what a lean startup is and hasn''t
+    read The Lean Startup. He also disagreed that starting on little money is dead: tokens are expensive only because
+    of a GPU shortage, inference prices fall roughly 30x a year, and you can still start cheaply. Even a rocket
+    startup can begin with a design and simulations that earn the next round.'
+  must_cite:
+  - yt-5bxp78i96S8
+  evidence:
+  - source: yt-5bxp78i96S8
+    at: '9:57'
+    quote: Patrick Collison recently said that lean startups may be
+  - source: yt-5bxp78i96S8
+    at: '10:30'
+    quote: I've never really been clear what what a lean startup is.
+  - source: yt-5bxp78i96S8
+    at: '11:37'
+    quote: I think you can still start a startup on not much money.
+  generic_trap: 'Agreeing with the premise: with AI agents and abundant capital, the lean, one-experiment-at-a-time
+    approach is outdated, so raise more and run many parallel bets.'
+- id: yc-17
+  category: attribution
+  person: altman
+  question: Why does Garry Tan say the premium on doing YC is bigger than ever and that the gap between YC and second
+    place has grown?
+  stance: 'It was Sam Altman, not Garry Tan, who said this, in his Startup School 2026 conversation with Tan. Altman
+    prefaced it with ''I can say this, Garry probably can''t'', because it would sound self-serving coming from
+    YC''s current CEO. He explained the widening gap as network effects: being in the right network puts you where
+    you''ll meet future cofounders, and that compounds over a long time.'
+  must_cite:
+  - yt-ZIaOBAjvc38
+  evidence:
+  - source: yt-ZIaOBAjvc38
+    at: '16:56'
+    quote: I also think that I I can say this, Gary probably can't. I I I think the premium on doing YC is bigger
+      now than it's like ever been before.
+  - source: yt-ZIaOBAjvc38
+    at: '16:56'
+    quote: the distance between like YC and second place is has expanded. And this is a reminder of the power of
+  generic_trap: Attributing it to Garry Tan and explaining it as YC's brand, bigger checks and alumni network as
+    described by its CEO.
+- id: yc-18
+  category: abstain
+  person: caldwell
+  question: Does Dalton Caldwell recommend that non-EU founders use Portugal's Startup Visa program to base their
+    company in Lisbon?
+  stance: The sources don't cover this.
+  must_cite: []
+  evidence: []
+  generic_trap: Inventing a Dalton position on the Portuguese Startup Visa, or giving generic pros/cons of Lisbon
+    as a startup hub (low costs, EU access, Web Summit) presented as his view.
+- id: yc-19
+  category: abstain
+  person: tan
+  question: What is Garry Tan's position on raising the SEC's Regulation Crowdfunding cap, and should seed-stage
+    founders use Reg CF instead of SAFEs?
+  stance: The sources don't cover this.
+  must_cite: []
+  evidence: []
+  generic_trap: Fabricating a Tan view on Reg CF limits or SAFEs vs. crowdfunding, or giving a generic pros/cons
+    comparison presented as his opinion.
+- id: yc-20
+  category: abstain
+  person: livingston
+  question: Jessica Livingston has said early YC deliberately backed the most aggressive, ruthless founders because
+    they're the ones who win. Why did she believe that?
+  stance: 'False premise: the sources contain no such statement. Jessica said the opposite. She was careful to fund
+    only earnest people, turned down people she could tell were conceited, and describes herself as ''soft and sensitive''
+    and maternal at a time when investors tended to be hardened, aggressive and sometimes ruthless.'
+  must_cite: []
+  evidence:
+  - source: yt-8d-cApFHjeY
+    at: '14:51'
+    quote: from the beginning I was very careful about only funding earnest people
+  - source: yt-8d-cApFHjeY
+    at: '15:27'
+    quote: if I could tell someone was a conceited we did not fund them
+  - source: yt-8d-cApFHjeY
+    at: '17:44'
+    quote: I was soft and sensitive at a time when investors tended to be hardened and aggressive
+  generic_trap: Accepting the premise and explaining why aggressive, killer-instinct founders outcompete others
+    in tough markets.

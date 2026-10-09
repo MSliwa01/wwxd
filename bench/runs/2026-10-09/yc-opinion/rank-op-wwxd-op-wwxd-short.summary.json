@@ -1,0 +1,33 @@
+{
+  "questions": 12,
+  "arms": {
+    "op-wwxd": {
+      "decisiveness": 4.75,
+      "distinctiveness": 4.83,
+      "grounding": 4.58,
+      "usefulness": 4.67,
+      "ranked_first": 12,
+      "consistent_with_person": {
+        "yes": 11,
+        "no": 0,
+        "unknown": 1
+      },
+      "median_words": 579,
+      "hedges_per_100_words": 0.01
+    },
+    "op-wwxd-short": {
+      "decisiveness": 4.75,
+      "distinctiveness": 4.08,
+      "grounding": 4.58,
+      "usefulness": 4.0,
+      "ranked_first": 0,
+      "consistent_with_person": {
+        "yes": 11,
+        "no": 0,
+        "unknown": 1
+      },
+      "median_words": 357,
+      "hedges_per_100_words": 0.05
+    }
+  }
+}
