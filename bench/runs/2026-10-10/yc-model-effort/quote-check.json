@@ -1,0 +1,92 @@
+{
+  "vault": "yc",
+  "questions": 6,
+  "arms": {
+    "ask-opus-medium": {
+      "quotes": 23,
+      "quotes_verified": 23,
+      "quote_precision": 1.0,
+      "median_seconds": 32.1,
+      "unverified_examples": []
+    },
+    "ask-opus-high": {
+      "quotes": 28,
+      "quotes_verified": 28,
+      "quote_precision": 1.0,
+      "median_seconds": 37.9,
+      "unverified_examples": []
+    },
+    "ask-opus-xhigh": {
+      "quotes": 34,
+      "quotes_verified": 34,
+      "quote_precision": 1.0,
+      "median_seconds": 52.3,
+      "unverified_examples": []
+    },
+    "ask-sonnet-medium": {
+      "quotes": 24,
+      "quotes_verified": 24,
+      "quote_precision": 1.0,
+      "median_seconds": 19.1,
+      "unverified_examples": []
+    },
+    "ask-sonnet-high": {
+      "quotes": 38,
+      "quotes_verified": 38,
+      "quote_precision": 1.0,
+      "median_seconds": 26.9,
+      "unverified_examples": []
+    },
+    "ask-sonnet-xhigh": {
+      "quotes": 39,
+      "quotes_verified": 39,
+      "quote_precision": 1.0,
+      "median_seconds": 55.6,
+      "unverified_examples": []
+    },
+    "ask-haiku-medium": {
+      "quotes": 28,
+      "quotes_verified": 27,
+      "quote_precision": 0.964,
+      "median_seconds": 19.0,
+      "unverified_examples": [
+        {
+          "id": "yc-05",
+          "quote": "You get the best peers. The people are better, and there's also a lot more of them."
+        }
+      ]
+    },
+    "ask-haiku-high": {
+      "quotes": 26,
+      "quotes_verified": 24,
+      "quote_precision": 0.923,
+      "median_seconds": 30.6,
+      "unverified_examples": [
+        {
+          "id": "yc-05",
+          "quote": "You become like the people around you, so choose work and places by who you'll be among."
+        },
+        {
+          "id": "yc-08",
+          "quote": "if you just think about how much time is wasted, it's like a drag on the industry."
+        }
+      ]
+    },
+    "ask-haiku-xhigh": {
+      "quotes": 32,
+      "quotes_verified": 30,
+      "quote_precision": 0.938,
+      "median_seconds": 63.8,
+      "unverified_examples": [
+        {
+          "id": "yc-05",
+          "quote": "every field has one center."
+        },
+        {
+          "id": "yc-08",
+          "quote": "if you just think about how much time is wasted, it's like a drag on the industry."
+        }
+      ]
+    }
+  }
+}

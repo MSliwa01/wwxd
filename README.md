@@ -66,6 +66,9 @@ of 36), so this isn't one model grading itself. 160 quotes in the wwxd answers
 were checked against the transcripts by a script, and 158 were found verbatim. The
 other 2 were video titles.
 
+These runs used Opus 5.5. Sonnet 5.5 also works for compiling and answering, and
+Haiku 5.5 doesn't. See [Which model and effort](#which-model-and-effort).
+
 ### Opinionated isn't the same as right
 
 The obvious fix for bland answers is to tell the model to be decisive. We tried it
@@ -274,9 +277,26 @@ A panel of three people costs roughly three questions.
 
 Most of the compile cost is fixed: the agent rereads the skill, the index and the
 pages it touches for every source. So a vault of 15 long videos costs about $20 to
-$30 on Opus. Our benchmarks only measured quality on Opus 5.5; Sonnet and Haiku cost
-less but are untested for compiling. If your Claude Code uses an advisor model, the
-cost roughly doubles.
+$30 on Opus. The table comes from runs at effort xhigh. In our model and effort
+study, Opus at effort medium cost about 40% as much per source as at xhigh. Sonnet
+compiled about as well as Opus for less, and Haiku missed about two thirds of the key
+evidence. Our runs had a Fable 5.1 advisor turned on. The numbers above count only
+the main model's tokens, and the advisor added 85% to 125% on top. So if your Claude
+Code uses an advisor model, the cost roughly doubles.
+
+### Which model and effort
+
+We compared Opus 5.5, Sonnet 5.5 and Haiku 5.5 at Claude Code effort medium, high
+and xhigh, for both compiling and answering, with no advisor.
+
+| Job | Use | Why |
+|---|---|---|
+| Compile | Sonnet high, or Opus medium if you're on Opus anyway | Both found 12 of the 17 key evidence quotes, and Sonnet high cost about two thirds as much. xhigh writes a denser vault for 2 to 3 times the time and cost but didn't find more of the key evidence. Haiku missed about two thirds of it. |
+| Answer | Opus high | Opus xhigh wasn't clearly better and took longer. On a tighter budget, Sonnet xhigh ranked about as well as Opus medium. Haiku ranked last at every effort and got about 1 quote in 20 wrong. |
+| Triage | A cheap model | See [Use a cheaper model for triage](#use-a-cheaper-model-for-triage). |
+
+You don't need an advisor model. Numbers and limits are in
+[bench/RESULTS.md](bench/RESULTS.md#model-and-effort-study).
 
 ## Example recipes
 
@@ -379,7 +399,8 @@ makes no network calls.
   Without one, some videos lose formats or fail.
 - Whisper, for sources without captions. Most podcasts need it, unless the feed
   publishes transcripts (`podcast:transcript` tags), which wwxd uses instead. Whisper
-  runs on CPU, and much faster on a GPU. `WWXD_WHISPER_MODEL` and
+  runs on CPU, and much faster on a GPU. wwxd picks the model for you, large-v3-turbo
+  on a CUDA GPU and small on CPU. `WWXD_WHISPER_MODEL` and
   `WWXD_WHISPER_DEVICE` set the defaults, and `wwxd fetch --whisper-model large-v3`
   changes the model for one run.
 - Browser cookies, only if YouTube asks you to sign in. Set

@@ -241,7 +241,9 @@ def judge_ranked(
     answers = {d.name: _read_jsonl(d / "answers.jsonl") for d in arm_dirs}
     template = prompt_path.read_text(encoding="utf-8")
     rng = random.Random(seed)
-    letters = "ABCDEFGH"
+    letters = "ABCDEFGHIJKL"
+    if not 2 <= len(arm_dirs) <= len(letters):
+        raise ValueError(f"rank takes 2 to {len(letters)} arms, got {len(arm_dirs)}")
     tasks = []
     for qid, item in gold.items():
         order = [d.name for d in arm_dirs]
@@ -255,7 +257,9 @@ def judge_ranked(
             f"Answer {letters[i]}:\n<<<\n{strip_citations(answers[arm][qid]['answer']) or '(no answer)'}\n>>>"
             for i, arm in enumerate(order)
         )
-        prompt = _fill(template, question=item["question"], person=str(item.get("person", "")), answers=block)
+        expected = {k: item.get(k) for k in ("category", "person", "stance", "generic_trap", "evidence")}
+        prompt = _fill(template, question=item["question"], person=str(item.get("person", "")), answers=block,
+                       expected=yaml.safe_dump(expected, sort_keys=False, allow_unicode=True))
         try:
             raw = run_agent(agent, prompt, cwd=cwd, timeout=timeout)
             match = re.search(r"\{.*\}", raw, re.DOTALL)
@@ -291,9 +295,11 @@ def summarize_ranked(arm_dirs: list[Path], judgments: Path) -> dict:
                     metrics[k].append(float(v))
             c = str((r["scores"].get(arm) or {}).get("consistent_with_person", "unknown")).lower()
             consistent[c if c in consistent else "unknown"] += 1
+        ranks = [r["ranking"].index(arm) + 1 for r in rows if arm in r["ranking"]]
         out["arms"][arm] = {
             **{k: round(sum(v) / len(v), 2) for k, v in sorted(metrics.items())},
             "ranked_first": sum(1 for r in rows if r["ranking"][:1] == [arm]),
+            "mean_rank": round(sum(ranks) / len(ranks), 2) if ranks else None,
             "consistent_with_person": consistent,
             "median_words": sorted(s["words"] for s in stats)[len(stats) // 2] if stats else None,
             "hedges_per_100_words": round(sum(s["hedges_per_100_words"] for s in stats) / len(stats), 2) if stats else None,

@@ -580,7 +580,7 @@ def bench_judge(
 def bench_rank(
     vault: VaultArg,
     gold: Annotated[Path, typer.Option()],
-    arms: Annotated[list[str], typer.Option("--arm", help="Arm names to compare (2 to 8)")],
+    arms: Annotated[list[str], typer.Option("--arm", help="Arm names to compare (2 to 12)")],
     prompt: Annotated[Path, typer.Option(help="Ranking judge prompt")] = Path("bench/prompts/judge_opinion.md"),
     agent: Annotated[str, typer.Option()] = "claude -p {prompt}",
     cwd: Annotated[Path | None, typer.Option(help="Working dir for the judge (default: the vault)")] = None,
@@ -588,6 +588,7 @@ def bench_rank(
     jobs: Annotated[int, typer.Option()] = 3,
     name: Annotated[str, typer.Option(help="Judge label")] = "",
     timeout: Annotated[int, typer.Option(help="Seconds per judgment (free models can be slow)")] = 1200,
+    seed: Annotated[int, typer.Option(help="Seed for the answer order; use a different one per judge")] = 0,
 ) -> None:
     """Judge several arms at once, blind and shuffled: scores per answer plus a ranking."""
     import json as _json
@@ -598,7 +599,7 @@ def bench_rank(
     base = out / v.slug
     arm_dirs = [base / a for a in arms]
     path = bench.judge_ranked(v, gold, arm_dirs, prompt, base / f"rank-{'-'.join(arms)}{'-' + name if name else ''}.jsonl",
-                              agent=agent, cwd=(cwd or v.path).resolve(), jobs=jobs, timeout=timeout)
+                              agent=agent, cwd=(cwd or v.path).resolve(), jobs=jobs, timeout=timeout, seed=seed)
     summary = bench.summarize_ranked(arm_dirs, path)
     path.with_suffix(".summary.json").write_text(_json.dumps(summary, indent=2), encoding="utf-8")
     typer.echo(_json.dumps(summary, indent=2))

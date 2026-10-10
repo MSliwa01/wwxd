@@ -1,0 +1,140 @@
+{
+  "questions": 6,
+  "arms": {
+    "ask-opus-medium": {
+      "accuracy": 4.83,
+      "faithfulness": 4.33,
+      "specificity": 4.33,
+      "usefulness": 4.17,
+      "ranked_first": 0,
+      "mean_rank": 4.17,
+      "consistent_with_person": {
+        "yes": 0,
+        "no": 0,
+        "unknown": 6
+      },
+      "median_words": 583,
+      "hedges_per_100_words": 0.06
+    },
+    "ask-opus-high": {
+      "accuracy": 5.0,
+      "faithfulness": 4.17,
+      "specificity": 4.33,
+      "usefulness": 4.17,
+      "ranked_first": 2,
+      "mean_rank": 2.83,
+      "consistent_with_person": {
+        "yes": 0,
+        "no": 0,
+        "unknown": 6
+      },
+      "median_words": 601,
+      "hedges_per_100_words": 0.09
+    },
+    "ask-opus-xhigh": {
+      "accuracy": 5.0,
+      "faithfulness": 4.33,
+      "specificity": 4.33,
+      "usefulness": 4.17,
+      "ranked_first": 2,
+      "mean_rank": 3.83,
+      "consistent_with_person": {
+        "yes": 0,
+        "no": 0,
+        "unknown": 6
+      },
+      "median_words": 659,
+      "hedges_per_100_words": 0.08
+    },
+    "ask-sonnet-medium": {
+      "accuracy": 5.0,
+      "faithfulness": 4.33,
+      "specificity": 4.17,
+      "usefulness": 4.33,
+      "ranked_first": 0,
+      "mean_rank": 4.5,
+      "consistent_with_person": {
+        "yes": 0,
+        "no": 0,
+        "unknown": 6
+      },
+      "median_words": 566,
+      "hedges_per_100_words": 0.06
+    },
+    "ask-sonnet-high": {
+      "accuracy": 5.0,
+      "faithfulness": 4.17,
+      "specificity": 4.17,
+      "usefulness": 4.33,
+      "ranked_first": 0,
+      "mean_rank": 4.67,
+      "consistent_with_person": {
+        "yes": 0,
+        "no": 0,
+        "unknown": 6
+      },
+      "median_words": 600,
+      "hedges_per_100_words": 0.08
+    },
+    "ask-sonnet-xhigh": {
+      "accuracy": 5.0,
+      "faithfulness": 4.67,
+      "specificity": 4.5,
+      "usefulness": 4.33,
+      "ranked_first": 2,
+      "mean_rank": 2.67,
+      "consistent_with_person": {
+        "yes": 0,
+        "no": 0,
+        "unknown": 6
+      },
+      "median_words": 797,
+      "hedges_per_100_words": 0.07
+    },
+    "ask-haiku-medium": {
+      "accuracy": 4.5,
+      "faithfulness": 4.0,
+      "specificity": 3.0,
+      "usefulness": 3.5,
+      "ranked_first": 0,
+      "mean_rank": 8.0,
+      "consistent_with_person": {
+        "yes": 0,
+        "no": 0,
+        "unknown": 6
+      },
+      "median_words": 475,
+      "hedges_per_100_words": 0.0
+    },
+    "ask-haiku-high": {
+      "accuracy": 4.5,
+      "faithfulness": 4.0,
+      "specificity": 3.33,
+      "usefulness": 3.67,
+      "ranked_first": 0,
+      "mean_rank": 7.0,
+      "consistent_with_person": {
+        "yes": 0,
+        "no": 0,
+        "unknown": 6
+      },
+      "median_words": 440,
+      "hedges_per_100_words": 0.15
+    },
+    "ask-haiku-xhigh": {
+      "accuracy": 4.33,
+      "faithfulness": 4.33,
+      "specificity": 3.5,
+      "usefulness": 3.5,
+      "ranked_first": 0,
+      "mean_rank": 7.33,
+      "consistent_with_person": {
+        "yes": 0,
+        "no": 0,
+        "unknown": 6
+      },
+      "median_words": 454,
+      "hedges_per_100_words": 0.06
+    }
+  }
+}

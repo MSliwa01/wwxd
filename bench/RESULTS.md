@@ -5,11 +5,17 @@ vaults, judged blind by a third Opus 5.5 session. Setup and caveats are in
 [README.md](README.md). Raw answers, judgments and summaries are in
 [runs/2026-10-08](runs/2026-10-08).
 
+Every compile and every wwxd and raw answer in the benches below ran in Claude Code
+with Opus 5.5 at effort xhigh and a Fable 5.1 advisor, the Claude Code settings we
+had at the time. An advisor is a stronger model the main model can consult, and in
+our compile sessions it added 85% to 125% to the cost. The model and effort study
+further down ran without an advisor.
+
 ## Vaults
 
 | Vault | Sources | Wiki pages | Compile time per source | Compile cost (list price) |
 |---|---|---|---|---|
-| `hormozi` | 13 YouTube videos (2023 to 2026) | 77 | 2.5 to 8 min | $89 for both vaults |
+| `hormozi` | 13 YouTube videos (2023 to 2026) | 77 | 2.5 to 8 min | $89 for both vaults, $44 of it the advisor |
 | `yc` | 13 videos, 11 Paul Graham essays | 96 | 1.5 to 10 min | |
 
 A fresh Claude Code session compiled each source, guided only by the skill. Both
@@ -248,6 +254,196 @@ could match to it, the compile credited 51 correctly. The voice check got all 54
 right, including the 3 the compile got wrong. Of the 9 mismatches in total, 6 are
 confirmed by an official transcript or by the surrounding turns, and 3 are still
 unconfirmed.
+
+## Transcription: captions vs Whisper
+
+wwxd uses YouTube's auto-captions when a video has them. To see what that costs in
+accuracy, we transcribed one 39-minute interview (Sam Altman and Garry Tan, YC,
+`yt-ZIaOBAjvc38`) with four Whisper models and compared each result, and the
+captions, with the official speaker-labelled transcript YC published. YC lightly
+edited that transcript. It drops fillers and cleans up some sentences, so word error
+rate (WER) against it overstates real errors, equally for every system. We aligned
+each speaker turn and scored WER per turn, so passages cut from the official
+transcript don't count as errors. Whisper ran on the machine's GPU through
+faster-whisper (CTranslate2).
+
+| Transcript | WER | Time |
+|---|---|---|
+| YouTube auto-captions | 31.5% | none, already there |
+| Whisper small | 30.1% | 76 s |
+| Whisper medium | 31.0% | 168 s |
+| Whisper large-v3-turbo | 26.8% | 113 s |
+| Whisper large-v3 | 27.2% | 467 s |
+
+The best Whisper model beats the captions by about 5 points, mostly on fillers and
+punctuation-level differences. The quote check and the attribution results above
+didn't depend on that gap. Transcription isn't the weak step. Attributing who said
+what is. So wwxd uses captions first and falls back to Whisper. The default Whisper
+model is now "auto", which means large-v3-turbo when wwxd finds a CUDA GPU and small
+on CPU. `WWXD_WHISPER_MODEL` or `wwxd fetch --whisper-model` overrides it.
+
+We didn't test audio-capable LLMs, models that take audio and return a transcript
+with speakers, and this study used no API keys. They might help with speaker labels,
+which Whisper doesn't give. Today `wwxd voice` covers attribution.
+
+## Model and effort study
+
+Which Claude model and which effort level should you use for wwxd's two jobs,
+compiling a vault and answering from it? Claude Code's `--effort` sets how much the
+model thinks. We tried Opus 5.5, Sonnet 5.5 and Haiku 5.5, each at effort medium,
+high and xhigh, so 9 configurations. Every run used `claude -p ... --setting-sources
+project --model <id> --effort <e> --strict-mcp-config`, so no advisor and no user
+settings. Each configuration ran once. Raw data and scripts are in
+[runs/2026-10-10](runs/2026-10-10).
+
+### Compiling
+
+Each configuration compiled the same 4 sources from scratch into empty vaults, one
+fresh session per source. Three went into a yc vault: the 39-minute Sam Altman and
+Garry Tan interview, a Dalton Caldwell and Michael Seibel video, and a Paul Graham
+essay. One Alex Hormozi video went into a hormozi vault.
+
+- Statements is the number of quoted statements in the wiki.
+- Attribution takes the statements from the Altman and Tan interview that we could
+  match to YC's official speaker-labelled transcript, and counts how many credit the
+  right speaker.
+- Gold evidence counts how many of the 17 evidence quotes that the main bench's gold
+  questions cite from these 4 sources appear in the wiki.
+- Cost is Claude Code's reported `total_cost_usd` at list price. Time is wall time
+  for all 4 sessions.
+
+Every vault passed `wwxd lint` with no errors, so every quote in every vault matched
+the raw transcript.
+
+| Model, effort | Statements | Attribution | Gold evidence | Cost (4 sources) | Time |
+|---|---|---|---|---|---|
+| Opus medium | 191 | 42 of 42 (100%) | 12 of 17 | $3.41 | 10 min |
+| Opus high | 248 | 55 of 57 (96.5%) | 10 of 17 | $5.16 | 16 min |
+| Opus xhigh | 288 | 68 of 70 (97.1%) | 11 of 17 | $8.16 | 30 min |
+| Sonnet medium | 119 | 31 of 31 (100%) | 8 of 17 | $1.41 | 6 min |
+| Sonnet high | 193 | 41 of 42 (97.6%) | 12 of 17 | $2.30 | 12 min |
+| Sonnet xhigh | 295 | 59 of 63 (93.7%) | 13 of 17 | $4.51 | 26 min |
+| Haiku medium | 87 | 15 of 16 (93.8%) | 5 of 17 | $0.13 | 7 min |
+| Haiku high | 113 | 17 of 18 (94.4%) | 6 of 17 | $0.22 | 11 min |
+| Haiku xhigh | 146 | 25 of 28 (89.3%) | 6 of 17 | $0.83 | 21 min |
+
+Per source on average, Opus cost $0.85, $1.29 and $2.04 at medium, high and xhigh,
+Sonnet $0.35, $0.57 and $1.13, and Haiku $0.03, $0.06 and $0.21.
+
+Higher effort wrote more statements for every model. From medium to xhigh, Opus went
+from 191 to 288, Sonnet from 119 to 295 and Haiku from 87 to 146. Time and cost rose
+faster than that. The gold evidence barely moved. Opus and Sonnet found 10 to 13 of
+the 17 at every setting except Sonnet medium, which found 8, and with 17 items a
+difference of 1 or 2 is noise. Haiku found 5 or 6 at any effort, missing about two
+thirds, so it isn't fit for compiling. Sonnet high matched Opus medium (12 of 17,
+97.6% vs 100% attribution) at about two thirds of the price.
+
+We didn't test whether the extra statements at xhigh make answers better. No answer
+runs used the study vaults. One Opus xhigh attempt hit a Claude usage limit mid-run.
+We rebuilt both Opus xhigh vaults from scratch and reran them, and the table shows
+the rerun.
+
+### Answering
+
+Here the vault stayed fixed. We used the full hormozi and yc vaults from the main
+bench, compiled with Opus xhigh. Each of the 9 configurations answered the same 12
+questions with the wwxd skill, 6 per vault, a subset of the main gold set
+(`gold/hormozi-ask12.yaml`, `gold/yc-ask12.yaml`). So this measures the answering
+model only.
+
+Every configuration beat raw Opus 5.5 with no vault in the main bench's pairwise
+test, judged by Haiku 5.5. Opus and Sonnet won 12 of 12 at every effort and Haiku
+won 11 of 12. That's a ceiling, so it can't separate the configurations.
+
+To separate them, a judge saw all 9 answers to a question at once, shuffled and with
+citations stripped, along with the grading key and the raw transcripts. It scored
+accuracy, specificity, faithfulness and usefulness from 1 to 5 and ranked all 9
+(`prompts/judge_rank.md`). Two judges ranked every question, Opus 5.5 at effort
+medium and Haiku 5.5 at effort high, each with a different answer order. Over the 12
+questions:
+
+| Configuration | Mean rank, Opus judge | Ranked first | Mean rank, Haiku judge | Ranked first |
+|---|---|---|---|---|
+| Opus medium | 4.17 | 0 | 4.25 | 1 |
+| Opus high | 2.50 | 4 | 2.58 | 4 |
+| Opus xhigh | 1.75 | 6 | 3.58 | 4 |
+| Sonnet medium | 5.75 | 0 | 4.83 | 0 |
+| Sonnet high | 4.83 | 0 | 4.92 | 1 |
+| Sonnet xhigh | 3.42 | 2 | 3.58 | 2 |
+| Haiku medium | 8.33 | 0 | 7.83 | 0 |
+| Haiku high | 7.25 | 0 | 6.83 | 0 |
+| Haiku xhigh | 7.00 | 0 | 6.58 | 0 |
+
+A rank of 1 is best and 9 is worst. Pooled over both judges and all efforts, the
+mean rank was 3.1 for Opus, 4.6 for Sonnet and 7.3 for Haiku. Pooled over models, it
+was 5.9 at medium, 4.8 at high and 4.3 at xhigh. All Opus and Sonnet answers were
+good in absolute terms. The Opus judge gave Opus 4.83 to 5.00 for accuracy at every
+effort and Sonnet 4.75 to 5.00. Haiku got 3.92 to 4.17 for accuracy and 3.33 to 3.67
+for usefulness. So the ranking separates Opus and Sonnet on specificity and
+usefulness, not on errors.
+
+Head to head, out of 24 judgments (12 questions, 2 judges):
+
+| Comparison | Ranked higher |
+|---|---|
+| Opus high over Opus medium | 18 of 24 (9 of 12 for each judge) |
+| Opus xhigh over Opus high | 14 of 24 (8 and 6 of 12), no clear difference |
+| Opus xhigh over Opus medium | 18 of 24 |
+| Sonnet high over Sonnet medium | 13 of 24, no clear difference |
+| Sonnet xhigh over Sonnet medium | 18 of 24 (10 and 8 of 12) |
+| Haiku xhigh over Haiku medium | 16 of 24 |
+| Opus medium over Sonnet medium | 18 of 24 |
+| Opus high over Sonnet high | 21 of 24 |
+| Opus xhigh over Sonnet xhigh | 15 of 24 (the judges split, 10 and 5 of 12) |
+| Sonnet xhigh over Opus medium | 15 of 24 |
+| Sonnet high over Opus medium | 9 of 24 |
+| Sonnet medium over Haiku xhigh | 19 of 24 |
+
+A sign test that treats the 24 judgments as independent gives p of about 0.02 for 18
+of 24 and below 0.001 for 21 of 24. Both judges saw the same answers, so the
+judgments aren't fully independent and these p values are optimistic.
+
+A script checked every quote an answer attributed to someone against the raw
+transcripts, with no model involved. Opus had 158 of 159 verified across the three
+efforts. The one miss was a video title quoted as a title. Sonnet had 199 of 199.
+Haiku had 151 of 159, about 95%. Its misses include "under 10% churn as best" and
+"every field has one center.", which aren't in the sources. Per configuration:
+
+| Quotes verified | medium | high | xhigh |
+|---|---|---|---|
+| Opus | 47 of 48 | 46 of 46 | 65 of 65 |
+| Sonnet | 47 of 47 | 75 of 75 | 77 of 77 |
+| Haiku | 49 of 52 | 40 of 42 | 62 of 65 |
+
+Median seconds per answer at medium, high and xhigh were 29, 37 and 50 for Opus, 19,
+27 and 53 for Sonnet, and 19, 31 and 62 for Haiku. Answers got longer with effort for
+Opus (median 524 to 670 words) and Sonnet (556 to 691). We didn't record the token
+cost of the answers.
+
+The model matters more than the effort. Haiku ranks last at every effort and gets
+about 1 quote in 20 wrong. Going from medium to high clearly helps Opus. Going from
+high to xhigh doesn't clearly help Opus, but it does help Sonnet. Sonnet at xhigh is
+about as good as Opus at medium.
+
+### Recommendation
+
+| Job | Use | Notes |
+|---|---|---|
+| Compile | Sonnet high, or Opus medium if you're on Opus anyway | xhigh writes a denser vault for 2 to 3 times the time and cost, and didn't find more of the key evidence. Not Haiku. |
+| Answer | Opus high | Opus xhigh isn't clearly better and takes longer. On a tighter budget, Sonnet xhigh ranked about as well as Opus medium. Not Haiku. |
+| Triage | A cheap model | Picking which videos to keep needs only titles, channels and durations. |
+
+You don't need an advisor model. This study ran without one, and in our earlier runs
+it doubled the compile cost.
+
+### Limits of this study
+
+Each configuration ran once, on 4 sources and 12 questions. Gold evidence has 17
+items, and the attribution counts range from 16 to 70 statements. There were two
+judges, and one of them is from the same model family as the answers. The judges had
+to rank 9 answers that were often close. We didn't test whether a denser vault gives
+better answers. Costs are Claude Code's list-price estimates. On a subscription you
+pay in usage limits instead.
 
 ## Limits of this run
 

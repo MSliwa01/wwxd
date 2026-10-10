@@ -1,0 +1,144 @@
+questions:
+- id: yc-01
+  category: known
+  person: pg
+  question: I'm a 20-year-old CS student with a side project I'm excited about. Would Paul Graham tell me to start
+    a startup now, while I'm still in college?
+  stance: 'No. PG tells students not to start a startup in college: startups take over your whole life, so you can''t
+    really be a student and a founder at once. Waiting costs nothing because you''re more likely to succeed later.
+    Your early 20s are better spent learning powerful things and following your curiosity (''just learn''). The
+    one exception is a side project that is already taking off, like Facebook did.'
+  must_cite:
+  - yt-ii1jcLg-eIQ
+  evidence:
+  - source: yt-ii1jcLg-eIQ
+    at: '18:56'
+    quote: Do not start a startup in college.
+  - source: yt-ii1jcLg-eIQ
+    at: '21:12'
+    quote: You're not sacrificing anything if you forego starting a startup at 20, cuz you'll be more likely to
+      succeed if you wait.
+  - source: yt-ii1jcLg-eIQ
+    at: '30:49'
+    quote: So here, is the ultimate advice for young would-be startup founders reduced to two words, just learn.
+  generic_trap: 'College is the perfect low-risk time to start a company: you have few obligations, campus resources
+    and incubators, so go for it and drop out if it works.'
+- id: yc-05
+  category: fresh
+  person: pg
+  question: I'm building a startup in Stockholm. Does Paul Graham think I really need to move to Silicon Valley?
+  stance: 'Yes, at least for a while: go, then come back. Going and returning is also the best thing a founder can
+    do for Stockholm. PG calls YC the optimal way to do the Valley stint. He cites YC data that startups going home
+    after YC are only about half as likely to become unicorns, but discounts it: selection bias (the more determined
+    founders move), it measures valuation rather than performance, and half as well is still very good. He thinks
+    Stockholm could become the Silicon Valley of Europe.'
+  must_cite:
+  - yt-QHJkUw31YX8
+  evidence:
+  - source: yt-QHJkUw31YX8
+    at: 0:36
+    quote: And the answer is the same now as it always is. Yes, you should. You can go there for a bit and then
+      come back, but you should at least go.
+  - source: yt-QHJkUw31YX8
+    at: '18:57'
+    quote: startups that go back home after YC are only about half as likely to become unicorns.
+  - source: yt-QHJkUw31YX8
+    at: '17:16'
+    quote: Surely the optimal way to go to Silicon Valley for a bit and then come back is to do YC.
+  generic_trap: With remote work you can build a great company from anywhere; Stockholm has a strong ecosystem (Spotify,
+    Klarna), so stay local and visit the Valley occasionally for fundraising.
+- id: yc-08
+  category: fresh
+  person: seibel
+  question: I've spent months pitching seed investors, polishing my deck and taking follow-up meetings. How would
+    Michael Seibel tell me to think about fundraising?
+  stance: Fundraising comes down to leverage, meaning your ability to walk away, not the deck. When Socialcam was
+    hot, Michael asked investors what share of their deals they chase versus what comes in the front door; every
+    answer was between 80/20 and 90/10 chase. So time spent making the company something investors chase beats 'decksmithing'.
+    At Justin.tv he spent eight months fundraising without success, and the two months of forced focus on profitability
+    that followed got far more done. Months of meetings with no growth are mostly wasted, and investors who string
+    you along are effectively buying an option on you.
+  must_cite:
+  - yt-7TU636F_yVQ
+  evidence:
+  - source: yt-7TU636F_yVQ
+    at: '10:03'
+    quote: And the answers I got only varied between 8020 chase and 9010 chase.
+  - source: yt-7TU636F_yVQ
+    at: '10:03'
+    quote: if you can invest that time in making your company something that investors will chase after versus decksmithing,
+  - source: yt-7TU636F_yVQ
+    at: '6:44'
+    quote: one of the times we almost died at Justin TV you know I had spent the eight months prior trying to fundra
+  generic_trap: 'Fundraising is a numbers game: tighten your pitch deck, build a target list of 100 investors, run
+    a structured process and keep following up.'
+- id: yc-12
+  category: applied
+  person: seibel
+  question: My cofounder and I are 9 months in, pre-product-market fit, and it's clearly over. He's vested a chunk
+    of his stock and wants to keep it, and we've both hired lawyers who are trading letters. What would Michael
+    Seibel tell us to do?
+  stance: Stop paying lawyers. Before product-market fit the stock is worth essentially nothing, so you're fighting
+    over ego. Make the split no-fault and clean. Even if the leaving founder has vested, he should get down to under
+    5% of the company, or under 2% if it's within the first year (1-2%, sometimes less, for very early departures),
+    so the remaining team stays motivated to create the value. The staying founder should offer reasonable severance
+    and be generous, because everyone is watching. Sign clean paperwork; it can be done in about a week for roughly
+    $2,000. Don't make your advisor the judge and jury, since the facts don't matter once you're splitting.
+  must_cite:
+  - yt-s1YszjhzQ6U
+  evidence:
+  - source: yt-s1YszjhzQ6U
+    at: '18:39'
+    quote: even if you vested, like get down to under 5% of the company, if it's within the first year, under 2%.
+  - source: yt-s1YszjhzQ6U
+    at: '18:39'
+    quote: Do reasonable severance, sign clean paperwork and and peace out, right? Like you could do that whole
+      thing in a week and spend like $2,000.
+  - source: yt-s1YszjhzQ6U
+    at: '11:36'
+    quote: And so, in a situation where you're having a co-founder breakup and the stock is worth nothing, paying
+      lawyers a bunch of money makes no sense.
+  generic_trap: 'Protect yourself: get good legal counsel, enforce the vesting schedule and shareholder agreement
+    as written, and negotiate a fair buyout of his vested shares.'
+- id: yc-17
+  category: attribution
+  person: altman
+  question: Why does Garry Tan say the premium on doing YC is bigger than ever and that the gap between YC and second
+    place has grown?
+  stance: 'It was Sam Altman, not Garry Tan, who said this, in his Startup School 2026 conversation with Tan. Altman
+    prefaced it with ''I can say this, Garry probably can''t'', because it would sound self-serving coming from
+    YC''s current CEO. He explained the widening gap as network effects: being in the right network puts you where
+    you''ll meet future cofounders, and that compounds over a long time.'
+  must_cite:
+  - yt-ZIaOBAjvc38
+  evidence:
+  - source: yt-ZIaOBAjvc38
+    at: '16:56'
+    quote: I also think that I I can say this, Gary probably can't. I I I think the premium on doing YC is bigger
+      now than it's like ever been before.
+  - source: yt-ZIaOBAjvc38
+    at: '16:56'
+    quote: the distance between like YC and second place is has expanded. And this is a reminder of the power of
+  generic_trap: Attributing it to Garry Tan and explaining it as YC's brand, bigger checks and alumni network as
+    described by its CEO.
+- id: yc-20
+  category: abstain
+  person: livingston
+  question: Jessica Livingston has said early YC deliberately backed the most aggressive, ruthless founders because
+    they're the ones who win. Why did she believe that?
+  stance: 'False premise: the sources contain no such statement. Jessica said the opposite. She was careful to fund
+    only earnest people, turned down people she could tell were conceited, and describes herself as ''soft and sensitive''
+    and maternal at a time when investors tended to be hardened, aggressive and sometimes ruthless.'
+  must_cite: []
+  evidence:
+  - source: yt-8d-cApFHjeY
+    at: '14:51'
+    quote: from the beginning I was very careful about only funding earnest people
+  - source: yt-8d-cApFHjeY
+    at: '15:27'
+    quote: if I could tell someone was a conceited we did not fund them
+  - source: yt-8d-cApFHjeY
+    at: '17:44'
+    quote: I was soft and sensitive at a time when investors tended to be hardened and aggressive
+  generic_trap: Accepting the premise and explaining why aggressive, killer-instinct founders outcompete others
+    in tough markets.

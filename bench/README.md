@@ -77,6 +77,49 @@ cutoff date (`wwxd new <slug>-pre`, copy the older raw docs, compile), then ask 
 the questions whose `must_cite` sources are all after the cutoff, with
 `prompts/answer_wwxd_extrapolate.md`. Our runs are in `runs/2026-10-09/`.
 
+## Ranking with a grading key
+
+`prompts/judge_rank.md` ranks several answers to the gold questions, so you can
+compare more than two arms at once. The judge gets the question, the person's stance
+and evidence from the gold set as a grading key, and the raw transcripts in `./raw/`
+to check quotes. It scores accuracy, specificity, faithfulness and usefulness from 1
+to 5 and ranks every answer.
+
+```bash
+wwxd bench rank hormozi --gold gold/hormozi-ask12.yaml \
+  --arm ask-opus-high --arm ask-sonnet-high --arm ask-haiku-high \
+  --prompt bench/prompts/judge_rank.md --name opus --seed 1 \
+  --agent 'claude -p {prompt} --model claude-opus-5-5 --strict-mcp-config --allowedTools Read Grep Glob'
+```
+
+`wwxd bench rank` takes 2 to 12 arms. `--seed` sets the answer order, so give each
+judge a different seed. The summary reports each arm's `mean_rank` (1 is best) next
+to its scores and how often it was ranked first.
+
+## Model and effort study
+
+This study compares Opus, Sonnet and Haiku at effort medium, high and xhigh, for
+compiling and for answering. The scripts are in `runs/2026-10-10/scripts/`.
+
+| Script | What it does |
+|---|---|
+| `study_compile.sh` | Compiles the 4 study sources into empty vaults at each effort, one `claude -p` session per source |
+| `study_eval.py` | Scores the study vaults on statements, attribution, gold evidence, lint and cost |
+| `study_ask.sh` | Runs the 9 answer arms on `gold/hormozi-ask12.yaml` and `gold/yc-ask12.yaml`, then the pairwise judge against raw Opus |
+| `study_rank.sh` | Runs the blind 9-way ranking with an Opus and a Haiku judge |
+| `study_ask_eval.py` | Summarizes the pairwise judgments, answer length and time |
+| `wer2.py` | Word error rate for the captions vs Whisper section of RESULTS.md |
+
+They use absolute paths from our lab machine and expect its layout. Vaults and gold
+sets live under `~/wwxd-lab`, and the study vaults are in `~/wwxd-lab/study/vaults`,
+named `s-<model>-<effort>-<yc|hz>`. Adjust the paths before you run them.
+
+The attribution score and `wer2.py` need YC's official speaker-labelled transcript
+of the Sam Altman and Garry Tan interview,
+<https://www.ycrootaccess.com/p/sam-altman-never-a-better-time-to>. We don't
+redistribute it. The scripts read a saved copy of that page from
+`/tmp/ycroot/page.html`.
+
 ## Known biases
 
 - The gold sets come from the same sources the vault was built from. The bench

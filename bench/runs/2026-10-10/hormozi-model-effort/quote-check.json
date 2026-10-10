@@ -1,0 +1,88 @@
+{
+  "vault": "hormozi",
+  "questions": 6,
+  "arms": {
+    "ask-opus-medium": {
+      "quotes": 25,
+      "quotes_verified": 24,
+      "quote_precision": 0.96,
+      "median_seconds": 31.2,
+      "unverified_examples": [
+        {
+          "id": "hz-20",
+          "quote": "How I Would Build a $10M Service Business (If I Had to Start Over)"
+        }
+      ]
+    },
+    "ask-opus-high": {
+      "quotes": 18,
+      "quotes_verified": 18,
+      "quote_precision": 1.0,
+      "median_seconds": 37.7,
+      "unverified_examples": []
+    },
+    "ask-opus-xhigh": {
+      "quotes": 31,
+      "quotes_verified": 31,
+      "quote_precision": 1.0,
+      "median_seconds": 57.3,
+      "unverified_examples": []
+    },
+    "ask-sonnet-medium": {
+      "quotes": 23,
+      "quotes_verified": 23,
+      "quote_precision": 1.0,
+      "median_seconds": 21.9,
+      "unverified_examples": []
+    },
+    "ask-sonnet-high": {
+      "quotes": 37,
+      "quotes_verified": 37,
+      "quote_precision": 1.0,
+      "median_seconds": 28.3,
+      "unverified_examples": []
+    },
+    "ask-sonnet-xhigh": {
+      "quotes": 38,
+      "quotes_verified": 38,
+      "quote_precision": 1.0,
+      "median_seconds": 56.5,
+      "unverified_examples": []
+    },
+    "ask-haiku-medium": {
+      "quotes": 24,
+      "quotes_verified": 22,
+      "quote_precision": 0.917,
+      "median_seconds": 20.8,
+      "unverified_examples": [
+        {
+          "id": "hz-05",
+          "quote": "halving churn doubles lifetime value,"
+        },
+        {
+          "id": "hz-05",
+          "quote": "under 10% churn as best,"
+        }
+      ]
+    },
+    "ask-haiku-high": {
+      "quotes": 16,
+      "quotes_verified": 16,
+      "quote_precision": 1.0,
+      "median_seconds": 40.4,
+      "unverified_examples": []
+    },
+    "ask-haiku-xhigh": {
+      "quotes": 33,
+      "quotes_verified": 32,
+      "quote_precision": 0.97,
+      "median_seconds": 87.5,
+      "unverified_examples": [
+        {
+          "id": "hz-02",
+          "quote": "these markers write four times longer but they smell like crap"
+        }
+      ]
+    }
+  }
+}

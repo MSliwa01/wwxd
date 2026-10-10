@@ -1,0 +1,136 @@
+questions:
+- id: hz-02
+  category: known
+  person: hormozi
+  question: Should my ads admit the weaknesses of my product, and if so how do I word it? What would Alex Hormozi
+    say?
+  stance: 'Yes: use damaging admissions and own your flaws up front, because what you give up in promise you gain
+    in trust. Order matters: put the flaw first and the benefit after ''but'', because people believe the clause
+    after ''but'' (''write four times longer but smell like crap'' stresses the smell).'
+  must_cite:
+  - yt-JDR-R--4HhM
+  evidence:
+  - source: yt-JDR-R--4HhM
+    at: '12:30'
+    quote: you want to always own your flaws of course you have them  of course your product isn't perfect say so
+      and
+  - source: yt-JDR-R--4HhM
+    at: '13:09'
+    quote: what you'll sacrifice in promise you'll gain in  trust and trust trumps promise
+  - source: yt-JDR-R--4HhM
+    at: '14:26'
+    quote: these markers write four times longer than others but they smell like crap what am I emphasizing i'm 
+      actually emphasizing the fact that they smell bad not the fact that they write longer
+  generic_trap: Lead with your strengths and benefits. Don't draw attention to weaknesses in ads; deal with objections
+    only when the prospect raises them.
+- id: hz-05
+  category: fresh
+  person: hormozi
+  question: What's a good monthly churn rate for a paid online community, and when should I worry about it? What
+    would Alex Hormozi say?
+  stance: 'Using Skool platform data: the average is 80% monthly retention (20% churn), the best groups are under
+    10% churn, and below 70% retention means retention is your highest-ROI fix. Churn depends on cohort age: 20%+
+    in months 1-3, about 10% or less once someone passes day 90, and about 2% by month 6. So don''t overhaul the
+    business because month-one churn is high; focus on getting people past day 90 and month 6.'
+  must_cite:
+  - yt--j8_YCWZ05Q
+  evidence:
+  - source: yt--j8_YCWZ05Q
+    at: '1:39'
+    quote: the platform average across School is 80% monthly retention. So said differently, it's 20% churn.
+  - source: yt--j8_YCWZ05Q
+    at: '1:39'
+    quote: Now the best groups have less than 10% churn, aka 90% retention month over month. The not good groups
+      have less than 70% retention
+  - source: yt--j8_YCWZ05Q
+    at: '3:53'
+    quote: Now, if you keep someone 90 days, which seems to be the first kind of big churn drop-off point, it drops
+      to around 10% or less.
+  generic_trap: Aim for SaaS-style benchmarks of about 3-7% monthly churn and work to lower your average churn number
+    across the board.
+- id: hz-09
+  category: fresh
+  person: hormozi
+  question: My service business is profitable, but I'm carrying about $60k of debt. Should I pay it off or keep
+    the cash for growth? What would Alex Hormozi say?
+  stance: 'Pay it off: he skews ''very close to the Ramsey side'' of the Dave Ramsey-to-Wall Street spectrum, because
+    debt increases risk and risk over a long time horizon tends to come due, since businesses have seasons and volatility.
+    He points to enduring debt-free companies like Chick-fil-A, and says paying it off adds only about 5% to profit
+    but removes ''100% in headache''.'
+  must_cite:
+  - yt-OQf2Ba-Lp_4
+  evidence:
+  - source: yt-OQf2Ba-Lp_4
+    at: '8:37'
+    quote: I tend to skew like very close to the Ramsey side and the single argument that I have around it is basically
+      debt
+  - source: yt-OQf2Ba-Lp_4
+    at: '9:10'
+    quote: increases risk. Risk when multiplied over a long time horizon tends to come due.
+  - source: yt-OQf2Ba-Lp_4
+    at: '9:10'
+    quote: If you look at some of the most enduring companies, a lot of like Chick-fil-A operate debt free.
+  generic_trap: If your return on capital beats the interest rate, keep the cheap debt and invest the cash in growth;
+    leverage is a tool.
+- id: hz-11
+  category: applied
+  person: hormozi
+  question: I own a residential HVAC duct-cleaning company doing about $1.2M a year at a 38% net margin, and we
+    close about 82% of in-home inspections. Should I keep prices where they are so I don't hurt the close rate?
+    What would Alex Hormozi say?
+  stance: No, raise prices (he penciled in about 10%), because a close rate of 80% or more tells him there is room
+    on price. At these numbers a 10% raise gives roughly 25% more net profit and still makes more money as long
+    as close rate stays above about 65%. For a normal (non-luxury) service, a higher price can even raise the close
+    rate, because it increases the customer's belief that you can deliver.
+  must_cite:
+  - yt-OQf2Ba-Lp_4
+  evidence:
+  - source: yt-OQf2Ba-Lp_4
+    at: '8:06'
+    quote: So whenever I hear 80% or over 80% close rates, I usually know that there's room in sale.
+  - source: yt-OQf2Ba-Lp_4
+    at: '8:06'
+    quote: As long as we close more than 65%, we make more money. Thing is is that 10% price raise for you equals
+      roughly a 25% increase in net profit.
+  - source: yt-OQf2Ba-Lp_4
+    at: '7:00'
+    quote: if you raise your prices, what sometimes happens is that the conviction of the customer that you can
+      actually deliver on the promise you're making goes up.
+  generic_trap: If it isn't broken don't fix it; benchmark against competitors and only raise prices cautiously
+    with a small test so you don't lose deals.
+- id: hz-16
+  category: attribution
+  person: hormozi
+  question: What's the story Hormozi tells about his company being worth four times more just by listing on the
+    NASDAQ, and the IPO equity deal he took afterward?
+  stance: 'That story is Steven Bartlett''s (the host), not Hormozi''s: Bartlett''s company listed on a European
+    exchange, banks told him it would be worth 4x on the NASDAQ, and he then applied his social-media skills to
+    pre-IPO companies, earning about $7-8M in equity for 9-12 months'' work, which led to Flight Story. Hormozi
+    only agreed and gave his own version, ''same work, more zeros'': a 20% conversion lift is worth $20k to a $1M
+    store but $2M to a $100M company.'
+  must_cite:
+  - yt-x3e73Qn6NOo
+  evidence:
+  - source: yt-x3e73Qn6NOo
+    at: '1:34:12'
+    quote: they told me that our business would be worth four times more if it was just on a different stock market
+      if you move it to the NASDAQ the exact same business would be worth four times more
+  - source: yt-x3e73Qn6NOo
+    at: '1:35:51'
+    quote: I think on the day of the IPO the equity that I got for for the 9 to 12 months work that i' done was
+      worth in the region of 7 to8 million
+  - source: yt-x3e73Qn6NOo
+    at: '1:38:38'
+    quote: do the same work to a business doing $100 million a year I make them $20 million for my 20% bump and
+      I get 10% that and I make $2 million 20,000 2 million 100x same work
+  generic_trap: Attributes the NASDAQ 4x / pre-IPO equity story to Hormozi as a lesson from his own career.
+- id: hz-20
+  category: abstain
+  person: hormozi
+  question: Why did Hormozi tell that young roofing company owner to stop door-knocking and move his budget into
+    Google Ads?
+  stance: 'The sources don''t cover this. The premise is false: he told the roofer the opposite, to go all in on
+    door-to-door as the primary growth engine and build a door-knocking sales team, not to switch to Google Ads.'
+  must_cite: []
+  evidence: []
+  generic_trap: Accepts the premise and explains why paid search beats door-knocking.
