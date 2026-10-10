@@ -6,7 +6,7 @@ What would X do? wwxd turns a person's talks, podcasts and essays into a wiki of
 their actual positions, with every quote checked against the source. Your agent then
 answers the way that person would, and shows you where they said it.
 
-![Opus told to answer as Hormozi contradicts him; Opus with a wwxd vault quotes him](docs/img/wwxd-vs-persona.png)
+![Opus told to answer as Hormozi contradicts him; Opus with a wwxd vault quotes him](https://raw.githubusercontent.com/MSliwa01/wwxd/main/docs/img/wwxd-vs-persona.png)
 
 ## Why
 
@@ -72,10 +72,12 @@ other 2 were video titles.
 
 A judge from Google, Gemini 3.5 Flash Lite, preferred wwxd on 34 of 40 with no access
 to the transcripts, and it put Opus, Sonnet and Haiku in the same order as the Claude
-judges ([details](bench/RESULTS.md#a-judge-from-google)). The current prose answer
+judges ([details](https://github.com/MSliwa01/wwxd/blob/main/bench/RESULTS.md#a-judge-from-google)). The current prose answer
 format ranked first on 20 of 24 opinion questions, ahead of the earlier format and
 raw Opus, with both an Opus and a Gemini judge
-([details](bench/RESULTS.md#answer-format-prose-with-sources-underneath)).
+([details](https://github.com/MSliwa01/wwxd/blob/main/bench/RESULTS.md#answer-format-prose-with-sources-underneath)).
+
+![Five judges from four labs preferred wwxd on 34 to 40 of 40 pairs](https://raw.githubusercontent.com/MSliwa01/wwxd/main/docs/img/chart-judges.png)
 
 These runs used Opus 5.5. Sonnet 5.5 works about as well for compiling and nearly as
 well for answering. Haiku 5.5 still beat raw Opus, but it ranked last of the three and
@@ -96,6 +98,8 @@ the vault.
 | Grounding (reasons they really hold) | 2.8 | 2.6 | 4.9 |
 | Ranked best | 0 | 0 | 93 of 93 |
 | Pick contradicts the person | 9 | 8 | 0 |
+
+![Scatter of decisiveness against grounding: the persona prompt is decisive but ungrounded, wwxd is both](https://raw.githubusercontent.com/MSliwa01/wwxd/main/docs/img/chart-opinion.png)
 
 The persona prompt stops the hedging, but its reasons are generic or invented. Asked
 "I have $50k saved, should I pay off my car loan or put it into my business?", it
@@ -119,7 +123,7 @@ Opus: one judge called it even, and three others preferred raw Opus. Thinking pa
 didn't change that. A thinking style settles a judgment call; it can't recover a
 fact or a number the person hadn't said yet. A vault keeps answers faithful to what someone has said. It can't know
 what they'll say next, so keep it current with `wwxd update`. Full numbers, setup
-and caveats are in [bench/RESULTS.md](bench/RESULTS.md).
+and caveats are in [bench/RESULTS.md](https://github.com/MSliwa01/wwxd/blob/main/bench/RESULTS.md).
 
 ## How it works
 
@@ -304,6 +308,8 @@ as Opus for less, and Haiku missed about two thirds of the key evidence.
 We compared Opus 5.5, Sonnet 5.5 and Haiku 5.5 at Claude Code effort medium, high
 and xhigh, for both compiling and answering, with no advisor.
 
+![Mean answer rank against seconds per answer for each model and effort, and key evidence found against compile cost](https://raw.githubusercontent.com/MSliwa01/wwxd/main/docs/img/chart-model-effort.png)
+
 | Job | Use | Why |
 |---|---|---|
 | Compile | Sonnet high, or Opus medium if you're on Opus anyway | Both found 12 of the 17 key evidence quotes, and Sonnet high cost about two thirds as much. xhigh writes a denser vault for 2 to 3 times the time and cost but didn't find more of the key evidence. Haiku missed about two thirds of it. |
@@ -311,7 +317,7 @@ and xhigh, for both compiling and answering, with no advisor.
 | Triage | A cheap model | See [Use a cheaper model for triage](#use-a-cheaper-model-for-triage). |
 
 You don't need an advisor model. Numbers and limits are in
-[bench/RESULTS.md](bench/RESULTS.md#model-and-effort-study).
+[bench/RESULTS.md](https://github.com/MSliwa01/wwxd/blob/main/bench/RESULTS.md#model-and-effort-study).
 
 ## Example recipes
 
@@ -389,7 +395,7 @@ example into your notes app's folder.
 | `wwxd status <slug>` | Summary |
 | `wwxd voice <slug> [ids]` | Check who is speaking in each quote, by voice (needs `wwxd[voice]`) |
 | `wwxd doctor` | Check yt-dlp, the JS runtime, ffmpeg, Whisper and `$WWXD_HOME` |
-| `wwxd bench run`, `judge`, `report` | [Benchmarks](bench/README.md) |
+| `wwxd bench run`, `judge`, `report` | [Benchmarks](https://github.com/MSliwa01/wwxd/blob/main/bench/README.md) |
 
 Vaults are plain markdown folders and open in Obsidian. `$WWXD_HOME` sets where they
 live (default `./vaults`).
@@ -398,9 +404,9 @@ live (default `./vaults`).
 
 wwxd fetches public captions, articles and podcast audio for your own use. It doesn't
 fetch books, and this repo ships no content. You can add books you own as text files
-(`wwxd add <slug> book.txt`) or write a [fetcher plugin](CONTRIBUTING.md#fetcher-plugins).
+(`wwxd add <slug> book.txt`) or write a [fetcher plugin](https://github.com/MSliwa01/wwxd/blob/main/CONTRIBUTING.md#fetcher-plugins).
 Don't publish vaults built from material you don't have the right to share.
-[ETHICS.md](ETHICS.md) has the rules for using vaults and explains how a person can
+[ETHICS.md](https://github.com/MSliwa01/wwxd/blob/main/ETHICS.md) has the rules for using vaults and explains how a person can
 have their recipe removed.
 
 ## Requirements
@@ -437,4 +443,4 @@ at most a minute apart.
 
 The raw-sources-plus-compiled-wiki loop is Andrej Karpathy's LLM wiki idea. wwxd adds
 sourcing, speaker attribution and quote checking for the one-person case. Design notes
-are in [docs/design.md](docs/design.md). MIT licensed.
+are in [docs/design.md](https://github.com/MSliwa01/wwxd/blob/main/docs/design.md). MIT licensed.
