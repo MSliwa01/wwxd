@@ -52,6 +52,13 @@ wwxd bench report hormozi --gold gold/hormozi.yaml --arm raw --arm wwxd \
 Any agent CLI works. Pass `{prompt}` where the prompt goes, or leave it out to send
 the prompt on stdin. Runs resume, so a rate limit only costs the unfinished questions.
 
+The judge doesn't have to be an agent. Any command that takes the prompt and prints
+the judge's JSON works as `--agent`, for example a script that makes one API call to
+another provider's model. Without file tools it can't open the transcripts, so it can
+only check claims against the grading key and what it already knows. Tell it so in
+the prompt, or it may mark real quotes as unverified. `runs/2026-10-10/scripts/gemini_judge.sh`
+is an example.
+
 ## Opinion bench
 
 `gold/*-opinion.yaml` holds "should I do X or Y?" questions with no answer key. Run

@@ -50,34 +50,42 @@ When they never addressed the exact question, work it out the way they would.
 
 ## Answer format
 
+Write the answer as advice the user can read straight through, then list the
+sources underneath. The advice is the point; the sources are there to check it.
+
 ```
-**Verdict:** the option they'd pick or the action they'd take, in one sentence.
-Then one or two sentences of their reasoning, in plain words.
+<The answer, in plain prose. Open with what they'd tell you to do, in one or two
+sentences. Then their reasoning applied to the user's situation, with their numbers,
+examples and rules worked into the sentences. Two to four short paragraphs. Mark a
+claim with [1], [2] where it rests on a source, but don't paste quotes or timestamps
+into the prose. If the answer is inferred, say so in a sentence ("He never talked
+about KFC, but by his own rule about fast food, he'd…"). End with what would change
+their answer.>
 
-**Based on:** said it | follows from what they said (confidence: high/medium/low) | mostly beyond the vault
+**Sources**
+1. "<verbatim quote>" (<who>, <source title>, <date>, [12:34](https://www.youtube.com/watch?v=<id>&t=754s))
+2. "<verbatim quote>" (<who>, <essay title>, <date>, [link](<url>))
+3. Their rule, from the thinking page: <the rule in one line> ([[thinking/<member-id>]])
 
-**How we get there** (only when it follows from what they said)
-1. What they said about the nearest case: "…" ([[yt-…]] @ 12:34)
-2. The rule behind it, from their thinking page: … ([[thinking/<member-id>]])
-3. Why the new case falls under that rule, and so what they'd most likely say.
-
-**Why they'd say it**
-- Point, with a quote: "…" ([[yt-…]] @ 12:34)
-- A principle applied to this case: "…" ([[web-…]])
-- …
-
-**What they've done:** actions, if relevant.
-
-**What would change their answer:** the condition under which they'd say the opposite. For an inferred answer, name the difference between the cases that could break the inference.
+Based on: said it | follows from what they said (confidence: high/medium/low) | mostly beyond the vault
 ```
 
-Outside Obsidian, readers can't open `[[yt-…]]` links, so add the real URL next to
-each source the first time you cite it. It's in the raw doc's front matter. For
-YouTube, link to the moment: `https://www.youtube.com/watch?v=<id>&t=<seconds>s`.
+The prose carries everything the reader needs. Don't push the specifics down into
+the sources: if Hormozi said "raise prices 10% and keep it while the close rate stays
+above 65%", those numbers belong in the advice, and the quote that backs them goes in
+the list. Short phrases of theirs can appear in the prose in quotation marks when the
+wording matters, and then they're listed too.
+
+Don't write about the vault in the answer ("my sources say", "the vault has no…",
+"same video"). Write about the person. When nothing in the vault covers the question,
+the "Based on" line says so.
+
+Get each source's URL, title and date from the raw doc's front matter. For YouTube,
+link to the moment: `https://www.youtube.com/watch?v=<id>&t=<seconds>s`.
 
 ## Rules
 
-- Lead with the verdict. If the user asks "X or Y?", pick one. Say "it depends" only
+- Lead with what they'd tell the user to do. If the user asks "X or Y?", pick one. Say "it depends" only
   if the person themselves says it depends, and then give their deciding rule
   ("under $1M, do X; above it, Y").
 - Commit to their position as bluntly as they'd put it, with their numbers. Don't
@@ -92,8 +100,8 @@ YouTube, link to the moment: `https://www.youtube.com/watch?v=<id>&t=<seconds>s`
   guess. Don't refuse.
 - Don't use `reported` statements as the member's own view.
 - In a group vault, name who said what. Don't blend members into one voice.
-- Don't imitate their voice unless the user asks. The value is in the reasoning,
-  not the impression.
+- Write it as natural advice shaped by their thinking, not an impression of their
+  voice (no catchphrases, no "as Alex, I…") unless the user asks for one.
 
 ## Filing answers
 

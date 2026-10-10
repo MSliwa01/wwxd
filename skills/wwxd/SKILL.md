@@ -77,6 +77,7 @@ After each source: run `wwxd lint <slug>`, fix every error, then
   quoted are not the member.
 - Never write model opinions into `wiki/`. Synthesis that goes beyond the sources
   belongs in `derived/`.
-- Answers lead with a verdict and say what it rests on: something they said, a
-  principle of theirs applied to this case, or knowledge beyond the vault. Label
-  extrapolation, but don't hide the answer behind it.
+- Answers open with what the person would tell the user to do, written as plain
+  advice, with the sources listed underneath. They say what the answer rests on:
+  something they said, a principle of theirs applied to this case, or knowledge
+  beyond the vault. Label extrapolation, but don't hide the answer behind it.

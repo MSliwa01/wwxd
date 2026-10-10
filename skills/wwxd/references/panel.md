@@ -15,10 +15,10 @@ Never blend them into one voice.
    the user named; if they said "the panel" or "everyone", use every member with a
    thinking page. Two to four people works best.
 2. **Answer for each person separately**, following `ask.md` from start to finish for
-   each one: verdict, what it rests on, quotes, confidence. Do one person at a time,
-   or hand each person to a subagent if your agent supports it, so one person's
+   each one: their advice, what it rests on, sources, confidence. Do one person at a
+   time, or hand each person to a subagent if your agent supports it, so one person's
    framing doesn't leak into the next.
-3. **Map agreement and disagreement.** For each point where their verdicts differ,
+3. **Map agreement and disagreement.** For each point where their advice differs,
    find the reason on their thinking pages: a value they rank differently, a rule one
    holds and the other doesn't, a different situation each is picturing. Cite both
    sides. Where they agree, say whether they agree for the same reason or for
@@ -35,34 +35,49 @@ Never blend them into one voice.
 ## Answer format
 
 ```
-**The panel:** names, and one line on what each one optimizes for.
+The panel: names, and one line on what each one optimizes for.
 
 ## <Person A>
-**Verdict:** … **Based on:** … 
-- quotes with citations
+<Their advice in short prose, written as in ask.md: what they'd tell the user to
+do, then their reasoning applied to the user's situation, with [1], [2] markers.>
+
+Based on: said it | follows from what they said (confidence: …) | mostly beyond the vault
 
 ## <Person B>
-…
+<Same, continuing the numbering: [3], [4] …>
+
+Based on: …
 
 ## Where they agree
-- Point, and whether they reach it for the same reason.
+- Point, and whether they reach it for the same reason [1][3].
 
 ## Where they split, and why
-- **<topic>:** A says … because they value … ("quote", [[…]]). B says … because …
-  ("quote", [[…]]).
+- <topic>. A says … because they value … [2]. B says … because … [4].
 
 ## Debate (inferred from their own words)
-- **A on B's point that …:** … (confidence: medium) ("quote", [[…]])
-- **B on A's point that …:** …
+- A on B's point that …: … (confidence: medium) [2]
+- B on A's point that …: …
 
 ## How to use this (my synthesis, not theirs)
 - If <your situation>, lean on A, because …
 - If <other situation>, lean on B, because …
+
+**Sources**
+1. "<verbatim quote>" (<Person A>, <source title>, <date>, [12:34](https://www.youtube.com/watch?v=<id>&t=754s))
+2. Their rule, from the thinking page: <the rule in one line> ([[thinking/<member-id>]])
+3. "<verbatim quote>" (<Person B>, <essay title>, <date>, [link](<url>))
+4. …
 ```
+
+Number the sources once across the whole answer, so [3] means the same source
+wherever it appears. If subagents return their own numbered lists, renumber them
+when you merge. Each person's prose follows the rules in `ask.md`: specifics in
+the sentences, quotes and timestamps in the Sources list.
 
 ## Rules
 
-- Every claim belongs to one named person and carries that person's citation.
+- Every claim belongs to one named person and carries a marker for that person's
+  source.
 - Quotes follow `format.md`: verbatim, cited, timestamped for audio.
 - Don't make anyone agree to keep the peace. If they disagree, the disagreement is
   the answer.

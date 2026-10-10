@@ -450,6 +450,100 @@ to rank 9 answers that were often close. We didn't test whether a denser vault g
 better answers. Costs are Claude Code's list-price estimates. On a subscription you
 pay in usage limits instead.
 
+## Answer format: prose with sources underneath
+
+We changed the answer format after a judge from another lab said wwxd answers read
+"like an annotated transcript" (see [A judge from Google](#a-judge-from-google)). The
+old format had labelled sections (Verdict, Based on, How we get there, Why they'd say
+it) with the quotes inline. The new one gives the advice as plain prose with numbered
+markers like [1]. Under it comes a Sources list of verbatim quotes, each with who said
+it, the title, the date and a timestamped link, and then a "Based on" line. The
+template is in `skills/wwxd/references/ask.md`.
+
+Both formats ran with Opus 5.5 at effort high on the same vaults. There were two
+judges. Opus 5.5 at effort medium could read the raw transcripts. Gemini 3.5 Flash
+Lite had no tools and saw only the grading key.
+
+On the 12 questions of the ask12 set, each judge compared the old and new answer
+pairwise.
+
+| Judge | New format | Tie | Old format |
+|---|---|---|---|
+| Opus 5.5 | 8 | 2 | 2 |
+| Gemini 3.5 Flash Lite | 4 | 8 | 0 |
+
+In the two the Opus judge gave to the old format (`hz-11`, `yc-05`), both answers had
+the key position and verified quotes, and the old one included one more specific
+point.
+
+On the 24 opinion questions, each judge ranked three answers: the old format, the new
+format and raw Opus. The wwxd arms ran at effort high. The raw arm is the original raw
+answers from the opinion bench. The new format ranked first on 20 of 24 with both
+judges.
+
+| Opus judge, 1 to 5 | New format | Old format | Raw Opus |
+|---|---|---|---|
+| Decisiveness | 4.92 | 4.62 | 3.50 |
+| Distinctiveness | 4.75 | 4.46 | 2.67 |
+| Grounding | 4.88 | 4.21 | 2.75 |
+| Usefulness | 4.38 | 3.88 | 3.96 |
+| Mean rank | 1.17 | 2.00 | 2.83 |
+| Pick contradicts the person | 0 | 0 | 1 |
+
+| Gemini 3.5 Flash Lite judge, 1 to 5 | New format | Old format | Raw Opus |
+|---|---|---|---|
+| Decisiveness | 4.75 | 4.54 | 3.50 |
+| Distinctiveness | 4.88 | 4.42 | 3.54 |
+| Grounding | 4.96 | 4.50 | 3.21 |
+| Usefulness | 4.92 | 4.38 | 4.50 |
+| Mean rank | 1.17 | 2.08 | 2.75 |
+| Pick contradicts the person | 0 | 0 | 1 |
+
+With the Opus judge, the old format scored a little below raw Opus on usefulness
+(3.88 vs 3.96), and the new format scored 4.38.
+
+The new answers are longer. Their median length was 717 to 794 words, against 606 to
+671 for the old format. Two old-format YC opinion answers first failed on a Claude
+usage limit, and we reran them before judging. The data is in
+`runs/2026-10-10/<vault>-prose/`.
+
+## A judge from Google
+
+Gemini 3.5 Flash Lite, on the free tier, judged the main bench, the opinion bench and
+the model and effort ranking. It ran without file tools, one API call per judgment, so
+it could check answers only against the grading key and what it already knew. The
+free tier allows too few requests for an agent that greps transcripts. Gemini 3.8
+Flash, for example, allows 20 requests a day per key.
+
+On the main bench it preferred wwxd on 34 of 40 pairs. The other judges preferred
+wwxd on 40 of 40 (Opus), 40 of 40 (Haiku), 39 of 40 (Nemotron) and 35 of 36 (Muse
+Spark). On the opinion bench, with the old answer format, it ranked wwxd first on 12
+of 24 questions, the persona prompt on 10 and raw Opus on 2.
+
+On the model and effort ranking it put the models in the same order as the Claude
+judges, with a mean rank of 2.64 for Opus, 4.67 for Sonnet and 7.69 for Haiku.
+
+| Mean rank, Gemini judge | medium | high | xhigh |
+|---|---|---|---|
+| Opus | 2.50 | 3.50 | 1.92 |
+| Sonnet | 4.42 | 4.67 | 4.92 |
+| Haiku | 8.33 | 7.58 | 7.17 |
+
+It doesn't reproduce the effort trend within Sonnet, where both Claude judges ranked
+xhigh above medium.
+
+The main and opinion numbers are lower than the other judges' for three reasons we
+found in its comments:
+
+- Without the transcripts, it called real 2026 statements fabricated in `hz-09` and
+  `yc-09`. Those statements are after its training data.
+- It can't tell an answer that sounds like Hormozi from one that quotes what he said.
+  So it scored the persona answers' grounding close to wwxd's.
+- In several losses it said the wwxd answer read like an annotated transcript
+  (`hz-01`, `yc-06`, `yc-12`). That led to the format change above.
+
+The data is in `runs/2026-10-10/<vault>-gemini-judge/`.
+
 ## Limits of this run
 
 The gold sets were written from the same sources the vaults were built from, so the

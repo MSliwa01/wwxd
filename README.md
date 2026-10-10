@@ -48,6 +48,10 @@ With the vault, the answer starts like this:
 >   over 80% close rates, I usually know that there's room in sale."
 >   ([@ 8:06](https://www.youtube.com/watch?v=OQf2Ba-Lp_4&t=486s))
 
+That answer is in the earlier format, with quotes inline. Answers now read as prose
+advice with numbered markers, and the verbatim quotes with timestamped links are
+listed underneath.
+
 ## Results
 
 On 40 questions across a Hormozi vault and a Y Combinator vault, a blind judge
@@ -65,6 +69,13 @@ from other model families NVIDIA Nemotron 3 Ultra (39 of 40) and Muse Spark 1.3 
 of 36), so this isn't one model grading itself. 160 quotes in the wwxd answers
 were checked against the transcripts by a script, and 158 were found verbatim. The
 other 2 were video titles.
+
+A judge from Google, Gemini 3.5 Flash Lite, preferred wwxd on 34 of 40 with no access
+to the transcripts, and it put Opus, Sonnet and Haiku in the same order as the Claude
+judges ([details](bench/RESULTS.md#a-judge-from-google)). The current prose answer
+format ranked first on 20 of 24 opinion questions, ahead of the earlier format and
+raw Opus, with both an Opus and a Gemini judge
+([details](bench/RESULTS.md#answer-format-prose-with-sources-underneath)).
 
 These runs used Opus 5.5. Sonnet 5.5 works about as well for compiling and nearly as
 well for answering. Haiku 5.5 still beat raw Opus, but it ranked last of the three and
