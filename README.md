@@ -66,8 +66,10 @@ of 36), so this isn't one model grading itself. 160 quotes in the wwxd answers
 were checked against the transcripts by a script, and 158 were found verbatim. The
 other 2 were video titles.
 
-These runs used Opus 5.5. Sonnet 5.5 also works for compiling and answering, and
-Haiku 5.5 doesn't. See [Which model and effort](#which-model-and-effort).
+These runs used Opus 5.5. Sonnet 5.5 works about as well for compiling and nearly as
+well for answering. Haiku 5.5 still beat raw Opus, but it ranked last of the three and
+missed most of the key evidence when compiling. See
+[Which model and effort](#which-model-and-effort).
 
 ### Opinionated isn't the same as right
 
@@ -263,6 +265,7 @@ list price if billed per token (the real number can be about 50% lower or higher
   opus    claude-opus-5-5    $   16.50
   sonnet  claude-sonnet-5-5  $    9.83
   haiku   claude-haiku-5-5   $    0.49
+Measured on Opus without an advisor, compiling cost 0.73x this at effort medium, 1.1x this at effort high, 1.75x this at effort xhigh.
 ```
 
 Rough numbers from our runs on Opus 5.5:
@@ -277,12 +280,13 @@ A panel of three people costs roughly three questions.
 
 Most of the compile cost is fixed: the agent rereads the skill, the index and the
 pages it touches for every source. So a vault of 15 long videos costs about $20 to
-$30 on Opus. The table comes from runs at effort xhigh. In our model and effort
-study, Opus at effort medium cost about 40% as much per source as at xhigh. Sonnet
-compiled about as well as Opus for less, and Haiku missed about two thirds of the key
-evidence. Our runs had a Fable 5.1 advisor turned on. The numbers above count only
-the main model's tokens, and the advisor added 85% to 125% on top. So if your Claude
-Code uses an advisor model, the cost roughly doubles.
+$30 on Opus. The table comes from runs at effort xhigh with a Fable 5.1 advisor
+turned on, and counts only the main model's tokens. The advisor added 85% to 125% on
+top, so with an advisor the cost roughly doubles. Without one, the main model does
+that thinking itself. In our model and effort study, with no advisor, Opus cost about
+0.7 times the table per source at effort medium, about the same at high, and 1.75
+times at xhigh. `wwxd estimate` prints these factors. Sonnet compiled about as well
+as Opus for less, and Haiku missed about two thirds of the key evidence.
 
 ### Which model and effort
 

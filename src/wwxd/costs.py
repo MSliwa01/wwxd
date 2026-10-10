@@ -39,6 +39,11 @@ ASK_TOKENS = {"cache_write": 37_000, "cache_read": 249_000, "output": 3_300}
 # that adds its own cost on top. In our runs a Fable 5.1 advisor added 85% to 125%.
 ADVISOR_EXTRA = 1.0
 
+# The token model above was fit on Opus sessions at effort xhigh with that advisor on,
+# and counts only the main model. Without an advisor the main model does that thinking
+# itself. Measured Opus compile cost relative to the estimate, no advisor (Oct 2026):
+EFFORT_FACTOR = {"medium": 0.73, "high": 1.10, "xhigh": 1.75}
+
 WORDS_PER_MINUTE = 150  # spoken English in talks and podcasts
 WORDS_PER_ARTICLE = 1_500  # when an article's length isn't known yet
 

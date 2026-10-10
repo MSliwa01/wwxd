@@ -329,6 +329,11 @@ the raw transcript.
 
 Per source on average, Opus cost $0.85, $1.29 and $2.04 at medium, high and xhigh,
 Sonnet $0.35, $0.57 and $1.13, and Haiku $0.03, $0.06 and $0.21.
+At xhigh that's more than the README's cost table, which was fit on runs with a Fable
+5.1 advisor and counts only the main model. Without an advisor, the main model does
+that thinking itself. At xhigh it wrote 1.8 to 3.5 times the output tokens the table
+assumes. Against that table, Opus cost 0.73 times as much at medium, 1.1 times at high and 1.75 times at
+xhigh.
 
 Higher effort wrote more statements for every model. From medium to xhigh, Opus went
 from 191 to 288, Sonnet from 119 to 295 and Haiku from 87 to 146. Time and cost rose

@@ -397,6 +397,8 @@ def estimate(
     typer.echo("list price if billed per token (the real number can be about 50% lower or higher):")
     for model, price in costs.PRICES.items():
         typer.echo(f"  {model:7} {price['id']:18} ${costs.dollars(tokens, model):8.2f}")
+    typer.echo("Measured on Opus without an advisor, compiling cost "
+               + ", ".join(f"{f:g}x this at effort {e}" for e, f in costs.EFFORT_FACTOR.items()) + ".")
     typer.echo("With an advisor model enabled in Claude Code, expect about double. "
                "On a Claude subscription this comes out of your usage limits instead of dollars. "
                "Fetching, lint and the voice check run locally and cost nothing.")
