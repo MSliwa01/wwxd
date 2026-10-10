@@ -17,7 +17,7 @@ class Settings:
 def get_settings() -> Settings:
     return Settings(
         home=Path(os.environ.get("WWXD_HOME", "./vaults")).expanduser().resolve(),
-        whisper_model=os.environ.get("WWXD_WHISPER_MODEL", "small"),
+        whisper_model=os.environ.get("WWXD_WHISPER_MODEL", "auto"),
         whisper_device=os.environ.get("WWXD_WHISPER_DEVICE", "auto"),
         download_delay=float(os.environ.get("WWXD_DOWNLOAD_DELAY", "1.5")),
         cookies_from_browser=os.environ.get("WWXD_COOKIES_FROM_BROWSER", "").strip(),

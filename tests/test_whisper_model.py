@@ -28,7 +28,10 @@ def loaded(monkeypatch, tmp_path):
 
 def test_model_name_precedence(monkeypatch):
     monkeypatch.delenv("WWXD_WHISPER_MODEL", raising=False)
+    monkeypatch.setattr(whisper_mod, "_resolve_device", lambda d: "cpu")
     assert whisper_mod.model_name() == "small"
+    monkeypatch.setattr(whisper_mod, "_resolve_device", lambda d: "cuda")
+    assert whisper_mod.model_name() == "large-v3-turbo"
     monkeypatch.setenv("WWXD_WHISPER_MODEL", "medium")
     assert whisper_mod.model_name() == "medium"
     assert whisper_mod.model_name("large-v3") == "large-v3"
