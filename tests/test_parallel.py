@@ -1,3 +1,4 @@
+import os
 import threading
 from pathlib import Path
 
@@ -71,6 +72,7 @@ def test_claim_skips_and_releases(vault):
     assert parallel.claim(vault) == IDS[0]
 
 
+@pytest.mark.skipif(os.name == "nt", reason="on Windows claims are never treated as stale")
 def test_stale_claims_are_cleared(vault):
     parallel.claim(vault, pid=2**22 + 12345)  # no such process
     live = parallel.claim(vault)  # this process

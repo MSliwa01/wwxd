@@ -3,6 +3,8 @@ from __future__ import annotations
 import contextlib
 import datetime as dt
 import os
+import threading
+import time
 from collections.abc import Iterator
 from dataclasses import asdict, dataclass, field
 from importlib import resources
@@ -98,19 +100,34 @@ class Vault:
         path = self.path / "sources.yaml"
         if not path.exists():
             return []
-        data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        for attempt in range(50):
+            try:
+                text = path.read_text(encoding="utf-8")
+                break
+            except PermissionError:  # Windows: save_sources is replacing it right now
+                if attempt == 49:
+                    raise
+                time.sleep(0.05)
+        data = yaml.safe_load(text) or {}
         return [Source(**item) for item in data.get("sources") or []]
 
     def save_sources(self, sources: list[Source]) -> None:
         payload = {"sources": [s.to_dict() for s in sources]}
         # Write, then rename: someone reading sources.yaml never sees half a file.
-        tmp = self.path / f".sources.yaml.{os.getpid()}.tmp"
+        tmp = self.path / f".sources.yaml.{os.getpid()}.{threading.get_ident()}.tmp"
         tmp.write_text(
             "# Managed by `wwxd`. Edit `status` by hand or with `wwxd approve/reject`.\n"
             + yaml.safe_dump(payload, sort_keys=False, allow_unicode=True, width=120),
             encoding="utf-8",
         )
-        os.replace(tmp, self.path / "sources.yaml")
+        for attempt in range(50):
+            try:
+                os.replace(tmp, self.path / "sources.yaml")
+                return
+            except PermissionError:  # Windows: a reader has the file open for a moment
+                if attempt == 49:
+                    raise
+                time.sleep(0.05)
 
     @contextlib.contextmanager
     def edit_sources(self) -> Iterator[list[Source]]:
@@ -133,11 +150,19 @@ class Vault:
 
 
 def _flock(fh) -> None:
+    """Exclusive lock on an open file, released when it's closed."""
     try:
         import fcntl
-    except ImportError:  # Windows: no advisory locks; parallel compile is best-effort there
-        return
-    fcntl.flock(fh, fcntl.LOCK_EX)  # released when the file is closed
+    except ImportError:  # Windows
+        import msvcrt
+
+        while True:
+            try:
+                msvcrt.locking(fh.fileno(), msvcrt.LK_LOCK, 1)  # retries for about 10 s, then raises
+                return
+            except OSError:
+                continue
+    fcntl.flock(fh, fcntl.LOCK_EX)
 
 
 def resolve_vault(name_or_path: str) -> Vault:
