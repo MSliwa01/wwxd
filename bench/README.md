@@ -13,6 +13,9 @@ Two arms answer the same gold questions in Claude Code, both with the same model
 | `raw` | The question only. No tools, no MCP servers (`--tools "" --strict-mcp-config`). |
 | `wwxd` | The question plus "use the wwxd skill to answer from vaults/<slug>". Read-only file tools and the `wwxd` CLI. |
 
+A web search baseline arm uses `prompts/answer_web.md` with only the WebSearch and
+WebFetch tools, and our run of it is in `runs/2026-10-11/scripts/web_bench.sh`.
+
 A third Claude Code session judges each pair blind. Before it sees the answers, the
 harness removes citation markup, links, source ids and timestamps, and shuffles the
 order. The judge can open the raw transcripts to check quotes. It scores each answer

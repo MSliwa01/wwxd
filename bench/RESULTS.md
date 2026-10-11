@@ -544,6 +544,96 @@ found in its comments:
 
 The data is in `runs/2026-10-10/<vault>-gemini-judge/`.
 
+## Web search vs a vault
+
+Why not let the model search the web for what the person said? In this run, Opus 5.5
+had only the WebSearch and WebFetch tools and the prompt `prompts/answer_web.md`.
+The prompt tells it to search the web for what the person has said and done, answer
+decisively the way they would, and cite the pages it used. The wwxd arm was Opus 5.5
+with the vault and the prose answer format. Both ran at effort high with no advisor,
+on the 40 main-bench questions and the 24 opinion questions.
+
+There were four judges. Opus 5.5 at effort medium, Haiku 5.5 at effort high and Muse
+Spark 1.3 (through opencode) could read the raw transcripts. Gemini 3.5 Flash Lite
+had no tools and saw only the grading key.
+
+On the main bench, each judge compared the web and wwxd answers pairwise.
+
+| Judge | wwxd preferred | Tie | Web preferred |
+|---|---|---|---|
+| Opus 5.5 | 39 of 40 | 0 | 1 |
+| Haiku 5.5 | 38 of 40 | 0 | 2 |
+| Gemini 3.5 Flash Lite | 34 of 40 | 3 | 3 |
+| Muse Spark 1.3 | 33 of 35 | 0 | 2 |
+
+5 Muse Spark pairs failed on opencode errors.
+
+| Opus judge, 1 to 5 | Web search | wwxd |
+|---|---|---|
+| Accuracy | 3.27 | 4.95 |
+| Specificity | 3.17 | 4.88 |
+| Faithfulness | 3.15 | 4.90 |
+| Usefulness | 3.45 | 4.78 |
+
+The gap is widest on the 12 fresh questions, about 2026 material. wwxd won all 12
+with the Opus judge, and accuracy was 2.83 for web search against 5.00. On the known
+questions, about older material, accuracy was 4.00 against 4.75. The one web win with the
+Opus judge was `yc-01`. Both answers were right, but the wwxd answer leaned toward
+"run with it" on the strength of a quote from a business-school Q&A, against Paul
+Graham's main advice to wait.
+
+On the 24 opinion questions, each judge ranked four answers. Raw Opus and the
+persona prompt are the original answers from the opinion bench. Web search and wwxd
+are the answers from this run.
+
+| Ranked first, of 24 | Raw | "Be decisive, as X" | Web search | wwxd |
+|---|---|---|---|---|
+| Opus 5.5 | 0 | 0 | 5 | 19 |
+| Haiku 5.5 | 0 | 0 | 0 | 24 |
+| Gemini 3.5 Flash Lite | 0 | 6 | 6 | 12 |
+| Muse Spark 1.3 | 0 | 0 | 0 | 24 |
+
+| Opus judge, 1 to 5 | Raw | "Be decisive, as X" | Web search | wwxd |
+|---|---|---|---|---|
+| Decisiveness | 3.25 | 4.83 | 4.88 | 4.67 |
+| Distinctiveness | 2.58 | 3.17 | 4.38 | 4.71 |
+| Grounding | 2.88 | 2.83 | 3.54 | 4.96 |
+| Usefulness | 3.83 | 4.04 | 4.33 | 4.29 |
+| Mean rank | 3.79 | 3.17 | 1.83 | 1.21 |
+
+Summed over the four judges, the pick contradicted the person 5 times for raw Opus,
+4 for the persona prompt, 5 for web search and 0 for wwxd. With the Opus judge, web
+search was the most decisive arm and slightly more useful than wwxd. Its grounding
+varied by judge, from 4.04 with Gemini, which couldn't check quotes, to 1.92 with Muse
+Spark, below raw Opus.
+
+We also counted the links in the 40 main-bench web answers.
+
+| Vault | Links | Most cited domains |
+|---|---|---|
+| hormozi | 156 | shortform.com 24, podscripts.co 18, supersummary.com 9, summify.io 6, skool.com 5 |
+| yc | 159 | paulgraham.com 14, ycombinator.com 13, techcrunch.com 9, x.com 7, lennysnewsletter.com 6 |
+
+For Hormozi, search mostly found book summaries and transcript sites. Only 5 of the
+156 links went to youtube.com or acquisition.com. For YC it found Paul Graham's
+essays, which are on the web as he wrote them, but the talks came through press and
+newsletters. On `yc-05`, the Opus judge wrote that the web answer "mostly leans on
+the 2007 essay and secondhand summaries of the talk". The median web answer took
+about 52 seconds and 522 words. The median wwxd answer took 40 to 42 seconds and 687
+to 738 words.
+
+What this means. Web search finds a person's well-known positions and gets the
+direction right on older material. It mostly reaches them through other people's
+summaries. It misses specifics like numbers, examples and the person's own reasons,
+it rarely finds what they said in 2026, and it can't check that a quote is real. On
+`hz-02` the Opus judge found that the web answer's quotes "come from an episode that
+isn't in the sources, so they can't be checked". wwxd answers from the transcripts,
+so a script can check every quote.
+
+This is one run. The raw and persona opinion answers came from the earlier opinion
+bench, at effort xhigh with a Fable 5.1 advisor, not from this run. Gemini judged
+without tools. The data and scripts are in [runs/2026-10-11](runs/2026-10-11).
+
 ## Limits of this run
 
 The gold sets were written from the same sources the vaults were built from, so the

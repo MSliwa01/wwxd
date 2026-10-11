@@ -99,13 +99,30 @@ the vault.
 | Ranked best | 0 | 0 | 93 of 93 |
 | Pick contradicts the person | 9 | 8 | 0 |
 
-![Scatter of decisiveness against grounding: the persona prompt is decisive but ungrounded, wwxd is both](https://raw.githubusercontent.com/MSliwa01/wwxd/main/docs/img/chart-opinion.png)
-
 The persona prompt stops the hedging, but its reasons are generic or invented. Asked
 "I have $50k saved, should I pay off my car loan or put it into my business?", it
 said to keep the low-rate loan, the standard financial-advice answer. Hormozi says
 "ideally just pay off your car so you don't have to think about it again" and that
 he skews "very close to the Ramsey side". wwxd quoted both.
+
+### Isn't web search enough?
+
+We gave Opus 5.5 only web search and told it to find what the person said, answer
+decisively and cite its pages. Against Opus with a wwxd vault, both at effort high,
+the judges preferred wwxd on 39 of 40 main-bench questions (Opus 5.5), 38 of 40
+(Haiku 5.5), 34 of 40 (Gemini 3.5 Flash Lite) and 33 of 35 (Muse Spark 1.3). On the
+12 questions about 2026 material, the Opus judge picked wwxd every time.
+
+Search finds a person's well-known positions, but mostly through other people's
+summaries. For Hormozi, the most cited sites were shortform.com and podscripts.co,
+and 5 of 156 links went to YouTube or acquisition.com. It misses the specifics and
+can't check a quote. When the judges ranked all four answers to each opinion
+question together, web search was about as decisive as the persona prompt, its
+grounding averaged 3.0 against 4.8 for wwxd, and 5 of its picks contradicted the
+person
+([details](https://github.com/MSliwa01/wwxd/blob/main/bench/RESULTS.md#web-search-vs-a-vault)).
+
+![Scatter of decisiveness against grounding: the persona prompt and web search are decisive but not grounded, wwxd is both](https://raw.githubusercontent.com/MSliwa01/wwxd/main/docs/img/chart-opinion.png)
 
 ### Questions they never answered
 

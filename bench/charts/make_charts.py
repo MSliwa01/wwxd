@@ -4,8 +4,9 @@ Run from the repo root:
 
     uv run --with matplotlib python bench/charts/make_charts.py
 
-Numbers come from bench/runs/2026-10-10 where the raw data is simple to read.
-The rest are copied from bench/RESULTS.md, with the section named next to them.
+Numbers come from bench/runs/2026-10-10 and 2026-10-11 where the raw data is
+simple to read. The rest are copied from bench/RESULTS.md, with the section named
+next to them.
 """
 
 from __future__ import annotations
@@ -124,22 +125,51 @@ def save(fig: plt.Figure, name: str) -> None:
 
 # 1. Opinion bench ----------------------------------------------------------
 
-# bench/RESULTS.md, "Opinion bench: does it actually take a side?" (mean of four
-# judges). To add an arm, append a dict; the chart lays itself out from this list.
+# bench/RESULTS.md, "Web search vs a vault". Four arms ranked together on the 24
+# opinion questions, scores averaged over the four judges. To add an arm, add a run
+# name and a dict; the chart lays itself out from this list.
+OPINION_RUNS = ROOT / "bench" / "runs" / "2026-10-11"
+OPINION_JUDGES = ["opus", "haiku", "lite", "muse"]
 OPINION_ARMS = [
-    {"label": "Raw Opus", "decisive": 3.5, "grounded": 2.8, "contradicts": 9, "color": GRAY, "offset": (-14, 0), "ha": "right"},
-    {"label": '"Be decisive, as X"', "decisive": 4.8, "grounded": 2.6, "contradicts": 8, "color": GRAY_2, "offset": (10, -16), "ha": "right"},
-    {"label": "Opus + wwxd", "decisive": 4.7, "grounded": 4.9, "contradicts": 0, "color": BLUE, "offset": (-14, 0), "ha": "right"},
-    # {"label": "Opus + web search", "decisive": ..., "grounded": ..., "contradicts": ..., "color": ORANGE, "offset": (14, 0), "ha": "left"},
+    # "place" puts the label left of the point, or above or below it.
+    {"arm": "op-raw", "label": "Raw Opus", "color": GRAY, "place": "left"},
+    {"arm": "op-persona", "label": '"Be decisive, as X"', "color": GRAY_2, "place": "below"},
+    {"arm": "op-web", "label": "Opus + web search", "color": ORANGE, "place": "above"},
+    {"arm": "op-prose", "label": "Opus + wwxd", "color": BLUE, "place": "left"},
 ]
 
 
+def opinion_stats() -> None:
+    """Fill each arm's mean decisiveness and grounding and its contradicted picks."""
+    names = "-".join(a["arm"] for a in OPINION_ARMS)
+    for arm in OPINION_ARMS:
+        means = {"decisiveness": [], "grounding": []}
+        arm["contradicts"] = 0
+        for judge in OPINION_JUDGES:
+            per_judge = {k: [] for k in means}
+            for vault in ("hormozi", "yc"):
+                path = OPINION_RUNS / f"{vault}-web" / f"rank-{names}-{judge}.jsonl"
+                for line in path.read_text().splitlines():
+                    row = json.loads(line) if line.strip() else {}
+                    if not row.get("ranking"):
+                        continue
+                    s = row["scores"][arm["arm"]]
+                    for k in per_judge:
+                        per_judge[k].append(s[k])
+                    arm["contradicts"] += str(s.get("consistent_with_person", "")).lower() == "no"
+            for k in means:
+                means[k].append(statistics.mean(per_judge[k]))
+        arm["decisive"] = round(statistics.mean(means["decisiveness"]), 1)
+        arm["grounded"] = round(statistics.mean(means["grounding"]), 1)
+
+
 def chart_opinion() -> None:
+    opinion_stats()
     fig = card(9.0, 6.8)
     header(
         fig,
-        "Telling a model to be decisive makes it confident, not right",
-        "24 \"should I do X or Y?\" questions, scored 1 to 5 by four judges from three labs",
+        "A persona prompt or web search makes Opus decisive, not grounded",
+        "24 \"should I do X or Y?\" questions, scored 1 to 5, mean of four judges from three labs",
         0.945,
     )
     ax = fig.add_axes([0.105, 0.2, 0.85, 0.6])
@@ -151,8 +181,8 @@ def chart_opinion() -> None:
     ax.set_xlabel("Decisiveness: picks one option and commits", labelpad=10)
     ax.set_ylabel("Grounding: reasons the person really holds", labelpad=10)
 
-    # Quiet region label for the trap the persona prompt falls into.
-    ax.text(5.2, 1.2, "decisive but made up", fontsize=10, color=MUTED, ha="right", style="italic")
+    # Quiet region labels.
+    ax.text(5.2, 1.2, "decisive but not grounded", fontsize=10, color=MUTED, ha="right", style="italic")
     ax.text(1.15, 5.1, "grounded in what they said", fontsize=10, color=MUTED, ha="left", style="italic")
 
     for arm in OPINION_ARMS:
@@ -160,17 +190,19 @@ def chart_opinion() -> None:
         ax.scatter(*xy, s=190, color=arm["color"], edgecolors=SURFACE, linewidths=2.5, zorder=3)
         n = arm["contradicts"]
         picks = "no pick contradicts the person" if n == 0 else f"{n} picks contradict the person"
-        dx, dy = arm["offset"]
-        name_va = "bottom" if dy == 0 else "top"
-        name_dy = dy + 2 if dy == 0 else dy
-        sub_dy = dy - 2 if dy == 0 else dy - 18
+        sub = f'{arm["decisive"]} decisive, {arm["grounded"]} grounded\n{picks}'
+        # (x offset, name y offset, name va, sub y offset, sub va) in points.
+        dx, name_dy, name_va, sub_dy, sub_va = {
+            "left": (-14, 2, "bottom", -2, "top"),
+            "above": (-8, 48, "bottom", 10, "bottom"),
+            "below": (-8, -10, "top", -28, "top"),
+        }[arm["place"]]
         ax.annotate(arm["label"], xy, xytext=(dx, name_dy), textcoords="offset points",
-                    fontsize=12, fontweight="bold", color=INK, ha=arm["ha"], va=name_va)
-        ax.annotate(f'{arm["decisive"]} decisive, {arm["grounded"]} grounded\n{picks}', xy,
-                    xytext=(dx, sub_dy), textcoords="offset points",
-                    fontsize=10, color=INK_2, ha=arm["ha"], va="top", linespacing=1.25)
+                    fontsize=12, fontweight="bold", color=INK, ha="right", va=name_va)
+        ax.annotate(sub, xy, xytext=(dx, sub_dy), textcoords="offset points",
+                    fontsize=10, color=INK_2, ha="right", va=sub_va, linespacing=1.25)
 
-    footer(fig, "Judges: Opus 5.5, Haiku 5.5, Nemotron 3 Ultra, Muse Spark 1.3. Data: bench/RESULTS.md.")
+    footer(fig, "Judges: Opus 5.5, Haiku 5.5, Gemini 3.5 Flash Lite, Muse Spark 1.3. Data: bench/runs/2026-10-11.")
     save(fig, "chart-opinion.png")
 
 
