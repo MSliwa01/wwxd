@@ -450,6 +450,43 @@ to rank 9 answers that were often close. We didn't test whether a denser vault g
 better answers. Costs are Claude Code's list-price estimates. On a subscription you
 pay in usage limits instead.
 
+## Parallel compile
+
+Does compiling several sources at once cost quality? We compiled the 4 sources of
+the model and effort study again with Sonnet 5.5 at effort high, 3 sessions at
+once on the yc vault and 1 on the hz vault, and scored the vaults the same way.
+Raw data is in [runs/2026-10-11-parallel](runs/2026-10-11-parallel).
+
+| Sonnet 5.5 high, 4 sources | Statements | Attribution | Gold evidence | Cost | Wall time |
+|---|---|---|---|---|---|
+| One at a time (model and effort study) | 193 | 41 of 42 (97.6%) | 12 of 17 | $2.30 | 12.1 min |
+| Extract in parallel, then place one at a time | 238 | 42 of 44 (95.5%) | 9 of 17 | $3.62 | 8.5 min |
+| Parallel, each session compiles its source (`wwxd compile`) | 224 | 45 of 48 (93.8%) | 12 of 17 | $2.37 | 3.6 min |
+
+Every vault passed lint with no errors. The parallel vaults had no near-duplicate
+leaves.
+
+We tried two designs. In the first, parallel sessions only extracted attributed
+quotes into staging files, and one session at a time placed them into the wiki, so
+no two sessions ever edited the same page. Placing turned out nearly as slow and
+expensive as extracting: it rewrites stances, overviews, tensions and thinking pages
+either way. With one placer, that made the run barely faster and about 50% more
+expensive, and it found 9 of the 17 gold quotes instead of 12. In the second, each
+session compiles its source straight into the wiki, following rules for shared pages
+(search right before creating a leaf, small edits to shared pages, retry when a
+file changed under you, fix lint errors only in your own pages). It cost the same as
+one at a time, found the same gold evidence, and finished in under a third of the
+time. `wwxd compile` uses the second design.
+
+Attribution was 93.8% in the parallel run against 97.6% one at a time: 3 wrong
+statements against 1. Sonnet xhigh, run one at a time, scored 93.7% in the study,
+so this is within the run-to-run spread we've seen, but it's one run.
+
+Limits: one run per arm, 4 sources, and at most 3 sessions on the same vault at
+once. With more sessions, or a vault where many sources hit the same few leaves,
+expect more near-duplicates; `wwxd health` reports them and `consolidate.md` merges
+them.
+
 ## Answer format: prose with sources underneath
 
 We changed the answer format after a judge from another lab said wwxd answers read

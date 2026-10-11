@@ -141,7 +141,10 @@ def _page_index(wiki: Path) -> set[str]:
     return names
 
 
-def lint(vault: Vault) -> list[Issue]:
+def lint(vault: Vault, only: list[str] | None = None) -> list[Issue]:
+    """Check the wiki. `only`: report issues for these vault-relative paths (files or
+    folders) and skip the whole-wiki structure checks, so a parallel compile session
+    can check its own pages while other sessions are still writing theirs."""
     issues: list[Issue] = []
     raw = RawIndex(vault)
     member_ids = {m.id for m in vault.members}
@@ -216,6 +219,10 @@ def lint(vault: Vault) -> list[Issue]:
             continue
         if rel_name not in linked and page.stem not in linked:
             issues.append(Issue("warning", page.relative_to(vault.path).as_posix(), 1, "orphan page: nothing links here (add it to index.md)"))
+    if only:
+        wanted = [o.strip("/") for o in only]
+        return [i for i in [*issues, *_voice_issues(vault)]
+                if any(i.path == w or i.path.startswith(w + "/") for w in wanted)]
     issues.extend(structure_warnings(vault, issues))
     issues.extend(_voice_issues(vault))
     return issues

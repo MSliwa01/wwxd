@@ -115,3 +115,18 @@ voiceprint draws on everything credited to that member.
 
 Every 10 compiled sources, run `wwxd health <slug>`. If it flags near-duplicates,
 oversize leaves, missing overviews or index gaps, follow `consolidate.md`.
+
+## Other sessions at the same time
+
+`wwxd compile <slug> --jobs N` runs N sessions, each compiling its own source into
+the same wiki. If you are one of them:
+
+- Search for an existing leaf right before you create one (another session may
+  have just made it).
+- If an edit fails because the file changed since you read it, re-read it and
+  apply your change again.
+- Make small, targeted edits to shared pages (`index.md`, `tensions.md`,
+  `profile.md`, `_overview.md`, thinking pages). Never rewrite them whole.
+- Run `wwxd lint <slug>` and fix every error in the pages you touched. Errors in
+  pages you didn't touch belong to a session that is still working; leave them.
+  `wwxd lint <slug> --only <path>` limits the check to the pages you name.

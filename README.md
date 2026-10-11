@@ -292,7 +292,7 @@ you've approved, before anything is fetched:
 $ wwxd estimate hormozi
 13 sources, about 87,336 words
 tokens: 17.1M total (15.8M cache reads, 0.96M cache writes, 0.28M output)
-time: about 65 min of agent work (one source at a time)
+time: about 65 min of agent work one source at a time; `wwxd compile hormozi --jobs N` runs N at once for the same cost
 list price if billed per token (the real number can be about 50% lower or higher):
   opus    claude-opus-5-5    $   16.50
   sonnet  claude-sonnet-5-5  $    9.83
@@ -335,6 +335,30 @@ and xhigh, for both compiling and answering, with no advisor.
 
 You don't need an advisor model. Numbers and limits are in
 [bench/RESULTS.md](https://github.com/MSliwa01/wwxd/blob/main/bench/RESULTS.md#model-and-effort-study).
+
+## Compile many sources at once
+
+Compiling one source at a time takes a few minutes per source, so a vault of 70
+videos takes an afternoon. `wwxd compile` runs several Claude Code sessions at once,
+each compiling one source into the same wiki:
+
+```bash
+wwxd compile hormozi --jobs 4                     # Sonnet 5.5 at effort high by default
+wwxd compile hormozi --jobs 4 --model claude-opus-5-5 --effort medium
+```
+
+On the 4 sources of the model and effort study, 3 sessions at once finished in 3.6
+minutes instead of 12, for the same cost ($2.37 against $2.30), and found the same
+12 of 17 key evidence quotes
+([details](https://github.com/MSliwa01/wwxd/blob/main/bench/RESULTS.md#parallel-compile)).
+The sessions follow rules for the pages they share (`references/compile.md`), and
+`wwxd mark-compiled` writes `sources.yaml` under a lock. With many sessions on one
+vault, expect a few near-duplicate leaves. Run `wwxd health` afterwards and let the
+agent consolidate what it flags.
+
+Your machine only waits on the agent, so `--jobs` is limited by your API rate limits
+or subscription usage, not by your CPU. The total cost doesn't change; you spend it
+faster. `--agent-cmd 'opencode run -m {model} {prompt}'` uses another agent CLI.
 
 ## Example recipes
 
@@ -404,7 +428,8 @@ example into your notes app's folder.
 | `wwxd fetch <slug>` | Download captions, transcripts and articles into `raw/` |
 | `wwxd pending <slug>` | Sources fetched but not compiled |
 | `wwxd mark-compiled <slug> <id>` | Record a compiled source in `log.md` |
-| `wwxd lint <slug>` | Check quotes, citations, attribution and links, and flag drift such as near-duplicate leaves |
+| `wwxd compile <slug> --jobs N` | Compile pending sources with N Claude Code sessions at once ([details](#compile-many-sources-at-once)) |
+| `wwxd lint <slug> [--only <path>]` | Check quotes, citations, attribution and links, and flag drift such as near-duplicate leaves |
 | `wwxd health <slug>` | Report on the wiki: size, attribution, coverage, near-duplicates, oversize leaves |
 | `wwxd timeline <slug> [query]` | Statements by source date and member, to see how views changed |
 | `wwxd digest <slug> --since YYYY-MM-DD` | Markdown note on what's new since a date |

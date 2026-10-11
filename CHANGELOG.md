@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased
+
+- `wwxd compile <slug> --jobs N` compiles pending sources with N Claude Code
+  sessions at once, one source per session. On the study's 4 sources it took under a
+  third of the time for the same cost and the same key evidence
+  (`bench/RESULTS.md`, "Parallel compile"). `--agent-cmd` runs another agent CLI.
+- `references/compile.md` has rules for sessions sharing a wiki.
+- `wwxd lint --only <path>` checks just the given pages.
+- `sources.yaml` is written atomically and under a lock, so parallel
+  `mark-compiled` calls no longer drop each other's status changes.
+
 ## 0.1.0 (2026-10-11)
 
 First release.

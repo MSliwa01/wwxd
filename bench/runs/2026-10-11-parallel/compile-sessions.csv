@@ -1,0 +1,13 @@
+arm,vault,step,source,seconds,turns,cost_usd,input,cache_write,cache_read,output,is_error
+parallel,yc,compile,web-39f89fad2603,66,26,0.3084,32,37200,633960,9601,False
+parallel,yc,compile,yt-Jcuqq48CNj8,207,35,0.6669,34,65177,962323,30974,False
+parallel,yc,compile,yt-ZIaOBAjvc38,216,32,0.7695,34,75708,1051348,36124,False
+parallel,hz,compile,yt-MH-IMJxbUY4,171,38,0.6301,38,62488,1062224,27364,False
+extract-place,yc,place,web-39f89fad2603,85,29,0.3676,28,42613,610766,13588,False
+extract-place,yc,place,yt-Jcuqq48CNj8,156,52,0.617,34,63645,924323,26979,False
+extract-place,yc,place,yt-ZIaOBAjvc38,219,47,0.7765,40,72603,1245801,36123,False
+extract-place,yc,extract,web-39f89fad2603,43,13,0.216,18,31168,314321,5965,False
+extract-place,yc,extract,yt-Jcuqq48CNj8,148,11,0.4382,14,49129,268068,21470,False
+extract-place,yc,extract,yt-ZIaOBAjvc38,92,15,0.3857,18,48961,391575,15049,False
+extract-place,hz,place,yt-MH-IMJxbUY4,117,31,0.4637,28,48135,636221,20734,False
+extract-place,hz,extract,yt-MH-IMJxbUY4,87,13,0.3511,16,45257,319464,13794,False

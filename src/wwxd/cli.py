@@ -179,13 +179,12 @@ def sources(
 
 
 def _set_status(v: Vault, ids: list[str], hints: list[str], status: str, allowed_from: tuple[str, ...]) -> int:
-    all_sources = v.load_sources()
     changed = 0
-    for s in all_sources:
-        if s.status in allowed_from and (s.id in ids or s.hint in hints or "all" in ids):
-            s.status = status
-            changed += 1
-    v.save_sources(all_sources)
+    with v.edit_sources() as all_sources:
+        for s in all_sources:
+            if s.status in allowed_from and (s.id in ids or s.hint in hints or "all" in ids):
+                s.status = status
+                changed += 1
     return changed
 
 
@@ -320,24 +319,62 @@ def mark_compiled(
 ) -> None:
     """Mark a source as compiled and log it."""
     v = _vault(vault)
-    all_sources = v.load_sources()
-    match = next((s for s in all_sources if s.id == source_id), None)
+    with v.edit_sources() as all_sources:  # locked: parallel sessions mark sources at the same time
+        match = next((s for s in all_sources if s.id == source_id), None)
+        if match is not None:
+            match.status = "compiled"
     if match is None:
         typer.secho(f"Unknown source {source_id}", fg="red", err=True)
         raise typer.Exit(1)
-    match.status = "compiled"
-    v.save_sources(all_sources)
     v.append_log(f"compiled {source_id}" + (f": {note}" if note else ""))
     typer.echo(f"{source_id} compiled")
 
 
+@app.command("compile")
+def compile_cmd(
+    vault: VaultArg,
+    jobs: Annotated[int, typer.Option("--jobs", "-j", help="Claude Code sessions at once")] = 4,
+    model: Annotated[str, typer.Option(help="Model id")] = "claude-sonnet-5-5",
+    effort: Annotated[str, typer.Option(help="Claude Code effort: low, medium, high, xhigh, max")] = "high",
+    limit: Annotated[int, typer.Option(help="Compile at most this many sources (0: all)")] = 0,
+    agent_cmd: Annotated[str, typer.Option(help="Use another agent CLI: a command template with {prompt}, "
+                                           "{model} and {effort}, e.g. 'opencode run -m {model} {prompt}'")] = "",
+) -> None:
+    """Compile pending sources with several Claude Code sessions at once, one source per session.
+
+    Your machine only waits on the agent, so --jobs is limited by your API rate limits or subscription usage, not your CPU."""
+    from wwxd import parallel
+
+    v = _vault(vault)
+    todo = sum(1 for s in v.load_sources() if s.status == "fetched")
+    if not todo:
+        typer.echo("Nothing to compile: no fetched sources.")
+        return
+    if not agent_cmd and not shutil.which("claude"):
+        typer.secho("Claude Code (`claude`) isn't on PATH; install it or pass --agent-cmd.", fg="red", err=True)
+        raise typer.Exit(1)
+    typer.echo(f"Compiling {min(todo, limit or todo)} of {todo} pending sources, {jobs} at once. "
+               f"Logs: {v.cache_dir / 'compile-logs'}")
+    opts = parallel.Options(jobs=jobs, model=model, effort=effort, limit=limit, agent_cmd=agent_cmd)
+    report = parallel.run(v, opts, echo=typer.echo)
+    counts = Counter(s.status for s in v.load_sources())
+    typer.echo(f"Done: {counts.get('compiled', 0)} compiled, {counts.get('fetched', 0)} still pending. "
+               f"Reported cost ${report.cost:.2f}.")
+    typer.echo(f"Next: `wwxd lint {vault}` and `wwxd health {vault}`; consolidate if health flags drift.")
+
+
 @app.command()
-def lint(vault: VaultArg, warnings: Annotated[bool, typer.Option(help="Show warnings")] = True) -> None:
+def lint(
+    vault: VaultArg,
+    warnings: Annotated[bool, typer.Option(help="Show warnings")] = True,
+    only: Annotated[list[str] | None, typer.Option(help="Only these pages or folders, relative to the vault "
+                                                   "(repeatable), e.g. wiki/business/pricing")] = None,
+) -> None:
     """Check citations, quotes, attribution and links. Exits 1 on errors."""
     from wwxd.lint import lint as run_lint
 
     v = _vault(vault)
-    issues = run_lint(v)
+    issues = run_lint(v, only=[_vault_relative(v, o) for o in only] if only else None)
     errors = [i for i in issues if i.level == "error"]
     for issue in issues:
         if issue.level == "error" or warnings:
@@ -345,6 +382,19 @@ def lint(vault: VaultArg, warnings: Annotated[bool, typer.Option(help="Show warn
     typer.echo(f"{len(errors)} errors, {len(issues) - len(errors)} warnings")
     if errors:
         raise typer.Exit(1)
+
+
+def _vault_relative(v: Vault, path: str) -> str:
+    p = Path(path)
+    if p.is_absolute():
+        try:
+            return p.resolve().relative_to(v.path).as_posix()
+        except ValueError:
+            return path
+    rel = p.as_posix().strip("/")
+    if not rel.startswith("wiki/") and rel != "wiki" and (v.wiki_dir / rel).exists():
+        rel = f"wiki/{rel}"  # a leaf path as the wiki names it
+    return rel
 
 
 @app.command()
@@ -393,7 +443,8 @@ def estimate(
     typer.echo(f"tokens: {total / 1e6:.1f}M total ({tokens['cache_read'] / 1e6:.1f}M cache reads, "
                f"{tokens['cache_write'] / 1e6:.2f}M cache writes, {tokens['output'] / 1e6:.2f}M output)")
     if items:
-        typer.echo(f"time: about {seconds / 60:.0f} min of agent work (one source at a time)")
+        typer.echo(f"time: about {seconds / 60:.0f} min of agent work one source at a time; "
+                   f"`wwxd compile {vault} --jobs N` runs N at once for the same cost")
     typer.echo("list price if billed per token (the real number can be about 50% lower or higher):")
     for model, price in costs.PRICES.items():
         typer.echo(f"  {model:7} {price['id']:18} ${costs.dollars(tokens, model):8.2f}")

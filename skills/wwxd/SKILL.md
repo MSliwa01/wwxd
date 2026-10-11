@@ -24,6 +24,7 @@ exact grammar that `wwxd lint` enforces.
 | A vault for a new person or group | **Set up** below, then curate, fetch, compile |
 | To refresh a vault | `wwxd update <slug>`, then curate, fetch, compile |
 | Pending sources compiled | `references/compile.md` |
+| Many pending sources compiled faster, in parallel | `wwxd compile <slug> --jobs N` (see **Compile**) |
 | A vault health check | `wwxd health <slug>` and `wwxd lint <slug>`, then fix what they report |
 | What several people would say, compared or debated ("ask Hormozi and PG", "the panel") | `references/panel.md` |
 | To build or refresh how a member thinks (values, rules, strong views) | `references/thinking.md` |
@@ -67,6 +68,11 @@ how many sources to compile now.
 Follow `references/compile.md` for every source in `wwxd pending <slug>`.
 After each source: run `wwxd lint <slug>`, fix every error, then
 `wwxd mark-compiled <slug> <id> --note "…"`.
+
+For many sources, offer `wwxd compile <slug> --jobs N`. It runs N Claude Code
+sessions at once, each compiling one source, for about the same cost as one at a
+time. Run it only if the user agrees: it starts its own sessions and spends their
+usage. Afterwards run `wwxd health <slug>` and consolidate if it flags drift.
 
 ## Non-negotiables
 

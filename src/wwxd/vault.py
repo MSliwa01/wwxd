@@ -1,6 +1,9 @@
 from __future__ import annotations
 
+import contextlib
 import datetime as dt
+import os
+from collections.abc import Iterator
 from dataclasses import asdict, dataclass, field
 from importlib import resources
 from pathlib import Path
@@ -100,16 +103,41 @@ class Vault:
 
     def save_sources(self, sources: list[Source]) -> None:
         payload = {"sources": [s.to_dict() for s in sources]}
-        (self.path / "sources.yaml").write_text(
+        # Write, then rename: someone reading sources.yaml never sees half a file.
+        tmp = self.path / f".sources.yaml.{os.getpid()}.tmp"
+        tmp.write_text(
             "# Managed by `wwxd`. Edit `status` by hand or with `wwxd approve/reject`.\n"
             + yaml.safe_dump(payload, sort_keys=False, allow_unicode=True, width=120),
             encoding="utf-8",
         )
+        os.replace(tmp, self.path / "sources.yaml")
+
+    @contextlib.contextmanager
+    def edit_sources(self) -> Iterator[list[Source]]:
+        """Load, let the caller change, and save sources.yaml under a lock.
+
+        Parallel compile sessions run `mark-compiled` at the same time; without the
+        lock one session's save can drop another's status change.
+        """
+        self.cache_dir.mkdir(parents=True, exist_ok=True)
+        with (self.cache_dir / "sources.lock").open("w") as lock:
+            _flock(lock)
+            sources = self.load_sources()
+            yield sources
+            self.save_sources(sources)
 
     def append_log(self, line: str) -> None:
         today = dt.date.today().isoformat()
         with (self.path / "log.md").open("a", encoding="utf-8") as fh:
             fh.write(f"- {today} {line}\n")
+
+
+def _flock(fh) -> None:
+    try:
+        import fcntl
+    except ImportError:  # Windows: no advisory locks; parallel compile is best-effort there
+        return
+    fcntl.flock(fh, fcntl.LOCK_EX)  # released when the file is closed
 
 
 def resolve_vault(name_or_path: str) -> Vault:
