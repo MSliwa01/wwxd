@@ -1,56 +1,66 @@
 # wwxd
 
 [![CI](https://github.com/MSliwa01/wwxd/actions/workflows/ci.yml/badge.svg)](https://github.com/MSliwa01/wwxd/actions/workflows/ci.yml)
+[![Python 3.10 to 3.13](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue)](https://github.com/MSliwa01/wwxd/blob/main/pyproject.toml)
+[![MIT license](https://img.shields.io/badge/license-MIT-green)](https://github.com/MSliwa01/wwxd/blob/main/LICENSE)
 
 What would X do? wwxd turns a person's talks, podcasts and essays into a wiki of
-their actual positions, with every quote checked against the source. Your agent then
+their positions, with every quote checked against the source. Your agent then
 answers the way that person would, and shows you where they said it.
+
+Answers are inferred from public sources by a language model. They are not
+statements by these people, and none of them is affiliated with or endorses wwxd.
+See [ETHICS.md](https://github.com/MSliwa01/wwxd/blob/main/ETHICS.md).
 
 ![Opus told to answer as Hormozi contradicts him; Opus with a wwxd vault quotes him](https://raw.githubusercontent.com/MSliwa01/wwxd/main/docs/img/wwxd-vs-persona.png)
 
+## Try it
+
+You need [uv](https://docs.astral.sh/uv/), [Claude Code](https://claude.com/claude-code),
+ffmpeg, and deno or node 22 or newer.
+
+```bash
+uv tool install "git+https://github.com/MSliwa01/wwxd" && wwxd install-skill && wwxd doctor
+```
+
+Compiling costs about $1 to $2 per video on Opus at list price, so run
+`wwxd estimate <slug>` first. The [Quick start](#quick-start) has the next steps.
+
 ## Why
 
-Ask a chatbot whether to raise your prices and you get the average of the internet.
-It lists considerations, recommends testing, warns you to communicate value, and
-commits to nothing. Models are trained to be balanced and safe, so their advice comes
-out smooth and generic. That's fine for facts. It's weak for decisions in business,
-design, careers or learning, where the useful advice comes from people with strong
-opinions and a track record.
-
-You can ask the model to answer "as Alex Hormozi". It will give you a plausible
+Ask a chatbot whether to raise your prices and you get a generic answer that commits
+to nothing. That's fine for facts. It's weak for decisions in business, design,
+careers or learning, where the useful advice comes from people with strong opinions
+and a track record. Ask the model to answer "as Alex Hormozi" and you get a plausible
 impression, built from whatever it remembers, with the gaps filled by its own
-guesses. It can't know anything the person said after its training cutoff. It also
+guesses. It can't know anything the person said after its training cutoff, and it
 mixes up who said what, crediting a podcast host's line to the guest.
 
-wwxd gives the agent the person's own words instead. Here is the same question
-answered both ways by Claude Opus 5.5 in Claude Code.
+wwxd gives the agent the person's own words instead. Here is a question from our
+benchmark, answered by Claude Opus 5.5 in Claude Code.
 
-> I own a residential HVAC duct-cleaning company doing about $1.2M a year at a 38%
-> net margin, and we close about 82% of in-home inspections. Should I keep prices
-> where they are so I don't hurt the close rate? What would Alex Hormozi say?
+> I have $50k saved. Should I pay off my car loan and credit cards or put it all into
+> my business? What would Alex Hormozi say?
 
-Without a vault, Opus says an 82% close rate usually means underpricing, then
-suggests a "healthy" 40 to 60 percent close rate and builds a table on a margin it
-assumed.
+Told to answer decisively as Hormozi, Opus says to keep the car loan unless its rate
+is high. With a Hormozi vault, the answer starts like this:
 
-With the vault, the answer starts like this:
-
-> **Short answer:** No. Hormozi would tell you to raise prices. An 82% close rate
-> is, in his words, the sign you're underpriced. His suggested step is about 10%,
-> and it's only worth it if your close rate stays above roughly 65%.
+> **He'd tell you to pay off the credit cards first and the car loan next. Then put what's left into the business, but only into spending that has already shown it pays back. Don't put all of it in.**
 >
-> Your numbers are almost the same as a business he consulted on in 2026: ProShine,
-> an HVAC duct-cleaning company doing $1.25M a year at a 38% net margin with an 82%
-> close rate. So this isn't a guess from his general principles. He has already given
-> this advice to a business like yours.
+> Hormozi never talked about this exact choice, but his rules on it are clear. He says he leans "very close to the Ramsey side" on debt. His reason is that debt adds risk, and risk held for a long time tends to come due, because businesses have seasons and swings [1][2]. … His ideal car is "a paid-off clunker" [4]. So pay the car off, or if the payment is large, sell the car and buy something cheap with cash.
 >
-> - **A close rate over 80% means you're underpriced:** "So whenever I hear 80% or
->   over 80% close rates, I usually know that there's room in sale."
->   ([@ 8:06](https://www.youtube.com/watch?v=OQf2Ba-Lp_4&t=486s))
+> …
+>
+> **Sources**
+> 1. "I'd say this is more of an emotional thing, but it's just this back of mind thing." / "I tend to skew like very close to the Ramsey side" (Hormozi, *Building a $2,500,000 Business for a Stranger in 36 Minutes*, 2026-05-08, [8:37](https://www.youtube.com/watch?v=OQf2Ba-Lp_4&t=517s))
+> 2. "Risk when multiplied over a long time horizon tends to come due." / "businesses have seasons, they have volatility" (same video, [9:10](https://www.youtube.com/watch?v=OQf2Ba-Lp_4&t=550s))
+>
+> …
+>
+> 4. "ideally a paid-off clunker is the best way to go." (Hormozi, *If I Wanted to Make My First $100K in 2026*, 2026-03-04, [2:08](https://www.youtube.com/watch?v=jfW6gL6hKhk&t=128s))
 
-That answer is in the earlier format, with quotes inline. Answers now read as prose
-advice with numbered markers, and the verbatim quotes with timestamped links are
-listed underneath.
+The full answer is question `op-hz-06` in
+[bench/runs/2026-10-11/hormozi-web/op-prose-answers.jsonl](https://github.com/MSliwa01/wwxd/blob/main/bench/runs/2026-10-11/hormozi-web/op-prose-answers.jsonl).
 
 ## Results
 
@@ -66,81 +76,28 @@ preferred the wwxd answer every time.
 
 Three more judges scored the same pairs: Claude Haiku 5.5 (40 of 40 for wwxd), and
 from other model families NVIDIA Nemotron 3 Ultra (39 of 40) and Muse Spark 1.3 (35
-of 36), so this isn't one model grading itself. 160 quotes in the wwxd answers
-were checked against the transcripts by a script, and 158 were found verbatim. The
-other 2 were video titles.
+of 36), so this isn't one model grading itself. A judge from Google, Gemini 3.5 Flash
+Lite, preferred wwxd on 34 of 40 with no access to the transcripts
+([details](https://github.com/MSliwa01/wwxd/blob/main/bench/RESULTS.md#a-judge-from-google)).
+A script checked the 160 quotes in the wwxd answers against the transcripts and found
+158 verbatim. The other 2 were video titles.
 
-A judge from Google, Gemini 3.5 Flash Lite, preferred wwxd on 34 of 40 with no access
-to the transcripts, and it put Opus, Sonnet and Haiku in the same order as the Claude
-judges ([details](https://github.com/MSliwa01/wwxd/blob/main/bench/RESULTS.md#a-judge-from-google)). The current prose answer
-format ranked first on 20 of 24 opinion questions, ahead of the earlier format and
-raw Opus, with both an Opus and a Gemini judge
-([details](https://github.com/MSliwa01/wwxd/blob/main/bench/RESULTS.md#answer-format-prose-with-sources-underneath)).
+![Five judges from four labs preferred wwxd on 34 of 40 up to 40 of 40 pairs](https://raw.githubusercontent.com/MSliwa01/wwxd/main/docs/img/chart-judges.png)
 
-![Five judges from four labs preferred wwxd on 34 to 40 of 40 pairs](https://raw.githubusercontent.com/MSliwa01/wwxd/main/docs/img/chart-judges.png)
+The other benches are in [docs/benchmarks.md](https://github.com/MSliwa01/wwxd/blob/main/docs/benchmarks.md),
+and the full numbers, setup and caveats in [bench/RESULTS.md](https://github.com/MSliwa01/wwxd/blob/main/bench/RESULTS.md).
+
+- Told to be decisive "as X", Opus stops hedging but invents its reasons. On 24
+  opinion questions, four judges ranked wwxd first in 93 of 93 judgments.
+- Against Opus with web search, judges preferred wwxd on 34 to 39 of 40 pairs (Muse
+  Spark: 33 of 35). Search mostly finds other people's summaries.
+- On questions the people never answered, every judgment ranked a wwxd answer first.
+- wwxd doesn't predict. A vault of older sources was no better than raw Opus at
+  guessing positions the people took later.
 
 These runs used Opus 5.5. Sonnet 5.5 works about as well for compiling and nearly as
-well for answering. Haiku 5.5 still beat raw Opus, but it ranked last of the three and
-missed most of the key evidence when compiling. See
-[Which model and effort](#which-model-and-effort).
-
-### Opinionated isn't the same as right
-
-The obvious fix for bland answers is to tell the model to be decisive. We tried it
-on 24 "should I do X or Y?" questions, with four judges ranking three answers to
-each: raw Opus, Opus told to answer decisively as the person would, and Opus with
-the vault.
-
-| Mean of four judges, 1 to 5 | Raw | "Be decisive, as X" | wwxd |
-|---|---|---|---|
-| Decisiveness | 3.5 | 4.8 | 4.7 |
-| Distinctiveness | 2.8 | 3.0 | 4.8 |
-| Grounding (reasons they really hold) | 2.8 | 2.6 | 4.9 |
-| Ranked best | 0 | 0 | 93 of 93 |
-| Pick contradicts the person | 9 | 8 | 0 |
-
-The persona prompt stops the hedging, but its reasons are generic or invented. Asked
-"I have $50k saved, should I pay off my car loan or put it into my business?", it
-said to keep the low-rate loan, the standard financial-advice answer. Hormozi says
-"ideally just pay off your car so you don't have to think about it again" and that
-he skews "very close to the Ramsey side". wwxd quoted both.
-
-### Isn't web search enough?
-
-We gave Opus 5.5 only web search and told it to find what the person said, answer
-decisively and cite its pages. Against Opus with a wwxd vault, both at effort high,
-the judges preferred wwxd on 39 of 40 main-bench questions (Opus 5.5), 38 of 40
-(Haiku 5.5), 34 of 40 (Gemini 3.5 Flash Lite) and 33 of 35 (Muse Spark 1.3). On the
-12 questions about 2026 material, the Opus judge picked wwxd every time.
-
-Search finds a person's well-known positions, but mostly through other people's
-summaries. For Hormozi, the most cited sites were shortform.com and podscripts.co,
-and 5 of 156 links went to YouTube or acquisition.com. It misses the specifics and
-can't check a quote. When the judges ranked all four answers to each opinion
-question together, web search was about as decisive as the persona prompt, its
-grounding averaged 3.0 against 4.8 for wwxd, and 5 of its picks contradicted the
-person
-([details](https://github.com/MSliwa01/wwxd/blob/main/bench/RESULTS.md#web-search-vs-a-vault)).
-
-![Scatter of decisiveness against grounding: the persona prompt and web search are decisive but not grounded, wwxd is both](https://raw.githubusercontent.com/MSliwa01/wwxd/main/docs/img/chart-opinion.png)
-
-### Questions they never answered
-
-On 16 questions the people never addressed ("would Hormozi buy a Lamborghini after
-his first $1M?"), wwxd works it out from the nearest thing they did say and the rule
-behind it. Every judgment ranked a wwxd answer first. Grounding was 4.7 against 2.3
-for the persona prompt, and the inference itself scored 4.5 of 5 with thinking
-pages.
-
-### What wwxd doesn't do
-
-It doesn't predict. We rebuilt both vaults from pre-2026 sources only and asked about
-positions the people first took in 2026. The vault answers were no better than raw
-Opus: one judge called it even, and three others preferred raw Opus. Thinking pages
-didn't change that. A thinking style settles a judgment call; it can't recover a
-fact or a number the person hadn't said yet. A vault keeps answers faithful to what someone has said. It can't know
-what they'll say next, so keep it current with `wwxd update`. Full numbers, setup
-and caveats are in [bench/RESULTS.md](https://github.com/MSliwa01/wwxd/blob/main/bench/RESULTS.md).
+well for answering, and Haiku 5.5 ranked last of the three
+([details](https://github.com/MSliwa01/wwxd/blob/main/docs/models-and-cost.md)).
 
 ## How it works
 
@@ -161,8 +118,8 @@ tree. You don't need an API key, because it runs on the agent you already use.
 The design follows Andrej Karpathy's
 [LLM wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f).
 Raw sources never change, the LLM maintains a wiki on top of them, and every new
-source updates what's already there. wwxd adds the parts that matter when the
-subject is one person.
+source updates what's already there. wwxd adds these parts for a wiki about one
+person.
 
 - Discovery flags summaries, reactions and "lessons from" videos, so you only approve
   content by the person, not about them.
@@ -173,91 +130,48 @@ subject is one person.
 - Topic pages keep what the person said apart from what they did. `tensions.md`
   tracks how their views changed over time.
 - Each person gets a thinking page: what they optimize for, the rules they decide
-  by, how they reason, and their strong likes and dislikes, each with the reason
-  they gave and verbatim quotes. When you ask about something they never mentioned,
-  the agent reasons from it the way they would. If they call McDonald's poison
-  because it's food engineered to be cheap and addictive, the answer about KFC says
-  they'd most likely hate it too, quotes the McDonald's line, names the rule, gives a
-  confidence and says what would break the inference.
-- The wiki is a tree (person, domain, topic, page). `layout: flat` is available if
-  you want to compare.
-- A vault can hold a group, like the YC partners, and still credit every line to the
+  by, how they reason, and their strong likes and dislikes, with quotes. When you ask
+  about something they never mentioned, the agent reasons from it the way they would,
+  names the rule, gives a confidence and says what would break the inference.
+- The wiki is a tree (person, domain, topic, page), or flat with `layout: flat`. A
+  vault can hold a group, like the YC partners, and still credit every line to the
   right person.
 - The agent's own extrapolations go to `derived/`, and lint stops them from being
   cited as evidence later.
 
-## Ask a panel
-
-Ask several people at once ("what would Hormozi, Paul Graham and Garry Tan tell me?")
-and the agent answers for each one separately, from their own vault, then maps where
-they agree and where they split. For each split it names the reason from their
-thinking pages: a value they rank differently, a rule only one of them holds. A
-debate round gives each person's reply to the other's strongest point, built only
-from their own words and labelled as inferred. Last comes a synthesis in the agent's
-own voice: which advice fits which situation.
-
-Asked by someone who loves building AI tools but fears AI will take their income,
-the panel split cleanly. Hormozi: sell one AI skill people already pay for, expensive
-and one-on-one, before building any app ("The middle is where people die"). Graham:
-follow your curiosity, because for someone young and good at technology "working on
-what you're most interested in becomes a good idea again". Tan: own your tools,
-because "if you don't, your job becomes a skill file". They agreed that fear is the
-wrong response, each for a different reason, which the synthesis treats as the
-strongest signal in the answer.
-
-`wwxd vaults` lists every vault, its members and which ones have thinking pages.
-
-## Check who said it, by voice
-
-Lint proves a quote exists. It can't prove who said it, and that's the mistake that
-matters most. A real quote credited to the wrong person looks exactly like a good
-one. `wwxd voice <slug>` checks attribution by sound. It finds the second each quote
-is spoken, embeds that audio with a speaker-verification model, and compares it with
-each member's voiceprint. The voiceprints come from the vault itself, so there's
-nothing to enroll.
-
-On our test vaults it checked 1,423 statements from 26 videos in under 4 minutes on
-CPU. It flagged 9 as spoken by someone else. We could verify 6 of them:
-
-- In a Sam Altman and Garry Tan conversation, 3 lines the compile credited to Tan
-  were Altman's. The official speaker-labelled transcript confirms all 3. Across the
-  54 statements from that episode we could match to the official transcript, the
-  compile got 51 right and the voice check got all 54.
-- In a Dalton Caldwell and Michael Seibel episode, 2 teaser lines credited to Dalton
-  match Michael's voice, and the intro right after them is "hey this is Michael
-  Seibel with Dalton Caldwell".
-- In a Hormozi consulting call, a line credited to Hormozi sits in the business
-  owner's turn, where he explains his own sales process.
-
-The other 3 flags are in Dalton and Michael episodes with no official transcript, so
-they're still unconfirmed.
-
-The voice check is optional: `uv tool install "wwxd[voice] @ git+https://github.com/MSliwa01/wwxd"`.
-It runs on CPU with a small open model and needs no account or API key. Lint shows
-its mismatches as warnings until someone fixes the attribution.
-
 ## Quick start
+
+Before you start, install these and run `wwxd doctor` to check them.
+
+- [uv](https://docs.astral.sh/uv/)
+- [Claude Code](https://claude.com/claude-code)
+- ffmpeg
+- deno, or node 22 or newer
 
 ```bash
 uv tool install "git+https://github.com/MSliwa01/wwxd"
-# with local Whisper for podcasts and videos without captions:
-# uv tool install "wwxd[whisper] @ git+https://github.com/MSliwa01/wwxd"
 wwxd install-skill                                            # into ~/.claude/skills/wwxd
+wwxd doctor
 ```
 
-If you use Claude Code plugins, you can install the skill as a plugin instead of
-running `wwxd install-skill`. Run these two commands in Claude Code.
+Videos without captions and podcasts without published transcripts need local
+Whisper. The `whisper` extra installs it, and `voice` adds the
+[voice check](#check-who-said-it-by-voice).
 
+```bash
+uv tool install --force "wwxd[whisper,voice] @ git+https://github.com/MSliwa01/wwxd"
 ```
-/plugin marketplace add MSliwa01/wwxd
-/plugin install wwxd@wwxd
-```
 
-The plugin installs the skill only. Keep the `uv tool install` line for the CLI;
-without it, the agent falls back to `uvx`, which needs [uv](https://docs.astral.sh/uv/).
-Don't use both `install-skill` and the plugin, or Claude Code loads the skill twice.
+Without `whisper`, `wwxd fetch` marks those sources as failed and fetches the rest.
+After you install it, `wwxd fetch <slug> --retry-failed` picks them up.
 
-Then create a vault and find candidate sources.
+Instead of `wwxd install-skill`, you can install the skill as a Claude Code plugin
+with `/plugin marketplace add MSliwa01/wwxd` and `/plugin install wwxd@wwxd`. You
+still need the CLI. Don't use both, or Claude Code loads the skill twice.
+
+Then create a vault and find candidate sources. `wwxd examples` lists the bundled
+recipes (`yc`, `hormozi`, `naval`, `karpathy`, `rams`). A recipe is a source config,
+never content, and not an endorsement.
 
 ```bash
 wwxd new hormozi --example hormozi
@@ -269,24 +183,37 @@ Then, in Claude Code:
 > Help me curate the hormozi vault, fetch what we approve, and compile it.
 
 The agent goes through the candidates with you, runs `wwxd fetch`, compiles each
-source and runs `wwxd lint`. Each source takes it a few minutes. After that:
+source and runs `wwxd lint`. Each source takes it a few minutes, and
+`wwxd compile hormozi --jobs 4` compiles several at once
+([details](https://github.com/MSliwa01/wwxd/blob/main/docs/models-and-cost.md#compile-many-sources-at-once)).
+After that:
 
 > My agency does $40k a month with three people. Should I add a second service line?
 > What would Hormozi say?
 
-Put URLs in quotes (`wwxd add jane "https://www.youtube.com/watch?v=…"`). On macOS
-the default shell, zsh, treats the `?` as a filename pattern otherwise.
-
-For someone without a recipe, run `wwxd new jane --name "Jane Doe"` and ask the agent
-to find her channels and feeds.
+For someone without a recipe, run `wwxd new jane --name "Jane Doe"` and ask the
+agent to find her channels and feeds. To keep a vault up to date, see
+[docs/keeping-current.md](https://github.com/MSliwa01/wwxd/blob/main/docs/keeping-current.md).
 
 ## What it costs
 
 Fetching, lint and the voice check run on your machine and cost nothing. Compiling
 and asking run on your agent, so they cost tokens: dollars on the API, usage limits
-on a Claude subscription. wwxd is built for Claude Code on a subscription, and you
-should know what you're spending before you start. `wwxd estimate <slug>` prices what
-you've approved, before anything is fetched:
+on a Claude subscription. `wwxd estimate <slug>` prices what you've approved, before
+anything is fetched. Rough numbers from our runs on Opus 5.5:
+
+| | Tokens | Time | Opus 5.5 | Sonnet 5.5 | Haiku 5.5 |
+|---|---|---|---|---|---|
+| Compile a 20-minute video (about 3,000 words) | about 1M | 4 min | $1.06 | $0.63 | $0.03 |
+| Compile a 2-hour podcast (about 18,000 words) | about 2.1M | 8 min | $1.91 | $1.15 | $0.06 |
+| One question to a vault | about 0.3M | 30 s | $0.41 | $0.23 | $0.01 |
+
+A panel of three people costs roughly three questions. Effort, advisors and which
+model to use for each job are in
+[docs/models-and-cost.md](https://github.com/MSliwa01/wwxd/blob/main/docs/models-and-cost.md).
+
+<details>
+<summary>Example <code>wwxd estimate</code> output</summary>
 
 ```
 $ wwxd estimate hormozi
@@ -300,156 +227,88 @@ list price if billed per token (the real number can be about 50% lower or higher
 Measured on Opus without an advisor, compiling cost 0.73x this at effort medium, 1.1x this at effort high, 1.75x this at effort xhigh.
 ```
 
-Rough numbers from our runs on Opus 5.5:
+</details>
 
-| | Tokens | Time | Opus 5.5 | Sonnet 5.5 | Haiku 5.5 |
-|---|---|---|---|---|---|
-| Compile a 20-minute video (about 3,000 words) | about 1M | 4 min | $1.06 | $0.63 | $0.03 |
-| Compile a 2-hour podcast (about 18,000 words) | about 2.1M | 8 min | $1.91 | $1.15 | $0.06 |
-| One question to a vault | about 0.3M | 30 s | $0.41 | $0.23 | $0.01 |
+## Ask a panel
 
-A panel of three people costs roughly three questions.
+Ask several people at once ("what would Hormozi, Paul Graham and Garry Tan tell me?")
+and the agent answers for each one from their own vault, then maps where they agree
+and where they split. For each split it names the reason from their thinking pages,
+such as a value they rank differently or a rule only one of them holds. A debate
+round gives each person's reply to the other's strongest point, built only
+from their own words and labelled as inferred. Last comes a synthesis in the agent's
+own voice that says which advice fits which situation.
 
-Most of the compile cost is fixed: the agent rereads the skill, the index and the
-pages it touches for every source. So a vault of 15 long videos costs about $20 to
-$30 on Opus. The table comes from runs at effort xhigh with a Fable 5.1 advisor
-turned on, and counts only the main model's tokens. The advisor added 85% to 125% on
-top, so with an advisor the cost roughly doubles. Without one, the main model does
-that thinking itself. In our model and effort study, with no advisor, Opus cost about
-0.7 times the table per source at effort medium, about the same at high, and 1.75
-times at xhigh. `wwxd estimate` prints these factors. Sonnet compiled about as well
-as Opus for less, and Haiku missed about two thirds of the key evidence.
+Asked by someone who loves building AI tools but fears AI will take their income,
+the panel disagreed. Hormozi: sell one AI skill people already pay for, expensive
+and one-on-one, before building any app ("The middle is where people die"). Graham:
+follow your curiosity, because for someone young and good at technology "working on
+what you're most interested in becomes a good idea again". Tan: own your tools,
+because "if you don't, your job becomes a skill file". They agreed that fear is the
+wrong response, each for a different reason, which the synthesis treats as the
+strongest signal in the answer. `wwxd vaults` lists every vault, its members and
+which ones have thinking pages.
 
-### Which model and effort
+## Check who said it, by voice
 
-We compared Opus 5.5, Sonnet 5.5 and Haiku 5.5 at Claude Code effort medium, high
-and xhigh, for both compiling and answering, with no advisor.
+Lint proves a quote exists. It can't prove who said it, and that's the mistake that
+matters most. A real quote credited to the wrong person passes lint.
+`wwxd voice <slug>` checks attribution by sound. It finds the second each quote is
+spoken, embeds that audio with a speaker-verification model, and compares it with
+each member's voiceprint. The voiceprints come from the vault itself, so there's
+nothing to enroll. It runs on CPU with a small open model, needs no account or API
+key, and comes with the `voice` extra.
 
-![Mean answer rank against seconds per answer for each model and effort, and key evidence found against compile cost](https://raw.githubusercontent.com/MSliwa01/wwxd/main/docs/img/chart-model-effort.png)
-
-| Job | Use | Why |
-|---|---|---|
-| Compile | Sonnet high, or Opus medium if you're on Opus anyway | Both found 12 of the 17 key evidence quotes, and Sonnet high cost about two thirds as much. xhigh writes a denser vault for 2 to 3 times the time and cost but didn't find more of the key evidence. Haiku missed about two thirds of it. |
-| Answer | Opus high | Opus xhigh wasn't clearly better and took longer. On a tighter budget, Sonnet xhigh ranked about as well as Opus medium. Haiku ranked last at every effort and got about 1 quote in 20 wrong. |
-| Triage | A cheap model | See [Use a cheaper model for triage](#use-a-cheaper-model-for-triage). |
-
-You don't need an advisor model. Numbers and limits are in
-[bench/RESULTS.md](https://github.com/MSliwa01/wwxd/blob/main/bench/RESULTS.md#model-and-effort-study).
-
-## Compile many sources at once
-
-Compiling one source at a time takes a few minutes per source, so a vault of 70
-videos takes an afternoon. `wwxd compile` runs several Claude Code sessions at once,
-each compiling one source into the same wiki:
-
-```bash
-wwxd compile hormozi --jobs 4                     # Sonnet 5.5 at effort high by default
-wwxd compile hormozi --jobs 4 --model claude-opus-5-5 --effort medium
-```
-
-On the 4 sources of the model and effort study, 3 sessions at once finished in 3.6
-minutes instead of 12, for the same cost ($2.37 against $2.30), and found the same
-12 of 17 key evidence quotes
-([details](https://github.com/MSliwa01/wwxd/blob/main/bench/RESULTS.md#parallel-compile)).
-The sessions follow rules for the pages they share (`references/compile.md`), and
-`wwxd mark-compiled` writes `sources.yaml` under a lock. With many sessions on one
-vault, expect a few near-duplicate leaves. Run `wwxd health` afterwards and let the
-agent consolidate what it flags.
-
-Your machine only waits on the agent, so `--jobs` is limited by your API rate limits
-or subscription usage, not by your CPU. The total cost doesn't change; you spend it
-faster. `--agent-cmd 'opencode run -m {model} {prompt}'` uses another agent CLI.
-
-## Example recipes
-
-`wwxd examples` lists them. A recipe is a source config, never content.
-
-| Recipe | Topics | Notes |
-|---|---|---|
-| `yc` | startups | A group vault covering Paul Graham, Jessica Livingston, Michael Seibel, Dalton Caldwell, Garry Tan and Sam Altman, plus PG's essays. |
-| `hormozi` | business, sales, pricing | Long-form videos and podcast appearances. |
-| `naval` | wealth, philosophy | His podcast feed and posts. |
-| `karpathy` | learning, AI | Lectures, blog, interviews. |
-| `rams` | design | Few English sources, so expect a small vault. |
-
-These are starting points, not endorsements. You don't have to agree with any of
-these people. The vault worth building is the one for the person you learn from.
-
-## Use a cheaper model for triage
-
-Deciding which candidate videos to keep only needs titles, channels and durations.
-A small, cheap model does it well. In our test, a free model triaged 39 candidates
-for the Dieter Rams vault in 20 seconds, and its picks held up on review.
-Keep the strong model for compiling and answering. That's where attribution happens,
-and lint can catch an invented quote but not a real quote credited to the wrong
-person.
-
-## Keep a vault current
-
-People keep publishing, so a vault goes stale. `wwxd update` finds new sources.
-`--approve-hint own` approves the new ones from the person's own channels and feeds,
-and `--fetch` downloads them. Candidates you left pending before stay pending, and
-the other new ones wait for your review.
-
-A weekly cron line covers the CLI part.
-
-```cron
-# Mondays at 7:00
-0 7 * * 1  WWXD_HOME=$HOME/vaults $HOME/.local/bin/wwxd update hormozi --approve-hint own --fetch >> $HOME/vaults/hormozi-update.log 2>&1
-```
-
-Compiling needs an agent. A Claude Code scheduled agent (`/schedule`) can run the
-whole loop. It needs `wwxd` installed and access to the vault. Give it a prompt like
-this one.
-
-> Keep the hormozi wwxd vault current. Run
-> `wwxd update hormozi --approve-hint own --fetch`, and list the other new
-> candidates for me without approving them. Compile every source in
-> `wwxd pending hormozi` with the wwxd skill (references/compile.md), running
-> `wwxd lint hormozi` and `wwxd mark-compiled` after each one. Then run
-> `wwxd health hormozi`, and if it asks for a consolidation pass, follow
-> references/consolidate.md. Finish with `wwxd digest hormozi --days 7` and show
-> me the digest.
-
-`wwxd digest` writes a markdown note on what's new: the sources compiled, the leaves
-created or updated, and new statements grouped by leaf. `--out` saves it, for
-example into your notes app's folder.
+On our test vaults it checked 1,423 statements from 26 videos in under 4 minutes on
+CPU and flagged 9 as spoken by someone else. We confirmed 6 of them
+([case studies](https://github.com/MSliwa01/wwxd/blob/main/docs/benchmarks.md#voice-check-case-studies)).
+Lint shows its mismatches as warnings until someone fixes the attribution.
 
 ## CLI
+
+<details>
+<summary>All commands</summary>
 
 | Command | What it does |
 |---|---|
 | `wwxd new <slug> --example X` or `--name "Full Name"` | Create a vault |
+| `wwxd examples` | List the bundled example recipes |
 | `wwxd discover <slug>`, `wwxd update <slug>` | Find new candidate sources |
 | `wwxd update <slug> --approve-hint own --fetch` | Also approve new candidates with that hint and fetch them |
 | `wwxd sources <slug> --status candidate` | List sources |
 | `wwxd approve <slug> <ids>`, `wwxd reject <slug> <ids>` | Curate |
 | `wwxd add <slug> <url or file>` | Add a source by hand |
+| `wwxd estimate <slug> [--asks N]` | Estimate tokens, list-price dollars and time to compile, per model |
 | `wwxd fetch <slug>` | Download captions, transcripts and articles into `raw/` |
-| `wwxd pending <slug>` | Sources fetched but not compiled |
-| `wwxd mark-compiled <slug> <id>` | Record a compiled source in `log.md` |
-| `wwxd compile <slug> --jobs N` | Compile pending sources with N Claude Code sessions at once ([details](#compile-many-sources-at-once)) |
+| `wwxd pending <slug>`, `wwxd mark-compiled <slug> <id>` | List sources fetched but not compiled, record a compiled source in `log.md` |
+| `wwxd compile <slug> --jobs N` | Compile pending sources with N Claude Code sessions at once ([details](https://github.com/MSliwa01/wwxd/blob/main/docs/models-and-cost.md#compile-many-sources-at-once)) |
 | `wwxd lint <slug> [--only <path>]` | Check quotes, citations, attribution and links, and flag drift such as near-duplicate leaves |
 | `wwxd health <slug>` | Report on the wiki: size, attribution, coverage, near-duplicates, oversize leaves |
 | `wwxd timeline <slug> [query]` | Statements by source date and member, to see how views changed |
 | `wwxd digest <slug> --since YYYY-MM-DD` | Markdown note on what's new since a date |
 | `wwxd search <slug> "query"` | Keyword search over the wiki (`--raw` adds transcripts) |
 | `wwxd status <slug>` | Summary |
+| `wwxd vaults` | List vaults with their members and thinking pages, for panels |
 | `wwxd voice <slug> [ids]` | Check who is speaking in each quote, by voice (needs `wwxd[voice]`) |
 | `wwxd doctor` | Check yt-dlp, the JS runtime, ffmpeg, Whisper and `$WWXD_HOME` |
-| `wwxd bench run`, `judge`, `report` | [Benchmarks](https://github.com/MSliwa01/wwxd/blob/main/bench/README.md) |
+| `wwxd install-skill [--project]`, `wwxd version` | Install the wwxd skill for Claude Code, print the version |
+| `wwxd bench run`, `judge`, `rank`, `report` | [Benchmarks](https://github.com/MSliwa01/wwxd/blob/main/bench/README.md) |
+
+</details>
 
 Vaults are plain markdown folders and open in Obsidian. `$WWXD_HOME` sets where they
 live (default `./vaults`).
 
 ## Sources and copyright
 
-wwxd fetches public captions, articles and podcast audio for your own use. It doesn't
-fetch books, and this repo ships no content. You can add books you own as text files
-(`wwxd add <slug> book.txt`) or write a [fetcher plugin](https://github.com/MSliwa01/wwxd/blob/main/CONTRIBUTING.md#fetcher-plugins).
+wwxd ingests public captions, podcast transcripts and articles. It downloads audio
+only to process it on your machine, with Whisper when a source has no transcript and
+for the voice check. It doesn't fetch books, and this repo ships no content. You can
+add books you own as text files (`wwxd add <slug> book.txt`) or write a
+[fetcher plugin](https://github.com/MSliwa01/wwxd/blob/main/CONTRIBUTING.md#fetcher-plugins).
 Don't publish vaults built from material you don't have the right to share.
-[ETHICS.md](https://github.com/MSliwa01/wwxd/blob/main/ETHICS.md) has the rules for using vaults and explains how a person can
-have their recipe removed.
+[ETHICS.md](https://github.com/MSliwa01/wwxd/blob/main/ETHICS.md) has the rules for
+using vaults and explains how a person can have their recipe removed.
 
 ## Requirements
 
@@ -460,26 +319,16 @@ makes no network calls.
 - A JavaScript runtime for YouTube: [deno](https://deno.com), node 22 or newer, or
   [bun](https://bun.sh). wwxd picks the first of these on your PATH for yt-dlp.
   Without one, some videos lose formats or fail.
+- ffmpeg, which yt-dlp needs to convert some audio downloads.
 - Whisper, for sources without captions. Most podcasts need it, unless the feed
   publishes transcripts (`podcast:transcript` tags), which wwxd uses instead. Whisper
   runs on CPU, and much faster on a GPU. wwxd picks the model for you, large-v3-turbo
-  on a CUDA GPU and small on CPU. `WWXD_WHISPER_MODEL` and
-  `WWXD_WHISPER_DEVICE` set the defaults, and `wwxd fetch --whisper-model large-v3`
-  changes the model for one run.
-- Browser cookies, only if YouTube asks you to sign in. Set
-  `WWXD_COOKIES_FROM_BROWSER=firefox` (or `chrome:Profile 1`), or pass
-  `--cookies-from-browser` to `discover`, `update` or `fetch`.
+  on a CUDA GPU and small on CPU. `WWXD_WHISPER_MODEL` and `WWXD_WHISPER_DEVICE` set
+  the defaults, and `wwxd fetch --whisper-model large-v3` changes the model for one
+  run.
 
-When YouTube rate limits a fetch (HTTP 429), wwxd waits and retries up to 3 times,
-at most a minute apart.
-
-## Roadmap
-
-- A read-only MCP server for chat apps
-- Word-level timings for Whisper transcripts, so the voice check is as precise on
-  podcasts as it is on YouTube captions
-- Tree versus flat layout results in the bench
-- Fetchers for X threads and Substack archives
+If YouTube asks you to sign in or rate limits a fetch, see
+[docs/troubleshooting.md](https://github.com/MSliwa01/wwxd/blob/main/docs/troubleshooting.md).
 
 ## Credits
 

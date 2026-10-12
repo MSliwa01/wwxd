@@ -66,6 +66,14 @@ or linked from it.
 - Keep the CLI deterministic; judgment belongs in the skill.
 - Every claim in a vault must stay checkable against `raw/`.
 
+## Roadmap
+
+- A read-only MCP server for chat apps
+- Word-level timings for Whisper transcripts, so the voice check is as precise on
+  podcasts as it is on YouTube captions
+- Tree versus flat layout results in the bench
+- Fetchers for X threads and Substack archives
+
 ## Releasing
 
 `.github/workflows/release.yml` publishes to PyPI with trusted publishing, so the repo
