@@ -492,7 +492,7 @@ def voice(
     ids: Annotated[list[str] | None, typer.Argument(help="Only these source ids")] = None,
     model: Annotated[str, typer.Option(help="sherpa-onnx speaker model")] = "nemo_en_titanet_small.onnx",
 ) -> None:
-    """Check who is speaking in each quoted statement, by voice. Needs: pip install 'wwxd[voice]'."""
+    r"""Check who is speaking in each quoted statement, by voice. Needs: pip install 'wwxd\[voice]'."""
     from wwxd import voice as voice_mod
 
     v = _vault(vault)

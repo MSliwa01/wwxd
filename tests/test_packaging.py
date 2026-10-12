@@ -32,3 +32,11 @@ def test_vaults_lists_members(tmp_path, monkeypatch):
     monkeypatch.setenv("WWXD_HOME", str(tmp_path))
     out = CliRunner().invoke(app, ["vaults"]).output
     assert "duo" in out and "Ann  [thinking page]" in out and "Bob  [no thinking page]" in out
+
+
+def test_help_shows_extras_in_brackets():
+    # Typer renders help as Rich markup, which drops an unescaped "[voice]".
+    for args in (["voice", "--help"], ["--help"]):
+        result = CliRunner().invoke(app, args, terminal_width=200)
+        assert result.exit_code == 0, result.output
+        assert "wwxd[voice]" in result.output
