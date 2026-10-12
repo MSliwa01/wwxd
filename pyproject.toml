@@ -1,6 +1,6 @@
 [project]
 name = "wwxd"
-version = "0.1.0"
+version = "0.1.1"
 description = "What would X do? Build a cited knowledge wiki of anyone's thinking from their talks, podcasts and writing."
 readme = "README.md"
 license = "MIT"

@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.1.1 (2026-10-12)
 
 - `wwxd compile <slug> --jobs N` compiles pending sources with N Claude Code
   sessions at once, one source per session. On the study's 4 sources it took under a
@@ -10,6 +10,10 @@
 - `wwxd lint --only <path>` checks just the given pages.
 - `sources.yaml` is written atomically and under a lock, so parallel
   `mark-compiled` calls no longer drop each other's status changes.
+- `wwxd voice --help` now shows `wwxd[voice]`. Rich markup used to drop the
+  bracket.
+- The README is shorter and starts with a quick install. Benchmarks, models and
+  cost, keeping a vault current and troubleshooting moved to `docs/`.
 
 ## 0.1.0 (2026-10-11)
 
