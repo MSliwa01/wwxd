@@ -1,0 +1,423 @@
+Evaluation date: 2026-10-19. This is the current date, not a future date. May 2026 is in the past. Publication dates and dates of events described in a source are distinct. A model training cutoff does not invalidate supplied later material. You are an independent evaluator. Use no tools, commands, files, browsing, or external retrieval. A and B are anonymous. Their ordering conveys nothing. Do not infer their model, source access, or provenance. Do not reward writing style, citation presence, quotations, expert agreement, or presumed source use. A tie is valid.
+Score each answer on the four specified integer scales, each from 1 to 5. Anchors: 1 fundamentally deficient; 2 major problems; 3 mixed with meaningful gaps; 4 good with minor gaps; 5 strong and sufficiently complete. Choose A, B, or tie for substantive overall quality. Preserve uncertainty rather than inventing evidence.
+Return ONLY a JSON object with exactly one key, "judgments", containing one object per supplied pair. Each object has exactly: "id", "A", "B", "winner", "reason", "factual_objections". A and B each contain exactly the four dimension names and integer scores. winner is "A", "B", or "tie"; reason is a nonempty string. factual_objections is a list, possibly empty, of objects with exactly "answer" ("A" or "B"), "claim", "label" ("contradicted" or "unverified"), and "evidence" (a nonempty explanation). Distinguish an established contradiction from an unverified claim.
+Evaluate accuracy, specificity, faithfulness, and usefulness using the complete audited reference packet. The reference is evidence, not a required script. Missing optional detail is not automatically a false claim. Label a factual objection contradicted only when supplied evidence establishes the contradiction; otherwise label it unverified. Do not treat absence from the reference as proof of falsehood. Resolve a conflict between a summary and direct evidence in favor of the direct evidence and explain it.
+
+Pairs:
+[
+  {
+    "id": "p-9c051450506e1b9c",
+    "question": "I've spent months pitching seed investors, polishing my deck and taking follow-up meetings. How would Michael Seibel tell me to think about fundraising?",
+    "A": "Spending months pitching seed investors and taking endless follow-up meetings is a classic sign of a fundraising process that has lost momentum. Michael Seibel would diagnose this situation with brutal clarity: if you are still fundraising after months, you are likely not running a tight process, your metrics do not support a venture-scale growth story, or you are confusing polite investor interest with a genuine commitment. \n\nThe core mindset shift required here is to treat fundraising as a binary, compressed event rather than a continuous sales campaign. Investors thrive on urgency and fear of missing out. If they know you have been on the market for months without closing a lead, their interest plummets. \n\nConcrete next steps begin with an immediate pause on new outreach. You must review your metrics to determine if the business is actually growing fast enough to warrant seed capital. If the metrics are strong, your pitch or targeting is flawed; if the metrics are weak, you must stop fundraising entirely and focus on product and revenue until the numbers compel action. Set a hard deadline of two weeks to secure a term sheet from your warmest existing conversations. If that fails, pull the plug, cut your burn rate, and get back to building.\n\nThis advice assumes your product addresses a real market and you have access to a functional network of founders and angels. If you lack warm intros entirely, your bottleneck is distribution, not just the pitch. The definitive decision criterion is simple: multiple, competing term sheets within a two-week window mean you continue; months of endless feedback meetings mean you stop.",
+    "B": "Michael Seibel would tell you to stop treating fundraising as a school or a game to be won with a polished deck. He would point out that months of low-leverage pitching is a drag on your company and warn you that investors often string founders along like buyers purchasing an option, keeping meetings going just in case the startup takes off without ever intending to invest early. \n\nInstead of spending more time decksmithing, Seibel would advise you to become a company investors chase. He notes that investors chase 80 to 90 percent of their deals, meaning leverage is built in the work before any negotiation. Your immediate next steps are to pull the plug on endless follow-up meetings, return to building, and focus entirely on growth and product traction. If you have a working product that grows fast, even a terrible fundraiser with something that works will easily raise money compared to a great fundraiser with nothing. \n\nThis recommendation assumes you have a product in the market and early indicators of user pull. If you are pre-product and have no usage data, your pitch meetings are essentially customer discovery calls; in that case, the fix is to build a ridiculously simple MVP in weeks, launch it to actual users, and get feedback on the rough version rather than hiding behind a deck. The core decision criterion is your growth rate: if your metrics are flat after months of meetings, more pitch meetings will not save you, but a better product that users actually want will.",
+    "reference": {
+      "actual_stance": "Fundraising comes down to leverage, meaning your ability to walk away, and the deck is not doing the work. Ask whether you are growing; if you are not growing or not launched, deck work may be the biggest waste of your time. The effective way to raise is to grow so fast, with so many proof points, that you can raise quickly with little preparation. Michael's own evidence: when Socialcam was hot he asked investors what share of deals they chase versus take from the front door, and every answer was between 80/20 and 90/10 chase; at Justin.tv he spent eight months fundraising without success, and the two months of forced focus on profitability that followed got far more done. Investors who string founders along for months are in effect buying an option on them.",
+      "category": "fresh",
+      "errors": [
+        "Recommending a bigger investor list and a tighter deck as the main fix.",
+        "Inventing statistics not in the source."
+      ],
+      "evidence": [
+        {
+          "quote": "If you're not growing and not launched, in many ways, working on this deck could be the biggest waste",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "2:48"
+        },
+        {
+          "quote": "the deck isn't doing the work at all.",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "3:21"
+        },
+        {
+          "quote": "Leverage is also another way of thinking about is your ability to walk away.",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "3:54"
+        },
+        {
+          "quote": "the way to be very effective at fundraising is to be growing so quickly and have so many proof points that your startup is working",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "5:02"
+        },
+        {
+          "quote": "one of the times we almost died at Justin TV you know I had spent the eight months prior trying to fundra",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "seibel",
+          "speaker_basis": "inferred: speaker co-founded Socialcam and Justin.tv, which the video description assigns to Michael Seibel",
+          "timestamp": "6:44"
+        },
+        {
+          "quote": "And the amount of we got done in that two months versus slinging decks",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "seibel",
+          "speaker_basis": "inferred: speaker co-founded Socialcam and Justin.tv, which the video description assigns to Michael Seibel",
+          "timestamp": "6:44"
+        },
+        {
+          "quote": "it's sort of like you're buying an option.",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "8:57"
+        },
+        {
+          "quote": "And the answers I got only varied between 8020 chase and 9010 chase.",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "seibel",
+          "speaker_basis": "inferred: speaker co-founded Socialcam and Justin.tv, which the video description assigns to Michael Seibel",
+          "timestamp": "10:03"
+        },
+        {
+          "quote": "if you can invest that time in making your company something that investors will chase after versus decksmithing,",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "seibel",
+          "speaker_basis": "inferred: speaker co-founded Socialcam and Justin.tv, which the video description assigns to Michael Seibel",
+          "timestamp": "10:03"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold attributes everything to Michael Seibel. The episode is a two-host conversation with unlabeled captions. The Socialcam poll and the Justin.tv story are Michael's (he co-founded both). The leverage definition, the deck lines and the 'buying an option' point come from the joint conversation and may be Dalton's. Grade the content; do not penalize an answer that credits the episode to both hosts."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-08",
+      "key_status": "confirmed_speaker_caveat",
+      "primary_sources": [
+        "yt-7TU636F_yVQ"
+      ],
+      "question": "I've spent months pitching seed investors, polishing my deck and taking follow-up meetings. How would Michael Seibel tell me to think about fundraising?",
+      "required_points": [
+        "Stop polishing the deck; it is not doing the work. Leverage (traction, growth, ability to walk away) decides fundraising.",
+        "Spend the time building, launching, talking to users and growing, so investors chase you."
+      ],
+      "supporting_points": [
+        "Investors chase 80% to 90% of their deals (his Socialcam-era poll).",
+        "Justin.tv: eight months of failed fundraising vs two productive months focused on profitability.",
+        "Being strung along for months means the investor is buying an option on you.",
+        "Raise fast at the end, with little prep, once things are working."
+      ],
+      "uncertainty": [
+        "Speaker split between Dalton Caldwell and Michael Seibel is not recoverable from the captions except where noted."
+      ],
+      "vault": "yc"
+    }
+  },
+  {
+    "id": "p-af346bd1af16f08c",
+    "question": "My service business is profitable, but I'm carrying about $60k of debt. Should I pay it off or keep the cash for growth? What would Alex Hormozi say?",
+    "A": "Carrying sixty thousand dollars of debt while running a profitable service business creates a classic tension between risk mitigation and aggressive scaling. \n\nAlex Hormozi typically approaches this dilemma through the lens of return on investment. His framework dictates that if you can deploy cash to generate a higher return than the interest rate on the debt, you should keep the cash and grow. For example, if spending that cash on paid acquisition or talent yields a predictable multiple on your investment, paying off low-interest debt slows your momentum. Conversely, if your growth channels are saturated, unproven, or yield lower returns than the cost of borrowing, liquidating the debt provides a guaranteed, risk-free return and frees up monthly cash flow.\n\nSince the exact interest rate and your business's current profit margins are unknown, a conditional recommendation applies: if your debt carries a high interest rate or your growth levers are unproven, pay it off immediately to stabilize your baseline. If the debt is low-interest and you have a tested, high-ROI acquisition funnel ready to scale, retain the cash.\n\nConcrete next steps:\n1. Calculate the exact blended interest rate of the debt and compare it against the historical return on your marketing and sales spend.\n2. Audit your current cash reserves to ensure paying off the debt would not compromise your operating runway.\n3. Allocate the funds to the higher-yielding option—either debt elimination or customer acquisition—based on that math.\n\nDecision criteria rest on cash flow predictability. If cash flow fluctuates wildly, eliminate the debt to reduce financial stress. If cash flow is stable and scaling is bottlenecked strictly by capital, reinvest the cash.",
+    "B": "To decide whether to pay off your $60k business debt or keep the cash for growth, you should evaluate the decision through the lens of risk, leverage, and incremental improvement. \n\nFirst, correct the false premise that business debt is inherently a neutral growth tool. While borrowing to accelerate growth is common, debt increases fixed financial risk. Because businesses inevitably face volatility and seasonal downturns, unhedged risk compounded over time tends to come due. Paying down debt provides emotional relief and removes a fragile layer of vulnerability. \n\nHowever, cash is also the fuel required to seize growth opportunities. The recommendation depends on whether your business is currently supply- or demand-constrained. If your existing marketing funnel, pricing, and offers are already profitable and reliable, keeping the cash to fund higher ad spend or conversion optimization is appropriate. If your demand generation is unstable or your core unit economics are shaky, hoarding cash while letting debt linger compounds vulnerability. \n\nConcrete next steps:\n1. Audit your current cash conversion and return on ad spend. If you have clear, attribution-tested returns, deploy cash to scale what already works rather than taking risky overhauls.\n2. If returns are opaque or growth has plateaued due to internal bottlenecks, allocate a portion of your cash flow to systematically pay down the $60k debt over a short, defined window (such as four to five months) to clear it from the back of your mind.\n3. Apply incremental improvements—such as a modest price raise or fixing your landing page—to generate the cash needed to eliminate the debt without starving your operations.\n\nMaterial assumptions: The business is already profitable with positive cash flow. \n\nDecision criteria: Pay off the debt aggressively if market volatility threatens your cash reserves or if you lack a high-ROI, proven mechanism to deploy that cash for customer acquisition. Keep the cash and invest for growth only if you have predictable customer acquisition economics and a reliable way to turn every dollar spent into more than a dollar of immediate return.",
+    "reference": {
+      "actual_stance": "Pay it off. In the source the owner (Corey, HVAC duct cleaning, about $479k profit on $1.25M) already planned to clear the $60k in four to five months, and Hormozi approved ('Okay, good') and kept 'continue to pay off the debt' in the final plan. He calls it partly an emotional, back-of-mind issue and says he skews close to the Dave Ramsey side because debt increases risk, risk over a long horizon tends to come due, businesses have seasons and volatility, and many enduring companies such as Chick-fil-A run debt free. He did not frame it as debt instead of growth: in the same session he told Corey to keep raising ad spend while ROAS and CAC hold, after fixing the landing page and ads.",
+      "category": "fresh",
+      "errors": [
+        "Saying he advises keeping cheap debt because leverage is a tool.",
+        "Saying he told the owner to stop investing in growth until the debt is gone.",
+        "Stating the 5% and '100% in headache' figures as a firm quantified rule he gave."
+      ],
+      "evidence": [
+        {
+          "quote": "So, right now, we're allocating about 10% of our profit going towards paying off some of our debt.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "guest_corey",
+          "speaker_basis": "business owner answering Hormozi's question; content-inferred",
+          "timestamp": "0:33"
+        },
+        {
+          "quote": "Profit on that is 479,000. Uh, our net margin is 38%.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "guest_corey",
+          "speaker_basis": "business owner answering Hormozi's question; content-inferred",
+          "timestamp": "3:15"
+        },
+        {
+          "quote": "We are planning to pay off completely in the next four to five months.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "guest_corey",
+          "speaker_basis": "business owner answering Hormozi's question; content-inferred",
+          "timestamp": "8:37"
+        },
+        {
+          "quote": "Okay, good. That's one of those things that like I'd say this is more of an emotional thing",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "8:37"
+        },
+        {
+          "quote": "I tend to skew like very close to the Ramsey side and the single argument that I have around it is basically debt",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "8:37"
+        },
+        {
+          "quote": "increases risk. Risk when multiplied over a long time horizon tends to come due.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "9:10"
+        },
+        {
+          "quote": "businesses have seasons, they have volatility",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "9:10"
+        },
+        {
+          "quote": "If you look at some of the most enduring companies, a lot of like Chick-fil-A operate debt free.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "9:10"
+        },
+        {
+          "quote": "we just want to continue to spend month over month provided our ROAS and our CAC stay more or less the same.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "10:48"
+        },
+        {
+          "quote": "Two is you're going to continue to pay off the debt.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "30:45"
+        },
+        {
+          "quote": "But at least 100% in headache.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "uncertain",
+          "speaker_basis": "unlabeled >> turn after a separate '5%' turn; could be Hormozi or Corey",
+          "timestamp": "32:53"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold says paying off 'adds only about 5% to profit but removes 100% in headache' as Hormozi's argument. In the raw, '5%.' and 'But at least 100% in headache.' are separate unlabeled >> turns, so the speaker is uncertain. Demoted to a supporting point.",
+        "Gold omits that the owner had already decided to pay it off and that Hormozi approved rather than argued him into it, and that the same plan kept funding growth through ads. Added as context so answers that say 'pay it off and keep funding proven growth from cash flow' are not marked wrong.",
+        "Raw-internal inconsistency: 10% of $479k profit is about $48k a year, which does not clear $60k in four to five months. Not material to the stance."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-09",
+      "key_status": "corrected_context",
+      "primary_sources": [
+        "yt-OQf2Ba-Lp_4"
+      ],
+      "question": "My service business is profitable, but I'm carrying about $60k of debt. Should I pay it off or keep the cash for growth? What would Alex Hormozi say?",
+      "required_points": [
+        "Lean toward paying off the debt (he skews close to the Ramsey side).",
+        "Reason: debt increases risk, and risk over a long time horizon tends to come due; businesses have seasons and volatility."
+      ],
+      "supporting_points": [
+        "Enduring companies like Chick-fil-A operate debt free.",
+        "He calls it partly an emotional, back-of-mind issue.",
+        "In context the owner already planned to pay it off in four to five months from cash flow, and Hormozi approved.",
+        "Not either/or: in the same plan he kept funding proven ads while ROAS and CAC held.",
+        "Paying it off adds only a few percent to profit but removes a lot of headache (speaker of the '5%' figure is uncertain; see uncertainty)."
+      ],
+      "uncertainty": [
+        "The question gives no profit, interest rate or growth return. His stance comes from a business with about $479k annual profit, where $60k is small. Conditional answers that ask for these numbers are acceptable if they still state his lean.",
+        "yt-sL16tsGafcQ at 16:55 to 18:02 discusses acquisition/fund-level debt as leverage. That is distinct from this operating-business debt case. A conditional answer noting that distinction is not itself an error; the specific Ramsey lean and cash-flow context remain the required factual stance."
+      ],
+      "vault": "hormozi"
+    }
+  },
+  {
+    "id": "p-4cd02c8fbe46df26",
+    "question": "Why does Garry Tan say the premium on doing YC is bigger than ever and that the gap between YC and second place has grown?",
+    "A": "Garry Tan argues that the premium on doing YC is bigger than ever and that the gap between YC and second place has grown because the leverage provided by modern AI agents has dramatically amplified what individual founders and small teams can achieve. \n\nIn his view, the compounding context, custom skill files, and automated agent workflows available today allow a single founder to operate with the output of a much larger organization before ever raising a traditional round. Because execution velocity and product iteration have accelerated so radically, being plugged into the dense, high-signal network of a YC batch provides an unmatched compounding advantage. \n\nThe gap with second place widens because accelerators or programs offering merely capital or standard office space fail to replicate YC's specific concentration of outlier peers, insider knowledge, and the distinct culture required to push hard-tech and AI-native startups past the threshold of success. \n\n**Next Steps:**\n- Build and ship with an agent-native workflow rather than treating AI as mere autocomplete.\n- Focus relentlessly on user feedback and product quality rather than relying on external credentials or generic accelerator playbooks.\n\n**Material Assumptions:**\n- Agent leverage is structural and permanent, not a temporary spike.\n- Network density and peer concentration remain the primary drivers of outlier startup outcomes.\n\n**Decision Criteria:**\nRe-evaluate this stance if competing accelerators successfully build equivalent agent-native operational networks, or if founder leverage decentralizes to the point where centralized batch structures offer diminishing returns compared to remote or distributed cohorts.",
+    "B": "Garry Tan argues that the value of participating in Y Combinator has never been higher, and that the performance gap between it and alternative accelerators has widened, due to the structural transformation driven by artificial intelligence. \n\nThe core assumption is that technological shifts dramatically compress the time and capital required to build software, shifting the primary competitive advantage from engineering execution to distribution, network effects, and immediate access to capital. \n\nTan asserts that Y Combinator has scaled its proprietary network, brand equity, and direct access to follow-on investors to a scale that competitors cannot replicate. In an environment where thousands of startups can be launched simultaneously using modern tools, the differentiator for survival is not just initial funding, but rapid validation, elite peer groups, and immediate market feedback, all of which are concentrated within the Y Combinator ecosystem.\n\nWhat is certain is that Y Combinator maintains a dominant market share among top-tier early-stage software startups and commands unmatched deployment velocity. What remains uncertain is whether this widening gap will persist if macroeconomic tightening alters investor appetite, or if specialized accelerators in deep tech or biotech will erode Y Combinator’s software-centric dominance.\n\nConcrete next steps for founders evaluating accelerators include auditing whether their specific venture requires deep institutional networks for customer acquisition or if it relies primarily on product-led growth. Founders should compare the equity dilution demanded by Y Combinator against the actual value of its demo day network relative to alternative capital sources. \n\nThe decision criterion is straightforward: if a startup requires immediate access to top-tier venture capital and rapid brand signaling to secure early enterprise customers, the premium on Y Combinator justifies the cost. If the business model is capital-efficient and relies on specialized industry expertise, alternative domain-specific incubators may offer higher relative value despite the widening gap at the top.",
+    "reference": {
+      "actual_stance": "False attribution. Sam Altman said it, in his closing conversation with Garry Tan at Startup School 2026, prefacing it with 'I can say this, Garry probably can't'. He explained the widening gap as network effects: networks put you where you meet future cofounders (he met his OpenAI cofounders years earlier), and that takes a long time to compound. Just before, he said YC's once-heretical push to move to San Francisco was clearly right, though he has less intuition about it now.",
+      "category": "attribution",
+      "errors": [
+        "Attributing the claim to Garry Tan.",
+        "Explaining it with reasons the source does not give (bigger checks, brand) as if quoted."
+      ],
+      "evidence": [
+        {
+          "quote": "it used to be very heretical that YC told people they had to move to San Francisco. And looking back, it was clearly right.",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "16:25"
+        },
+        {
+          "quote": "I also think that I I can say this, Gary probably can't. I I I think the premium on doing YC is bigger now than it's like ever been before.",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "16:56"
+        },
+        {
+          "quote": "the distance between like YC and second place is has expanded. And this is a reminder of the power of",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "16:56"
+        },
+        {
+          "quote": "network effects.",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "17:28"
+        },
+        {
+          "quote": "the people that I started OpenAI with, I met like many many years in some cases before uh starting OpenAI",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "17:28"
+        },
+        {
+          "quote": "the sooner you can put yourself just in a flow where you're going to meet the people that will be your eventual co-founders",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "17:28"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold says Altman prefaced the line 'because it would sound self-serving coming from YC's current CEO'. The raw gives the preface but not the reason. Kept as an acceptable inference, not a required point.",
+        "Captions spell the name 'Gary'; quotes keep the caption spelling."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-17",
+      "key_status": "confirmed_with_interpretation_flag",
+      "primary_sources": [
+        "yt-ZIaOBAjvc38"
+      ],
+      "question": "Why does Garry Tan say the premium on doing YC is bigger than ever and that the gap between YC and second place has grown?",
+      "required_points": [
+        "Corrects the attribution: Sam Altman said it, not Garry Tan.",
+        "Gives his reason: network effects (meeting future cofounders, compounding over time)."
+      ],
+      "supporting_points": [
+        "Prefaced with 'I can say this, Garry probably can't'.",
+        "Context: Startup School 2026 conversation with Garry Tan.",
+        "Context: moving to SF was clearly right in hindsight; he has less intuition about it now.",
+        "Inference that it would sound self-serving from YC's CEO is reasonable but not stated in the source."
+      ],
+      "uncertainty": [
+        "Speaker attribution is inferred from content (answer references OpenAI cofounders; Tan asks the questions). The description confirms the conversation format."
+      ],
+      "vault": "yc"
+    }
+  }
+]

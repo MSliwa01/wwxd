@@ -1,0 +1,61 @@
+{
+  "answer_family": "gemini",
+  "batch_id": "diagnostic12--sol--gemini--batch-03",
+  "error": "",
+  "id": "p-064e3d6db2a08a82--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-064e3d6db2a08a82",
+  "primary_eligible": true,
+  "prompt_sha256": "cf2bcc282a6343f617fab1ee29e2912b5d8e164ff7805312e944b30835576554",
+  "question_key": "diagnostic12--yc-01",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 4,
+      "faithfulness": 4,
+      "specificity": 5,
+      "usefulness": 4
+    },
+    "B": {
+      "accuracy": 2,
+      "faithfulness": 2,
+      "specificity": 3,
+      "usefulness": 2
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "If the project achieves rapid organic growth, Graham's advice becomes that you should drop out and run with it.",
+        "evidence": "Graham says that if a side project takes off, 'maybe it's reasonable to run with it.' This supports considering the opportunity, but does not establish a categorical instruction to drop out.",
+        "label": "unverified"
+      },
+      {
+        "answer": "A",
+        "claim": "Meta and Microsoft began during reading periods.",
+        "evidence": "The supplied packet supports the importance of student projects but does not establish this specific historical timing for either company.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "Graham would likely bypass the student's age and student status when answering.",
+        "evidence": "Graham explicitly says 'Do not start a startup in college' and '20 is not the optimal time to do it.' His 2026 essay reiterates that running a startup is incompatible with being a full-time student.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "B",
+        "claim": "A project requiring immediate full-time engineering to capture a fleeting market is sufficient reason, under Graham's advice, to leave or pause school.",
+        "evidence": "The supplied exception concerns a side project that has already taken off on its own. It does not establish engineering demands or a perceived fleeting market as independently sufficient reasons to leave school.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-064e3d6db2a08a82",
+    "reason": "A accurately presents Graham's default advice, its rationale, the value of learning and side projects, and the exception for a project that takes off. Its final dropout instruction overstates that exception. B substitutes generic startup advice and incorrectly suggests Graham would bypass age and student status.",
+    "winner": "A"
+  },
+  "winner": "grounded"
+}

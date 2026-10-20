@@ -1,0 +1,232 @@
+{
+  "actual_input_tokens": 22359,
+  "answer": "{\n  \"judgments\": [\n    {\n      \"id\": \"p-ea64056372a05d6f\",\n      \"A\": {\n        \"accuracy\": 2,\n        \"specificity\": 2,\n        \"faithfulness\": 1,\n        \"usefulness\": 2\n      },\n      \"B\": {\n        \"accuracy\": 1,\n        \"specificity\": 2,\n        \"faithfulness\": 1,\n        \"usefulness\": 1\n      },\n      \"winner\": \"A\",\n      \"reason\": \"A partially distinguishes determination from ruthlessness, giving it a narrow advantage. Both fail to correct the central false premise and omit Livingston's emphasis on earnestness and rejection of conceited applicants. B explicitly endorses the false attribution.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"They observed that polite, consensus-seeking individuals often faltered, while successful founders pursued growth above all else.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The supplied evidence identifies earnestness, determination, flexibility and cofounder relationships as selection criteria. It does not establish these attributed observations about politeness or growth above all else.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"Jessica Livingston believed that early YC needed the most aggressive, ruthless founders.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"Livingston says she carefully funded earnest people and rejected conceited applicants. Her description of hardened, aggressive and ruthless people refers to other investors, contrasted with her own soft and sensitive approach.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"p-d55f29f798f63a11\",\n      \"A\": {\n        \"accuracy\": 4,\n        \"specificity\": 5,\n        \"faithfulness\": 4,\n        \"usefulness\": 4\n      },\n      \"B\": {\n        \"accuracy\": 2,\n        \"specificity\": 3,\n        \"faithfulness\": 2,\n        \"usefulness\": 2\n      },\n      \"winner\": \"A\",\n      \"reason\": \"A captures the essential advice: end the legal fight, return most vested equity with the first-year adjustment, and arrange a quick, clean, no-fault separation with severance. B replaces the central equity guidance with a prorated retention formula and adds unsupported assumptions about assets and dissolution.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Having raised capital is a condition that makes a formal equity separation matter.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The packet distinguishes the pre-product-market-fit situation and provides an exception for illegal or unethical conduct. It does not establish fundraising alone as a separate threshold for changing the advice.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"The departing founder should retain a prorated portion of vested stock representing nine months of work.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"The hosts explicitly say to reduce the departing founder's holding regardless of vesting: under 5% generally and under 2% within the first year. Their stated basis is preserving equity for those creating future value, rather than prorating past service.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"Nine months in means the company has negligible cash or intellectual property value.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"Neither the scenario nor the reference establishes the company's cash or intellectual property holdings. The statement that pre-product-market-fit stock is essentially worthless does not establish those asset values.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"p-064e3d6db2a08a82\",\n      \"A\": {\n        \"accuracy\": 4,\n        \"specificity\": 5,\n        \"faithfulness\": 4,\n        \"usefulness\": 4\n      },\n      \"B\": {\n        \"accuracy\": 2,\n        \"specificity\": 3,\n        \"faithfulness\": 2,\n        \"usefulness\": 2\n      },\n      \"winner\": \"A\",\n      \"reason\": \"A accurately presents Graham's default advice, its rationale, the value of learning and side projects, and the exception for a project that takes off. Its final dropout instruction overstates that exception. B substitutes generic startup advice and incorrectly suggests Graham would bypass age and student status.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"If the project achieves rapid organic growth, Graham's advice becomes that you should drop out and run with it.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"Graham says that if a side project takes off, 'maybe it's reasonable to run with it.' This supports considering the opportunity, but does not establish a categorical instruction to drop out.\"\n        },\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Meta and Microsoft began during reading periods.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The supplied packet supports the importance of student projects but does not establish this specific historical timing for either company.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"Graham would likely bypass the student's age and student status when answering.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"Graham explicitly says 'Do not start a startup in college' and '20 is not the optimal time to do it.' His 2026 essay reiterates that running a startup is incompatible with being a full-time student.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"A project requiring immediate full-time engineering to capture a fleeting market is sufficient reason, under Graham's advice, to leave or pause school.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The supplied exception concerns a side project that has already taken off on its own. It does not establish engineering demands or a perceived fleeting market as independently sufficient reasons to leave school.\"\n        }\n      ]\n    }\n  ]\n}",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 50.672,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e723b6017c6473911084587742a1a1d4c52c490c0642beb093b87f7f1cee2919"
+    }
+  ],
+  "batch": {
+    "blocked_pair_ids": [],
+    "chars_per_token": 3.57,
+    "eligible_pair_ids": [
+      "p-ea64056372a05d6f",
+      "p-d55f29f798f63a11",
+      "p-064e3d6db2a08a82"
+    ],
+    "estimated_input_tokens": 10293,
+    "id": "diagnostic12--sol--gemini--batch-03",
+    "judge_family": "sol",
+    "pair_ids": [
+      "p-ea64056372a05d6f",
+      "p-d55f29f798f63a11",
+      "p-064e3d6db2a08a82"
+    ],
+    "prompt_bytes": 36755,
+    "prompt_sha256": "cf2bcc282a6343f617fab1ee29e2912b5d8e164ff7805312e944b30835576554",
+    "suite": "diagnostic12"
+  },
+  "chars_per_token": 3.57,
+  "command": [
+    "codex",
+    "exec",
+    "--ignore-user-config",
+    "--ignore-rules",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--model",
+    "gpt-6.1-sol",
+    "--json",
+    "--color",
+    "never",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "unified_exec",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "view_image",
+    "--disable",
+    "shell_snapshot",
+    "--disable",
+    "skill_search",
+    "--disable",
+    "skill_mcp_dependency_install",
+    "--disable",
+    "request_permissions_tool",
+    "--disable",
+    "sleep_tool",
+    "-c",
+    "model_reasoning_effort=\"high\"",
+    "-c",
+    "project_doc_max_bytes=0",
+    "-c",
+    "web_search=\"disabled\"",
+    "-c",
+    "mcp_servers={}",
+    "-c",
+    "developer_instructions=\"Answer the supplied task using only its text. Do not use tools or commands.\"",
+    "-"
+  ],
+  "decoded": {
+    "p-064e3d6db2a08a82": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "accuracy": 4,
+          "faithfulness": 4,
+          "specificity": 5,
+          "usefulness": 4
+        },
+        "B": {
+          "accuracy": 2,
+          "faithfulness": 2,
+          "specificity": 3,
+          "usefulness": 2
+        },
+        "factual_objections": [
+          {
+            "answer": "A",
+            "claim": "If the project achieves rapid organic growth, Graham's advice becomes that you should drop out and run with it.",
+            "evidence": "Graham says that if a side project takes off, 'maybe it's reasonable to run with it.' This supports considering the opportunity, but does not establish a categorical instruction to drop out.",
+            "label": "unverified"
+          },
+          {
+            "answer": "A",
+            "claim": "Meta and Microsoft began during reading periods.",
+            "evidence": "The supplied packet supports the importance of student projects but does not establish this specific historical timing for either company.",
+            "label": "unverified"
+          },
+          {
+            "answer": "B",
+            "claim": "Graham would likely bypass the student's age and student status when answering.",
+            "evidence": "Graham explicitly says 'Do not start a startup in college' and '20 is not the optimal time to do it.' His 2026 essay reiterates that running a startup is incompatible with being a full-time student.",
+            "label": "contradicted"
+          },
+          {
+            "answer": "B",
+            "claim": "A project requiring immediate full-time engineering to capture a fleeting market is sufficient reason, under Graham's advice, to leave or pause school.",
+            "evidence": "The supplied exception concerns a side project that has already taken off on its own. It does not establish engineering demands or a perceived fleeting market as independently sufficient reasons to leave school.",
+            "label": "unverified"
+          }
+        ],
+        "id": "p-064e3d6db2a08a82",
+        "reason": "A accurately presents Graham's default advice, its rationale, the value of learning and side projects, and the exception for a project that takes off. Its final dropout instruction overstates that exception. B substitutes generic startup advice and incorrectly suggests Graham would bypass age and student status.",
+        "winner": "A"
+      }
+    },
+    "p-d55f29f798f63a11": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "accuracy": 4,
+          "faithfulness": 4,
+          "specificity": 5,
+          "usefulness": 4
+        },
+        "B": {
+          "accuracy": 2,
+          "faithfulness": 2,
+          "specificity": 3,
+          "usefulness": 2
+        },
+        "factual_objections": [
+          {
+            "answer": "A",
+            "claim": "Having raised capital is a condition that makes a formal equity separation matter.",
+            "evidence": "The packet distinguishes the pre-product-market-fit situation and provides an exception for illegal or unethical conduct. It does not establish fundraising alone as a separate threshold for changing the advice.",
+            "label": "unverified"
+          },
+          {
+            "answer": "B",
+            "claim": "The departing founder should retain a prorated portion of vested stock representing nine months of work.",
+            "evidence": "The hosts explicitly say to reduce the departing founder's holding regardless of vesting: under 5% generally and under 2% within the first year. Their stated basis is preserving equity for those creating future value, rather than prorating past service.",
+            "label": "contradicted"
+          },
+          {
+            "answer": "B",
+            "claim": "Nine months in means the company has negligible cash or intellectual property value.",
+            "evidence": "Neither the scenario nor the reference establishes the company's cash or intellectual property holdings. The statement that pre-product-market-fit stock is essentially worthless does not establish those asset values.",
+            "label": "unverified"
+          }
+        ],
+        "id": "p-d55f29f798f63a11",
+        "reason": "A captures the essential advice: end the legal fight, return most vested equity with the first-year adjustment, and arrange a quick, clean, no-fault separation with severance. B replaces the central equity guidance with a prorated retention formula and adds unsupported assumptions about assets and dissolution.",
+        "winner": "A"
+      }
+    },
+    "p-ea64056372a05d6f": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "accuracy": 2,
+          "faithfulness": 1,
+          "specificity": 2,
+          "usefulness": 2
+        },
+        "B": {
+          "accuracy": 1,
+          "faithfulness": 1,
+          "specificity": 2,
+          "usefulness": 1
+        },
+        "factual_objections": [
+          {
+            "answer": "A",
+            "claim": "They observed that polite, consensus-seeking individuals often faltered, while successful founders pursued growth above all else.",
+            "evidence": "The supplied evidence identifies earnestness, determination, flexibility and cofounder relationships as selection criteria. It does not establish these attributed observations about politeness or growth above all else.",
+            "label": "unverified"
+          },
+          {
+            "answer": "B",
+            "claim": "Jessica Livingston believed that early YC needed the most aggressive, ruthless founders.",
+            "evidence": "Livingston says she carefully funded earnest people and rejected conceited applicants. Her description of hardened, aggressive and ruthless people refers to other investors, contrasted with her own soft and sensitive approach.",
+            "label": "contradicted"
+          }
+        ],
+        "id": "p-ea64056372a05d6f",
+        "reason": "A partially distinguishes determination from ruthlessness, giving it a narrow advantage. Both fail to correct the central false premise and omit Livingston's emphasis on earnestness and rejection of conceited applicants. B explicitly endorses the false attribution.",
+        "winner": "A"
+      }
+    }
+  },
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 10293,
+  "event_count": 4,
+  "finish_reasons": [
+    "turn.completed"
+  ],
+  "finished": "2026-10-19T11:35:43.056059+00:00",
+  "observed_models": [],
+  "parse_error": "",
+  "prompt_sha256": "cf2bcc282a6343f617fab1ee29e2912b5d8e164ff7805312e944b30835576554",
+  "requested_model": "gpt-6.1-sol",
+  "serving_model_attested": false,
+  "status": "ok",
+  "usage_events": [
+    {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 11776,
+      "input_tokens": 22359,
+      "output_tokens": 2318,
+      "reasoning_output_tokens": 1034
+    }
+  ]
+}

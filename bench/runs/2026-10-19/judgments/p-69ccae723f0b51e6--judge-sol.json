@@ -1,0 +1,36 @@
+{
+  "answer_family": "sol",
+  "batch_id": "diagnostic12--sol--sol--batch-03",
+  "error": "",
+  "id": "p-69ccae723f0b51e6--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-69ccae723f0b51e6",
+  "primary_eligible": false,
+  "prompt_sha256": "5f06ec555251859f39d5b981a356e1b7c0d443417cd2751f6fd7c37f8b4ce78c",
+  "question_key": "diagnostic12--hz-02",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 5,
+      "faithfulness": 5,
+      "specificity": 5,
+      "usefulness": 5
+    },
+    "B": {
+      "accuracy": 5,
+      "faithfulness": 3,
+      "specificity": 4,
+      "usefulness": 4
+    },
+    "factual_objections": [],
+    "id": "p-69ccae723f0b51e6",
+    "reason": "A captures the central wording instruction: flaw first, then 'but', then the benefit. B correctly explains honest admissions and provides useful examples, but omits Hormozi's specific instruction about wording and emphasis.",
+    "winner": "A"
+  },
+  "winner": "grounded"
+}

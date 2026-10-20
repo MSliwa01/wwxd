@@ -1,0 +1,43 @@
+{
+  "answer_family": "opus",
+  "batch_id": "diagnostic12--sol--opus--batch-00",
+  "error": "",
+  "id": "p-bd456c713761bbb7--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-bd456c713761bbb7",
+  "primary_eligible": true,
+  "prompt_sha256": "b9bda7c4c3a7e4d5edf1b4976ac7ffa9e6eb2416c1d974d89af3e6161469ef6a",
+  "question_key": "diagnostic12--hz-20",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 3,
+      "faithfulness": 2,
+      "specificity": 2,
+      "usefulness": 2
+    },
+    "B": {
+      "accuracy": 4,
+      "faithfulness": 5,
+      "specificity": 5,
+      "usefulness": 5
+    },
+    "factual_objections": [
+      {
+        "answer": "B",
+        "claim": "Caleb closed roughly one sale per 20 doors, and Hormozi targeted repair tickets of $2,500–5,000.",
+        "evidence": "The supplied packet supports expanding door-knocking and emphasizing repair volume, but does not substantiate these numerical details.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-bd456c713761bbb7",
+    "reason": "B correctly rejects the premise, identifies Caleb's business, and explains the actual recommendation to expand door-to-door through a sales team. A cautiously questions the premise but leaves the exchange unresolved and devotes substantial attention to hypothetical reasons for advice that the direct evidence shows was the opposite.",
+    "winner": "B"
+  },
+  "winner": "grounded"
+}

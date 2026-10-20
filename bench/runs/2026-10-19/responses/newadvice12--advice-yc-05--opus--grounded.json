@@ -1,0 +1,101 @@
+{
+  "actual_input_tokens": 224201,
+  "answer": "**Recommendation: fix the process before you change the offer. Don't cut equity, and don't stop hiring.**\n\n**Why the offers lost.** All three candidates chose roughly double the cash at large AI companies. That means they were optimizing for cash. A $240k offer with less equity still loses to a much larger salary, attracts the wrong people, and costs you about $110k a year in runway for two hires. Your real competition is other early startups, for engineers who want ownership and responsibility. Seven interviews in six weeks is too thin a pipeline to find those people.\n\n**What to change in the next 30 days:**\n- **Founder time:** Treat hiring like sales. Raise founder time from about 2 to 10–15 hours a week, and do the sourcing yourselves.\n- **Pipeline:** Aim for 40–60 first screens. Source from your users, open-source contributors in your space, former founders, and early engineers at devtool companies.\n- **Speed:** Cut first call to offer from 3 weeks to 7–10 days. Hand strong candidates a signed offer at the final interview.\n- **Offer:** Keep cash near $190–210k and raise equity to 0.75–1.25%. Let candidates choose their cash/equity mix. Explain the upside and responsibility concretely.\n- **Interim work:** Use coding agents now to stretch the current team, not as a replacement for hiring.\n- **Agency:** Optional, and only as contingency on one role. Agencies mostly fish the same pond you're losing in.\n- **Overseas contractors:** Fine for well-bounded work, but not for your core backend.\n\n**Assumptions:** You have about 18–24 months of runway, and the role needs owners rather than order-takers.\n\n**What would change this:**\n- **Raise cash:** if you run 30+ screens and still lose finalists to startup offers on cash.\n- **Use a recruiter:** if you can't reach about 40 screens yourselves.\n- **Hire one instead of two:** if the agent-augmented team ships the roadmap on schedule.",
+  "arm": "grounded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 17.579,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "16a8db4e18cb179fd90db2acc4a135881e99be51be28768d4c76079968e5fc80"
+    }
+  ],
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 226791,
+  "event_count": 11,
+  "family": "opus",
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:31:07.072562+00:00",
+  "format_deviations": [
+    "outside descriptive 150..300 word band around approximate 250-word instruction"
+  ],
+  "id": "newadvice12--advice-yc-05--opus--grounded",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "prompt_sha256": "e2a7319a6634d540a32b9015c7ba45e8116526b7a8a5aa1f90040a2db143ef3d",
+  "question_key": "newadvice12--advice-yc-05",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "newadvice12",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 222631,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 222631,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 222631,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 222631,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 1297,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 1297,
+      "output_tokens_details": {
+        "thinking_tokens": 628
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ],
+  "words": 311
+}

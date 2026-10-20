@@ -1,0 +1,101 @@
+{
+  "actual_input_tokens": 2663,
+  "answer": "**Pick option 1: the new-patient call and appointment-setting service for dental offices.**\n\n**Why this one fits:** It's the only option that can realistically reach about $3,400/month in take-home pay within 18 months on 20 hours a week. It also costs almost nothing to start and builds on knowledge you already have. Five to eight offices paying $600–$1,000/month would get you there, and service businesses can grow that fast. The vending route would use 82% of your savings on an unverified $700 claim, and you'd need about five routes to replace your pay. The ergonomic store puts $6,000 into inventory in a crowded market with thin margins and high ad costs.\n\n**Assumptions:** Your employment agreement has no non-compete or non-solicit clause, and you won't pitch your own employer's competitors or use any of its patient data. Read your contract before you start, and consider telling your boss.\n\n**First 90 days**\n- **Days 1–30:** Form an LLC, get liability insurance, and learn the basics of handling patient information under HIPAA, including signing business associate agreements. Define one offer, such as answering missed and after-hours new-patient calls, following up with leads, and booking them, priced per booked patient or as a monthly retainer. Interview 15 office managers about missed calls and lost leads.\n- **Days 31–60:** Run a discounted 30-day pilot with 1–2 offices outside your employer's market. Track calls answered, appointments booked, and show rates.\n- **Days 61–90:** Turn the pilot results into a one-page case study, raise to full price, and aim for 2–3 paying clients.\n\n**Decision criteria:** Keep your expenses covered and don't touch more than $2,000 of your savings. If no office pays you by day 90, change the offer to something like insurance verification or reactivating old patients. Only consider quitting your job after your side income covers $2,900/month for three months in a row.",
+  "arm": "raw",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 12.941,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "3af14a801764a7b2e0cb093812be2562488241deef4bb464674e14b284505ed3"
+    }
+  ],
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 673,
+  "event_count": 7,
+  "family": "opus",
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:28:00.514276+00:00",
+  "format_deviations": [
+    "outside descriptive 150..300 word band around approximate 250-word instruction"
+  ],
+  "id": "newadvice12--advice-hz-06--opus--raw",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "prompt_sha256": "06080d0d47e662fade18eea0528201366f81e5d52e5d552d9077073f5062a365",
+  "question_key": "newadvice12--advice-hz-06",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "newadvice12",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 1093,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 1093,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 1093,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 1093,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 792,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 792,
+      "output_tokens_details": {
+        "thinking_tokens": 170
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ],
+  "words": 307
+}

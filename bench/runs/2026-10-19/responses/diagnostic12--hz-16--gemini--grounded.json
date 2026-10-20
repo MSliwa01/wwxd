@@ -1,0 +1,57 @@
+{
+  "actual_input_tokens": 109983,
+  "answer": "Alex Hormozi tells no story about his company being worth four times more simply by listing on the NASDAQ, nor of any subsequent IPO equity deal. That premise is false, and his businesses have not gone public in an initial public offering. \n\nInstead, Hormozi's primary liquidity event occurred when he sold a majority stake in his licensing and supplement companies to a private equity firm rather than executing an IPO. His core business model pivots away from public listings toward private equity partnerships, such as his work with Acquisition.com, where he takes minority stakes in private small and mid-sized businesses to help them scale. \n\nIf you are evaluating whether to take a company public versus pursuing private equity or bootstrapping, your decision should hinge on your current scale, revenue predictability, and desire for operational control. Public listings make sense primarily for businesses at a massive scale that require deep public capital markets and offer broad liquidity for existing shareholders, but they introduce heavy regulatory burdens, public scrutiny, and strict reporting requirements. For smaller or privately held firms, partnering with a private equity growth investor or bootstrapping typically preserves operational agility while providing strategic capital without the friction of public markets.",
+  "arm": "grounded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 3.723,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "01d6108fd0d0052b9c58f020a1c5db863468ea5110d1964f7a55969105bf045b"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 105011,
+  "event_count": 1,
+  "family": "gemini",
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:21:15.924540+00:00",
+  "format_deviations": [],
+  "id": "diagnostic12--hz-16--gemini--grounded",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_sha256": "a3957b8be7edf91f14fbda59d85448c1562a02820c3dc1bed1d700db7f5615e2",
+  "question_key": "diagnostic12--hz-16",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 233,
+      "promptTokenCount": 109983,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 109983
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 110216
+    }
+  ],
+  "words": 200
+}

@@ -1,0 +1,57 @@
+{
+  "actual_input_tokens": 248,
+  "answer": "Alex Hormozi often recounts a specific narrative regarding valuation adjustments and liquidity events, though the factual premise that he took an IPO equity deal after listing on the NASDAQ requires correction. Hormozi has never taken a traditional company public via an initial public offering, nor has he listed any of his primary operating businesses on the NASDAQ. Instead, his major liquidity event occurred when private equity firm American Pacific Group acquired a majority stake in Acquisition.com's portfolio operations, which is a private transaction rather than a public market listing. \n\nThe story regarding a valuation quadrupling simply by listing on a public exchange like the NASDAQ reflects a theoretical financial principle he frequently teaches rather than a personal anecdote. He illustrates that public companies trade at significantly higher earnings multiples than private companies due to liquidity, transparency, and access to broader capital pools. Therefore, a business generating a specific net income might command a modest multiple privately, but that same cash flow would mathematically translate to a valuation four times higher if priced at public market averages. \n\n**Material Assumptions:** Public market investor demand persistently outpaces private market liquidity, and earnings quality remains constant across transitions. \n\n**Decision Criteria:** Founders should evaluate whether the administrative overhead and regulatory compliance of public listings outweigh the multiple expansion. \n\n**Concrete Next Steps:**\n1. Calculate your current business earnings against private equity and strategic acquisition multiples.\n2. Model the cost of public readiness against potential valuation uplifts before pursuing public listings.",
+  "arm": "raw",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 2.129,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a1cdc2da57300cbd1c38094f821a6a6e399daade9c00f40538b8dfaa43c2d904"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 365,
+  "event_count": 1,
+  "family": "gemini",
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:21:12.160060+00:00",
+  "format_deviations": [],
+  "id": "diagnostic12--hz-16--gemini--raw",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_sha256": "2a277110a51940f1f0afccd71209c8d16435b8fff4f98ef4f9b342bf803e9c87",
+  "question_key": "diagnostic12--hz-16",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 292,
+      "promptTokenCount": 248,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 248
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 540
+    }
+  ],
+  "words": 244
+}

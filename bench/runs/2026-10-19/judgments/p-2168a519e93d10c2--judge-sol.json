@@ -1,0 +1,49 @@
+{
+  "answer_family": "gemini",
+  "batch_id": "newadvice12--sol--gemini--batch-03",
+  "error": "",
+  "id": "p-2168a519e93d10c2--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-2168a519e93d10c2",
+  "primary_eligible": true,
+  "prompt_sha256": "fcda8a3871be7e527e7dd84c0d409c7f5fbf24682e7820878b97898e18863ea8",
+  "question_key": "newadvice12--advice-yc-01",
+  "status": "ok",
+  "suite": "newadvice12",
+  "verdict": {
+    "A": {
+      "actionability": 3,
+      "constraint_fit": 4,
+      "decision_quality": 4,
+      "reasoning": 3
+    },
+    "B": {
+      "actionability": 4,
+      "constraint_fit": 3,
+      "decision_quality": 3,
+      "reasoning": 2
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "Failure to reach 10 to 20 paying daily-use clinics within eight weeks means veterinarians do not want the product enough.",
+        "evidence": "The scenario supplies no acquisition funnel, sales-cycle, pricing, or onboarding evidence that would distinguish insufficient demand from ineffective distribution or activation.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "Securing ten paying clinics establishes a viable micro-SaaS.",
+        "evidence": "At the suggested $100 monthly price, ten clinics generate $1,000 monthly against $22,000 current monthly spending. This could be useful early demand evidence, but viability additionally depends on retention, costs, acquisition economics, and growth.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-2168a519e93d10c2",
+    "reason": "A better anchors the product scope in observed daily use and explicitly investigates why the other pilots are inactive. Its runway calculation is correct. B provides clearer weekly sequencing and a concrete price experiment, but retains an unvalidated feature, inconsistently freezes engineering while requiring refinement, and overstates what ten paying customers establish. Both should narrow the active offering without requiring immediate deletion, evaluate retention and note quality, and avoid treating an arbitrary eight-week sales threshold as decisive.",
+    "winner": "A"
+  },
+  "winner": "grounded"
+}

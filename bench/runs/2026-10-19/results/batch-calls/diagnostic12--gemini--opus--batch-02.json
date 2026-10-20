@@ -1,0 +1,72 @@
+{
+  "actual_input_tokens": 13064,
+  "answer": "```json\n{\n  \"judgments\": [\n    {\n      \"id\": \"p-db3e2e9db4864dd8\",\n      \"A\": {\n        \"accuracy\": 5,\n        \"specificity\": 5,\n        \"faithfulness\": 5,\n        \"usefulness\": 5\n      },\n      \"B\": {\n        \"accuracy\": 5,\n        \"specificity\": 5,\n        \"faithfulness\": 5,\n        \"usefulness\": 5\n      },\n      \"winner\": \"tie\",\n      \"reason\": \"Both answers provide an excellent, comprehensive, and faithful reconstruction of Michael Seibel's (and YC's) views on fundraising based on the reference material. They hit all the required and supporting points accurately, maintain appropriate caveats regarding speaker attribution, and offer clear, practical advice. They are equally matched in quality.\",\n      \"factual_objections\": []\n    },\n    {\n      \"id\": \"p-9affc45058d920b8\",\n      \"A\": {\n        \"accuracy\": 5,\n        \"specificity\": 5,\n        \"faithfulness\": 5,\n        \"usefulness\": 5\n      },\n      \"B\": {\n        \"accuracy\": 4,\n        \"specificity\": 4,\n        \"faithfulness\": 4,\n        \"usefulness\": 4\n      },\n      \"winner\": \"A\",\n      \"reason\": \"Answer A captures the specific metrics and platform context from the Skool data cited by Hormozi much more precisely (e.g., 80% retention / 20% churn platform average, <10% for best groups, 30%+ as the threshold to worry, and the tenure breakdown). Answer B relies on more generic SaaS-style benchmarks (5-10%, over 10%) rather than the exact figures from the source material.\",\n      \"factual_objections\": []\n    },\n    {\n      \"id\": \"p-518efde008bea979\",\n      \"A\": {\n        \"accuracy\": 5,\n        \"specificity\": 5,\n        \"faithfulness\": 5,\n        \"usefulness\": 5\n      },\n      \"B\": {\n        \"accuracy\": 5,\n        \"specificity\": 5,\n        \"faithfulness\": 5,\n        \"usefulness\": 5\n      },\n      \"winner\": \"tie\",\n      \"reason\": \"Both answers correctly advise raising prices based on the 82% close rate, accurately cite the core principles, do the break-even math correctly around 65%, and outline actionable next steps matching Hormozi's consulting advice. They are virtually identical in substance and quality.\",\n      \"factual_objections\": []\n    }\n  ]\n}\n```",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 2.548,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7d05ef15af2e0b19b3c2468ebdca30c327e8958b1f678e6df78250e03a9492b7"
+    }
+  ],
+  "batch": {
+    "blocked_pair_ids": [],
+    "chars_per_token": 3.2,
+    "eligible_pair_ids": [
+      "p-db3e2e9db4864dd8",
+      "p-9affc45058d920b8",
+      "p-518efde008bea979"
+    ],
+    "estimated_input_tokens": 12717,
+    "id": "diagnostic12--gemini--opus--batch-02",
+    "judge_family": "gemini",
+    "pair_ids": [
+      "p-db3e2e9db4864dd8",
+      "p-9affc45058d920b8",
+      "p-518efde008bea979"
+    ],
+    "prompt_bytes": 40715,
+    "prompt_sha256": "1306bb947f13bb16c0bd76adfcb423e4d25e9b792fb86183a99a653a03958088",
+    "suite": "diagnostic12"
+  },
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "decoded": {},
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 12717,
+  "event_count": 1,
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:37:31.991223+00:00",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "parse_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "prompt_sha256": "1306bb947f13bb16c0bd76adfcb423e4d25e9b792fb86183a99a653a03958088",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 639,
+      "promptTokenCount": 13064,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 13064
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 13703
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "answer_family": "sol",
+  "batch_id": "newadvice12--sol--sol--batch-03",
+  "error": "",
+  "id": "p-31c37e3720373ad0--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-31c37e3720373ad0",
+  "primary_eligible": false,
+  "prompt_sha256": "c349479a60fe8a0c9df6fe27f028e51deea5feacfbab53ebbccdc8b3e091e171",
+  "question_key": "newadvice12--advice-hz-04",
+  "status": "ok",
+  "suite": "newadvice12",
+  "verdict": {
+    "A": {
+      "actionability": 5,
+      "constraint_fit": 5,
+      "decision_quality": 5,
+      "reasoning": 5
+    },
+    "B": {
+      "actionability": 5,
+      "constraint_fit": 5,
+      "decision_quality": 5,
+      "reasoning": 5
+    },
+    "factual_objections": [],
+    "id": "p-31c37e3720373ad0",
+    "reason": "Both provide feasible six-month plans within the $8,000 monthly budget, correctly calculate gross profit and advertising acquisition economics, and investigate whether existing contracts are also threatened. A immediately funds the projected four-win replacement rate; B stages spending while testing referrals and advertising. Both condition expansion on observed economics and delivery capacity, making either approach defensible.",
+    "winner": "tie"
+  },
+  "winner": "tie"
+}

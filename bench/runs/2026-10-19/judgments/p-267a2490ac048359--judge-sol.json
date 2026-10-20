@@ -1,0 +1,43 @@
+{
+  "answer_family": "sol",
+  "batch_id": "diagnostic12--sol--sol--batch-03",
+  "error": "",
+  "id": "p-267a2490ac048359--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-267a2490ac048359",
+  "primary_eligible": false,
+  "prompt_sha256": "5f06ec555251859f39d5b981a356e1b7c0d443417cd2751f6fd7c37f8b4ce78c",
+  "question_key": "diagnostic12--hz-05",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 5,
+      "faithfulness": 5,
+      "specificity": 5,
+      "usefulness": 5
+    },
+    "B": {
+      "accuracy": 3,
+      "faithfulness": 2,
+      "specificity": 3,
+      "usefulness": 3
+    },
+    "factual_objections": [
+      {
+        "answer": "B",
+        "claim": "3–5% monthly churn is generally healthy, while above 10% is usually a serious concern for an ongoing paid community.",
+        "evidence": "The packet does not substantiate these general thresholds. Hormozi's supplied Skool benchmarks instead describe approximately 20% average churn, under 10% for the best groups, and approximately 30% or higher as the point to prioritize retention. Those observations do not prove B's separately offered guidelines false.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-267a2490ac048359",
+    "reason": "A supplies the documented 20% average, under-10% strong performance, roughly 30% intervention threshold, and tenure-dependent declines. B provides useful measurement advice but replaces those benchmarks with unsupported operating thresholds and omits the crucial warning that elevated early churn can be normal. B explicitly separates its thresholds from Hormozi attribution, so this is not a fabricated attribution.",
+    "winner": "A"
+  },
+  "winner": "grounded"
+}

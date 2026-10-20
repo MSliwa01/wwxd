@@ -1,0 +1,55 @@
+{
+  "answer_family": "opus",
+  "batch_id": "newadvice12--sol--opus--batch-03",
+  "error": "",
+  "id": "p-bc5522bf9ebe6437--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-bc5522bf9ebe6437",
+  "primary_eligible": true,
+  "prompt_sha256": "261a4d296a97cc11532988d2d82889b98e3e5567d97677db563fa83081f5e536",
+  "question_key": "newadvice12--advice-hz-05",
+  "status": "ok",
+  "suite": "newadvice12",
+  "verdict": {
+    "A": {
+      "actionability": 4,
+      "constraint_fit": 3,
+      "decision_quality": 3,
+      "reasoning": 3
+    },
+    "B": {
+      "actionability": 4,
+      "constraint_fit": 4,
+      "decision_quality": 3,
+      "reasoning": 3
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "$690 annually is roughly two months free.",
+        "evidence": "Twelve months at $79 costs $948. A $690 price discounts $258, equivalent to approximately 3.27 months. Two months free would cost $790.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "A",
+        "claim": "Lifetime revenue of about $440 against $110 acquisition cost establishes that more advertising is affordable even if acquisition costs rise.",
+        "evidence": "The revenue calculation is correct under constant churn, but delivery costs, contribution margins and cash requirements are unspecified. Revenue alone does not establish profitable acquisition or spending capacity.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "With churn stuck at 18%, even doubled ads top out around 830 members.",
+        "evidence": "At the supplied $110 acquisition cost, doubling ads produces 180 additions monthly. Starting from 600, constant 18% churn yields approximately 963 members after 12 months and approaches 1,000 over time. A figure around 830 requires an additional acquisition-cost or conversion assumption.",
+        "label": "contradicted"
+      }
+    ],
+    "id": "p-bc5522bf9ebe6437",
+    "reason": "Both select a defensible pair and add useful onboarding measures, but annual billing does not establish sustained engagement or renewal. A's conditional membership projections are broadly coherent, while its affordability argument ignores margins and its discount description is wrong. B provides more cautious spending gates and acknowledges margins, but materially understates membership achievable with doubled acquisition at the supplied cost. These tradeoffs leave neither clearly stronger overall.",
+    "winner": "tie"
+  },
+  "winner": "tie"
+}

@@ -1,0 +1,49 @@
+{
+  "answer_family": "sol",
+  "batch_id": "diagnostic12--sol--sol--batch-01",
+  "error": "",
+  "id": "p-3dc91bfc2e1429d0--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-3dc91bfc2e1429d0",
+  "primary_eligible": false,
+  "prompt_sha256": "ef0b13b77729cf0b3a119e71b0241525d528a0d647d4eb8a52de2bfe85fd8971",
+  "question_key": "diagnostic12--yc-20",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 4,
+      "faithfulness": 4,
+      "specificity": 3,
+      "usefulness": 4
+    },
+    "B": {
+      "accuracy": 4,
+      "faithfulness": 4,
+      "specificity": 5,
+      "usefulness": 5
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "Early YC's selection of young, technically capable, socially unpolished applicants supports this account of Livingston's position.",
+        "evidence": "The packet establishes Livingston's character criteria but does not establish this characterization of early YC applicants or its connection to her selection decisions.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "Livingston's advice to prospective cofounders emphasized complementary skills and a shared moral compass.",
+        "evidence": "The packet supports her attention to cofounder relationships, but does not establish these particular elements of her advice.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-3dc91bfc2e1429d0",
+    "reason": "Both reject the false premise and distinguish determination from ruthlessness. B more fully explains Livingston's actual selection criteria, including flexibility, earnestness, rejection of conceited applicants, and attention to cofounder relationships. A omits the clearest counterexample: her explicit refusal to fund conceited people.",
+    "winner": "B"
+  },
+  "winner": "grounded"
+}

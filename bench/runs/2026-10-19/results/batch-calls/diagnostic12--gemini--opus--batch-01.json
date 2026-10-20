@@ -1,0 +1,72 @@
+{
+  "actual_input_tokens": 10550,
+  "answer": "```json\n{\n  \"judgments\": [\n    {\n      \"id\": \"p-ee2b7ee36164eccb\",\n      \"A\": {\n        \"accuracy\": 5,\n        \"faithfulness\": 5,\n        \"specificity\": 5,\n        \"usefulness\": 5\n      },\n      \"B\": {\n        \"accuracy\": 5,\n        \"faithfulness\": 5,\n        \"specificity\": 5,\n        \"usefulness\": 5\n      },\n      \"winner\": \"tie\",\n      \"reason\": \"Both answers accurately capture Paul Graham's stance (discouraging starting a startup in college due to time conflicts, while acknowledging the exception of a side project taking off on its own, and advising students to 'just learn' and build things). Both provide clear decision criteria and structure. They are practically identical in quality and completeness.\",\n      \"factual_objections\": []\n    },\n    {\n      \"id\": \"p-c8a0257afdc78052\",\n      \"A\": {\n        \"accuracy\": 5,\n        \"faithfulness\": 5,\n        \"specificity\": 5,\n        \"usefulness\": 5\n      },\n      \"B\": {\n        \"accuracy\": 5,\n        \"faithfulness\": 5,\n        \"specificity\": 5,\n        \"usefulness\": 5\n      },\n      \"winner\": \"A\",\n      \"reason\": \"Both answers correctly identify that the premise is false (Jessica Livingston did not back ruthless/aggressive founders, but rather screened for earnestness and rejected conceited ones). Answer A is slightly better because it provides more specific counter-evidence from her actual selection criteria (e.g., rejecting conceit, looking for earnestness and independent-mindedness, and how Paul Graham's 'formidable' concept differs).\",\n      \"factual_objections\": []\n    },\n    {\n      \"id\": \"p-bd456c713761bbb7\",\n      \"A\": {\n        \"accuracy\": 5,\n        \"faithfulness\": 5,\n        \"specificity\": 5,\n        \"usefulness\": 5\n      },\n      \"B\": {\n        \"accuracy\": 4,\n        \"faithfulness\": 4,\n        \"specificity\": 3,\n        \"usefulness\": 4\n      },\n      \"winner\": \"A\",\n      \"reason\": \"Answer A correctly recognizes the false premise and immediately refutes it by naming the specific case (Caleb of Keys Roofing) and explaining what Hormozi actually said (go all in on door-to-door, build a sales team). Answer B treats the premise as a hypothetical (\\\"If he did say it...\\\") rather than directly correcting the misconception using the known source case.\",\n      \"factual_objections\": []\n    }\n  ]\n}\n```",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 2.722,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "d936f02c588fb4be0a624d9113e849501e9d9a9f4ca8da8d4c7e0801d7170f35"
+    }
+  ],
+  "batch": {
+    "blocked_pair_ids": [],
+    "chars_per_token": 3.2,
+    "eligible_pair_ids": [
+      "p-ee2b7ee36164eccb",
+      "p-c8a0257afdc78052",
+      "p-bd456c713761bbb7"
+    ],
+    "estimated_input_tokens": 10950,
+    "id": "diagnostic12--gemini--opus--batch-01",
+    "judge_family": "gemini",
+    "pair_ids": [
+      "p-ee2b7ee36164eccb",
+      "p-c8a0257afdc78052",
+      "p-bd456c713761bbb7"
+    ],
+    "prompt_bytes": 35041,
+    "prompt_sha256": "d8b3ce25f191a31c83642cc17271fdb3de83d5b14a23ba453417903c4f277557",
+    "suite": "diagnostic12"
+  },
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "decoded": {},
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 10950,
+  "event_count": 1,
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:37:29.383363+00:00",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "parse_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "prompt_sha256": "d8b3ce25f191a31c83642cc17271fdb3de83d5b14a23ba453417903c4f277557",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 647,
+      "promptTokenCount": 10550,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 10550
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 11197
+    }
+  ]
+}

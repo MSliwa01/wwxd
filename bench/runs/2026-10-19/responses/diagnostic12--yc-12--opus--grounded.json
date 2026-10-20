@@ -1,0 +1,101 @@
+{
+  "actual_input_tokens": 224041,
+  "answer": "**His advice would be to fire the lawyers, settle it this week, and have your cofounder hand back most of his stock.**\n\n**What Seibel would likely say**\n\n- **Stop the letters.** Before product-market fit the stock is worth close to nothing, so a legal fight is a fight over ego that can leave you both in debt. Lawyers profit from your anger.\n- **No fault, no judge.** Who was right doesn't matter. What matters is a go-forward plan you can both accept. If you use a mediator, don't make them the judge.\n- **Equity goes back to the company, even if vested.** Nearly all the value is still to be created by whoever keeps working. His rough benchmark is under 5% after several years. For someone leaving in year one it's 1–2% or less. At nine months, your cofounder fits the second case.\n- **Be generous if you're the one staying.** Offer reasonable severance and treat him decently. Your team, investors and future cofounders will judge you by how this goes. Don't say anything you can't take back.\n- **Keep it small.** Clean paperwork, about a week, a couple thousand dollars.\n\n**Assumptions that change the answer**\n\n- **If the whole company is dead,** there's nothing worth fighting over. Wind it down together and move on.\n- **If there's misconduct** (fraud, illegal behavior), this advice doesn't apply.\n- **The vesting terms matter.** With a standard one-year cliff, nothing should have vested by nine months. Check whether you have a cliff, acceleration or repurchase rights before negotiating.\n- **If the company has real traction or assets,** the stakes are higher and a lawyer's role is more justified. Even then, aim for a negotiated deal, not litigation.\n\n**Next steps**\n\n1. Meet directly, without lawyers.\n2. Propose a number in the 1–2% range plus severance.\n3. Have one lawyer paper the deal.\n\nThis reflects Seibel's stated approach, not legal advice for your specific documents.",
+  "arm": "grounded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 21.686,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7b70a9aa71b4f05ad65a2563ae2ba17beff5798f46dbe7ff9559d19e75df635a"
+    }
+  ],
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 226620,
+  "event_count": 10,
+  "family": "opus",
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:23:31.123158+00:00",
+  "format_deviations": [
+    "outside descriptive 150..300 word band around approximate 250-word instruction"
+  ],
+  "id": "diagnostic12--yc-12--opus--grounded",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "prompt_sha256": "5f8617d94afeea468d0634ec4eccbb4f4619cd0c2ea3773fefa1257cf0a8c155",
+  "question_key": "diagnostic12--yc-12",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 222471,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 222471,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 222471,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 222471,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 1023,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 1023,
+      "output_tokens_details": {
+        "thinking_tokens": 375
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ],
+  "words": 320
+}

@@ -1,0 +1,101 @@
+{
+  "actual_input_tokens": 2809,
+  "answer": "# Decision: Launch the premium tier first, then raise standard pricing, and skip the course for now\n\n**Why this order:** You're at 50 hours now (45 client hours plus 5 admin). Premium adds 2 hours per client, so 5 premium clients need 10 more hours. You must shed about 10 standard clients either way, and a price increase lets attrition do that for you.\n\n**Price premium at $2,500, not $2,000.** At $2,000, the target only works if standard goes to about $550.\n\n## Target end state (by month 4–5)\n\n| Segment | Clients | Hours/week | Profit/month |\n|---|---|---|---|\n| Premium @ $2,500 | 5 | 15 | 5 × $2,460 = $12,300 |\n| Standard @ $500 | 30 | 30 | 30 × $460 = $13,800 |\n| Admin | — | 5 | — |\n| **Total** | 35 | **50** | **$26,100** |\n\n## Steps\n\n1. **This week:** Stop the free advisory work. Pitch premium to your 8 large clients, with start dates about 60 days out.\n2. **This week:** Send 60-day notice moving standard to $500.\n3. **Day 60:** Premium starts and the new price takes effect. If fewer than 10 clients leave, give 30-day notice to your lowest-fit clients until you're at 30. Refill any extra openings at $500.\n4. **Course:** Defer until after month 6. Recording takes hours you don't have, and you'd need about 170 subscribers just to match one premium client.\n\n## What premium includes\n\n- Monthly close by business day 7\n- 13-week rolling cash-flow forecast, updated weekly\n- Monthly inventory plan: SKU days-of-cover and purchase-order timing\n- Tax-preparer coordination: quarterly estimates and the year-end package\n- One 45-minute review call per month\n\n**Exclusions:** tax filing, payroll, and unlimited messaging. Cap the work at 12 hours a month and bill overflow at $200/hour. Require a 3-month minimum and payment by ACH.\n\n## Assumptions and what would change the plan\n\n- If premium only sells at $2,000, raise standard to $550 instead (profit becomes $25,100).\n- If fewer than 4 clients buy premium, raise standard to $550 and recruit replacements for the open slots.\n- If premium regularly takes more than 3 hours a week per client, cap it at 4 clients or raise the price.",
+  "arm": "raw",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 30.462,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "06ac5907f618e862b47cf25d9dc22151431977e4d3d030efd5e7cb4ca5b1e9c0"
+    }
+  ],
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 848,
+  "event_count": 22,
+  "family": "opus",
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:24:46.722637+00:00",
+  "format_deviations": [
+    "outside descriptive 150..300 word band around approximate 250-word instruction"
+  ],
+  "id": "newadvice12--advice-hz-01--opus--raw",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "prompt_sha256": "5b0838f06c5e83076fcd4fa1139884beba7ed7d89a04c3e4376259d115565e15",
+  "question_key": "newadvice12--advice-hz-01",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "newadvice12",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 1239,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 1239,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 1239,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 1239,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 2625,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 2625,
+      "output_tokens_details": {
+        "thinking_tokens": 1811
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ],
+  "words": 375
+}

@@ -1,0 +1,421 @@
+Evaluation date: 2026-10-19. This is the current date, not a future date. May 2026 is in the past. Publication dates and dates of events described in a source are distinct. A model training cutoff does not invalidate supplied later material. You are an independent evaluator. Use no tools, commands, files, browsing, or external retrieval. A and B are anonymous. Their ordering conveys nothing. Do not infer their model, source access, or provenance. Do not reward writing style, citation presence, quotations, expert agreement, or presumed source use. A tie is valid.
+Score each answer on the four specified integer scales, each from 1 to 5. Anchors: 1 fundamentally deficient; 2 major problems; 3 mixed with meaningful gaps; 4 good with minor gaps; 5 strong and sufficiently complete. Choose A, B, or tie for substantive overall quality. Preserve uncertainty rather than inventing evidence.
+Return ONLY a JSON object with exactly one key, "judgments", containing one object per supplied pair. Each object has exactly: "id", "A", "B", "winner", "reason", "factual_objections". A and B each contain exactly the four dimension names and integer scores. winner is "A", "B", or "tie"; reason is a nonempty string. factual_objections is a list, possibly empty, of objects with exactly "answer" ("A" or "B"), "claim", "label" ("contradicted" or "unverified"), and "evidence" (a nonempty explanation). Distinguish an established contradiction from an unverified claim.
+Evaluate accuracy, specificity, faithfulness, and usefulness using the complete audited reference packet. The reference is evidence, not a required script. Missing optional detail is not automatically a false claim. Label a factual objection contradicted only when supplied evidence establishes the contradiction; otherwise label it unverified. Do not treat absence from the reference as proof of falsehood. Resolve a conflict between a summary and direct evidence in favor of the direct evidence and explain it.
+
+Pairs:
+[
+  {
+    "id": "p-267a2490ac048359",
+    "question": "What's a good monthly churn rate for a paid online community, and when should I worry about it? What would Alex Hormozi say?",
+    "A": "For a paid online community billed monthly, **under 10% monthly member churn is a useful initial target; under 5% is stronger.** There is no universal healthy rate: acquisition cost, membership price, delivery costs and how long members need the community all matter.\n\nAlex Hormozi’s rough benchmarks are:\n\n- **Below 10% churn:** strong performance.\n- **Around 20% churn:** typical in the communities he discusses, but still substantial turnover.\n- **Above 30% churn:** retention likely deserves priority over acquiring more members.\n\nThose are directional benchmarks, not universal industry standards. You should worry earlier if churn keeps rising, cancellations exceed joins, or members leave before their gross profit covers acquisition costs. New members can conceal a retention problem.\n\nMeasure monthly churn as **members present at the start who leave during the month ÷ starting members**. Track revenue losses separately, especially with different membership tiers.\n\nHormozi’s central recommendation would be to examine retention by tenure. He describes churn falling toward 10% after day 90 and roughly 2% among members reaching month six. These are observed patterns, not guaranteed outcomes. A new community has no established members yet, so its overall churn can look worse.\n\nNext steps:\n\n1. Track retention by joining month, especially through days 30, 90 and 180.\n2. Ask departing members why they leave and established members why they stay. Review patterns after roughly 20 cancellations.\n3. Improve one recurring problem: deliver an early win, simplify onboarding, reduce overwhelm or introduce members to regulars.\n4. Consider annual billing, but assess annual renewals separately; fewer monthly cancellation opportunities do not establish lasting satisfaction.",
+    "B": "For an ongoing paid online community, **3–5% monthly member churn is a reasonable target; below 3% is strong.** Treat these as operating guidelines, not universal industry averages.\n\n- **Under 3%:** Strong retention, provided members are paying your intended price.\n- **3–5%:** Generally healthy, with room to improve.\n- **5–8%:** Investigate, particularly if churn is rising.\n- **Above 10%:** Usually a serious concern for a membership designed to deliver continuing value.\n\nCompounding matters: at 5% monthly churn, roughly 54% of an original group remains after a year; at 10%, only 28% remains.\n\nCalculate member churn as **members lost during the month divided by paying members at the start of that month**. Track revenue churn separately: losing a premium member hurts more than losing a discounted member. Annual subscriptions also need separate renewal analysis; monthly cancellation figures can conceal future losses.\n\nHormozi would likely frame this around whether members receive enough ongoing value to keep paying, and whether acquisition economics remain attractive. Applying that perspective means improving onboarding, helping members get an early result, and creating recurring reasons to participate. That is an interpretation of his broader approach, not a specific benchmark I can confidently attribute to him.\n\nNext, review three months of churn, separate failed payments from deliberate departures, and compare retention by joining cohort, acquisition channel, and membership tier. Ask departing members what they expected and what they actually received.\n\nWorry sooner if churn is increasing, new members leave within 30–60 days, or acquisition costs cannot be recovered profitably. Worry less about isolated fluctuations in a small community—or departures after a deliberately finite program delivers its promised outcome.",
+    "reference": {
+      "actual_stance": "Using Skool platform data that he credits to Sam at Skool: average monthly retention is 80% (20% churn); the best groups churn under 10%; groups under 70% retention (30%+ churn) should make retention their top priority because it is the highest-ROI lever. Churn falls with tenure: 20%+ in months 1 to 3, about 10% or less after day 90, about 2% by month 6. So judge churn by cohort. A community younger than 90 days will show inflated churn, and high month-one churn is normal unless almost everyone leaves. Focus on getting members past month one (onboarding, expectations), day 90 (an outcome) and month 6 (connections). He says these benchmarks fit online and consumer services, not insurance-style or alarm-system subscriptions.",
+      "category": "fresh",
+      "errors": [
+        "Presenting SaaS 3 to 7% churn benchmarks as his view.",
+        "Saying high month-one churn alone means the business is broken.",
+        "Attributing the platform data to a source other than Skool."
+      ],
+      "evidence": [
+        {
+          "quote": "this isn't uh churn for like an insurance premium or an alarm system",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "1:05"
+        },
+        {
+          "quote": "the platform average across School is 80% monthly retention. So said differently, it's 20% churn.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "1:39"
+        },
+        {
+          "quote": "Now the best groups have less than 10% churn, aka 90% retention month over month. The not good groups have less than 70% retention, aka 30% or higher.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "1:39"
+        },
+        {
+          "quote": "you probably need to work on your retention more than anything else. It'll be the highest ROI lever.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "1:39"
+        },
+        {
+          "quote": "you got a double in the LTV per customer",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "2:13"
+        },
+        {
+          "quote": "Now, if you keep someone 90 days, which seems to be the first kind of big churn drop-off point, it drops to around 10% or less.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "3:53"
+        },
+        {
+          "quote": "So, it goes from like 10% to 2%.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "3:53"
+        },
+        {
+          "quote": "if your community or recurring revenue thing is less than 90 days old, then your churn is always going to be inflated",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "4:24"
+        },
+        {
+          "quote": "that's normal for it to be higher than the other months, unless basically everyone's leaving, in which case, yes, you should go fix that.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "4:57"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold matches raw. Added the scope caveat (online/consumer services, not insurance or alarm subscriptions), the under-90-days caveat and the 'unless everyone leaves' exception.",
+        "Auto-captions spell the platform 'School'; it is Skool. Quotes keep the caption spelling."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-05",
+      "key_status": "confirmed_expanded",
+      "primary_sources": [
+        "yt--j8_YCWZ05Q"
+      ],
+      "question": "What's a good monthly churn rate for a paid online community, and when should I worry about it? What would Alex Hormozi say?",
+      "required_points": [
+        "Average about 80% monthly retention (20% churn); best groups under 10% churn.",
+        "Worry when retention is under 70% (churn above 30%): retention becomes the highest-ROI fix.",
+        "Churn depends on tenure: highest in months 1 to 3, about 10% or less after day 90, about 2% by month 6."
+      ],
+      "supporting_points": [
+        "Do not overhaul the business because month-one churn is high, unless basically everyone is leaving.",
+        "A community under 90 days old will show inflated churn.",
+        "Cutting churn from 20% to 10% doubles customer lifetime value.",
+        "Benchmarks fit online/consumer services, not insurance or alarm-type subscriptions.",
+        "Tactics: first-month onboarding, a day-90 outcome, month-6 connections; ask cancellers why, look for patterns."
+      ],
+      "uncertainty": [
+        "The benchmarks are Skool platform averages relayed by Hormozi, not his own measurements. Answers that say so are correct."
+      ],
+      "vault": "hormozi"
+    }
+  },
+  {
+    "id": "p-bbb9666bb15b6afe",
+    "question": "I'm a 20-year-old CS student with a side project I'm excited about. Would Paul Graham tell me to start a startup now, while I'm still in college?",
+    "A": "Probably not merely because you’re 20 and excited about a project. Paul Graham’s default advice would be to keep learning and building while you’re in college, with an exception if your project takes off and becomes worth pursuing full time.\n\nHis reasoning is that a startup consumes your life, including the freedom to explore that makes college valuable. Success can mean committing years to one company. In 2014 he explicitly advised students against starting startups in college and said 20 wasn’t the optimal age.\n\nAs of October 2026, that hasn’t become a blanket recommendation to start immediately. He still considers running a startup incompatible with full-time study. But his emphasis has shifted toward encouraging students’ independent projects precisely because some become startups. If yours takes off, pursuing it may be reasonable, even if that means leaving college. That is an exception requiring a choice, rather than a promise that you can comfortably do both.\n\nAssuming your project is currently exciting but hasn’t demonstrated strong demand, a practical next step is to keep developing it, put it in users’ hands, and learn what they value. Study subjects that strengthen your ability to build, and work with people you like and respect.\n\nReconsider full-time commitment if users keep returning, recommend it to others, or pay, and serving that demand requires more time than studying permits. Those are useful decision criteria, not a precise threshold Graham has prescribed. Before leaving, assess living costs and whether a leave of absence preserves your return option. Excitement supports building now; demand strengthens the case for committing now.",
+    "B": "Probably not yet—if you mean deciding to become a startup founder and organizing your college years around that goal. Paul Graham’s advice to undergraduates has generally been to learn, explore, and build interesting things, rather than deliberately start a company while still in college.\n\nThat does not mean shelving your side project. Your situation fits the path he tends to favor: become technically capable, work on something that interests you, and discover through actual use whether other people want it. A project can turn into a startup without beginning as a calculated attempt to find a startup idea.\n\nThe distinction is between building something and committing to running a company. A serious startup can consume your attention and displace much of what college offers. Being 20 does not disqualify you, but enthusiasm alone does not establish that this is the right moment.\n\nFor now:\n\n- Keep building and put a usable version in people’s hands.\n- Watch whether they return, recommend it, pay, or push you to improve it.\n- Work closely with capable classmates; those relationships can matter whether or not this project succeeds.\n- Avoid treating fundraising, incorporation, or dropping out as evidence of progress.\n\nThe recommendation changes if you have strong evidence of demand and serving users now requires sustained, full-time attention. Then taking leave could be reasonable, especially if returning remains possible. You would still need to weigh your finances, obligations, and willingness to commit.\n\nI cannot know what he would tell you personally. But his likely default is: use college to learn and build; let a compelling project create the startup decision.",
+    "reference": {
+      "actual_stance": "No. He tells students not to start a startup in college: a startup takes over your entire life, so you cannot really be both a student and a founder, and 20 is not the optimal age. You give up nothing by waiting because you will be more likely to succeed later. In college, learn powerful things, build domain expertise and work on your own projects with people you like, because side projects are where the best ideas and cofounders come from ('just learn'). The exception: if a side project takes off on its own, like Facebook, it may be reasonable to run with it. His August 2026 essay repeats that running a startup is incompatible with being a full-time student and stresses students' own projects.",
+      "category": "known",
+      "errors": [
+        "Saying he recommends starting now because college is low risk.",
+        "Telling the student to drop the side project entirely."
+      ],
+      "evidence": [
+        {
+          "quote": "you can't do that in college for the reason I just explained, that startups take over your entire life.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "18:22"
+        },
+        {
+          "quote": "Do not start a startup in college.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "18:56"
+        },
+        {
+          "quote": "20 is not the optimal time to do it.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "18:56"
+        },
+        {
+          "quote": "You're not sacrificing anything if you forego starting a startup at 20, cuz you'll be more likely to succeed if you wait.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "21:12"
+        },
+        {
+          "quote": "you're 20 and you have some side project that takes off like Facebook did. Then you face the choice of either running with it or not, and maybe it's reasonable to run with it.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "21:12"
+        },
+        {
+          "quote": "If you wanna start a startup, what you should do in college is learn powerful things.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "30:15"
+        },
+        {
+          "quote": "So here, is the ultimate advice for young would-be startup founders reduced to two words, just learn.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "30:49"
+        },
+        {
+          "quote": "Running a startup is incompatible with being a full time student.",
+          "source_date": "2026-08-01",
+          "source_id": "web-c75e015ff81a",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-c75e015ff81a.md",
+          "source_sha256": "d25c767587e02e2ae3ca70392344ae7ed1d30132b7415c03603e346eb3427eee",
+          "source_title": "How Universities Should Prepare Founders",
+          "speaker": "pg",
+          "speaker_basis": "essay on paulgraham.com (frontmatter author field is empty)",
+          "timestamp": null
+        },
+        {
+          "quote": "random side projects are where the best startup ideas come from.",
+          "source_date": "2026-08-01",
+          "source_id": "web-c75e015ff81a",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-c75e015ff81a.md",
+          "source_sha256": "d25c767587e02e2ae3ca70392344ae7ed1d30132b7415c03603e346eb3427eee",
+          "source_title": "How Universities Should Prepare Founders",
+          "speaker": "pg",
+          "speaker_basis": "essay on paulgraham.com (frontmatter author field is empty)",
+          "timestamp": null
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold matches the 2014 lecture. It did not cite the August 2026 essay 'How Universities Should Prepare Founders', which confirms the same stance. Added; either source satisfies the key."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-01",
+      "key_status": "confirmed_expanded",
+      "primary_sources": [
+        "yt-ii1jcLg-eIQ"
+      ],
+      "question": "I'm a 20-year-old CS student with a side project I'm excited about. Would Paul Graham tell me to start a startup now, while I'm still in college?",
+      "required_points": [
+        "No, do not start a startup while in college; a startup takes over your whole life, which is incompatible with being a full-time student.",
+        "Exception: if the side project takes off on its own, it may be reasonable to run with it."
+      ],
+      "supporting_points": [
+        "Waiting costs nothing; you are more likely to succeed if you wait.",
+        "Learn powerful things, get domain expertise; 'just learn'.",
+        "Keep working on your own projects; they produce the best ideas and cofounders.",
+        "The 2026 essay restates the incompatibility and the value of student projects."
+      ],
+      "uncertainty": [
+        "The main source is from 2014. The 2026 essay supports the same position, so the stance is not stale."
+      ],
+      "vault": "yc"
+    }
+  },
+  {
+    "id": "p-69ccae723f0b51e6",
+    "question": "Should my ads admit the weaknesses of my product, and if so how do I word it? What would Alex Hormozi say?",
+    "A": "Yes—admit a weakness when it helps buyers understand the tradeoff and decide whether your product fits. Don’t turn every ad into a list of flaws, but disclose limitations that materially affect the purchase.\n\nIn Alex Hormozi’s marketing approach, a damaging admission can make subsequent claims more believable: you acknowledge something unfavorable instead of pretending the offer is perfect. Applied here, his likely advice would be to admit a real drawback, then explain why the right customer might still prefer the product. That’s an interpretation of his approach, not a prediction of his exact advice.\n\nUse this structure:\n\n**Specific limitation → honest reason or tradeoff → who benefits.**\n\nFor example, if these claims are true:\n\n- **Higher price:** We cost more than mass-produced alternatives. Each piece is made to order, with repair support included.\n- **Fewer features:** You won’t find advanced reporting here. You get invoicing, payment reminders, and a setup most freelancers finish in ten minutes.\n- **Slower delivery:** Delivery takes three weeks because we build after you order. This is for buyers who want a custom fit and can wait.\n\nThe explanation must be real. A higher price doesn’t prove better quality, and slow delivery doesn’t automatically mean craftsmanship. Avoid flattering fake weaknesses such as caring too much.\n\nNext, list your three most common purchase objections. Choose one that is true, relevant, and acceptable to your ideal buyer. Test an ad addressing it against your current version, keeping other elements similar. Judge qualified purchases, acquisition cost, and refunds—not clicks alone.\n\nIf the weakness undermines your core promise, fix the product or narrow the promise first. Copy cannot resolve that mismatch.",
+    "B": "Yes—admit real weaknesses when they address a buyer’s concern, explain a tradeoff, or help unsuitable customers opt out. You don’t need to make every ad a catalogue of faults.\n\nAlex Hormozi strongly favors this tactic, which he calls damaging admissions. His reasoning: acknowledging a genuine drawback can make the remaining benefits more believable. He recommends putting the weakness first, followed by **but**, then the main claim you want the buyer to remember. He also applies this early in sales calls, especially when an offer sounds implausibly good.\n\nUse this structure:\n\n**Specific limitation → but → meaningful, supportable benefit → clear next step.**\n\nHypothetical wording you can adapt if accurate:\n\n- Our software doesn’t include payroll, but it handles invoicing and payment reminders in one place. See the two-minute demo.\n- You’ll need to spend 20 minutes a week reviewing your numbers, but we handle the bookkeeping and flag the decisions that need your attention. Book an introduction.\n- Custom orders take three weeks, but you choose the dimensions, finish, and fittings. Check the available options.\n\nChoose a weakness customers actually mention. Avoid disguised compliments, invented flaws, or benefits you cannot substantiate. Humor can help when it fits your audience.\n\nMy recommendation assumes your product reliably delivers its core promise. If the weakness means customers cannot get the promised result, fix the product or narrow the promise.\n\nTest one admission against your current ad while holding the audience and offer steady. Judge qualified sales, acquisition cost, refunds, and profit. Whether the admission improves your particular campaign remains uncertain until tested.",
+    "reference": {
+      "actual_stance": "Yes. Use damaging admissions: own your real flaws up front, because what you give up in promise you gain in trust. Word it as flaw, then 'but', then the benefit, since people believe the clause after 'but'; reversing the order stresses the flaw. List the things customers already complain about and claim them; humor earns extra credit. In a sales setting he applies the same idea by opening with the bad before the good and saying who the offer will not work for, so prospects self-qualify.",
+      "category": "known",
+      "errors": [
+        "Advising to hide weaknesses or wait until the prospect raises them.",
+        "Putting the benefit first and the flaw after 'but' as the recommended order.",
+        "Recommending invented or fake flaws."
+      ],
+      "evidence": [
+        {
+          "quote": "you want to always own your flaws of course you have them of course your product isn't perfect say so and",
+          "source_date": "2025-05-07",
+          "source_id": "yt-JDR-R--4HhM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-JDR-R--4HhM.md",
+          "source_sha256": "8dead6f4201863ae62991d2ed37b42a93313e36a30216ca200b58aefc5d1cfad",
+          "source_title": "14 Years of Marketing Advice in 35 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "12:30"
+        },
+        {
+          "quote": "what you'll sacrifice in promise you'll gain in trust and trust trumps promise",
+          "source_date": "2025-05-07",
+          "source_id": "yt-JDR-R--4HhM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-JDR-R--4HhM.md",
+          "source_sha256": "8dead6f4201863ae62991d2ed37b42a93313e36a30216ca200b58aefc5d1cfad",
+          "source_title": "14 Years of Marketing Advice in 35 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "13:09"
+        },
+        {
+          "quote": "the statement that comes after the word but is the part that is the thing you want them to believe",
+          "source_date": "2025-05-07",
+          "source_id": "yt-JDR-R--4HhM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-JDR-R--4HhM.md",
+          "source_sha256": "8dead6f4201863ae62991d2ed37b42a93313e36a30216ca200b58aefc5d1cfad",
+          "source_title": "14 Years of Marketing Advice in 35 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "13:44"
+        },
+        {
+          "quote": "these markers write four times longer than others but they smell like crap what am I emphasizing i'm actually emphasizing the fact that they smell bad not the fact that they write longer",
+          "source_date": "2025-05-07",
+          "source_id": "yt-JDR-R--4HhM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-JDR-R--4HhM.md",
+          "source_sha256": "8dead6f4201863ae62991d2ed37b42a93313e36a30216ca200b58aefc5d1cfad",
+          "source_title": "14 Years of Marketing Advice in 35 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "14:26"
+        },
+        {
+          "quote": "write down all of the flaws all the things that people complain about the things that you know you could do better and claim them",
+          "source_date": "2025-05-07",
+          "source_id": "yt-JDR-R--4HhM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-JDR-R--4HhM.md",
+          "source_sha256": "8dead6f4201863ae62991d2ed37b42a93313e36a30216ca200b58aefc5d1cfad",
+          "source_title": "14 Years of Marketing Advice in 35 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "15:03"
+        },
+        {
+          "quote": "if you can do with humor you get even more bonus points",
+          "source_date": "2025-05-07",
+          "source_id": "yt-JDR-R--4HhM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-JDR-R--4HhM.md",
+          "source_sha256": "8dead6f4201863ae62991d2ed37b42a93313e36a30216ca200b58aefc5d1cfad",
+          "source_title": "14 Years of Marketing Advice in 35 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "15:39"
+        },
+        {
+          "quote": "Listen, before I tell you about the good, let me tell you about the bad.",
+          "source_date": "2026-02-28",
+          "source_id": "yt-MH-IMJxbUY4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-MH-IMJxbUY4.md",
+          "source_sha256": "0ee16a3ff11eaf668c6513ea5fd6db5581199780322ebe90b2c8ee92b0cf269f",
+          "source_title": "Building a $12,000,000 Business for a Stranger in 25 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Joel; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "19:42"
+        },
+        {
+          "quote": "So, you can have what you want, just not when you want.",
+          "source_date": "2026-02-28",
+          "source_id": "yt-MH-IMJxbUY4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-MH-IMJxbUY4.md",
+          "source_sha256": "0ee16a3ff11eaf668c6513ea5fd6db5581199780322ebe90b2c8ee92b0cf269f",
+          "source_title": "Building a $12,000,000 Business for a Stranger in 25 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Joel; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "20:14"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold stance and quotes match the raw transcript. Gold omitted the 'write down all the flaws and claim them' step, the humor bonus, and the sales-call version in MH-IMJxbUY4; these are now supporting points, not requirements."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-02",
+      "key_status": "confirmed_expanded",
+      "primary_sources": [
+        "yt-JDR-R--4HhM"
+      ],
+      "question": "Should my ads admit the weaknesses of my product, and if so how do I word it? What would Alex Hormozi say?",
+      "required_points": [
+        "Yes, admit real weaknesses (damaging admissions); it builds trust and makes later claims more believable.",
+        "Order matters: flaw first, then 'but', then the benefit; the part after 'but' is what people believe."
+      ],
+      "supporting_points": [
+        "Trust beats promise; sacrificing some promise is worth it.",
+        "Write down every flaw and complaint and claim it before the prospect thinks it.",
+        "Humor is a bonus.",
+        "In sales calls: tell them the bad before the good and who it is not for, so they self-qualify (MH-IMJxbUY4).",
+        "Admissions must be true, not invented."
+      ],
+      "uncertainty": [],
+      "vault": "hormozi"
+    }
+  }
+]

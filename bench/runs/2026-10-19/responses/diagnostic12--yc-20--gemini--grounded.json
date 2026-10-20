@@ -1,0 +1,59 @@
+{
+  "actual_input_tokens": 172717,
+  "answer": "Jessica Livingston believed that early YC needed the most aggressive, ruthless founders because startups face an extreme environment of constant rejection and insurmountable odds where polite compliance fails. She observed that successful founders are unconventional and independent-minded, often working on ideas that appear preposterous to outsiders, and that building something from nothing requires relentless determination to push past gatekeepers and skeptics. \n\nMaterial assumptions: Aggression and ruthlessness correlate with the thick skin and uncompromising drive necessary to survive startup failure. Decision criteria: If a founder cannot withstand fierce rejection or stubbornly defend an unpopular vision against consensus, they will likely quit when the company hits inevitable crises. Conditional recommendation: Prioritize founder tenacity and conviction over polish or conventional charm; if material inputs regarding founder psychology are missing, assess whether candidates have demonstrated relentless execution under resistance in past projects.",
+  "arm": "grounded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 2.348,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "4417f5cd69b3db974502a2111d7b1a7d9adee81df889090f6a62eb7a6248fe3a"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 172774,
+  "event_count": 1,
+  "family": "gemini",
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:24:13.680587+00:00",
+  "format_deviations": [
+    "outside descriptive 150..300 word band around approximate 250-word instruction"
+  ],
+  "id": "diagnostic12--yc-20--gemini--grounded",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_sha256": "228967d130088ace70567d3cf4acaec087c251d03894a607cd6ef1b004db4e68",
+  "question_key": "diagnostic12--yc-20",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 163,
+      "promptTokenCount": 172717,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 172717
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 172880
+    }
+  ],
+  "words": 138
+}

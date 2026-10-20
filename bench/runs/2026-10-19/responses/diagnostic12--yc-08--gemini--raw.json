@@ -1,0 +1,57 @@
+{
+  "actual_input_tokens": 246,
+  "answer": "Spending months pitching seed investors and taking endless follow-up meetings is a classic sign of a fundraising process that has lost momentum. Michael Seibel would diagnose this situation with brutal clarity: if you are still fundraising after months, you are likely not running a tight process, your metrics do not support a venture-scale growth story, or you are confusing polite investor interest with a genuine commitment. \n\nThe core mindset shift required here is to treat fundraising as a binary, compressed event rather than a continuous sales campaign. Investors thrive on urgency and fear of missing out. If they know you have been on the market for months without closing a lead, their interest plummets. \n\nConcrete next steps begin with an immediate pause on new outreach. You must review your metrics to determine if the business is actually growing fast enough to warrant seed capital. If the metrics are strong, your pitch or targeting is flawed; if the metrics are weak, you must stop fundraising entirely and focus on product and revenue until the numbers compel action. Set a hard deadline of two weeks to secure a term sheet from your warmest existing conversations. If that fails, pull the plug, cut your burn rate, and get back to building.\n\nThis advice assumes your product addresses a real market and you have access to a functional network of founders and angels. If you lack warm intros entirely, your bottleneck is distribution, not just the pitch. The definitive decision criterion is simple: multiple, competing term sheets within a two-week window mean you continue; months of endless feedback meetings mean you stop.",
+  "arm": "raw",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 2.265,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "76babcf57f4437d4d4adb528f70a690032100fae185872c3a642b04438df5de5"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 365,
+  "event_count": 1,
+  "family": "gemini",
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:22:47.744683+00:00",
+  "format_deviations": [],
+  "id": "diagnostic12--yc-08--gemini--raw",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_sha256": "24a9c013f964ef021d4c5677c6e39a217111be75191b9551a2422b23a0e3f522",
+  "question_key": "diagnostic12--yc-08",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 312,
+      "promptTokenCount": 246,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 246
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 558
+    }
+  ],
+  "words": 268
+}

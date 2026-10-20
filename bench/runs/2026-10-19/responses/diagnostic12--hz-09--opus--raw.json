@@ -1,0 +1,101 @@
+{
+  "actual_input_tokens": 2495,
+  "answer": "# Pay Off the $60k or Invest in Growth?\n\n**Short answer:** Compare the debt's after-tax interest rate with the return you can *reliably* get from growth spending. Pay off whichever loses that comparison. Keep a cash buffer either way.\n\n## What Hormozi would likely say\n\nThis is an inference from his general public views, not a known answer to your specific case. Hormozi usually treats debt as a math problem, not a moral one. If you have a proven way to turn $1 into $3 or more, such as an offer with a known customer acquisition cost and lifetime value, he would likely push you to fund that engine instead of paying down cheap debt. He also stresses survival, keeping cash on hand, and not paying for growth you haven't proven yet. Whether he would favor payoff or growth for you depends entirely on your numbers.\n\n## Decision rules\n\n- **Pay it off** if the rate is above about 12–15% (credit cards, merchant cash advances, expensive term loans), if it carries a personal guarantee that worries you, or if your growth ideas are unproven.\n- **Keep the cash** if the rate is low (under about 7–8%), you have a repeatable acquisition channel with a measured return well above that rate, and you can't get financing again easily.\n- **Split it** if the case is borderline. Pay off the most expensive portion and put the rest into tests you can measure.\n\n## Next steps\n\n1. List each debt with its rate, term, prepayment penalty, and guarantee.\n2. Set aside 3–6 months of operating expenses that you don't touch.\n3. Calculate your real customer acquisition cost, lifetime value, and payback period.\n4. Run a small growth test first. Scale it only if the returns hold up.\n\n**Assumptions:** Your profit is steady, and the debt has no penalty for early repayment.",
+  "arm": "raw",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 11.188,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "c163ff73b2a0bfa6f1023d342e969e5364a72d3e3ac162a8fb94e51a70b3bfb5"
+    }
+  ],
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 478,
+  "event_count": 8,
+  "family": "opus",
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:20:18.595728+00:00",
+  "format_deviations": [
+    "outside descriptive 150..300 word band around approximate 250-word instruction"
+  ],
+  "id": "diagnostic12--hz-09--opus--raw",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "prompt_sha256": "4058df3b5cddd31a11791927c586cb0756bc205fa7b41b170502ce4bc06027a7",
+  "question_key": "diagnostic12--hz-09",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 925,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 925,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 925,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 925,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 847,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 847,
+      "output_tokens_details": {
+        "thinking_tokens": 253
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ],
+  "words": 308
+}

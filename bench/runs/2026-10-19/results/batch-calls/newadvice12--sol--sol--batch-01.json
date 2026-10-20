@@ -1,0 +1,32 @@
+{
+  "answer": "",
+  "attempts": [],
+  "batch": {
+    "blocked_pair_ids": [],
+    "chars_per_token": 3.57,
+    "eligible_pair_ids": [
+      "p-f8730354d316caf8",
+      "p-356da658827616b5",
+      "p-3ec05322d446899f"
+    ],
+    "estimated_input_tokens": 4564,
+    "id": "newadvice12--sol--sol--batch-01",
+    "judge_family": "sol",
+    "pair_ids": [
+      "p-f8730354d316caf8",
+      "p-356da658827616b5",
+      "p-3ec05322d446899f"
+    ],
+    "prompt_bytes": 16377,
+    "prompt_sha256": "4b7e3022d2b8bc45236e412202d5ab68970397704297752ce7854bb8e095b62f",
+    "suite": "newadvice12"
+  },
+  "decoded": {},
+  "effort": "high",
+  "error": "Interrupted invocation artifacts already exist. Not regenerated. Inspect logs manually.",
+  "finished": "2026-10-19T16:14:17.757735+00:00",
+  "parse_error": "",
+  "prompt_sha256": "4b7e3022d2b8bc45236e412202d5ab68970397704297752ce7854bb8e095b62f",
+  "requested_model": "gpt-6.1-sol",
+  "status": "failed"
+}

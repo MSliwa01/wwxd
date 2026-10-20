@@ -1,0 +1,73 @@
+{
+  "answer_family": "gemini",
+  "batch_id": "newadvice12--sol--gemini--batch-01",
+  "error": "",
+  "id": "p-7dc8c5481c99e43d--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-7dc8c5481c99e43d",
+  "primary_eligible": true,
+  "prompt_sha256": "b86d08bbda5f6931fe1fb8cbe39548113bbcd939f1f692bb252adef19648166b",
+  "question_key": "newadvice12--advice-hz-01",
+  "status": "ok",
+  "suite": "newadvice12",
+  "verdict": {
+    "A": {
+      "actionability": 2,
+      "constraint_fit": 1,
+      "decision_quality": 1,
+      "reasoning": 1
+    },
+    "B": {
+      "actionability": 2,
+      "constraint_fit": 2,
+      "decision_quality": 2,
+      "reasoning": 2
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "Thirty-seven standard clients yield $17,010 net, and four premium clients yield $7,440 net.",
+        "evidence": "At the supplied $40 per-client cost, 37 × ($500 − $40) = $17,020 and 4 × ($2,000 − $40) = $7,840. Their combined profit is $24,860.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "A",
+        "claim": "$24,450 net hits the baseline target.",
+        "evidence": "The requested minimum is $25,000; $24,450 falls short by $550.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "A",
+        "claim": "The plan strictly respects the 50-hour capacity.",
+        "evidence": "The answer's own workload total is 54 hours. Its earlier configuration of 37 standard clients and four premium clients would require 37 + 12 + 5 = 54 hours as well.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "A",
+        "claim": "Dropping unpaid extras frees five hours, and tightening workflows can compress the remaining workload to 50 hours.",
+        "evidence": "The question does not quantify five hours of unpaid extras or establish achievable efficiency gains. The supplied workload already allocates all 50 hours to client service and administration.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "The combined plan produces $28,200 monthly profit while fitting the constraints.",
+        "evidence": "That profit calculation uses 40 standard clients plus five premium clients, requiring 60 weekly hours. After the answer reduces standard clients to 30 to meet the cap, profit becomes 30 × $460 + 5 × $1,960 = $23,600, below the goal.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "B",
+        "claim": "Five premium clients add $9,800 in incremental profit.",
+        "evidence": "For five existing clients upgrading from the $500 standard tier, the incremental profit is 5 × ($2,000 − $500) = $7,500 with unchanged per-client costs. The $9,800 figure represents their total premium profit, not the increase from upgrading.",
+        "label": "contradicted"
+      }
+    ],
+    "id": "p-7dc8c5481c99e43d",
+    "reason": "B is stronger because it eventually specifies a genuinely feasible 50-hour workload and gives more concrete premium services. However, that final workload produces only $23,600 monthly profit, so its recommendation still misses the goal. A contains multiple financial errors, calls a below-target figure sufficient, and relies on unsupported time savings despite the hard cap. Neither recognizes that the stated prices, five-premium-client limit, and estimated hours cap profit at $23,600; a successful recommendation must explicitly change or condition one of those assumptions.",
+    "winner": "B"
+  },
+  "winner": "grounded"
+}

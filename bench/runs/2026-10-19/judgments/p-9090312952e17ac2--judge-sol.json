@@ -1,0 +1,61 @@
+{
+  "answer_family": "gemini",
+  "batch_id": "newadvice12--sol--gemini--batch-03",
+  "error": "",
+  "id": "p-9090312952e17ac2--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-9090312952e17ac2",
+  "primary_eligible": true,
+  "prompt_sha256": "fcda8a3871be7e527e7dd84c0d409c7f5fbf24682e7820878b97898e18863ea8",
+  "question_key": "newadvice12--advice-yc-05",
+  "status": "ok",
+  "suite": "newadvice12",
+  "verdict": {
+    "A": {
+      "actionability": 4,
+      "constraint_fit": 3,
+      "decision_quality": 3,
+      "reasoning": 3
+    },
+    "B": {
+      "actionability": 3,
+      "constraint_fit": 3,
+      "decision_quality": 3,
+      "reasoning": 2
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "At a 25% agency fee and $230,000 salary, the fee is $57,000 per hire.",
+        "evidence": "25% of $230,000 is $57,500. The discrepancy is small and does not materially change the comparison.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "A",
+        "claim": "Candidates are being lost because the hiring process is too slow.",
+        "evidence": "The scenario reports much higher competing cash offers, but provides no evidence that interview timing caused any rejection.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "The interview process and founder time investment are already efficient and are not bottlenecks.",
+        "evidence": "Seven interviews and three rejected offers do not establish that three weeks or two founder hours per week are sufficient for the hiring objective.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "The startup is experiencing a cash crunch.",
+        "evidence": "The company raised $3M three months ago, but current cash and burn are not supplied. A cash crunch cannot be inferred.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-9090312952e17ac2",
+    "reason": "A offers a broader recruiting intervention with explicit founder effort, faster decisions, and an ownership-based pitch. B treats compensation as the exclusive bottleneck and dismisses process improvements without sufficient evidence. Neither explains how to target candidates willing to accept substantially less than competing offers or calculates affordable hiring costs. A's 30-day failure trigger does not establish a runway problem or justify pursuing a Series A; B's affordability condition is more sensible.",
+    "winner": "A"
+  },
+  "winner": "raw"
+}

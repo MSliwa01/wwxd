@@ -1,0 +1,57 @@
+{
+  "actual_input_tokens": 237,
+  "answer": "Building a startup in Stockholm does not strictly require moving to Silicon Valley, and the underlying premise that relocating is an absolute prerequisite is false. While traditional startup lore often emphasizes Silicon Valley for its density of venture capital and networking opportunities, the global ecosystem has matured significantly. Stockholm itself is a thriving tech hub, known for producing globally successful companies and boasting strong engineering talent, robust digital infrastructure, and supportive local funding networks.\n\nThe decision to relocate depends heavily on your specific market, customer base, and growth stage. If your primary market is European, staying in Stockholm allows you to build a strong regional foundation and access European talent pools more cost-effectively. However, if your startup targets enterprise customers in the United States or requires massive venture capital scaling that is difficult to secure locally, a temporary or permanent move to Silicon Valley may eventually become necessary. \n\n**Material Assumptions:**\n* Your startup is in the early to growth stage.\n* Your product can be developed and initially tested outside the United States.\n\n**Decision Criteria:**\n* **Customer Proximity:** If your core buyers are in the US, move closer to them when sales become your primary bottleneck.\n* **Capital Access:** If local Nordic funding options are insufficient for your capital-intensive scaling phase, look toward US investors.\n\n**Concrete Next Steps:**\n1. Maximize local resources by leveraging Stockholm incubators, local angel networks, and regional grants.\n2. Validate your product-market fit locally or digitally before incurring the high costs of a US relocation.\n3. Plan targeted trips to Silicon Valley for specific milestones, such as major fundraising rounds or establishing US sales channels, rather than moving immediately.",
+  "arm": "raw",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 2.127,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "6b1670d16da24cd2bf9d6e902532a1d08bf761fb9b315941e8e413f8c6dcede6"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 349,
+  "event_count": 1,
+  "family": "gemini",
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:22:23.184827+00:00",
+  "format_deviations": [],
+  "id": "diagnostic12--yc-05--gemini--raw",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_sha256": "f4c4c96388512ae72eba7571cfd9b65466dfc98375e900cc58450b35a5fe185e",
+  "question_key": "diagnostic12--yc-05",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 336,
+      "promptTokenCount": 237,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 237
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 573
+    }
+  ],
+  "words": 273
+}

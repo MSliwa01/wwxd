@@ -1,0 +1,19 @@
+{
+  "answer_family": "opus",
+  "batch_id": "diagnostic12--opus--opus--batch-01",
+  "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "id": "p-4d9952cc71942a88--judge-opus",
+  "judge_family": "opus",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-4d9952cc71942a88",
+  "primary_eligible": false,
+  "prompt_sha256": "057f3154ce1dba4696ce89723a0f4048c924faaf397558d02212c233a0e2c0b8",
+  "question_key": "diagnostic12--yc-12",
+  "status": "failed",
+  "suite": "diagnostic12",
+  "verdict": null,
+  "winner": null
+}

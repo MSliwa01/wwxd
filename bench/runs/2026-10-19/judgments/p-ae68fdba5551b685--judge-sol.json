@@ -1,0 +1,61 @@
+{
+  "answer_family": "opus",
+  "batch_id": "newadvice12--sol--opus--batch-02",
+  "error": "",
+  "id": "p-ae68fdba5551b685--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-ae68fdba5551b685",
+  "primary_eligible": true,
+  "prompt_sha256": "62c9821c9d7f9fe9bcc025e230e62c28115ea56c3ba65509b754eca8ccb6b843",
+  "question_key": "newadvice12--advice-hz-01",
+  "status": "ok",
+  "suite": "newadvice12",
+  "verdict": {
+    "A": {
+      "actionability": 3,
+      "constraint_fit": 2,
+      "decision_quality": 3,
+      "reasoning": 3
+    },
+    "B": {
+      "actionability": 3,
+      "constraint_fit": 3,
+      "decision_quality": 3,
+      "reasoning": 3
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "About 170 course subscribers would be needed to match one premium client.",
+        "evidence": "At $49 per month, approximately 51 subscribers generate $2,500 in revenue. No supplied course costs justify increasing that figure to 170.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "A",
+        "claim": "If fewer than four clients buy premium, raising standard pricing to $550 and filling available slots provides a sufficient fallback.",
+        "evidence": "With two premium clients, the 50-hour limit permits 39 standard clients. Monthly profit would be 2 × $2,460 + 39 × $510 = $24,810, below the target. One or zero premium clients produces still less.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "A",
+        "claim": "Premium can start on day 60, followed by 30-day termination notices if insufficient standard clients have left.",
+        "evidence": "If all 45 clients remain and five upgrade, weekly work becomes 40 standard hours plus 15 premium hours plus five admin hours, totaling 60. Giving termination notices at that point does not preserve the stated 50-hour ceiling during the notice period.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "B",
+        "claim": "The fallback is eight premium clients at $2,000 with 21 standard clients.",
+        "evidence": "The profit and hours arithmetic is correct, but eight premium clients exceeds the proposed limit of up to five. This fallback requires explicitly revising that limit.",
+        "label": "contradicted"
+      }
+    ],
+    "id": "p-ae68fdba5551b685",
+    "reason": "Both correctly calculate that five premium clients at $2,500 plus 30 standard clients at $500 produce $26,100 within 50 weekly hours. B is slightly stronger because A explicitly risks exceeding capacity during its transition and gives incorrect course and low-uptake calculations. B still needs a firm requirement to release capacity before premium work starts, and its eight-client fallback exceeds the proposed premium limit.",
+    "winner": "B"
+  },
+  "winner": "grounded"
+}

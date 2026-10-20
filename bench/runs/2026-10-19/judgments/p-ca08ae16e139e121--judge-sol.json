@@ -1,0 +1,43 @@
+{
+  "answer_family": "opus",
+  "batch_id": "newadvice12--sol--opus--batch-01",
+  "error": "",
+  "id": "p-ca08ae16e139e121--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-ca08ae16e139e121",
+  "primary_eligible": true,
+  "prompt_sha256": "7ed3f695d06fff8e82862c621a2af303cd515d73a7d02d486d392004e6f2444e",
+  "question_key": "newadvice12--advice-hz-02",
+  "status": "ok",
+  "suite": "newadvice12",
+  "verdict": {
+    "A": {
+      "actionability": 5,
+      "constraint_fit": 4,
+      "decision_quality": 5,
+      "reasoning": 5
+    },
+    "B": {
+      "actionability": 4,
+      "constraint_fit": 4,
+      "decision_quality": 4,
+      "reasoning": 3
+    },
+    "factual_objections": [
+      {
+        "answer": "B",
+        "claim": "A van bought now produces no grooms this year.",
+        "evidence": "Starting from October 19, approximately two months of hiring and training ends around December 19, leaving time for some grooms before year-end. Additional delays are possible but are not established.",
+        "label": "contradicted"
+      }
+    ],
+    "id": "p-ca08ae16e139e121",
+    "reason": "A correctly calculates baseline profit and the weighted pricing increase, protects regulars with notice and a lower rate, and conditions expansion on demand after repricing. B usefully identifies seventh-day capacity, but its $900 pricing illustration does not model the proposed regular-customer discount, and its assertion that a van cannot produce revenue this year is incorrect. Both reasonably favor delaying purchase, subject to confirming incremental costs and staffing.",
+    "winner": "A"
+  },
+  "winner": "raw"
+}

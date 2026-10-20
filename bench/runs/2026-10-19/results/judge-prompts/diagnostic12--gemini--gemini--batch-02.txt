@@ -1,0 +1,468 @@
+Evaluation date: 2026-10-19. This is the current date, not a future date. May 2026 is in the past. Publication dates and dates of events described in a source are distinct. A model training cutoff does not invalidate supplied later material. You are an independent evaluator. Use no tools, commands, files, browsing, or external retrieval. A and B are anonymous. Their ordering conveys nothing. Do not infer their model, source access, or provenance. Do not reward writing style, citation presence, quotations, expert agreement, or presumed source use. A tie is valid.
+Score each answer on the four specified integer scales, each from 1 to 5. Anchors: 1 fundamentally deficient; 2 major problems; 3 mixed with meaningful gaps; 4 good with minor gaps; 5 strong and sufficiently complete. Choose A, B, or tie for substantive overall quality. Preserve uncertainty rather than inventing evidence.
+Return ONLY a JSON object with exactly one key, "judgments", containing one object per supplied pair. Each object has exactly: "id", "A", "B", "winner", "reason", "factual_objections". A and B each contain exactly the four dimension names and integer scores. winner is "A", "B", or "tie"; reason is a nonempty string. factual_objections is a list, possibly empty, of objects with exactly "answer" ("A" or "B"), "claim", "label" ("contradicted" or "unverified"), and "evidence" (a nonempty explanation). Distinguish an established contradiction from an unverified claim.
+Evaluate accuracy, specificity, faithfulness, and usefulness using the complete audited reference packet. The reference is evidence, not a required script. Missing optional detail is not automatically a false claim. Label a factual objection contradicted only when supplied evidence establishes the contradiction; otherwise label it unverified. Do not treat absence from the reference as proof of falsehood. Resolve a conflict between a summary and direct evidence in favor of the direct evidence and explain it.
+
+Pairs:
+[
+  {
+    "id": "p-5a6c5a48b0f202f4",
+    "question": "I own a residential HVAC duct-cleaning company doing about $1.2M a year at a 38% net margin, and we close about 82% of in-home inspections. Should I keep prices where they are so I don't hurt the close rate? What would Alex Hormozi say?",
+    "A": "Your current metrics show an exceptionally healthy residential HVAC duct-cleaning business. Generating roughly $456,000 in net profit on $1.2M in revenue with an 82% close rate indicates strong product-market fit, excellent operational efficiency, and likely underpriced services. \n\nWhile keeping prices flat protects your high close rate, it likely leaves significant margin on the table. In value-based pricing philosophy, an 82% close rate is actually a warning sign that your prices are too low. You are frictionlessly convincing almost everyone who inquires, meaning you could be charging more, accepting a lower close rate, and netting higher absolute profit with less wear on your field crews. \n\nAlex Hormozi would likely advise you to raise your prices. His core thesis is that when demand is high and close rates are excessive, you should increase prices until your close rate drops to a healthier range, typically around 40% to 50%. The higher gross margin per job allows you to spend more on customer acquisition, deliver better service, and grow revenue without necessarily increasing job volume.\n\nConcrete next steps:\n1. Increase your pricing by 15% to 20% on your next 50 quotes.\n2. Track your close rate and total gross profit closely. \n3. If your close rate stays above 70%, your prices are still too low; test another upward adjustment.\n\nMaterial assumptions: Your lead generation costs remain stable and your capacity is currently constrained by technician hours rather than lead volume. \n\nDecision criteria: If your business relies entirely on hyper-local, word-of-mouth volume where low price is your primary competitive moat, hold prices. If you want to scale, increase prices to capture the consumer surplus you are currently giving away.",
+    "B": "Do not keep your prices where they are. \n\nAn 82% close rate is a clear signal that your service is underpriced. You are leaving margin on the table and likely sacrificing customer conviction, as higher pricing increases perceived value and trust in delivery. Raising prices can be done without hurting volume.\n\nAlex Hormozi would advise you to test a price increase, add a 10x premium tier, and introduce a low-priced annual maintenance membership to turn one-time jobs into recurring revenue and guarantee yearly visits. \n\nConcrete next steps:\n1. Raise your prices by 10% to test the impact on your close rate.\n2. Add a premium tier or priority fee for customers who want to jump the line or receive expedited service.\n3. Offer an annual maintenance membership at the end of a job, credited toward future repairs, to build recurring revenue and secure repeat inspections.\n\nMaterial assumptions:\n- Your demand exceeds or matches your current operational capacity.\n- Your high close rate stems from strong market demand and trust, not a pool of unqualified leads.\n\nDecision criteria:\nIf your close rate stays above 65% after a 10% price raise, keep the new pricing because your net profit will increase despite closing slightly fewer total deals. If your close rate drops significantly below that threshold, pause further increases and refine your offer or packaging instead.",
+    "reference": {
+      "actual_stance": "No, raise prices. A close rate of 80% or more tells him there is room on price. He penciled in a 10% raise, framed as 'more asking than telling'. At this business's numbers that is roughly a 25% increase in net profit (about $100k+ a year at last year's volume), and it still makes more money as long as the close rate stays above about 65%. For a normal, non-luxury service, a higher price can raise the customer's conviction that you can deliver, and this owner's earlier 23% raise produced a higher close rate and more money. He says charging more is among the biggest levers for businesses under roughly $3M to $5M.",
+      "arithmetic_checks": [
+        "Profit $479k on $1.25M revenue (38%). A 10% raise at the same volume adds about $125k, all profit: 125/479 = +26%, consistent with 'roughly 25%' and 'a hundred plus thousand'.",
+        "Break-even close rate if costs scale with jobs: 0.82 x 479 / (479 + 125) = 0.650, matching 'more than 65%'."
+      ],
+      "category": "applied",
+      "errors": [
+        "Recommending keeping prices to protect the close rate.",
+        "Claiming the 65% break-even is a general rule rather than this business's math.",
+        "Treating the higher-price-higher-close effect as a luxury/Veblen effect."
+      ],
+      "evidence": [
+        {
+          "quote": "full end price for us is 1575 per HVAC unit.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "guest_corey",
+          "speaker_basis": "business owner answering Hormozi's question; content-inferred",
+          "timestamp": "1:05"
+        },
+        {
+          "quote": "And then our close rate is 82%.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "guest_corey",
+          "speaker_basis": "business owner answering Hormozi's question; content-inferred",
+          "timestamp": "3:47"
+        },
+        {
+          "quote": "So, you did a 23% price increase after the first time we talked to you.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "5:54"
+        },
+        {
+          "quote": "And so, that resulted in a higher close rate and more money.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "6:26"
+        },
+        {
+          "quote": "if you raise your prices, what sometimes happens is that the conviction of the customer that you can actually deliver on the promise you're making goes up.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "7:00"
+        },
+        {
+          "quote": "So whenever I hear 80% or over 80% close rates, I usually know that there's room in sale.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "8:06"
+        },
+        {
+          "quote": "Basically, what I penciled out was a 10% price raise. This is more asking than telling.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "8:06"
+        },
+        {
+          "quote": "As long as we close more than 65%, we make more money. Thing is is that 10% price raise for you equals roughly a 25% increase in net profit.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "8:06"
+        },
+        {
+          "quote": "So that'd be roughly a hundred plus thousand a year. And that's at last year's volume and profit.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "8:37"
+        },
+        {
+          "quote": "Number one is we're going to do price raise of 10%. So, around 1650 per unit.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "30:45"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold matches raw. Added the prior 23% raise as direct evidence for 'higher price, higher close rate'.",
+        "Raw-internal inconsistency: stated price is $1,575 per unit, but the plan says '10%, so around 1650 per unit'. 1,575 x 1.10 = about 1,733; 1,650 is about +4.8% (or 10% on $1,500). Answers should not be marked down for using either figure."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-11",
+      "key_status": "confirmed_with_correction",
+      "primary_sources": [
+        "yt-OQf2Ba-Lp_4"
+      ],
+      "question": "I own a residential HVAC duct-cleaning company doing about $1.2M a year at a 38% net margin, and we close about 82% of in-home inspections. Should I keep prices where they are so I don't hurt the close rate? What would Alex Hormozi say?",
+      "required_points": [
+        "Raise prices; an 80%+ close rate signals room on price.",
+        "About 10%; the raise still pays as long as the close rate stays above about 65%."
+      ],
+      "supporting_points": [
+        "10% raise is roughly +25% net profit at a 38% margin (about $100k+ a year).",
+        "Higher price can increase conviction that you deliver (normal goods, not Veblen goods).",
+        "The owner's earlier 23% raise increased close rate and revenue.",
+        "Framed as a suggestion ('more asking than telling')."
+      ],
+      "uncertainty": [],
+      "vault": "hormozi"
+    }
+  },
+  {
+    "id": "p-a76ca4ad41ad1ed4",
+    "question": "I'm building a startup in Stockholm. Does Paul Graham think I really need to move to Silicon Valley?",
+    "A": "Building a startup in Stockholm does not strictly require moving to Silicon Valley, and the underlying premise that relocating is an absolute prerequisite is false. While traditional startup lore often emphasizes Silicon Valley for its density of venture capital and networking opportunities, the global ecosystem has matured significantly. Stockholm itself is a thriving tech hub, known for producing globally successful companies and boasting strong engineering talent, robust digital infrastructure, and supportive local funding networks.\n\nThe decision to relocate depends heavily on your specific market, customer base, and growth stage. If your primary market is European, staying in Stockholm allows you to build a strong regional foundation and access European talent pools more cost-effectively. However, if your startup targets enterprise customers in the United States or requires massive venture capital scaling that is difficult to secure locally, a temporary or permanent move to Silicon Valley may eventually become necessary. \n\n**Material Assumptions:**\n* Your startup is in the early to growth stage.\n* Your product can be developed and initially tested outside the United States.\n\n**Decision Criteria:**\n* **Customer Proximity:** If your core buyers are in the US, move closer to them when sales become your primary bottleneck.\n* **Capital Access:** If local Nordic funding options are insufficient for your capital-intensive scaling phase, look toward US investors.\n\n**Concrete Next Steps:**\n1. Maximize local resources by leveraging Stockholm incubators, local angel networks, and regional grants.\n2. Validate your product-market fit locally or digitally before incurring the high costs of a US relocation.\n3. Plan targeted trips to Silicon Valley for specific milestones, such as major fundraising rounds or establishing US sales channels, rather than moving immediately.",
+    "B": "No, Paul Graham does not think you need to move to Silicon Valley. \n\nAccording to his position on startup location, moving to Silicon Valley is valuable advice for ambitious founders, but it is not an absolute requirement. His view is that fields have centers—such as Paris for painting or Silicon Valley for startups—and that going to the center offers major advantages: access to better and more numerous peers, valuable serendipitous encounters, a pay-it-forward culture, faster-moving networks, and a clearer view of how high the bar actually is. For founders based elsewhere, such as Stockholm, he recommends going to Silicon Valley for a period—ideally through a program like Y Combinator—to build your network, accelerate your startup, and import Silicon Valley culture, and then coming back home if you choose. \n\nHowever, this is distinct from saying you *must* permanently relocate to survive. The primary benefits are catalytic rather than mandatory. \n\n**Decision criteria:**\n- If your startup is early and you are struggling to find great technical peers, raise fast-moving contrarian capital, or calibrate your ambition against the global standard, you should go to Silicon Valley temporarily.\n- If you have strong co-founders, local momentum, and access to early customers who decide quickly, you can build locally, though you will miss out on the localized density of serendipity and peer pressure.\n\n**Next steps:**\n1. Focus first on making something users want and achieving a high growth rate, which matters more than geography.\n2. If you decide to seek external validation, speed up your learning, or raise U.S. venture capital, apply to Y Combinator or spend a temporary stint in the Bay Area to tap into the network.",
+    "reference": {
+      "actual_stance": "Yes, at least for a while: go, and you can come back. You get the best peers, more serendipitous meetings, investors who decide faster, more respect from investors back home, and a realistic view of how good you are. Going and then actually returning is also one of the best things founders can do for Stockholm. He calls YC the optimal way to do the stint (four to six months). He cites YC data that startups going home after YC are only about half as likely to become unicorns, and discounts it three ways: selection bias, it measures valuation rather than performance, and half as well is still very good. He thinks Stockholm could become the Silicon Valley of Europe.",
+      "category": "fresh",
+      "errors": [
+        "Saying he thinks remote work makes location irrelevant.",
+        "Saying he advises moving permanently and never returning."
+      ],
+      "evidence": [
+        {
+          "quote": "And the answer is the same now as it always is. Yes, you should. You can go there for a bit and then come back, but you should at least go.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "0:36"
+        },
+        {
+          "quote": "You get the best peers.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "1:09"
+        },
+        {
+          "quote": "investors in Silicon Valley decide a lot faster.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "5:00"
+        },
+        {
+          "quote": "as long as you do actually come back, that's one of the best things you can do to help Sweden to help Stockholm thrive as a startup hub.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "16:10"
+        },
+        {
+          "quote": "Surely the optimal way to go to Silicon Valley for a bit and then come back is to do YC.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "17:16"
+        },
+        {
+          "quote": "startups that go back home after YC are only about half as likely to become unicorns.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "18:57"
+        },
+        {
+          "quote": "there's a lot of selection bias in this.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "18:57"
+        },
+        {
+          "quote": "even if you only do half as well, that's still pretty good.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "19:30"
+        },
+        {
+          "quote": "you could make it the Silicon Valley of Europe.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "20:04"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold matches raw. Added the reasons for going and the 'as long as you do actually come back' condition."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-05",
+      "key_status": "confirmed_expanded",
+      "primary_sources": [
+        "yt-QHJkUw31YX8"
+      ],
+      "question": "I'm building a startup in Stockholm. Does Paul Graham think I really need to move to Silicon Valley?",
+      "required_points": [
+        "Yes, go to Silicon Valley, at least for a while; you can come back.",
+        "Mentions the unicorn-rate caveat or the benefit of returning to help Stockholm."
+      ],
+      "supporting_points": [
+        "Reasons: best peers, serendipitous meetings, faster investors, respect back home.",
+        "YC is the optimal way to go for a bit and come back.",
+        "Startups that go home after YC are about half as likely to become unicorns, discounted for selection bias, valuation vs performance, and 'half as well is still good'.",
+        "Stockholm could become the Silicon Valley of Europe."
+      ],
+      "uncertainty": [],
+      "vault": "yc"
+    }
+  },
+  {
+    "id": "p-af346bd1af16f08c",
+    "question": "My service business is profitable, but I'm carrying about $60k of debt. Should I pay it off or keep the cash for growth? What would Alex Hormozi say?",
+    "A": "Carrying sixty thousand dollars of debt while running a profitable service business creates a classic tension between risk mitigation and aggressive scaling. \n\nAlex Hormozi typically approaches this dilemma through the lens of return on investment. His framework dictates that if you can deploy cash to generate a higher return than the interest rate on the debt, you should keep the cash and grow. For example, if spending that cash on paid acquisition or talent yields a predictable multiple on your investment, paying off low-interest debt slows your momentum. Conversely, if your growth channels are saturated, unproven, or yield lower returns than the cost of borrowing, liquidating the debt provides a guaranteed, risk-free return and frees up monthly cash flow.\n\nSince the exact interest rate and your business's current profit margins are unknown, a conditional recommendation applies: if your debt carries a high interest rate or your growth levers are unproven, pay it off immediately to stabilize your baseline. If the debt is low-interest and you have a tested, high-ROI acquisition funnel ready to scale, retain the cash.\n\nConcrete next steps:\n1. Calculate the exact blended interest rate of the debt and compare it against the historical return on your marketing and sales spend.\n2. Audit your current cash reserves to ensure paying off the debt would not compromise your operating runway.\n3. Allocate the funds to the higher-yielding option—either debt elimination or customer acquisition—based on that math.\n\nDecision criteria rest on cash flow predictability. If cash flow fluctuates wildly, eliminate the debt to reduce financial stress. If cash flow is stable and scaling is bottlenecked strictly by capital, reinvest the cash.",
+    "B": "To decide whether to pay off your $60k business debt or keep the cash for growth, you should evaluate the decision through the lens of risk, leverage, and incremental improvement. \n\nFirst, correct the false premise that business debt is inherently a neutral growth tool. While borrowing to accelerate growth is common, debt increases fixed financial risk. Because businesses inevitably face volatility and seasonal downturns, unhedged risk compounded over time tends to come due. Paying down debt provides emotional relief and removes a fragile layer of vulnerability. \n\nHowever, cash is also the fuel required to seize growth opportunities. The recommendation depends on whether your business is currently supply- or demand-constrained. If your existing marketing funnel, pricing, and offers are already profitable and reliable, keeping the cash to fund higher ad spend or conversion optimization is appropriate. If your demand generation is unstable or your core unit economics are shaky, hoarding cash while letting debt linger compounds vulnerability. \n\nConcrete next steps:\n1. Audit your current cash conversion and return on ad spend. If you have clear, attribution-tested returns, deploy cash to scale what already works rather than taking risky overhauls.\n2. If returns are opaque or growth has plateaued due to internal bottlenecks, allocate a portion of your cash flow to systematically pay down the $60k debt over a short, defined window (such as four to five months) to clear it from the back of your mind.\n3. Apply incremental improvements—such as a modest price raise or fixing your landing page—to generate the cash needed to eliminate the debt without starving your operations.\n\nMaterial assumptions: The business is already profitable with positive cash flow. \n\nDecision criteria: Pay off the debt aggressively if market volatility threatens your cash reserves or if you lack a high-ROI, proven mechanism to deploy that cash for customer acquisition. Keep the cash and invest for growth only if you have predictable customer acquisition economics and a reliable way to turn every dollar spent into more than a dollar of immediate return.",
+    "reference": {
+      "actual_stance": "Pay it off. In the source the owner (Corey, HVAC duct cleaning, about $479k profit on $1.25M) already planned to clear the $60k in four to five months, and Hormozi approved ('Okay, good') and kept 'continue to pay off the debt' in the final plan. He calls it partly an emotional, back-of-mind issue and says he skews close to the Dave Ramsey side because debt increases risk, risk over a long horizon tends to come due, businesses have seasons and volatility, and many enduring companies such as Chick-fil-A run debt free. He did not frame it as debt instead of growth: in the same session he told Corey to keep raising ad spend while ROAS and CAC hold, after fixing the landing page and ads.",
+      "category": "fresh",
+      "errors": [
+        "Saying he advises keeping cheap debt because leverage is a tool.",
+        "Saying he told the owner to stop investing in growth until the debt is gone.",
+        "Stating the 5% and '100% in headache' figures as a firm quantified rule he gave."
+      ],
+      "evidence": [
+        {
+          "quote": "So, right now, we're allocating about 10% of our profit going towards paying off some of our debt.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "guest_corey",
+          "speaker_basis": "business owner answering Hormozi's question; content-inferred",
+          "timestamp": "0:33"
+        },
+        {
+          "quote": "Profit on that is 479,000. Uh, our net margin is 38%.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "guest_corey",
+          "speaker_basis": "business owner answering Hormozi's question; content-inferred",
+          "timestamp": "3:15"
+        },
+        {
+          "quote": "We are planning to pay off completely in the next four to five months.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "guest_corey",
+          "speaker_basis": "business owner answering Hormozi's question; content-inferred",
+          "timestamp": "8:37"
+        },
+        {
+          "quote": "Okay, good. That's one of those things that like I'd say this is more of an emotional thing",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "8:37"
+        },
+        {
+          "quote": "I tend to skew like very close to the Ramsey side and the single argument that I have around it is basically debt",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "8:37"
+        },
+        {
+          "quote": "increases risk. Risk when multiplied over a long time horizon tends to come due.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "9:10"
+        },
+        {
+          "quote": "businesses have seasons, they have volatility",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "9:10"
+        },
+        {
+          "quote": "If you look at some of the most enduring companies, a lot of like Chick-fil-A operate debt free.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "9:10"
+        },
+        {
+          "quote": "we just want to continue to spend month over month provided our ROAS and our CAC stay more or less the same.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "10:48"
+        },
+        {
+          "quote": "Two is you're going to continue to pay off the debt.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "30:45"
+        },
+        {
+          "quote": "But at least 100% in headache.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "uncertain",
+          "speaker_basis": "unlabeled >> turn after a separate '5%' turn; could be Hormozi or Corey",
+          "timestamp": "32:53"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold says paying off 'adds only about 5% to profit but removes 100% in headache' as Hormozi's argument. In the raw, '5%.' and 'But at least 100% in headache.' are separate unlabeled >> turns, so the speaker is uncertain. Demoted to a supporting point.",
+        "Gold omits that the owner had already decided to pay it off and that Hormozi approved rather than argued him into it, and that the same plan kept funding growth through ads. Added as context so answers that say 'pay it off and keep funding proven growth from cash flow' are not marked wrong.",
+        "Raw-internal inconsistency: 10% of $479k profit is about $48k a year, which does not clear $60k in four to five months. Not material to the stance."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-09",
+      "key_status": "corrected_context",
+      "primary_sources": [
+        "yt-OQf2Ba-Lp_4"
+      ],
+      "question": "My service business is profitable, but I'm carrying about $60k of debt. Should I pay it off or keep the cash for growth? What would Alex Hormozi say?",
+      "required_points": [
+        "Lean toward paying off the debt (he skews close to the Ramsey side).",
+        "Reason: debt increases risk, and risk over a long time horizon tends to come due; businesses have seasons and volatility."
+      ],
+      "supporting_points": [
+        "Enduring companies like Chick-fil-A operate debt free.",
+        "He calls it partly an emotional, back-of-mind issue.",
+        "In context the owner already planned to pay it off in four to five months from cash flow, and Hormozi approved.",
+        "Not either/or: in the same plan he kept funding proven ads while ROAS and CAC held.",
+        "Paying it off adds only a few percent to profit but removes a lot of headache (speaker of the '5%' figure is uncertain; see uncertainty)."
+      ],
+      "uncertainty": [
+        "The question gives no profit, interest rate or growth return. His stance comes from a business with about $479k annual profit, where $60k is small. Conditional answers that ask for these numbers are acceptable if they still state his lean.",
+        "yt-sL16tsGafcQ at 16:55 to 18:02 discusses acquisition/fund-level debt as leverage. That is distinct from this operating-business debt case. A conditional answer noting that distinction is not itself an error; the specific Ramsey lean and cash-flow context remain the required factual stance."
+      ],
+      "vault": "hormozi"
+    }
+  }
+]

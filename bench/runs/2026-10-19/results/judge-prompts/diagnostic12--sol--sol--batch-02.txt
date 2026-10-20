@@ -1,0 +1,371 @@
+Evaluation date: 2026-10-19. This is the current date, not a future date. May 2026 is in the past. Publication dates and dates of events described in a source are distinct. A model training cutoff does not invalidate supplied later material. You are an independent evaluator. Use no tools, commands, files, browsing, or external retrieval. A and B are anonymous. Their ordering conveys nothing. Do not infer their model, source access, or provenance. Do not reward writing style, citation presence, quotations, expert agreement, or presumed source use. A tie is valid.
+Score each answer on the four specified integer scales, each from 1 to 5. Anchors: 1 fundamentally deficient; 2 major problems; 3 mixed with meaningful gaps; 4 good with minor gaps; 5 strong and sufficiently complete. Choose A, B, or tie for substantive overall quality. Preserve uncertainty rather than inventing evidence.
+Return ONLY a JSON object with exactly one key, "judgments", containing one object per supplied pair. Each object has exactly: "id", "A", "B", "winner", "reason", "factual_objections". A and B each contain exactly the four dimension names and integer scores. winner is "A", "B", or "tie"; reason is a nonempty string. factual_objections is a list, possibly empty, of objects with exactly "answer" ("A" or "B"), "claim", "label" ("contradicted" or "unverified"), and "evidence" (a nonempty explanation). Distinguish an established contradiction from an unverified claim.
+Evaluate accuracy, specificity, faithfulness, and usefulness using the complete audited reference packet. The reference is evidence, not a required script. Missing optional detail is not automatically a false claim. Label a factual objection contradicted only when supplied evidence establishes the contradiction; otherwise label it unverified. Do not treat absence from the reference as proof of falsehood. Resolve a conflict between a summary and direct evidence in favor of the direct evidence and explain it.
+
+Pairs:
+[
+  {
+    "id": "p-c272861f7b71771c",
+    "question": "What's the story Hormozi tells about his company being worth four times more just by listing on the NASDAQ, and the IPO equity deal he took afterward?",
+    "A": "The idea behind that story is **public–private valuation arbitrage**: a business can receive a much higher earnings multiple in the public market than a private buyer would pay. But I can’t confidently identify the exact Hormozi anecdote or confirm the premise that he accepted an IPO equity deal afterward.\n\nThe four-times claim would work like this: suppose his business earned $10 million annually and private buyers valued it at five times earnings, or $50 million. If public investors valued the same earnings at twenty times, its implied valuation would be $200 million. Those numbers are illustrative, not verified details of his story.\n\nThe important correction is that **listing on Nasdaq does not automatically quadruple a company’s value**. The pitch depends on investors actually awarding that higher multiple. A listing also introduces costs, disclosure requirements, potential dilution, and restrictions on when insiders can sell.\n\nAn equity deal connected to that pitch could mean exchanging ownership of his private company for shares in a business planning to go public. That would give him exposure to the hoped-for higher valuation, but the headline value would remain conditional on the listing, share price, and eventual ability to sell. I can explain that structure; I can’t establish his particular terms or that he accepted them.\n\nThe concrete transaction I can identify is his 2021 majority-stake sale involving Gym Launch and Prestige Labs to American Pacific Group, associated with a $46.2 million deal. That was a private-equity transaction, not an IPO. I would not combine it with the Nasdaq anecdote without establishing that they concern the same transaction.",
+    "B": "The key distinction is between **a higher valuation in public markets** and **actually taking his company public**. The four-times story appears to concern the first: the idea that essentially the same business could command a much higher earnings multiple if its shares were publicly traded. I’m uncertain about the exact conversation and figures behind that anecdote.\n\nThe economics are straightforward. As an illustration, a company earning $10 million might fetch $50 million at a private-market multiple of five times earnings, versus $200 million at a public-market multiple of twenty times. That is four times the valuation without four times the operating profit. Public investors may pay more for liquidity, access and expected growth. But Nasdaq listing itself does not automatically produce that premium; some listed businesses trade at lower multiples than private ones.\n\nThe transaction I can identify is **Hormozi’s sale of ALAN, his software company, to a strategic buyer in an all-stock deal**. That means he exchanged ownership of ALAN for shares in the acquiring company rather than receiving cash. If the buyer subsequently went public, those shares could provide exposure to a public valuation and, eventually, an opportunity to sell. I cannot confidently establish the buyer’s IPO timeline, his ownership percentage or the eventual proceeds.\n\nThat was separate from the 2021 transaction in which he and Leila sold two-thirds of Gym Launch and Prestige Labs to American Pacific Group for $46.2 million. Calling either transaction an IPO equity deal obscures the distinction: selling to an investor, accepting acquisition shares and completing an IPO are different events.",
+    "reference": {
+      "actual_stance": "False attribution. The story is the interviewer's, not Hormozi's. The host of The Diary Of A CEO says his company went public on a European exchange, banks told him the same business would be worth four times more on the NASDAQ, and he later applied his social-media and marketing skills to companies heading to IPO, earning equity worth about $7M to $8M on IPO day for 9 to 12 months of work, which led to the company now called Flight Story. Hormozi only agreed and gave his own version: the biggest debt we pay is ignorance, fish where the fish are, 'same work, more zeros'. A 20% conversion lift is worth $200k to a $1M store (he takes $20k at 10%) but $20M to a $100M company (he takes $2M), 100x for the same work.",
+      "category": "attribution",
+      "errors": [
+        "Telling the story as Hormozi's own career lesson.",
+        "Saying Hormozi's company listed on the NASDAQ."
+      ],
+      "evidence": [
+        {
+          "quote": "when my company went public on a Stock Exchange in um Europe",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "host_doac_interviewer",
+          "speaker_basis": "the interviewer on The Diary Of A CEO; the raw file does not name him; content-inferred from 'my company went public' and 'flight story'",
+          "timestamp": "1:33:37"
+        },
+        {
+          "quote": "they told me that our business would be worth four times more if it was just on a different stock market if you move it to the NASDAQ the exact same business would be worth four times more",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "host_doac_interviewer",
+          "speaker_basis": "the interviewer on The Diary Of A CEO; the raw file does not name him; content-inferred from 'my company went public' and 'flight story'",
+          "timestamp": "1:34:12"
+        },
+        {
+          "quote": "I think on the day of the IPO the equity that I got for for the 9 to 12 months work that i' done was worth in the region of 7 to8 million",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "host_doac_interviewer",
+          "speaker_basis": "the interviewer on The Diary Of A CEO; the raw file does not name him; content-inferred from 'my company went public' and 'flight story'",
+          "timestamp": "1:35:51"
+        },
+        {
+          "quote": "company which is now called flight story",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "host_doac_interviewer",
+          "speaker_basis": "the interviewer on The Diary Of A CEO; the raw file does not name him; content-inferred from 'my company went public' and 'flight story'",
+          "timestamp": "1:36:23"
+        },
+        {
+          "quote": "100% I thoroughly agree with everything you just said",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "hormozi",
+          "speaker_basis": "turn change inferred from content; captions have no speaker labels",
+          "timestamp": "1:36:23"
+        },
+        {
+          "quote": "same work yeah same amount of time same Rod more zeros",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "hormozi",
+          "speaker_basis": "inferred: continues his fishing analogy and cites 'the first book'",
+          "timestamp": "1:38:03"
+        },
+        {
+          "quote": "do the same work to a business doing $100 million a year I make them $20 million for my 20% bump and I get 10% that and I make $2 million 20,000 2 million 100x same work",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "hormozi",
+          "speaker_basis": "inferred from content",
+          "timestamp": "1:38:38"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold names Steven Bartlett. The raw file never names the host; the channel is The Diary Of A CEO and the speaker mentions Flight Story. The identification is external knowledge and is kept as a supporting point, not a requirement."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-16",
+      "key_status": "confirmed_speaker_inferred",
+      "primary_sources": [
+        "yt-x3e73Qn6NOo"
+      ],
+      "question": "What's the story Hormozi tells about his company being worth four times more just by listing on the NASDAQ, and the IPO equity deal he took afterward?",
+      "required_points": [
+        "Says the story is not Hormozi's; it belongs to the interviewer/host.",
+        "Summarizes the host's story: European listing, banks said 4x on NASDAQ, pre-IPO equity worth about $7M to $8M for 9 to 12 months of work."
+      ],
+      "supporting_points": [
+        "Identifies the host as Steven Bartlett (external knowledge; consistent with 'Flight Story').",
+        "Hormozi agreed and gave the 'same work, more zeros' CRO example ($20k vs $2M).",
+        "The 4x NASDAQ figure was what banks told him, not an actual relisting."
+      ],
+      "uncertainty": [
+        "All speaker attribution in this transcript is inferred from content because auto-captions carry no labels. The inference is strong here (first-person European IPO and Flight Story)."
+      ],
+      "vault": "hormozi"
+    }
+  },
+  {
+    "id": "p-e2c8ec0629722c27",
+    "question": "Why does Garry Tan say the premium on doing YC is bigger than ever and that the gap between YC and second place has grown?",
+    "A": "The underlying argument is that YC’s network keeps compounding, making membership more valuable and its advantages harder for another accelerator to reproduce. One correction: the statement about the premium being bigger than ever was made by YC’s former president during his July 2026 conversation with Garry Tan, rather than by Tan himself.\n\nHere, premium means the additional advantage founders gain from participating. The main mechanisms are:\n\n- **People and relationships.** YC concentrates ambitious founders, experienced alumni and potential collaborators. Repeated contact creates useful introductions and unexpected opportunities, including relationships that lead to companies years later.\n- **A market for early products.** Batchmates and alumni can become customers who understand unfinished products, decide quickly and provide useful feedback. This is particularly valuable for companies selling to startups.\n- **Practical help and momentum.** Founders can learn from peers who have already solved similar problems, get advice tied to their actual company, and sustain confidence through difficult periods.\n- **Investor attention and credibility.** Acceptance can help founders get meetings and create competition among investors, reducing time spent fundraising.\n\nThese benefits reinforce one another: successful alumni bring more expertise, customers, capital and introductions, attracting strong applicants and strengthening the next generation. A competitor can copy the program’s format much faster than it can accumulate those relationships.\n\nAI offers a plausible additional reason the advantage could increase: as building becomes cheaper, finding customers, choosing the right problem and learning quickly become relatively more valuable. That connection is an inference.\n\nA growing gap to second place remains a qualitative claim, not a demonstrated ranking. For a founder, the decision is whether those specific benefits outweigh dilution and participation costs given the network and traction they already have.",
+    "B": "Tan’s argument is that YC’s accumulated advantages have become more valuable as starting a company has become easier and attracting attention has become harder. The premium is the extra credibility, access, and opportunity a startup gets from being accepted into YC.\n\nSeveral mechanisms explain that argument:\n\n- **A stronger signal in a crowded market.** AI lets more teams build products quickly. That increases competition for investor attention, customers, and recruits. YC’s selective admission gives those audiences a reason to take a startup seriously.\n- **A network that compounds.** Each successful batch adds founders who can become customers, recommend hires, introduce investors, and advise later companies. An accelerator can copy a program’s format much faster than it can reproduce that accumulated network.\n- **Concentrated access to capital.** Investors actively follow YC companies. That can make fundraising faster and create competition among investors, potentially improving terms and reducing the time founders spend raising money.\n- **A dense founder environment.** Working alongside ambitious teams, with candid feedback and shared urgency, can accelerate decisions and execution. YC’s concentration in San Francisco strengthens that effect.\n\nThe claimed widening gap follows from those reinforcing advantages: a strong reputation attracts strong applicants, their successes strengthen the network, and that attracts more applicants and investors.\n\nBut this is also a competitive claim from YC’s leader, not an established universal ranking. There is no single agreed second-place accelerator, and successful YC companies do not prove YC caused their success.\n\nFor a founder, the practical test is whether those benefits justify the equity cost, especially given existing fundraising access, customer traction, and relevant alternatives.",
+    "reference": {
+      "actual_stance": "False attribution. Sam Altman said it, in his closing conversation with Garry Tan at Startup School 2026, prefacing it with 'I can say this, Garry probably can't'. He explained the widening gap as network effects: networks put you where you meet future cofounders (he met his OpenAI cofounders years earlier), and that takes a long time to compound. Just before, he said YC's once-heretical push to move to San Francisco was clearly right, though he has less intuition about it now.",
+      "category": "attribution",
+      "errors": [
+        "Attributing the claim to Garry Tan.",
+        "Explaining it with reasons the source does not give (bigger checks, brand) as if quoted."
+      ],
+      "evidence": [
+        {
+          "quote": "it used to be very heretical that YC told people they had to move to San Francisco. And looking back, it was clearly right.",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "16:25"
+        },
+        {
+          "quote": "I also think that I I can say this, Gary probably can't. I I I think the premium on doing YC is bigger now than it's like ever been before.",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "16:56"
+        },
+        {
+          "quote": "the distance between like YC and second place is has expanded. And this is a reminder of the power of",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "16:56"
+        },
+        {
+          "quote": "network effects.",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "17:28"
+        },
+        {
+          "quote": "the people that I started OpenAI with, I met like many many years in some cases before uh starting OpenAI",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "17:28"
+        },
+        {
+          "quote": "the sooner you can put yourself just in a flow where you're going to meet the people that will be your eventual co-founders",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "17:28"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold says Altman prefaced the line 'because it would sound self-serving coming from YC's current CEO'. The raw gives the preface but not the reason. Kept as an acceptable inference, not a required point.",
+        "Captions spell the name 'Gary'; quotes keep the caption spelling."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-17",
+      "key_status": "confirmed_with_interpretation_flag",
+      "primary_sources": [
+        "yt-ZIaOBAjvc38"
+      ],
+      "question": "Why does Garry Tan say the premium on doing YC is bigger than ever and that the gap between YC and second place has grown?",
+      "required_points": [
+        "Corrects the attribution: Sam Altman said it, not Garry Tan.",
+        "Gives his reason: network effects (meeting future cofounders, compounding over time)."
+      ],
+      "supporting_points": [
+        "Prefaced with 'I can say this, Garry probably can't'.",
+        "Context: Startup School 2026 conversation with Garry Tan.",
+        "Context: moving to SF was clearly right in hindsight; he has less intuition about it now.",
+        "Inference that it would sound self-serving from YC's CEO is reasonable but not stated in the source."
+      ],
+      "uncertainty": [
+        "Speaker attribution is inferred from content (answer references OpenAI cofounders; Tan asks the questions). The description confirms the conversation format."
+      ],
+      "vault": "yc"
+    }
+  },
+  {
+    "id": "p-0d7a755834632ca5",
+    "question": "I'm building a startup in Stockholm. Does Paul Graham think I really need to move to Silicon Valley?",
+    "A": "No—not as an absolute requirement. Paul Graham’s longstanding view is that founders improve their odds by being in a strong startup hub, with Silicon Valley his strongest recommendation. He treats location as a meaningful advantage, not a guarantee of success or a condition without which success is impossible.\n\nHis reasoning is broader than access to funding: being surrounded by ambitious founders, experienced early employees, investors, and potential collaborators changes what you learn, whom you meet, and what you consider achievable. From that perspective, building remotely does not automatically replace being there.\n\nBut Stockholm is already a substantial startup ecosystem. Your choice is not between Silicon Valley and a place with no startup community. The relevant question is whether the Bay Area offers advantages that matter enough to *your company* to justify the disruption and expense.\n\nMy practical recommendation:\n\n- **Stay in Stockholm for now** if your customers, recruiting advantages, industry relationships, or regulatory needs are primarily Nordic or European, and you are making steady progress.\n- **Seriously consider relocating** if your target customers, essential hires, or likely investors cluster in the Bay Area, particularly if your ambition depends on entering that network quickly.\n- **Test the premise first:** spend several focused weeks there, arranging customer meetings, working alongside founders, and meeting relevant investors. Compare concrete progress with an equivalent period in Stockholm.\n\nBefore committing, consider visas, runway, cofounder alignment, and whether the whole founding team would move.\n\nSo Graham would likely push you to take the location advantage seriously. That is different from establishing that you personally must move. Your market, traction, and bottlenecks should decide.",
+    "B": "Yes—Paul Graham strongly recommends going to Silicon Valley, at least for a while. His April 2026 advice to Stockholm founders explicitly allows returning home. He does not mean that success in Stockholm is impossible or that you must emigrate permanently.\n\nHis main argument is about the people around you: a larger concentration of strong peers, useful chance encounters, faster decisions, and a culture of helping without immediately expecting something back. He thinks the biggest benefit is how that environment changes your ambition: meeting highly successful founders makes their achievements feel difficult but attainable.\n\nHe also sees fundraising advantages. In his view, competition pushes Valley investors to decide faster, and attracting interest there can make Swedish investors take you more seriously.\n\nThere are qualifications. He reports that YC companies returning home are about half as likely to become billion-dollar companies as those staying, but acknowledges selection bias and higher Bay Area valuations. That comparison does not establish that moving doubles your particular startup’s chances. He recommends YC as a concentrated route into the ecosystem, while acknowledging his interest as its co-founder. He also accepts that family can matter more than maximizing company value.\n\nMy practical recommendation, assuming you want a globally ambitious startup, is to test spending a sustained period there before committing permanently. Build alongside founders, meet prospective customers and investors, and assess whether access produces useful relationships and faster progress. Consider YC if it fits. Stay longer if the benefits justify the cost; return if Stockholm offers stronger customer access, team stability, or family support. Returning can also strengthen Stockholm’s startup community.",
+    "reference": {
+      "actual_stance": "Yes, at least for a while: go, and you can come back. You get the best peers, more serendipitous meetings, investors who decide faster, more respect from investors back home, and a realistic view of how good you are. Going and then actually returning is also one of the best things founders can do for Stockholm. He calls YC the optimal way to do the stint (four to six months). He cites YC data that startups going home after YC are only about half as likely to become unicorns, and discounts it three ways: selection bias, it measures valuation rather than performance, and half as well is still very good. He thinks Stockholm could become the Silicon Valley of Europe.",
+      "category": "fresh",
+      "errors": [
+        "Saying he thinks remote work makes location irrelevant.",
+        "Saying he advises moving permanently and never returning."
+      ],
+      "evidence": [
+        {
+          "quote": "And the answer is the same now as it always is. Yes, you should. You can go there for a bit and then come back, but you should at least go.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "0:36"
+        },
+        {
+          "quote": "You get the best peers.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "1:09"
+        },
+        {
+          "quote": "investors in Silicon Valley decide a lot faster.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "5:00"
+        },
+        {
+          "quote": "as long as you do actually come back, that's one of the best things you can do to help Sweden to help Stockholm thrive as a startup hub.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "16:10"
+        },
+        {
+          "quote": "Surely the optimal way to go to Silicon Valley for a bit and then come back is to do YC.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "17:16"
+        },
+        {
+          "quote": "startups that go back home after YC are only about half as likely to become unicorns.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "18:57"
+        },
+        {
+          "quote": "there's a lot of selection bias in this.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "18:57"
+        },
+        {
+          "quote": "even if you only do half as well, that's still pretty good.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "19:30"
+        },
+        {
+          "quote": "you could make it the Silicon Valley of Europe.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "20:04"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold matches raw. Added the reasons for going and the 'as long as you do actually come back' condition."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-05",
+      "key_status": "confirmed_expanded",
+      "primary_sources": [
+        "yt-QHJkUw31YX8"
+      ],
+      "question": "I'm building a startup in Stockholm. Does Paul Graham think I really need to move to Silicon Valley?",
+      "required_points": [
+        "Yes, go to Silicon Valley, at least for a while; you can come back.",
+        "Mentions the unicorn-rate caveat or the benefit of returning to help Stockholm."
+      ],
+      "supporting_points": [
+        "Reasons: best peers, serendipitous meetings, faster investors, respect back home.",
+        "YC is the optimal way to go for a bit and come back.",
+        "Startups that go home after YC are about half as likely to become unicorns, discounted for selection bias, valuation vs performance, and 'half as well is still good'.",
+        "Stockholm could become the Silicon Valley of Europe."
+      ],
+      "uncertainty": [],
+      "vault": "yc"
+    }
+  }
+]

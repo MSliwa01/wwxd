@@ -1,0 +1,101 @@
+{
+  "actual_input_tokens": 2526,
+  "answer": "Michael Seibel has consistently argued that cofounder conflict is among the most common reasons early startups die. His likely advice: **stop letting lawyers drive this, settle it quickly and directly, and protect whatever future the company or each of you still has.**\n\n**Check a likely false premise.** Under the standard four-year schedule with a one-year cliff, nobody has vested anything at month nine. If your cofounder truly holds vested shares, your documents may lack a cliff, include acceleration, or credit pre-incorporation work. Your lawyer should confirm exactly what has vested before anyone argues about it.\n\n**Decide what \"over\" means. That changes everything.**\n- **Shutting down entirely:** The equity is probably worth close to nothing. Fighting over it burns legal fees on an empty asset. Agree to wind down, return any remaining investor money, and part ways cleanly.\n- **One of you continuing:** A large block of stock held by someone who no longer works on the company makes future fundraising hard. In that case, offer a fair deal: the departing founder keeps a stake roughly proportional to the time and value he contributed. The company repurchases the rest, typically at the original price for shares that haven't vested.\n\n**Concrete next steps:**\n1. Meet in person, without lawyers, within a week.\n2. Agree on the outcome first: shut down, or who continues.\n3. Settle the equity split, mutual releases, intellectual property assignment, and any non-disparagement terms between yourselves.\n4. Have the lawyers write up the agreement you reached, not negotiate it for you.\n5. Set a deadline. Every week of letters costs money and goodwill.\n\n**What would change this:** a signed vesting agreement that clearly favors one side, real assets or intellectual property of value, outside investors with consent rights, or bad faith such as taking code or customers. In those cases, legal leverage matters more.",
+  "arm": "raw",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 14.815,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "adceee933a1a7bfb4680a59f56e71d8b583243deb3ab3040046cc484189ef0d3"
+    }
+  ],
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 512,
+  "event_count": 11,
+  "family": "opus",
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:23:17.007909+00:00",
+  "format_deviations": [
+    "outside descriptive 150..300 word band around approximate 250-word instruction"
+  ],
+  "id": "diagnostic12--yc-12--opus--raw",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "prompt_sha256": "c92561c6732630f5e5c0a7919a01a8acc677a661ecfa35a5f9bb6fc43c68be1a",
+  "question_key": "diagnostic12--yc-12",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 956,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 956,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 956,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 956,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 1074,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 1074,
+      "output_tokens_details": {
+        "thinking_tokens": 459
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ],
+  "words": 305
+}

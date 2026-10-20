@@ -1,0 +1,419 @@
+Evaluation date: 2026-10-19. This is the current date, not a future date. May 2026 is in the past. Publication dates and dates of events described in a source are distinct. A model training cutoff does not invalidate supplied later material. You are an independent evaluator. Use no tools, commands, files, browsing, or external retrieval. A and B are anonymous. Their ordering conveys nothing. Do not infer their model, source access, or provenance. Do not reward writing style, citation presence, quotations, expert agreement, or presumed source use. A tie is valid.
+Score each answer on the four specified integer scales, each from 1 to 5. Anchors: 1 fundamentally deficient; 2 major problems; 3 mixed with meaningful gaps; 4 good with minor gaps; 5 strong and sufficiently complete. Choose A, B, or tie for substantive overall quality. Preserve uncertainty rather than inventing evidence.
+Return ONLY a JSON object with exactly one key, "judgments", containing one object per supplied pair. Each object has exactly: "id", "A", "B", "winner", "reason", "factual_objections". A and B each contain exactly the four dimension names and integer scores. winner is "A", "B", or "tie"; reason is a nonempty string. factual_objections is a list, possibly empty, of objects with exactly "answer" ("A" or "B"), "claim", "label" ("contradicted" or "unverified"), and "evidence" (a nonempty explanation). Distinguish an established contradiction from an unverified claim.
+Evaluate accuracy, specificity, faithfulness, and usefulness using the complete audited reference packet. The reference is evidence, not a required script. Missing optional detail is not automatically a false claim. Label a factual objection contradicted only when supplied evidence establishes the contradiction; otherwise label it unverified. Do not treat absence from the reference as proof of falsehood. Resolve a conflict between a summary and direct evidence in favor of the direct evidence and explain it.
+
+Pairs:
+[
+  {
+    "id": "p-a76ca4ad41ad1ed4",
+    "question": "I'm building a startup in Stockholm. Does Paul Graham think I really need to move to Silicon Valley?",
+    "A": "No, Paul Graham does not think you need to move to Silicon Valley. \n\nAccording to his position on startup location, moving to Silicon Valley is valuable advice for ambitious founders, but it is not an absolute requirement. His view is that fields have centers—such as Paris for painting or Silicon Valley for startups—and that going to the center offers major advantages: access to better and more numerous peers, valuable serendipitous encounters, a pay-it-forward culture, faster-moving networks, and a clearer view of how high the bar actually is. For founders based elsewhere, such as Stockholm, he recommends going to Silicon Valley for a period—ideally through a program like Y Combinator—to build your network, accelerate your startup, and import Silicon Valley culture, and then coming back home if you choose. \n\nHowever, this is distinct from saying you *must* permanently relocate to survive. The primary benefits are catalytic rather than mandatory. \n\n**Decision criteria:**\n- If your startup is early and you are struggling to find great technical peers, raise fast-moving contrarian capital, or calibrate your ambition against the global standard, you should go to Silicon Valley temporarily.\n- If you have strong co-founders, local momentum, and access to early customers who decide quickly, you can build locally, though you will miss out on the localized density of serendipity and peer pressure.\n\n**Next steps:**\n1. Focus first on making something users want and achieving a high growth rate, which matters more than geography.\n2. If you decide to seek external validation, speed up your learning, or raise U.S. venture capital, apply to Y Combinator or spend a temporary stint in the Bay Area to tap into the network.",
+    "B": "Building a startup in Stockholm does not strictly require moving to Silicon Valley, and the underlying premise that relocating is an absolute prerequisite is false. While traditional startup lore often emphasizes Silicon Valley for its density of venture capital and networking opportunities, the global ecosystem has matured significantly. Stockholm itself is a thriving tech hub, known for producing globally successful companies and boasting strong engineering talent, robust digital infrastructure, and supportive local funding networks.\n\nThe decision to relocate depends heavily on your specific market, customer base, and growth stage. If your primary market is European, staying in Stockholm allows you to build a strong regional foundation and access European talent pools more cost-effectively. However, if your startup targets enterprise customers in the United States or requires massive venture capital scaling that is difficult to secure locally, a temporary or permanent move to Silicon Valley may eventually become necessary. \n\n**Material Assumptions:**\n* Your startup is in the early to growth stage.\n* Your product can be developed and initially tested outside the United States.\n\n**Decision Criteria:**\n* **Customer Proximity:** If your core buyers are in the US, move closer to them when sales become your primary bottleneck.\n* **Capital Access:** If local Nordic funding options are insufficient for your capital-intensive scaling phase, look toward US investors.\n\n**Concrete Next Steps:**\n1. Maximize local resources by leveraging Stockholm incubators, local angel networks, and regional grants.\n2. Validate your product-market fit locally or digitally before incurring the high costs of a US relocation.\n3. Plan targeted trips to Silicon Valley for specific milestones, such as major fundraising rounds or establishing US sales channels, rather than moving immediately.",
+    "reference": {
+      "actual_stance": "Yes, at least for a while: go, and you can come back. You get the best peers, more serendipitous meetings, investors who decide faster, more respect from investors back home, and a realistic view of how good you are. Going and then actually returning is also one of the best things founders can do for Stockholm. He calls YC the optimal way to do the stint (four to six months). He cites YC data that startups going home after YC are only about half as likely to become unicorns, and discounts it three ways: selection bias, it measures valuation rather than performance, and half as well is still very good. He thinks Stockholm could become the Silicon Valley of Europe.",
+      "category": "fresh",
+      "errors": [
+        "Saying he thinks remote work makes location irrelevant.",
+        "Saying he advises moving permanently and never returning."
+      ],
+      "evidence": [
+        {
+          "quote": "And the answer is the same now as it always is. Yes, you should. You can go there for a bit and then come back, but you should at least go.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "0:36"
+        },
+        {
+          "quote": "You get the best peers.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "1:09"
+        },
+        {
+          "quote": "investors in Silicon Valley decide a lot faster.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "5:00"
+        },
+        {
+          "quote": "as long as you do actually come back, that's one of the best things you can do to help Sweden to help Stockholm thrive as a startup hub.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "16:10"
+        },
+        {
+          "quote": "Surely the optimal way to go to Silicon Valley for a bit and then come back is to do YC.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "17:16"
+        },
+        {
+          "quote": "startups that go back home after YC are only about half as likely to become unicorns.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "18:57"
+        },
+        {
+          "quote": "there's a lot of selection bias in this.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "18:57"
+        },
+        {
+          "quote": "even if you only do half as well, that's still pretty good.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "19:30"
+        },
+        {
+          "quote": "you could make it the Silicon Valley of Europe.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "20:04"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold matches raw. Added the reasons for going and the 'as long as you do actually come back' condition."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-05",
+      "key_status": "confirmed_expanded",
+      "primary_sources": [
+        "yt-QHJkUw31YX8"
+      ],
+      "question": "I'm building a startup in Stockholm. Does Paul Graham think I really need to move to Silicon Valley?",
+      "required_points": [
+        "Yes, go to Silicon Valley, at least for a while; you can come back.",
+        "Mentions the unicorn-rate caveat or the benefit of returning to help Stockholm."
+      ],
+      "supporting_points": [
+        "Reasons: best peers, serendipitous meetings, faster investors, respect back home.",
+        "YC is the optimal way to go for a bit and come back.",
+        "Startups that go home after YC are about half as likely to become unicorns, discounted for selection bias, valuation vs performance, and 'half as well is still good'.",
+        "Stockholm could become the Silicon Valley of Europe."
+      ],
+      "uncertainty": [],
+      "vault": "yc"
+    }
+  },
+  {
+    "id": "p-ce005039168f0ddd",
+    "question": "Should my ads admit the weaknesses of my product, and if so how do I word it? What would Alex Hormozi say?",
+    "A": "Admitting product weaknesses in ads is an effective strategy that builds immediate trust and disarms skepticism, provided the flaw is minor, secondary, and quickly overshadowed by a dominant benefit. While the premise assumes perfection is required to sell, consumers actually respond better to authentic transparency. \n\nAlex Hormozi would likely argue that pointing out a flaw filters out unqualified buyers, increases conversion rates among ideal customers, and reframes the weakness as a deliberate feature or trade-off for a massive core benefit. \n\nTo word it effectively, use a pivot formula that acknowledges the limitation immediately, minimizes its impact, and pivots back to the primary value proposition. For example, state that the product lacks a certain complex feature, which actually makes it faster and easier to use than bloated alternatives.\n\nMaterial assumptions include that the product delivers on its core promise, the weakness is not a deal-breaking core failure, and the target audience values honesty over hype. If the product has fundamental structural defects or safety issues, do not highlight them; instead, fix the product first. \n\nConcrete next steps:\n1. Identify the most common objection prospects raise about your product.\n2. Draft a script opening that acknowledges this objection head-on.\n3. Immediately follow the confession with the context that makes the weakness irrelevant or beneficial to the right buyer.\n4. Test the ad against a standard glossy version to measure return on ad spend.\n\nThe decision criterion is conversion lift: if the transparent ad lowers cost-per-acquisition by filtering for higher-intent buyers, scale it. If it simply repels all traffic, the weakness is too central to the core utility and must be redesigned rather than marketed.",
+    "B": "Yes, ads should admit product weaknesses because doing so builds trust, and trust beats out promises. Flaws and complaints should be front-loaded to disarm skepticism. \n\nTo word a damaging admission, use the formula: state a true, damaging thing plainly, then pivot immediately using \"but\" to introduce the primary claim you want the prospect to believe. Acknowledge what people complain about or what your product does not do, and ideally deliver the admission with humor. This approach proves honesty, qualifies buyers up front, and makes subsequent claims far more believable. \n\nMaterial assumptions: This advice assumes you are selling to a market sensitive to exaggerated claims and that your core offer already delivers its primary value despite the stated flaw. \n\nDecision criteria: If your product's weakness is a deal-breaking functional failure for your target audience, fix the product before advertising it. If the weakness is a minor trade-off, inconvenience, or aesthetic downside that is standard in your category, admit it openly to stand out from competitors who hide their flaws.",
+    "reference": {
+      "actual_stance": "Yes. Use damaging admissions: own your real flaws up front, because what you give up in promise you gain in trust. Word it as flaw, then 'but', then the benefit, since people believe the clause after 'but'; reversing the order stresses the flaw. List the things customers already complain about and claim them; humor earns extra credit. In a sales setting he applies the same idea by opening with the bad before the good and saying who the offer will not work for, so prospects self-qualify.",
+      "category": "known",
+      "errors": [
+        "Advising to hide weaknesses or wait until the prospect raises them.",
+        "Putting the benefit first and the flaw after 'but' as the recommended order.",
+        "Recommending invented or fake flaws."
+      ],
+      "evidence": [
+        {
+          "quote": "you want to always own your flaws of course you have them of course your product isn't perfect say so and",
+          "source_date": "2025-05-07",
+          "source_id": "yt-JDR-R--4HhM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-JDR-R--4HhM.md",
+          "source_sha256": "8dead6f4201863ae62991d2ed37b42a93313e36a30216ca200b58aefc5d1cfad",
+          "source_title": "14 Years of Marketing Advice in 35 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "12:30"
+        },
+        {
+          "quote": "what you'll sacrifice in promise you'll gain in trust and trust trumps promise",
+          "source_date": "2025-05-07",
+          "source_id": "yt-JDR-R--4HhM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-JDR-R--4HhM.md",
+          "source_sha256": "8dead6f4201863ae62991d2ed37b42a93313e36a30216ca200b58aefc5d1cfad",
+          "source_title": "14 Years of Marketing Advice in 35 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "13:09"
+        },
+        {
+          "quote": "the statement that comes after the word but is the part that is the thing you want them to believe",
+          "source_date": "2025-05-07",
+          "source_id": "yt-JDR-R--4HhM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-JDR-R--4HhM.md",
+          "source_sha256": "8dead6f4201863ae62991d2ed37b42a93313e36a30216ca200b58aefc5d1cfad",
+          "source_title": "14 Years of Marketing Advice in 35 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "13:44"
+        },
+        {
+          "quote": "these markers write four times longer than others but they smell like crap what am I emphasizing i'm actually emphasizing the fact that they smell bad not the fact that they write longer",
+          "source_date": "2025-05-07",
+          "source_id": "yt-JDR-R--4HhM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-JDR-R--4HhM.md",
+          "source_sha256": "8dead6f4201863ae62991d2ed37b42a93313e36a30216ca200b58aefc5d1cfad",
+          "source_title": "14 Years of Marketing Advice in 35 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "14:26"
+        },
+        {
+          "quote": "write down all of the flaws all the things that people complain about the things that you know you could do better and claim them",
+          "source_date": "2025-05-07",
+          "source_id": "yt-JDR-R--4HhM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-JDR-R--4HhM.md",
+          "source_sha256": "8dead6f4201863ae62991d2ed37b42a93313e36a30216ca200b58aefc5d1cfad",
+          "source_title": "14 Years of Marketing Advice in 35 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "15:03"
+        },
+        {
+          "quote": "if you can do with humor you get even more bonus points",
+          "source_date": "2025-05-07",
+          "source_id": "yt-JDR-R--4HhM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-JDR-R--4HhM.md",
+          "source_sha256": "8dead6f4201863ae62991d2ed37b42a93313e36a30216ca200b58aefc5d1cfad",
+          "source_title": "14 Years of Marketing Advice in 35 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "15:39"
+        },
+        {
+          "quote": "Listen, before I tell you about the good, let me tell you about the bad.",
+          "source_date": "2026-02-28",
+          "source_id": "yt-MH-IMJxbUY4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-MH-IMJxbUY4.md",
+          "source_sha256": "0ee16a3ff11eaf668c6513ea5fd6db5581199780322ebe90b2c8ee92b0cf269f",
+          "source_title": "Building a $12,000,000 Business for a Stranger in 25 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Joel; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "19:42"
+        },
+        {
+          "quote": "So, you can have what you want, just not when you want.",
+          "source_date": "2026-02-28",
+          "source_id": "yt-MH-IMJxbUY4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-MH-IMJxbUY4.md",
+          "source_sha256": "0ee16a3ff11eaf668c6513ea5fd6db5581199780322ebe90b2c8ee92b0cf269f",
+          "source_title": "Building a $12,000,000 Business for a Stranger in 25 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Joel; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "20:14"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold stance and quotes match the raw transcript. Gold omitted the 'write down all the flaws and claim them' step, the humor bonus, and the sales-call version in MH-IMJxbUY4; these are now supporting points, not requirements."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-02",
+      "key_status": "confirmed_expanded",
+      "primary_sources": [
+        "yt-JDR-R--4HhM"
+      ],
+      "question": "Should my ads admit the weaknesses of my product, and if so how do I word it? What would Alex Hormozi say?",
+      "required_points": [
+        "Yes, admit real weaknesses (damaging admissions); it builds trust and makes later claims more believable.",
+        "Order matters: flaw first, then 'but', then the benefit; the part after 'but' is what people believe."
+      ],
+      "supporting_points": [
+        "Trust beats promise; sacrificing some promise is worth it.",
+        "Write down every flaw and complaint and claim it before the prospect thinks it.",
+        "Humor is a bonus.",
+        "In sales calls: tell them the bad before the good and who it is not for, so they self-qualify (MH-IMJxbUY4).",
+        "Admissions must be true, not invented."
+      ],
+      "uncertainty": [],
+      "vault": "hormozi"
+    }
+  },
+  {
+    "id": "p-30f0a7d52b64b6ba",
+    "question": "What's a good monthly churn rate for a paid online community, and when should I worry about it? What would Alex Hormozi say?",
+    "A": "For a paid online community, a good monthly retention rate is around 80%, meaning a monthly churn rate of about 20%. If your monthly retention falls below 70% (yielding a monthly churn rate above 30%), retention becomes the highest-return lever in your business, and you should prioritize fixing it over acquiring new members. \n\nYou should worry about churn when your rate exceeds that 30% threshold, or when you notice a sharp drop-off during specific high-risk windows. Churn typically spikes in the first month and remains highest through day 90. If you can successfully keep members past day 90, churn generally drops significantly, and by month six it often falls to around 2%. Rather than trying to lower your average churn all at once, focus specifically on designing strategies to get members past day 90 and month six.\n\nThe perspective here treats churn as a leaky bucket. When members cancel, tag their reasons—such as price, overwhelm, or lack of engagement—and fix the top reasons after every 20 or so cancellations. At the same time, ask your most engaged, long-tenured members why they stay, and lean into those retention drivers. To combat churn proactively, front-load a fast win within the first 24 hours, simplify your offerings to reduce overwhelm, ensure the owner remains active daily, and help new members make at least one real friend in the community. \n\nConditional recommendation: If your community is less than 90 days or six months old, expect inflated churn metrics because no members have reached the low-churn tenure milestones yet; do not overhaul your business based solely on month-one churn in a young community.",
+    "B": "A good monthly churn rate for a paid online community typically falls between three and seven percent, though top-tier communities with strong engagement and locked-in annual cohorts achieve under two percent. A monthly churn rate above ten percent is alarming and signals a broken onboarding process, unmet value expectations, or a poor member-fit. \n\nAlex Hormozi argues that churn is primarily a symptom of poor customer success and inadequate initial value delivery rather than a pricing issue. He contends that if members feel they are getting ten times the value of their subscription cost within the first week, they will not leave. From his perspective, instead of lowering prices to reduce churn, operators should aggressively increase the perceived and actual value, improve onboarding speed, and create immediate wins for new joiners.\n\nMaterial assumptions include a standard monthly subscription model without long-term lock-ins, and a community size large enough for statistical significance. If your community is very small, a single cancellation can spike your percentage rate artificially. \n\nConcrete next steps: Calculate your current monthly churn by dividing the number of cancellations by total active members at the start of the month. Survey churned members immediately to identify the primary reason for leaving. Implement a mandatory onboarding checklist within the first forty-eight hours to drive early engagement. \n\nDecision criteria: If your churn remains steadily below five percent, focus your resources on scaling acquisition. If churn exceeds eight percent for two consecutive months, pause marketing spend entirely and redirect all efforts toward fixing member retention and value delivery.",
+    "reference": {
+      "actual_stance": "Using Skool platform data that he credits to Sam at Skool: average monthly retention is 80% (20% churn); the best groups churn under 10%; groups under 70% retention (30%+ churn) should make retention their top priority because it is the highest-ROI lever. Churn falls with tenure: 20%+ in months 1 to 3, about 10% or less after day 90, about 2% by month 6. So judge churn by cohort. A community younger than 90 days will show inflated churn, and high month-one churn is normal unless almost everyone leaves. Focus on getting members past month one (onboarding, expectations), day 90 (an outcome) and month 6 (connections). He says these benchmarks fit online and consumer services, not insurance-style or alarm-system subscriptions.",
+      "category": "fresh",
+      "errors": [
+        "Presenting SaaS 3 to 7% churn benchmarks as his view.",
+        "Saying high month-one churn alone means the business is broken.",
+        "Attributing the platform data to a source other than Skool."
+      ],
+      "evidence": [
+        {
+          "quote": "this isn't uh churn for like an insurance premium or an alarm system",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "1:05"
+        },
+        {
+          "quote": "the platform average across School is 80% monthly retention. So said differently, it's 20% churn.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "1:39"
+        },
+        {
+          "quote": "Now the best groups have less than 10% churn, aka 90% retention month over month. The not good groups have less than 70% retention, aka 30% or higher.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "1:39"
+        },
+        {
+          "quote": "you probably need to work on your retention more than anything else. It'll be the highest ROI lever.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "1:39"
+        },
+        {
+          "quote": "you got a double in the LTV per customer",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "2:13"
+        },
+        {
+          "quote": "Now, if you keep someone 90 days, which seems to be the first kind of big churn drop-off point, it drops to around 10% or less.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "3:53"
+        },
+        {
+          "quote": "So, it goes from like 10% to 2%.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "3:53"
+        },
+        {
+          "quote": "if your community or recurring revenue thing is less than 90 days old, then your churn is always going to be inflated",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "4:24"
+        },
+        {
+          "quote": "that's normal for it to be higher than the other months, unless basically everyone's leaving, in which case, yes, you should go fix that.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "4:57"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold matches raw. Added the scope caveat (online/consumer services, not insurance or alarm subscriptions), the under-90-days caveat and the 'unless everyone leaves' exception.",
+        "Auto-captions spell the platform 'School'; it is Skool. Quotes keep the caption spelling."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-05",
+      "key_status": "confirmed_expanded",
+      "primary_sources": [
+        "yt--j8_YCWZ05Q"
+      ],
+      "question": "What's a good monthly churn rate for a paid online community, and when should I worry about it? What would Alex Hormozi say?",
+      "required_points": [
+        "Average about 80% monthly retention (20% churn); best groups under 10% churn.",
+        "Worry when retention is under 70% (churn above 30%): retention becomes the highest-ROI fix.",
+        "Churn depends on tenure: highest in months 1 to 3, about 10% or less after day 90, about 2% by month 6."
+      ],
+      "supporting_points": [
+        "Do not overhaul the business because month-one churn is high, unless basically everyone is leaving.",
+        "A community under 90 days old will show inflated churn.",
+        "Cutting churn from 20% to 10% doubles customer lifetime value.",
+        "Benchmarks fit online/consumer services, not insurance or alarm-type subscriptions.",
+        "Tactics: first-month onboarding, a day-90 outcome, month-6 connections; ask cancellers why, look for patterns."
+      ],
+      "uncertainty": [
+        "The benchmarks are Skool platform averages relayed by Hormozi, not his own measurements. Answers that say so are correct."
+      ],
+      "vault": "hormozi"
+    }
+  }
+]

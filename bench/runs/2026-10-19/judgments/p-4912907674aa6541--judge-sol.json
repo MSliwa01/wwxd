@@ -1,0 +1,36 @@
+{
+  "answer_family": "sol",
+  "batch_id": "newadvice12--sol--sol--batch-03",
+  "error": "",
+  "id": "p-4912907674aa6541--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-4912907674aa6541",
+  "primary_eligible": false,
+  "prompt_sha256": "c349479a60fe8a0c9df6fe27f028e51deea5feacfbab53ebbccdc8b3e091e171",
+  "question_key": "newadvice12--advice-yc-06",
+  "status": "ok",
+  "suite": "newadvice12",
+  "verdict": {
+    "A": {
+      "actionability": 5,
+      "constraint_fit": 5,
+      "decision_quality": 5,
+      "reasoning": 5
+    },
+    "B": {
+      "actionability": 5,
+      "constraint_fit": 5,
+      "decision_quality": 5,
+      "reasoning": 5
+    },
+    "factual_objections": [],
+    "id": "p-4912907674aa6541",
+    "reason": "Both defensibly choose B based on relevant experience while making procurement, technical feasibility, and sustainable economics explicit tests. Both account for limited savings and propose useful historical validation without promising measurable failure prevention within six months. A allows more procurement flexibility and explores partners; B demands earlier financial commitment. These are defensible tradeoffs given the unspecified purchase timelines.",
+    "winner": "tie"
+  },
+  "winner": "tie"
+}

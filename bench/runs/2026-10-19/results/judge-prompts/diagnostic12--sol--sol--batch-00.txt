@@ -1,0 +1,478 @@
+Evaluation date: 2026-10-19. This is the current date, not a future date. May 2026 is in the past. Publication dates and dates of events described in a source are distinct. A model training cutoff does not invalidate supplied later material. You are an independent evaluator. Use no tools, commands, files, browsing, or external retrieval. A and B are anonymous. Their ordering conveys nothing. Do not infer their model, source access, or provenance. Do not reward writing style, citation presence, quotations, expert agreement, or presumed source use. A tie is valid.
+Score each answer on the four specified integer scales, each from 1 to 5. Anchors: 1 fundamentally deficient; 2 major problems; 3 mixed with meaningful gaps; 4 good with minor gaps; 5 strong and sufficiently complete. Choose A, B, or tie for substantive overall quality. Preserve uncertainty rather than inventing evidence.
+Return ONLY a JSON object with exactly one key, "judgments", containing one object per supplied pair. Each object has exactly: "id", "A", "B", "winner", "reason", "factual_objections". A and B each contain exactly the four dimension names and integer scores. winner is "A", "B", or "tie"; reason is a nonempty string. factual_objections is a list, possibly empty, of objects with exactly "answer" ("A" or "B"), "claim", "label" ("contradicted" or "unverified"), and "evidence" (a nonempty explanation). Distinguish an established contradiction from an unverified claim.
+Evaluate accuracy, specificity, faithfulness, and usefulness using the complete audited reference packet. The reference is evidence, not a required script. Missing optional detail is not automatically a false claim. Label a factual objection contradicted only when supplied evidence establishes the contradiction; otherwise label it unverified. Do not treat absence from the reference as proof of falsehood. Resolve a conflict between a summary and direct evidence in favor of the direct evidence and explain it.
+
+Pairs:
+[
+  {
+    "id": "p-d1ebfc172a92cae3",
+    "question": "My cofounder and I are 9 months in, pre-product-market fit, and it's clearly over. He's vested a chunk of his stock and wants to keep it, and we've both hired lawyers who are trading letters. What would Michael Seibel tell us to do?",
+    "A": "Michael Seibel would likely tell you to resolve the founder breakup quickly and pragmatically, rather than let a battle over fairness destroy whatever chance the company still has. The goal is to make the company able to move forward, not to win the breakup.\n\nThe uncomfortable starting point: vested stock is generally already earned. Your cofounder’s departure does not automatically entitle you to take it back. The actual rights depend on your agreements and applicable law, including any repurchase provisions. Keeping vested shares is not, by itself, an unreasonable demand.\n\nIf you want to continue the company, a generous settlement may be much cheaper than months of distraction, legal bills, and uncertainty. Nine months in and before product-market fit, your biggest problem is still building something people want. Recovering more equity will not solve that problem.\n\nTry to agree directly on the business terms, using a neutral mediator if conversations have broken down. Establish who continues, what happens to unvested shares, whether either side wants a voluntary purchase of vested shares, and how responsibilities and access transfer. Separately resolve board roles, intellectual property, and any outstanding obligations. Have your lawyers advise you and document the agreement, rather than leave them to determine what outcome you want.\n\nIf neither of you wants to continue, discuss an orderly shutdown instead of fighting over ownership of an abandoned project.\n\nThat is an interpretation of Seibel’s general approach, not a prediction of his exact response. Fraud, disputed ownership, or serious misconduct would materially change the recommendation. Otherwise, prioritize a clean exit over extracting the last concession.",
+    "B": "Michael Seibel would tell you to separate quickly, cheaply, and without turning the breakup into a trial over who deserves blame. Once the partnership is clearly finished, more time fighting usually destroys money, attention, and goodwill.\n\nAssuming your cofounder leaves and you continue the company, his equity advice is blunt: before product-market fit, the departing founder should return most of their stock, **even if it has vested**. At nine months, his rule of thumb is roughly **1–2% of the company, sometimes less**. Nearly all the potential value remains to be created, and the people staying need equity to motivate themselves and recruit others. The departing founder retains upside while becoming free to pursue something else.\n\nThat is a proposed negotiated outcome, not a legal entitlement to confiscate vested shares. Your agreements and applicable law determine your rights.\n\nHe would also push back on you: be generous, offer reasonable severance, and stop treating yourself as the victim. Employees will remember how you handle someone who helped start the company.\n\nConcrete next steps:\n\n- Agree that the objective is a clean separation, with neither side required to admit fault.\n- Replace escalating lawyer letters with a short settlement discussion. If needed, use a mutually trusted mediator to facilitate agreement rather than decide who was right.\n- Settle retained equity, severance, departure date, handover, and clean paperwork together.\n- Give legal work a narrow scope and budget. He describes a simple split as potentially taking about a week and $2,000, not a guaranteed estimate.\n\nHis approach assumes an ordinary relationship breakdown. Illegal or unethical conduct changes the advice.",
+    "reference": {
+      "actual_stance": "Stop paying lawyers. Before product-market fit the stock is worth essentially nothing, so you are fighting over ego. Make the split no-fault and clean, and keep your mouths shut. Even if he has vested, the leaving founder should get down to under 5% of the company, and since this is within the first year, under 2% (they cite 1% to 2%, sometimes under 1%), so the remaining team has the equity to create the value. The staying founder should be generous with severance because everyone in the company is watching. Sign clean paperwork; it can be done in about a week for about $2,000. Do not make your advisor judge and jury; the facts no longer matter. Exception: lawbreaking or unethical conduct, where you call the lawyers.",
+      "category": "applied",
+      "errors": [
+        "Advising to enforce the agreements through litigation or negotiate a full buyout of vested shares.",
+        "Giving the 5% figure for a first-year departure without the under-2% adjustment."
+      ],
+      "evidence": [
+        {
+          "quote": "in a situation where you're having a co-founder breakup and the stock is worth nothing, paying lawyers a bunch of money makes no sense.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "11:36"
+        },
+        {
+          "quote": "the way it should go is sort of no fault from both sides.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "13:42"
+        },
+        {
+          "quote": "Optimize for cleanliness for both sides.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "14:14"
+        },
+        {
+          "quote": "regardless of your vesting, um you need to make sure that that company has as much equity as possible to motivate the people who are there",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "14:47"
+        },
+        {
+          "quote": "you have an opportunity to be generous.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "17:01"
+        },
+        {
+          "quote": "understand that everyone in your company is looking at you right now.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "17:33"
+        },
+        {
+          "quote": "even if you vested, like get down to under 5% of the company, if it's within the first year, under 2%.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "18:39"
+        },
+        {
+          "quote": "Do reasonable severance, sign clean paperwork and and peace out, right? Like you could do that whole thing in a week and spend like $2,000.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "18:39"
+        },
+        {
+          "quote": "After a number of years, 5% typical. Under a year, 1%, 2%, sometimes less than 1%.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "21:22"
+        },
+        {
+          "quote": "don't make your poor startup advisor into judge and jury.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "21:54"
+        },
+        {
+          "quote": "if your co-founder is breaking the law, doing something unethical, killing people, none of this applies.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "21:54"
+        },
+        {
+          "quote": "On this point, I maybe I'll be a little bit less nice than Dalton.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "seibel",
+          "speaker_basis": "speaker refers to Dalton in the third person, so this turn is Michael's",
+          "timestamp": "21:54"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold attributes the whole framework to Michael Seibel. It is presented jointly in a two-host episode; only some turns can be assigned (for example the 'less nice than Dalton' turn is Michael's). The hosts say YC has these standards written down. Grade the content.",
+        "Premise note: at 9 months, a standard four-year vesting schedule with a one-year cliff would usually mean nothing has vested. The source's advice holds 'even if you vested', so the stance does not change. Answers that point out the cliff are fine."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-12",
+      "key_status": "confirmed_speaker_caveat",
+      "primary_sources": [
+        "yt-s1YszjhzQ6U"
+      ],
+      "question": "My cofounder and I are 9 months in, pre-product-market fit, and it's clearly over. He's vested a chunk of his stock and wants to keep it, and we've both hired lawyers who are trading letters. What would Michael Seibel tell us to do?",
+      "required_points": [
+        "Stop the lawyer fight; pre-PMF stock is worth almost nothing.",
+        "Leaving founder gives most of it back even if vested: under 5%, and under 2% within the first year (this case is at 9 months).",
+        "No-fault, clean separation with clean paperwork."
+      ],
+      "supporting_points": [
+        "About a week and about $2,000.",
+        "Staying founder offers reasonable severance and is generous; everyone is watching.",
+        "Do not make an advisor the judge; facts do not matter once you are splitting.",
+        "Exception for lawbreaking or unethical behavior."
+      ],
+      "uncertainty": [
+        "Speaker split between the two hosts is mostly unrecoverable."
+      ],
+      "vault": "yc"
+    }
+  },
+  {
+    "id": "p-9fa1a2cb466598cc",
+    "question": "I own a residential HVAC duct-cleaning company doing about $1.2M a year at a 38% net margin, and we close about 82% of in-home inspections. Should I keep prices where they are so I don't hurt the close rate? What would Alex Hormozi say?",
+    "A": "No—keeping an 82% close rate is not, by itself, a reason to freeze prices. Hormozi would likely recommend a **10% price increase**, then judge the economics. He treats close rates above 80% as a signal of pricing room. That is a useful hypothesis, not proof: strong referrals or well-qualified prospects can also explain high conversion.\n\nHis reasoning is that higher prices can increase customers’ confidence in delivery while giving you more money to deliver well. Your close rate could hold, rise, or fall; the goal is greater profit.\n\nYour numbers make testing worthwhile:\n\n- Current annual net profit: **$456,000**.\n- A 10% increase at unchanged job volume adds **$120,000 in revenue**.\n- If total costs stay unchanged, net profit becomes **$576,000**, approximately **26% higher**.\n\nThat assumes unchanged service scope and no additional commissions, payment fees, or other costs tied to revenue.\n\nTest the increase on new quotes while honoring existing commitments. Keep the service and sales process consistent, and compare similar lead channels, salespeople, and job sizes. Track realized ticket, completed-job conversion, cancellations, contribution profit per inspection, and total operating profit.\n\nAt 10% higher prices, conversion could fall from 82% to about **74.5% while preserving revenue**, assuming unchanged inspection volume and job mix. Profit could improve below that because fewer jobs incur delivery costs. Your actual profit threshold requires separating variable costs from fixed overhead; a 38% net margin alone cannot establish it.\n\nIf crews are fully booked, raising prices is especially attractive. Keep the increase if profit improves without material deterioration in customer satisfaction or referrals.",
+    "B": "I would test higher prices. An 82% close rate is a reason to investigate whether you’re underpriced, not a reason to freeze pricing. Your goal is sustainable profit, rather than the highest possible acceptance rate.\n\nHormozi would likely encourage you to charge more, strengthen the offer, and judge the result by profit. He would probably view your close rate as evidence of potential pricing power. That’s a plausible interpretation, not proof: strong referrals, well-qualified prospects, or excellent sales execution could also explain it.\n\nAt $1.2 million in revenue and a true 38% net margin, you’re earning approximately $456,000 annually. Confirm that this includes market-rate compensation for your work and all operating expenses before using it for pricing decisions.\n\nHere’s the test I’d run:\n\n- Increase prices 10–15% for a defined group of comparable new prospects. Honor existing quotes.\n- Keep inspection standards, service scope, and lead channels consistent.\n- Track completed-job revenue, contribution profit per inspection, cancellations, complaints, and referrals—not just signed estimates.\n- Continue until you have enough comparable inspections to distinguish a pricing effect from ordinary fluctuations.\n\nFor perspective, with a 15% price increase, a close-rate decline from 82% to 75% would still increase revenue per inspection by about 5%, assuming unchanged service mix. Profit could improve further because you perform fewer jobs, but that depends on your variable costs.\n\nIf you’re booked solid, the case for raising prices is stronger. If crews have substantial idle capacity, proceed more cautiously. Keep the increase when total contribution profit improves without unacceptable damage to customer satisfaction or future demand.",
+    "reference": {
+      "actual_stance": "No, raise prices. A close rate of 80% or more tells him there is room on price. He penciled in a 10% raise, framed as 'more asking than telling'. At this business's numbers that is roughly a 25% increase in net profit (about $100k+ a year at last year's volume), and it still makes more money as long as the close rate stays above about 65%. For a normal, non-luxury service, a higher price can raise the customer's conviction that you can deliver, and this owner's earlier 23% raise produced a higher close rate and more money. He says charging more is among the biggest levers for businesses under roughly $3M to $5M.",
+      "arithmetic_checks": [
+        "Profit $479k on $1.25M revenue (38%). A 10% raise at the same volume adds about $125k, all profit: 125/479 = +26%, consistent with 'roughly 25%' and 'a hundred plus thousand'.",
+        "Break-even close rate if costs scale with jobs: 0.82 x 479 / (479 + 125) = 0.650, matching 'more than 65%'."
+      ],
+      "category": "applied",
+      "errors": [
+        "Recommending keeping prices to protect the close rate.",
+        "Claiming the 65% break-even is a general rule rather than this business's math.",
+        "Treating the higher-price-higher-close effect as a luxury/Veblen effect."
+      ],
+      "evidence": [
+        {
+          "quote": "full end price for us is 1575 per HVAC unit.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "guest_corey",
+          "speaker_basis": "business owner answering Hormozi's question; content-inferred",
+          "timestamp": "1:05"
+        },
+        {
+          "quote": "And then our close rate is 82%.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "guest_corey",
+          "speaker_basis": "business owner answering Hormozi's question; content-inferred",
+          "timestamp": "3:47"
+        },
+        {
+          "quote": "So, you did a 23% price increase after the first time we talked to you.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "5:54"
+        },
+        {
+          "quote": "And so, that resulted in a higher close rate and more money.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "6:26"
+        },
+        {
+          "quote": "if you raise your prices, what sometimes happens is that the conviction of the customer that you can actually deliver on the promise you're making goes up.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "7:00"
+        },
+        {
+          "quote": "So whenever I hear 80% or over 80% close rates, I usually know that there's room in sale.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "8:06"
+        },
+        {
+          "quote": "Basically, what I penciled out was a 10% price raise. This is more asking than telling.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "8:06"
+        },
+        {
+          "quote": "As long as we close more than 65%, we make more money. Thing is is that 10% price raise for you equals roughly a 25% increase in net profit.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "8:06"
+        },
+        {
+          "quote": "So that'd be roughly a hundred plus thousand a year. And that's at last year's volume and profit.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "8:37"
+        },
+        {
+          "quote": "Number one is we're going to do price raise of 10%. So, around 1650 per unit.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "30:45"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold matches raw. Added the prior 23% raise as direct evidence for 'higher price, higher close rate'.",
+        "Raw-internal inconsistency: stated price is $1,575 per unit, but the plan says '10%, so around 1650 per unit'. 1,575 x 1.10 = about 1,733; 1,650 is about +4.8% (or 10% on $1,500). Answers should not be marked down for using either figure."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-11",
+      "key_status": "confirmed_with_correction",
+      "primary_sources": [
+        "yt-OQf2Ba-Lp_4"
+      ],
+      "question": "I own a residential HVAC duct-cleaning company doing about $1.2M a year at a 38% net margin, and we close about 82% of in-home inspections. Should I keep prices where they are so I don't hurt the close rate? What would Alex Hormozi say?",
+      "required_points": [
+        "Raise prices; an 80%+ close rate signals room on price.",
+        "About 10%; the raise still pays as long as the close rate stays above about 65%."
+      ],
+      "supporting_points": [
+        "10% raise is roughly +25% net profit at a 38% margin (about $100k+ a year).",
+        "Higher price can increase conviction that you deliver (normal goods, not Veblen goods).",
+        "The owner's earlier 23% raise increased close rate and revenue.",
+        "Framed as a suggestion ('more asking than telling')."
+      ],
+      "uncertainty": [],
+      "vault": "hormozi"
+    }
+  },
+  {
+    "id": "p-ea71360e9fe0a8de",
+    "question": "I've spent months pitching seed investors, polishing my deck and taking follow-up meetings. How would Michael Seibel tell me to think about fundraising?",
+    "A": "Michael Seibel would tell you to focus on becoming a company investors want to chase. Months of meetings and deck revisions can consume the time you need to produce the growth that would make fundraising easier.\n\nHe learned this at Justin.tv: after roughly eight months of unsuccessful fundraising, the team had about two months of runway left. They turned toward making the business profitable and accomplished more in those two months than during the months of pitching. At Socialcam, when it reached number two in the App Store, the deck barely mattered.\n\nHis central idea is leverage: strong customer demand, growth and the ability to keep operating give you alternatives. That strength is built before the investor meeting.\n\nRepeated follow-ups aren’t necessarily progress. Investors can keep watching your company without committing, preserving their chance to invest if it takes off. You bear the cost in lost building time. That doesn’t establish any particular investor’s motives, but it explains why continued interest can coexist with little prospect of funding.\n\nA practical application would be:\n\n- Calculate your runway and identify what you can achieve without new money.\n- Ask active investors for their remaining decision steps and a concrete timeline.\n- If conversations remain indefinite and you have runway, pause the broad raise and pursue a measurable customer milestone: retention, paying customers or sustained revenue growth.\n- Return with stronger evidence and a clear explanation of what funding will unlock.\n\nIf capital is essential to reach your next technical or regulatory milestone, a focused raise may remain necessary. His point is to judge fundraising by commitments and its contribution to the business, rather than meeting volume or presentation polish.",
+    "B": "Michael Seibel’s basic framing is that fundraising serves the company; it is not the company’s purpose or a reliable measure of progress. Your job is to build something people want. A polished deck, investor enthusiasm, and repeated follow-up meetings do not establish that customers want your product.\n\nApplied to your situation, months of pitching should prompt a reset. The relevant question is whether you need capital to reach a specific business milestone, and whether your current fundraising process is producing actual commitments. Investor attention can feel like momentum while consuming the time needed to improve the business.\n\nA practical way to act on that framing:\n\n- **Define what the money buys.** Identify the product, customer, or revenue milestone it enables, the minimum capital required, and your remaining runway.\n- **Make fundraising a bounded process.** Concentrate meetings into a short period, ask directly for investment decisions, and distinguish committed money from polite interest.\n- **Diagnose the objection.** If investors doubt customer demand, more deck revisions probably will not resolve it. Product usage, retention, paying customers, or stronger growth may.\n- **Preserve the option to keep building.** If you can reduce spending and reach meaningful progress without raising, consider stopping the campaign and returning when the business is stronger.\n\nThis does not mean every startup should bootstrap or that unsuccessful fundraising proves the idea is bad. Capital requirements, runway, and genuine customer evidence matter. If funding is essential and cash is nearly exhausted, pursue a smaller viable round and cost reductions immediately. If survival does not depend on raising now, prioritize customers over another indefinite cycle of meetings.",
+    "reference": {
+      "actual_stance": "Fundraising comes down to leverage, meaning your ability to walk away, and the deck is not doing the work. Ask whether you are growing; if you are not growing or not launched, deck work may be the biggest waste of your time. The effective way to raise is to grow so fast, with so many proof points, that you can raise quickly with little preparation. Michael's own evidence: when Socialcam was hot he asked investors what share of deals they chase versus take from the front door, and every answer was between 80/20 and 90/10 chase; at Justin.tv he spent eight months fundraising without success, and the two months of forced focus on profitability that followed got far more done. Investors who string founders along for months are in effect buying an option on them.",
+      "category": "fresh",
+      "errors": [
+        "Recommending a bigger investor list and a tighter deck as the main fix.",
+        "Inventing statistics not in the source."
+      ],
+      "evidence": [
+        {
+          "quote": "If you're not growing and not launched, in many ways, working on this deck could be the biggest waste",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "2:48"
+        },
+        {
+          "quote": "the deck isn't doing the work at all.",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "3:21"
+        },
+        {
+          "quote": "Leverage is also another way of thinking about is your ability to walk away.",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "3:54"
+        },
+        {
+          "quote": "the way to be very effective at fundraising is to be growing so quickly and have so many proof points that your startup is working",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "5:02"
+        },
+        {
+          "quote": "one of the times we almost died at Justin TV you know I had spent the eight months prior trying to fundra",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "seibel",
+          "speaker_basis": "inferred: speaker co-founded Socialcam and Justin.tv, which the video description assigns to Michael Seibel",
+          "timestamp": "6:44"
+        },
+        {
+          "quote": "And the amount of we got done in that two months versus slinging decks",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "seibel",
+          "speaker_basis": "inferred: speaker co-founded Socialcam and Justin.tv, which the video description assigns to Michael Seibel",
+          "timestamp": "6:44"
+        },
+        {
+          "quote": "it's sort of like you're buying an option.",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "8:57"
+        },
+        {
+          "quote": "And the answers I got only varied between 8020 chase and 9010 chase.",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "seibel",
+          "speaker_basis": "inferred: speaker co-founded Socialcam and Justin.tv, which the video description assigns to Michael Seibel",
+          "timestamp": "10:03"
+        },
+        {
+          "quote": "if you can invest that time in making your company something that investors will chase after versus decksmithing,",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "seibel",
+          "speaker_basis": "inferred: speaker co-founded Socialcam and Justin.tv, which the video description assigns to Michael Seibel",
+          "timestamp": "10:03"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold attributes everything to Michael Seibel. The episode is a two-host conversation with unlabeled captions. The Socialcam poll and the Justin.tv story are Michael's (he co-founded both). The leverage definition, the deck lines and the 'buying an option' point come from the joint conversation and may be Dalton's. Grade the content; do not penalize an answer that credits the episode to both hosts."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-08",
+      "key_status": "confirmed_speaker_caveat",
+      "primary_sources": [
+        "yt-7TU636F_yVQ"
+      ],
+      "question": "I've spent months pitching seed investors, polishing my deck and taking follow-up meetings. How would Michael Seibel tell me to think about fundraising?",
+      "required_points": [
+        "Stop polishing the deck; it is not doing the work. Leverage (traction, growth, ability to walk away) decides fundraising.",
+        "Spend the time building, launching, talking to users and growing, so investors chase you."
+      ],
+      "supporting_points": [
+        "Investors chase 80% to 90% of their deals (his Socialcam-era poll).",
+        "Justin.tv: eight months of failed fundraising vs two productive months focused on profitability.",
+        "Being strung along for months means the investor is buying an option on you.",
+        "Raise fast at the end, with little prep, once things are working."
+      ],
+      "uncertainty": [
+        "Speaker split between Dalton Caldwell and Michael Seibel is not recoverable from the captions except where noted."
+      ],
+      "vault": "yc"
+    }
+  }
+]

@@ -1,0 +1,373 @@
+Evaluation date: 2026-10-19. This is the current date, not a future date. May 2026 is in the past. Publication dates and dates of events described in a source are distinct. A model training cutoff does not invalidate supplied later material. You are an independent evaluator. Use no tools, commands, files, browsing, or external retrieval. A and B are anonymous. Their ordering conveys nothing. Do not infer their model, source access, or provenance. Do not reward writing style, citation presence, quotations, expert agreement, or presumed source use. A tie is valid.
+Score each answer on the four specified integer scales, each from 1 to 5. Anchors: 1 fundamentally deficient; 2 major problems; 3 mixed with meaningful gaps; 4 good with minor gaps; 5 strong and sufficiently complete. Choose A, B, or tie for substantive overall quality. Preserve uncertainty rather than inventing evidence.
+Return ONLY a JSON object with exactly one key, "judgments", containing one object per supplied pair. Each object has exactly: "id", "A", "B", "winner", "reason", "factual_objections". A and B each contain exactly the four dimension names and integer scores. winner is "A", "B", or "tie"; reason is a nonempty string. factual_objections is a list, possibly empty, of objects with exactly "answer" ("A" or "B"), "claim", "label" ("contradicted" or "unverified"), and "evidence" (a nonempty explanation). Distinguish an established contradiction from an unverified claim.
+Evaluate accuracy, specificity, faithfulness, and usefulness using the complete audited reference packet. The reference is evidence, not a required script. Missing optional detail is not automatically a false claim. Label a factual objection contradicted only when supplied evidence establishes the contradiction; otherwise label it unverified. Do not treat absence from the reference as proof of falsehood. Resolve a conflict between a summary and direct evidence in favor of the direct evidence and explain it.
+
+Pairs:
+[
+  {
+    "id": "p-064e3d6db2a08a82",
+    "question": "I'm a 20-year-old CS student with a side project I'm excited about. Would Paul Graham tell me to start a startup now, while I'm still in college?",
+    "A": "The idea that a founder must drop out of college to succeed is a common myth. While well-known technology dropouts loom large in industry lore, the underlying advice focuses on obsession and timing rather than dropping out as a mandatory prerequisite. \n\nIf you asked him directly, the response would likely bypass your age and student status, focusing instead on the nature of your side project. The core criterion is whether you are working on the problem because you cannot stop thinking about it, and whether users are organically pulling the product out of your hands. If your side project has genuine momentum, immediate user demand, and an urgent problem to solve, the exact timing matters less than the intensity of your focus.\n\nFor a 20-year-old computer science student, staying in school while building can often serve as an advantage. College provides a low-risk environment, a built-in cohort of potential co-founders and early users, and a safety net if the project stalls. However, if the project demands full-time execution to survive, or if continuing studies actively harms its growth, stepping away becomes a viable path.\n\nConcrete next steps:\n1. Measure your current traction. Are users using the product because they love it, or just because you asked them to?\n2. Assess your opportunity cost. Can you scale this project to its next phase while maintaining your coursework, or is it already demanding full-time hours?\n3. Seek out technical co-founders or early users among your university peers.\n\nMaterial assumptions: Your side project is software-based, scalable, and addresses a real market need, rather than being a lifestyle business or a minor assignment. \n\nDecision criteria: If your project achieves breakthrough growth or requires immediate, full-time engineering to capture a fleeting market, leave or pause school. If growth is steady but manageable, finish your degree while building.",
+    "B": "Paul Graham’s stance is that you should not start a startup in college. Running a startup takes over your life to a degree you cannot imagine and is fundamentally incompatible with being a full-time student. He also advises young people that their early twenties are the optimal time for open-ended exploration, curiosity, and learning powerful things out of genuine interest rather than chasing a business. Because you will be more likely to succeed later, you sacrifice nothing by waiting.\n\nHowever, there is an important exception. If you are building a side project and it takes off on its own—becoming an incipient startup—then you face a choice between running with it or dropping out, and it may be reasonable to run with it. Furthermore, universities should give students free time precisely so that student projects can occasionally turn into startups, much as Meta and Microsoft began during reading periods.\n\n**Concrete Next Steps:**\n1. Focus on your computer science studies and use college to learn powerful things out of genuine curiosity.\n2. Keep building your side project in your free time, treating it as an ambitious project rather than a formal company.\n3. Wait to see if the project experiences organic breakout traction that forces your hand.\n\n**Material Assumptions & Decision Criteria:**\nThis recommendation assumes your side project is currently a student project rather than an exploding rocket ship with immediate demand. If your project has already achieved rapid, organic growth and users are pulling it out of your hands, the rule yields to the exception: you should drop out and run with it.",
+    "reference": {
+      "actual_stance": "No. He tells students not to start a startup in college: a startup takes over your entire life, so you cannot really be both a student and a founder, and 20 is not the optimal age. You give up nothing by waiting because you will be more likely to succeed later. In college, learn powerful things, build domain expertise and work on your own projects with people you like, because side projects are where the best ideas and cofounders come from ('just learn'). The exception: if a side project takes off on its own, like Facebook, it may be reasonable to run with it. His August 2026 essay repeats that running a startup is incompatible with being a full-time student and stresses students' own projects.",
+      "category": "known",
+      "errors": [
+        "Saying he recommends starting now because college is low risk.",
+        "Telling the student to drop the side project entirely."
+      ],
+      "evidence": [
+        {
+          "quote": "you can't do that in college for the reason I just explained, that startups take over your entire life.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "18:22"
+        },
+        {
+          "quote": "Do not start a startup in college.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "18:56"
+        },
+        {
+          "quote": "20 is not the optimal time to do it.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "18:56"
+        },
+        {
+          "quote": "You're not sacrificing anything if you forego starting a startup at 20, cuz you'll be more likely to succeed if you wait.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "21:12"
+        },
+        {
+          "quote": "you're 20 and you have some side project that takes off like Facebook did. Then you face the choice of either running with it or not, and maybe it's reasonable to run with it.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "21:12"
+        },
+        {
+          "quote": "If you wanna start a startup, what you should do in college is learn powerful things.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "30:15"
+        },
+        {
+          "quote": "So here, is the ultimate advice for young would-be startup founders reduced to two words, just learn.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "30:49"
+        },
+        {
+          "quote": "Running a startup is incompatible with being a full time student.",
+          "source_date": "2026-08-01",
+          "source_id": "web-c75e015ff81a",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-c75e015ff81a.md",
+          "source_sha256": "d25c767587e02e2ae3ca70392344ae7ed1d30132b7415c03603e346eb3427eee",
+          "source_title": "How Universities Should Prepare Founders",
+          "speaker": "pg",
+          "speaker_basis": "essay on paulgraham.com (frontmatter author field is empty)",
+          "timestamp": null
+        },
+        {
+          "quote": "random side projects are where the best startup ideas come from.",
+          "source_date": "2026-08-01",
+          "source_id": "web-c75e015ff81a",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-c75e015ff81a.md",
+          "source_sha256": "d25c767587e02e2ae3ca70392344ae7ed1d30132b7415c03603e346eb3427eee",
+          "source_title": "How Universities Should Prepare Founders",
+          "speaker": "pg",
+          "speaker_basis": "essay on paulgraham.com (frontmatter author field is empty)",
+          "timestamp": null
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold matches the 2014 lecture. It did not cite the August 2026 essay 'How Universities Should Prepare Founders', which confirms the same stance. Added; either source satisfies the key."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-01",
+      "key_status": "confirmed_expanded",
+      "primary_sources": [
+        "yt-ii1jcLg-eIQ"
+      ],
+      "question": "I'm a 20-year-old CS student with a side project I'm excited about. Would Paul Graham tell me to start a startup now, while I'm still in college?",
+      "required_points": [
+        "No, do not start a startup while in college; a startup takes over your whole life, which is incompatible with being a full-time student.",
+        "Exception: if the side project takes off on its own, it may be reasonable to run with it."
+      ],
+      "supporting_points": [
+        "Waiting costs nothing; you are more likely to succeed if you wait.",
+        "Learn powerful things, get domain expertise; 'just learn'.",
+        "Keep working on your own projects; they produce the best ideas and cofounders.",
+        "The 2026 essay restates the incompatibility and the value of student projects."
+      ],
+      "uncertainty": [
+        "The main source is from 2014. The 2026 essay supports the same position, so the stance is not stale."
+      ],
+      "vault": "yc"
+    }
+  },
+  {
+    "id": "p-347dcc25a926e232",
+    "question": "What's the story Hormozi tells about his company being worth four times more just by listing on the NASDAQ, and the IPO equity deal he took afterward?",
+    "A": "Alex Hormozi tells no story about his company being worth four times more simply by listing on the NASDAQ, nor of any subsequent IPO equity deal. That premise is false, and his businesses have not gone public in an initial public offering. \n\nInstead, Hormozi's primary liquidity event occurred when he sold a majority stake in his licensing and supplement companies to a private equity firm rather than executing an IPO. His core business model pivots away from public listings toward private equity partnerships, such as his work with Acquisition.com, where he takes minority stakes in private small and mid-sized businesses to help them scale. \n\nIf you are evaluating whether to take a company public versus pursuing private equity or bootstrapping, your decision should hinge on your current scale, revenue predictability, and desire for operational control. Public listings make sense primarily for businesses at a massive scale that require deep public capital markets and offer broad liquidity for existing shareholders, but they introduce heavy regulatory burdens, public scrutiny, and strict reporting requirements. For smaller or privately held firms, partnering with a private equity growth investor or bootstrapping typically preserves operational agility while providing strategic capital without the friction of public markets.",
+    "B": "Alex Hormozi often recounts a specific narrative regarding valuation adjustments and liquidity events, though the factual premise that he took an IPO equity deal after listing on the NASDAQ requires correction. Hormozi has never taken a traditional company public via an initial public offering, nor has he listed any of his primary operating businesses on the NASDAQ. Instead, his major liquidity event occurred when private equity firm American Pacific Group acquired a majority stake in Acquisition.com's portfolio operations, which is a private transaction rather than a public market listing. \n\nThe story regarding a valuation quadrupling simply by listing on a public exchange like the NASDAQ reflects a theoretical financial principle he frequently teaches rather than a personal anecdote. He illustrates that public companies trade at significantly higher earnings multiples than private companies due to liquidity, transparency, and access to broader capital pools. Therefore, a business generating a specific net income might command a modest multiple privately, but that same cash flow would mathematically translate to a valuation four times higher if priced at public market averages. \n\n**Material Assumptions:** Public market investor demand persistently outpaces private market liquidity, and earnings quality remains constant across transitions. \n\n**Decision Criteria:** Founders should evaluate whether the administrative overhead and regulatory compliance of public listings outweigh the multiple expansion. \n\n**Concrete Next Steps:**\n1. Calculate your current business earnings against private equity and strategic acquisition multiples.\n2. Model the cost of public readiness against potential valuation uplifts before pursuing public listings.",
+    "reference": {
+      "actual_stance": "False attribution. The story is the interviewer's, not Hormozi's. The host of The Diary Of A CEO says his company went public on a European exchange, banks told him the same business would be worth four times more on the NASDAQ, and he later applied his social-media and marketing skills to companies heading to IPO, earning equity worth about $7M to $8M on IPO day for 9 to 12 months of work, which led to the company now called Flight Story. Hormozi only agreed and gave his own version: the biggest debt we pay is ignorance, fish where the fish are, 'same work, more zeros'. A 20% conversion lift is worth $200k to a $1M store (he takes $20k at 10%) but $20M to a $100M company (he takes $2M), 100x for the same work.",
+      "category": "attribution",
+      "errors": [
+        "Telling the story as Hormozi's own career lesson.",
+        "Saying Hormozi's company listed on the NASDAQ."
+      ],
+      "evidence": [
+        {
+          "quote": "when my company went public on a Stock Exchange in um Europe",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "host_doac_interviewer",
+          "speaker_basis": "the interviewer on The Diary Of A CEO; the raw file does not name him; content-inferred from 'my company went public' and 'flight story'",
+          "timestamp": "1:33:37"
+        },
+        {
+          "quote": "they told me that our business would be worth four times more if it was just on a different stock market if you move it to the NASDAQ the exact same business would be worth four times more",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "host_doac_interviewer",
+          "speaker_basis": "the interviewer on The Diary Of A CEO; the raw file does not name him; content-inferred from 'my company went public' and 'flight story'",
+          "timestamp": "1:34:12"
+        },
+        {
+          "quote": "I think on the day of the IPO the equity that I got for for the 9 to 12 months work that i' done was worth in the region of 7 to8 million",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "host_doac_interviewer",
+          "speaker_basis": "the interviewer on The Diary Of A CEO; the raw file does not name him; content-inferred from 'my company went public' and 'flight story'",
+          "timestamp": "1:35:51"
+        },
+        {
+          "quote": "company which is now called flight story",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "host_doac_interviewer",
+          "speaker_basis": "the interviewer on The Diary Of A CEO; the raw file does not name him; content-inferred from 'my company went public' and 'flight story'",
+          "timestamp": "1:36:23"
+        },
+        {
+          "quote": "100% I thoroughly agree with everything you just said",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "hormozi",
+          "speaker_basis": "turn change inferred from content; captions have no speaker labels",
+          "timestamp": "1:36:23"
+        },
+        {
+          "quote": "same work yeah same amount of time same Rod more zeros",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "hormozi",
+          "speaker_basis": "inferred: continues his fishing analogy and cites 'the first book'",
+          "timestamp": "1:38:03"
+        },
+        {
+          "quote": "do the same work to a business doing $100 million a year I make them $20 million for my 20% bump and I get 10% that and I make $2 million 20,000 2 million 100x same work",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "hormozi",
+          "speaker_basis": "inferred from content",
+          "timestamp": "1:38:38"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold names Steven Bartlett. The raw file never names the host; the channel is The Diary Of A CEO and the speaker mentions Flight Story. The identification is external knowledge and is kept as a supporting point, not a requirement."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-16",
+      "key_status": "confirmed_speaker_inferred",
+      "primary_sources": [
+        "yt-x3e73Qn6NOo"
+      ],
+      "question": "What's the story Hormozi tells about his company being worth four times more just by listing on the NASDAQ, and the IPO equity deal he took afterward?",
+      "required_points": [
+        "Says the story is not Hormozi's; it belongs to the interviewer/host.",
+        "Summarizes the host's story: European listing, banks said 4x on NASDAQ, pre-IPO equity worth about $7M to $8M for 9 to 12 months of work."
+      ],
+      "supporting_points": [
+        "Identifies the host as Steven Bartlett (external knowledge; consistent with 'Flight Story').",
+        "Hormozi agreed and gave the 'same work, more zeros' CRO example ($20k vs $2M).",
+        "The 4x NASDAQ figure was what banks told him, not an actual relisting."
+      ],
+      "uncertainty": [
+        "All speaker attribution in this transcript is inferred from content because auto-captions carry no labels. The inference is strong here (first-person European IPO and Flight Story)."
+      ],
+      "vault": "hormozi"
+    }
+  },
+  {
+    "id": "p-ea64056372a05d6f",
+    "question": "Jessica Livingston has said early YC deliberately backed the most aggressive, ruthless founders because they're the ones who win. Why did she believe that?",
+    "A": "Jessica Livingston believed that early YC needed the most aggressive, ruthless founders because startups face an extreme environment of constant rejection and insurmountable odds where polite compliance fails. She observed that successful founders are unconventional and independent-minded, often working on ideas that appear preposterous to outsiders, and that building something from nothing requires relentless determination to push past gatekeepers and skeptics. \n\nMaterial assumptions: Aggression and ruthlessness correlate with the thick skin and uncompromising drive necessary to survive startup failure. Decision criteria: If a founder cannot withstand fierce rejection or stubbornly defend an unpopular vision against consensus, they will likely quit when the company hits inevitable crises. Conditional recommendation: Prioritize founder tenacity and conviction over polish or conventional charm; if material inputs regarding founder psychology are missing, assess whether candidates have demonstrated relentless execution under resistance in past projects.",
+    "B": "Jessica Livingston and her cofounders believed early Y Combinator needed to back fiercely determined founders because the startup environment is relentlessly adversarial. The premise that they exclusively sought out ruthless or aggressive personalities is partially overstated; rather, they prioritized an intense, almost irrational level of tenacity, resilience, and single-minded drive. \n\nThey observed that starting a company requires surviving extreme odds, endless rejection, and near-death experiences. Polite, consensus-seeking individuals often faltered when faced with profound uncertainty and fierce competition. Founders who succeeded typically possessed a stubborn refusal to accept failure, a willingness to break unhelpful rules, and an aggressive focus on growth above all else. This unrelenting grit was viewed not as a mere character trait, but as the core survival mechanism for early-stage ventures navigating chaotic markets.\n\nWhat is known is that YC valued extreme agency, speed, and founder obsession over polish or conventional corporate backgrounds. What remains uncertain is whether this specific profile was uniquely responsible for their outcomes, or if success was equally driven by market timing and network effects.\n\nConcrete next steps for evaluating this dynamic include:\n1. Assess team resilience by testing how founders handle high-pressure crisis scenarios during due diligence.\n2. Balance drive with ethical boundaries to ensure intense ambition does not become toxic to long-term culture.\n\nMaterial assumptions: Early-stage survival correlates directly with founder stubbornness under extreme duress. \n\nDecision criteria: If a founder demonstrates high technical aptitude but low resilience, pass; if they show high tenacity combined with integrity, advance them.",
+    "reference": {
+      "absence_check": "Corpus check on 2026-10-19 across all 24 YC raw files: the whole word 'ruthless' appears only in yt-8d-cApFHjeY at 17:44, where Livingston describes other investors, not founders she selected. Her selection criteria and rejection of conceited applicants are supported by the quoted passages.",
+      "actual_stance": "False premise: the sources contain no such statement, and she said the opposite. Her role in early selection was judging character: did applicants seem earnest, determined and flexible-minded, and how did the cofounders relate. She was careful to fund only earnest people and rejected people she could tell were conceited. She describes YC as feeling like a family with her as its mom, and herself as soft and sensitive at a time when investors were hardened and aggressive, adding 'ruthless' for a couple she knew. Determination is one trait she looked for; ruthlessness is not.",
+      "category": "abstain",
+      "errors": [
+        "Accepting the premise and explaining why ruthless founders win.",
+        "Recasting PG's 'formidable' as Jessica endorsing ruthlessness."
+      ],
+      "evidence": [
+        {
+          "quote": "did they seem earnest did they seem determined were they flexible minded",
+          "source_date": "2018-07-11",
+          "source_id": "yt-8d-cApFHjeY",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-8d-cApFHjeY.md",
+          "source_sha256": "95f64747db17a4e4a661cccb9de3f154f03df1df92b2764b3e8c45bde4b8176f",
+          "source_title": "Jessica Livingston Shares 9 Things She Learned From Founding YC",
+          "speaker": "livingston",
+          "speaker_basis": "solo conference talk",
+          "timestamp": "14:51"
+        },
+        {
+          "quote": "from the beginning I was very careful about only funding earnest people",
+          "source_date": "2018-07-11",
+          "source_id": "yt-8d-cApFHjeY",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-8d-cApFHjeY.md",
+          "source_sha256": "95f64747db17a4e4a661cccb9de3f154f03df1df92b2764b3e8c45bde4b8176f",
+          "source_title": "Jessica Livingston Shares 9 Things She Learned From Founding YC",
+          "speaker": "livingston",
+          "speaker_basis": "solo conference talk",
+          "timestamp": "14:51"
+        },
+        {
+          "quote": "if I could tell someone was a conceited we did not fund them",
+          "source_date": "2018-07-11",
+          "source_id": "yt-8d-cApFHjeY",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-8d-cApFHjeY.md",
+          "source_sha256": "95f64747db17a4e4a661cccb9de3f154f03df1df92b2764b3e8c45bde4b8176f",
+          "source_title": "Jessica Livingston Shares 9 Things She Learned From Founding YC",
+          "speaker": "livingston",
+          "speaker_basis": "solo conference talk",
+          "timestamp": "15:27"
+        },
+        {
+          "quote": "it felt like a family and I was its mom",
+          "source_date": "2018-07-11",
+          "source_id": "yt-8d-cApFHjeY",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-8d-cApFHjeY.md",
+          "source_sha256": "95f64747db17a4e4a661cccb9de3f154f03df1df92b2764b3e8c45bde4b8176f",
+          "source_title": "Jessica Livingston Shares 9 Things She Learned From Founding YC",
+          "speaker": "livingston",
+          "speaker_basis": "solo conference talk",
+          "timestamp": "17:44"
+        },
+        {
+          "quote": "I was soft and sensitive at a time when investors tended to be hardened and aggressive and I'll throw in ruthless - for a couple of them that I know",
+          "source_date": "2018-07-11",
+          "source_id": "yt-8d-cApFHjeY",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-8d-cApFHjeY.md",
+          "source_sha256": "95f64747db17a4e4a661cccb9de3f154f03df1df92b2764b3e8c45bde4b8176f",
+          "source_title": "Jessica Livingston Shares 9 Things She Learned From Founding YC",
+          "speaker": "livingston",
+          "speaker_basis": "solo conference talk",
+          "timestamp": "17:44"
+        },
+        {
+          "quote": "it's someone who gets what they want in any situation.",
+          "source_date": "2026-09-03",
+          "source_id": "yt-5bxp78i96S8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-5bxp78i96S8.md",
+          "source_sha256": "7c31ea774eca3d88e387db71b65eefdd5b85b1ab4c0483ba2c44923c1e743243",
+          "source_title": "Paul Graham On Startups, Ambition, and Great Founders",
+          "speaker": "pg",
+          "speaker_basis": "interview answer, inferred from content",
+          "supports": "context only: PG's definition of 'formidable'; not part of the Jessica key",
+          "timestamp": "9:57"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold had must_cite empty while listing evidence from yt-8d-cApFHjeY. Set must_cite to that source, since citing the counter-evidence is the correct behavior for this false premise.",
+        "Added 'determined' from her own criteria so an answer mentioning determination is not marked as accepting the premise."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-20",
+      "key_status": "confirmed_expanded",
+      "primary_sources": [
+        "yt-8d-cApFHjeY"
+      ],
+      "question": "Jessica Livingston has said early YC deliberately backed the most aggressive, ruthless founders because they're the ones who win. Why did she believe that?",
+      "required_points": [
+        "Rejects the premise; there is no such statement, and her stated approach was the opposite.",
+        "She funded earnest people and turned down conceited ones."
+      ],
+      "supporting_points": [
+        "She looked for earnest, determined, flexible-minded founders and healthy cofounder relationships.",
+        "She described herself as soft and sensitive when investors were hardened, aggressive and sometimes ruthless.",
+        "YC felt like a family and she was its mom.",
+        "Context only: PG separately says investors want 'formidable' founders who get what they want; that is not Jessica's claim and is not ruthlessness."
+      ],
+      "uncertainty": [],
+      "vault": "yc"
+    }
+  }
+]

@@ -1,0 +1,99 @@
+{
+  "actual_input_tokens": 143627,
+  "answer": "**Short answer:** In most cases, pay it down aggressively, but not to zero cash, and keep funding only the growth that has proven returns.\n\n**What Hormozi would likely say:** He leans close to the Dave Ramsey end on business debt. His reasoning is that debt adds risk, and over a long horizon that risk tends to come due because businesses have slow seasons and volatility. In a consult with a profitable service business carrying about $60k, he backed the owner's plan to clear it in four to five months. He put it second on the priority list, right after a price increase. He also admits his debt aversion is partly emotional, about peace of mind, not a big financial lever. Separately, he says that if ads reliably return more than they cost and your tracking is trustworthy, you should keep spending. So his stance is \"pay off debt *and* keep doing cheap, proven fixes,\" not \"freeze growth.\" He never clearly says when borrowing to grow is justified.\n\n**Next steps:**\n1. Keep a cash reserve of roughly two to three months of operating costs.\n2. Put a fixed monthly amount toward the debt, highest interest rate first.\n3. Fund growth first with cheap wins: raise prices, improve your landing page and ads, and email past customers.\n4. Only increase spending where you can show the payback.\n\n**Things that would change this:**\n- **Pay off faster** if the rate is high (credit cards or merchant cash advances), revenue is seasonal or concentrated in a few clients, or the debt costs you sleep.\n- **Keep more cash for growth** if the rate is low and fixed, you have a channel with measured returns well above the interest rate, and you have the capacity to handle more customers.",
+  "arm": "grounded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 16.842,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "5d95e42f2d58121fcb87044543b27f177f70bcb67e1938b8a1dbd72c1104def1"
+    }
+  ],
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 137719,
+  "event_count": 8,
+  "family": "opus",
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:20:29.964747+00:00",
+  "format_deviations": [],
+  "id": "diagnostic12--hz-09--opus--grounded",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "prompt_sha256": "5e3842302e261194265198eb76f6ca6b6312dc22a9c99430ced98dea94f31e0f",
+  "question_key": "diagnostic12--hz-09",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 142057,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 142057,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 142057,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 142057,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 800,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 800,
+      "output_tokens_details": {
+        "thinking_tokens": 254
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ],
+  "words": 294
+}

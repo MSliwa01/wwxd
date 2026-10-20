@@ -1,0 +1,55 @@
+{
+  "answer_family": "gemini",
+  "batch_id": "newadvice12--sol--gemini--batch-00",
+  "error": "",
+  "id": "p-62531d2bc6b063c2--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-62531d2bc6b063c2",
+  "primary_eligible": true,
+  "prompt_sha256": "9610745b0ec7eab6201bd0ba6f15fe49175800878f18d2cbc7482d0744740b29",
+  "question_key": "newadvice12--advice-hz-04",
+  "status": "ok",
+  "suite": "newadvice12",
+  "verdict": {
+    "A": {
+      "actionability": 4,
+      "constraint_fit": 4,
+      "decision_quality": 4,
+      "reasoning": 3
+    },
+    "B": {
+      "actionability": 3,
+      "constraint_fit": 3,
+      "decision_quality": 3,
+      "reasoning": 2
+    },
+    "factual_objections": [
+      {
+        "answer": "B",
+        "claim": "The agency produces an acquisition cost of $1,800 to $2,250.",
+        "evidence": "At the full $8,000 budget, the $2,000 fee leaves $6,000 for 40 leads. A 12% conversion rate yields 4.8 contracts, giving an expected acquisition cost of approximately $1,667.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "B",
+        "claim": "The advertising acquisition cost is unsustainable.",
+        "evidence": "The supplied economics imply $840 monthly gross profit per contract and $16,800 over 20 months. Expected advertising acquisition cost is recovered in about two months of gross profit. Other costs could affect affordability, but unsustainability is not established.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "The business faces impending client churn.",
+        "evidence": "The stated threat concerns losing a source of new contracts. Loss of existing clients is not established.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-62531d2bc6b063c2",
+    "reason": "A gives a workable referral-plus-outbound plan, explicitly allocates the $8,000 budget, assigns the operations manager a role, and supplies measurable checkpoints. Its assurance of replacing the lost flow remains conditional on achieving untested targets. B offers a similar viable direction but rejects advertising using incorrect acquisition economics and confuses threatened new-business flow with existing-client churn. Both omit the useful $16,800 gross-profit lifetime contribution and a rigorous comparison of channels.",
+    "winner": "A"
+  },
+  "winner": "grounded"
+}

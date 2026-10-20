@@ -1,0 +1,43 @@
+{
+  "answer_family": "opus",
+  "batch_id": "diagnostic12--sol--opus--batch-03",
+  "error": "",
+  "id": "p-4d9952cc71942a88--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-4d9952cc71942a88",
+  "primary_eligible": true,
+  "prompt_sha256": "1d6b43a7e820b1d6cdc3a9d1796f31ddf5b845ed1cca1561de374d65fcc1a98e",
+  "question_key": "diagnostic12--yc-12",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 3,
+      "faithfulness": 2,
+      "specificity": 3,
+      "usefulness": 3
+    },
+    "B": {
+      "accuracy": 5,
+      "faithfulness": 5,
+      "specificity": 5,
+      "usefulness": 5
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "The departing founder should keep a stake roughly proportional to the time and value he contributed.",
+        "evidence": "The supplied guidance explicitly says to reduce the departing founder's ownership even if vested: under 5% generally and under 2% within the first year. It prioritizes equity for the remaining team rather than a proportional accounting of past contributions.",
+        "label": "contradicted"
+      }
+    ],
+    "id": "p-4d9952cc71942a88",
+    "reason": "B captures the central advice: return most equity even if vested, use the first-year 1–2% benchmark, stop adversarial legal spending, and arrange a clean, no-fault separation with reasonable severance. A gets the broad settlement advice right but replaces the key equity guidance with a contribution-based split and omits several important practical points. Both appropriately flag the possible vesting-cliff issue.",
+    "winner": "B"
+  },
+  "winner": "grounded"
+}

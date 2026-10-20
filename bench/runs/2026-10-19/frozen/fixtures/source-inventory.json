@@ -1,0 +1,566 @@
+{
+  "generated": "2026-10-19",
+  "note": "All raw files in the two vaults, hashed when the fixtures were built. Frontmatter fields copied as written.",
+  "sources": [
+    {
+      "vault": "hormozi",
+      "source_id": "yt--JLN1d1ZKUU",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--JLN1d1ZKUU.md",
+      "source_sha256": "77517facac01ba2b6098415faf2076e885fb9f113be781c0f3f450a5d843902c",
+      "type": "youtube",
+      "title": "Less is More: The Magic of a Simple Business",
+      "channel_or_site": "Alex Hormozi",
+      "date": "2025-05-22",
+      "url": "https://www.youtube.com/watch?v=-JLN1d1ZKUU",
+      "transcript": "auto-captions",
+      "expected_speakers": [
+        "hormozi"
+      ]
+    },
+    {
+      "vault": "hormozi",
+      "source_id": "yt--j8_YCWZ05Q",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+      "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+      "type": "youtube",
+      "title": "How to Get Your Customers to Stay FOREVER",
+      "channel_or_site": "Alex Hormozi",
+      "date": "2026-03-24",
+      "url": "https://www.youtube.com/watch?v=-j8_YCWZ05Q",
+      "transcript": "auto-captions",
+      "expected_speakers": [
+        "hormozi"
+      ]
+    },
+    {
+      "vault": "hormozi",
+      "source_id": "yt-JDR-R--4HhM",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-JDR-R--4HhM.md",
+      "source_sha256": "8dead6f4201863ae62991d2ed37b42a93313e36a30216ca200b58aefc5d1cfad",
+      "type": "youtube",
+      "title": "14 Years of Marketing Advice in 35 Minutes",
+      "channel_or_site": "Alex Hormozi",
+      "date": "2025-05-07",
+      "url": "https://www.youtube.com/watch?v=JDR-R--4HhM",
+      "transcript": "captions",
+      "expected_speakers": [
+        "hormozi"
+      ]
+    },
+    {
+      "vault": "hormozi",
+      "source_id": "yt-MH-IMJxbUY4",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-MH-IMJxbUY4.md",
+      "source_sha256": "0ee16a3ff11eaf668c6513ea5fd6db5581199780322ebe90b2c8ee92b0cf269f",
+      "type": "youtube",
+      "title": "Building a $12,000,000 Business for a Stranger in 25 Minutes",
+      "channel_or_site": "Alex Hormozi",
+      "date": "2026-02-28",
+      "url": "https://www.youtube.com/watch?v=MH-IMJxbUY4",
+      "transcript": "auto-captions",
+      "expected_speakers": [
+        "hormozi"
+      ]
+    },
+    {
+      "vault": "hormozi",
+      "source_id": "yt-OQf2Ba-Lp_4",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+      "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+      "type": "youtube",
+      "title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+      "channel_or_site": "Alex Hormozi",
+      "date": "2026-05-08",
+      "url": "https://www.youtube.com/watch?v=OQf2Ba-Lp_4",
+      "transcript": "auto-captions",
+      "expected_speakers": [
+        "hormozi"
+      ]
+    },
+    {
+      "vault": "hormozi",
+      "source_id": "yt-XGm2ERU9qtA",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-XGm2ERU9qtA.md",
+      "source_sha256": "ec44026a9646f9da3825bf083fba82e98bb6d5b111f22596d547c36ceb45bec6",
+      "type": "youtube",
+      "title": "15 Brutal Truths I Know at 36 That I Wish I Knew at 20",
+      "channel_or_site": "Alex Hormozi",
+      "date": "2025-11-17",
+      "url": "https://www.youtube.com/watch?v=XGm2ERU9qtA",
+      "transcript": "auto-captions",
+      "expected_speakers": [
+        "hormozi"
+      ]
+    },
+    {
+      "vault": "hormozi",
+      "source_id": "yt-jfW6gL6hKhk",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-jfW6gL6hKhk.md",
+      "source_sha256": "4958f309a165e6cbda0dc57c83d7fd37bfe3bd5134d84b6d92c3eca46dce9f9a",
+      "type": "youtube",
+      "title": "If I Wanted to Make My First $100K in 2026, I’d Do This",
+      "channel_or_site": "Alex Hormozi",
+      "date": "2026-03-04",
+      "url": "https://www.youtube.com/watch?v=jfW6gL6hKhk",
+      "transcript": "auto-captions",
+      "expected_speakers": [
+        "hormozi"
+      ]
+    },
+    {
+      "vault": "hormozi",
+      "source_id": "yt-o64cI6tebnU",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+      "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+      "type": "youtube",
+      "title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+      "channel_or_site": "Alex Hormozi",
+      "date": "2026-08-29",
+      "url": "https://www.youtube.com/watch?v=o64cI6tebnU",
+      "transcript": "auto-captions",
+      "expected_speakers": [
+        "hormozi"
+      ]
+    },
+    {
+      "vault": "hormozi",
+      "source_id": "yt-rMJIOK_FgJk",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-rMJIOK_FgJk.md",
+      "source_sha256": "b574f835f44d9470b49d6e3b577e40481ffa0926428371a7b2fbb80e305db8f9",
+      "type": "youtube",
+      "title": "The 6 Levels of Making Money",
+      "channel_or_site": "Alex Hormozi",
+      "date": "2026-03-09",
+      "url": "https://www.youtube.com/watch?v=rMJIOK_FgJk",
+      "transcript": "auto-captions",
+      "expected_speakers": [
+        "hormozi"
+      ]
+    },
+    {
+      "vault": "hormozi",
+      "source_id": "yt-sL16tsGafcQ",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-sL16tsGafcQ.md",
+      "source_sha256": "84d54a5f60bf855a6028694f5b0346f5dda10fd1e1c875a3c7f26f34d3c7357f",
+      "type": "youtube",
+      "title": "If You Want To Create Wealth In 2026, Watch This (4 Paths)",
+      "channel_or_site": "Alex Hormozi",
+      "date": "2026-06-04",
+      "url": "https://www.youtube.com/watch?v=sL16tsGafcQ",
+      "transcript": "auto-captions",
+      "expected_speakers": [
+        "hormozi"
+      ]
+    },
+    {
+      "vault": "hormozi",
+      "source_id": "yt-tGhe3sBuk34",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-tGhe3sBuk34.md",
+      "source_sha256": "3d01c807444dd661479d11eb6cb61c2af472bd131083f0d1d27a9614d7a13f98",
+      "type": "youtube",
+      "title": "My final update",
+      "channel_or_site": "Alex Hormozi",
+      "date": "2025-08-15",
+      "url": "https://www.youtube.com/watch?v=tGhe3sBuk34",
+      "transcript": "auto-captions",
+      "expected_speakers": [
+        "hormozi"
+      ]
+    },
+    {
+      "vault": "hormozi",
+      "source_id": "yt-uWdIgftpvBI",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-uWdIgftpvBI.md",
+      "source_sha256": "e96491ca066bec8b42c73a1dcb7e4924f3da42ee59e08472be4f2f65dc387fa9",
+      "type": "youtube",
+      "title": "If I Started A Business in 2026, I'd Do This",
+      "channel_or_site": "Alex Hormozi",
+      "date": "2025-12-06",
+      "url": "https://www.youtube.com/watch?v=uWdIgftpvBI",
+      "transcript": "auto-captions",
+      "expected_speakers": [
+        "hormozi"
+      ]
+    },
+    {
+      "vault": "hormozi",
+      "source_id": "yt-x3e73Qn6NOo",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+      "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+      "type": "youtube",
+      "title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+      "channel_or_site": "The Diary Of A CEO",
+      "date": "2023-04-03",
+      "url": "https://www.youtube.com/watch?v=x3e73Qn6NOo",
+      "transcript": "auto-captions",
+      "expected_speakers": [
+        "hormozi"
+      ]
+    },
+    {
+      "vault": "yc",
+      "source_id": "web-14f0078fb455",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-14f0078fb455.md",
+      "source_sha256": "d89609d9449892983439f75c1704258eb5f8b1a81b6f72e11e3a0136558bda2f",
+      "type": "web",
+      "title": "Writes and Write-Nots",
+      "channel_or_site": "paulgraham.com",
+      "date": "2024-10-01",
+      "url": "https://paulgraham.com/writes.html",
+      "transcript": "article",
+      "expected_speakers": [
+        "pg"
+      ]
+    },
+    {
+      "vault": "yc",
+      "source_id": "web-19ac0b6d18d2",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-19ac0b6d18d2.md",
+      "source_sha256": "98c7640dca74c5f7a640e10858613300264805247e203d013ad7d393ef469f72",
+      "type": "web",
+      "title": "Making Startups Powerful",
+      "channel_or_site": "paulgraham.com",
+      "date": "2026-09-01",
+      "url": "https://paulgraham.com/powerful.html",
+      "transcript": "article",
+      "expected_speakers": [
+        "pg"
+      ]
+    },
+    {
+      "vault": "yc",
+      "source_id": "web-278ac10fa14b",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-278ac10fa14b.md",
+      "source_sha256": "7e1e8e8c4a7646f97b59245ec122e5568ee1989d8d4d1f638d1ac9878dd88f28",
+      "type": "web",
+      "title": "How to Earn a Billion Dollars",
+      "channel_or_site": "paulgraham.com",
+      "date": "2026-06-01",
+      "url": "https://paulgraham.com/earn.html",
+      "transcript": "article",
+      "expected_speakers": [
+        "pg"
+      ]
+    },
+    {
+      "vault": "yc",
+      "source_id": "web-35ed22df6265",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-35ed22df6265.md",
+      "source_sha256": "93a93301fcbdbd48064a81511c4ffc0625ee7c06b1e94241c34355d00c0629d1",
+      "type": "web",
+      "title": "The Brand Age",
+      "channel_or_site": "paulgraham.com",
+      "date": "2026-03-01",
+      "url": "https://paulgraham.com/brandage.html",
+      "transcript": "article",
+      "expected_speakers": [
+        "pg"
+      ]
+    },
+    {
+      "vault": "yc",
+      "source_id": "web-39f89fad2603",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-39f89fad2603.md",
+      "source_sha256": "6c1bca96c74918bcbaa51626ed7e8e1921aa7b16674b1c202736da87243a345a",
+      "type": "web",
+      "title": "The Right Kind of Stubborn",
+      "channel_or_site": "paulgraham.com",
+      "date": "2024-07-01",
+      "url": "https://paulgraham.com/persistence.html",
+      "transcript": "article",
+      "expected_speakers": [
+        "pg"
+      ]
+    },
+    {
+      "vault": "yc",
+      "source_id": "web-3c8cb136189b",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-3c8cb136189b.md",
+      "source_sha256": "114ab3887793924f086bb619c7de4118cccb0a2cd35fa9e5abe8fb3a278ef43e",
+      "type": "web",
+      "title": "What to Do",
+      "channel_or_site": "paulgraham.com",
+      "date": "2025-03-01",
+      "url": "https://paulgraham.com/do.html",
+      "transcript": "article",
+      "expected_speakers": [
+        "pg"
+      ]
+    },
+    {
+      "vault": "yc",
+      "source_id": "web-6c91c36a25f1",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-6c91c36a25f1.md",
+      "source_sha256": "1a46cb5f6cb354cde824f6c83e6828534343bf2f33c9251bd2fcf4fce1efdde6",
+      "type": "web",
+      "title": "Good Writing",
+      "channel_or_site": "paulgraham.com",
+      "date": "2025-05-01",
+      "url": "https://paulgraham.com/goodwriting.html",
+      "transcript": "article",
+      "expected_speakers": [
+        "pg"
+      ]
+    },
+    {
+      "vault": "yc",
+      "source_id": "web-7254f259673a",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-7254f259673a.md",
+      "source_sha256": "93c56a5dff2254d70f809ee1e123f1d130bc0f40107687faebe90258a1cba71e",
+      "type": "web",
+      "title": "When To Do What You Love",
+      "channel_or_site": "paulgraham.com",
+      "date": "2024-09-01",
+      "url": "https://paulgraham.com/when.html",
+      "transcript": "article",
+      "expected_speakers": [
+        "pg"
+      ]
+    },
+    {
+      "vault": "yc",
+      "source_id": "web-76d87c7c2e80",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-76d87c7c2e80.md",
+      "source_sha256": "78721ac718560b7c31e496d87b23a9d61ac4449d94676c69478d5890ec81fba9",
+      "type": "web",
+      "title": "Superlinear Returns",
+      "channel_or_site": "paulgraham.com",
+      "date": "2023-10-01",
+      "url": "https://paulgraham.com/superlinear.html",
+      "transcript": "article",
+      "expected_speakers": [
+        "pg"
+      ]
+    },
+    {
+      "vault": "yc",
+      "source_id": "web-9dafad04fa97",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-9dafad04fa97.md",
+      "source_sha256": "a3bedc7f492b2f6708b4192366b5afd6cf6a34f245e404dcd0b0feeb2f17142a",
+      "type": "web",
+      "title": "Founder Mode",
+      "channel_or_site": "paulgraham.com",
+      "date": "2024-09-01",
+      "url": "https://paulgraham.com/foundermode.html",
+      "transcript": "article",
+      "expected_speakers": [
+        "pg"
+      ]
+    },
+    {
+      "vault": "yc",
+      "source_id": "web-c75e015ff81a",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-c75e015ff81a.md",
+      "source_sha256": "d25c767587e02e2ae3ca70392344ae7ed1d30132b7415c03603e346eb3427eee",
+      "type": "web",
+      "title": "How Universities Should Prepare Founders",
+      "channel_or_site": "paulgraham.com",
+      "date": "2026-08-01",
+      "url": "https://paulgraham.com/prepare.html",
+      "transcript": "article",
+      "expected_speakers": [
+        "pg"
+      ]
+    },
+    {
+      "vault": "yc",
+      "source_id": "yt-1hHMwLxN6EM",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-1hHMwLxN6EM.md",
+      "source_sha256": "21501297dd13705bdb847b6f5466786606cd85b898b433120f5d0befe5dfb75d",
+      "type": "youtube",
+      "title": "Michael Seibel - How to Plan an MVP",
+      "channel_or_site": "Y Combinator",
+      "date": "2019-08-01",
+      "url": "https://www.youtube.com/watch?v=1hHMwLxN6EM",
+      "transcript": "auto-captions",
+      "expected_speakers": [
+        "seibel"
+      ]
+    },
+    {
+      "vault": "yc",
+      "source_id": "yt-5bxp78i96S8",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-5bxp78i96S8.md",
+      "source_sha256": "7c31ea774eca3d88e387db71b65eefdd5b85b1ab4c0483ba2c44923c1e743243",
+      "type": "youtube",
+      "title": "Paul Graham On Startups, Ambition, and Great Founders",
+      "channel_or_site": "Y Combinator",
+      "date": "2026-09-03",
+      "url": "https://www.youtube.com/watch?v=5bxp78i96S8",
+      "transcript": "auto-captions",
+      "expected_speakers": [
+        "pg"
+      ]
+    },
+    {
+      "vault": "yc",
+      "source_id": "yt-6u4JVz7iQTY",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-6u4JVz7iQTY.md",
+      "source_sha256": "9da07b2c05953336cc1fd52a4d5cbf1f09388fcb522692accf5214c3416d18ef",
+      "type": "youtube",
+      "title": "How YC Was Created With Jessica Livingston",
+      "channel_or_site": "Y Combinator",
+      "date": "2024-09-06",
+      "url": "https://www.youtube.com/watch?v=6u4JVz7iQTY",
+      "transcript": "auto-captions",
+      "expected_speakers": [
+        "livingston"
+      ]
+    },
+    {
+      "vault": "yc",
+      "source_id": "yt-7TU636F_yVQ",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+      "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+      "type": "youtube",
+      "title": "How Founders Win at Fundraising, Sales, and Hiring",
+      "channel_or_site": "Dalton + Michael",
+      "date": "2026-10-05",
+      "url": "https://www.youtube.com/watch?v=7TU636F_yVQ",
+      "transcript": "auto-captions",
+      "expected_speakers": [
+        "caldwell",
+        "seibel"
+      ]
+    },
+    {
+      "vault": "yc",
+      "source_id": "yt-8d-cApFHjeY",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-8d-cApFHjeY.md",
+      "source_sha256": "95f64747db17a4e4a661cccb9de3f154f03df1df92b2764b3e8c45bde4b8176f",
+      "type": "youtube",
+      "title": "Jessica Livingston Shares 9 Things She Learned From Founding YC",
+      "channel_or_site": "Y Combinator",
+      "date": "2018-07-11",
+      "url": "https://www.youtube.com/watch?v=8d-cApFHjeY",
+      "transcript": "auto-captions",
+      "expected_speakers": [
+        "livingston"
+      ]
+    },
+    {
+      "vault": "yc",
+      "source_id": "yt-Jcuqq48CNj8",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-Jcuqq48CNj8.md",
+      "source_sha256": "5b7b08df6b44ff5ac2a8666e245f7795238a064f501cb5c86e0acc29fdfc8eec",
+      "type": "youtube",
+      "title": "Where Do Great Startup Ideas Come From? – Dalton Caldwell and Michael Seibel",
+      "channel_or_site": "Y Combinator",
+      "date": "2022-01-19",
+      "url": "https://www.youtube.com/watch?v=Jcuqq48CNj8",
+      "transcript": "auto-captions",
+      "expected_speakers": [
+        "seibel",
+        "caldwell"
+      ]
+    },
+    {
+      "vault": "yc",
+      "source_id": "yt-QHJkUw31YX8",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+      "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+      "type": "youtube",
+      "title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+      "channel_or_site": "Y Combinator",
+      "date": "2026-05-13",
+      "url": "https://www.youtube.com/watch?v=QHJkUw31YX8",
+      "transcript": "auto-captions",
+      "expected_speakers": [
+        "pg"
+      ]
+    },
+    {
+      "vault": "yc",
+      "source_id": "yt-ZIaOBAjvc38",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+      "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+      "type": "youtube",
+      "title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+      "channel_or_site": "Y Combinator",
+      "date": "2026-07-28",
+      "url": "https://www.youtube.com/watch?v=ZIaOBAjvc38",
+      "transcript": "auto-captions",
+      "expected_speakers": [
+        "altman"
+      ]
+    },
+    {
+      "vault": "yc",
+      "source_id": "yt-eRrc1pUY5oU",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-eRrc1pUY5oU.md",
+      "source_sha256": "8fbe28db43b55d62bb3d34a14fa14c17e184af284e64e9193975c5504b9b07ed",
+      "type": "youtube",
+      "title": "Garry Tan: Own Your Intelligence",
+      "channel_or_site": "Y Combinator",
+      "date": "2026-08-06",
+      "url": "https://www.youtube.com/watch?v=eRrc1pUY5oU",
+      "transcript": "auto-captions",
+      "expected_speakers": [
+        "tan"
+      ]
+    },
+    {
+      "vault": "yc",
+      "source_id": "yt-ii1jcLg-eIQ",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+      "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+      "type": "youtube",
+      "title": "Lecture 3 - Before the Startup (Paul Graham)",
+      "channel_or_site": "YC Root Access",
+      "date": "2014-09-30",
+      "url": "https://www.youtube.com/watch?v=ii1jcLg-eIQ",
+      "transcript": "captions",
+      "expected_speakers": [
+        "pg"
+      ]
+    },
+    {
+      "vault": "yc",
+      "source_id": "yt-ozhRhElbVcI",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ozhRhElbVcI.md",
+      "source_sha256": "0592186cae27f26ed9df59b1617d80cc0d6e95ee898e0c1d0daeb06e808a1d12",
+      "type": "youtube",
+      "title": "Low Ambition is Killing Your Startup",
+      "channel_or_site": "Dalton + Michael",
+      "date": "2026-08-05",
+      "url": "https://www.youtube.com/watch?v=ozhRhElbVcI",
+      "transcript": "auto-captions",
+      "expected_speakers": [
+        "caldwell",
+        "seibel"
+      ]
+    },
+    {
+      "vault": "yc",
+      "source_id": "yt-rQtrzBcf_Us",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-rQtrzBcf_Us.md",
+      "source_sha256": "953190a52f1037c9835d46972c7462284f0bb2f6cc51ec53bfa54e379c8bf6ad",
+      "type": "youtube",
+      "title": "How to Build an MVP in the AI Coding Era",
+      "channel_or_site": "Dalton + Michael",
+      "date": "2026-05-18",
+      "url": "https://www.youtube.com/watch?v=rQtrzBcf_Us",
+      "transcript": "auto-captions",
+      "expected_speakers": [
+        "caldwell",
+        "seibel"
+      ]
+    },
+    {
+      "vault": "yc",
+      "source_id": "yt-s1YszjhzQ6U",
+      "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+      "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+      "type": "youtube",
+      "title": "Do You Need a Co-Founder for Your Startup?",
+      "channel_or_site": "Dalton + Michael",
+      "date": "2026-07-13",
+      "url": "https://www.youtube.com/watch?v=s1YszjhzQ6U",
+      "transcript": "auto-captions",
+      "expected_speakers": [
+        "caldwell",
+        "seibel"
+      ]
+    }
+  ]
+}

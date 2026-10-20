@@ -1,0 +1,55 @@
+{
+  "answer_family": "gemini",
+  "batch_id": "diagnostic12--sol--gemini--batch-00",
+  "error": "",
+  "id": "p-af346bd1af16f08c--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-af346bd1af16f08c",
+  "primary_eligible": true,
+  "prompt_sha256": "7405724568631f4bee08e27e383913f9a45fad59bcf447847d7c1eacf04fdafb",
+  "question_key": "diagnostic12--hz-09",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 2,
+      "faithfulness": 1,
+      "specificity": 2,
+      "usefulness": 2
+    },
+    "B": {
+      "accuracy": 3,
+      "faithfulness": 3,
+      "specificity": 3,
+      "usefulness": 3
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "Hormozi's framework dictates keeping cash whenever its investment return exceeds the debt's interest rate.",
+        "evidence": "The supplied operating-business discussion establishes his Ramsey-like lean and concern about accumulated risk. It does not establish the claimed interest-rate comparison as his governing framework.",
+        "label": "unverified"
+      },
+      {
+        "answer": "A",
+        "claim": "Allocate funds to the higher-yielding option, either debt elimination or customer acquisition.",
+        "evidence": "The actual plan included both continuing debt repayment at 30:45 and increasing advertising while ROAS and CAC held at 10:48. Presenting the advice as an either/or allocation conflicts with that combined plan.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "B",
+        "claim": "Whether to repay the debt depends on supply or demand constraints, with reliable acquisition returns favoring retaining cash instead.",
+        "evidence": "The source does not establish this conditional repayment framework. Hormozi approved the owner's repayment plan and separately supported funding proven ads; reliable advertising was not presented as a reason to suspend repayment.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-af346bd1af16f08c",
+    "reason": "B reproduces Hormozi's risk-over-time argument, business volatility, emotional relief, and a short repayment window. However, it makes repayment conditional on weak growth opportunities instead of clearly stating his lean toward paying off debt while continuing proven advertising. A largely replaces his position with an interest-rate-versus-return framework and presents repayment and growth as competing allocations.",
+    "winner": "B"
+  },
+  "winner": "grounded"
+}

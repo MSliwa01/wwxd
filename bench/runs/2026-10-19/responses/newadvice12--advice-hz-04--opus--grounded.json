@@ -1,0 +1,101 @@
+{
+  "actual_input_tokens": 143916,
+  "answer": "# Plan: Defend Your Contracts, Start Referrals Now, and Test Google Ads for 90 Days\n\n**Start with these three, and keep the outbound rep as your fallback.**\n\n**Why this mix:** Each contract is worth about $16,800 in lifetime gross profit ($840 a month × 20 months). With roughly 38 accounts and normal churn, you need about 2 new contracts a month just to stay flat. Ads give you real results within weeks. A new rep usually takes 3–4 months to ramp, which would use up most of your 6-month window.\n\n**Weeks 1–2**\n- List every existing building tied to the acquired firm. Your current contracts there are at risk too, not just future referrals. Offer those clients annual renewals with a written service guarantee.\n- Get personal contact details for the firm's property managers. Many will move to other firms after an acquisition, and they can become your referrers there.\n- Have a lead supervisor cover operations so service quality doesn't drop while your operations manager works on sales.\n\n**Referral program (operations manager, about 10 hours a week)**\n- **Vendors (HVAC, pest control, security):** pay $1,000 per signed contract. Pay half at signing and half after 90 days of service.\n- **Property managers:** cash fees may be restricted, so offer value instead: priority response, quarterly building reports and a service guarantee.\n- **Target:** 25 partner meetings in 60 days.\n\n**Google Ads test**\n- Spend $5,000 a month: the $2,000 agency fee plus $3,000 in ads, which should bring about 20 leads.\n- Use a dedicated landing page and track every lead through to a signed contract.\n- Use the remaining ~$3,000 for referral payouts and tools.\n\n**Day-90 decision**\n- **If ads produce 2 or more contracts a month at under ~$3,500 each:** move ads to the full $8,000.\n- **If not:** cancel the agency and hire the rep with that money.\n- **If referrals produce 2 or more contracts a month:** keep your operations manager on them and formalize the program.\n\n**Six-month target:** at least 4 new contracts a month, with no single source over 40%.\n\n**Assumptions:** the agency's 12% close rate is unproven, and new contracts average close to $2,400 a month. If ad leads turn out to be mostly small offices, switch to the rep sooner.",
+  "arm": "grounded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 35.482,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "340f318c9e5cf0d0169e5cefbd443968b89747ffc85e261a3b5be4127dd915a3"
+    }
+  ],
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 138055,
+  "event_count": 26,
+  "family": "opus",
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:27:11.010963+00:00",
+  "format_deviations": [
+    "outside descriptive 150..300 word band around approximate 250-word instruction"
+  ],
+  "id": "newadvice12--advice-hz-04--opus--grounded",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "prompt_sha256": "9cf453134f63244539252e2c7d22616dbb8cf6897c1d832975e74e5d1542d18e",
+  "question_key": "newadvice12--advice-hz-04",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "newadvice12",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 142346,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 142346,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 142346,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 142346,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 3060,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 3060,
+      "output_tokens_details": {
+        "thinking_tokens": 2277
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ],
+  "words": 378
+}

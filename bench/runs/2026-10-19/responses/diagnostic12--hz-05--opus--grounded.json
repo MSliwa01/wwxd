@@ -1,0 +1,101 @@
+{
+  "actual_input_tokens": 143614,
+  "answer": "# Monthly churn benchmarks for a paid community\n\nFor a paid online community:\n\n- **Under 10% monthly churn** is excellent.\n- **Around 20%** (about 80% retention) is typical.\n- **Above 30%** means fewer than 7 in 10 members stay each month. At that point retention is probably your highest-return problem, ahead of acquisition.\n\nHalving churn roughly doubles lifetime value, so small improvements matter a lot.\n\n## When to worry\n\nLook at churn by member tenure, not just the overall average. Churn is normally highest in months one to three. It drops to around 10% after day 90 and to around 2% by month six. So:\n\n- **Worry** if members who have stayed past 90 days still leave at high rates. That suggests the core value isn't landing.\n- **Don't panic** about high month-one churn, or high churn in a community under six months old. A new community has no long-tenured members yet, so its average looks worse than it really is. Don't overhaul everything because of it.\n- **Track joins against cancels every month.** Call the business growing, flat or declining based on which is bigger.\n\n## Hormozi's likely advice\n\nMake it your goal to get members past day 90 and month six, rather than pushing the average down. In practice:\n\n1. **Ask why people leave.** Message everyone who cancels, tag the reason, and fix the top one or two reasons every 20 or so cancels.\n2. **Ask your longest members why they stay**, then do more of that.\n3. **Cut overwhelm.** Offer less, and get new members a quick win within 24 hours.\n4. **Build belonging.** Show up daily, run one weekly live call, and introduce newcomers to about ten regulars.\n5. **Add a discounted annual plan.** Add a cheaper tier only if your ideal members say price is the problem.\n\n## Caveats\n\nThese benchmarks come from averages on Skool, a platform Hormozi co-founded and promotes, so they aren't neutral industry data. They fit online consumer services, but not every niche. High-ticket or professional communities should aim lower than 10%.",
+  "arm": "grounded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 14.828,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "3f897e5447a9b65f92a8122a448f0ebe3b491b9c830fd843d4d89bd78b1c951d"
+    }
+  ],
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 137709,
+  "event_count": 9,
+  "family": "opus",
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:20:07.367296+00:00",
+  "format_deviations": [
+    "outside descriptive 150..300 word band around approximate 250-word instruction"
+  ],
+  "id": "diagnostic12--hz-05--opus--grounded",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "prompt_sha256": "843297287e84401c64f78c065a33a3255e621eedaa5aab203c761b1f011cf8d9",
+  "question_key": "diagnostic12--hz-05",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 142044,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 142044,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 142044,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 142044,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 953,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 953,
+      "output_tokens_details": {
+        "thinking_tokens": 280
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ],
+  "words": 341
+}

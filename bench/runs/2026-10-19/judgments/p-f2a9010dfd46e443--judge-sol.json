@@ -1,0 +1,49 @@
+{
+  "answer_family": "opus",
+  "batch_id": "newadvice12--sol--opus--batch-01",
+  "error": "",
+  "id": "p-f2a9010dfd46e443--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-f2a9010dfd46e443",
+  "primary_eligible": true,
+  "prompt_sha256": "7ed3f695d06fff8e82862c621a2af303cd515d73a7d02d486d392004e6f2444e",
+  "question_key": "newadvice12--advice-yc-04",
+  "status": "ok",
+  "suite": "newadvice12",
+  "verdict": {
+    "A": {
+      "actionability": 4,
+      "constraint_fit": 4,
+      "decision_quality": 4,
+      "reasoning": 4
+    },
+    "B": {
+      "actionability": 5,
+      "constraint_fit": 4,
+      "decision_quality": 4,
+      "reasoning": 4
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "The buyers are not readers of tech or business press.",
+        "evidence": "The question identifies customer acquisition sources but supplies no evidence about buyers' media consumption. Those sources support prioritizing direct channels without establishing this audience claim.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "The buyers rarely read tech or business press, and coverage will not fill the pipeline.",
+        "evidence": "Neither readership nor likely press-generated pipeline is established by the supplied facts. Declining the agency is defensible without treating its potential contribution as known.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-f2a9010dfd46e443",
+    "reason": "Both allocate the full $36,000 correctly and reasonably prioritize learning a repeatable sales process. B provides a stronger experiment: customer interviews inform outreach, content supports sales, and a week-six conversion threshold guides reallocation. A commits more to sponsorships and reserves $5,000 for trade pitching without similarly clear validation criteria. B's 40-customer target remains an unvalidated goal.",
+    "winner": "B"
+  },
+  "winner": "raw"
+}

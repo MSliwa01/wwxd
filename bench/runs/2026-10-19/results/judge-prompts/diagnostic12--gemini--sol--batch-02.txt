@@ -1,0 +1,394 @@
+Evaluation date: 2026-10-19. This is the current date, not a future date. May 2026 is in the past. Publication dates and dates of events described in a source are distinct. A model training cutoff does not invalidate supplied later material. You are an independent evaluator. Use no tools, commands, files, browsing, or external retrieval. A and B are anonymous. Their ordering conveys nothing. Do not infer their model, source access, or provenance. Do not reward writing style, citation presence, quotations, expert agreement, or presumed source use. A tie is valid.
+Score each answer on the four specified integer scales, each from 1 to 5. Anchors: 1 fundamentally deficient; 2 major problems; 3 mixed with meaningful gaps; 4 good with minor gaps; 5 strong and sufficiently complete. Choose A, B, or tie for substantive overall quality. Preserve uncertainty rather than inventing evidence.
+Return ONLY a JSON object with exactly one key, "judgments", containing one object per supplied pair. Each object has exactly: "id", "A", "B", "winner", "reason", "factual_objections". A and B each contain exactly the four dimension names and integer scores. winner is "A", "B", or "tie"; reason is a nonempty string. factual_objections is a list, possibly empty, of objects with exactly "answer" ("A" or "B"), "claim", "label" ("contradicted" or "unverified"), and "evidence" (a nonempty explanation). Distinguish an established contradiction from an unverified claim.
+Evaluate accuracy, specificity, faithfulness, and usefulness using the complete audited reference packet. The reference is evidence, not a required script. Missing optional detail is not automatically a false claim. Label a factual objection contradicted only when supplied evidence establishes the contradiction; otherwise label it unverified. Do not treat absence from the reference as proof of falsehood. Resolve a conflict between a summary and direct evidence in favor of the direct evidence and explain it.
+
+Pairs:
+[
+  {
+    "id": "p-ea71360e9fe0a8de",
+    "question": "I've spent months pitching seed investors, polishing my deck and taking follow-up meetings. How would Michael Seibel tell me to think about fundraising?",
+    "A": "Michael Seibel would tell you to focus on becoming a company investors want to chase. Months of meetings and deck revisions can consume the time you need to produce the growth that would make fundraising easier.\n\nHe learned this at Justin.tv: after roughly eight months of unsuccessful fundraising, the team had about two months of runway left. They turned toward making the business profitable and accomplished more in those two months than during the months of pitching. At Socialcam, when it reached number two in the App Store, the deck barely mattered.\n\nHis central idea is leverage: strong customer demand, growth and the ability to keep operating give you alternatives. That strength is built before the investor meeting.\n\nRepeated follow-ups aren’t necessarily progress. Investors can keep watching your company without committing, preserving their chance to invest if it takes off. You bear the cost in lost building time. That doesn’t establish any particular investor’s motives, but it explains why continued interest can coexist with little prospect of funding.\n\nA practical application would be:\n\n- Calculate your runway and identify what you can achieve without new money.\n- Ask active investors for their remaining decision steps and a concrete timeline.\n- If conversations remain indefinite and you have runway, pause the broad raise and pursue a measurable customer milestone: retention, paying customers or sustained revenue growth.\n- Return with stronger evidence and a clear explanation of what funding will unlock.\n\nIf capital is essential to reach your next technical or regulatory milestone, a focused raise may remain necessary. His point is to judge fundraising by commitments and its contribution to the business, rather than meeting volume or presentation polish.",
+    "B": "Michael Seibel’s basic framing is that fundraising serves the company; it is not the company’s purpose or a reliable measure of progress. Your job is to build something people want. A polished deck, investor enthusiasm, and repeated follow-up meetings do not establish that customers want your product.\n\nApplied to your situation, months of pitching should prompt a reset. The relevant question is whether you need capital to reach a specific business milestone, and whether your current fundraising process is producing actual commitments. Investor attention can feel like momentum while consuming the time needed to improve the business.\n\nA practical way to act on that framing:\n\n- **Define what the money buys.** Identify the product, customer, or revenue milestone it enables, the minimum capital required, and your remaining runway.\n- **Make fundraising a bounded process.** Concentrate meetings into a short period, ask directly for investment decisions, and distinguish committed money from polite interest.\n- **Diagnose the objection.** If investors doubt customer demand, more deck revisions probably will not resolve it. Product usage, retention, paying customers, or stronger growth may.\n- **Preserve the option to keep building.** If you can reduce spending and reach meaningful progress without raising, consider stopping the campaign and returning when the business is stronger.\n\nThis does not mean every startup should bootstrap or that unsuccessful fundraising proves the idea is bad. Capital requirements, runway, and genuine customer evidence matter. If funding is essential and cash is nearly exhausted, pursue a smaller viable round and cost reductions immediately. If survival does not depend on raising now, prioritize customers over another indefinite cycle of meetings.",
+    "reference": {
+      "actual_stance": "Fundraising comes down to leverage, meaning your ability to walk away, and the deck is not doing the work. Ask whether you are growing; if you are not growing or not launched, deck work may be the biggest waste of your time. The effective way to raise is to grow so fast, with so many proof points, that you can raise quickly with little preparation. Michael's own evidence: when Socialcam was hot he asked investors what share of deals they chase versus take from the front door, and every answer was between 80/20 and 90/10 chase; at Justin.tv he spent eight months fundraising without success, and the two months of forced focus on profitability that followed got far more done. Investors who string founders along for months are in effect buying an option on them.",
+      "category": "fresh",
+      "errors": [
+        "Recommending a bigger investor list and a tighter deck as the main fix.",
+        "Inventing statistics not in the source."
+      ],
+      "evidence": [
+        {
+          "quote": "If you're not growing and not launched, in many ways, working on this deck could be the biggest waste",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "2:48"
+        },
+        {
+          "quote": "the deck isn't doing the work at all.",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "3:21"
+        },
+        {
+          "quote": "Leverage is also another way of thinking about is your ability to walk away.",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "3:54"
+        },
+        {
+          "quote": "the way to be very effective at fundraising is to be growing so quickly and have so many proof points that your startup is working",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "5:02"
+        },
+        {
+          "quote": "one of the times we almost died at Justin TV you know I had spent the eight months prior trying to fundra",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "seibel",
+          "speaker_basis": "inferred: speaker co-founded Socialcam and Justin.tv, which the video description assigns to Michael Seibel",
+          "timestamp": "6:44"
+        },
+        {
+          "quote": "And the amount of we got done in that two months versus slinging decks",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "seibel",
+          "speaker_basis": "inferred: speaker co-founded Socialcam and Justin.tv, which the video description assigns to Michael Seibel",
+          "timestamp": "6:44"
+        },
+        {
+          "quote": "it's sort of like you're buying an option.",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "8:57"
+        },
+        {
+          "quote": "And the answers I got only varied between 8020 chase and 9010 chase.",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "seibel",
+          "speaker_basis": "inferred: speaker co-founded Socialcam and Justin.tv, which the video description assigns to Michael Seibel",
+          "timestamp": "10:03"
+        },
+        {
+          "quote": "if you can invest that time in making your company something that investors will chase after versus decksmithing,",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "seibel",
+          "speaker_basis": "inferred: speaker co-founded Socialcam and Justin.tv, which the video description assigns to Michael Seibel",
+          "timestamp": "10:03"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold attributes everything to Michael Seibel. The episode is a two-host conversation with unlabeled captions. The Socialcam poll and the Justin.tv story are Michael's (he co-founded both). The leverage definition, the deck lines and the 'buying an option' point come from the joint conversation and may be Dalton's. Grade the content; do not penalize an answer that credits the episode to both hosts."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-08",
+      "key_status": "confirmed_speaker_caveat",
+      "primary_sources": [
+        "yt-7TU636F_yVQ"
+      ],
+      "question": "I've spent months pitching seed investors, polishing my deck and taking follow-up meetings. How would Michael Seibel tell me to think about fundraising?",
+      "required_points": [
+        "Stop polishing the deck; it is not doing the work. Leverage (traction, growth, ability to walk away) decides fundraising.",
+        "Spend the time building, launching, talking to users and growing, so investors chase you."
+      ],
+      "supporting_points": [
+        "Investors chase 80% to 90% of their deals (his Socialcam-era poll).",
+        "Justin.tv: eight months of failed fundraising vs two productive months focused on profitability.",
+        "Being strung along for months means the investor is buying an option on you.",
+        "Raise fast at the end, with little prep, once things are working."
+      ],
+      "uncertainty": [
+        "Speaker split between Dalton Caldwell and Michael Seibel is not recoverable from the captions except where noted."
+      ],
+      "vault": "yc"
+    }
+  },
+  {
+    "id": "p-0d7a755834632ca5",
+    "question": "I'm building a startup in Stockholm. Does Paul Graham think I really need to move to Silicon Valley?",
+    "A": "No—not as an absolute requirement. Paul Graham’s longstanding view is that founders improve their odds by being in a strong startup hub, with Silicon Valley his strongest recommendation. He treats location as a meaningful advantage, not a guarantee of success or a condition without which success is impossible.\n\nHis reasoning is broader than access to funding: being surrounded by ambitious founders, experienced early employees, investors, and potential collaborators changes what you learn, whom you meet, and what you consider achievable. From that perspective, building remotely does not automatically replace being there.\n\nBut Stockholm is already a substantial startup ecosystem. Your choice is not between Silicon Valley and a place with no startup community. The relevant question is whether the Bay Area offers advantages that matter enough to *your company* to justify the disruption and expense.\n\nMy practical recommendation:\n\n- **Stay in Stockholm for now** if your customers, recruiting advantages, industry relationships, or regulatory needs are primarily Nordic or European, and you are making steady progress.\n- **Seriously consider relocating** if your target customers, essential hires, or likely investors cluster in the Bay Area, particularly if your ambition depends on entering that network quickly.\n- **Test the premise first:** spend several focused weeks there, arranging customer meetings, working alongside founders, and meeting relevant investors. Compare concrete progress with an equivalent period in Stockholm.\n\nBefore committing, consider visas, runway, cofounder alignment, and whether the whole founding team would move.\n\nSo Graham would likely push you to take the location advantage seriously. That is different from establishing that you personally must move. Your market, traction, and bottlenecks should decide.",
+    "B": "Yes—Paul Graham strongly recommends going to Silicon Valley, at least for a while. His April 2026 advice to Stockholm founders explicitly allows returning home. He does not mean that success in Stockholm is impossible or that you must emigrate permanently.\n\nHis main argument is about the people around you: a larger concentration of strong peers, useful chance encounters, faster decisions, and a culture of helping without immediately expecting something back. He thinks the biggest benefit is how that environment changes your ambition: meeting highly successful founders makes their achievements feel difficult but attainable.\n\nHe also sees fundraising advantages. In his view, competition pushes Valley investors to decide faster, and attracting interest there can make Swedish investors take you more seriously.\n\nThere are qualifications. He reports that YC companies returning home are about half as likely to become billion-dollar companies as those staying, but acknowledges selection bias and higher Bay Area valuations. That comparison does not establish that moving doubles your particular startup’s chances. He recommends YC as a concentrated route into the ecosystem, while acknowledging his interest as its co-founder. He also accepts that family can matter more than maximizing company value.\n\nMy practical recommendation, assuming you want a globally ambitious startup, is to test spending a sustained period there before committing permanently. Build alongside founders, meet prospective customers and investors, and assess whether access produces useful relationships and faster progress. Consider YC if it fits. Stay longer if the benefits justify the cost; return if Stockholm offers stronger customer access, team stability, or family support. Returning can also strengthen Stockholm’s startup community.",
+    "reference": {
+      "actual_stance": "Yes, at least for a while: go, and you can come back. You get the best peers, more serendipitous meetings, investors who decide faster, more respect from investors back home, and a realistic view of how good you are. Going and then actually returning is also one of the best things founders can do for Stockholm. He calls YC the optimal way to do the stint (four to six months). He cites YC data that startups going home after YC are only about half as likely to become unicorns, and discounts it three ways: selection bias, it measures valuation rather than performance, and half as well is still very good. He thinks Stockholm could become the Silicon Valley of Europe.",
+      "category": "fresh",
+      "errors": [
+        "Saying he thinks remote work makes location irrelevant.",
+        "Saying he advises moving permanently and never returning."
+      ],
+      "evidence": [
+        {
+          "quote": "And the answer is the same now as it always is. Yes, you should. You can go there for a bit and then come back, but you should at least go.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "0:36"
+        },
+        {
+          "quote": "You get the best peers.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "1:09"
+        },
+        {
+          "quote": "investors in Silicon Valley decide a lot faster.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "5:00"
+        },
+        {
+          "quote": "as long as you do actually come back, that's one of the best things you can do to help Sweden to help Stockholm thrive as a startup hub.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "16:10"
+        },
+        {
+          "quote": "Surely the optimal way to go to Silicon Valley for a bit and then come back is to do YC.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "17:16"
+        },
+        {
+          "quote": "startups that go back home after YC are only about half as likely to become unicorns.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "18:57"
+        },
+        {
+          "quote": "there's a lot of selection bias in this.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "18:57"
+        },
+        {
+          "quote": "even if you only do half as well, that's still pretty good.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "19:30"
+        },
+        {
+          "quote": "you could make it the Silicon Valley of Europe.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "20:04"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold matches raw. Added the reasons for going and the 'as long as you do actually come back' condition."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-05",
+      "key_status": "confirmed_expanded",
+      "primary_sources": [
+        "yt-QHJkUw31YX8"
+      ],
+      "question": "I'm building a startup in Stockholm. Does Paul Graham think I really need to move to Silicon Valley?",
+      "required_points": [
+        "Yes, go to Silicon Valley, at least for a while; you can come back.",
+        "Mentions the unicorn-rate caveat or the benefit of returning to help Stockholm."
+      ],
+      "supporting_points": [
+        "Reasons: best peers, serendipitous meetings, faster investors, respect back home.",
+        "YC is the optimal way to go for a bit and come back.",
+        "Startups that go home after YC are about half as likely to become unicorns, discounted for selection bias, valuation vs performance, and 'half as well is still good'.",
+        "Stockholm could become the Silicon Valley of Europe."
+      ],
+      "uncertainty": [],
+      "vault": "yc"
+    }
+  },
+  {
+    "id": "p-3dc91bfc2e1429d0",
+    "question": "Jessica Livingston has said early YC deliberately backed the most aggressive, ruthless founders because they're the ones who win. Why did she believe that?",
+    "A": "That misstates Jessica Livingston’s position. Her account of early YC emphasizes selecting earnest, determined, flexible-minded founders. She also deliberately rejected applicants she considered conceited, and believed that helped establish the alumni community’s culture. I can’t confirm the alleged statement about preferring aggressive, ruthless founders.\n\nHer reasoning for emphasizing character was that YC invested too early to judge companies by established business results. Often there were no meaningful growth figures or reliable market estimates. The investment therefore depended heavily on what the founders could become: whether they were serious about building something, could withstand setbacks, and could learn as their initial idea changed.\n\nLivingston’s particular responsibility was assessing people. Her technical co-founders evaluated technical ability and ideas; she watched the founders’ character and, especially, their relationship with one another. A team’s ability to work together mattered greatly. Her advice to prospective co-founders similarly emphasized complementary skills and a shared moral compass.\n\nShe did believe founders needed boldness and determination. Unusual ideas often look foolish before they work, and founders face repeated rejection, ridicule, and indifference. Someone who needs mainstream approval may abandon a promising project too soon. But she paired that independence with attention to users and flexibility about how to solve their problems.\n\nThe relevant distinction is between persistence and ruthlessness. Continuing through rejection, taking initiative, and pursuing an unconventional idea fit her position. Bullying people, refusing to listen, or treating others as expendable do not follow from it. Her position also leaves room for different personalities: a successful founder need not fit an aggressive public stereotype.",
+    "B": "The premise is misleading. Jessica Livingston has emphasized determination, resourcefulness, and earnest commitment in founders, rather than a deliberate preference for aggressive, ruthless people. I don’t know of her endorsing the claim as stated.\n\nThe distinction matters because several traits that help founders succeed can look like aggression from the outside:\n\n- **Persistence:** continuing after investors decline, customers ignore you, or a product fails.\n- **Resourcefulness:** finding a workable route around obstacles instead of waiting for permission or ideal conditions.\n- **Independent judgment:** pursuing an idea that initially sounds unpromising to other people.\n- **Commitment:** caring enough about the company to do difficult, repetitive, unglamorous work.\n\nThese qualities can make a founder unusually effective without making them cruel, dishonest, or indifferent to others. Being forceful in pursuing a goal is different from exploiting employees, deceiving customers, or betraying a cofounder.\n\nEarly YC’s willingness to back young, technically capable, socially unpolished applicants also cuts against the idea that it simply selected the most visibly dominant personalities. Confidence and a polished pitch are imperfect signals of whether someone can build something people want. A quiet founder can be exceptionally determined; an intimidating founder can lack substance.\n\nA reasonable explanation of Livingston’s position is that startups encounter so much rejection and uncertainty that intelligence and an attractive idea are insufficient. Founders also need the character and initiative to keep making progress.\n\nWhat remains uncertain is whether your question refers to a particular remark with a narrower meaning. Without that wording, attributing a belief that ruthlessness makes founders winners would go beyond what I can substantiate.",
+    "reference": {
+      "absence_check": "Corpus check on 2026-10-19 across all 24 YC raw files: the whole word 'ruthless' appears only in yt-8d-cApFHjeY at 17:44, where Livingston describes other investors, not founders she selected. Her selection criteria and rejection of conceited applicants are supported by the quoted passages.",
+      "actual_stance": "False premise: the sources contain no such statement, and she said the opposite. Her role in early selection was judging character: did applicants seem earnest, determined and flexible-minded, and how did the cofounders relate. She was careful to fund only earnest people and rejected people she could tell were conceited. She describes YC as feeling like a family with her as its mom, and herself as soft and sensitive at a time when investors were hardened and aggressive, adding 'ruthless' for a couple she knew. Determination is one trait she looked for; ruthlessness is not.",
+      "category": "abstain",
+      "errors": [
+        "Accepting the premise and explaining why ruthless founders win.",
+        "Recasting PG's 'formidable' as Jessica endorsing ruthlessness."
+      ],
+      "evidence": [
+        {
+          "quote": "did they seem earnest did they seem determined were they flexible minded",
+          "source_date": "2018-07-11",
+          "source_id": "yt-8d-cApFHjeY",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-8d-cApFHjeY.md",
+          "source_sha256": "95f64747db17a4e4a661cccb9de3f154f03df1df92b2764b3e8c45bde4b8176f",
+          "source_title": "Jessica Livingston Shares 9 Things She Learned From Founding YC",
+          "speaker": "livingston",
+          "speaker_basis": "solo conference talk",
+          "timestamp": "14:51"
+        },
+        {
+          "quote": "from the beginning I was very careful about only funding earnest people",
+          "source_date": "2018-07-11",
+          "source_id": "yt-8d-cApFHjeY",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-8d-cApFHjeY.md",
+          "source_sha256": "95f64747db17a4e4a661cccb9de3f154f03df1df92b2764b3e8c45bde4b8176f",
+          "source_title": "Jessica Livingston Shares 9 Things She Learned From Founding YC",
+          "speaker": "livingston",
+          "speaker_basis": "solo conference talk",
+          "timestamp": "14:51"
+        },
+        {
+          "quote": "if I could tell someone was a conceited we did not fund them",
+          "source_date": "2018-07-11",
+          "source_id": "yt-8d-cApFHjeY",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-8d-cApFHjeY.md",
+          "source_sha256": "95f64747db17a4e4a661cccb9de3f154f03df1df92b2764b3e8c45bde4b8176f",
+          "source_title": "Jessica Livingston Shares 9 Things She Learned From Founding YC",
+          "speaker": "livingston",
+          "speaker_basis": "solo conference talk",
+          "timestamp": "15:27"
+        },
+        {
+          "quote": "it felt like a family and I was its mom",
+          "source_date": "2018-07-11",
+          "source_id": "yt-8d-cApFHjeY",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-8d-cApFHjeY.md",
+          "source_sha256": "95f64747db17a4e4a661cccb9de3f154f03df1df92b2764b3e8c45bde4b8176f",
+          "source_title": "Jessica Livingston Shares 9 Things She Learned From Founding YC",
+          "speaker": "livingston",
+          "speaker_basis": "solo conference talk",
+          "timestamp": "17:44"
+        },
+        {
+          "quote": "I was soft and sensitive at a time when investors tended to be hardened and aggressive and I'll throw in ruthless - for a couple of them that I know",
+          "source_date": "2018-07-11",
+          "source_id": "yt-8d-cApFHjeY",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-8d-cApFHjeY.md",
+          "source_sha256": "95f64747db17a4e4a661cccb9de3f154f03df1df92b2764b3e8c45bde4b8176f",
+          "source_title": "Jessica Livingston Shares 9 Things She Learned From Founding YC",
+          "speaker": "livingston",
+          "speaker_basis": "solo conference talk",
+          "timestamp": "17:44"
+        },
+        {
+          "quote": "it's someone who gets what they want in any situation.",
+          "source_date": "2026-09-03",
+          "source_id": "yt-5bxp78i96S8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-5bxp78i96S8.md",
+          "source_sha256": "7c31ea774eca3d88e387db71b65eefdd5b85b1ab4c0483ba2c44923c1e743243",
+          "source_title": "Paul Graham On Startups, Ambition, and Great Founders",
+          "speaker": "pg",
+          "speaker_basis": "interview answer, inferred from content",
+          "supports": "context only: PG's definition of 'formidable'; not part of the Jessica key",
+          "timestamp": "9:57"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold had must_cite empty while listing evidence from yt-8d-cApFHjeY. Set must_cite to that source, since citing the counter-evidence is the correct behavior for this false premise.",
+        "Added 'determined' from her own criteria so an answer mentioning determination is not marked as accepting the premise."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-20",
+      "key_status": "confirmed_expanded",
+      "primary_sources": [
+        "yt-8d-cApFHjeY"
+      ],
+      "question": "Jessica Livingston has said early YC deliberately backed the most aggressive, ruthless founders because they're the ones who win. Why did she believe that?",
+      "required_points": [
+        "Rejects the premise; there is no such statement, and her stated approach was the opposite.",
+        "She funded earnest people and turned down conceited ones."
+      ],
+      "supporting_points": [
+        "She looked for earnest, determined, flexible-minded founders and healthy cofounder relationships.",
+        "She described herself as soft and sensitive when investors were hardened, aggressive and sometimes ruthless.",
+        "YC felt like a family and she was its mom.",
+        "Context only: PG separately says investors want 'formidable' founders who get what they want; that is not Jessica's claim and is not ruthlessness."
+      ],
+      "uncertainty": [],
+      "vault": "yc"
+    }
+  }
+]

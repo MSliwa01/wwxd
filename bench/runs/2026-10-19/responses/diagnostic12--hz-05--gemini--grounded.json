@@ -1,0 +1,57 @@
+{
+  "actual_input_tokens": 109980,
+  "answer": "For a paid online community, a good monthly retention rate is around 80%, meaning a monthly churn rate of about 20%. If your monthly retention falls below 70% (yielding a monthly churn rate above 30%), retention becomes the highest-return lever in your business, and you should prioritize fixing it over acquiring new members. \n\nYou should worry about churn when your rate exceeds that 30% threshold, or when you notice a sharp drop-off during specific high-risk windows. Churn typically spikes in the first month and remains highest through day 90. If you can successfully keep members past day 90, churn generally drops significantly, and by month six it often falls to around 2%. Rather than trying to lower your average churn all at once, focus specifically on designing strategies to get members past day 90 and month six.\n\nThe perspective here treats churn as a leaky bucket. When members cancel, tag their reasons—such as price, overwhelm, or lack of engagement—and fix the top reasons after every 20 or so cancellations. At the same time, ask your most engaged, long-tenured members why they stay, and lean into those retention drivers. To combat churn proactively, front-load a fast win within the first 24 hours, simplify your offerings to reduce overwhelm, ensure the owner remains active daily, and help new members make at least one real friend in the community. \n\nConditional recommendation: If your community is less than 90 days or six months old, expect inflated churn metrics because no members have reached the low-churn tenure milestones yet; do not overhaul your business based solely on month-one churn in a young community.",
+  "arm": "grounded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 4.117,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "faa5b99576aac8f1c9753fc1369c5b2a34b48450d65ad34fa20508ab0c47e4fa"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 105003,
+  "event_count": 1,
+  "family": "gemini",
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:19:59.371513+00:00",
+  "format_deviations": [],
+  "id": "diagnostic12--hz-05--gemini--grounded",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_sha256": "843297287e84401c64f78c065a33a3255e621eedaa5aab203c761b1f011cf8d9",
+  "question_key": "diagnostic12--hz-05",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 351,
+      "promptTokenCount": 109980,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 109980
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 110331
+    }
+  ],
+  "words": 268
+}

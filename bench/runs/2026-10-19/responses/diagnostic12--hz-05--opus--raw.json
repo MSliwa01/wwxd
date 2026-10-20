@@ -1,0 +1,101 @@
+{
+  "actual_input_tokens": 2482,
+  "answer": "# Monthly Churn for a Paid Online Community\n\n**Rough benchmarks (these are general patterns, not hard standards):**\n- **Under 5%:** Strong. This usually means members get ongoing value, not just a one-time payoff.\n- **5–10%:** Typical for many paid communities, especially those priced under about $100/month.\n- **Over 10%:** A warning sign. At 15% or more, you're replacing your whole membership roughly every 6–7 months.\n\nContext changes these numbers. Low-price hobby communities churn more than high-ticket professional ones. Annual plans hide churn until renewal. Communities built around a single outcome, like \"launch your first product,\" churn naturally once members succeed.\n\n**When to worry:**\n- Churn is rising for two or three months in a row.\n- Most cancellations happen in the first 30–60 days. This points to an onboarding problem rather than a value problem.\n- Churn is high enough that acquisition can't outpace it, so growth stalls.\n- The cost to acquire a member is more than about a third of their lifetime value.\n\n**Hormozi's likely framing:** Alex Hormozi generally treats churn as the ceiling on your business. Your maximum size is roughly new members per month divided by monthly churn. So 100 joins a month at 10% churn caps you near 1,000 members. He emphasizes these levers:\n- Fixing the first days of membership through fast wins and personal touchpoints.\n- Raising perceived value before cutting price.\n- Diagnosing why people leave before adding more marketing.\n\nThat's a fair summary of his general approach, not a specific statement about your situation.\n\n**Next steps:**\n1. Calculate churn by joining cohort, not just as a blended average.\n2. Survey or call members who cancel.\n3. Map when cancellations happen and fix the biggest drop-off point first.",
+  "arm": "raw",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 10.499,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "be0d832b1d2d54d9565a09cdc145c053614f8f191532bc10a6d7bd073656e805"
+    }
+  ],
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 467,
+  "event_count": 7,
+  "family": "opus",
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:19:53.244976+00:00",
+  "format_deviations": [
+    "possible blinding leak: context/wiki/knowledge base mention"
+  ],
+  "id": "diagnostic12--hz-05--opus--raw",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "prompt_sha256": "269fa9d57bb662e893385e14143f4a5d4a6275f79565ae3f23d9c4dd175063e9",
+  "question_key": "diagnostic12--hz-05",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 912,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 912,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 912,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 912,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 749,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 749,
+      "output_tokens_details": {
+        "thinking_tokens": 147
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ],
+  "words": 286
+}

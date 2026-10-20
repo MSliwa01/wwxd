@@ -1,0 +1,99 @@
+{
+  "actual_input_tokens": 224181,
+  "answer": "**Recommendation: Don't hire the agency. Spend the $36,000 on a founder-led sales sprint in your three metros, using trade events and field content to support it.**\n\n**Why:** Your buyers are electrical and plumbing subcontractors, not readers of tech or business press. Coverage there would impress peers and investors but bring few signups. You have only 15 customers, so your most valuable asset is what founders learn from sales conversations. All 15 came through personal networks and trade meetups, which shows that trust-based, in-person channels already work for you.\n\n**3-month plan:**\n\n- **Founder outreach (about $10k):** Pay for travel, lead lists, and a CRM. Book 15–20 meetings a week. Ask each of your 15 customers for two referrals, and offer a free month for each referral that converts.\n- **Trade-association sponsorships (about $15k):** Sponsor 3–4 events, one or more per metro. Run a live demo and leave with a list of contacts to follow up.\n- **Field-operations content (about $6k):** Hire a part-time editor to turn customer ride-alongs and dispatch problems into weekly LinkedIn posts and YouTube videos. Founders keep posting under their own names. This also supports sales follow-ups.\n- **Trade-press pitching (about $5k reserve):** Pitch a customer case study yourselves to electrical and plumbing trade publications instead of tech outlets.\n\n**Targets:** 10–15% monthly revenue growth, 60+ qualified demos, under 3% churn, and source tracking on every new deal.\n\n**Assumptions:** Founders can commit about 50% of their time to sales, and your product handles onboarding without heavy hand-holding.\n\n**What would change this:**\n- Hire PR if you need visibility for recruiting or a near-term raise.\n- Hire PR if an agency specializes in trade media and accepts performance-based fees.\n- Hire PR if outreach stalls despite strong demo-to-paid conversion.",
+  "arm": "grounded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 15.712,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "035cb126d124e7e3708f4a3b58837d267252b6e6e8c25181dad722ccf99e40fd"
+    }
+  ],
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 226781,
+  "event_count": 9,
+  "family": "opus",
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:30:30.883303+00:00",
+  "format_deviations": [],
+  "id": "newadvice12--advice-yc-04--opus--grounded",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "prompt_sha256": "c164fbe83c1cadb62aee46a0c8befeb0b83e3a8d330a60d0554771dc69f048f6",
+  "question_key": "newadvice12--advice-yc-04",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "newadvice12",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 222611,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 222611,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 222611,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 222611,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 1014,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 1014,
+      "output_tokens_details": {
+        "thinking_tokens": 360
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ],
+  "words": 289
+}

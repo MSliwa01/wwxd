@@ -1,0 +1,72 @@
+{
+  "actual_input_tokens": 11581,
+  "answer": "```json\n{\n  \"judgments\": [\n    {\n      \"id\": \"p-4cd02c8fbe46df26\",\n      \"A\": {\n        \"accuracy\": 1,\n        \"faithfulness\": 1,\n        \"specificity\": 1,\n        \"usefulness\": 1\n      },\n      \"B\": {\n        \"accuracy\": 1,\n        \"faithfulness\": 1,\n        \"specificity\": 1,\n        \"usefulness\": 1\n      },\n      \"winner\": \"tie\",\n      \"reason\": \"Both answers completely fail by attributing the quote to Garry Tan, whereas the reference clearly establishes that Sam Altman made the statement during the conversation.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Garry Tan argues that the value of participating in Y Combinator has never been higher...\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"The reference establishes that Sam Altman, not Garry Tan, stated that the premium on doing YC is bigger than ever.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"Garry Tan argues that the premium on doing YC is bigger than ever...\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"The reference establishes that Sam Altman, not Garry Tan, made this statement.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"p-d55f29f798f63a11\",\n      \"A\": {\n        \"accuracy\": 5,\n        \"faithfulness\": 5,\n        \"specificity\": 5,\n        \"usefulness\": 5\n      },\n      \"B\": {\n        \"accuracy\": 4,\n        \"faithfulness\": 4,\n        \"specificity\": 4,\n        \"usefulness\": 4\n      },\n      \"winner\": \"A\",\n      \"reason\": \"Answer A captures Michael Seibel's specific quantitative guidance regarding equity thresholds for departures within the first year (under 2%), whereas Answer B provides vaguer guidance.\",\n      \"factual_objections\": []\n    },\n    {\n      \"id\": \"p-30f0a7d52b64b6ba\",\n      \"A\": {\n        \"accuracy\": 5,\n        \"faithfulness\": 5,\n        \"specificity\": 5,\n        \"usefulness\": 5\n      },\n      \"B\": {\n        \"accuracy\": 2,\n        \"faithfulness\": 2,\n        \"specificity\": 2,\n        \"usefulness\": 2\n      },\n      \"winner\": \"A\",\n      \"reason\": \"Answer A accurately reflects the Skool platform metrics and tenure-based churn breakdown cited by Hormozi, whereas Answer B hallucinates standard SaaS churn benchmarks (3 to 7%) that do not appear in the source material.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"B\",\n          \"claim\": \"A good monthly churn rate for a paid online community typically falls between three and seven percent...\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"The reference shows Hormozi citing platform averages of 80% monthly retention (20% churn) and best groups under 10% churn, making SaaS 3-7% figures unsupported or contradictory.\"\n        }\n      ]\n    }\n  ]\n}\n```",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 2.601,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "8b43640c5a5ec7c42a516f218efe89bac0479a6a17fa8a27acc5ecceaa8e016c"
+    }
+  ],
+  "batch": {
+    "blocked_pair_ids": [],
+    "chars_per_token": 3.2,
+    "eligible_pair_ids": [
+      "p-4cd02c8fbe46df26",
+      "p-d55f29f798f63a11",
+      "p-30f0a7d52b64b6ba"
+    ],
+    "estimated_input_tokens": 12031,
+    "id": "diagnostic12--gemini--gemini--batch-00",
+    "judge_family": "gemini",
+    "pair_ids": [
+      "p-4cd02c8fbe46df26",
+      "p-d55f29f798f63a11",
+      "p-30f0a7d52b64b6ba"
+    ],
+    "prompt_bytes": 38509,
+    "prompt_sha256": "91a67b7b7de0cbc57da704cf5f6d906650c699c1fb87685800081b908fa79db2",
+    "suite": "diagnostic12"
+  },
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "decoded": {},
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 12031,
+  "event_count": 1,
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:37:37.116116+00:00",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "parse_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "prompt_sha256": "91a67b7b7de0cbc57da704cf5f6d906650c699c1fb87685800081b908fa79db2",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 779,
+      "promptTokenCount": 11581,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 11581
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 12360
+    }
+  ]
+}

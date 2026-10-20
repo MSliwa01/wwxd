@@ -1,0 +1,7587 @@
+[
+  {
+    "actual_input_tokens": 109977,
+    "arm": "grounded",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "diagnostic12--hz-02--gemini--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 211,
+        "promptTokenCount": 109977,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 109977
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 110188
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 242,
+    "arm": "raw",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "diagnostic12--hz-02--gemini--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 339,
+        "promptTokenCount": 242,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 242
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 581
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 143613,
+    "arm": "grounded",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "diagnostic12--hz-02--opus--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 142043,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 142043,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 142043,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 142043,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 733,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 733,
+        "output_tokens_details": {
+          "thinking_tokens": 142
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 2481,
+    "arm": "raw",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "diagnostic12--hz-02--opus--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1830,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 1830,
+        "cache_read_input_tokens": 649,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 1830,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 1830,
+            "cache_read_input_tokens": 649,
+            "input_tokens": 2,
+            "output_tokens": 719,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 719,
+        "output_tokens_details": {
+          "thinking_tokens": 91
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 111056,
+    "arm": "grounded",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "diagnostic12--hz-02--sol--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 111056,
+        "output_tokens": 452,
+        "reasoning_output_tokens": 123
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 13181,
+    "arm": "raw",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "diagnostic12--hz-02--sol--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 13181,
+        "output_tokens": 673,
+        "reasoning_output_tokens": 328
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 109980,
+    "arm": "grounded",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "diagnostic12--hz-05--gemini--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 351,
+        "promptTokenCount": 109980,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 109980
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 110331
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 245,
+    "arm": "raw",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "diagnostic12--hz-05--gemini--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 303,
+        "promptTokenCount": 245,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 245
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 548
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 143614,
+    "arm": "grounded",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "diagnostic12--hz-05--opus--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 142044,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 142044,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 142044,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 142044,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 953,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 953,
+        "output_tokens_details": {
+          "thinking_tokens": 280
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 2482,
+    "arm": "raw",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "diagnostic12--hz-05--opus--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 912,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 912,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 912,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 912,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 749,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 749,
+        "output_tokens_details": {
+          "thinking_tokens": 147
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 111057,
+    "arm": "grounded",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "diagnostic12--hz-05--sol--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 111057,
+        "output_tokens": 454,
+        "reasoning_output_tokens": 106
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 13182,
+    "arm": "raw",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "diagnostic12--hz-05--sol--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 13182,
+        "output_tokens": 551,
+        "reasoning_output_tokens": 192
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 109989,
+    "arm": "grounded",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "diagnostic12--hz-09--gemini--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 408,
+        "promptTokenCount": 109989,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 109989
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 110397
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 254,
+    "arm": "raw",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "diagnostic12--hz-09--gemini--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 334,
+        "promptTokenCount": 254,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 254
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 588
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 143627,
+    "arm": "grounded",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "diagnostic12--hz-09--opus--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 142057,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 142057,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 142057,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 142057,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 800,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 800,
+        "output_tokens_details": {
+          "thinking_tokens": 254
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 2495,
+    "arm": "raw",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "diagnostic12--hz-09--opus--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 925,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 925,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 925,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 925,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 847,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 847,
+        "output_tokens_details": {
+          "thinking_tokens": 253
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 111065,
+    "arm": "grounded",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "diagnostic12--hz-09--sol--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 111065,
+        "output_tokens": 445,
+        "reasoning_output_tokens": 87
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 13190,
+    "arm": "raw",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "diagnostic12--hz-09--sol--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 13190,
+        "output_tokens": 480,
+        "reasoning_output_tokens": 142
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 110016,
+    "arm": "grounded",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "diagnostic12--hz-11--gemini--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 285,
+        "promptTokenCount": 110016,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 110016
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 110301
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 281,
+    "arm": "raw",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "diagnostic12--hz-11--gemini--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 371,
+        "promptTokenCount": 281,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 281
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 652
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 143660,
+    "arm": "grounded",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "diagnostic12--hz-11--opus--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 142090,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 142090,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 142090,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 142090,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 1496,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 1496,
+        "output_tokens_details": {
+          "thinking_tokens": 808
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 2528,
+    "arm": "raw",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "diagnostic12--hz-11--opus--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 958,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 958,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 958,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 958,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 1116,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 1116,
+        "output_tokens_details": {
+          "thinking_tokens": 493
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 111090,
+    "arm": "grounded",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "diagnostic12--hz-11--sol--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 111090,
+        "output_tokens": 575,
+        "reasoning_output_tokens": 226
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 13215,
+    "arm": "raw",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "diagnostic12--hz-11--sol--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 13215,
+        "output_tokens": 657,
+        "reasoning_output_tokens": 317
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 109983,
+    "arm": "grounded",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "diagnostic12--hz-16--gemini--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 233,
+        "promptTokenCount": 109983,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 109983
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 110216
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 248,
+    "arm": "raw",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "diagnostic12--hz-16--gemini--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 292,
+        "promptTokenCount": 248,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 248
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 540
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 143623,
+    "arm": "grounded",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "diagnostic12--hz-16--opus--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 142053,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 142053,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 142053,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 142053,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 1072,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 1072,
+        "output_tokens_details": {
+          "thinking_tokens": 493
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 2491,
+    "arm": "raw",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "diagnostic12--hz-16--opus--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 921,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 921,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 921,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 921,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 891,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 891,
+        "output_tokens_details": {
+          "thinking_tokens": 303
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 111061,
+    "arm": "grounded",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "diagnostic12--hz-16--sol--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 111061,
+        "output_tokens": 686,
+        "reasoning_output_tokens": 366
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 13186,
+    "arm": "raw",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "diagnostic12--hz-16--sol--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 13186,
+        "output_tokens": 1072,
+        "reasoning_output_tokens": 747
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 109975,
+    "arm": "grounded",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "diagnostic12--hz-20--gemini--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 301,
+        "promptTokenCount": 109975,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 109975
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 110276
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 240,
+    "arm": "raw",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "diagnostic12--hz-20--gemini--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 327,
+        "promptTokenCount": 240,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 240
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 567
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 143613,
+    "arm": "grounded",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "diagnostic12--hz-20--opus--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 142043,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 142043,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 142043,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 142043,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 833,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 833,
+        "output_tokens_details": {
+          "thinking_tokens": 224
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 2481,
+    "arm": "raw",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "diagnostic12--hz-20--opus--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 911,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 911,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 911,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 911,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 907,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 907,
+        "output_tokens_details": {
+          "thinking_tokens": 325
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 111053,
+    "arm": "grounded",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "diagnostic12--hz-20--sol--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 111053,
+        "output_tokens": 432,
+        "reasoning_output_tokens": 118
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 13178,
+    "arm": "raw",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "diagnostic12--hz-20--sol--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 13178,
+        "output_tokens": 536,
+        "reasoning_output_tokens": 216
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 172729,
+    "arm": "grounded",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "diagnostic12--yc-01--gemini--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 310,
+        "promptTokenCount": 172729,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 172729
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 173039
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 257,
+    "arm": "raw",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "diagnostic12--yc-01--gemini--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 380,
+        "promptTokenCount": 257,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 257
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 637
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 224008,
+    "arm": "grounded",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "diagnostic12--yc-01--opus--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 222438,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 222438,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 222438,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 222438,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 960,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 960,
+        "output_tokens_details": {
+          "thinking_tokens": 400
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 2493,
+    "arm": "raw",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "diagnostic12--yc-01--opus--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 923,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 923,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 923,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 923,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 829,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 829,
+        "output_tokens_details": {
+          "thinking_tokens": 304
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 166910,
+    "arm": "grounded",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "diagnostic12--yc-01--sol--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 166910,
+        "output_tokens": 434,
+        "reasoning_output_tokens": 115
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 13187,
+    "arm": "raw",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "diagnostic12--yc-01--sol--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 13187,
+        "output_tokens": 522,
+        "reasoning_output_tokens": 202
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 172709,
+    "arm": "grounded",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "diagnostic12--yc-05--gemini--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 355,
+        "promptTokenCount": 172709,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 172709
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 173064
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 237,
+    "arm": "raw",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "diagnostic12--yc-05--gemini--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 336,
+        "promptTokenCount": 237,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 237
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 573
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 223995,
+    "arm": "grounded",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "diagnostic12--yc-05--opus--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 222425,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 222425,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 222425,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 222425,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 859,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 859,
+        "output_tokens_details": {
+          "thinking_tokens": 212
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 2480,
+    "arm": "raw",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "diagnostic12--yc-05--opus--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 910,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 910,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 910,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 910,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 898,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 898,
+        "output_tokens_details": {
+          "thinking_tokens": 295
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 166897,
+    "arm": "grounded",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "diagnostic12--yc-05--sol--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 166897,
+        "output_tokens": 405,
+        "reasoning_output_tokens": 93
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 13174,
+    "arm": "raw",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "diagnostic12--yc-05--sol--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 13174,
+        "output_tokens": 641,
+        "reasoning_output_tokens": 313
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 172718,
+    "arm": "grounded",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "diagnostic12--yc-08--gemini--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 297,
+        "promptTokenCount": 172718,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 172718
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 173015
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 246,
+    "arm": "raw",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "diagnostic12--yc-08--gemini--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 312,
+        "promptTokenCount": 246,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 246
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 558
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 224008,
+    "arm": "grounded",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "diagnostic12--yc-08--opus--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 222438,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 222438,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 222438,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 222438,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 1062,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 1062,
+        "output_tokens_details": {
+          "thinking_tokens": 477
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 2493,
+    "arm": "raw",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "diagnostic12--yc-08--opus--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 923,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 923,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 923,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 923,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 796,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 796,
+        "output_tokens_details": {
+          "thinking_tokens": 230
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 166905,
+    "arm": "grounded",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "diagnostic12--yc-08--sol--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 166905,
+        "output_tokens": 407,
+        "reasoning_output_tokens": 85
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 13182,
+    "arm": "raw",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "diagnostic12--yc-08--sol--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 13182,
+        "output_tokens": 539,
+        "reasoning_output_tokens": 212
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 172749,
+    "arm": "grounded",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "diagnostic12--yc-12--gemini--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 355,
+        "promptTokenCount": 172749,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 172749
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 173104
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 277,
+    "arm": "raw",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "diagnostic12--yc-12--gemini--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 296,
+        "promptTokenCount": 277,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 277
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 573
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 224041,
+    "arm": "grounded",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "diagnostic12--yc-12--opus--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 222471,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 222471,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 222471,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 222471,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 1023,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 1023,
+        "output_tokens_details": {
+          "thinking_tokens": 375
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 2526,
+    "arm": "raw",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "diagnostic12--yc-12--opus--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 956,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 956,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 956,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 956,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 1074,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 1074,
+        "output_tokens_details": {
+          "thinking_tokens": 459
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 166932,
+    "arm": "grounded",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "diagnostic12--yc-12--sol--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 166932,
+        "output_tokens": 457,
+        "reasoning_output_tokens": 124
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 13209,
+    "arm": "raw",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "diagnostic12--yc-12--sol--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 13209,
+        "output_tokens": 600,
+        "reasoning_output_tokens": 279
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 172715,
+    "arm": "grounded",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "diagnostic12--yc-17--gemini--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 305,
+        "promptTokenCount": 172715,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 172715
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 173020
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 243,
+    "arm": "raw",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "diagnostic12--yc-17--gemini--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 363,
+        "promptTokenCount": 243,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 243
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 606
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 223998,
+    "arm": "grounded",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "diagnostic12--yc-17--opus--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 222428,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 222428,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 222428,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 222428,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 920,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 920,
+        "output_tokens_details": {
+          "thinking_tokens": 374
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 2483,
+    "arm": "raw",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "diagnostic12--yc-17--opus--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 913,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 913,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 913,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 913,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 754,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 754,
+        "output_tokens_details": {
+          "thinking_tokens": 174
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 166904,
+    "arm": "grounded",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "diagnostic12--yc-17--sol--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 166904,
+        "output_tokens": 591,
+        "reasoning_output_tokens": 246
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 13181,
+    "arm": "raw",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "diagnostic12--yc-17--sol--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 13181,
+        "output_tokens": 538,
+        "reasoning_output_tokens": 212
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 172717,
+    "arm": "grounded",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "diagnostic12--yc-20--gemini--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 163,
+        "promptTokenCount": 172717,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 172717
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 172880
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 245,
+    "arm": "raw",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "diagnostic12--yc-20--gemini--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 311,
+        "promptTokenCount": 245,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 245
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 556
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 224007,
+    "arm": "grounded",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "diagnostic12--yc-20--opus--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 222437,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 222437,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 222437,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 222437,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 913,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 913,
+        "output_tokens_details": {
+          "thinking_tokens": 262
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 2492,
+    "arm": "raw",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "diagnostic12--yc-20--opus--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 922,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 922,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 922,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 922,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 827,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 827,
+        "output_tokens_details": {
+          "thinking_tokens": 213
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 166904,
+    "arm": "grounded",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "diagnostic12--yc-20--sol--grounded",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 166904,
+        "output_tokens": 546,
+        "reasoning_output_tokens": 225
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 13181,
+    "arm": "raw",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "diagnostic12--yc-20--sol--raw",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 13181,
+        "output_tokens": 673,
+        "reasoning_output_tokens": 341
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 110239,
+    "arm": "grounded",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "newadvice12--advice-hz-01--gemini--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 815,
+        "promptTokenCount": 110239,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 110239
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 111054
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 504,
+    "arm": "raw",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "newadvice12--advice-hz-01--gemini--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 373,
+        "promptTokenCount": 504,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 504
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 877
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 143941,
+    "arm": "grounded",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "newadvice12--advice-hz-01--opus--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 142371,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 142371,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 142371,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 142371,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 3165,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 3165,
+        "output_tokens_details": {
+          "thinking_tokens": 2325
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 2809,
+    "arm": "raw",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "newadvice12--advice-hz-01--opus--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1239,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 1239,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 1239,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 1239,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 2625,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 2625,
+        "output_tokens_details": {
+          "thinking_tokens": 1811
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 111296,
+    "arm": "grounded",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "newadvice12--advice-hz-01--sol--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 111296,
+        "output_tokens": 758,
+        "reasoning_output_tokens": 341
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 13421,
+    "arm": "raw",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "newadvice12--advice-hz-01--sol--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 13421,
+        "output_tokens": 1096,
+        "reasoning_output_tokens": 688
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 110165,
+    "arm": "grounded",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "newadvice12--advice-hz-02--gemini--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 619,
+        "promptTokenCount": 110165,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 110165
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 110784
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 430,
+    "arm": "raw",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "newadvice12--advice-hz-02--gemini--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 376,
+        "promptTokenCount": 430,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 430
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 806
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 143856,
+    "arm": "grounded",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "newadvice12--advice-hz-02--opus--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 142286,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 142286,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 142286,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 142286,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 2016,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 2016,
+        "output_tokens_details": {
+          "thinking_tokens": 1264
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 2724,
+    "arm": "raw",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "newadvice12--advice-hz-02--opus--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1154,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 1154,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 1154,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 1154,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 1907,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 1907,
+        "output_tokens_details": {
+          "thinking_tokens": 1111
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 111234,
+    "arm": "grounded",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "newadvice12--advice-hz-02--sol--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 111234,
+        "output_tokens": 746,
+        "reasoning_output_tokens": 320
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 13359,
+    "arm": "raw",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "newadvice12--advice-hz-02--sol--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 13359,
+        "output_tokens": 764,
+        "reasoning_output_tokens": 369
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 110130,
+    "arm": "grounded",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "newadvice12--advice-hz-03--gemini--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 450,
+        "promptTokenCount": 110130,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 110130
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 110580
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 395,
+    "arm": "raw",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "newadvice12--advice-hz-03--gemini--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 343,
+        "promptTokenCount": 395,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 395
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 738
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 143808,
+    "arm": "grounded",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "newadvice12--advice-hz-03--opus--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 142238,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 142238,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 142238,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 142238,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 1786,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 1786,
+        "output_tokens_details": {
+          "thinking_tokens": 926
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 2676,
+    "arm": "raw",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "newadvice12--advice-hz-03--opus--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1106,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 1106,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 1106,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 1106,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 1585,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 1585,
+        "output_tokens_details": {
+          "thinking_tokens": 822
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 111190,
+    "arm": "grounded",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "newadvice12--advice-hz-03--sol--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 111190,
+        "output_tokens": 814,
+        "reasoning_output_tokens": 431
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 13315,
+    "arm": "raw",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "newadvice12--advice-hz-03--sol--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 13315,
+        "output_tokens": 859,
+        "reasoning_output_tokens": 461
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 110212,
+    "arm": "grounded",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "newadvice12--advice-hz-04--gemini--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 681,
+        "promptTokenCount": 110212,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 110212
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 110893
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 477,
+    "arm": "raw",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "newadvice12--advice-hz-04--gemini--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 369,
+        "promptTokenCount": 477,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 477
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 846
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 143916,
+    "arm": "grounded",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "newadvice12--advice-hz-04--opus--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 142346,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 142346,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 142346,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 142346,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 3060,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 3060,
+        "output_tokens_details": {
+          "thinking_tokens": 2277
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 2784,
+    "arm": "raw",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "newadvice12--advice-hz-04--opus--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1214,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 1214,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 1214,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 1214,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 1904,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 1904,
+        "output_tokens_details": {
+          "thinking_tokens": 1047
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 111275,
+    "arm": "grounded",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "newadvice12--advice-hz-04--sol--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 111275,
+        "output_tokens": 867,
+        "reasoning_output_tokens": 459
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 13400,
+    "arm": "raw",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "newadvice12--advice-hz-04--sol--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 13400,
+        "output_tokens": 764,
+        "reasoning_output_tokens": 387
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": null,
+    "arm": "grounded",
+    "family": "gemini",
+    "finish_reasons": null,
+    "id": "newadvice12--advice-hz-05--gemini--grounded",
+    "status": "failed",
+    "suite": "newadvice12",
+    "usage_events": null
+  },
+  {
+    "actual_input_tokens": 394,
+    "arm": "raw",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "newadvice12--advice-hz-05--gemini--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 349,
+        "promptTokenCount": 394,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 394
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 743
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 143787,
+    "arm": "grounded",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "newadvice12--advice-hz-05--opus--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 142217,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 142217,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 142217,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 142217,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 1525,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 1525,
+        "output_tokens_details": {
+          "thinking_tokens": 896
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 2655,
+    "arm": "raw",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "newadvice12--advice-hz-05--opus--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1085,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 1085,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 1085,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 1085,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 1594,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 1594,
+        "output_tokens_details": {
+          "thinking_tokens": 933
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 111193,
+    "arm": "grounded",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "newadvice12--advice-hz-05--sol--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 111193,
+        "output_tokens": 731,
+        "reasoning_output_tokens": 370
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 13318,
+    "arm": "raw",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "newadvice12--advice-hz-05--sol--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 13318,
+        "output_tokens": 977,
+        "reasoning_output_tokens": 625
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 110134,
+    "arm": "grounded",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "newadvice12--advice-hz-06--gemini--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 429,
+        "promptTokenCount": 110134,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 110134
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 110563
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 399,
+    "arm": "raw",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "newadvice12--advice-hz-06--gemini--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 304,
+        "promptTokenCount": 399,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 399
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 703
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 143795,
+    "arm": "grounded",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "newadvice12--advice-hz-06--opus--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 142225,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 142225,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 142225,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 142225,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 1334,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 1334,
+        "output_tokens_details": {
+          "thinking_tokens": 624
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 2663,
+    "arm": "raw",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "newadvice12--advice-hz-06--opus--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1093,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 1093,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 1093,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 1093,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 792,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 792,
+        "output_tokens_details": {
+          "thinking_tokens": 170
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 111194,
+    "arm": "grounded",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "newadvice12--advice-hz-06--sol--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 111194,
+        "output_tokens": 628,
+        "reasoning_output_tokens": 233
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 13319,
+    "arm": "raw",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "newadvice12--advice-hz-06--sol--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 13319,
+        "output_tokens": 675,
+        "reasoning_output_tokens": 307
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 172885,
+    "arm": "grounded",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "newadvice12--advice-yc-01--gemini--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 390,
+        "promptTokenCount": 172885,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 172885
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 173275
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 413,
+    "arm": "raw",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "newadvice12--advice-yc-01--gemini--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 336,
+        "promptTokenCount": 413,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 413
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 749
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 224247,
+    "arm": "grounded",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "newadvice12--advice-yc-01--opus--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 222677,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 222677,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 222677,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 222677,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 1042,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 1042,
+        "output_tokens_details": {
+          "thinking_tokens": 406
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 2732,
+    "arm": "raw",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "newadvice12--advice-yc-01--opus--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1162,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 1162,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 1162,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 1162,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 794,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 794,
+        "output_tokens_details": {
+          "thinking_tokens": 121
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 167069,
+    "arm": "grounded",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "newadvice12--advice-yc-01--sol--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 167069,
+        "output_tokens": 484,
+        "reasoning_output_tokens": 104
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 13346,
+    "arm": "raw",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "newadvice12--advice-yc-01--sol--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 13346,
+        "output_tokens": 582,
+        "reasoning_output_tokens": 223
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 172895,
+    "arm": "grounded",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "newadvice12--advice-yc-02--gemini--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 541,
+        "promptTokenCount": 172895,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 172895
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 173436
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 423,
+    "arm": "raw",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "newadvice12--advice-yc-02--gemini--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 371,
+        "promptTokenCount": 423,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 423
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 794
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 224244,
+    "arm": "grounded",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "newadvice12--advice-yc-02--opus--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 222674,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 222674,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 222674,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 222674,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 1545,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 1545,
+        "output_tokens_details": {
+          "thinking_tokens": 843
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 2729,
+    "arm": "raw",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "newadvice12--advice-yc-02--opus--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1159,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 1159,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 1159,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 1159,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 1224,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 1224,
+        "output_tokens_details": {
+          "thinking_tokens": 502
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 167069,
+    "arm": "grounded",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "newadvice12--advice-yc-02--sol--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 167069,
+        "output_tokens": 650,
+        "reasoning_output_tokens": 291
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 13346,
+    "arm": "raw",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "newadvice12--advice-yc-02--sol--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 13346,
+        "output_tokens": 727,
+        "reasoning_output_tokens": 371
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 172814,
+    "arm": "grounded",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "newadvice12--advice-yc-03--gemini--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 266,
+        "promptTokenCount": 172814,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 172814
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 173080
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 342,
+    "arm": "raw",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "newadvice12--advice-yc-03--gemini--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 305,
+        "promptTokenCount": 342,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 342
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 647
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 224129,
+    "arm": "grounded",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "newadvice12--advice-yc-03--opus--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 222559,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 222559,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 222559,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 222559,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 1515,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 1515,
+        "output_tokens_details": {
+          "thinking_tokens": 919
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 2614,
+    "arm": "raw",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "newadvice12--advice-yc-03--opus--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1044,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 1044,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 1044,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 1044,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 1012,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 1012,
+        "output_tokens_details": {
+          "thinking_tokens": 425
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 167002,
+    "arm": "grounded",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "newadvice12--advice-yc-03--sol--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 167002,
+        "output_tokens": 515,
+        "reasoning_output_tokens": 169
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 13279,
+    "arm": "raw",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "newadvice12--advice-yc-03--sol--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 13279,
+        "output_tokens": 616,
+        "reasoning_output_tokens": 289
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 172836,
+    "arm": "grounded",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "newadvice12--advice-yc-04--gemini--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 461,
+        "promptTokenCount": 172836,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 172836
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 173297
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 364,
+    "arm": "raw",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "newadvice12--advice-yc-04--gemini--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 305,
+        "promptTokenCount": 364,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 364
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 669
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 224181,
+    "arm": "grounded",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "newadvice12--advice-yc-04--opus--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 222611,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 222611,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 222611,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 222611,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 1014,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 1014,
+        "output_tokens_details": {
+          "thinking_tokens": 360
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 2666,
+    "arm": "raw",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "newadvice12--advice-yc-04--opus--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1096,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 1096,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 1096,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 1096,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 717,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 717,
+        "output_tokens_details": {
+          "thinking_tokens": 80
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 167024,
+    "arm": "grounded",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "newadvice12--advice-yc-04--sol--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 167024,
+        "output_tokens": 627,
+        "reasoning_output_tokens": 235
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 13301,
+    "arm": "raw",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "newadvice12--advice-yc-04--sol--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 13301,
+        "output_tokens": 634,
+        "reasoning_output_tokens": 246
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 172861,
+    "arm": "grounded",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "newadvice12--advice-yc-05--gemini--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 276,
+        "promptTokenCount": 172861,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 172861
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 173137
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 389,
+    "arm": "raw",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "newadvice12--advice-yc-05--gemini--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 300,
+        "promptTokenCount": 389,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 389
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 689
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 224201,
+    "arm": "grounded",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "newadvice12--advice-yc-05--opus--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 222631,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 222631,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 222631,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 222631,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 1297,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 1297,
+        "output_tokens_details": {
+          "thinking_tokens": 628
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 2686,
+    "arm": "raw",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "newadvice12--advice-yc-05--opus--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1116,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 1116,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 1116,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 1116,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 1014,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 1014,
+        "output_tokens_details": {
+          "thinking_tokens": 406
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 167041,
+    "arm": "grounded",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "newadvice12--advice-yc-05--sol--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 167041,
+        "output_tokens": 592,
+        "reasoning_output_tokens": 235
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 13318,
+    "arm": "raw",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "newadvice12--advice-yc-05--sol--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 13318,
+        "output_tokens": 601,
+        "reasoning_output_tokens": 260
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 172855,
+    "arm": "grounded",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "newadvice12--advice-yc-06--gemini--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 367,
+        "promptTokenCount": 172855,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 172855
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 173222
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 383,
+    "arm": "raw",
+    "family": "gemini",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "id": "newadvice12--advice-yc-06--gemini--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 300,
+        "promptTokenCount": 383,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 383
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 683
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 224207,
+    "arm": "grounded",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "newadvice12--advice-yc-06--opus--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 222637,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 222637,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 222637,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 222637,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 1520,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 1520,
+        "output_tokens_details": {
+          "thinking_tokens": 879
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 2692,
+    "arm": "raw",
+    "family": "opus",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "id": "newadvice12--advice-yc-06--opus--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1122,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 1122,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 1122,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 1122,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 912,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 912,
+        "output_tokens_details": {
+          "thinking_tokens": 314
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 167044,
+    "arm": "grounded",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "newadvice12--advice-yc-06--sol--grounded",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 167044,
+        "output_tokens": 475,
+        "reasoning_output_tokens": 114
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 13321,
+    "arm": "raw",
+    "family": "sol",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "id": "newadvice12--advice-yc-06--sol--raw",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 13321,
+        "output_tokens": 562,
+        "reasoning_output_tokens": 203
+      }
+    ]
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 93801,
+    "family": "sol",
+    "flags": [],
+    "grounded_input_tokens": 111056,
+    "input_token_delta": 97875,
+    "kind": "context_usage_pair",
+    "maximum_delta": 187602.0,
+    "minimum_delta": 46900.5,
+    "question_key": "diagnostic12--hz-02",
+    "raw_input_tokens": 13181
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 137242,
+    "family": "opus",
+    "flags": [],
+    "grounded_input_tokens": 143613,
+    "input_token_delta": 141132,
+    "kind": "context_usage_pair",
+    "maximum_delta": 274484.0,
+    "minimum_delta": 68621.0,
+    "question_key": "diagnostic12--hz-02",
+    "raw_input_tokens": 2481
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 104647,
+    "family": "gemini",
+    "flags": [],
+    "grounded_input_tokens": 109977,
+    "input_token_delta": 109735,
+    "kind": "context_usage_pair",
+    "maximum_delta": 209294.0,
+    "minimum_delta": 52323.5,
+    "question_key": "diagnostic12--hz-02",
+    "raw_input_tokens": 242
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 93801,
+    "family": "sol",
+    "flags": [],
+    "grounded_input_tokens": 111057,
+    "input_token_delta": 97875,
+    "kind": "context_usage_pair",
+    "maximum_delta": 187602.0,
+    "minimum_delta": 46900.5,
+    "question_key": "diagnostic12--hz-05",
+    "raw_input_tokens": 13182
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 137242,
+    "family": "opus",
+    "flags": [],
+    "grounded_input_tokens": 143614,
+    "input_token_delta": 141132,
+    "kind": "context_usage_pair",
+    "maximum_delta": 274484.0,
+    "minimum_delta": 68621.0,
+    "question_key": "diagnostic12--hz-05",
+    "raw_input_tokens": 2482
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 104647,
+    "family": "gemini",
+    "flags": [],
+    "grounded_input_tokens": 109980,
+    "input_token_delta": 109735,
+    "kind": "context_usage_pair",
+    "maximum_delta": 209294.0,
+    "minimum_delta": 52323.5,
+    "question_key": "diagnostic12--hz-05",
+    "raw_input_tokens": 245
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 93801,
+    "family": "sol",
+    "flags": [],
+    "grounded_input_tokens": 111065,
+    "input_token_delta": 97875,
+    "kind": "context_usage_pair",
+    "maximum_delta": 187602.0,
+    "minimum_delta": 46900.5,
+    "question_key": "diagnostic12--hz-09",
+    "raw_input_tokens": 13190
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 137242,
+    "family": "opus",
+    "flags": [],
+    "grounded_input_tokens": 143627,
+    "input_token_delta": 141132,
+    "kind": "context_usage_pair",
+    "maximum_delta": 274484.0,
+    "minimum_delta": 68621.0,
+    "question_key": "diagnostic12--hz-09",
+    "raw_input_tokens": 2495
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 104647,
+    "family": "gemini",
+    "flags": [],
+    "grounded_input_tokens": 109989,
+    "input_token_delta": 109735,
+    "kind": "context_usage_pair",
+    "maximum_delta": 209294.0,
+    "minimum_delta": 52323.5,
+    "question_key": "diagnostic12--hz-09",
+    "raw_input_tokens": 254
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 93801,
+    "family": "sol",
+    "flags": [],
+    "grounded_input_tokens": 111090,
+    "input_token_delta": 97875,
+    "kind": "context_usage_pair",
+    "maximum_delta": 187602.0,
+    "minimum_delta": 46900.5,
+    "question_key": "diagnostic12--hz-11",
+    "raw_input_tokens": 13215
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 137242,
+    "family": "opus",
+    "flags": [],
+    "grounded_input_tokens": 143660,
+    "input_token_delta": 141132,
+    "kind": "context_usage_pair",
+    "maximum_delta": 274484.0,
+    "minimum_delta": 68621.0,
+    "question_key": "diagnostic12--hz-11",
+    "raw_input_tokens": 2528
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 104647,
+    "family": "gemini",
+    "flags": [],
+    "grounded_input_tokens": 110016,
+    "input_token_delta": 109735,
+    "kind": "context_usage_pair",
+    "maximum_delta": 209294.0,
+    "minimum_delta": 52323.5,
+    "question_key": "diagnostic12--hz-11",
+    "raw_input_tokens": 281
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 93801,
+    "family": "sol",
+    "flags": [],
+    "grounded_input_tokens": 111061,
+    "input_token_delta": 97875,
+    "kind": "context_usage_pair",
+    "maximum_delta": 187602.0,
+    "minimum_delta": 46900.5,
+    "question_key": "diagnostic12--hz-16",
+    "raw_input_tokens": 13186
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 137242,
+    "family": "opus",
+    "flags": [],
+    "grounded_input_tokens": 143623,
+    "input_token_delta": 141132,
+    "kind": "context_usage_pair",
+    "maximum_delta": 274484.0,
+    "minimum_delta": 68621.0,
+    "question_key": "diagnostic12--hz-16",
+    "raw_input_tokens": 2491
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 104647,
+    "family": "gemini",
+    "flags": [],
+    "grounded_input_tokens": 109983,
+    "input_token_delta": 109735,
+    "kind": "context_usage_pair",
+    "maximum_delta": 209294.0,
+    "minimum_delta": 52323.5,
+    "question_key": "diagnostic12--hz-16",
+    "raw_input_tokens": 248
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 93801,
+    "family": "sol",
+    "flags": [],
+    "grounded_input_tokens": 111053,
+    "input_token_delta": 97875,
+    "kind": "context_usage_pair",
+    "maximum_delta": 187602.0,
+    "minimum_delta": 46900.5,
+    "question_key": "diagnostic12--hz-20",
+    "raw_input_tokens": 13178
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 137242,
+    "family": "opus",
+    "flags": [],
+    "grounded_input_tokens": 143613,
+    "input_token_delta": 141132,
+    "kind": "context_usage_pair",
+    "maximum_delta": 274484.0,
+    "minimum_delta": 68621.0,
+    "question_key": "diagnostic12--hz-20",
+    "raw_input_tokens": 2481
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 104647,
+    "family": "gemini",
+    "flags": [],
+    "grounded_input_tokens": 109975,
+    "input_token_delta": 109735,
+    "kind": "context_usage_pair",
+    "maximum_delta": 209294.0,
+    "minimum_delta": 52323.5,
+    "question_key": "diagnostic12--hz-20",
+    "raw_input_tokens": 240
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 154539,
+    "family": "sol",
+    "flags": [],
+    "grounded_input_tokens": 166910,
+    "input_token_delta": 153723,
+    "kind": "context_usage_pair",
+    "maximum_delta": 309078.0,
+    "minimum_delta": 77269.5,
+    "question_key": "diagnostic12--yc-01",
+    "raw_input_tokens": 13187
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 226109,
+    "family": "opus",
+    "flags": [],
+    "grounded_input_tokens": 224008,
+    "input_token_delta": 221515,
+    "kind": "context_usage_pair",
+    "maximum_delta": 452218.0,
+    "minimum_delta": 113054.5,
+    "question_key": "diagnostic12--yc-01",
+    "raw_input_tokens": 2493
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 172408,
+    "family": "gemini",
+    "flags": [],
+    "grounded_input_tokens": 172729,
+    "input_token_delta": 172472,
+    "kind": "context_usage_pair",
+    "maximum_delta": 344816.0,
+    "minimum_delta": 86204.0,
+    "question_key": "diagnostic12--yc-01",
+    "raw_input_tokens": 257
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 154539,
+    "family": "sol",
+    "flags": [],
+    "grounded_input_tokens": 166897,
+    "input_token_delta": 153723,
+    "kind": "context_usage_pair",
+    "maximum_delta": 309078.0,
+    "minimum_delta": 77269.5,
+    "question_key": "diagnostic12--yc-05",
+    "raw_input_tokens": 13174
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 226109,
+    "family": "opus",
+    "flags": [],
+    "grounded_input_tokens": 223995,
+    "input_token_delta": 221515,
+    "kind": "context_usage_pair",
+    "maximum_delta": 452218.0,
+    "minimum_delta": 113054.5,
+    "question_key": "diagnostic12--yc-05",
+    "raw_input_tokens": 2480
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 172408,
+    "family": "gemini",
+    "flags": [],
+    "grounded_input_tokens": 172709,
+    "input_token_delta": 172472,
+    "kind": "context_usage_pair",
+    "maximum_delta": 344816.0,
+    "minimum_delta": 86204.0,
+    "question_key": "diagnostic12--yc-05",
+    "raw_input_tokens": 237
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 154539,
+    "family": "sol",
+    "flags": [],
+    "grounded_input_tokens": 166905,
+    "input_token_delta": 153723,
+    "kind": "context_usage_pair",
+    "maximum_delta": 309078.0,
+    "minimum_delta": 77269.5,
+    "question_key": "diagnostic12--yc-08",
+    "raw_input_tokens": 13182
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 226109,
+    "family": "opus",
+    "flags": [],
+    "grounded_input_tokens": 224008,
+    "input_token_delta": 221515,
+    "kind": "context_usage_pair",
+    "maximum_delta": 452218.0,
+    "minimum_delta": 113054.5,
+    "question_key": "diagnostic12--yc-08",
+    "raw_input_tokens": 2493
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 172408,
+    "family": "gemini",
+    "flags": [],
+    "grounded_input_tokens": 172718,
+    "input_token_delta": 172472,
+    "kind": "context_usage_pair",
+    "maximum_delta": 344816.0,
+    "minimum_delta": 86204.0,
+    "question_key": "diagnostic12--yc-08",
+    "raw_input_tokens": 246
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 154539,
+    "family": "sol",
+    "flags": [],
+    "grounded_input_tokens": 166932,
+    "input_token_delta": 153723,
+    "kind": "context_usage_pair",
+    "maximum_delta": 309078.0,
+    "minimum_delta": 77269.5,
+    "question_key": "diagnostic12--yc-12",
+    "raw_input_tokens": 13209
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 226109,
+    "family": "opus",
+    "flags": [],
+    "grounded_input_tokens": 224041,
+    "input_token_delta": 221515,
+    "kind": "context_usage_pair",
+    "maximum_delta": 452218.0,
+    "minimum_delta": 113054.5,
+    "question_key": "diagnostic12--yc-12",
+    "raw_input_tokens": 2526
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 172408,
+    "family": "gemini",
+    "flags": [],
+    "grounded_input_tokens": 172749,
+    "input_token_delta": 172472,
+    "kind": "context_usage_pair",
+    "maximum_delta": 344816.0,
+    "minimum_delta": 86204.0,
+    "question_key": "diagnostic12--yc-12",
+    "raw_input_tokens": 277
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 154539,
+    "family": "sol",
+    "flags": [],
+    "grounded_input_tokens": 166904,
+    "input_token_delta": 153723,
+    "kind": "context_usage_pair",
+    "maximum_delta": 309078.0,
+    "minimum_delta": 77269.5,
+    "question_key": "diagnostic12--yc-17",
+    "raw_input_tokens": 13181
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 226109,
+    "family": "opus",
+    "flags": [],
+    "grounded_input_tokens": 223998,
+    "input_token_delta": 221515,
+    "kind": "context_usage_pair",
+    "maximum_delta": 452218.0,
+    "minimum_delta": 113054.5,
+    "question_key": "diagnostic12--yc-17",
+    "raw_input_tokens": 2483
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 172408,
+    "family": "gemini",
+    "flags": [],
+    "grounded_input_tokens": 172715,
+    "input_token_delta": 172472,
+    "kind": "context_usage_pair",
+    "maximum_delta": 344816.0,
+    "minimum_delta": 86204.0,
+    "question_key": "diagnostic12--yc-17",
+    "raw_input_tokens": 243
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 154539,
+    "family": "sol",
+    "flags": [],
+    "grounded_input_tokens": 166904,
+    "input_token_delta": 153723,
+    "kind": "context_usage_pair",
+    "maximum_delta": 309078.0,
+    "minimum_delta": 77269.5,
+    "question_key": "diagnostic12--yc-20",
+    "raw_input_tokens": 13181
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 226109,
+    "family": "opus",
+    "flags": [],
+    "grounded_input_tokens": 224007,
+    "input_token_delta": 221515,
+    "kind": "context_usage_pair",
+    "maximum_delta": 452218.0,
+    "minimum_delta": 113054.5,
+    "question_key": "diagnostic12--yc-20",
+    "raw_input_tokens": 2492
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 172408,
+    "family": "gemini",
+    "flags": [],
+    "grounded_input_tokens": 172717,
+    "input_token_delta": 172472,
+    "kind": "context_usage_pair",
+    "maximum_delta": 344816.0,
+    "minimum_delta": 86204.0,
+    "question_key": "diagnostic12--yc-20",
+    "raw_input_tokens": 245
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 93801,
+    "family": "sol",
+    "flags": [],
+    "grounded_input_tokens": 111296,
+    "input_token_delta": 97875,
+    "kind": "context_usage_pair",
+    "maximum_delta": 187602.0,
+    "minimum_delta": 46900.5,
+    "question_key": "newadvice12--advice-hz-01",
+    "raw_input_tokens": 13421
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 137242,
+    "family": "opus",
+    "flags": [],
+    "grounded_input_tokens": 143941,
+    "input_token_delta": 141132,
+    "kind": "context_usage_pair",
+    "maximum_delta": 274484.0,
+    "minimum_delta": 68621.0,
+    "question_key": "newadvice12--advice-hz-01",
+    "raw_input_tokens": 2809
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 104647,
+    "family": "gemini",
+    "flags": [],
+    "grounded_input_tokens": 110239,
+    "input_token_delta": 109735,
+    "kind": "context_usage_pair",
+    "maximum_delta": 209294.0,
+    "minimum_delta": 52323.5,
+    "question_key": "newadvice12--advice-hz-01",
+    "raw_input_tokens": 504
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 93801,
+    "family": "sol",
+    "flags": [],
+    "grounded_input_tokens": 111234,
+    "input_token_delta": 97875,
+    "kind": "context_usage_pair",
+    "maximum_delta": 187602.0,
+    "minimum_delta": 46900.5,
+    "question_key": "newadvice12--advice-hz-02",
+    "raw_input_tokens": 13359
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 137242,
+    "family": "opus",
+    "flags": [],
+    "grounded_input_tokens": 143856,
+    "input_token_delta": 141132,
+    "kind": "context_usage_pair",
+    "maximum_delta": 274484.0,
+    "minimum_delta": 68621.0,
+    "question_key": "newadvice12--advice-hz-02",
+    "raw_input_tokens": 2724
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 104647,
+    "family": "gemini",
+    "flags": [],
+    "grounded_input_tokens": 110165,
+    "input_token_delta": 109735,
+    "kind": "context_usage_pair",
+    "maximum_delta": 209294.0,
+    "minimum_delta": 52323.5,
+    "question_key": "newadvice12--advice-hz-02",
+    "raw_input_tokens": 430
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 93801,
+    "family": "sol",
+    "flags": [],
+    "grounded_input_tokens": 111190,
+    "input_token_delta": 97875,
+    "kind": "context_usage_pair",
+    "maximum_delta": 187602.0,
+    "minimum_delta": 46900.5,
+    "question_key": "newadvice12--advice-hz-03",
+    "raw_input_tokens": 13315
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 137242,
+    "family": "opus",
+    "flags": [],
+    "grounded_input_tokens": 143808,
+    "input_token_delta": 141132,
+    "kind": "context_usage_pair",
+    "maximum_delta": 274484.0,
+    "minimum_delta": 68621.0,
+    "question_key": "newadvice12--advice-hz-03",
+    "raw_input_tokens": 2676
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 104647,
+    "family": "gemini",
+    "flags": [],
+    "grounded_input_tokens": 110130,
+    "input_token_delta": 109735,
+    "kind": "context_usage_pair",
+    "maximum_delta": 209294.0,
+    "minimum_delta": 52323.5,
+    "question_key": "newadvice12--advice-hz-03",
+    "raw_input_tokens": 395
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 93801,
+    "family": "sol",
+    "flags": [],
+    "grounded_input_tokens": 111275,
+    "input_token_delta": 97875,
+    "kind": "context_usage_pair",
+    "maximum_delta": 187602.0,
+    "minimum_delta": 46900.5,
+    "question_key": "newadvice12--advice-hz-04",
+    "raw_input_tokens": 13400
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 137242,
+    "family": "opus",
+    "flags": [],
+    "grounded_input_tokens": 143916,
+    "input_token_delta": 141132,
+    "kind": "context_usage_pair",
+    "maximum_delta": 274484.0,
+    "minimum_delta": 68621.0,
+    "question_key": "newadvice12--advice-hz-04",
+    "raw_input_tokens": 2784
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 104647,
+    "family": "gemini",
+    "flags": [],
+    "grounded_input_tokens": 110212,
+    "input_token_delta": 109735,
+    "kind": "context_usage_pair",
+    "maximum_delta": 209294.0,
+    "minimum_delta": 52323.5,
+    "question_key": "newadvice12--advice-hz-04",
+    "raw_input_tokens": 477
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 93801,
+    "family": "sol",
+    "flags": [],
+    "grounded_input_tokens": 111193,
+    "input_token_delta": 97875,
+    "kind": "context_usage_pair",
+    "maximum_delta": 187602.0,
+    "minimum_delta": 46900.5,
+    "question_key": "newadvice12--advice-hz-05",
+    "raw_input_tokens": 13318
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 137242,
+    "family": "opus",
+    "flags": [],
+    "grounded_input_tokens": 143787,
+    "input_token_delta": 141132,
+    "kind": "context_usage_pair",
+    "maximum_delta": 274484.0,
+    "minimum_delta": 68621.0,
+    "question_key": "newadvice12--advice-hz-05",
+    "raw_input_tokens": 2655
+  },
+  {
+    "eligible": false,
+    "expected_context_token_delta": 104647,
+    "family": "gemini",
+    "flags": [
+      "answer_incomplete",
+      "context_usage_missing"
+    ],
+    "grounded_input_tokens": null,
+    "input_token_delta": null,
+    "kind": "context_usage_pair",
+    "maximum_delta": 209294.0,
+    "minimum_delta": 52323.5,
+    "question_key": "newadvice12--advice-hz-05",
+    "raw_input_tokens": 394
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 93801,
+    "family": "sol",
+    "flags": [],
+    "grounded_input_tokens": 111194,
+    "input_token_delta": 97875,
+    "kind": "context_usage_pair",
+    "maximum_delta": 187602.0,
+    "minimum_delta": 46900.5,
+    "question_key": "newadvice12--advice-hz-06",
+    "raw_input_tokens": 13319
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 137242,
+    "family": "opus",
+    "flags": [],
+    "grounded_input_tokens": 143795,
+    "input_token_delta": 141132,
+    "kind": "context_usage_pair",
+    "maximum_delta": 274484.0,
+    "minimum_delta": 68621.0,
+    "question_key": "newadvice12--advice-hz-06",
+    "raw_input_tokens": 2663
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 104647,
+    "family": "gemini",
+    "flags": [],
+    "grounded_input_tokens": 110134,
+    "input_token_delta": 109735,
+    "kind": "context_usage_pair",
+    "maximum_delta": 209294.0,
+    "minimum_delta": 52323.5,
+    "question_key": "newadvice12--advice-hz-06",
+    "raw_input_tokens": 399
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 154539,
+    "family": "sol",
+    "flags": [],
+    "grounded_input_tokens": 167069,
+    "input_token_delta": 153723,
+    "kind": "context_usage_pair",
+    "maximum_delta": 309078.0,
+    "minimum_delta": 77269.5,
+    "question_key": "newadvice12--advice-yc-01",
+    "raw_input_tokens": 13346
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 226109,
+    "family": "opus",
+    "flags": [],
+    "grounded_input_tokens": 224247,
+    "input_token_delta": 221515,
+    "kind": "context_usage_pair",
+    "maximum_delta": 452218.0,
+    "minimum_delta": 113054.5,
+    "question_key": "newadvice12--advice-yc-01",
+    "raw_input_tokens": 2732
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 172408,
+    "family": "gemini",
+    "flags": [],
+    "grounded_input_tokens": 172885,
+    "input_token_delta": 172472,
+    "kind": "context_usage_pair",
+    "maximum_delta": 344816.0,
+    "minimum_delta": 86204.0,
+    "question_key": "newadvice12--advice-yc-01",
+    "raw_input_tokens": 413
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 154539,
+    "family": "sol",
+    "flags": [],
+    "grounded_input_tokens": 167069,
+    "input_token_delta": 153723,
+    "kind": "context_usage_pair",
+    "maximum_delta": 309078.0,
+    "minimum_delta": 77269.5,
+    "question_key": "newadvice12--advice-yc-02",
+    "raw_input_tokens": 13346
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 226109,
+    "family": "opus",
+    "flags": [],
+    "grounded_input_tokens": 224244,
+    "input_token_delta": 221515,
+    "kind": "context_usage_pair",
+    "maximum_delta": 452218.0,
+    "minimum_delta": 113054.5,
+    "question_key": "newadvice12--advice-yc-02",
+    "raw_input_tokens": 2729
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 172408,
+    "family": "gemini",
+    "flags": [],
+    "grounded_input_tokens": 172895,
+    "input_token_delta": 172472,
+    "kind": "context_usage_pair",
+    "maximum_delta": 344816.0,
+    "minimum_delta": 86204.0,
+    "question_key": "newadvice12--advice-yc-02",
+    "raw_input_tokens": 423
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 154539,
+    "family": "sol",
+    "flags": [],
+    "grounded_input_tokens": 167002,
+    "input_token_delta": 153723,
+    "kind": "context_usage_pair",
+    "maximum_delta": 309078.0,
+    "minimum_delta": 77269.5,
+    "question_key": "newadvice12--advice-yc-03",
+    "raw_input_tokens": 13279
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 226109,
+    "family": "opus",
+    "flags": [],
+    "grounded_input_tokens": 224129,
+    "input_token_delta": 221515,
+    "kind": "context_usage_pair",
+    "maximum_delta": 452218.0,
+    "minimum_delta": 113054.5,
+    "question_key": "newadvice12--advice-yc-03",
+    "raw_input_tokens": 2614
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 172408,
+    "family": "gemini",
+    "flags": [],
+    "grounded_input_tokens": 172814,
+    "input_token_delta": 172472,
+    "kind": "context_usage_pair",
+    "maximum_delta": 344816.0,
+    "minimum_delta": 86204.0,
+    "question_key": "newadvice12--advice-yc-03",
+    "raw_input_tokens": 342
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 154539,
+    "family": "sol",
+    "flags": [],
+    "grounded_input_tokens": 167024,
+    "input_token_delta": 153723,
+    "kind": "context_usage_pair",
+    "maximum_delta": 309078.0,
+    "minimum_delta": 77269.5,
+    "question_key": "newadvice12--advice-yc-04",
+    "raw_input_tokens": 13301
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 226109,
+    "family": "opus",
+    "flags": [],
+    "grounded_input_tokens": 224181,
+    "input_token_delta": 221515,
+    "kind": "context_usage_pair",
+    "maximum_delta": 452218.0,
+    "minimum_delta": 113054.5,
+    "question_key": "newadvice12--advice-yc-04",
+    "raw_input_tokens": 2666
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 172408,
+    "family": "gemini",
+    "flags": [],
+    "grounded_input_tokens": 172836,
+    "input_token_delta": 172472,
+    "kind": "context_usage_pair",
+    "maximum_delta": 344816.0,
+    "minimum_delta": 86204.0,
+    "question_key": "newadvice12--advice-yc-04",
+    "raw_input_tokens": 364
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 154539,
+    "family": "sol",
+    "flags": [],
+    "grounded_input_tokens": 167041,
+    "input_token_delta": 153723,
+    "kind": "context_usage_pair",
+    "maximum_delta": 309078.0,
+    "minimum_delta": 77269.5,
+    "question_key": "newadvice12--advice-yc-05",
+    "raw_input_tokens": 13318
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 226109,
+    "family": "opus",
+    "flags": [],
+    "grounded_input_tokens": 224201,
+    "input_token_delta": 221515,
+    "kind": "context_usage_pair",
+    "maximum_delta": 452218.0,
+    "minimum_delta": 113054.5,
+    "question_key": "newadvice12--advice-yc-05",
+    "raw_input_tokens": 2686
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 172408,
+    "family": "gemini",
+    "flags": [],
+    "grounded_input_tokens": 172861,
+    "input_token_delta": 172472,
+    "kind": "context_usage_pair",
+    "maximum_delta": 344816.0,
+    "minimum_delta": 86204.0,
+    "question_key": "newadvice12--advice-yc-05",
+    "raw_input_tokens": 389
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 154539,
+    "family": "sol",
+    "flags": [],
+    "grounded_input_tokens": 167044,
+    "input_token_delta": 153723,
+    "kind": "context_usage_pair",
+    "maximum_delta": 309078.0,
+    "minimum_delta": 77269.5,
+    "question_key": "newadvice12--advice-yc-06",
+    "raw_input_tokens": 13321
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 226109,
+    "family": "opus",
+    "flags": [],
+    "grounded_input_tokens": 224207,
+    "input_token_delta": 221515,
+    "kind": "context_usage_pair",
+    "maximum_delta": 452218.0,
+    "minimum_delta": 113054.5,
+    "question_key": "newadvice12--advice-yc-06",
+    "raw_input_tokens": 2692
+  },
+  {
+    "eligible": true,
+    "expected_context_token_delta": 172408,
+    "family": "gemini",
+    "flags": [],
+    "grounded_input_tokens": 172855,
+    "input_token_delta": 172472,
+    "kind": "context_usage_pair",
+    "maximum_delta": 344816.0,
+    "minimum_delta": 86204.0,
+    "question_key": "newadvice12--advice-yc-06",
+    "raw_input_tokens": 383
+  },
+  {
+    "actual_input_tokens": 23919,
+    "batch_id": "diagnostic12--sol--sol--batch-00",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "judge_family": "sol",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 23919,
+        "output_tokens": 1860,
+        "reasoning_output_tokens": 1034
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 21487,
+    "batch_id": "diagnostic12--sol--sol--batch-01",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "judge_family": "sol",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 21487,
+        "output_tokens": 1782,
+        "reasoning_output_tokens": 794
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 21699,
+    "batch_id": "diagnostic12--sol--sol--batch-02",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "judge_family": "sol",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 21699,
+        "output_tokens": 2270,
+        "reasoning_output_tokens": 861
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 23510,
+    "batch_id": "diagnostic12--sol--sol--batch-03",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "judge_family": "sol",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 23510,
+        "output_tokens": 1267,
+        "reasoning_output_tokens": 513
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 23320,
+    "batch_id": "diagnostic12--sol--opus--batch-00",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "judge_family": "sol",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 23320,
+        "output_tokens": 1959,
+        "reasoning_output_tokens": 892
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 22621,
+    "batch_id": "diagnostic12--sol--opus--batch-01",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "judge_family": "sol",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 22621,
+        "output_tokens": 2078,
+        "reasoning_output_tokens": 1034
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 22152,
+    "batch_id": "diagnostic12--sol--opus--batch-02",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "judge_family": "sol",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 22152,
+        "output_tokens": 2460,
+        "reasoning_output_tokens": 891
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 24347,
+    "batch_id": "diagnostic12--sol--opus--batch-03",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "judge_family": "sol",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 24347,
+        "output_tokens": 1935,
+        "reasoning_output_tokens": 999
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 22930,
+    "batch_id": "diagnostic12--sol--gemini--batch-00",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "judge_family": "sol",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 22930,
+        "output_tokens": 2500,
+        "reasoning_output_tokens": 1034
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 22570,
+    "batch_id": "diagnostic12--sol--gemini--batch-01",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "judge_family": "sol",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 22570,
+        "output_tokens": 2896,
+        "reasoning_output_tokens": 1472
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 22226,
+    "batch_id": "diagnostic12--sol--gemini--batch-02",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "judge_family": "sol",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 22226,
+        "output_tokens": 2506,
+        "reasoning_output_tokens": 1254
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 22359,
+    "batch_id": "diagnostic12--sol--gemini--batch-03",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "judge_family": "sol",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 22359,
+        "output_tokens": 2318,
+        "reasoning_output_tokens": 1034
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 16643,
+    "batch_id": "diagnostic12--opus--sol--batch-00",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "judge_family": "opus",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 15073,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 15073,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 15073,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 15073,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 2895,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 2895,
+        "output_tokens_details": {
+          "thinking_tokens": 937
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 14815,
+    "batch_id": "diagnostic12--opus--sol--batch-01",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "judge_family": "opus",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 13245,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 13245,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 13245,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 13245,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 2824,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 2824,
+        "output_tokens_details": {
+          "thinking_tokens": 689
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 16642,
+    "batch_id": "diagnostic12--opus--sol--batch-02",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "judge_family": "opus",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 15072,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 15072,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 15072,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 15072,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 2736,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 2736,
+        "output_tokens_details": {
+          "thinking_tokens": 836
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 18232,
+    "batch_id": "diagnostic12--opus--sol--batch-03",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "judge_family": "opus",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 16662,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 16662,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 16662,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 16662,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 3235,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 3235,
+        "output_tokens_details": {
+          "thinking_tokens": 1626
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 15803,
+    "batch_id": "diagnostic12--opus--opus--batch-00",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "judge_family": "opus",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 14233,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 14233,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 14233,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 14233,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 2940,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 2940,
+        "output_tokens_details": {
+          "thinking_tokens": 700
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 17028,
+    "batch_id": "diagnostic12--opus--opus--batch-01",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "judge_family": "opus",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 15458,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 15458,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 15458,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 15458,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 3933,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 3933,
+        "output_tokens_details": {
+          "thinking_tokens": 1428
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 17791,
+    "batch_id": "diagnostic12--opus--opus--batch-02",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "judge_family": "opus",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 16221,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 16221,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 16221,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 16221,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 4367,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 4367,
+        "output_tokens_details": {
+          "thinking_tokens": 1733
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 17161,
+    "batch_id": "diagnostic12--opus--opus--batch-03",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "judge_family": "opus",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 15591,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 15591,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 15591,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 15591,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 2937,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 2937,
+        "output_tokens_details": {
+          "thinking_tokens": 788
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 14638,
+    "batch_id": "diagnostic12--opus--gemini--batch-00",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "judge_family": "opus",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 13068,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 13068,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 13068,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 13068,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 3597,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 3597,
+        "output_tokens_details": {
+          "thinking_tokens": 1679
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 16541,
+    "batch_id": "diagnostic12--opus--gemini--batch-01",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "judge_family": "opus",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 14971,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 14971,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 14971,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 14971,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 3250,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 3250,
+        "output_tokens_details": {
+          "thinking_tokens": 905
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 18159,
+    "batch_id": "diagnostic12--opus--gemini--batch-02",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "judge_family": "opus",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 16589,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 16589,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 16589,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 16589,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 3193,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 3193,
+        "output_tokens_details": {
+          "thinking_tokens": 1003
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 15920,
+    "batch_id": "diagnostic12--opus--gemini--batch-03",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "judge_family": "opus",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 14350,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 14350,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 14350,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 14350,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 3426,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 3426,
+        "output_tokens_details": {
+          "thinking_tokens": 1019
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 11615,
+    "batch_id": "diagnostic12--gemini--sol--batch-00",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "judge_family": "gemini",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 681,
+        "promptTokenCount": 11615,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 11615
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 12296
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 12529,
+    "batch_id": "diagnostic12--gemini--sol--batch-01",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "judge_family": "gemini",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 694,
+        "promptTokenCount": 12529,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 12529
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 13223
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 10361,
+    "batch_id": "diagnostic12--gemini--sol--batch-02",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "judge_family": "gemini",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 634,
+        "promptTokenCount": 10361,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 10361
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 10995
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 11203,
+    "batch_id": "diagnostic12--gemini--sol--batch-03",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "judge_family": "gemini",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 846,
+        "promptTokenCount": 11203,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 11203
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 12049
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 11796,
+    "batch_id": "diagnostic12--gemini--opus--batch-00",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "judge_family": "gemini",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 730,
+        "promptTokenCount": 11796,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 11796
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 12526
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 10550,
+    "batch_id": "diagnostic12--gemini--opus--batch-01",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "judge_family": "gemini",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 647,
+        "promptTokenCount": 10550,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 10550
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 11197
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 13064,
+    "batch_id": "diagnostic12--gemini--opus--batch-02",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "judge_family": "gemini",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 639,
+        "promptTokenCount": 13064,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 13064
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 13703
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 12348,
+    "batch_id": "diagnostic12--gemini--opus--batch-03",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "judge_family": "gemini",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 654,
+        "promptTokenCount": 12348,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 12348
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 13002
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 11581,
+    "batch_id": "diagnostic12--gemini--gemini--batch-00",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "judge_family": "gemini",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 779,
+        "promptTokenCount": 11581,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 11581
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 12360
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 10041,
+    "batch_id": "diagnostic12--gemini--gemini--batch-01",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "judge_family": "gemini",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 857,
+        "promptTokenCount": 10041,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 10041
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 10898
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": null,
+    "batch_id": "diagnostic12--gemini--gemini--batch-02",
+    "finish_reasons": null,
+    "judge_family": "gemini",
+    "status": "failed",
+    "suite": "diagnostic12",
+    "usage_events": null
+  },
+  {
+    "actual_input_tokens": 10471,
+    "batch_id": "diagnostic12--gemini--gemini--batch-03",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "judge_family": "gemini",
+    "status": "ok",
+    "suite": "diagnostic12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 748,
+        "promptTokenCount": 10471,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 10471
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 11219
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": null,
+    "batch_id": "newadvice12--sol--sol--batch-00",
+    "finish_reasons": null,
+    "judge_family": "sol",
+    "status": "failed",
+    "suite": "newadvice12",
+    "usage_events": null
+  },
+  {
+    "actual_input_tokens": null,
+    "batch_id": "newadvice12--sol--sol--batch-01",
+    "finish_reasons": null,
+    "judge_family": "sol",
+    "status": "failed",
+    "suite": "newadvice12",
+    "usage_events": null
+  },
+  {
+    "actual_input_tokens": 16392,
+    "batch_id": "newadvice12--sol--sol--batch-02",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "judge_family": "sol",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 16392,
+        "output_tokens": 1612,
+        "reasoning_output_tokens": 1034
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 16426,
+    "batch_id": "newadvice12--sol--sol--batch-03",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "judge_family": "sol",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 16426,
+        "output_tokens": 1428,
+        "reasoning_output_tokens": 857
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 16626,
+    "batch_id": "newadvice12--sol--opus--batch-00",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "judge_family": "sol",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 16626,
+        "output_tokens": 3037,
+        "reasoning_output_tokens": 2070
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 17077,
+    "batch_id": "newadvice12--sol--opus--batch-01",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "judge_family": "sol",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 17077,
+        "output_tokens": 4216,
+        "reasoning_output_tokens": 3106
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 17395,
+    "batch_id": "newadvice12--sol--opus--batch-02",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "judge_family": "sol",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 17395,
+        "output_tokens": 5254,
+        "reasoning_output_tokens": 4142
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 17002,
+    "batch_id": "newadvice12--sol--opus--batch-03",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "judge_family": "sol",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 17002,
+        "output_tokens": 2558,
+        "reasoning_output_tokens": 1536
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 16783,
+    "batch_id": "newadvice12--sol--gemini--batch-00",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "judge_family": "sol",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 16783,
+        "output_tokens": 3440,
+        "reasoning_output_tokens": 2070
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 15743,
+    "batch_id": "newadvice12--sol--gemini--batch-01",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "judge_family": "sol",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 11776,
+        "input_tokens": 15743,
+        "output_tokens": 2216,
+        "reasoning_output_tokens": 1034
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 16204,
+    "batch_id": "newadvice12--sol--gemini--batch-02",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "judge_family": "sol",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 16204,
+        "output_tokens": 2636,
+        "reasoning_output_tokens": 1294
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 16084,
+    "batch_id": "newadvice12--sol--gemini--batch-03",
+    "finish_reasons": [
+      "turn.completed"
+    ],
+    "judge_family": "sol",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 0,
+        "input_tokens": 16084,
+        "output_tokens": 3365,
+        "reasoning_output_tokens": 2070
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 7547,
+    "batch_id": "newadvice12--opus--sol--batch-00",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "judge_family": "opus",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 6896,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 6896,
+        "cache_read_input_tokens": 649,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 6896,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 6896,
+            "cache_read_input_tokens": 649,
+            "input_tokens": 2,
+            "output_tokens": 2875,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 2875,
+        "output_tokens_details": {
+          "thinking_tokens": 1666
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 7583,
+    "batch_id": "newadvice12--opus--sol--batch-01",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "judge_family": "opus",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 6013,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 6013,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 6013,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 6013,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 3637,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 3637,
+        "output_tokens_details": {
+          "thinking_tokens": 2751
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 7855,
+    "batch_id": "newadvice12--opus--sol--batch-02",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "judge_family": "opus",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 6285,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 6285,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 6285,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 6285,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 3035,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 3035,
+        "output_tokens_details": {
+          "thinking_tokens": 1793
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 7902,
+    "batch_id": "newadvice12--opus--sol--batch-03",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "judge_family": "opus",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 6332,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 6332,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 6332,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 6332,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 4147,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 4147,
+        "output_tokens_details": {
+          "thinking_tokens": 2816
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 8235,
+    "batch_id": "newadvice12--opus--opus--batch-00",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "judge_family": "opus",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 6665,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 6665,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 6665,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 6665,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 4031,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 4031,
+        "output_tokens_details": {
+          "thinking_tokens": 2548
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 7823,
+    "batch_id": "newadvice12--opus--opus--batch-01",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "judge_family": "opus",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 6253,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 6253,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 6253,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 6253,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 5317,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 5317,
+        "output_tokens_details": {
+          "thinking_tokens": 3709
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 8567,
+    "batch_id": "newadvice12--opus--opus--batch-02",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "judge_family": "opus",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 6997,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 6997,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 6997,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 6997,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 4706,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 4706,
+        "output_tokens_details": {
+          "thinking_tokens": 3588
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 8117,
+    "batch_id": "newadvice12--opus--opus--batch-03",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "judge_family": "opus",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 6547,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 6547,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 6547,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 6547,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 6037,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 6037,
+        "output_tokens_details": {
+          "thinking_tokens": 4386
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 7353,
+    "batch_id": "newadvice12--opus--gemini--batch-00",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "judge_family": "opus",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 5783,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 5783,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 5783,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 5783,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 5382,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 5382,
+        "output_tokens_details": {
+          "thinking_tokens": 3231
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 7692,
+    "batch_id": "newadvice12--opus--gemini--batch-01",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "judge_family": "opus",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 6122,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 6122,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 6122,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 6122,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 5335,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 5335,
+        "output_tokens_details": {
+          "thinking_tokens": 3502
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 6459,
+    "batch_id": "newadvice12--opus--gemini--batch-02",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "judge_family": "opus",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 4889,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 4889,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 4889,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 4889,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 2760,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 2760,
+        "output_tokens_details": {
+          "thinking_tokens": 1641
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 7750,
+    "batch_id": "newadvice12--opus--gemini--batch-03",
+    "finish_reasons": [
+      "success",
+      "end_turn",
+      "completed"
+    ],
+    "judge_family": "opus",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 6180,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "cache_creation_input_tokens": 6180,
+        "cache_read_input_tokens": 1568,
+        "fallback_credit": null,
+        "inference_geo": "global",
+        "input_tokens": 2,
+        "iterations": [
+          {
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 6180,
+              "ephemeral_5m_input_tokens": 0
+            },
+            "cache_creation_input_tokens": 6180,
+            "cache_read_input_tokens": 1568,
+            "input_tokens": 2,
+            "output_tokens": 3358,
+            "type": "message"
+          }
+        ],
+        "output_tokens": 3358,
+        "output_tokens_details": {
+          "thinking_tokens": 1798
+        },
+        "server_tool_use": {
+          "web_fetch_requests": 0,
+          "web_search_requests": 0
+        },
+        "service_tier": "standard",
+        "speed": "standard"
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 4027,
+    "batch_id": "newadvice12--gemini--sol--batch-00",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "judge_family": "gemini",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 678,
+        "promptTokenCount": 4027,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4027
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 4705
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 3390,
+    "batch_id": "newadvice12--gemini--sol--batch-01",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "judge_family": "gemini",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 660,
+        "promptTokenCount": 3390,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3390
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 4050
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 3746,
+    "batch_id": "newadvice12--gemini--sol--batch-02",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "judge_family": "gemini",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 735,
+        "promptTokenCount": 3746,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3746
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 4481
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 3765,
+    "batch_id": "newadvice12--gemini--sol--batch-03",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "judge_family": "gemini",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 661,
+        "promptTokenCount": 3765,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3765
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 4426
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 4199,
+    "batch_id": "newadvice12--gemini--opus--batch-00",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "judge_family": "gemini",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 638,
+        "promptTokenCount": 4199,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4199
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 4837
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 4414,
+    "batch_id": "newadvice12--gemini--opus--batch-01",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "judge_family": "gemini",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 692,
+        "promptTokenCount": 4414,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4414
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 5106
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 4872,
+    "batch_id": "newadvice12--gemini--opus--batch-02",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "judge_family": "gemini",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 655,
+        "promptTokenCount": 4872,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4872
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 5527
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 4255,
+    "batch_id": "newadvice12--gemini--opus--batch-03",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "judge_family": "gemini",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 652,
+        "promptTokenCount": 4255,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4255
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 4907
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 3606,
+    "batch_id": "newadvice12--gemini--gemini--batch-00",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "judge_family": "gemini",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 688,
+        "promptTokenCount": 3606,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3606
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 4294
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 4231,
+    "batch_id": "newadvice12--gemini--gemini--batch-01",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "judge_family": "gemini",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 703,
+        "promptTokenCount": 4231,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4231
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 4934
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 2520,
+    "batch_id": "newadvice12--gemini--gemini--batch-02",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "judge_family": "gemini",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 542,
+        "promptTokenCount": 2520,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2520
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 3062
+      }
+    ]
+  },
+  {
+    "actual_input_tokens": 3544,
+    "batch_id": "newadvice12--gemini--gemini--batch-03",
+    "finish_reasons": [
+      "STOP"
+    ],
+    "judge_family": "gemini",
+    "status": "ok",
+    "suite": "newadvice12",
+    "usage_events": [
+      {
+        "candidatesTokenCount": 889,
+        "promptTokenCount": 3544,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3544
+          }
+        ],
+        "serviceTier": "standard",
+        "totalTokenCount": 4433
+      }
+    ]
+  }
+]

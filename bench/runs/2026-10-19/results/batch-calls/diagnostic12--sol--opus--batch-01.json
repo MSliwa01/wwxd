@@ -1,0 +1,220 @@
+{
+  "actual_input_tokens": 22621,
+  "answer": "{\n  \"judgments\": [\n    {\n      \"id\": \"p-e6ba524c4d3fa040\",\n      \"A\": {\n        \"accuracy\": 4,\n        \"specificity\": 5,\n        \"faithfulness\": 4,\n        \"usefulness\": 5\n      },\n      \"B\": {\n        \"accuracy\": 3,\n        \"specificity\": 3,\n        \"faithfulness\": 3,\n        \"usefulness\": 4\n      },\n      \"winner\": \"A\",\n      \"reason\": \"A captures Graham's explicit recommendation to go temporarily, the benefits of returning to Stockholm, and the qualified unicorn statistic. B offers reasonable practical advice but understates his current affirmative position and omits the Stockholm-specific return benefit and statistical caveat.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"The Stockholm talk occurred in April 2026.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The packet supplies a May 13, 2026 publication date but does not establish the event date. Publication in May neither confirms nor contradicts an April event.\"\n        },\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Graham says family and life matter more than the company.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The supplied evidence does not establish this attributed statement.\"\n        },\n        {\n          \"answer\": \"A\",\n          \"claim\": \"The statistic has no published method, and Altman is less sure the Bay Area premium will persist over the next decade.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The packet establishes the statistic and Graham's qualifications, but provides neither evidence about whether a method was published nor Altman's position.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"Remote work and other hubs have weakened the geographic argument.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The packet does not establish that effect. Graham explicitly says his recommendation remains the same; that establishes his position, without settling whether geographic advantages have objectively weakened.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"p-db3e2e9db4864dd8\",\n      \"A\": {\n        \"accuracy\": 4,\n        \"specificity\": 3,\n        \"faithfulness\": 3,\n        \"usefulness\": 4\n      },\n      \"B\": {\n        \"accuracy\": 4,\n        \"specificity\": 5,\n        \"faithfulness\": 4,\n        \"usefulness\": 4\n      },\n      \"winner\": \"B\",\n      \"reason\": \"B better explains the central mechanism: company progress creates leverage and investor pursuit, while prolonged follow-ups give investors an option. Its Justin.tv example accurately supports that explanation. A recognizes the distraction and importance of traction but gives greater emphasis to fundraising process tactics. Both add timing prescriptions not established by the packet.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Seibel's advice is that a seed round should take only a few weeks and follow-ups without commitments rarely convert.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The evidence supports raising quickly once growth creates leverage and explains investors' option-like behavior. It does not establish a prescribed duration or a conversion frequency for follow-ups.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"Runway below about six months calls for prioritizing profitability over further pitching.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The Justin.tv example supports the value of focusing on profitability in that situation. It does not establish a general six-month threshold.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"p-1c078e330f8b0486\",\n      \"A\": {\n        \"accuracy\": 4,\n        \"specificity\": 5,\n        \"faithfulness\": 5,\n        \"usefulness\": 5\n      },\n      \"B\": {\n        \"accuracy\": 4,\n        \"specificity\": 3,\n        \"faithfulness\": 3,\n        \"usefulness\": 4\n      },\n      \"winner\": \"A\",\n      \"reason\": \"A accurately explains the trust-for-promise exchange and the specific wording mechanism: flaw first, then 'but,' then the benefit. It also captures the complaint-list exercise, humor, and sales-call application. B supports truthful admissions and supplies useful examples, but omits the central role of 'but' and substitutes broader reframing formulas.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Hormozi ranks damaging admissions among his favorite advertising tactics.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The packet establishes his endorsement and explanation of the tactic, but does not establish this ranking among his favorites.\"\n        }\n      ]\n    }\n  ]\n}",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 50.284,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "61822709c2ff21ba9c5289758e588cee7f8cc76fa303d692178e28a1b16e2a70"
+    }
+  ],
+  "batch": {
+    "blocked_pair_ids": [],
+    "chars_per_token": 3.57,
+    "eligible_pair_ids": [
+      "p-e6ba524c4d3fa040",
+      "p-db3e2e9db4864dd8",
+      "p-1c078e330f8b0486"
+    ],
+    "estimated_input_tokens": 10306,
+    "id": "diagnostic12--sol--opus--batch-01",
+    "judge_family": "sol",
+    "pair_ids": [
+      "p-e6ba524c4d3fa040",
+      "p-db3e2e9db4864dd8",
+      "p-1c078e330f8b0486"
+    ],
+    "prompt_bytes": 36795,
+    "prompt_sha256": "b154d37798aa391c5c7827b6d3b81c48a6c60acc8492f5144d823ac47a5789f2",
+    "suite": "diagnostic12"
+  },
+  "chars_per_token": 3.57,
+  "command": [
+    "codex",
+    "exec",
+    "--ignore-user-config",
+    "--ignore-rules",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--model",
+    "gpt-6.1-sol",
+    "--json",
+    "--color",
+    "never",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "unified_exec",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "view_image",
+    "--disable",
+    "shell_snapshot",
+    "--disable",
+    "skill_search",
+    "--disable",
+    "skill_mcp_dependency_install",
+    "--disable",
+    "request_permissions_tool",
+    "--disable",
+    "sleep_tool",
+    "-c",
+    "model_reasoning_effort=\"high\"",
+    "-c",
+    "project_doc_max_bytes=0",
+    "-c",
+    "web_search=\"disabled\"",
+    "-c",
+    "mcp_servers={}",
+    "-c",
+    "developer_instructions=\"Answer the supplied task using only its text. Do not use tools or commands.\"",
+    "-"
+  ],
+  "decoded": {
+    "p-1c078e330f8b0486": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "accuracy": 4,
+          "faithfulness": 5,
+          "specificity": 5,
+          "usefulness": 5
+        },
+        "B": {
+          "accuracy": 4,
+          "faithfulness": 3,
+          "specificity": 3,
+          "usefulness": 4
+        },
+        "factual_objections": [
+          {
+            "answer": "A",
+            "claim": "Hormozi ranks damaging admissions among his favorite advertising tactics.",
+            "evidence": "The packet establishes his endorsement and explanation of the tactic, but does not establish this ranking among his favorites.",
+            "label": "unverified"
+          }
+        ],
+        "id": "p-1c078e330f8b0486",
+        "reason": "A accurately explains the trust-for-promise exchange and the specific wording mechanism: flaw first, then 'but,' then the benefit. It also captures the complaint-list exercise, humor, and sales-call application. B supports truthful admissions and supplies useful examples, but omits the central role of 'but' and substitutes broader reframing formulas.",
+        "winner": "A"
+      }
+    },
+    "p-db3e2e9db4864dd8": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "accuracy": 4,
+          "faithfulness": 3,
+          "specificity": 3,
+          "usefulness": 4
+        },
+        "B": {
+          "accuracy": 4,
+          "faithfulness": 4,
+          "specificity": 5,
+          "usefulness": 4
+        },
+        "factual_objections": [
+          {
+            "answer": "A",
+            "claim": "Seibel's advice is that a seed round should take only a few weeks and follow-ups without commitments rarely convert.",
+            "evidence": "The evidence supports raising quickly once growth creates leverage and explains investors' option-like behavior. It does not establish a prescribed duration or a conversion frequency for follow-ups.",
+            "label": "unverified"
+          },
+          {
+            "answer": "B",
+            "claim": "Runway below about six months calls for prioritizing profitability over further pitching.",
+            "evidence": "The Justin.tv example supports the value of focusing on profitability in that situation. It does not establish a general six-month threshold.",
+            "label": "unverified"
+          }
+        ],
+        "id": "p-db3e2e9db4864dd8",
+        "reason": "B better explains the central mechanism: company progress creates leverage and investor pursuit, while prolonged follow-ups give investors an option. Its Justin.tv example accurately supports that explanation. A recognizes the distraction and importance of traction but gives greater emphasis to fundraising process tactics. Both add timing prescriptions not established by the packet.",
+        "winner": "B"
+      }
+    },
+    "p-e6ba524c4d3fa040": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "accuracy": 4,
+          "faithfulness": 4,
+          "specificity": 5,
+          "usefulness": 5
+        },
+        "B": {
+          "accuracy": 3,
+          "faithfulness": 3,
+          "specificity": 3,
+          "usefulness": 4
+        },
+        "factual_objections": [
+          {
+            "answer": "A",
+            "claim": "The Stockholm talk occurred in April 2026.",
+            "evidence": "The packet supplies a May 13, 2026 publication date but does not establish the event date. Publication in May neither confirms nor contradicts an April event.",
+            "label": "unverified"
+          },
+          {
+            "answer": "A",
+            "claim": "Graham says family and life matter more than the company.",
+            "evidence": "The supplied evidence does not establish this attributed statement.",
+            "label": "unverified"
+          },
+          {
+            "answer": "A",
+            "claim": "The statistic has no published method, and Altman is less sure the Bay Area premium will persist over the next decade.",
+            "evidence": "The packet establishes the statistic and Graham's qualifications, but provides neither evidence about whether a method was published nor Altman's position.",
+            "label": "unverified"
+          },
+          {
+            "answer": "B",
+            "claim": "Remote work and other hubs have weakened the geographic argument.",
+            "evidence": "The packet does not establish that effect. Graham explicitly says his recommendation remains the same; that establishes his position, without settling whether geographic advantages have objectively weakened.",
+            "label": "unverified"
+          }
+        ],
+        "id": "p-e6ba524c4d3fa040",
+        "reason": "A captures Graham's explicit recommendation to go temporarily, the benefits of returning to Stockholm, and the qualified unicorn statistic. B offers reasonable practical advice but understates his current affirmative position and omits the Stockholm-specific return benefit and statistical caveat.",
+        "winner": "A"
+      }
+    }
+  },
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 10306,
+  "event_count": 4,
+  "finish_reasons": [
+    "turn.completed"
+  ],
+  "finished": "2026-10-19T11:33:52.514000+00:00",
+  "observed_models": [],
+  "parse_error": "",
+  "prompt_sha256": "b154d37798aa391c5c7827b6d3b81c48a6c60acc8492f5144d823ac47a5789f2",
+  "requested_model": "gpt-6.1-sol",
+  "serving_model_attested": false,
+  "status": "ok",
+  "usage_events": [
+    {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 0,
+      "input_tokens": 22621,
+      "output_tokens": 2078,
+      "reasoning_output_tokens": 1034
+    }
+  ]
+}

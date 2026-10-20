@@ -1,0 +1,55 @@
+{
+  "answer_family": "gemini",
+  "batch_id": "newadvice12--sol--gemini--batch-01",
+  "error": "",
+  "id": "p-13be11ec2eedd729--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-13be11ec2eedd729",
+  "primary_eligible": true,
+  "prompt_sha256": "b86d08bbda5f6931fe1fb8cbe39548113bbcd939f1f692bb252adef19648166b",
+  "question_key": "newadvice12--advice-hz-06",
+  "status": "ok",
+  "suite": "newadvice12",
+  "verdict": {
+    "A": {
+      "actionability": 2,
+      "constraint_fit": 2,
+      "decision_quality": 3,
+      "reasoning": 2
+    },
+    "B": {
+      "actionability": 3,
+      "constraint_fit": 3,
+      "decision_quality": 3,
+      "reasoning": 3
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "The first ninety days consist of weeks one through thirty, thirty-one through sixty, and sixty-one through ninety.",
+        "evidence": "The stated schedule covers 90 weeks, or 630 days, rather than the requested 90 days.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "A",
+        "claim": "Buying the $9,000 route leaves no emergency buffer.",
+        "evidence": "The stated $11,000 savings would leave $2,000 before additional acquisition costs. That is an inadequate buffer relative to monthly expenses, but it is not zero.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "A",
+        "claim": "The dental service carries the highest profit margin.",
+        "evidence": "The question supplies no service pricing, acquisition costs, delivery costs, or comparable store margins that establish this ranking.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-13be11ec2eedd729",
+    "reason": "Both make a defensible choice based on relevant experience and preserving savings. B provides an executable 90-day sequence, early paid validation, and a useful reassessment criterion. A's sequence spans 90 weeks. Both omit client-count and profit targets needed to assess salary replacement within 18 months, and neither adequately resolves how appointment handling fits around full-time employment and the 20-hour limit.",
+    "winner": "B"
+  },
+  "winner": "grounded"
+}

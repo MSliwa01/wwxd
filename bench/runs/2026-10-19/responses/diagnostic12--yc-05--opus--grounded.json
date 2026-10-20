@@ -1,0 +1,101 @@
+{
+  "actual_input_tokens": 223995,
+  "answer": "**Short answer: Paul Graham thinks you should at least *go* to Silicon Valley, but not necessarily move there for good.** In his April 2026 talk in Stockholm, he said founders should spend time there even if they come back. He also said that going and returning is one of the best things a founder can do for Stockholm as a startup hub.\n\n**His reasons**\n- **Peers.** There are more and better people working on the same problems, and more chance meetings that turn out valuable.\n- **Speed.** Valley investors decide faster because competition punishes waiting.\n- **Standing back home.** Investors outside the Valley tend to treat local startups as second-rate. Having been there, or getting into YC, reverses that.\n- **Calibration.** Seeing the big fish up close turns an impossible goal into a hard but definite one.\n- **Culture.** People help you for no reason, and you bring that culture home.\n\n**Caveats he raises himself**\n- YC data suggests startups that go home after YC are about half as likely to become unicorns. He discounts that figure for selection bias and higher Bay Area valuations.\n- He says family and life matter more than the company.\n- He admits that recommending YC as the best way to go sounds like talking his own book.\n\n**Concrete next steps**\n1. Apply to YC, or plan a focused stint of a few months in the Bay Area.\n2. Raise money and build relationships while you're there.\n3. Decide afterward whether to relocate or return to Stockholm.\n\n**When staying in Stockholm makes more sense**\n- Your customers, regulators or key talent are local.\n- You already have strong investor interest at home.\n- Family commitments make relocating costly.\n\n**When a longer move makes more sense**\n- You're struggling to raise money locally.\n- You lack peers working at your level.\n- Your market is US-first.\n\n**What's uncertain:** the half-as-likely figure comes without a published method. Other YC voices, such as Altman, are less sure the Bay Area premium will hold over the next decade.",
+  "arm": "grounded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 15.471,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "c6b4d6f74e9f03a55dfa1a779d369c8fa5302a871c46c5498a5961557e8e8a85"
+    }
+  ],
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 226566,
+  "event_count": 8,
+  "family": "opus",
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:22:34.145433+00:00",
+  "format_deviations": [
+    "outside descriptive 150..300 word band around approximate 250-word instruction"
+  ],
+  "id": "diagnostic12--yc-05--opus--grounded",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "prompt_sha256": "eced91b9d674579a18e72064453cfb81ff0f68a8e4dc82ec375905d63920c400",
+  "question_key": "diagnostic12--yc-05",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 222425,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 222425,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 222425,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 222425,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 859,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 859,
+      "output_tokens_details": {
+        "thinking_tokens": 212
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ],
+  "words": 340
+}

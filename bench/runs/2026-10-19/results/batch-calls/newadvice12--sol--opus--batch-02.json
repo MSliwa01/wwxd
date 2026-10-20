@@ -1,0 +1,207 @@
+{
+  "actual_input_tokens": 17395,
+  "answer": "{\n  \"judgments\": [\n    {\n      \"id\": \"p-00d6a95e43d51092\",\n      \"A\": {\n        \"decision_quality\": 4,\n        \"actionability\": 4,\n        \"constraint_fit\": 3,\n        \"reasoning\": 3\n      },\n      \"B\": {\n        \"decision_quality\": 4,\n        \"actionability\": 4,\n        \"constraint_fit\": 3,\n        \"reasoning\": 3\n      },\n      \"winner\": \"tie\",\n      \"reason\": \"Both reasonably select the service business and provide useful pilot plans. A offers clearer prospecting targets; B provides stronger spending and patient-data precautions. Neither adequately demonstrates $3,400 in take-home income after costs and taxes or reconciles responsive call coverage with the 20-hour limit. A's 15-minute guarantee needs defined coverage hours, while B's client-revenue range does not consistently support its income claim.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"B\",\n          \"claim\": \"Five to eight offices paying $600–$1,000 per month would reach about $3,400 per month in take-home pay.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"The stated range includes five offices paying $600, which produces only $3,000 in monthly revenue before expenses and taxes. Some combinations could work, but the range does not establish the claimed take-home income.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"p-ae68fdba5551b685\",\n      \"A\": {\n        \"decision_quality\": 3,\n        \"actionability\": 3,\n        \"constraint_fit\": 2,\n        \"reasoning\": 3\n      },\n      \"B\": {\n        \"decision_quality\": 3,\n        \"actionability\": 3,\n        \"constraint_fit\": 3,\n        \"reasoning\": 3\n      },\n      \"winner\": \"B\",\n      \"reason\": \"Both correctly calculate that five premium clients at $2,500 plus 30 standard clients at $500 produce $26,100 within 50 weekly hours. B is slightly stronger because A explicitly risks exceeding capacity during its transition and gives incorrect course and low-uptake calculations. B still needs a firm requirement to release capacity before premium work starts, and its eight-client fallback exceeds the proposed premium limit.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"About 170 course subscribers would be needed to match one premium client.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"At $49 per month, approximately 51 subscribers generate $2,500 in revenue. No supplied course costs justify increasing that figure to 170.\"\n        },\n        {\n          \"answer\": \"A\",\n          \"claim\": \"If fewer than four clients buy premium, raising standard pricing to $550 and filling available slots provides a sufficient fallback.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"With two premium clients, the 50-hour limit permits 39 standard clients. Monthly profit would be 2 × $2,460 + 39 × $510 = $24,810, below the target. One or zero premium clients produces still less.\"\n        },\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Premium can start on day 60, followed by 30-day termination notices if insufficient standard clients have left.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"If all 45 clients remain and five upgrade, weekly work becomes 40 standard hours plus 15 premium hours plus five admin hours, totaling 60. Giving termination notices at that point does not preserve the stated 50-hour ceiling during the notice period.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"The fallback is eight premium clients at $2,000 with 21 standard clients.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"The profit and hours arithmetic is correct, but eight premium clients exceeds the proposed limit of up to five. This fallback requires explicitly revising that limit.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"p-44c1ab76b7fd213d\",\n      \"A\": {\n        \"decision_quality\": 4,\n        \"actionability\": 4,\n        \"constraint_fit\": 3,\n        \"reasoning\": 3\n      },\n      \"B\": {\n        \"decision_quality\": 4,\n        \"actionability\": 4,\n        \"constraint_fit\": 4,\n        \"reasoning\": 4\n      },\n      \"winner\": \"B\",\n      \"reason\": \"Both correctly reject a roughly $74,000 commitment against a $45,000 budget, and both alternative schedules add up. B better integrates inventory through a stock-triggered throttle, retains $2,700 in budget reserve, and correctly identifies December 28 as ten weeks from October 19. A's scheduled spending jumps conflict with its gradual-ramp rule. Both still need contribution margins, organic demand, and repeat-order timing to validate their thresholds; B's 800-bottle reserve and 2.5 ROAS threshold remain provisional.\",\n      \"factual_objections\": []\n    }\n  ]\n}",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 127.434,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a3240aae0c63ecd4a559b468f6a50c1a7a046c474aa54aca903b3d078a9a9eba"
+    }
+  ],
+  "batch": {
+    "blocked_pair_ids": [],
+    "chars_per_token": 3.57,
+    "eligible_pair_ids": [
+      "p-00d6a95e43d51092",
+      "p-ae68fdba5551b685",
+      "p-44c1ab76b7fd213d"
+    ],
+    "estimated_input_tokens": 4812,
+    "id": "newadvice12--sol--opus--batch-02",
+    "judge_family": "sol",
+    "pair_ids": [
+      "p-00d6a95e43d51092",
+      "p-ae68fdba5551b685",
+      "p-44c1ab76b7fd213d"
+    ],
+    "prompt_bytes": 17242,
+    "prompt_sha256": "62c9821c9d7f9fe9bcc025e230e62c28115ea56c3ba65509b754eca8ccb6b843",
+    "suite": "newadvice12"
+  },
+  "chars_per_token": 3.57,
+  "command": [
+    "codex",
+    "exec",
+    "--ignore-user-config",
+    "--ignore-rules",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--model",
+    "gpt-6.1-sol",
+    "--json",
+    "--color",
+    "never",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "unified_exec",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "view_image",
+    "--disable",
+    "shell_snapshot",
+    "--disable",
+    "skill_search",
+    "--disable",
+    "skill_mcp_dependency_install",
+    "--disable",
+    "request_permissions_tool",
+    "--disable",
+    "sleep_tool",
+    "-c",
+    "model_reasoning_effort=\"high\"",
+    "-c",
+    "project_doc_max_bytes=0",
+    "-c",
+    "web_search=\"disabled\"",
+    "-c",
+    "mcp_servers={}",
+    "-c",
+    "developer_instructions=\"Answer the supplied task using only its text. Do not use tools or commands.\"",
+    "-"
+  ],
+  "decoded": {
+    "p-00d6a95e43d51092": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "actionability": 4,
+          "constraint_fit": 3,
+          "decision_quality": 4,
+          "reasoning": 3
+        },
+        "B": {
+          "actionability": 4,
+          "constraint_fit": 3,
+          "decision_quality": 4,
+          "reasoning": 3
+        },
+        "factual_objections": [
+          {
+            "answer": "B",
+            "claim": "Five to eight offices paying $600–$1,000 per month would reach about $3,400 per month in take-home pay.",
+            "evidence": "The stated range includes five offices paying $600, which produces only $3,000 in monthly revenue before expenses and taxes. Some combinations could work, but the range does not establish the claimed take-home income.",
+            "label": "contradicted"
+          }
+        ],
+        "id": "p-00d6a95e43d51092",
+        "reason": "Both reasonably select the service business and provide useful pilot plans. A offers clearer prospecting targets; B provides stronger spending and patient-data precautions. Neither adequately demonstrates $3,400 in take-home income after costs and taxes or reconciles responsive call coverage with the 20-hour limit. A's 15-minute guarantee needs defined coverage hours, while B's client-revenue range does not consistently support its income claim.",
+        "winner": "tie"
+      }
+    },
+    "p-44c1ab76b7fd213d": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "actionability": 4,
+          "constraint_fit": 3,
+          "decision_quality": 4,
+          "reasoning": 3
+        },
+        "B": {
+          "actionability": 4,
+          "constraint_fit": 4,
+          "decision_quality": 4,
+          "reasoning": 4
+        },
+        "factual_objections": [],
+        "id": "p-44c1ab76b7fd213d",
+        "reason": "Both correctly reject a roughly $74,000 commitment against a $45,000 budget, and both alternative schedules add up. B better integrates inventory through a stock-triggered throttle, retains $2,700 in budget reserve, and correctly identifies December 28 as ten weeks from October 19. A's scheduled spending jumps conflict with its gradual-ramp rule. Both still need contribution margins, organic demand, and repeat-order timing to validate their thresholds; B's 800-bottle reserve and 2.5 ROAS threshold remain provisional.",
+        "winner": "B"
+      }
+    },
+    "p-ae68fdba5551b685": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "actionability": 3,
+          "constraint_fit": 2,
+          "decision_quality": 3,
+          "reasoning": 3
+        },
+        "B": {
+          "actionability": 3,
+          "constraint_fit": 3,
+          "decision_quality": 3,
+          "reasoning": 3
+        },
+        "factual_objections": [
+          {
+            "answer": "A",
+            "claim": "About 170 course subscribers would be needed to match one premium client.",
+            "evidence": "At $49 per month, approximately 51 subscribers generate $2,500 in revenue. No supplied course costs justify increasing that figure to 170.",
+            "label": "contradicted"
+          },
+          {
+            "answer": "A",
+            "claim": "If fewer than four clients buy premium, raising standard pricing to $550 and filling available slots provides a sufficient fallback.",
+            "evidence": "With two premium clients, the 50-hour limit permits 39 standard clients. Monthly profit would be 2 × $2,460 + 39 × $510 = $24,810, below the target. One or zero premium clients produces still less.",
+            "label": "contradicted"
+          },
+          {
+            "answer": "A",
+            "claim": "Premium can start on day 60, followed by 30-day termination notices if insufficient standard clients have left.",
+            "evidence": "If all 45 clients remain and five upgrade, weekly work becomes 40 standard hours plus 15 premium hours plus five admin hours, totaling 60. Giving termination notices at that point does not preserve the stated 50-hour ceiling during the notice period.",
+            "label": "contradicted"
+          },
+          {
+            "answer": "B",
+            "claim": "The fallback is eight premium clients at $2,000 with 21 standard clients.",
+            "evidence": "The profit and hours arithmetic is correct, but eight premium clients exceeds the proposed limit of up to five. This fallback requires explicitly revising that limit.",
+            "label": "contradicted"
+          }
+        ],
+        "id": "p-ae68fdba5551b685",
+        "reason": "Both correctly calculate that five premium clients at $2,500 plus 30 standard clients at $500 produce $26,100 within 50 weekly hours. B is slightly stronger because A explicitly risks exceeding capacity during its transition and gives incorrect course and low-uptake calculations. B still needs a firm requirement to release capacity before premium work starts, and its eight-client fallback exceeds the proposed premium limit.",
+        "winner": "B"
+      }
+    }
+  },
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 4812,
+  "event_count": 4,
+  "finish_reasons": [
+    "turn.completed"
+  ],
+  "finished": "2026-10-19T16:17:09.447232+00:00",
+  "observed_models": [],
+  "parse_error": "",
+  "prompt_sha256": "62c9821c9d7f9fe9bcc025e230e62c28115ea56c3ba65509b754eca8ccb6b843",
+  "requested_model": "gpt-6.1-sol",
+  "serving_model_attested": false,
+  "status": "ok",
+  "usage_events": [
+    {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 11776,
+      "input_tokens": 17395,
+      "output_tokens": 5254,
+      "reasoning_output_tokens": 4142
+    }
+  ]
+}

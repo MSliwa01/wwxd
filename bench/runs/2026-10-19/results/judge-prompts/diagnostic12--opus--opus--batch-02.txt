@@ -1,0 +1,445 @@
+Evaluation date: 2026-10-19. This is the current date, not a future date. May 2026 is in the past. Publication dates and dates of events described in a source are distinct. A model training cutoff does not invalidate supplied later material. You are an independent evaluator. Use no tools, commands, files, browsing, or external retrieval. A and B are anonymous. Their ordering conveys nothing. Do not infer their model, source access, or provenance. Do not reward writing style, citation presence, quotations, expert agreement, or presumed source use. A tie is valid.
+Score each answer on the four specified integer scales, each from 1 to 5. Anchors: 1 fundamentally deficient; 2 major problems; 3 mixed with meaningful gaps; 4 good with minor gaps; 5 strong and sufficiently complete. Choose A, B, or tie for substantive overall quality. Preserve uncertainty rather than inventing evidence.
+Return ONLY a JSON object with exactly one key, "judgments", containing one object per supplied pair. Each object has exactly: "id", "A", "B", "winner", "reason", "factual_objections". A and B each contain exactly the four dimension names and integer scores. winner is "A", "B", or "tie"; reason is a nonempty string. factual_objections is a list, possibly empty, of objects with exactly "answer" ("A" or "B"), "claim", "label" ("contradicted" or "unverified"), and "evidence" (a nonempty explanation). Distinguish an established contradiction from an unverified claim.
+Evaluate accuracy, specificity, faithfulness, and usefulness using the complete audited reference packet. The reference is evidence, not a required script. Missing optional detail is not automatically a false claim. Label a factual objection contradicted only when supplied evidence establishes the contradiction; otherwise label it unverified. Do not treat absence from the reference as proof of falsehood. Resolve a conflict between a summary and direct evidence in favor of the direct evidence and explain it.
+
+Pairs:
+[
+  {
+    "id": "p-e6ba524c4d3fa040",
+    "question": "I'm building a startup in Stockholm. Does Paul Graham think I really need to move to Silicon Valley?",
+    "A": "**Short answer: Paul Graham thinks you should at least *go* to Silicon Valley, but not necessarily move there for good.** In his April 2026 talk in Stockholm, he said founders should spend time there even if they come back. He also said that going and returning is one of the best things a founder can do for Stockholm as a startup hub.\n\n**His reasons**\n- **Peers.** There are more and better people working on the same problems, and more chance meetings that turn out valuable.\n- **Speed.** Valley investors decide faster because competition punishes waiting.\n- **Standing back home.** Investors outside the Valley tend to treat local startups as second-rate. Having been there, or getting into YC, reverses that.\n- **Calibration.** Seeing the big fish up close turns an impossible goal into a hard but definite one.\n- **Culture.** People help you for no reason, and you bring that culture home.\n\n**Caveats he raises himself**\n- YC data suggests startups that go home after YC are about half as likely to become unicorns. He discounts that figure for selection bias and higher Bay Area valuations.\n- He says family and life matter more than the company.\n- He admits that recommending YC as the best way to go sounds like talking his own book.\n\n**Concrete next steps**\n1. Apply to YC, or plan a focused stint of a few months in the Bay Area.\n2. Raise money and build relationships while you're there.\n3. Decide afterward whether to relocate or return to Stockholm.\n\n**When staying in Stockholm makes more sense**\n- Your customers, regulators or key talent are local.\n- You already have strong investor interest at home.\n- Family commitments make relocating costly.\n\n**When a longer move makes more sense**\n- You're struggling to raise money locally.\n- You lack peers working at your level.\n- Your market is US-first.\n\n**What's uncertain:** the half-as-likely figure comes without a published method. Other YC voices, such as Altman, are less sure the Bay Area premium will hold over the next decade.",
+    "B": "**Short answer:** Paul Graham's long-standing view is that you don't strictly *need* to, but your odds are meaningfully better in a major startup hub, and for most ambitious tech startups he has pointed to Silicon Valley (the Bay Area) as the best one. He treats it as a probabilistic advantage, not a requirement.\n\n**His reasoning, as I understand it:**\n- **Density:** Hubs concentrate investors, experienced founders, technical talent and acquirers, so useful chance encounters happen constantly.\n- **Ambition:** A city's culture shapes what you think is normal to attempt. Startup hubs push founders toward bigger goals.\n- **Fundraising and hiring:** Both are easier when investors and candidates are nearby.\n- **Timing:** He has suggested that being there in the earliest, most formative stage matters most, and that you can relocate later if it makes sense.\n\n**What's uncertain:** Remote work and the growth of other hubs have weakened the geographic argument somewhat since he first made it. I can't confirm how much he has updated his view recently. Stockholm is also a stronger ecosystem than most, with a record of large companies, local capital and strong engineering talent.\n\n**Decision criteria. Lean toward moving (at least temporarily) if:**\n- You need US venture capital or US customers.\n- You're raising a large seed round.\n- You lack a network of experienced founders.\n\n**Stay in Stockholm if:**\n- Your market is Nordic or European.\n- Your key hires won't relocate.\n- Local investors are already backing you.\n\n**Next steps:**\n1. Spend a focused period in the Bay Area, for example 2–3 months or an accelerator batch, before committing to a full move.\n2. Measure the difference in investor meetings, hires and customer conversations.\n3. Decide based on that evidence.",
+    "reference": {
+      "actual_stance": "Yes, at least for a while: go, and you can come back. You get the best peers, more serendipitous meetings, investors who decide faster, more respect from investors back home, and a realistic view of how good you are. Going and then actually returning is also one of the best things founders can do for Stockholm. He calls YC the optimal way to do the stint (four to six months). He cites YC data that startups going home after YC are only about half as likely to become unicorns, and discounts it three ways: selection bias, it measures valuation rather than performance, and half as well is still very good. He thinks Stockholm could become the Silicon Valley of Europe.",
+      "category": "fresh",
+      "errors": [
+        "Saying he thinks remote work makes location irrelevant.",
+        "Saying he advises moving permanently and never returning."
+      ],
+      "evidence": [
+        {
+          "quote": "And the answer is the same now as it always is. Yes, you should. You can go there for a bit and then come back, but you should at least go.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "0:36"
+        },
+        {
+          "quote": "You get the best peers.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "1:09"
+        },
+        {
+          "quote": "investors in Silicon Valley decide a lot faster.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "5:00"
+        },
+        {
+          "quote": "as long as you do actually come back, that's one of the best things you can do to help Sweden to help Stockholm thrive as a startup hub.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "16:10"
+        },
+        {
+          "quote": "Surely the optimal way to go to Silicon Valley for a bit and then come back is to do YC.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "17:16"
+        },
+        {
+          "quote": "startups that go back home after YC are only about half as likely to become unicorns.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "18:57"
+        },
+        {
+          "quote": "there's a lot of selection bias in this.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "18:57"
+        },
+        {
+          "quote": "even if you only do half as well, that's still pretty good.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "19:30"
+        },
+        {
+          "quote": "you could make it the Silicon Valley of Europe.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "20:04"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold matches raw. Added the reasons for going and the 'as long as you do actually come back' condition."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-05",
+      "key_status": "confirmed_expanded",
+      "primary_sources": [
+        "yt-QHJkUw31YX8"
+      ],
+      "question": "I'm building a startup in Stockholm. Does Paul Graham think I really need to move to Silicon Valley?",
+      "required_points": [
+        "Yes, go to Silicon Valley, at least for a while; you can come back.",
+        "Mentions the unicorn-rate caveat or the benefit of returning to help Stockholm."
+      ],
+      "supporting_points": [
+        "Reasons: best peers, serendipitous meetings, faster investors, respect back home.",
+        "YC is the optimal way to go for a bit and come back.",
+        "Startups that go home after YC are about half as likely to become unicorns, discounted for selection bias, valuation vs performance, and 'half as well is still good'.",
+        "Stockholm could become the Silicon Valley of Europe."
+      ],
+      "uncertainty": [],
+      "vault": "yc"
+    }
+  },
+  {
+    "id": "p-9affc45058d920b8",
+    "question": "What's a good monthly churn rate for a paid online community, and when should I worry about it? What would Alex Hormozi say?",
+    "A": "# Monthly Churn for a Paid Online Community\n\n**Rough benchmarks (these are general patterns, not hard standards):**\n- **Under 5%:** Strong. This usually means members get ongoing value, not just a one-time payoff.\n- **5–10%:** Typical for many paid communities, especially those priced under about $100/month.\n- **Over 10%:** A warning sign. At 15% or more, you're replacing your whole membership roughly every 6–7 months.\n\nContext changes these numbers. Low-price hobby communities churn more than high-ticket professional ones. Annual plans hide churn until renewal. Communities built around a single outcome, like \"launch your first product,\" churn naturally once members succeed.\n\n**When to worry:**\n- Churn is rising for two or three months in a row.\n- Most cancellations happen in the first 30–60 days. This points to an onboarding problem rather than a value problem.\n- Churn is high enough that acquisition can't outpace it, so growth stalls.\n- The cost to acquire a member is more than about a third of their lifetime value.\n\n**Hormozi's likely framing:** Alex Hormozi generally treats churn as the ceiling on your business. Your maximum size is roughly new members per month divided by monthly churn. So 100 joins a month at 10% churn caps you near 1,000 members. He emphasizes these levers:\n- Fixing the first days of membership through fast wins and personal touchpoints.\n- Raising perceived value before cutting price.\n- Diagnosing why people leave before adding more marketing.\n\nThat's a fair summary of his general approach, not a specific statement about your situation.\n\n**Next steps:**\n1. Calculate churn by joining cohort, not just as a blended average.\n2. Survey or call members who cancel.\n3. Map when cancellations happen and fix the biggest drop-off point first.",
+    "B": "# Monthly churn benchmarks for a paid community\n\nFor a paid online community:\n\n- **Under 10% monthly churn** is excellent.\n- **Around 20%** (about 80% retention) is typical.\n- **Above 30%** means fewer than 7 in 10 members stay each month. At that point retention is probably your highest-return problem, ahead of acquisition.\n\nHalving churn roughly doubles lifetime value, so small improvements matter a lot.\n\n## When to worry\n\nLook at churn by member tenure, not just the overall average. Churn is normally highest in months one to three. It drops to around 10% after day 90 and to around 2% by month six. So:\n\n- **Worry** if members who have stayed past 90 days still leave at high rates. That suggests the core value isn't landing.\n- **Don't panic** about high month-one churn, or high churn in a community under six months old. A new community has no long-tenured members yet, so its average looks worse than it really is. Don't overhaul everything because of it.\n- **Track joins against cancels every month.** Call the business growing, flat or declining based on which is bigger.\n\n## Hormozi's likely advice\n\nMake it your goal to get members past day 90 and month six, rather than pushing the average down. In practice:\n\n1. **Ask why people leave.** Message everyone who cancels, tag the reason, and fix the top one or two reasons every 20 or so cancels.\n2. **Ask your longest members why they stay**, then do more of that.\n3. **Cut overwhelm.** Offer less, and get new members a quick win within 24 hours.\n4. **Build belonging.** Show up daily, run one weekly live call, and introduce newcomers to about ten regulars.\n5. **Add a discounted annual plan.** Add a cheaper tier only if your ideal members say price is the problem.\n\n## Caveats\n\nThese benchmarks come from averages on Skool, a platform Hormozi co-founded and promotes, so they aren't neutral industry data. They fit online consumer services, but not every niche. High-ticket or professional communities should aim lower than 10%.",
+    "reference": {
+      "actual_stance": "Using Skool platform data that he credits to Sam at Skool: average monthly retention is 80% (20% churn); the best groups churn under 10%; groups under 70% retention (30%+ churn) should make retention their top priority because it is the highest-ROI lever. Churn falls with tenure: 20%+ in months 1 to 3, about 10% or less after day 90, about 2% by month 6. So judge churn by cohort. A community younger than 90 days will show inflated churn, and high month-one churn is normal unless almost everyone leaves. Focus on getting members past month one (onboarding, expectations), day 90 (an outcome) and month 6 (connections). He says these benchmarks fit online and consumer services, not insurance-style or alarm-system subscriptions.",
+      "category": "fresh",
+      "errors": [
+        "Presenting SaaS 3 to 7% churn benchmarks as his view.",
+        "Saying high month-one churn alone means the business is broken.",
+        "Attributing the platform data to a source other than Skool."
+      ],
+      "evidence": [
+        {
+          "quote": "this isn't uh churn for like an insurance premium or an alarm system",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "1:05"
+        },
+        {
+          "quote": "the platform average across School is 80% monthly retention. So said differently, it's 20% churn.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "1:39"
+        },
+        {
+          "quote": "Now the best groups have less than 10% churn, aka 90% retention month over month. The not good groups have less than 70% retention, aka 30% or higher.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "1:39"
+        },
+        {
+          "quote": "you probably need to work on your retention more than anything else. It'll be the highest ROI lever.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "1:39"
+        },
+        {
+          "quote": "you got a double in the LTV per customer",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "2:13"
+        },
+        {
+          "quote": "Now, if you keep someone 90 days, which seems to be the first kind of big churn drop-off point, it drops to around 10% or less.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "3:53"
+        },
+        {
+          "quote": "So, it goes from like 10% to 2%.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "3:53"
+        },
+        {
+          "quote": "if your community or recurring revenue thing is less than 90 days old, then your churn is always going to be inflated",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "4:24"
+        },
+        {
+          "quote": "that's normal for it to be higher than the other months, unless basically everyone's leaving, in which case, yes, you should go fix that.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "4:57"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold matches raw. Added the scope caveat (online/consumer services, not insurance or alarm subscriptions), the under-90-days caveat and the 'unless everyone leaves' exception.",
+        "Auto-captions spell the platform 'School'; it is Skool. Quotes keep the caption spelling."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-05",
+      "key_status": "confirmed_expanded",
+      "primary_sources": [
+        "yt--j8_YCWZ05Q"
+      ],
+      "question": "What's a good monthly churn rate for a paid online community, and when should I worry about it? What would Alex Hormozi say?",
+      "required_points": [
+        "Average about 80% monthly retention (20% churn); best groups under 10% churn.",
+        "Worry when retention is under 70% (churn above 30%): retention becomes the highest-ROI fix.",
+        "Churn depends on tenure: highest in months 1 to 3, about 10% or less after day 90, about 2% by month 6."
+      ],
+      "supporting_points": [
+        "Do not overhaul the business because month-one churn is high, unless basically everyone is leaving.",
+        "A community under 90 days old will show inflated churn.",
+        "Cutting churn from 20% to 10% doubles customer lifetime value.",
+        "Benchmarks fit online/consumer services, not insurance or alarm-type subscriptions.",
+        "Tactics: first-month onboarding, a day-90 outcome, month-6 connections; ask cancellers why, look for patterns."
+      ],
+      "uncertainty": [
+        "The benchmarks are Skool platform averages relayed by Hormozi, not his own measurements. Answers that say so are correct."
+      ],
+      "vault": "hormozi"
+    }
+  },
+  {
+    "id": "p-518efde008bea979",
+    "question": "I own a residential HVAC duct-cleaning company doing about $1.2M a year at a 38% net margin, and we close about 82% of in-home inspections. Should I keep prices where they are so I don't hurt the close rate? What would Alex Hormozi say?",
+    "A": "# Short answer: no. An 82% close rate usually means you're underpriced\n\nOn Alex Hormozi's view, your premise is backwards. He treats a close rate above roughly 80% as a sign the price has room to rise. For a normal service like duct cleaning, he argues a higher price can hold or even raise the close rate, because it makes customers more confident you'll deliver. He would likely suggest a modest raise of about 10% and keeping the offer itself unchanged.\n\n**The underpricing signal is his heuristic.** The claim that a higher price can raise your close rate is his opinion from consulting, not something proven for your market.\n\n## Do the break-even math first\n\nAssume each job's costs scale with volume, so your 38% net margin is roughly your margin per job:\n\n- **Today:** profit per inspection ≈ 0.82 × 0.38 = 0.31 of the ticket.\n- **After a 10% raise:** profit per job ≈ 0.48 of the old ticket.\n- **Break-even close rate:** about 65%.\n\nIf your contribution margin is higher than 38% because some costs are fixed, break-even rises to around 68–70%. In either case, close rate can fall about 12 points before you lose money. Net profit would rise roughly 25% if the close rate holds.\n\n## Next steps\n\n1. Raise prices about 10% on new inspections only.\n2. Track the next 50–100 inspections, or about six weeks.\n3. Decide based on the result:\n   - **Close rate stays above about 75%:** raise again.\n   - **It settles between 68% and 75%:** keep the new price.\n   - **It drops below about 68%:** roll back, or improve the offer and proof.\n4. If your crews are booked out, you're limited by capacity, not demand. That makes raising prices even safer, and you could add a paid priority-scheduling fee.\n\n## What would change this\n\n- The 82% comes from pre-qualified leads, such as referrals or warranty callbacks, rather than general inbound.\n- Competitors are visibly undercutting you, and you lose deals on price.\n- Lead volume is falling, so each lost close costs more.",
+    "B": "**No. An 82% close rate strongly suggests you're underpriced.** Holding prices to protect that number likely leaves significant profit uncollected.\n\n**Hormozi's position:** He generally argues that a very high close rate is a signal to raise prices. Keep raising until enough prospects say no, and judge success by profit, not close rate. He also pushes for stronger offers (guarantees, bonuses, tiers) so a higher price feels like a better deal.\n\n**Rough math (assumptions: your 38% net margin, costs per job unchanged):**\n- A 15% price increase lifts profit per job from 38% to about 53% of today's price, roughly 39% more per job.\n- You could lose about a quarter of your closes (82% down to about 60%) before total profit falls.\n- Because some of your costs are fixed, the real break-even is somewhat tighter. Still, the cushion is large.\n- Fewer jobs at higher prices also frees crew capacity for more leads or upsells.\n\n**Next steps:**\n1. Raise prices 10–20% on new quotes only, for 4–6 weeks.\n2. Track close rate, average ticket, profit per inspection, and reviews.\n3. Add good/better/best tiers. Bundle dryer vents, sanitizing, coil cleaning, or filtration, and add a strong satisfaction guarantee.\n4. Train techs to anchor on the premium tier first.\n\n**How to read the results:**\n- If close rate stays above ~65–70% and profit per inspection rises, raise again.\n- If profit per inspection falls, roll back partway.\n- If you're already capacity-constrained, raising prices is even more clearly right.\n\n**What's uncertain:** Your local competition, how much your leads are referral-driven (those tolerate higher prices better), and whether cheap bait-and-switch competitors set price expectations in your area. These affect how far you can go, but probably not the direction.",
+    "reference": {
+      "actual_stance": "No, raise prices. A close rate of 80% or more tells him there is room on price. He penciled in a 10% raise, framed as 'more asking than telling'. At this business's numbers that is roughly a 25% increase in net profit (about $100k+ a year at last year's volume), and it still makes more money as long as the close rate stays above about 65%. For a normal, non-luxury service, a higher price can raise the customer's conviction that you can deliver, and this owner's earlier 23% raise produced a higher close rate and more money. He says charging more is among the biggest levers for businesses under roughly $3M to $5M.",
+      "arithmetic_checks": [
+        "Profit $479k on $1.25M revenue (38%). A 10% raise at the same volume adds about $125k, all profit: 125/479 = +26%, consistent with 'roughly 25%' and 'a hundred plus thousand'.",
+        "Break-even close rate if costs scale with jobs: 0.82 x 479 / (479 + 125) = 0.650, matching 'more than 65%'."
+      ],
+      "category": "applied",
+      "errors": [
+        "Recommending keeping prices to protect the close rate.",
+        "Claiming the 65% break-even is a general rule rather than this business's math.",
+        "Treating the higher-price-higher-close effect as a luxury/Veblen effect."
+      ],
+      "evidence": [
+        {
+          "quote": "full end price for us is 1575 per HVAC unit.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "guest_corey",
+          "speaker_basis": "business owner answering Hormozi's question; content-inferred",
+          "timestamp": "1:05"
+        },
+        {
+          "quote": "And then our close rate is 82%.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "guest_corey",
+          "speaker_basis": "business owner answering Hormozi's question; content-inferred",
+          "timestamp": "3:47"
+        },
+        {
+          "quote": "So, you did a 23% price increase after the first time we talked to you.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "5:54"
+        },
+        {
+          "quote": "And so, that resulted in a higher close rate and more money.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "6:26"
+        },
+        {
+          "quote": "if you raise your prices, what sometimes happens is that the conviction of the customer that you can actually deliver on the promise you're making goes up.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "7:00"
+        },
+        {
+          "quote": "So whenever I hear 80% or over 80% close rates, I usually know that there's room in sale.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "8:06"
+        },
+        {
+          "quote": "Basically, what I penciled out was a 10% price raise. This is more asking than telling.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "8:06"
+        },
+        {
+          "quote": "As long as we close more than 65%, we make more money. Thing is is that 10% price raise for you equals roughly a 25% increase in net profit.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "8:06"
+        },
+        {
+          "quote": "So that'd be roughly a hundred plus thousand a year. And that's at last year's volume and profit.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "8:37"
+        },
+        {
+          "quote": "Number one is we're going to do price raise of 10%. So, around 1650 per unit.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "30:45"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold matches raw. Added the prior 23% raise as direct evidence for 'higher price, higher close rate'.",
+        "Raw-internal inconsistency: stated price is $1,575 per unit, but the plan says '10%, so around 1650 per unit'. 1,575 x 1.10 = about 1,733; 1,650 is about +4.8% (or 10% on $1,500). Answers should not be marked down for using either figure."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-11",
+      "key_status": "confirmed_with_correction",
+      "primary_sources": [
+        "yt-OQf2Ba-Lp_4"
+      ],
+      "question": "I own a residential HVAC duct-cleaning company doing about $1.2M a year at a 38% net margin, and we close about 82% of in-home inspections. Should I keep prices where they are so I don't hurt the close rate? What would Alex Hormozi say?",
+      "required_points": [
+        "Raise prices; an 80%+ close rate signals room on price.",
+        "About 10%; the raise still pays as long as the close rate stays above about 65%."
+      ],
+      "supporting_points": [
+        "10% raise is roughly +25% net profit at a 38% margin (about $100k+ a year).",
+        "Higher price can increase conviction that you deliver (normal goods, not Veblen goods).",
+        "The owner's earlier 23% raise increased close rate and revenue.",
+        "Framed as a suggestion ('more asking than telling')."
+      ],
+      "uncertainty": [],
+      "vault": "hormozi"
+    }
+  }
+]

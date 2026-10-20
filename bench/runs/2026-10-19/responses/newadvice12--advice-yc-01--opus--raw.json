@@ -1,0 +1,101 @@
+{
+  "actual_input_tokens": 2732,
+  "answer": "**Recommendation: Cut down to the note-writer and start charging now.** One clinic using it daily is your only real signal. The other 30-plus features show what you could build, not what clinics want.\n\n**Why not the other paths**\n- **Full practice-management system first:** This is a slow replacement sale against entrenched vendors. It would burn most of your roughly 9.5 months of runway before you learn whether anyone will pay.\n- **Hospitals:** Sales cycles run 6–18 months, with security reviews and integration demands, and well-funded scribe competitors already exist. Your runway can't absorb that, and you'd be dropping your one real signal. A bigger market doesn't help if you can't reach it before you run out of money.\n\n**Next 8 weeks**\n- **Weeks 1–2:** Hide everything except exam recording, notes, and discharge instructions. Spend a day inside the daily-use clinic and learn exactly why they rely on it. Ask the two inactive clinics directly why they stopped.\n- **Weeks 2–3:** Set a price, roughly $150–400 per vet per month. Ask the active clinic to pay. If they won't, treat that as critical information.\n- **Weeks 3–8:** One founder sells full-time: local clinics, vet Facebook groups, practice-owner networks, and referrals. Target 60–100 conversations. The other founder fixes only what blocks daily use, especially accuracy, speed, and export into the clinic's existing system.\n- **Every week:** Track how many vets use it on three or more days, plus paid conversions.\n\n**Decision criteria at week 8**\n- **10+ paying clinics with strong weekly use:** Raise money on that traction.\n- **Heavy use but resistance to paying:** Rework pricing or the buyer, for example selling to groups.\n- **Fewer than 3 paying clinics:** Reassess the market. Hospitals become worth considering only then, and only with a specific wedge.\n\n**Assumption:** Your notes quality is competitive with existing vet scribes. Verify this early.",
+  "arm": "raw",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 11.228,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "76fc901a8de315518793efd6cfb63614182087199f71ba5c1deb11685378a63b"
+    }
+  ],
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 782,
+  "event_count": 7,
+  "family": "opus",
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:28:33.822085+00:00",
+  "format_deviations": [
+    "outside descriptive 150..300 word band around approximate 250-word instruction"
+  ],
+  "id": "newadvice12--advice-yc-01--opus--raw",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "prompt_sha256": "fb549b621b4d88147e53f1821556660e199285e7c9a80adb6f839faa931d6db6",
+  "question_key": "newadvice12--advice-yc-01",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "newadvice12",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 1162,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 1162,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 1162,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 1162,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 794,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 794,
+      "output_tokens_details": {
+        "thinking_tokens": 121
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ],
+  "words": 307
+}

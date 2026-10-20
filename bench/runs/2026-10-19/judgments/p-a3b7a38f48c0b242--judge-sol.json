@@ -1,0 +1,36 @@
+{
+  "answer_family": "sol",
+  "batch_id": "newadvice12--sol--sol--batch-03",
+  "error": "",
+  "id": "p-a3b7a38f48c0b242--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-a3b7a38f48c0b242",
+  "primary_eligible": false,
+  "prompt_sha256": "c349479a60fe8a0c9df6fe27f028e51deea5feacfbab53ebbccdc8b3e091e171",
+  "question_key": "newadvice12--advice-yc-01",
+  "status": "ok",
+  "suite": "newadvice12",
+  "verdict": {
+    "A": {
+      "actionability": 5,
+      "constraint_fit": 5,
+      "decision_quality": 5,
+      "reasoning": 5
+    },
+    "B": {
+      "actionability": 5,
+      "constraint_fit": 5,
+      "decision_quality": 5,
+      "reasoning": 5
+    },
+    "factual_objections": [],
+    "id": "p-a3b7a38f48c0b242",
+    "reason": "Both recommend a focused, paid veterinary note-writing experiment, appropriately distinguish one clinic's usage from repeatable demand, and provide concrete eight-week milestones. Runway arithmetic is reasonable. B specifies stronger retention criteria and founder responsibilities; A explicitly addresses different responses to payment versus usage failures. Neither has a material substantive advantage.",
+    "winner": "tie"
+  },
+  "winner": "tie"
+}

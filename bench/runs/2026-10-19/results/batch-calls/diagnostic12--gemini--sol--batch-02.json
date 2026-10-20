@@ -1,0 +1,72 @@
+{
+  "actual_input_tokens": 10361,
+  "answer": "```json\n{\n  \"judgments\": [\n    {\n      \"id\": \"p-ea71360e9fe0a8de\",\n      \"A\": {\n        \"accuracy\": 5,\n        \"specificity\": 5,\n        \"faithfulness\": 5,\n        \"usefulness\": 5\n      },\n      \"B\": {\n        \"accuracy\": 5,\n        \"specificity\": 5,\n        \"faithfulness\": 5,\n        \"usefulness\": 5\n      },\n      \"winner\": \"tie\",\n      \"reason\": \"Both answers correctly identify Michael Seibel's perspective on fundraising, including the emphasis on leverage, customer traction, and building rather than endless deck polish. Both cite the Justin.tv and Socialcam examples accurately based on the reference packet. They offer nearly identical, high-quality practical frameworks for the user. A tie is appropriate.\",\n      \"factual_objections\": []\n    },\n    {\n      \"id\": \"p-0d7a755834632ca5\",\n      \"A\": {\n        \"accuracy\": 4,\n        \"specificity\": 4,\n        \"faithfulness\": 4,\n        \"usefulness\": 4\n      },\n      \"B\": {\n        \"accuracy\": 5,\n        \"specificity\": 5,\n        \"faithfulness\": 5,\n        \"usefulness\": 5\n      },\n      \"winner\": \"B\",\n      \"reason\": \"Answer B directly answers the question with Paul Graham's actual stance ('Yes, at least for a while: go, and you can come back') and incorporates the specific supporting details from the Stockholm talk, such as the YC unicorn-rate caveat, the speed of Silicon Valley investors, and the benefits to Stockholm of returning. Answer A hedges too much and misses Paul Graham's explicit 'Yes' in response to the question.\",\n      \"factual_objections\": []\n    },\n    {\n      \"id\": \"p-3dc91bfc2e1429d0\",\n      \"A\": {\n        \"accuracy\": 5,\n        \"specificity\": 5,\n        \"faithfulness\": 5,\n        \"usefulness\": 5\n      },\n      \"B\": {\n        \"accuracy\": 5,\n        \"specificity\": 5,\n        \"faithfulness\": 5,\n        \"usefulness\": 5\n      },\n      \"winner\": \"tie\",\n      \"reason\": \"Both answers correctly identify that the prompt contains a false premise, rejecting the idea that Jessica Livingston favored aggressive or ruthless founders. Both accurately cite her actual selection criteria (earnestness, determination, flexibility) and her rejection of conceited applicants. Both handle the trick question exceptionally well.\",\n      \"factual_objections\": []\n    }\n  ]\n}\n```",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 2.316,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "98bdf5987ea181bb6b58110b3b972fb17bae21391460ecdd26149f10111012e5"
+    }
+  ],
+  "batch": {
+    "blocked_pair_ids": [],
+    "chars_per_token": 3.2,
+    "eligible_pair_ids": [
+      "p-ea71360e9fe0a8de",
+      "p-0d7a755834632ca5",
+      "p-3dc91bfc2e1429d0"
+    ],
+    "estimated_input_tokens": 11213,
+    "id": "diagnostic12--gemini--sol--batch-02",
+    "judge_family": "gemini",
+    "pair_ids": [
+      "p-ea71360e9fe0a8de",
+      "p-0d7a755834632ca5",
+      "p-3dc91bfc2e1429d0"
+    ],
+    "prompt_bytes": 35919,
+    "prompt_sha256": "45f109bc8dd6a0b7b2e15e457fea077f125ed4d67f1b0d61136444c51de36176",
+    "suite": "diagnostic12"
+  },
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "decoded": {},
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 11213,
+  "event_count": 1,
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:37:23.795166+00:00",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "parse_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "prompt_sha256": "45f109bc8dd6a0b7b2e15e457fea077f125ed4d67f1b0d61136444c51de36176",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 634,
+      "promptTokenCount": 10361,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 10361
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 10995
+    }
+  ]
+}

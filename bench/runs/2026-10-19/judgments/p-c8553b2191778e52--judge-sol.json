@@ -1,0 +1,61 @@
+{
+  "answer_family": "gemini",
+  "batch_id": "newadvice12--sol--gemini--batch-02",
+  "error": "",
+  "id": "p-c8553b2191778e52--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-c8553b2191778e52",
+  "primary_eligible": true,
+  "prompt_sha256": "49dcc74361de9ff9d8484b82b092394a5d0f74e93fb17c24428a249ded21ec2b",
+  "question_key": "newadvice12--advice-hz-03",
+  "status": "ok",
+  "suite": "newadvice12",
+  "verdict": {
+    "A": {
+      "actionability": 2,
+      "constraint_fit": 2,
+      "decision_quality": 3,
+      "reasoning": 2
+    },
+    "B": {
+      "actionability": 3,
+      "constraint_fit": 3,
+      "decision_quality": 3,
+      "reasoning": 2
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "Spending $1,000 daily burns through $45,000 in less than 45 days.",
+        "evidence": "$45,000 divided by $1,000 per day is exactly 45 days.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "A",
+        "claim": "The proposed spending will exhaust inventory well before December 31 and cause the business to miss peak Black Friday and holiday shopping.",
+        "evidence": "At unchanged 3.2 ROAS and $58 per bottle, 4,000 bottles cover about 72.5 days at $1,000 daily. That does not establish an early stockout or missing Black Friday. Other demand and future advertising performance are unspecified.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "At $1,000 daily, inventory would deplete in roughly 130 days.",
+        "evidence": "Using the supplied ROAS, daily attributed revenue would be $3,200, equivalent to about 55.2 bottles. Four thousand bottles would last about 72.5 days, not 130.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "B",
+        "claim": "Holiday traffic compression will cause stockouts before replenishment can arrive.",
+        "evidence": "No holiday demand forecast or other-channel sales rate is supplied. Even the constant-ROAS calculation yields about 72.5 days of inventory, slightly longer than the stated 70-day manufacturing lead time.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-c8553b2191778e52",
+    "reason": "Both correctly reject the plan, which would cost about $74,000 from October 19 through December 31 against a $45,000 budget. B narrowly wins by supplying a phased alternative with December spending capped by the remainder and considering profitability. A supplies no actual replacement budget. Both overstate the inventory constraint: at unchanged reported ROAS, spending the entire $45,000 corresponds to about 2,483 bottles, leaving inventory for other demand. B's depletion arithmetic is wrong, and its conditions for approving the original plan still fail to resolve the budget limit.",
+    "winner": "B"
+  },
+  "winner": "raw"
+}

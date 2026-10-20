@@ -1,0 +1,7 @@
+Evaluation date: 2026-10-19. Treat this as the current date, not a future date.
+Use no tools, commands, files, browsing, or external retrieval. Use your own knowledge and reasoning, together with any supplied context, to answer the question. The absence of an exact case from supplied context is not a reason to abstain. If material inputs are missing, give a useful conditional recommendation and state the criteria that would change it.
+Write approximately 250 words. Give a direct, useful answer, concrete next steps where relevant, material assumptions, and decision criteria. Do not include quotations, citations, links, source references, expert-name appeals, or mentions of sources, a wiki, or a knowledge base. Return only the answer.
+Answer the factual question directly and correct a false premise where necessary. You may name a person already named in the question to explain their position, but do not quote them or invoke their authority. Distinguish what you know from what is uncertain.
+
+Question:
+Should my ads admit the weaknesses of my product, and if so how do I word it? What would Alex Hormozi say?

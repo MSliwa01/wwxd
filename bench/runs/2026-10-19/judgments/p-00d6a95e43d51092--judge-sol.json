@@ -1,0 +1,43 @@
+{
+  "answer_family": "opus",
+  "batch_id": "newadvice12--sol--opus--batch-02",
+  "error": "",
+  "id": "p-00d6a95e43d51092--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-00d6a95e43d51092",
+  "primary_eligible": true,
+  "prompt_sha256": "62c9821c9d7f9fe9bcc025e230e62c28115ea56c3ba65509b754eca8ccb6b843",
+  "question_key": "newadvice12--advice-hz-06",
+  "status": "ok",
+  "suite": "newadvice12",
+  "verdict": {
+    "A": {
+      "actionability": 4,
+      "constraint_fit": 3,
+      "decision_quality": 4,
+      "reasoning": 3
+    },
+    "B": {
+      "actionability": 4,
+      "constraint_fit": 3,
+      "decision_quality": 4,
+      "reasoning": 3
+    },
+    "factual_objections": [
+      {
+        "answer": "B",
+        "claim": "Five to eight offices paying $600–$1,000 per month would reach about $3,400 per month in take-home pay.",
+        "evidence": "The stated range includes five offices paying $600, which produces only $3,000 in monthly revenue before expenses and taxes. Some combinations could work, but the range does not establish the claimed take-home income.",
+        "label": "contradicted"
+      }
+    ],
+    "id": "p-00d6a95e43d51092",
+    "reason": "Both reasonably select the service business and provide useful pilot plans. A offers clearer prospecting targets; B provides stronger spending and patient-data precautions. Neither adequately demonstrates $3,400 in take-home income after costs and taxes or reconciles responsive call coverage with the 20-hour limit. A's 15-minute guarantee needs defined coverage hours, while B's client-revenue range does not consistently support its income claim.",
+    "winner": "tie"
+  },
+  "winner": "tie"
+}

@@ -1,0 +1,19 @@
+{
+  "answer_family": "sol",
+  "batch_id": "newadvice12--opus--sol--batch-03",
+  "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "id": "p-356da658827616b5--judge-opus",
+  "judge_family": "opus",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-356da658827616b5",
+  "primary_eligible": true,
+  "prompt_sha256": "bd892fd59a35d7e0f6ec94806638d91ce2b8ab8d382952785fad72f7d3a7c6c6",
+  "question_key": "newadvice12--advice-yc-05",
+  "status": "failed",
+  "suite": "newadvice12",
+  "verdict": null,
+  "winner": null
+}

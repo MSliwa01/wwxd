@@ -1,0 +1,43 @@
+{
+  "answer": "",
+  "arm": "grounded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "RuntimeError: CLI exited 1: HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n\n",
+      "exit_code": 1,
+      "retry_delay_seconds": 10,
+      "seconds": 8.231,
+      "stderr_sha256": "6427dcfa3fff68ce64accc6dfa795e075902882ae59cea2847753f6014718378",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "attempt": 2,
+      "error": "RuntimeError: CLI exited 1: HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n\n",
+      "exit_code": 1,
+      "retry_delay_seconds": null,
+      "seconds": 4.007,
+      "stderr_sha256": "6427dcfa3fff68ce64accc6dfa795e075902882ae59cea2847753f6014718378",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "RuntimeError: CLI exited 1: HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n\n",
+  "estimated_input_tokens": 105159,
+  "family": "gemini",
+  "finished": "2026-10-19T11:27:47.531162+00:00",
+  "format_deviations": [],
+  "id": "newadvice12--advice-hz-05--gemini--grounded",
+  "prompt_sha256": "df50fa1c83ded782d820a1683dc96ccff7648c14eff99e9c4e00fcc27969372d",
+  "question_key": "newadvice12--advice-hz-05",
+  "requested_model": "gemini-3.5-flash-lite",
+  "status": "failed",
+  "suite": "newadvice12",
+  "words": 0
+}

@@ -1,0 +1,43 @@
+{
+  "answer_family": "sol",
+  "batch_id": "diagnostic12--sol--sol--batch-00",
+  "error": "",
+  "id": "p-d1ebfc172a92cae3--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-d1ebfc172a92cae3",
+  "primary_eligible": false,
+  "prompt_sha256": "28c2ae49c81cf0eb69e65dc6fc5e19330910de90af8da2965a340f72541e2f64",
+  "question_key": "diagnostic12--yc-12",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 3,
+      "faithfulness": 2,
+      "specificity": 3,
+      "usefulness": 3
+    },
+    "B": {
+      "accuracy": 5,
+      "faithfulness": 5,
+      "specificity": 5,
+      "usefulness": 5
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "Keeping vested shares is not, by itself, an unreasonable demand.",
+        "evidence": "As a characterization of the requested advice, this conflicts with the explicit recommendation to reduce departing-founder ownership regardless of vesting: 'within the first year, under 2%.' This contradicts the attributed recommendation, not A's separate legal distinction between ownership rights and negotiated concessions.",
+        "label": "contradicted"
+      }
+    ],
+    "id": "p-d1ebfc172a92cae3",
+    "reason": "B captures the central recommendation: return most vested equity, retain roughly 1–2% or less for a first-year departure, stop the legal escalation, and arrange a generous, no-fault separation. A offers useful general settlement advice but substantially changes the equity recommendation and omits its numerical target.",
+    "winner": "B"
+  },
+  "winner": "grounded"
+}

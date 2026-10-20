@@ -1,0 +1,61 @@
+{
+  "answer_family": "opus",
+  "batch_id": "diagnostic12--sol--opus--batch-02",
+  "error": "",
+  "id": "p-c8a0257afdc78052--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-c8a0257afdc78052",
+  "primary_eligible": true,
+  "prompt_sha256": "1610eff454fe7dc2a6611214dd1dc076d5f81279b54542541070d427bf03f570",
+  "question_key": "diagnostic12--yc-20",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 4,
+      "faithfulness": 4,
+      "specificity": 4,
+      "usefulness": 4
+    },
+    "B": {
+      "accuracy": 3,
+      "faithfulness": 3,
+      "specificity": 3,
+      "usefulness": 3
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "Livingston treated the cofounder relationship as the most important selection criterion.",
+        "evidence": "The packet supports attention to cofounder relationships but does not establish this ranking among her criteria.",
+        "label": "unverified"
+      },
+      {
+        "answer": "A",
+        "claim": "Livingston said conventional-minded people cannot pursue new ideas and that early YC helped failing founders rather than pressing them over small outcomes.",
+        "evidence": "These additional attributed positions are not established by the supplied evidence. Their absence does not demonstrate that they are false.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "Livingston consistently named determination as the trait that best predicts startup success.",
+        "evidence": "Her quoted criteria include determination alongside earnestness and flexible-mindedness; the packet does not establish that she ranked it as the best predictor.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "She screened out dishonest, manipulative, or unpleasant founders, and YC's stated rationale was that bad actors fail through recruitment, trust, and reputational problems.",
+        "evidence": "The supplied evidence specifically establishes funding earnest people and rejecting conceited applicants. It does not establish these broader screening categories or the attributed institutional rationale.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-c8a0257afdc78052",
+    "reason": "Both reject the false premise. A more closely captures Livingston's actual selection criteria, including earnestness, flexibility, cofounder relationships, and rejecting conceited applicants. B substitutes broader claims about determination and bad actors that the packet does not establish. Neither explains that her actual use of 'ruthless' described other investors.",
+    "winner": "A"
+  },
+  "winner": "grounded"
+}

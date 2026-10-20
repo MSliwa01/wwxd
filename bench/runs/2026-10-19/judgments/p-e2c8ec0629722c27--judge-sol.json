@@ -1,0 +1,55 @@
+{
+  "answer_family": "sol",
+  "batch_id": "diagnostic12--sol--sol--batch-02",
+  "error": "",
+  "id": "p-e2c8ec0629722c27--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-e2c8ec0629722c27",
+  "primary_eligible": false,
+  "prompt_sha256": "d685ac9f7ddd641c6d31f04867412fc07ef0d3fbe03f7a80c927c9f6e73a7910",
+  "question_key": "diagnostic12--yc-17",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 4,
+      "faithfulness": 3,
+      "specificity": 3,
+      "usefulness": 4
+    },
+    "B": {
+      "accuracy": 2,
+      "faithfulness": 2,
+      "specificity": 3,
+      "usefulness": 3
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "Early customers, practical support, and investor competition are presented as main mechanisms explaining the speaker's claim.",
+        "evidence": "The documented explanation is network effects, illustrated by Altman meeting future OpenAI cofounders many years before founding the company. The packet does not establish these additional mechanisms as his explanation.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "Tan made the argument that YC's premium and its lead over second place have increased.",
+        "evidence": "Altman makes the statement and explicitly introduces it with 'I can say this, Gary probably can't.'",
+        "label": "contradicted"
+      },
+      {
+        "answer": "B",
+        "claim": "The argument rests on AI increasing competition for attention, YC's admission signal, and concentrated access to capital.",
+        "evidence": "These explanations are not established by the supplied account. The stated reason is compounding network effects and access to future cofounders.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-e2c8ec0629722c27",
+    "reason": "A correctly relocates the statement to YC's former president and explains compounding relationships, including meeting eventual collaborators years earlier. Naming Sam Altman and using his OpenAI cofounder example would make it more specific. Its additional mechanisms exceed the documented explanation, although it appropriately labels the AI connection as inference. B retains the false attribution to Tan and presents several unsupported explanations as his argument.",
+    "winner": "A"
+  },
+  "winner": "grounded"
+}

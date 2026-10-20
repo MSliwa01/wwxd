@@ -1,0 +1,57 @@
+{
+  "actual_input_tokens": 342,
+  "answer": "No. You should not quit your job right now. Take the promotion. \n\nWhile 1,400 sign-ups from organic social media indicate early product-market interest, four months of part-time building is insufficient to validate long-term financial sustainability. Consumer fintech apps for couples face notoriously high churn and complex monetization challenges, and nine months of runway is too tight to safely achieve product-market fit and reliable revenue. Furthermore, taking the promotion provides immediate financial security and boosts your resume, while the extra year of income extends your runway significantly if you decide to transition later.\n\nHere are your concrete next steps:\n1. Accept the promotion by the end of the month to lock in the salary increase and extended financial buffer.\n2. Continue developing the app in the evenings, shifting focus from acquisition to retention, engagement, and testing monetization models.\n3. Track your key performance indicators monthly, specifically weekly active users, partner invitation completion rates, and willingness to pay.\n\nMaterial assumptions include your bank job allowing sufficient energy for evening development without burnout, and the current app retention remaining stable or improving. \n\nDecision criteria: You should reconsider and quit to pursue the app full-time only if monthly active user retention stabilizes above 40 percent after six months, you successfully introduce and validate a paid subscription tier generating consistent MRR, and your total personal runway expands to at least eighteen months of living expenses. Until those specific thresholds are met, the lower-risk path is the bank promotion.",
+  "arm": "raw",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 9.668,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7727f5bb7d5e71d1efc6d91f63a7aa4b035e8d87afe24ff39e419e4093b136b9"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 471,
+  "event_count": 1,
+  "family": "gemini",
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:29:55.379915+00:00",
+  "format_deviations": [],
+  "id": "newadvice12--advice-yc-03--gemini--raw",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_sha256": "0563ae9f329f6baf0c82526cc984db23d9d03cc8c7d1622291e5f86c9b5cc85d",
+  "question_key": "newadvice12--advice-yc-03",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "newadvice12",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 305,
+      "promptTokenCount": 342,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 342
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 647
+    }
+  ],
+  "words": 243
+}

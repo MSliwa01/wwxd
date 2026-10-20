@@ -1,0 +1,57 @@
+{
+  "actual_input_tokens": 423,
+  "answer": "Focus exclusively on the self-serve startup segment and transition them from purely usage-based pricing to a predictable monthly subscription model. \n\nWith $640,000 in cash and a $45,000 monthly burn, you have roughly fourteen months of runway. Chasing the enterprise logistics contracts introduces severe cash flow risk. Building SOC 2 compliance, custom fields, and an on-premises deployment will consume significant engineering bandwidth over a six-to-seven-month sales cycle. If procurement stalls or falls through, you will burn a massive portion of your remaining capital on requirements that do not serve your self-serve base, drastically shortening your runway before closing the deal. \n\nConversely, your self-serve motion is already working organically with 15 percent month-over-month growth. To maximize this, change your pricing immediately. Introduce fixed tiered subscriptions with overage fees rather than pure usage-based billing. This stabilizes monthly cash flow, reduces revenue volatility, and extends your runway while you invest engineering time into better documentation, a usage dashboard, and support for more document types. \n\nThis solution fits because it leverages your existing product-market fit with minimal capital expenditure. You avoid high-overhead enterprise compliance costs and keep your small team focused on product velocity. \n\nConcrete next steps include implementing tiered pricing plans for new signups within thirty days, mapping out the documentation and document-type roadmap for the self-serve product, and politely declining the enterprise custom requests until your monthly recurring revenue covers your burn rate. \n\nMaterial assumptions are that your 15 percent growth rate remains stable with self-serve improvements and that enterprise procurement timelines would indeed stretch to seven months. If self-serve growth abruptly stalls for two consecutive months, or if you secure outside bridge funding, you should reconsider the enterprise path.",
+  "arm": "raw",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 9.271,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "2843004f76c783c50c814b1ec63295fe836edc9cb93335a5509732a9f770a397"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 583,
+  "event_count": 1,
+  "family": "gemini",
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:29:21.562819+00:00",
+  "format_deviations": [],
+  "id": "newadvice12--advice-yc-02--gemini--raw",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_sha256": "61a14aedfb8bb6c121d5366ac1458634b38f68c12c40610364049fea7f4d97f1",
+  "question_key": "newadvice12--advice-yc-02",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "newadvice12",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 371,
+      "promptTokenCount": 423,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 423
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 794
+    }
+  ],
+  "words": 277
+}

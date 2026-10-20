@@ -1,0 +1,19 @@
+{
+  "answer_family": "gemini",
+  "batch_id": "diagnostic12--gemini--gemini--batch-02",
+  "error": "Interrupted invocation artifacts already exist. Not regenerated. Inspect logs manually.",
+  "id": "p-af346bd1af16f08c--judge-gemini",
+  "judge_family": "gemini",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-af346bd1af16f08c",
+  "primary_eligible": false,
+  "prompt_sha256": "5906e1d138b628e68e587451a54ca200e5dfd8f06678a35defb11f29e88261b5",
+  "question_key": "diagnostic12--hz-09",
+  "status": "failed",
+  "suite": "diagnostic12",
+  "verdict": null,
+  "winner": null
+}

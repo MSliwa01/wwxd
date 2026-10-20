@@ -1,0 +1,49 @@
+{
+  "answer_family": "opus",
+  "batch_id": "diagnostic12--sol--opus--batch-03",
+  "error": "",
+  "id": "p-ee2b7ee36164eccb--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-ee2b7ee36164eccb",
+  "primary_eligible": true,
+  "prompt_sha256": "1d6b43a7e820b1d6cdc3a9d1796f31ddf5b845ed1cca1561de374d65fcc1a98e",
+  "question_key": "diagnostic12--yc-01",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 4,
+      "faithfulness": 4,
+      "specificity": 4,
+      "usefulness": 4
+    },
+    "B": {
+      "accuracy": 4,
+      "faithfulness": 5,
+      "specificity": 5,
+      "usefulness": 5
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "YC has made it easier for students to apply.",
+        "evidence": "The supplied packet establishes Graham's advice about college and side projects but provides no evidence of a change to YC's application arrangements for students.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "Your situation is his exception.",
+        "evidence": "Graham's exception requires a side project that takes off on its own. The question establishes excitement about a project, but supplies no evidence of traction or spontaneous growth.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-ee2b7ee36164eccb",
+    "reason": "B more completely explains Graham's default advice, the incompatibility between running a startup and full-time study, the benefits of waiting, and the exception for a project that takes off. A preserves the broad recommendation and exception but omits the central incompatibility. B's assertion that the student's current situation already qualifies as the exception is premature, although its subsequent guidance makes the condition clear.",
+    "winner": "B"
+  },
+  "winner": "grounded"
+}

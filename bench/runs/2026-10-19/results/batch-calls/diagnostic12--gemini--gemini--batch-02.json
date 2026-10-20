@@ -1,0 +1,32 @@
+{
+  "answer": "",
+  "attempts": [],
+  "batch": {
+    "blocked_pair_ids": [],
+    "chars_per_token": 3.2,
+    "eligible_pair_ids": [
+      "p-5a6c5a48b0f202f4",
+      "p-a76ca4ad41ad1ed4",
+      "p-af346bd1af16f08c"
+    ],
+    "estimated_input_tokens": 12837,
+    "id": "diagnostic12--gemini--gemini--batch-02",
+    "judge_family": "gemini",
+    "pair_ids": [
+      "p-5a6c5a48b0f202f4",
+      "p-a76ca4ad41ad1ed4",
+      "p-af346bd1af16f08c"
+    ],
+    "prompt_bytes": 41094,
+    "prompt_sha256": "5906e1d138b628e68e587451a54ca200e5dfd8f06678a35defb11f29e88261b5",
+    "suite": "diagnostic12"
+  },
+  "decoded": {},
+  "effort": "provider defaults; no effort or generation override",
+  "error": "Interrupted invocation artifacts already exist. Not regenerated. Inspect logs manually.",
+  "finished": "2026-10-19T16:14:23.590557+00:00",
+  "parse_error": "",
+  "prompt_sha256": "5906e1d138b628e68e587451a54ca200e5dfd8f06678a35defb11f29e88261b5",
+  "requested_model": "gemini-3.5-flash-lite",
+  "status": "failed"
+}

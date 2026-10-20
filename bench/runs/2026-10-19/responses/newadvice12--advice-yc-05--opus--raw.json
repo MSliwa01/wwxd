@@ -1,0 +1,99 @@
+{
+  "actual_input_tokens": 2686,
+  "answer": "**Recommendation: keep hiring, but change who you target and how you run the process. Don't take any of the four options as stated.**\n\nYour problem isn't price. You're pursuing candidates who are also shopping at AI labs, and on cash you'll lose that auction every time. Raising to $240k with less equity is the worst choice. You'd still be about $130k short of a 2x offer, you'd add roughly $110k a year in burn, and you'd shrink the one thing only you can offer. An agency costs about $50–60k per hire and doesn't fix targeting. An overseas contract team building a developer tool's core backend creates ownership and quality risk at the exact moment you need senior judgment.\n\n**What to change:**\n\n1. **Recruiting time:** founders spend 10–15 hours a week on it, not 2. Founder-led sourcing is the highest-leverage work you have right now.\n2. **Process speed:** finish in 7–10 days, with a paid work trial or a deep technical session instead of many rounds.\n3. **Target pool:** former founders, early employees from developer-tool companies, open-source contributors in your space, and people who have turned down big-company jobs before. Screen for equity appetite on the first call.\n4. **Offer:** about $200–210k plus 1.0–1.5% equity, with early-exercise and a 10-year exercise window. For the first two senior hires, 0.5% is light.\n5. **Bridge:** use coding agents and a few short contractors on well-scoped, non-core work while you hire.\n\n**Assumptions:** about 24+ months of runway, and a product that needs deep backend ownership.\n\n**What would change this:**\n- Use a contingency agency for one search if 4–6 weeks of founder sourcing produces fewer than 2 qualified candidates per week.\n- Pause hiring if agents and the current team are clearly hitting the roadmap.",
+  "arm": "raw",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 14.996,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "070a057d53044edfb53ebe1dfd1a3e1e9284465d498f322d268df678f54822c1"
+    }
+  ],
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 683,
+  "event_count": 10,
+  "family": "opus",
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:30:50.245007+00:00",
+  "format_deviations": [],
+  "id": "newadvice12--advice-yc-05--opus--raw",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "prompt_sha256": "089b8526f641c2bbf5b50392a0d426c8f82b6b289da1b22bc91fb9812b1557da",
+  "question_key": "newadvice12--advice-yc-05",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "newadvice12",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 1116,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 1116,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 1116,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 1116,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 1014,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 1014,
+      "output_tokens_details": {
+        "thinking_tokens": 406
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ],
+  "words": 291
+}

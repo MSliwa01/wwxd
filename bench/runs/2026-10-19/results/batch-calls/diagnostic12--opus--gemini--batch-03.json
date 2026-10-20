@@ -1,0 +1,114 @@
+{
+  "actual_input_tokens": 15920,
+  "answer": "```json\n{\n  \"judgments\": [\n    {\n      \"id\": \"p-9c051450506e1b9c\",\n      \"A\": {\"accuracy\": 2, \"specificity\": 2, \"faithfulness\": 2, \"usefulness\": 2},\n      \"B\": {\"accuracy\": 4, \"specificity\": 4, \"faithfulness\": 4, \"usefulness\": 4},\n      \"winner\": \"B\",\n      \"reason\": \"B covers the reference's core points. It says to stop decksmithing, notes that investors chase 80-90% of their deals, compares being strung along to buying an option, and tells the founder to return to building and growing so investors chase them. A gives generic process advice, such as a two-week term-sheet deadline and competing term sheets, which the source does not support. A also implies that a flawed pitch or targeting is a main fix when metrics are strong, which runs against the reference's point that the deck is not doing the work. Neither answer mentions the Justin.tv eight-month story.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Seibel would set a hard two-week deadline to secure a term sheet and use 'multiple, competing term sheets within a two-week window' as the decision criterion.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The reference contains no such deadline or criterion. It frames the issue as leverage and growth, not a timed process.\"\n        },\n        {\n          \"answer\": \"A\",\n          \"claim\": \"If metrics are strong, the problem is the pitch or targeting.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The reference says 'the deck isn't doing the work at all' and points to growth and leverage as decisive. A's emphasis on fixing pitch or targeting is not attested and leans toward an error listed in the reference, but no direct statement contradicts it.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"A terrible fundraiser with something that works will raise more easily than a great fundraiser with nothing; fundraising should not be treated like school or a game.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"This fits the reference's stance that growth and proof points enable fast raising, but these specific framings are not in the supplied quotes.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"p-30f0a7d52b64b6ba\",\n      \"A\": {\"accuracy\": 1, \"specificity\": 2, \"faithfulness\": 1, \"usefulness\": 2},\n      \"B\": {\"accuracy\": 4, \"specificity\": 5, \"faithfulness\": 4, \"usefulness\": 5},\n      \"winner\": \"B\",\n      \"reason\": \"B reproduces the Skool-derived benchmarks Hormozi relays: 80% retention (20% churn), concern below 70% retention (above 30% churn) where retention becomes the highest-ROI lever, the day-90 and month-6 tenure drop-offs to about 2%, and the inflated churn of communities under 90 days old. It omits the 'best groups under 10%' figure and the scope caveat, and it calls the 80% average 'good'. A presents SaaS-style 3-7% benchmarks and treats churn above 10% as alarming, which is exactly the error the reference warns against.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"A good monthly churn rate for a paid online community is 3-7%, and churn above 10% is alarming.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"Hormozi relays that the Skool platform average is 80% monthly retention, i.e. 20% churn. The best groups churn under 10%, and worry begins at 30% or more churn.\"\n        },\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Hormozi says members who get ten times the value within the first week will not leave.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"This claim does not appear in the supplied evidence for this source.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"A good monthly retention rate is around 80%.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The source gives 80% as the platform average, not as 'good'. The best groups have 90% or more retention. This is a framing imprecision rather than a contradicted figure.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"Specific tactics: fix the top reasons after about every 20 cancellations, deliver a win within 24 hours, have the owner active daily, help members make one real friend.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The reference supports onboarding, a day-90 outcome, month-6 connections and asking cancellers why. These specific numbers and tactics are not in the supplied quotes.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"p-4cd02c8fbe46df26\",\n      \"A\": {\"accuracy\": 1, \"specificity\": 2, \"faithfulness\": 1, \"usefulness\": 1},\n      \"B\": {\"accuracy\": 1, \"specificity\": 2, \"faithfulness\": 1, \"usefulness\": 1},\n      \"winner\": \"tie\",\n      \"reason\": \"Both answers accept the false premise and attribute the claim to Garry Tan, when Sam Altman said it, prefacing it with 'I can say this, Garry probably can't'. Both invent AI-driven explanations. A cites brand equity and follow-on investor access, reasons the reference lists as errors. B cites agent workflows and skill files, which do not appear in the evidence. Each gestures at network or peer density, which only loosely matches Altman's stated reason: network effects and meeting future cofounders over time. Neither gives the actual context, and both offer next steps that do not address the question.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Garry Tan argues that the premium on doing YC has never been higher and that the gap with second place has widened.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"The transcript attributes this to Sam Altman: 'I can say this, Gary probably can't... the premium on doing YC is bigger now than it's like ever been before.'\"\n        },\n        {\n          \"answer\": \"A\",\n          \"claim\": \"The gap is explained by AI-driven structural change, brand equity and access to follow-on investors.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"Altman explains the gap as 'the power of network effects', meaning meeting future cofounders over years. The source gives no brand, AI or follow-on-investor rationale, and the reference lists brand-based explanations as an error.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"Garry Tan argues that the premium on doing YC is bigger than ever and the gap with second place has grown.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"The speaker was Sam Altman in conversation with Garry Tan, prefacing the remark with 'I can say this, Gary probably can't'.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"The reason is AI agent leverage (compounding context, custom skill files, automated agent workflows).\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The stated reason in the source is network effects, illustrated by Altman meeting his OpenAI cofounders years earlier. Agent workflows are not cited as the reason.\"\n        }\n      ]\n    }\n  ]\n}\n```",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 31.559,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "6a48b9da79e7bddc3987016166b04ff5791994b9a13ffac953748237a382bcfd"
+    }
+  ],
+  "batch": {
+    "blocked_pair_ids": [],
+    "chars_per_token": 2.44,
+    "eligible_pair_ids": [
+      "p-9c051450506e1b9c",
+      "p-30f0a7d52b64b6ba",
+      "p-4cd02c8fbe46df26"
+    ],
+    "estimated_input_tokens": 14997,
+    "id": "diagnostic12--opus--gemini--batch-03",
+    "judge_family": "opus",
+    "pair_ids": [
+      "p-9c051450506e1b9c",
+      "p-30f0a7d52b64b6ba",
+      "p-4cd02c8fbe46df26"
+    ],
+    "prompt_bytes": 36597,
+    "prompt_sha256": "0fd3ade62cfe9a02d3719e3de01a72793ae60bd6cd21d59bb2792d9a268224b2",
+    "suite": "diagnostic12"
+  },
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "decoded": {},
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 14997,
+  "event_count": 13,
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:37:39.747094+00:00",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "parse_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "prompt_sha256": "0fd3ade62cfe9a02d3719e3de01a72793ae60bd6cd21d59bb2792d9a268224b2",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 14350,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 14350,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 14350,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 14350,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 3426,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 3426,
+      "output_tokens_details": {
+        "thinking_tokens": 1019
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "answer_family": "sol",
+  "batch_id": "diagnostic12--sol--sol--batch-02",
+  "error": "",
+  "id": "p-0d7a755834632ca5--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-0d7a755834632ca5",
+  "primary_eligible": false,
+  "prompt_sha256": "d685ac9f7ddd641c6d31f04867412fc07ef0d3fbe03f7a80c927c9f6e73a7910",
+  "question_key": "diagnostic12--yc-05",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 3,
+      "faithfulness": 2,
+      "specificity": 2,
+      "usefulness": 3
+    },
+    "B": {
+      "accuracy": 4,
+      "faithfulness": 4,
+      "specificity": 5,
+      "usefulness": 5
+    },
+    "factual_objections": [
+      {
+        "answer": "B",
+        "claim": "Graham gave this advice to Stockholm founders in April 2026.",
+        "evidence": "The packet dates the source publication to May 13, 2026, but does not establish when the talk occurred. Publication in May neither confirms nor disproves an April event.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "Graham acknowledges his interest as YC's cofounder and accepts that family can matter more than maximizing company value.",
+        "evidence": "The supplied packet establishes his YC recommendation and qualifications about unicorn outcomes, but does not establish these additional acknowledgments.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-0d7a755834632ca5",
+    "reason": "B captures Graham's actual recommendation: go at least temporarily, with returning explicitly allowed. It supplies the relevant benefits, the qualified unicorn comparison, YC as an entry route, and the benefit of returning to Stockholm. A reasonably distinguishes advice from an absolute necessity, but its conditional stay-or-move recommendation substantially weakens Graham's explicit 'you should at least go' stance and omits the Stockholm-specific evidence. B's April dating is unverified; the May publication date alone does not establish the event date.",
+    "winner": "B"
+  },
+  "winner": "grounded"
+}

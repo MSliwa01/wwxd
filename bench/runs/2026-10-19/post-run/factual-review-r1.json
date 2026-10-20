@@ -1,0 +1,1300 @@
+{
+ "reviewer": "independent factual reviewer r1 (blinded)",
+ "blinded": true,
+ "evaluation_date": "2026-10-19",
+ "input_sha256": "41bde0c6507156cc06c72abec7914ec8de08c148dfebd86906b48993495a8ffd",
+ "source_inventory_sha256": "6b7fcfe7fda2405fcc4a1256cb65aa94e3f69cc60b8ade8fbc2b4aa26281689e",
+ "scope_note": "Read only the export, the brief, frozen fixtures and hash-verified raw sources. Did not read private-answer-map.json, responses, judgments, batch logs, summaries, preflight or execution interpretations, arm or model labels, PROTOCOL.md or wiki. The brief's second step (diagnostic exceptions and original factual objections) was not done because the assignment excludes judgments and votes.",
+ "entries": [
+  {
+   "id": "review-058cc2ffc358e804",
+   "case_id": "advice-yc-01",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "\"Nine months of runway\" rounds $210,000 / $22,000 = 9.5 down. No other calculations.",
+    "explicit_constraints": "Respected: decision this week, 8-week plan, two engineers doing sales."
+   },
+   "issues": [],
+   "notes": "\"Engineering efforts should be frozen\" sits beside a week-one workflow refinement. That is an internal tension, not a factual error."
+  },
+  {
+   "id": "review-093e26a91e51b522",
+   "case_id": "advice-hz-05",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct. 18% x 600 = 108 cancellations; 12-month projection about 509; 180 a month about 963; 180 a month at 15% churn about 1,115; $49 needs 79/49 - 1 = 61% more members.",
+    "explicit_constraints": "Respected: picks two (annual plan, staged ad increase); onboarding fix stays inside existing operations; 12-month horizon."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-1781bb2f698f0221",
+   "case_id": "advice-yc-01",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Runway 9.5 months is correct. \"Eight weeks costs about $44,000\" uses 2 months; 8 weeks is about 1.84 months, about $40,600.",
+    "explicit_constraints": "Respected: decision this week, 8-week plan with thresholds."
+   },
+   "issues": [
+    {
+     "claim": "\"Eight weeks costs about $44,000, leaving $166,000\"",
+     "type": "arithmetic",
+     "severity": "minor",
+     "explanation": "56 days / 30.4 x $22,000 is about $40,600, leaving about $169,400. The rounding is conservative and does not affect the plan.",
+     "evidence": "User scenario (practical-all-answers.json question text): $210,000 in bank, $22,000 a month.",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "review-19fb30e4475e2c35",
+   "case_id": "advice-yc-05",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct: 2 x $185,000 is about $370,000; +$110,000 for two raises; $92,500 agency for two.",
+    "explicit_constraints": "Respected: picks an option (selective cash increases) with process changes."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-1b188326cd0ad03e",
+   "case_id": "advice-hz-03",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct. Oct 19 to Dec 31 is 74 days, $74,000; $45,000 lasts 45 days (to about Dec 2-3); table 14 x $450 + 21 x $600 + 10 x $1,100 + 15 x $700 + 14 x $300 = $44,600; the full agency plan at 3.2 ROAS implies about 4,083 bottles (stated as a hypothetical); reorder arrives about Dec 28 to early January.",
+    "explicit_constraints": "Respected: yes/no given (No), plan stays within $45,000, inventory and lead time addressed."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-1c807c5dba75e5f1",
+   "case_id": "advice-hz-03",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct. 74 days, $74,000, $29,000 over, $608 a day; 14 x $300 + 21 x $500 + 8 x $1,000 + 31 x $500 = $38,200, $6,800 left; $58 / 3.2 = $18.13 ad cost per bottle; $45,000 at 3.2 ROAS is about 2,483 bottles; Oct 19 + 70 days = Dec 28.",
+    "explicit_constraints": "Respected: yes/no (No), within budget, inventory and lead time addressed."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-1f95279c0daf9080",
+   "case_id": "advice-hz-05",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Mostly correct: 108, ceiling 90 / 0.18 = 500, $790 = 10 x $79, \"about 60% more\" members. Two projection figures do not match the stated inputs.",
+    "explicit_constraints": "Respected: picks two (annual plan, more ads), onboarding fix as a no-cost add-on."
+   },
+   "issues": [
+    {
+     "claim": "\"With churn stuck at 18%, even doubled ads top out around 830.\"",
+     "type": "arithmetic",
+     "severity": "minor",
+     "explanation": "At the stated $110 per member, double spend is 180 a month, giving about 963 after 12 months and a 1,000 steady state. 830 matches about 150 a month, which implies an unstated rise in acquisition cost to about $147. The point that churn must also fall still holds.",
+     "evidence": "User scenario (practical-all-answers.json question text): 90 a month at about $110 per member, 18% churn.",
+     "changes_recommendation": false
+    },
+    {
+     "claim": "\"At 10-12% churn and about 140-150 new members a month, you'd reach roughly 1,100-1,250.\"",
+     "type": "arithmetic",
+     "severity": "minor",
+     "explanation": "m(next) = m x (1 - churn) + new from 600 over 12 months gives about 1,044 (12%, 140) to 1,246 (10%, 150). The low end is overstated, and the range assumes churn drops immediately.",
+     "evidence": "User scenario (practical-all-answers.json question text): 600 members today; goal date about 12 months out.",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "review-216fca2db1eac888",
+   "case_id": "advice-yc-06",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "No arithmetic.",
+    "explicit_constraints": "Respected: picks B, 6-month plan with paid pilots under approval thresholds."
+   },
+   "issues": [
+    {
+     "claim": "\"Few smart teams are looking at it\"",
+     "type": "unverified",
+     "severity": "minor",
+     "explanation": "Competitive-landscape claim not in the packet. Not contradicted.",
+     "evidence": "No source in advice-evidence.json.",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "review-258b5eb33bcbe4ed",
+   "case_id": "advice-yc-04",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "No arithmetic. Allocation amounts not itemised.",
+    "explicit_constraints": "Respected: declines agency, one 3-month plan."
+   },
+   "issues": [
+    {
+     "claim": "\"subcontractors, who rarely read venture capital or software blogs\"",
+     "type": "unverified",
+     "severity": "minor",
+     "explanation": "Audience claim not in the packet. Consistent with the source view on press (\"it is shocking how little um getting press helps a startup\", yt-7TU636F_yVQ at 20:28). Not verified.",
+     "evidence": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md (sha256 b43f7c49..., 2026-10-05, 20:28)",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "review-25e1c997ab08ab0c",
+   "case_id": "advice-hz-06",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct. Store inventory is 55% (\"half\") of savings; $3,400 / $700 is about 4.9 routes (\"about five\"). At the low end, 4 x $1,000 = $4,000 covers $3,400 plus about $565 of US self-employment tax, as literally stated, but leaves nothing for income tax or business costs.",
+    "explicit_constraints": "Respected: picks one, 20 h a week in evenings and Saturdays, savings protected, employment terms checked."
+   },
+   "issues": [
+    {
+     "claim": "\"At $1,000-1,500 a month per office, four or five clients covers your take-home pay plus self-employment tax.\"",
+     "type": "unverified",
+     "severity": "minor",
+     "explanation": "Literally true at $4,000 gross under US self-employment tax (15.3% on 92.35%, about $565). The $3,400 is take-home pay, so matching it also needs income tax and business costs covered, which the low end does not do. The user's country is not stated.",
+     "evidence": "User scenario (practical-all-answers.json question text): take-home $3,400 a month.",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": "The vending fallback \"keep at least $6,000 in reserve\" makes the $9,000 route unaffordable from $11,000 today. The answer presents it as a guard, which is consistent."
+  },
+  {
+   "id": "review-2698a65fa97a1840",
+   "case_id": "advice-yc-04",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct: $6,000 + $10,000 + $2,000 + $18,000 = $36,000.",
+    "explicit_constraints": "Respected: one plan, within $36,000."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-2fb2d8c50a8fbe01",
+   "case_id": "advice-hz-02",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Baseline correct ($14,820; $5,928; $1,872; $3,220). The $110 projection ($4,624, +$16,848 a year) is computed correctly, but it prices every groom at $110 while the plan keeps regulars at $95 for 60 days and then $105.",
+    "explicit_constraints": "Respected: 90-day pricing window, regulars grandfathered, van decision given."
+   },
+   "issues": [
+    {
+     "claim": "\"New Monthly Profit: $4,624 ($55,488 annualized)... This adds over $16,000 in annual profit\" alongside \"Grandfather your existing regulars at $95 for 60 days, then transition them to $105\".",
+     "type": "arithmetic",
+     "severity": "minor",
+     "explanation": "With 70% regulars at $105 and 30% new at $110, the average ticket is $106.50. Contribution is 0.6 x 106.50 - 12 = $51.90, so 156 x $51.90 - $3,800 = $4,296 a month, about +$1,076 a month or +$12,900 a year. The first 60 days earn less. The direction of the advice is unchanged.",
+     "evidence": "User scenario (practical-all-answers.json question text): 70% of bookings are regulars; groomers paid 40% of ticket; $12 per groom.",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "review-3037c24a46c2ea63",
+   "case_id": "advice-hz-04",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct. $840 a month and $16,800 lifetime gross profit; $5,000 / $150 = 33 leads, x 12% = 4 contracts, $7,000 / 4 = $1,750; payback 1,750 / 840 is about 2.1 months; rep 3.9 contracts, $1,410.",
+    "explicit_constraints": "Respected: $7,000 ads + $1,000 referrals = $8,000; ops manager part-time (10 protected hours); 6-month timeline."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-30559ce9bfa727b1",
+   "case_id": "advice-hz-06",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct. $11,000 - $1,000 cap leaves at least $10,000; store is \"over half\" of savings (55%).",
+    "explicit_constraints": "Respected: picks one, keeps job, 20 h limit referenced, 18-month target treated as ambitious."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-31653939f3b1fc86",
+   "case_id": "advice-hz-01",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct. 45 x $460 = $20,700; 5 x $1,960 + 30 x $460 = $23,600; table revenue $15,000 + $12,500 = $27,500, minus 35 x $40 = $1,400, gives $26,100 at 30 + 15 + 5 = 50 h; 28-standard variant 28 x $460 + 5 x $2,460 = $25,180 at 48 h.",
+    "explicit_constraints": "Respected: 50-hour cap (50 h, or 48 h variant), no hiring, 60-day notice, upgrades gated on releasing two standard clients first, course deferred, finish by month 6."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-3666000c2338d3a6",
+   "case_id": "advice-hz-06",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct. $11,000 - $6,000 = $5,000; $11,000 - $9,000 = $2,000; 3 x $2,900 = $8,700 reserve; 6 + 12 + 2 = 20 h; 5 x $1,500 = $7,500.",
+    "explicit_constraints": "Respected: picks one, 20 h a week, savings reserve."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-36b2a89144bf5156",
+   "case_id": "advice-yc-04",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct: $10k + $15k + $6k + $5k = $36k.",
+    "explicit_constraints": "Respected: one plan, measurable targets."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-3c266ef220a11f37",
+   "case_id": "advice-hz-02",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct. $45 contribution, $3,220 profit; 109 x $4.80 = $523, 47 x $9 = $423, profit about $4,170; losing 10 grooms leaves about 146 x $51 - $3,800 = $3,650; seventh groom 26 x $50 is about $1,300 (conditional); van $2,050 includes an assumed $400; break-even 2,050 / 51 is about 40 grooms; Oct 19 to Dec 31 is about 10.4 weeks.",
+    "explicit_constraints": "Respected: 90-day window, regulars get smaller step and notice, explicit van decision with triggers."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-3fb0c95443baeb10",
+   "case_id": "advice-yc-02",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct. 14.2 months net; 640 / (45 - 6.3) = 16.5 months gross; 6-7 months of procurement cost $270,000-$315,000, leaving 7-8 months; two contracts $15,000 + $6,300 < $45,000; 6,300 x 1.15^3 = $9,582.",
+    "explicit_constraints": "Respected: one roadmap (self-serve), pricing addressed, runway reasoning shown."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-40682ed5dd4d7205",
+   "case_id": "advice-hz-03",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct. 74 days, $74,000, $29,000 over; 74,000 x 3.2 / 58 = 4,083 bottles; 14 x $300 + 21 x $500 + 8 x $900 + 31 x $500 = $37,400, $7,600 left; reorder about Dec 28.",
+    "explicit_constraints": "Respected: yes/no (No), within budget, inventory and lead time addressed."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-41f4c4e4550bd490",
+   "case_id": "advice-yc-05",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Mostly correct: $370,000 - $240,000 = $130,000 gap; +$110,000. Agency cost range is high at current salaries.",
+    "explicit_constraints": "Declines to pick one of the four options as stated."
+   },
+   "issues": [
+    {
+     "claim": "\"An agency costs about $50-60k per hire\"",
+     "type": "arithmetic",
+     "severity": "minor",
+     "explanation": "25% x $185,000 = $46,250. $60,000 applies only at a $240,000 salary.",
+     "evidence": "User scenario (practical-all-answers.json question text): \"pay a recruiting agency 25% of first-year salary\"; offers at $185,000.",
+     "changes_recommendation": false
+    },
+    {
+     "claim": "\"Don't take any of the four options as stated.\"",
+     "type": "constraint",
+     "severity": "minor",
+     "explanation": "The user asked \"which option should we choose?\". The answer gives a modified direct-hire plan instead, with an agency as a contingency.",
+     "evidence": "User scenario (practical-all-answers.json question text).",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": "\"24+ months of runway\" is labelled as an assumption."
+  },
+  {
+   "id": "review-45453de65eb0ae62",
+   "case_id": "advice-yc-05",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct: +$110,000 a year for two hires at $240,000.",
+    "explicit_constraints": "No single option chosen among the four; the answer recommends process fixes and an equity-led offer."
+   },
+   "issues": [
+    {
+     "claim": "\"fix the process before you change the offer. Don't cut equity, and don't stop hiring.\" (agency \"Optional\")",
+     "type": "constraint",
+     "severity": "minor",
+     "explanation": "The user asked which option to choose. The answer clearly rules out cutting equity and stopping hiring but does not name one option as its choice.",
+     "evidence": "User scenario (practical-all-answers.json question text).",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "review-4e66773c5e8add67",
+   "case_id": "advice-yc-02",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct. $640,000 / $45,000 is about 14 months; 6,300 x 1.15^12 = $33,700; cumulative 12-month revenue $183,000-$210,000 (\"about $200k\"); (640 + 200) / 45 is about 18.7 months, consistent with \"18-20\"; $180,000 = 2 x $90,000.",
+    "explicit_constraints": "Respected: one roadmap, enterprise kept warm without building on-prem."
+   },
+   "issues": [
+    {
+     "claim": "\"$210 average is low for invoice extraction.\"",
+     "type": "unverified",
+     "severity": "minor",
+     "explanation": "Market pricing claim not in the evidence packet. Not contradicted.",
+     "evidence": "No source in advice-evidence.json.",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "review-4f73ce2eea8cbb1e",
+   "case_id": "advice-hz-01",
+   "answer_status": "ok",
+   "assessment": "established_error",
+   "checks": {
+    "arithmetic": "Errors. 37 x $460 = $17,020 (answer: $17,010); 4 x $1,960 = $7,840 (answer: $7,440); correct total $24,860, below $25,000 (answer: $24,450 \"hitting your baseline target\"); a fifth premium client gives $26,820 (answer: $26,310) and 57 h.",
+    "explicit_constraints": "Violated: the answer computes 54 h a week and still says the plan \"strictly respects your 50-hour capacity\"."
+   },
+   "issues": [
+    {
+     "claim": "\"This plan strictly respects your 50-hour capacity... Total time is 54 hours, which can be compressed to 50 by tightening workflows.\"",
+     "type": "constraint",
+     "severity": "material",
+     "explanation": "The user states a hard 50-hour cap. 37 standard x 1 h + 4 premium x 3 h + 5 h admin = 54 h. \"Tightening workflows\" has no basis in the stated 1 h per client. Fitting 50 h needs about 4 more standard clients released, which lowers profit further.",
+     "evidence": "User scenario (practical-all-answers.json question text): \"I work 50 hours a week and can't go above that: roughly 1 hour per client per week plus 5 hours of admin.\"; premium \"would add 2 hours per client per week\".",
+     "changes_recommendation": true
+    },
+    {
+     "claim": "\"$17,010 net\"; \"$7,440 net\"; \"Together, this yields $24,450 net, hitting your baseline target\"; \"Adding one more premium client later clears $26,310\".",
+     "type": "arithmetic",
+     "severity": "material",
+     "explanation": "Recomputed: 37 x ($500 - $40) = $17,020; 4 x ($2,000 - $40) = $7,840; total $24,860. Both the stated and the corrected totals are below the $25,000 goal, so \"hitting your baseline target\" is false. The fifth premium client case is $26,820 but at 57 h.",
+     "evidence": "User scenario (practical-all-answers.json question text): $40 per client cost, goal \"at least $25,000 a month in profit\".",
+     "changes_recommendation": true
+    },
+    {
+     "claim": "\"Standard clients take 42 hours (41 hours service plus 5 admin hours minus 5 hours freed by dropping unpaid extras).\"",
+     "type": "unverified",
+     "severity": "minor",
+     "explanation": "37 standard clients take 37 delivery hours under the stated 1 h per client. The user's 50 h already equals 45 client hours plus 5 admin, and no hours are given for the free advisory work, so the 5 freed hours are an unsupported assumption. The sub-total also does not add up (41 + 5 - 5 = 41).",
+     "evidence": "User scenario (practical-all-answers.json question text): free work done \"when I have time\".",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "review-50b943296f7dfea0",
+   "case_id": "advice-yc-06",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "No arithmetic.",
+    "explicit_constraints": "Respected: picks B, month-3 stop rule within 14 months of savings."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-50e9be64a236da06",
+   "case_id": "advice-hz-01",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct. $20,700 at $500; $28,200 at 60 h for 5 upgrades at $2,000; $23,600 after releasing 10; $2,700 plan 28 x $460 + 5 x $2,660 = $26,180 at 48 h; 40 - 28 = 12 releases.",
+    "explicit_constraints": "Respected: 48 h, onboarding and selling counted inside 50 h, no hiring, 60-day notice, releases gated on premium commitments."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-5c39aa8293961ac4",
+   "case_id": "advice-yc-06",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "No arithmetic.",
+    "explicit_constraints": "Respected: picks B, month-3 reassessment, runway recalculated."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-6058aa17824252a9",
+   "case_id": "advice-yc-04",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct: $15k + $12k + $6k + $3k = $36k.",
+    "explicit_constraints": "Respected: one plan."
+   },
+   "issues": [],
+   "notes": "\"40 or more paying customers by month 3\" is a proposed target, not a claim."
+  },
+  {
+   "id": "review-650cefd7584dce75",
+   "case_id": "advice-hz-04",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Economics section correct ($16,800; $6,000 / $150 = 40 leads, 4.8 contracts, about $1,700; rep 3.9, about $1,400). The plan then funds only $4,000 of media.",
+    "explicit_constraints": "Mostly respected ($2,000 fee + $4,000 media + $2,000 events = $8,000), but referral payouts sit outside the growth budget by design."
+   },
+   "issues": [
+    {
+     "claim": "\"Pay one month's billing per signed contract... That comes out of gross profit, not the growth budget.\"",
+     "type": "constraint",
+     "severity": "minor",
+     "explanation": "The user set $8,000 a month for growth. A $2,400 payout per referred contract is growth spending moved off-budget. It is success-based and small next to $16,800 lifetime gross profit, and the answer says so openly.",
+     "evidence": "User scenario (practical-all-answers.json question text): \"I can spend $8,000 a month on growth\".",
+     "changes_recommendation": false
+    },
+    {
+     "claim": "Economics at \"$6,000 of spend... roughly 5 contracts\" versus plan \"$2,000 fee plus about $4,000 spend\"",
+     "type": "arithmetic",
+     "severity": "minor",
+     "explanation": "$4,000 / $150 = about 27 leads, x 12% = about 3.2 contracts, about $1,875 each including the fee. The month-6 target of \"2-3 from ads\" matches the smaller figure.",
+     "evidence": "User scenario (practical-all-answers.json question text): $150 per lead, 12% lead-to-contract, $2,000 fee.",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "review-677aaa4fa29263ae",
+   "case_id": "advice-hz-02",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct. Average ticket 0.7 x $100 + 0.3 x $110 = $103; contribution $49.80; 156 x $49.80 - $3,800 = $3,969 (+$749); second van 36 slots, 15 / 36 = 42%; 65 x $54 = $3,510, minus $1,650 = $1,860.",
+    "explicit_constraints": "Respected: 90-day window, notice for regulars, van wait with conditions."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-69042c26f13a078c",
+   "case_id": "advice-hz-06",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "No calculations beyond \"$6,000 ... risking most of your $11,000\" (55%, a majority) and \"$700 falls far short of $3,400\" (correct).",
+    "explicit_constraints": "Respected: picks one, 90-day plan, no ad spend."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-6929cf0d8497b0ce",
+   "case_id": "advice-yc-02",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Mostly correct. At 15%: 6,300 x 1.15^14 = $44,600 at month 14, with about $255,000-$300,000 left if $45,000 is gross spend (\"roughly $250k\"). At 10%: $23,900 at month 14, correct. The 10% runway figure is understated.",
+    "explicit_constraints": "Respected: one roadmap, pricing addressed."
+   },
+   "issues": [
+    {
+     "claim": "\"If growth slows to 10%, you reach about $24k/month by month 14 and the runway stretches to about 19 months.\"",
+     "type": "arithmetic",
+     "severity": "minor",
+     "explanation": "Under the answer's own framing (revenue offsets $45,000 of spending), 10% growth reaches $45,000 revenue around month 21, with cash bottoming near $100,000. The money would not run out. \"About 19 months\" is conservative and strengthens the same recommendation.",
+     "evidence": "User scenario (practical-all-answers.json question text): $640,000 cash, $45,000 burn, $6,300 revenue.",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "review-6d5a056f2c08c8aa",
+   "case_id": "advice-hz-03",
+   "answer_status": "ok",
+   "assessment": "established_error",
+   "checks": {
+    "arithmetic": "Error. At 3.2 ROAS, $1,000 a day is about 55 bottles a day, so 4,000 bottles last about 72 days, not 130. The answer never checks the $45,000 budget against $1,000 a day.",
+    "explicit_constraints": "Violated in the conditional branch: approving $1,000 a day through December costs about $74,000 against a $45,000 budget. The default phased plan ($400 a day in October, $600 in November, remainder in December) fits."
+   },
+   "issues": [
+    {
+     "claim": "\"Approve the aggressive $1,000-a-day plan only if two criteria are met: ... rush manufacturing order ... and ... contribution margin ... exceeds\" break-even",
+     "type": "constraint",
+     "severity": "material",
+     "explanation": "Oct 19 to Dec 31 inclusive is 74 days, so $1,000 a day costs $74,000. The $45,000 budget runs out after 45 days. Neither approval condition addresses the budget, so the approval branch is infeasible as stated.",
+     "evidence": "User scenario (practical-all-answers.json question text): \"We have $45,000 to spend on ads from now through December 31\"; evaluation date 2026-10-19.",
+     "changes_recommendation": true
+    },
+    {
+     "claim": "\"At $1,000 daily, inventory would deplete in roughly 130 days\"",
+     "type": "arithmetic",
+     "severity": "minor",
+     "explanation": "$1,000 x 3.2 = $3,200 a day, about 55 bottles at $58. 4,000 / 55 is about 72 days, before organic and reorder demand. The error understates the stock risk the answer is already warning about, so the \"No\" is unaffected.",
+     "evidence": "User scenario (practical-all-answers.json question text): $58 a bottle, 3.2 ROAS, about 4,000 bottles in stock.",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": "Calling a 7-day-click, 1-day-view window \"blended\" is loose wording, not a factual error."
+  },
+  {
+   "id": "review-6d79b5f64458fb94",
+   "case_id": "advice-hz-01",
+   "answer_status": "ok",
+   "assessment": "established_error",
+   "checks": {
+    "arithmetic": "Error. Status quo and the $500 / 40-client figure ($18,400) are correct, but the $28,200 total counts 40 standard + 5 premium at 60 h. After the answer drops 10 standard clients to fit 50 h, profit is 30 x $460 + 5 x $1,960 = $23,600, which the answer never recomputes.",
+    "explicit_constraints": "Hours end at 50 h, but the profit claim attached to the plan does not hold under the cap."
+   },
+   "issues": [
+    {
+     "claim": "\"Combined: $18,400 + $9,800 = $28,200 monthly profit, surpassing your $25,000 goal.\" followed by \"drop 10 of your lowest-paying or most demanding standard clients, leaving 30 standard clients... = 50 hours.\"",
+     "type": "arithmetic",
+     "severity": "material",
+     "explanation": "The $28,200 uses 40 standard clients, and the premium seats are described as existing larger clients, so they are partly double-counted. The hour-compliant end state, 30 standard at $460 plus 5 premium at $1,960, gives $23,600, about $1,400 short of the goal. At $2,000 the plan does not reach $25,000. A higher premium price (about $2,280 or more on this structure) or another change is needed.",
+     "evidence": "User scenario (practical-all-answers.json question text): $40 cost per client; 50-hour cap; goal $25,000.",
+     "changes_recommendation": true
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "review-6daf7b3784b1981b",
+   "case_id": "advice-yc-06",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "No arithmetic.",
+    "explicit_constraints": "Respected: picks B, month-4 paid-pilot criterion."
+   },
+   "issues": [
+    {
+     "claim": "\"an underserved, recession-resistant market\"",
+     "type": "unverified",
+     "severity": "minor",
+     "explanation": "Market characterisation not in the packet. Not contradicted.",
+     "evidence": "No source in advice-evidence.json.",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "review-70c7dca4ae9548f9",
+   "case_id": "advice-hz-04",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct. About 38 accounts, about 1.9 leaving a month, \"about 2 new contracts a month just to stay flat\"; $3,000 / $150 = 20 leads (about 2.4 contracts); $16,800.",
+    "explicit_constraints": "Respected initially ($5,000 ads + about $3,000 referrals and tools). The day-90 branch \"move ads to the full $8,000\" would leave no budget for the $1,000-per-contract referral payouts."
+   },
+   "issues": [
+    {
+     "claim": "\"move ads to the full $8,000\" while vendor referrals are paid \"$1,000 per signed contract\" from \"the remaining ~$3,000\"",
+     "type": "constraint",
+     "severity": "minor",
+     "explanation": "If both channels continue after day 90, total spend exceeds $8,000 a month unless payouts are moved elsewhere. This is a conditional branch and easy to adjust.",
+     "evidence": "User scenario (practical-all-answers.json question text): $8,000 a month growth budget.",
+     "changes_recommendation": false
+    },
+    {
+     "claim": "\"A new rep usually takes 3-4 months to ramp\"",
+     "type": "unverified",
+     "severity": "minor",
+     "explanation": "General industry claim, not in the evidence packet. Plausible and not contradicted.",
+     "evidence": "No source in advice-evidence.json.",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "review-75150f33a06b3c75",
+   "case_id": "advice-yc-01",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Runway 9.5 months is correct.",
+    "explicit_constraints": "Respected: 8-week plan, measurable week-8 criteria."
+   },
+   "issues": [
+    {
+     "claim": "\"Hospitals: Sales cycles run 6-18 months... and well-funded scribe competitors already exist.\"",
+     "type": "unverified",
+     "severity": "minor",
+     "explanation": "External market claims not in the evidence packet. Directionally consistent with the PG essay on slow institutional buyers (\"selling to customers like hospitals and school districts is like walking through mud\", web-19ac0b6d18d2). Not contradicted.",
+     "evidence": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-19ac0b6d18d2.md (sha256 98c7640d..., dated 2026-09-01, article, no timestamp)",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "review-76c14f2d58feff1f",
+   "case_id": "advice-hz-04",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct. $840 and $16,800; $3,000 / $150 = 20 leads, 2.4 contracts, $5,000 / 2.4 = $2,083; months 3-6 $5,000 media gives 33 leads and 4 wins; rep \"four\" is about 3.9.",
+    "explicit_constraints": "Respected: $6,000 in months 1-2 and $8,000 in months 3-6; ops manager 10-12 h a week; 6-month horizon."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-78209a014e24d7bd",
+   "case_id": "advice-hz-05",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct. 509; $9,900 x 2 = $19,800; 963; 1,000 needs about 188 a month at 18% churn; 17% churn with 180 a month gives about 1,010; annual $849 against 12 x $79 = $948; 61%.",
+    "explicit_constraints": "Respected: picks two (annual plan, staged ad increase); onboarding inside existing service."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-7fe157c17d6a6a13",
+   "case_id": "advice-hz-04",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct. 3 walkthroughs a week x 4.33 x 30% = 3.9, stated as \"3-4\"; $5,500 + $2,500 = $8,000.",
+    "explicit_constraints": "Respected: within $8,000; ops manager part-time; replacement before month 6 stated conditionally (\"If they hit the target\")."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-837d4965a9ac73c9",
+   "case_id": "advice-yc-02",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct: about 14 months.",
+    "explicit_constraints": "Respected: one roadmap, pricing change recommended."
+   },
+   "issues": [
+    {
+     "claim": "Tiered subscriptions \"stabilize monthly cash flow... and extend your runway\"",
+     "type": "unverified",
+     "severity": "minor",
+     "explanation": "Not quantified. Whether fixed tiers raise or lower revenue depends on customer usage, which the user did not give.",
+     "evidence": "No data in scenario.",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "review-86b49f2eb2a83552",
+   "case_id": "advice-yc-03",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "No arithmetic.",
+    "explicit_constraints": "Respected: clear No, conditions stated, 9-month runway and solo-founder risk addressed."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-9383303bf6a99460",
+   "case_id": "advice-yc-04",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct: 15 x $400 = $6,000 MRR; $12k + $6k + $4k + $6k + $8k = $36k; $400 x 80% x 12 = $3,840 (80% gross margin labelled as an assumption).",
+    "explicit_constraints": "Respected: one plan."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-972150990e492fa6",
+   "case_id": "advice-yc-03",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "No arithmetic.",
+    "explicit_constraints": "Respected: clear No (take the promotion)."
+   },
+   "issues": [
+    {
+     "claim": "\"Consumer fintech apps for couples face notoriously high churn\"",
+     "type": "unverified",
+     "severity": "minor",
+     "explanation": "General market claim, not in the evidence packet. Not contradicted.",
+     "evidence": "No source in advice-evidence.json.",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": "The quit criteria mention a six-month retention check. The promotion's one-year commitment would still apply, and the answer does not say how the two fit together."
+  },
+  {
+   "id": "review-989be618ff8aacbe",
+   "case_id": "advice-yc-05",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct relative to its own proposal: 25% x $230,000 = $57,500 (\"$57,000\"). At the current $185,000 it would be $46,250.",
+    "explicit_constraints": "Respected: picks a modified cash raise ($230,000, 0.4%)."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-9e349241f7a87018",
+   "case_id": "advice-yc-03",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "No arithmetic. \"Three viral posts\" matches two Reddit posts plus one TikTok.",
+    "explicit_constraints": "Answer opens \"Yes.\" to a quit-or-promotion question."
+   },
+   "issues": [
+    {
+     "claim": "\"Yes. Take the promotion and keep building on the side.\"",
+     "type": "constraint",
+     "severity": "minor",
+     "explanation": "The user asked \"Should I quit... or take the promotion...? I want a yes or no.\" A bare \"Yes\" reads as \"quit\". The next sentence makes the meaning clear.",
+     "evidence": "User scenario (practical-all-answers.json question text).",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "review-9eff5385f13f35a1",
+   "case_id": "advice-yc-06",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "No arithmetic.",
+    "explicit_constraints": "Respected: picks B, avoids council approval by pricing under discretionary limits."
+   },
+   "issues": [
+    {
+     "claim": "\"Many utilities need these plans for state loans and grants\"",
+     "type": "unverified",
+     "severity": "minor",
+     "explanation": "US-specific funding claim, plausible but not in the packet. Not contradicted.",
+     "evidence": "No source in advice-evidence.json.",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "review-a158a62e3d9c3de2",
+   "case_id": "advice-hz-02",
+   "answer_status": "ok",
+   "assessment": "established_error",
+   "checks": {
+    "arithmetic": "Errors. Groomer pay is 40% x $14,820 = $5,928, not $5,070, so profit is $3,220, not $4,078. The price-change scenario does not support the claimed profit expansion.",
+    "explicit_constraints": "Respected in form (regulars at a loyalty rate, 90-day test, van deferred), but the profit case rests on the wrong baseline."
+   },
+   "issues": [
+    {
+     "claim": "\"Variable costs total $5,070 for labor and $1,872 for supplies and fuel. Subtracting your $3,800 fixed costs leaves a monthly net profit of $4,078.\"",
+     "type": "arithmetic",
+     "severity": "material",
+     "explanation": "0.40 x $14,820 = $5,928. Correct profit is $14,820 - $5,928 - $1,872 - $3,800 = $3,220. The answer overstates current profit by $858 a month (27%).",
+     "evidence": "User scenario (practical-all-answers.json question text): \"Groomers are paid 40% of each ticket\".",
+     "changes_recommendation": false
+    },
+    {
+     "claim": "\"Assuming a slight dip in volume to 140 grooms a month, revenue rises to about $15,100, significantly expanding profit margins\"",
+     "type": "arithmetic",
+     "severity": "material",
+     "explanation": "Under the answer's own prices (new $110, regulars $100, 70/30 mix, average $103): 140 x $103 = $14,420 revenue and 140 x (0.6 x 103 - 12) - $3,800 = $3,172 profit, slightly below the true $3,220 baseline. Even with every groom at $110, revenue is $15,400 and profit $3,760. Both are below the $4,078 baseline the answer stated, so the claimed expansion is not supported. Raising prices at constant volume still adds profit, so the direction holds.",
+     "evidence": "User scenario (practical-all-answers.json question text): 70% regulars, 40% commission, $12 per groom, $3,800 fixed.",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "review-a545da50bfdb83ea",
+   "case_id": "advice-yc-05",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct: +$110,000; agency $92,500 (at $185,000) to $120,000 (at $240,000).",
+    "explicit_constraints": "Respected: picks direct hiring with selective cash up to $240,000."
+   },
+   "issues": [
+    {
+     "claim": "\"Two hours each is too little\"",
+     "type": "unverified",
+     "severity": "minor",
+     "explanation": "The user wrote \"the founders spend about 2 hours a week on recruiting\", which more likely means 2 hours in total. Either reading supports the advice.",
+     "evidence": "User scenario (practical-all-answers.json question text).",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "review-ab60091eceb818c3",
+   "case_id": "advice-hz-06",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Mostly correct: $9,000 / $11,000 = 82%; about five routes. The client-count range includes combinations below the target.",
+    "explicit_constraints": "Respected: picks one, at most $2,000 of savings, 20 h a week."
+   },
+   "issues": [
+    {
+     "claim": "\"Five to eight offices paying $600-$1,000/month would get you there\"",
+     "type": "arithmetic",
+     "severity": "minor",
+     "explanation": "5 x $600 = $3,000 gross, below the $3,400 take-home before any tax. The upper part of the range works (for example 8 x $1,000 = $8,000).",
+     "evidence": "User scenario (practical-all-answers.json question text): take-home $3,400 a month.",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "review-aba49e4011c04e9d",
+   "case_id": "advice-hz-03",
+   "answer_status": "ok",
+   "assessment": "established_error",
+   "checks": {
+    "arithmetic": "Error. \"Less than 45 days\" should be exactly 45 days ($45,000 / $1,000). At 3.2 ROAS the budget buys about 2,483 bottles in total and about 2,200 by Black Friday, so the stated numbers do not support a stockout before Black Friday.",
+    "explicit_constraints": "Partly met: gives the yes/no (No) but offers a rule (\"supply-safe spend limit\") instead of the concrete alternative spend plan the user asked for."
+   },
+   "issues": [
+    {
+     "claim": "\"At $58 a bottle, $1,000 daily ad spend will rapidly exhaust your 4,000-bottle inventory well before December 31... run completely out of stock, and miss the peak of Black Friday\"",
+     "type": "arithmetic",
+     "severity": "material",
+     "explanation": "At the reported 3.2 ROAS, $1,000 a day sells about 55 bottles a day. By Black Friday (Nov 27, day 40) that is about 2,200 bottles, and the $45,000 budget caps ad-driven sales near 2,483 bottles. Even without the budget cap, 4,000 bottles last about 72 days (to about Dec 30). Organic and reorder demand could add to this, but the answer does not quantify it, so the central stockout claim is unsupported by the stated figures. The \"No\" still stands on budget grounds, which the answer also mentions.",
+     "evidence": "User scenario (practical-all-answers.json question text): $58 bottle, 3.2 ROAS at $300 a day, about 4,000 bottles, $45,000 budget.",
+     "changes_recommendation": false
+    },
+    {
+     "claim": "\"burns through your entire $45,000 budget in less than 45 days\"",
+     "type": "arithmetic",
+     "severity": "minor",
+     "explanation": "$45,000 / $1,000 = exactly 45 days.",
+     "evidence": "User scenario (practical-all-answers.json question text).",
+     "changes_recommendation": false
+    },
+    {
+     "claim": "Requested alternative spend plan not given in amounts",
+     "type": "constraint",
+     "severity": "minor",
+     "explanation": "The user asked \"what spend plan would you run instead?\". The answer gives principles and a rule to compute a limit but no daily or period amounts.",
+     "evidence": "User scenario (practical-all-answers.json question text): \"If not, what spend plan would you run instead?\"",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "review-b4c46a646eb27cc0",
+   "case_id": "advice-yc-02",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct. 14.2 and 16.5 months; $7,500 and $15,000; about $34,000 at 12 months.",
+    "explicit_constraints": "Respected: one roadmap, pricing test, runway floor."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-b5640905cdaa50c7",
+   "case_id": "advice-yc-01",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Runway 9.5 months correct, with net burn stated as an assumption. \"$44,000\" is a budget allotment (2 months) rather than a computed claim.",
+    "explicit_constraints": "Respected: decision this week, 8-week plan, roles split across two founders."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-b707692b0b812389",
+   "case_id": "advice-hz-02",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct. $95 x 60% - $12 = $45; $3,220; average 0.7 x $105 + 0.3 x $115 = $108; contribution $52.80; $4,437 (+$1,217); profit-preserving volume 7,020 / 52.8 = 133 grooms; van 65 x $57 = $3,705, minus $1,650 = $2,055; 42% fill.",
+    "explicit_constraints": "Respected: 90-day window, notice for regulars, van decision deferred to validation."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-b8d39e371ce7e26a",
+   "case_id": "advice-hz-05",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "No projection given. \"Roughly 100\" cancellations a month approximates 108. No arithmetic errors.",
+    "explicit_constraints": "Respected: picks two (annual plan, doubled ads)."
+   },
+   "issues": [],
+   "notes": "\"Entirely realistic if you fix retention alongside acquisition\" is conditional. Doubled ads at unchanged churn give about 963, so the condition matters."
+  },
+  {
+   "id": "review-b8e66fbeb5cb9da1",
+   "case_id": "advice-yc-03",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "No arithmetic.",
+    "explicit_constraints": "Respected: clear No, conditions for revisiting stated."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-c19d15fa98e30e9c",
+   "case_id": "advice-hz-01",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Mostly correct. Table $26,100 at 50 h is right; the $2,000 + $550 alternative gives 30 x $510 + 5 x $1,960 = $25,100, as stated. One slip on course subscribers.",
+    "explicit_constraints": "Respected: 50 h at the end state, no hiring, 60-day notice, course deferred, timeline inside 6 months."
+   },
+   "issues": [
+    {
+     "claim": "\"you'd need about 170 subscribers just to match one premium client\"",
+     "type": "arithmetic",
+     "severity": "minor",
+     "explanation": "One premium client nets about $2,460 a month, which is about 50 subscribers at $49. About 170 to 180 subscribers matches the whole $8,800 gap to $25,000 (8,800 / 49 is about 180). The conclusion to defer the course does not depend on this figure.",
+     "evidence": "User scenario (practical-all-answers.json question text): course at $49 a month.",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "review-c8a5e6cdf5b50ba6",
+   "case_id": "advice-hz-05",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Mostly correct: 108, steady state 500, 180 a month to hold 1,000, about $440 revenue per member, 38% drop at $49. The projection holds under its stated assumptions: 150 a month with 20-25% annual (no in-year annual churn) gives about 1,020-1,070, and 130 a month gives about 890-940.",
+    "explicit_constraints": "Respected: picks two (annual plan, doubled ads)."
+   },
+   "issues": [
+    {
+     "claim": "\"Price it at about $690 (roughly two months free).\"",
+     "type": "arithmetic",
+     "severity": "minor",
+     "explanation": "12 x $79 = $948. Two months free is $790; $690 is about 3.3 months free.",
+     "evidence": "User scenario (practical-all-answers.json question text): $79 a month.",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "review-ca2f1898649d6ea7",
+   "case_id": "advice-hz-03",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct. 74 days, $74,000; budget runs out around Dec 2; 14 x $450 + 18 x $600 + 12 x $1,000 + 14 x $600 + 16 x $300 = $42,300, $2,700 reserve; reorder about Dec 28; break-even ROAS = 1 / margin.",
+    "explicit_constraints": "Respected: yes/no (No), within budget, inventory reserve and lead time addressed."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-d24e0d80efb6a7dc",
+   "case_id": "advice-yc-06",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "No arithmetic.",
+    "explicit_constraints": "Picks B. The plan does not say how to get around council approval, but it does not rely on closing municipal contracts within 6 months, so the 14-month savings are not breached."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-d3388e825af60df2",
+   "case_id": "advice-hz-06",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "No arithmetic. The 90-day timeline is labelled in weeks.",
+    "explicit_constraints": "Picks one. Read literally, the timeline breaks the 90-day frame."
+   },
+   "issues": [
+    {
+     "claim": "\"Weeks one through thirty... Weeks thirty-one through sixty... Weeks sixty-one through ninety\"",
+     "type": "arithmetic",
+     "severity": "minor",
+     "explanation": "Unit slip: a 90-day plan labelled as 90 weeks (about 21 months), longer than the 18-month goal. A reader will probably read it as days.",
+     "evidence": "User scenario (practical-all-answers.json question text): \"what should my first 90 days look like?\"",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "review-d44c27b566d954f6",
+   "case_id": "advice-yc-04",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct: $12k + $9k + $9k + $6k = $36k; $6,000 MRR; $3,840 at an assumed 80% margin.",
+    "explicit_constraints": "Respected: one plan."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-d4d40ecfb3fa19da",
+   "case_id": "advice-yc-01",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct: 9.5 months.",
+    "explicit_constraints": "Respected: 8-week plan, charge now, 10-20 paying clinics threshold."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-da29fcc3bb1298b6",
+   "case_id": "advice-hz-04",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Minor errors. With $8,000 a month the agency yields 40 leads and 4.8 contracts, so $1,667 per contract ($2,000 at 4), not \"$1,800 to $2,250\". The $48,000 figure is lifetime revenue; lifetime gross profit is $16,800. \"Twelve monthly\" walkthroughs uses 4 weeks a month (13 at 4.33).",
+    "explicit_constraints": "Respected: rep $5,500 plus referral bounty within $8,000; 6-month horizon."
+   },
+   "issues": [
+    {
+     "claim": "\"Option A's digital agency math yields roughly 4 to 5 contracts monthly at an unsustainable $1,800 to $2,250 acquisition cost against a $48,000 lifetime value.\"",
+     "type": "arithmetic",
+     "severity": "minor",
+     "explanation": "Recomputed CAC is about $1,667, about 10% of the $16,800 lifetime gross profit, so \"unsustainable\" is not supported by the numbers. The rep at about $1,410 to $1,530 per contract is only modestly cheaper. Choosing the rep first is still a defensible call on control and predictability.",
+     "evidence": "User scenario (practical-all-answers.json question text): $150 per lead, 12% lead-to-contract, $2,000 fee, $2,400 a month at 35% margin for about 20 months.",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "review-da85302df6ff58a5",
+   "case_id": "advice-yc-05",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "No cost math. Not given: $240,000 still leaves about $130,000 below the competing offers (about 2 x $185,000) and adds $110,000 a year for two hires.",
+    "explicit_constraints": "Respected: picks one option (raise cash, cut equity)."
+   },
+   "issues": [
+    {
+     "claim": "\"paying 25% for senior engineering hires during a cash crunch\"",
+     "type": "unverified",
+     "severity": "minor",
+     "explanation": "The user raised $3M three months ago and mentions no cash shortage. \"Cash crunch\" describes the user's situation without support.",
+     "evidence": "User scenario (practical-all-answers.json question text): \"We raised a $3M seed round 3 months ago\".",
+     "changes_recommendation": false
+    }
+   ],
+   "notes": "\"Your process is already efficient\" differs from the source view that the usual hiring problem is pipeline size (\"the biggest issue is they don't have a pipeline\", yt-7TU636F_yVQ at 15:01). That is a disagreement about advice, not a factual contradiction, and is not counted as an error."
+  },
+  {
+   "id": "review-dc6c7069fe1fb4c0",
+   "case_id": "advice-yc-03",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "No arithmetic. \"Before October 31\" matches the month-end deadline from 2026-10-19.",
+    "explicit_constraints": "Respected: clear No."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-ddb4720e76625e4f",
+   "case_id": "advice-hz-02",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct within stated rounding. 0.6 x $105 - $12 = $51; 156 x $6 = $936 (\"+$900\", lower if many regulars prebook at $100, about $750 at a $103 average); break-even loss 1 - 7,020/51/156 = 11.8%; seventh day about 26 grooms, about $1,300; van break-even ($1,650 + assumed $350) / $51 is about 39 grooms.",
+    "explicit_constraints": "Respected: 90-day pricing, notice and prebook rate for regulars, explicit van timing (January) with conditions."
+   },
+   "issues": [],
+   "notes": "\"The van sits idle one day a week\" follows from the stated 6-day schedule. Whether a seventh day is workable is an assumption the answer frames as an offer to groomers."
+  },
+  {
+   "id": "review-de8ffd690bbc1460",
+   "case_id": "advice-yc-02",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct. 14 months; $6,300; $7,500; 6.5 x $45,000 is about $292,500 (\"roughly $300,000\").",
+    "explicit_constraints": "Respected: one roadmap, explicit pricing answer (keep usage-based)."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-dec1fb5e0255e060",
+   "case_id": "advice-yc-01",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct: 9.5 months; \"35+ features\" fits 6 named plus about 30 smaller.",
+    "explicit_constraints": "Respected: 8-week plan with paid pilots and thresholds."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-e23b6c52b8316efe",
+   "case_id": "advice-hz-01",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "Correct. 5 x $1,960 + 30 x $460 = $23,600; table $26,100 at 50 h; fallback 8 x $1,960 + 21 x $460 = $25,340 at 24 + 21 + 5 = 50 h.",
+    "explicit_constraints": "Respected: 50 h, no hiring, 60-day notice, target run rate by month 3."
+   },
+   "issues": [],
+   "notes": "The fallback uses 8 premium seats, above the user's draft \"up to 5\". That number was part of the user's option, not a stated hard limit, and the answer labels it a contingency."
+  },
+  {
+   "id": "review-f0708ce7b745a006",
+   "case_id": "advice-yc-03",
+   "answer_status": "ok",
+   "assessment": "no_established_material_error",
+   "checks": {
+    "arithmetic": "No arithmetic beyond the stated assumption \"roughly six months of real runway\". About 12 days remain to month end (\"next two weeks\").",
+    "explicit_constraints": "Respected: clear No with switch conditions."
+   },
+   "issues": [],
+   "notes": ""
+  },
+  {
+   "id": "review-f660843d9984b559",
+   "case_id": "advice-hz-05",
+   "answer_status": "failed",
+   "assessment": "unassessable",
+   "checks": {
+    "arithmetic": "Not assessable: the answer is empty.",
+    "explicit_constraints": "Not assessable."
+   },
+   "issues": [],
+   "notes": "Answer status is \"failed\" with no text. An empty failed answer is unassessable, not factually false."
+  }
+ ],
+ "coverage": {
+  "slots": 72,
+  "assessed": 71,
+  "unassessable": 1,
+  "established_error": 5,
+  "no_established_material_error": 66,
+  "entries_with_any_issue": 30,
+  "entries_without_issues": 42,
+  "issue_counts": {
+   "arithmetic_material": 5,
+   "arithmetic_minor": 14,
+   "constraint_material": 2,
+   "constraint_minor": 6,
+   "source_contradiction": 0,
+   "unverified": 13
+  },
+  "issues_changing_recommendation": 4
+ },
+ "sources_consulted": [
+  {
+   "path": "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/results/review-export/practical-all-answers.json",
+   "sha256": "41bde0c6507156cc06c72abec7914ec8de08c148dfebd86906b48993495a8ffd",
+   "role": "input export (72 slots)"
+  },
+  {
+   "path": "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/FACTUAL-REVIEW-BRIEF.md",
+   "sha256": "8d831483dc8de36fd80bc988ee3a3678f719bda78f7d6d3268309c6afdc6c01c",
+   "role": "brief"
+  },
+  {
+   "path": "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/frozen/fixtures/advice-questions.json",
+   "sha256": "3188b096f62a1c87389bf2076ce3b484c05f828786c55286ffa449ba65bf15d1",
+   "role": "case ids for question text"
+  },
+  {
+   "path": "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/frozen/fixtures/advice-evidence.json",
+   "sha256": "8c1e0333bcdfc43601798d8c4cc1c32919fbe2a1a59a9de526de4e82cf6c3a06",
+   "role": "evidence packets; hard checks recomputed independently"
+  },
+  {
+   "path": "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/frozen/fixtures/source-inventory.json",
+   "sha256": "6b7fcfe7fda2405fcc4a1256cb65aa94e3f69cc60b8ade8fbc2b4aa26281689e",
+   "role": "source inventory; all 37 raw files hash-matched before use"
+  },
+  {
+   "path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+   "sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+   "role": "raw source, hash matches inventory; quotes checked"
+  },
+  {
+   "path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+   "sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+   "role": "raw source, hash matches inventory; quotes checked"
+  },
+  {
+   "path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+   "sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+   "role": "raw source, hash matches inventory; quotes checked"
+  },
+  {
+   "path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-uWdIgftpvBI.md",
+   "sha256": "e96491ca066bec8b42c73a1dcb7e4924f3da42ee59e08472be4f2f65dc387fa9",
+   "role": "raw source, hash matches inventory; quotes checked"
+  },
+  {
+   "path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-19ac0b6d18d2.md",
+   "sha256": "98c7640dca74c5f7a640e10858613300264805247e203d013ad7d393ef469f72",
+   "role": "raw source, hash matches inventory; quotes checked"
+  },
+  {
+   "path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+   "sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+   "role": "raw source, hash matches inventory; quotes checked"
+  }
+ ],
+ "summary": "72 slots reviewed: 71 answers assessed, 1 failed empty answer unassessable. 5 answers have established material errors: two bookkeeping answers claim the $25,000 goal is met when the hour-compliant plan earns $23,600-$24,860 (one also exceeds the 50-hour cap at 54 h); one grooming answer misstates groomer pay ($5,070 vs $5,928) and overstates baseline profit by $858; two serum-ad answers rest on wrong inventory arithmetic, one of which also conditionally approves $1,000 a day against a $45,000 budget. The other 66 assessed answers have no established material error; 25 of them carry minor arithmetic, constraint or unverified-claim notes. No answer cites a named source, and no claim is materially contradicted by the raw corpus. Evidence-packet hard checks were recomputed; one packet note (break-even \"around month 15\" for yc-02) is closer to month 14.1 when recomputed."
+}

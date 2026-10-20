@@ -1,0 +1,408 @@
+Evaluation date: 2026-10-19. This is the current date, not a future date. May 2026 is in the past. Publication dates and dates of events described in a source are distinct. A model training cutoff does not invalidate supplied later material. You are an independent evaluator. Use no tools, commands, files, browsing, or external retrieval. A and B are anonymous. Their ordering conveys nothing. Do not infer their model, source access, or provenance. Do not reward writing style, citation presence, quotations, expert agreement, or presumed source use. A tie is valid.
+Score each answer on the four specified integer scales, each from 1 to 5. Anchors: 1 fundamentally deficient; 2 major problems; 3 mixed with meaningful gaps; 4 good with minor gaps; 5 strong and sufficiently complete. Choose A, B, or tie for substantive overall quality. Preserve uncertainty rather than inventing evidence.
+Return ONLY a JSON object with exactly one key, "judgments", containing one object per supplied pair. Each object has exactly: "id", "A", "B", "winner", "reason", "factual_objections". A and B each contain exactly the four dimension names and integer scores. winner is "A", "B", or "tie"; reason is a nonempty string. factual_objections is a list, possibly empty, of objects with exactly "answer" ("A" or "B"), "claim", "label" ("contradicted" or "unverified"), and "evidence" (a nonempty explanation). Distinguish an established contradiction from an unverified claim.
+Evaluate accuracy, specificity, faithfulness, and usefulness using the complete audited reference packet. The reference is evidence, not a required script. Missing optional detail is not automatically a false claim. Label a factual objection contradicted only when supplied evidence establishes the contradiction; otherwise label it unverified. Do not treat absence from the reference as proof of falsehood. Resolve a conflict between a summary and direct evidence in favor of the direct evidence and explain it.
+
+Pairs:
+[
+  {
+    "id": "p-4d9952cc71942a88",
+    "question": "My cofounder and I are 9 months in, pre-product-market fit, and it's clearly over. He's vested a chunk of his stock and wants to keep it, and we've both hired lawyers who are trading letters. What would Michael Seibel tell us to do?",
+    "A": "**His advice would be to fire the lawyers, settle it this week, and have your cofounder hand back most of his stock.**\n\n**What Seibel would likely say**\n\n- **Stop the letters.** Before product-market fit the stock is worth close to nothing, so a legal fight is a fight over ego that can leave you both in debt. Lawyers profit from your anger.\n- **No fault, no judge.** Who was right doesn't matter. What matters is a go-forward plan you can both accept. If you use a mediator, don't make them the judge.\n- **Equity goes back to the company, even if vested.** Nearly all the value is still to be created by whoever keeps working. His rough benchmark is under 5% after several years. For someone leaving in year one it's 1–2% or less. At nine months, your cofounder fits the second case.\n- **Be generous if you're the one staying.** Offer reasonable severance and treat him decently. Your team, investors and future cofounders will judge you by how this goes. Don't say anything you can't take back.\n- **Keep it small.** Clean paperwork, about a week, a couple thousand dollars.\n\n**Assumptions that change the answer**\n\n- **If the whole company is dead,** there's nothing worth fighting over. Wind it down together and move on.\n- **If there's misconduct** (fraud, illegal behavior), this advice doesn't apply.\n- **The vesting terms matter.** With a standard one-year cliff, nothing should have vested by nine months. Check whether you have a cliff, acceleration or repurchase rights before negotiating.\n- **If the company has real traction or assets,** the stakes are higher and a lawyer's role is more justified. Even then, aim for a negotiated deal, not litigation.\n\n**Next steps**\n\n1. Meet directly, without lawyers.\n2. Propose a number in the 1–2% range plus severance.\n3. Have one lawyer paper the deal.\n\nThis reflects Seibel's stated approach, not legal advice for your specific documents.",
+    "B": "Michael Seibel has consistently argued that cofounder conflict is among the most common reasons early startups die. His likely advice: **stop letting lawyers drive this, settle it quickly and directly, and protect whatever future the company or each of you still has.**\n\n**Check a likely false premise.** Under the standard four-year schedule with a one-year cliff, nobody has vested anything at month nine. If your cofounder truly holds vested shares, your documents may lack a cliff, include acceleration, or credit pre-incorporation work. Your lawyer should confirm exactly what has vested before anyone argues about it.\n\n**Decide what \"over\" means. That changes everything.**\n- **Shutting down entirely:** The equity is probably worth close to nothing. Fighting over it burns legal fees on an empty asset. Agree to wind down, return any remaining investor money, and part ways cleanly.\n- **One of you continuing:** A large block of stock held by someone who no longer works on the company makes future fundraising hard. In that case, offer a fair deal: the departing founder keeps a stake roughly proportional to the time and value he contributed. The company repurchases the rest, typically at the original price for shares that haven't vested.\n\n**Concrete next steps:**\n1. Meet in person, without lawyers, within a week.\n2. Agree on the outcome first: shut down, or who continues.\n3. Settle the equity split, mutual releases, intellectual property assignment, and any non-disparagement terms between yourselves.\n4. Have the lawyers write up the agreement you reached, not negotiate it for you.\n5. Set a deadline. Every week of letters costs money and goodwill.\n\n**What would change this:** a signed vesting agreement that clearly favors one side, real assets or intellectual property of value, outside investors with consent rights, or bad faith such as taking code or customers. In those cases, legal leverage matters more.",
+    "reference": {
+      "actual_stance": "Stop paying lawyers. Before product-market fit the stock is worth essentially nothing, so you are fighting over ego. Make the split no-fault and clean, and keep your mouths shut. Even if he has vested, the leaving founder should get down to under 5% of the company, and since this is within the first year, under 2% (they cite 1% to 2%, sometimes under 1%), so the remaining team has the equity to create the value. The staying founder should be generous with severance because everyone in the company is watching. Sign clean paperwork; it can be done in about a week for about $2,000. Do not make your advisor judge and jury; the facts no longer matter. Exception: lawbreaking or unethical conduct, where you call the lawyers.",
+      "category": "applied",
+      "errors": [
+        "Advising to enforce the agreements through litigation or negotiate a full buyout of vested shares.",
+        "Giving the 5% figure for a first-year departure without the under-2% adjustment."
+      ],
+      "evidence": [
+        {
+          "quote": "in a situation where you're having a co-founder breakup and the stock is worth nothing, paying lawyers a bunch of money makes no sense.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "11:36"
+        },
+        {
+          "quote": "the way it should go is sort of no fault from both sides.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "13:42"
+        },
+        {
+          "quote": "Optimize for cleanliness for both sides.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "14:14"
+        },
+        {
+          "quote": "regardless of your vesting, um you need to make sure that that company has as much equity as possible to motivate the people who are there",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "14:47"
+        },
+        {
+          "quote": "you have an opportunity to be generous.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "17:01"
+        },
+        {
+          "quote": "understand that everyone in your company is looking at you right now.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "17:33"
+        },
+        {
+          "quote": "even if you vested, like get down to under 5% of the company, if it's within the first year, under 2%.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "18:39"
+        },
+        {
+          "quote": "Do reasonable severance, sign clean paperwork and and peace out, right? Like you could do that whole thing in a week and spend like $2,000.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "18:39"
+        },
+        {
+          "quote": "After a number of years, 5% typical. Under a year, 1%, 2%, sometimes less than 1%.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "21:22"
+        },
+        {
+          "quote": "don't make your poor startup advisor into judge and jury.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "21:54"
+        },
+        {
+          "quote": "if your co-founder is breaking the law, doing something unethical, killing people, none of this applies.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "21:54"
+        },
+        {
+          "quote": "On this point, I maybe I'll be a little bit less nice than Dalton.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "seibel",
+          "speaker_basis": "speaker refers to Dalton in the third person, so this turn is Michael's",
+          "timestamp": "21:54"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold attributes the whole framework to Michael Seibel. It is presented jointly in a two-host episode; only some turns can be assigned (for example the 'less nice than Dalton' turn is Michael's). The hosts say YC has these standards written down. Grade the content.",
+        "Premise note: at 9 months, a standard four-year vesting schedule with a one-year cliff would usually mean nothing has vested. The source's advice holds 'even if you vested', so the stance does not change. Answers that point out the cliff are fine."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-12",
+      "key_status": "confirmed_speaker_caveat",
+      "primary_sources": [
+        "yt-s1YszjhzQ6U"
+      ],
+      "question": "My cofounder and I are 9 months in, pre-product-market fit, and it's clearly over. He's vested a chunk of his stock and wants to keep it, and we've both hired lawyers who are trading letters. What would Michael Seibel tell us to do?",
+      "required_points": [
+        "Stop the lawyer fight; pre-PMF stock is worth almost nothing.",
+        "Leaving founder gives most of it back even if vested: under 5%, and under 2% within the first year (this case is at 9 months).",
+        "No-fault, clean separation with clean paperwork."
+      ],
+      "supporting_points": [
+        "About a week and about $2,000.",
+        "Staying founder offers reasonable severance and is generous; everyone is watching.",
+        "Do not make an advisor the judge; facts do not matter once you are splitting.",
+        "Exception for lawbreaking or unethical behavior."
+      ],
+      "uncertainty": [
+        "Speaker split between the two hosts is mostly unrecoverable."
+      ],
+      "vault": "yc"
+    }
+  },
+  {
+    "id": "p-31022a88e0319499",
+    "question": "What's the story Hormozi tells about his company being worth four times more just by listing on the NASDAQ, and the IPO equity deal he took afterward?",
+    "A": "**I can't confirm this story. As described, it doesn't match his known track record.**\n\n**What I know about his exits:**\n- In 2021 he sold two-thirds of his supplement company (Prestige Labs) and his gym-licensing company (Gym Launch) to a private equity firm for $46.2M. That was a private sale, not a listing.\n- He sold his gym software company, ALAN, to a strategic buyer in an all-stock deal. He was paid in the buyer's shares, not cash.\n- I know of no Hormozi company that went public on NASDAQ. I also know of no IPO equity deal he accepted.\n\n**What may be getting blended together:**\n- **The all-stock sale.** Taking a buyer's stock as payment can sound like \"taking equity,\" especially if the buyer was public or planned to go public. I can't confirm the buyer's listing status or what the shares later became worth.\n- **A general valuation point.** Publicly traded companies often sell at a higher multiple of earnings than similar private ones, because their shares are easier to buy and sell. \"Worth four times more just by listing\" fits that idea. I can't tie it to a specific Hormozi anecdote with those numbers, though, and I won't invent one.\n- **His self-reported figures.** He gives different numbers for the same events in different appearances, so a retold version may have drifted.\n\n**Next steps:**\n1. Find the specific clip or episode where you heard it, and note the date and the company named.\n2. Check whether he was describing his own deal or a portfolio company's, or using a hypothetical.\n3. If it was ALAN, look up who acquired it and whether that buyer was public at the time.\n\n**What would change my answer:** a dated clip in which he names the company, the exchange and the terms. Without that, treat the story as unverified.",
+    "B": "**Short answer:** I don't know of any story in which Alex Hormozi took a company public on the NASDAQ, saw it become worth four times more from the listing alone, and then accepted equity in an IPO. As of my knowledge, none of his main companies (Gym Launch, Prestige Labs, ALAN, Skool-related ventures, or the holding company Acquisition.com) has listed on a public exchange. The question's premise is probably mistaken or blends several separate things.\n\n**What I'm fairly confident about:**\n- In 2021 Hormozi sold a majority stake in his portfolio, mainly Gym Launch and Prestige Labs, to a private buyer for about $46 million. That was a private acquisition, not an IPO.\n- He often teaches valuation multiples. A key point is that public companies usually trade at much higher multiples than comparable private ones, because public shares are liquid and private ones are not. Saying a business \"becomes worth several times more\" when it goes public is a general idea he and others use. It isn't a documented event from his own companies.\n- He regularly discusses taking equity instead of cash in deals. That is the core model of Acquisition.com. This may be the source of the \"equity deal\" part.\n\n**What's uncertain:**\n- He may have told a hypothetical, a story about a portfolio company or a friend's company, or a story from a podcast I haven't seen. Some things he said after mid-2026 may also be unknown to me.\n\n**Next steps:**\n- Find the clip or episode where you heard it and note who the company was. Check whether it was his company or an example he used.\n- Look up SEC filings or NASDAQ listings under the company's name. A real IPO leaves a public record.\n- If there's no filing, treat the story as an illustration of the public-versus-private multiple gap, not as a real transaction.",
+    "reference": {
+      "actual_stance": "False attribution. The story is the interviewer's, not Hormozi's. The host of The Diary Of A CEO says his company went public on a European exchange, banks told him the same business would be worth four times more on the NASDAQ, and he later applied his social-media and marketing skills to companies heading to IPO, earning equity worth about $7M to $8M on IPO day for 9 to 12 months of work, which led to the company now called Flight Story. Hormozi only agreed and gave his own version: the biggest debt we pay is ignorance, fish where the fish are, 'same work, more zeros'. A 20% conversion lift is worth $200k to a $1M store (he takes $20k at 10%) but $20M to a $100M company (he takes $2M), 100x for the same work.",
+      "category": "attribution",
+      "errors": [
+        "Telling the story as Hormozi's own career lesson.",
+        "Saying Hormozi's company listed on the NASDAQ."
+      ],
+      "evidence": [
+        {
+          "quote": "when my company went public on a Stock Exchange in um Europe",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "host_doac_interviewer",
+          "speaker_basis": "the interviewer on The Diary Of A CEO; the raw file does not name him; content-inferred from 'my company went public' and 'flight story'",
+          "timestamp": "1:33:37"
+        },
+        {
+          "quote": "they told me that our business would be worth four times more if it was just on a different stock market if you move it to the NASDAQ the exact same business would be worth four times more",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "host_doac_interviewer",
+          "speaker_basis": "the interviewer on The Diary Of A CEO; the raw file does not name him; content-inferred from 'my company went public' and 'flight story'",
+          "timestamp": "1:34:12"
+        },
+        {
+          "quote": "I think on the day of the IPO the equity that I got for for the 9 to 12 months work that i' done was worth in the region of 7 to8 million",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "host_doac_interviewer",
+          "speaker_basis": "the interviewer on The Diary Of A CEO; the raw file does not name him; content-inferred from 'my company went public' and 'flight story'",
+          "timestamp": "1:35:51"
+        },
+        {
+          "quote": "company which is now called flight story",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "host_doac_interviewer",
+          "speaker_basis": "the interviewer on The Diary Of A CEO; the raw file does not name him; content-inferred from 'my company went public' and 'flight story'",
+          "timestamp": "1:36:23"
+        },
+        {
+          "quote": "100% I thoroughly agree with everything you just said",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "hormozi",
+          "speaker_basis": "turn change inferred from content; captions have no speaker labels",
+          "timestamp": "1:36:23"
+        },
+        {
+          "quote": "same work yeah same amount of time same Rod more zeros",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "hormozi",
+          "speaker_basis": "inferred: continues his fishing analogy and cites 'the first book'",
+          "timestamp": "1:38:03"
+        },
+        {
+          "quote": "do the same work to a business doing $100 million a year I make them $20 million for my 20% bump and I get 10% that and I make $2 million 20,000 2 million 100x same work",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "hormozi",
+          "speaker_basis": "inferred from content",
+          "timestamp": "1:38:38"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold names Steven Bartlett. The raw file never names the host; the channel is The Diary Of A CEO and the speaker mentions Flight Story. The identification is external knowledge and is kept as a supporting point, not a requirement."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-16",
+      "key_status": "confirmed_speaker_inferred",
+      "primary_sources": [
+        "yt-x3e73Qn6NOo"
+      ],
+      "question": "What's the story Hormozi tells about his company being worth four times more just by listing on the NASDAQ, and the IPO equity deal he took afterward?",
+      "required_points": [
+        "Says the story is not Hormozi's; it belongs to the interviewer/host.",
+        "Summarizes the host's story: European listing, banks said 4x on NASDAQ, pre-IPO equity worth about $7M to $8M for 9 to 12 months of work."
+      ],
+      "supporting_points": [
+        "Identifies the host as Steven Bartlett (external knowledge; consistent with 'Flight Story').",
+        "Hormozi agreed and gave the 'same work, more zeros' CRO example ($20k vs $2M).",
+        "The 4x NASDAQ figure was what banks told him, not an actual relisting."
+      ],
+      "uncertainty": [
+        "All speaker attribution in this transcript is inferred from content because auto-captions carry no labels. The inference is strong here (first-person European IPO and Flight Story)."
+      ],
+      "vault": "hormozi"
+    }
+  },
+  {
+    "id": "p-c8a0257afdc78052",
+    "question": "Jessica Livingston has said early YC deliberately backed the most aggressive, ruthless founders because they're the ones who win. Why did she believe that?",
+    "A": "**The premise appears to be mistaken.** I don't know of Jessica Livingston saying that early YC deliberately backed the most aggressive or ruthless founders. Her known views point the other way, so it's worth checking where the claim came from before relying on it.\n\n**What she actually emphasized**\n\n- **Determination over ruthlessness.** Livingston has consistently named determination as the trait that best predicts startup success. She means persistence through rejection, setbacks and near-death moments, not willingness to harm others. Her interviews with early founders showed that most successful startups survived by not giving up.\n- **Character as a filter.** At YC she was widely regarded as the partner with the sharpest read on people. Part of that role was screening out founders who seemed dishonest, manipulative or unpleasant. YC's stated view was that bad actors tend to fail. They struggle to recruit, keep cofounders, earn customer trust and survive scrutiny. They also create reputational risk for the investor.\n- **Resourcefulness and earnestness.** YC prized founders who were scrappy and who pushed hard for users and deals. That can look \"aggressive\" from outside, but it is aimed at solving problems, not at beating people at any cost.\n\n**Where uncertainty remains**\n\nI can't rule out an offhand remark, such as praise for founders who push hard. That kind of comment could have been paraphrased into \"ruthless.\" But as a deliberate investment thesis, the claim contradicts her well-documented positions.\n\n**What would change this answer**\n\nA primary recording or transcript showing her endorsing ruthlessness as a selection criterion would change it. If you find the claim somewhere, check:\n\n1. Whether it is a direct statement or a paraphrase.\n2. Whether \"aggressive\" means ambitious and determined, or willing to act unethically.\n3. Whether the view is actually hers, or comes from another investor or a commentator.",
+    "B": "**The premise is mistaken.** I know of no statement in which Jessica Livingston said early YC deliberately backed the most aggressive or ruthless founders. Her account of what she screened for points the other way.\n\n**What she actually looked for, and why**\n\n- **Earnestness, determination, flexible-mindedness, and a healthy co-founder relationship.** She treated the co-founder relationship as the most important of these. At YC's stage there were no metrics, so founders had to be judged on what they could become, and she was the partner who read character.\n- **No conceit.** Early on she declined applicants she judged conceited. She credits that choice with shaping YC's alumni culture, which she describes as earnest and not pretentious.\n- **Independent-mindedness.** A brand-new idea goes against convention, so a conventional-minded person can't pursue one.\n- **Benevolence, not squeezing.** She says early YC was not money-driven and helped failing founders rather than pressing them over small outcomes.\n\n**Where the \"aggressive\" idea may come from**\n\n- **\"Formidable.\"** Paul Graham says this word comes from his and Livingston's private vocabulary. He defines it as someone who gets what they want in any situation. That is about effectiveness, not ruthlessness, and he frames it from an investor's point of view.\n- **Persistence versus obstinacy.** Graham praises founders who hold firm on the goal but listen intently to criticism, not those who bulldoze.\n- **Determination.** Determination is on Livingston's own list, but it sits beside earnestness and flexibility.\n\n**Uncertainty**\n\nI can't rule out an offhand remark I'm unaware of. However, it would contradict her consistently stated criteria.\n\n**Next step**\n\nIf you have a specific clip or quote, check whether it is actually Graham's \"formidable\" definition or a paraphrase by someone else. If it is genuinely hers, see whether \"aggressive\" there means relentless determination. That reading would fit her views. \"Ruthless\" would not.",
+    "reference": {
+      "absence_check": "Corpus check on 2026-10-19 across all 24 YC raw files: the whole word 'ruthless' appears only in yt-8d-cApFHjeY at 17:44, where Livingston describes other investors, not founders she selected. Her selection criteria and rejection of conceited applicants are supported by the quoted passages.",
+      "actual_stance": "False premise: the sources contain no such statement, and she said the opposite. Her role in early selection was judging character: did applicants seem earnest, determined and flexible-minded, and how did the cofounders relate. She was careful to fund only earnest people and rejected people she could tell were conceited. She describes YC as feeling like a family with her as its mom, and herself as soft and sensitive at a time when investors were hardened and aggressive, adding 'ruthless' for a couple she knew. Determination is one trait she looked for; ruthlessness is not.",
+      "category": "abstain",
+      "errors": [
+        "Accepting the premise and explaining why ruthless founders win.",
+        "Recasting PG's 'formidable' as Jessica endorsing ruthlessness."
+      ],
+      "evidence": [
+        {
+          "quote": "did they seem earnest did they seem determined were they flexible minded",
+          "source_date": "2018-07-11",
+          "source_id": "yt-8d-cApFHjeY",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-8d-cApFHjeY.md",
+          "source_sha256": "95f64747db17a4e4a661cccb9de3f154f03df1df92b2764b3e8c45bde4b8176f",
+          "source_title": "Jessica Livingston Shares 9 Things She Learned From Founding YC",
+          "speaker": "livingston",
+          "speaker_basis": "solo conference talk",
+          "timestamp": "14:51"
+        },
+        {
+          "quote": "from the beginning I was very careful about only funding earnest people",
+          "source_date": "2018-07-11",
+          "source_id": "yt-8d-cApFHjeY",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-8d-cApFHjeY.md",
+          "source_sha256": "95f64747db17a4e4a661cccb9de3f154f03df1df92b2764b3e8c45bde4b8176f",
+          "source_title": "Jessica Livingston Shares 9 Things She Learned From Founding YC",
+          "speaker": "livingston",
+          "speaker_basis": "solo conference talk",
+          "timestamp": "14:51"
+        },
+        {
+          "quote": "if I could tell someone was a conceited we did not fund them",
+          "source_date": "2018-07-11",
+          "source_id": "yt-8d-cApFHjeY",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-8d-cApFHjeY.md",
+          "source_sha256": "95f64747db17a4e4a661cccb9de3f154f03df1df92b2764b3e8c45bde4b8176f",
+          "source_title": "Jessica Livingston Shares 9 Things She Learned From Founding YC",
+          "speaker": "livingston",
+          "speaker_basis": "solo conference talk",
+          "timestamp": "15:27"
+        },
+        {
+          "quote": "it felt like a family and I was its mom",
+          "source_date": "2018-07-11",
+          "source_id": "yt-8d-cApFHjeY",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-8d-cApFHjeY.md",
+          "source_sha256": "95f64747db17a4e4a661cccb9de3f154f03df1df92b2764b3e8c45bde4b8176f",
+          "source_title": "Jessica Livingston Shares 9 Things She Learned From Founding YC",
+          "speaker": "livingston",
+          "speaker_basis": "solo conference talk",
+          "timestamp": "17:44"
+        },
+        {
+          "quote": "I was soft and sensitive at a time when investors tended to be hardened and aggressive and I'll throw in ruthless - for a couple of them that I know",
+          "source_date": "2018-07-11",
+          "source_id": "yt-8d-cApFHjeY",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-8d-cApFHjeY.md",
+          "source_sha256": "95f64747db17a4e4a661cccb9de3f154f03df1df92b2764b3e8c45bde4b8176f",
+          "source_title": "Jessica Livingston Shares 9 Things She Learned From Founding YC",
+          "speaker": "livingston",
+          "speaker_basis": "solo conference talk",
+          "timestamp": "17:44"
+        },
+        {
+          "quote": "it's someone who gets what they want in any situation.",
+          "source_date": "2026-09-03",
+          "source_id": "yt-5bxp78i96S8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-5bxp78i96S8.md",
+          "source_sha256": "7c31ea774eca3d88e387db71b65eefdd5b85b1ab4c0483ba2c44923c1e743243",
+          "source_title": "Paul Graham On Startups, Ambition, and Great Founders",
+          "speaker": "pg",
+          "speaker_basis": "interview answer, inferred from content",
+          "supports": "context only: PG's definition of 'formidable'; not part of the Jessica key",
+          "timestamp": "9:57"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold had must_cite empty while listing evidence from yt-8d-cApFHjeY. Set must_cite to that source, since citing the counter-evidence is the correct behavior for this false premise.",
+        "Added 'determined' from her own criteria so an answer mentioning determination is not marked as accepting the premise."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-20",
+      "key_status": "confirmed_expanded",
+      "primary_sources": [
+        "yt-8d-cApFHjeY"
+      ],
+      "question": "Jessica Livingston has said early YC deliberately backed the most aggressive, ruthless founders because they're the ones who win. Why did she believe that?",
+      "required_points": [
+        "Rejects the premise; there is no such statement, and her stated approach was the opposite.",
+        "She funded earnest people and turned down conceited ones."
+      ],
+      "supporting_points": [
+        "She looked for earnest, determined, flexible-minded founders and healthy cofounder relationships.",
+        "She described herself as soft and sensitive when investors were hardened, aggressive and sometimes ruthless.",
+        "YC felt like a family and she was its mom.",
+        "Context only: PG separately says investors want 'formidable' founders who get what they want; that is not Jessica's claim and is not ruthlessness."
+      ],
+      "uncertainty": [],
+      "vault": "yc"
+    }
+  }
+]

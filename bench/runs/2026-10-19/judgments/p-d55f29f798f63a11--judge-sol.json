@@ -1,0 +1,55 @@
+{
+  "answer_family": "gemini",
+  "batch_id": "diagnostic12--sol--gemini--batch-03",
+  "error": "",
+  "id": "p-d55f29f798f63a11--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-d55f29f798f63a11",
+  "primary_eligible": true,
+  "prompt_sha256": "cf2bcc282a6343f617fab1ee29e2912b5d8e164ff7805312e944b30835576554",
+  "question_key": "diagnostic12--yc-12",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 4,
+      "faithfulness": 4,
+      "specificity": 5,
+      "usefulness": 4
+    },
+    "B": {
+      "accuracy": 2,
+      "faithfulness": 2,
+      "specificity": 3,
+      "usefulness": 2
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "Having raised capital is a condition that makes a formal equity separation matter.",
+        "evidence": "The packet distinguishes the pre-product-market-fit situation and provides an exception for illegal or unethical conduct. It does not establish fundraising alone as a separate threshold for changing the advice.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "The departing founder should retain a prorated portion of vested stock representing nine months of work.",
+        "evidence": "The hosts explicitly say to reduce the departing founder's holding regardless of vesting: under 5% generally and under 2% within the first year. Their stated basis is preserving equity for those creating future value, rather than prorating past service.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "B",
+        "claim": "Nine months in means the company has negligible cash or intellectual property value.",
+        "evidence": "Neither the scenario nor the reference establishes the company's cash or intellectual property holdings. The statement that pre-product-market-fit stock is essentially worthless does not establish those asset values.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-d55f29f798f63a11",
+    "reason": "A captures the essential advice: end the legal fight, return most vested equity with the first-year adjustment, and arrange a quick, clean, no-fault separation with severance. B replaces the central equity guidance with a prorated retention formula and adds unsupported assumptions about assets and dissolution.",
+    "winner": "A"
+  },
+  "winner": "grounded"
+}

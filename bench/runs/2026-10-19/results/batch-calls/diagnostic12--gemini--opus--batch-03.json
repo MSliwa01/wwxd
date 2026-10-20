@@ -1,0 +1,72 @@
+{
+  "actual_input_tokens": 12348,
+  "answer": "```json\n{\n  \"judgments\": [\n    {\n      \"id\": \"p-4d9952cc71942a88\",\n      \"A\": {\n        \"accuracy\": 5,\n        \"faithfulness\": 5,\n        \"specificity\": 5,\n        \"usefulness\": 5\n      },\n      \"B\": {\n        \"accuracy\": 5,\n        \"faithfulness\": 5,\n        \"specificity\": 5,\n        \"usefulness\": 5\n      },\n      \"winner\": \"tie\",\n      \"reason\": \"Both answers capture Michael Seibel's core framework accurately and completely, including the specific guidance on pre-PMF lawyer feuds, no-fault splits, equity benchmarks (under 2% for first-year departures), severance, and clean paperwork within a week for about $2,000. Both handle the cliff premise appropriately and provide clear, actionable advice.\",\n      \"factual_objections\": []\n    },\n    {\n      \"id\": \"p-1c078e330f8b0486\",\n      \"A\": {\n        \"accuracy\": 4,\n        \"faithfulness\": 4,\n        \"specificity\": 4,\n        \"usefulness\": 4\n      },\n      \"B\": {\n        \"accuracy\": 5,\n        \"faithfulness\": 5,\n        \"specificity\": 5,\n        \"usefulness\": 5\n      },\n      \"winner\": \"B\",\n      \"reason\": \"Answer B is slightly superior because it explicitly references Hormozi's term \\\"damaging admissions\\\" and accurately captures the specific structural advice he gives regarding sentence order (flaw first, then \\\"but\\\", then the benefit, since people believe what follows \\\"but\\\"). Answer A is also good but misses the specific framing rule about the word \\\"but\\\".\",\n      \"factual_objections\": []\n    },\n    {\n      \"id\": \"p-31022a88e0319499\",\n      \"A\": {\n        \"accuracy\": 5,\n        \"faithfulness\": 5,\n        \"specificity\": 4,\n        \"usefulness\": 4\n      },\n      \"B\": {\n        \"accuracy\": 5,\n        \"faithfulness\": 5,\n        \"specificity\": 5,\n        \"usefulness\": 5\n      },\n      \"winner\": \"B\",\n      \"reason\": \"Both answers correctly identify that the story does not belong to Hormozi, but Answer B provides much better specificity by correctly identifying the origin of the story (the interviewer/host's account on The Diary Of A CEO regarding European listing, NASDAQ valuation multiples, and pre-IPO equity worth $7M to $8M). Answer A mistakenly claimed ignorance of the story entirely.\",\n      \"factual_objections\": []\n    }\n  ]\n}\n```",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 2.403,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "2debfd302102867cc3d295ba1d47a92377a90d9820613d424db4b82318a206b4"
+    }
+  ],
+  "batch": {
+    "blocked_pair_ids": [],
+    "chars_per_token": 3.2,
+    "eligible_pair_ids": [
+      "p-4d9952cc71942a88",
+      "p-1c078e330f8b0486",
+      "p-31022a88e0319499"
+    ],
+    "estimated_input_tokens": 12213,
+    "id": "diagnostic12--gemini--opus--batch-03",
+    "judge_family": "gemini",
+    "pair_ids": [
+      "p-4d9952cc71942a88",
+      "p-1c078e330f8b0486",
+      "p-31022a88e0319499"
+    ],
+    "prompt_bytes": 39088,
+    "prompt_sha256": "ff4209e3b1a115a3e6fa68077abee1d27f4f87f8220eb0e22b3cdd95783be98e",
+    "suite": "diagnostic12"
+  },
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "decoded": {},
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 12213,
+  "event_count": 1,
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:37:34.455141+00:00",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "parse_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "prompt_sha256": "ff4209e3b1a115a3e6fa68077abee1d27f4f87f8220eb0e22b3cdd95783be98e",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 654,
+      "promptTokenCount": 12348,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 12348
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 13002
+    }
+  ]
+}

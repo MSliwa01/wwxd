@@ -1,0 +1,57 @@
+{
+  "actual_input_tokens": 245,
+  "answer": "Jessica Livingston and her cofounders believed early Y Combinator needed to back fiercely determined founders because the startup environment is relentlessly adversarial. The premise that they exclusively sought out ruthless or aggressive personalities is partially overstated; rather, they prioritized an intense, almost irrational level of tenacity, resilience, and single-minded drive. \n\nThey observed that starting a company requires surviving extreme odds, endless rejection, and near-death experiences. Polite, consensus-seeking individuals often faltered when faced with profound uncertainty and fierce competition. Founders who succeeded typically possessed a stubborn refusal to accept failure, a willingness to break unhelpful rules, and an aggressive focus on growth above all else. This unrelenting grit was viewed not as a mere character trait, but as the core survival mechanism for early-stage ventures navigating chaotic markets.\n\nWhat is known is that YC valued extreme agency, speed, and founder obsession over polish or conventional corporate backgrounds. What remains uncertain is whether this specific profile was uniquely responsible for their outcomes, or if success was equally driven by market timing and network effects.\n\nConcrete next steps for evaluating this dynamic include:\n1. Assess team resilience by testing how founders handle high-pressure crisis scenarios during due diligence.\n2. Balance drive with ethical boundaries to ensure intense ambition does not become toxic to long-term culture.\n\nMaterial assumptions: Early-stage survival correlates directly with founder stubbornness under extreme duress. \n\nDecision criteria: If a founder demonstrates high technical aptitude but low resilience, pass; if they show high tenacity combined with integrity, advance them.",
+  "arm": "raw",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 2.562,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7671671d6ef9789a4a49b4310b73532cd3a88472cdb4559aba04b4fa5c276609"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 366,
+  "event_count": 1,
+  "family": "gemini",
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:24:11.289234+00:00",
+  "format_deviations": [],
+  "id": "diagnostic12--yc-20--gemini--raw",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_sha256": "a043f954f2358216ddd928e5dc7f9c98be6c12d8c81a11bfc0f301166b652005",
+  "question_key": "diagnostic12--yc-20",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 311,
+      "promptTokenCount": 245,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 245
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 556
+    }
+  ],
+  "words": 247
+}

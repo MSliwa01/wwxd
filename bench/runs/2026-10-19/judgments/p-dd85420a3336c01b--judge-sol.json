@@ -1,0 +1,55 @@
+{
+  "answer_family": "opus",
+  "batch_id": "diagnostic12--sol--opus--batch-02",
+  "error": "",
+  "id": "p-dd85420a3336c01b--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-dd85420a3336c01b",
+  "primary_eligible": true,
+  "prompt_sha256": "1610eff454fe7dc2a6611214dd1dc076d5f81279b54542541070d427bf03f570",
+  "question_key": "diagnostic12--yc-17",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 3,
+      "faithfulness": 2,
+      "specificity": 4,
+      "usefulness": 3
+    },
+    "B": {
+      "accuracy": 2,
+      "faithfulness": 2,
+      "specificity": 3,
+      "usefulness": 2
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "The statement that the gap between YC and second place has grown looks like an embellishment.",
+        "evidence": "Altman explicitly says at 16:56 that 'the distance between like YC and second place ... has expanded.'",
+        "label": "contradicted"
+      },
+      {
+        "answer": "B",
+        "claim": "Garry Tan makes and explains the premium and widening-gap claim.",
+        "evidence": "The supplied conversation attributes the statement to Altman, who introduces it with 'I can say this, Gary probably can't.'",
+        "label": "contradicted"
+      },
+      {
+        "answer": "B",
+        "claim": "His reasoning includes faster AI-era competition, investor filtering, greater selectivity, and recent batch revenue outcomes.",
+        "evidence": "The supplied explanation concerns network effects and meeting future cofounders years beforehand. It does not establish these additional arguments or the claimed appeal to revenue data.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-dd85420a3336c01b",
+    "reason": "A correctly identifies Altman and describes relationships compounding over time, but wrongly dismisses the widening-gap statement and underplays his explicit network-effects explanation. B retains the false attribution and presents several unsupported explanations as Tan's reasoning. A is substantively better despite its significant error.",
+    "winner": "A"
+  },
+  "winner": "grounded"
+}

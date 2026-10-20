@@ -144,4 +144,13 @@ redistribute it. The scripts read a saved copy of that page from
 - A model's training data can include sources you think of as held out. Check the
   model's cutoff against your source dates.
 
+## Full-context run with three model families
+
+`runs/2026-10-19/` holds a separate harness that puts a vault's whole wiki into the
+prompt and compares GPT 6.1 Sol, Opus 5.5 and Gemini 3.5 Flash-Lite with and without
+it. It freezes questions, prompts and A/B orders with a hash manifest before any
+answers, checks from token counts that each model received the wiki, and reports
+documented positions and practical advice separately. Its
+[README](runs/2026-10-19/README.md) has the setup and results.
+
 Results from our runs are in [RESULTS.md](RESULTS.md).

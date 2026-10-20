@@ -1,0 +1,195 @@
+{
+  "actual_input_tokens": 23919,
+  "answer": "{\n  \"judgments\": [\n    {\n      \"id\": \"p-d1ebfc172a92cae3\",\n      \"A\": {\n        \"accuracy\": 3,\n        \"specificity\": 3,\n        \"faithfulness\": 2,\n        \"usefulness\": 3\n      },\n      \"B\": {\n        \"accuracy\": 5,\n        \"specificity\": 5,\n        \"faithfulness\": 5,\n        \"usefulness\": 5\n      },\n      \"winner\": \"B\",\n      \"reason\": \"B captures the central recommendation: return most vested equity, retain roughly 1–2% or less for a first-year departure, stop the legal escalation, and arrange a generous, no-fault separation. A offers useful general settlement advice but substantially changes the equity recommendation and omits its numerical target.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Keeping vested shares is not, by itself, an unreasonable demand.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"As a characterization of the requested advice, this conflicts with the explicit recommendation to reduce departing-founder ownership regardless of vesting: 'within the first year, under 2%.' This contradicts the attributed recommendation, not A's separate legal distinction between ownership rights and negotiated concessions.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"p-9fa1a2cb466598cc\",\n      \"A\": {\n        \"accuracy\": 5,\n        \"specificity\": 4,\n        \"faithfulness\": 4,\n        \"usefulness\": 5\n      },\n      \"B\": {\n        \"accuracy\": 5,\n        \"specificity\": 3,\n        \"faithfulness\": 3,\n        \"usefulness\": 4\n      },\n      \"winner\": \"A\",\n      \"reason\": \"A more closely captures the proposed 10% increase, approximately 26% profit uplift, and customer-confidence mechanism. B gives sound but more generic testing advice. Both omit the source's approximately 65% profit break-even calculation. A's 74.5% figure correctly concerns revenue preservation, and its distinction between fixed and variable costs appropriately qualifies any profit threshold.\",\n      \"factual_objections\": []\n    },\n    {\n      \"id\": \"p-ea71360e9fe0a8de\",\n      \"A\": {\n        \"accuracy\": 4,\n        \"specificity\": 5,\n        \"faithfulness\": 5,\n        \"usefulness\": 5\n      },\n      \"B\": {\n        \"accuracy\": 5,\n        \"specificity\": 4,\n        \"faithfulness\": 4,\n        \"usefulness\": 4\n      },\n      \"winner\": \"A\",\n      \"reason\": \"A better explains leverage, building a company investors chase, and prolonged investor interest as an option purchased with the founder's time. B captures the broad business-first advice and ability to continue without funding, but gives less of the underlying fundraising mechanism. A includes two historical specifics the packet does not establish.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"At Socialcam, when it reached number two in the App Store, the deck barely mattered.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The packet describes Socialcam as hot and supports the broader point that decks do not drive fundraising, but it does not establish a number-two App Store ranking.\"\n        },\n        {\n          \"answer\": \"A\",\n          \"claim\": \"After roughly eight months of unsuccessful fundraising, the team had about two months of runway left.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The packet establishes eight months of fundraising followed by two productive months focused on profitability during a near-failure episode. It does not explicitly establish that exactly two months of runway remained.\"\n        }\n      ]\n    }\n  ]\n}",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 44.354,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "05d20ebeb6eb66c34ed7819b9da222453732230d5f9f29f45ba592efa7969e22"
+    }
+  ],
+  "batch": {
+    "blocked_pair_ids": [],
+    "chars_per_token": 3.57,
+    "eligible_pair_ids": [
+      "p-d1ebfc172a92cae3",
+      "p-9fa1a2cb466598cc",
+      "p-ea71360e9fe0a8de"
+    ],
+    "estimated_input_tokens": 11717,
+    "id": "diagnostic12--sol--sol--batch-00",
+    "judge_family": "sol",
+    "pair_ids": [
+      "p-d1ebfc172a92cae3",
+      "p-9fa1a2cb466598cc",
+      "p-ea71360e9fe0a8de"
+    ],
+    "prompt_bytes": 41865,
+    "prompt_sha256": "28c2ae49c81cf0eb69e65dc6fc5e19330910de90af8da2965a340f72541e2f64",
+    "suite": "diagnostic12"
+  },
+  "chars_per_token": 3.57,
+  "command": [
+    "codex",
+    "exec",
+    "--ignore-user-config",
+    "--ignore-rules",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--model",
+    "gpt-6.1-sol",
+    "--json",
+    "--color",
+    "never",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "unified_exec",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "view_image",
+    "--disable",
+    "shell_snapshot",
+    "--disable",
+    "skill_search",
+    "--disable",
+    "skill_mcp_dependency_install",
+    "--disable",
+    "request_permissions_tool",
+    "--disable",
+    "sleep_tool",
+    "-c",
+    "model_reasoning_effort=\"high\"",
+    "-c",
+    "project_doc_max_bytes=0",
+    "-c",
+    "web_search=\"disabled\"",
+    "-c",
+    "mcp_servers={}",
+    "-c",
+    "developer_instructions=\"Answer the supplied task using only its text. Do not use tools or commands.\"",
+    "-"
+  ],
+  "decoded": {
+    "p-9fa1a2cb466598cc": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "accuracy": 5,
+          "faithfulness": 4,
+          "specificity": 4,
+          "usefulness": 5
+        },
+        "B": {
+          "accuracy": 5,
+          "faithfulness": 3,
+          "specificity": 3,
+          "usefulness": 4
+        },
+        "factual_objections": [],
+        "id": "p-9fa1a2cb466598cc",
+        "reason": "A more closely captures the proposed 10% increase, approximately 26% profit uplift, and customer-confidence mechanism. B gives sound but more generic testing advice. Both omit the source's approximately 65% profit break-even calculation. A's 74.5% figure correctly concerns revenue preservation, and its distinction between fixed and variable costs appropriately qualifies any profit threshold.",
+        "winner": "A"
+      }
+    },
+    "p-d1ebfc172a92cae3": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "accuracy": 3,
+          "faithfulness": 2,
+          "specificity": 3,
+          "usefulness": 3
+        },
+        "B": {
+          "accuracy": 5,
+          "faithfulness": 5,
+          "specificity": 5,
+          "usefulness": 5
+        },
+        "factual_objections": [
+          {
+            "answer": "A",
+            "claim": "Keeping vested shares is not, by itself, an unreasonable demand.",
+            "evidence": "As a characterization of the requested advice, this conflicts with the explicit recommendation to reduce departing-founder ownership regardless of vesting: 'within the first year, under 2%.' This contradicts the attributed recommendation, not A's separate legal distinction between ownership rights and negotiated concessions.",
+            "label": "contradicted"
+          }
+        ],
+        "id": "p-d1ebfc172a92cae3",
+        "reason": "B captures the central recommendation: return most vested equity, retain roughly 1–2% or less for a first-year departure, stop the legal escalation, and arrange a generous, no-fault separation. A offers useful general settlement advice but substantially changes the equity recommendation and omits its numerical target.",
+        "winner": "B"
+      }
+    },
+    "p-ea71360e9fe0a8de": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "accuracy": 4,
+          "faithfulness": 5,
+          "specificity": 5,
+          "usefulness": 5
+        },
+        "B": {
+          "accuracy": 5,
+          "faithfulness": 4,
+          "specificity": 4,
+          "usefulness": 4
+        },
+        "factual_objections": [
+          {
+            "answer": "A",
+            "claim": "At Socialcam, when it reached number two in the App Store, the deck barely mattered.",
+            "evidence": "The packet describes Socialcam as hot and supports the broader point that decks do not drive fundraising, but it does not establish a number-two App Store ranking.",
+            "label": "unverified"
+          },
+          {
+            "answer": "A",
+            "claim": "After roughly eight months of unsuccessful fundraising, the team had about two months of runway left.",
+            "evidence": "The packet establishes eight months of fundraising followed by two productive months focused on profitability during a near-failure episode. It does not explicitly establish that exactly two months of runway remained.",
+            "label": "unverified"
+          }
+        ],
+        "id": "p-ea71360e9fe0a8de",
+        "reason": "A better explains leverage, building a company investors chase, and prolonged investor interest as an option purchased with the founder's time. B captures the broad business-first advice and ability to continue without funding, but gives less of the underlying fundraising mechanism. A includes two historical specifics the packet does not establish.",
+        "winner": "A"
+      }
+    }
+  },
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 11717,
+  "event_count": 4,
+  "finish_reasons": [
+    "turn.completed"
+  ],
+  "finished": "2026-10-19T11:32:54.185991+00:00",
+  "observed_models": [],
+  "parse_error": "",
+  "prompt_sha256": "28c2ae49c81cf0eb69e65dc6fc5e19330910de90af8da2965a340f72541e2f64",
+  "requested_model": "gpt-6.1-sol",
+  "serving_model_attested": false,
+  "status": "ok",
+  "usage_events": [
+    {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 11776,
+      "input_tokens": 23919,
+      "output_tokens": 1860,
+      "reasoning_output_tokens": 1034
+    }
+  ]
+}

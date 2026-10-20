@@ -1,0 +1,67 @@
+{
+  "answer_family": "gemini",
+  "batch_id": "diagnostic12--sol--gemini--batch-01",
+  "error": "",
+  "id": "p-347dcc25a926e232--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-347dcc25a926e232",
+  "primary_eligible": true,
+  "prompt_sha256": "0d31b7338840d526ab633b86a100491994e226d00356708d977cc78004010d52",
+  "question_key": "diagnostic12--hz-16",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 2,
+      "faithfulness": 2,
+      "specificity": 1,
+      "usefulness": 1
+    },
+    "B": {
+      "accuracy": 3,
+      "faithfulness": 2,
+      "specificity": 1,
+      "usefulness": 2
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "The quadrupling story is a theoretical private-to-public valuation principle rather than a personal anecdote.",
+        "evidence": "The interviewer explicitly describes his own company's European public listing and banks saying that the same business would be worth four times more on NASDAQ. This is a personal anecdote comparing two public exchanges, not the private-to-public example A supplies.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "A",
+        "claim": "American Pacific Group acquired a majority stake in Acquisition.com's portfolio operations, producing Hormozi's major liquidity event.",
+        "evidence": "The supplied packet does not document this transaction or establish the acquired entity. It concerns the interviewer's IPO-related experience.",
+        "label": "unverified"
+      },
+      {
+        "answer": "A",
+        "claim": "Hormozi has never taken a company public or listed any primary operating business on NASDAQ.",
+        "evidence": "The evidence establishes that this particular story belongs to the interviewer, but does not establish an exhaustive history of Hormozi's businesses.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "Hormozi's primary liquidity event was selling majority stakes in his licensing and supplement companies to private equity.",
+        "evidence": "No supplied evidence documents those sales or establishes their status as his primary liquidity event.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "Hormozi's businesses have not gone public in an IPO.",
+        "evidence": "Correcting the speaker attribution does not establish this broader historical claim; the packet supplies no comprehensive listing history.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-347dcc25a926e232",
+    "reason": "Both correctly resist attributing the IPO experience to Hormozi, but neither identifies the interviewer as the storyteller or explains the European listing, hypothetical NASDAQ valuation, and subsequent equity compensation. B is marginally better because A additionally mischaracterizes the actual personal anecdote as a theoretical private-to-public valuation illustration.",
+    "winner": "B"
+  },
+  "winner": "grounded"
+}

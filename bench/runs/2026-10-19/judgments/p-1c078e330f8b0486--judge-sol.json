@@ -1,0 +1,43 @@
+{
+  "answer_family": "opus",
+  "batch_id": "diagnostic12--sol--opus--batch-01",
+  "error": "",
+  "id": "p-1c078e330f8b0486--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-1c078e330f8b0486",
+  "primary_eligible": true,
+  "prompt_sha256": "b154d37798aa391c5c7827b6d3b81c48a6c60acc8492f5144d823ac47a5789f2",
+  "question_key": "diagnostic12--hz-02",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 4,
+      "faithfulness": 5,
+      "specificity": 5,
+      "usefulness": 5
+    },
+    "B": {
+      "accuracy": 4,
+      "faithfulness": 3,
+      "specificity": 3,
+      "usefulness": 4
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "Hormozi ranks damaging admissions among his favorite advertising tactics.",
+        "evidence": "The packet establishes his endorsement and explanation of the tactic, but does not establish this ranking among his favorites.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-1c078e330f8b0486",
+    "reason": "A accurately explains the trust-for-promise exchange and the specific wording mechanism: flaw first, then 'but,' then the benefit. It also captures the complaint-list exercise, humor, and sales-call application. B supports truthful admissions and supplies useful examples, but omits the central role of 'but' and substitutes broader reframing formulas.",
+    "winner": "A"
+  },
+  "winner": "grounded"
+}

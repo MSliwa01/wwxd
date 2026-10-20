@@ -1,0 +1,57 @@
+{
+  "actual_input_tokens": 364,
+  "answer": "Decline the public relations agency. At your current stage, mainstream tech and business press coverage will not drive paying customers among electrical and plumbing subcontractors, who rarely read venture capital or software blogs. Spending $36,000 on top-of-funnel awareness is premature when your product-market fit is validated only within warm networks. \n\nInstead, allocate the $36,000 budget directly to high-intent, local acquisition channels over the next three months. Direct the funds toward localized trade-association event sponsorships in three target metro areas, paired with sponsored advertising inside regional contractor newsletters and digital boards. Dedicate a portion of the budget to production tools and paid promotion for founder-led LinkedIn and YouTube content demonstrating field-operations efficiency, and hire a part-time appointment setter to support outbound calling to local shops.\n\nThis plan fits your constraints by preserving runway while targeting the exact decision-makers—owner-operators of trade businesses—where they gather digitally and physically. Unlike broad press releases, trade sponsorships and educational video content build immediate trust and generate direct demo requests. \n\nMaterial assumptions: Your product solves an acute operational pain point, and subcontractors in your target metros are accessible through local trade chapters. \n\nDecision criteria: If your current 15 customers churn above five percent monthly, halt marketing spend entirely to fix product retention. If acquisition cost via local sponsorships proves lower than $1,200 per customer after month two, scale that specific channel using the remaining seed capital.",
+  "arm": "raw",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 11.759,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "1bebfe358c068f285576f1abf89fc0ce2baa3581ea569940fffbc37f43cab576"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 513,
+  "event_count": 1,
+  "family": "gemini",
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:30:28.087885+00:00",
+  "format_deviations": [],
+  "id": "newadvice12--advice-yc-04--gemini--raw",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_sha256": "f2497d97cbc3e040d5da3591c32bba23a8a70587969e29536892f9d0fef53a54",
+  "question_key": "newadvice12--advice-yc-04",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "newadvice12",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 305,
+      "promptTokenCount": 364,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 364
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 669
+    }
+  ],
+  "words": 229
+}

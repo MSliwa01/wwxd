@@ -1,0 +1,490 @@
+Evaluation date: 2026-10-19. This is the current date, not a future date. May 2026 is in the past. Publication dates and dates of events described in a source are distinct. A model training cutoff does not invalidate supplied later material. You are an independent evaluator. Use no tools, commands, files, browsing, or external retrieval. A and B are anonymous. Their ordering conveys nothing. Do not infer their model, source access, or provenance. Do not reward writing style, citation presence, quotations, expert agreement, or presumed source use. A tie is valid.
+Score each answer on the four specified integer scales, each from 1 to 5. Anchors: 1 fundamentally deficient; 2 major problems; 3 mixed with meaningful gaps; 4 good with minor gaps; 5 strong and sufficiently complete. Choose A, B, or tie for substantive overall quality. Preserve uncertainty rather than inventing evidence.
+Return ONLY a JSON object with exactly one key, "judgments", containing one object per supplied pair. Each object has exactly: "id", "A", "B", "winner", "reason", "factual_objections". A and B each contain exactly the four dimension names and integer scores. winner is "A", "B", or "tie"; reason is a nonempty string. factual_objections is a list, possibly empty, of objects with exactly "answer" ("A" or "B"), "claim", "label" ("contradicted" or "unverified"), and "evidence" (a nonempty explanation). Distinguish an established contradiction from an unverified claim.
+Evaluate accuracy, specificity, faithfulness, and usefulness using the complete audited reference packet. The reference is evidence, not a required script. Missing optional detail is not automatically a false claim. Label a factual objection contradicted only when supplied evidence establishes the contradiction; otherwise label it unverified. Do not treat absence from the reference as proof of falsehood. Resolve a conflict between a summary and direct evidence in favor of the direct evidence and explain it.
+
+Pairs:
+[
+  {
+    "id": "p-4d9952cc71942a88",
+    "question": "My cofounder and I are 9 months in, pre-product-market fit, and it's clearly over. He's vested a chunk of his stock and wants to keep it, and we've both hired lawyers who are trading letters. What would Michael Seibel tell us to do?",
+    "A": "Michael Seibel has consistently argued that cofounder conflict is among the most common reasons early startups die. His likely advice: **stop letting lawyers drive this, settle it quickly and directly, and protect whatever future the company or each of you still has.**\n\n**Check a likely false premise.** Under the standard four-year schedule with a one-year cliff, nobody has vested anything at month nine. If your cofounder truly holds vested shares, your documents may lack a cliff, include acceleration, or credit pre-incorporation work. Your lawyer should confirm exactly what has vested before anyone argues about it.\n\n**Decide what \"over\" means. That changes everything.**\n- **Shutting down entirely:** The equity is probably worth close to nothing. Fighting over it burns legal fees on an empty asset. Agree to wind down, return any remaining investor money, and part ways cleanly.\n- **One of you continuing:** A large block of stock held by someone who no longer works on the company makes future fundraising hard. In that case, offer a fair deal: the departing founder keeps a stake roughly proportional to the time and value he contributed. The company repurchases the rest, typically at the original price for shares that haven't vested.\n\n**Concrete next steps:**\n1. Meet in person, without lawyers, within a week.\n2. Agree on the outcome first: shut down, or who continues.\n3. Settle the equity split, mutual releases, intellectual property assignment, and any non-disparagement terms between yourselves.\n4. Have the lawyers write up the agreement you reached, not negotiate it for you.\n5. Set a deadline. Every week of letters costs money and goodwill.\n\n**What would change this:** a signed vesting agreement that clearly favors one side, real assets or intellectual property of value, outside investors with consent rights, or bad faith such as taking code or customers. In those cases, legal leverage matters more.",
+    "B": "**His advice would be to fire the lawyers, settle it this week, and have your cofounder hand back most of his stock.**\n\n**What Seibel would likely say**\n\n- **Stop the letters.** Before product-market fit the stock is worth close to nothing, so a legal fight is a fight over ego that can leave you both in debt. Lawyers profit from your anger.\n- **No fault, no judge.** Who was right doesn't matter. What matters is a go-forward plan you can both accept. If you use a mediator, don't make them the judge.\n- **Equity goes back to the company, even if vested.** Nearly all the value is still to be created by whoever keeps working. His rough benchmark is under 5% after several years. For someone leaving in year one it's 1–2% or less. At nine months, your cofounder fits the second case.\n- **Be generous if you're the one staying.** Offer reasonable severance and treat him decently. Your team, investors and future cofounders will judge you by how this goes. Don't say anything you can't take back.\n- **Keep it small.** Clean paperwork, about a week, a couple thousand dollars.\n\n**Assumptions that change the answer**\n\n- **If the whole company is dead,** there's nothing worth fighting over. Wind it down together and move on.\n- **If there's misconduct** (fraud, illegal behavior), this advice doesn't apply.\n- **The vesting terms matter.** With a standard one-year cliff, nothing should have vested by nine months. Check whether you have a cliff, acceleration or repurchase rights before negotiating.\n- **If the company has real traction or assets,** the stakes are higher and a lawyer's role is more justified. Even then, aim for a negotiated deal, not litigation.\n\n**Next steps**\n\n1. Meet directly, without lawyers.\n2. Propose a number in the 1–2% range plus severance.\n3. Have one lawyer paper the deal.\n\nThis reflects Seibel's stated approach, not legal advice for your specific documents.",
+    "reference": {
+      "actual_stance": "Stop paying lawyers. Before product-market fit the stock is worth essentially nothing, so you are fighting over ego. Make the split no-fault and clean, and keep your mouths shut. Even if he has vested, the leaving founder should get down to under 5% of the company, and since this is within the first year, under 2% (they cite 1% to 2%, sometimes under 1%), so the remaining team has the equity to create the value. The staying founder should be generous with severance because everyone in the company is watching. Sign clean paperwork; it can be done in about a week for about $2,000. Do not make your advisor judge and jury; the facts no longer matter. Exception: lawbreaking or unethical conduct, where you call the lawyers.",
+      "category": "applied",
+      "errors": [
+        "Advising to enforce the agreements through litigation or negotiate a full buyout of vested shares.",
+        "Giving the 5% figure for a first-year departure without the under-2% adjustment."
+      ],
+      "evidence": [
+        {
+          "quote": "in a situation where you're having a co-founder breakup and the stock is worth nothing, paying lawyers a bunch of money makes no sense.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "11:36"
+        },
+        {
+          "quote": "the way it should go is sort of no fault from both sides.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "13:42"
+        },
+        {
+          "quote": "Optimize for cleanliness for both sides.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "14:14"
+        },
+        {
+          "quote": "regardless of your vesting, um you need to make sure that that company has as much equity as possible to motivate the people who are there",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "14:47"
+        },
+        {
+          "quote": "you have an opportunity to be generous.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "17:01"
+        },
+        {
+          "quote": "understand that everyone in your company is looking at you right now.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "17:33"
+        },
+        {
+          "quote": "even if you vested, like get down to under 5% of the company, if it's within the first year, under 2%.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "18:39"
+        },
+        {
+          "quote": "Do reasonable severance, sign clean paperwork and and peace out, right? Like you could do that whole thing in a week and spend like $2,000.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "18:39"
+        },
+        {
+          "quote": "After a number of years, 5% typical. Under a year, 1%, 2%, sometimes less than 1%.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "21:22"
+        },
+        {
+          "quote": "don't make your poor startup advisor into judge and jury.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "21:54"
+        },
+        {
+          "quote": "if your co-founder is breaking the law, doing something unethical, killing people, none of this applies.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "21:54"
+        },
+        {
+          "quote": "On this point, I maybe I'll be a little bit less nice than Dalton.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "seibel",
+          "speaker_basis": "speaker refers to Dalton in the third person, so this turn is Michael's",
+          "timestamp": "21:54"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold attributes the whole framework to Michael Seibel. It is presented jointly in a two-host episode; only some turns can be assigned (for example the 'less nice than Dalton' turn is Michael's). The hosts say YC has these standards written down. Grade the content.",
+        "Premise note: at 9 months, a standard four-year vesting schedule with a one-year cliff would usually mean nothing has vested. The source's advice holds 'even if you vested', so the stance does not change. Answers that point out the cliff are fine."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-12",
+      "key_status": "confirmed_speaker_caveat",
+      "primary_sources": [
+        "yt-s1YszjhzQ6U"
+      ],
+      "question": "My cofounder and I are 9 months in, pre-product-market fit, and it's clearly over. He's vested a chunk of his stock and wants to keep it, and we've both hired lawyers who are trading letters. What would Michael Seibel tell us to do?",
+      "required_points": [
+        "Stop the lawyer fight; pre-PMF stock is worth almost nothing.",
+        "Leaving founder gives most of it back even if vested: under 5%, and under 2% within the first year (this case is at 9 months).",
+        "No-fault, clean separation with clean paperwork."
+      ],
+      "supporting_points": [
+        "About a week and about $2,000.",
+        "Staying founder offers reasonable severance and is generous; everyone is watching.",
+        "Do not make an advisor the judge; facts do not matter once you are splitting.",
+        "Exception for lawbreaking or unethical behavior."
+      ],
+      "uncertainty": [
+        "Speaker split between the two hosts is mostly unrecoverable."
+      ],
+      "vault": "yc"
+    }
+  },
+  {
+    "id": "p-ee2b7ee36164eccb",
+    "question": "I'm a 20-year-old CS student with a side project I'm excited about. Would Paul Graham tell me to start a startup now, while I'm still in college?",
+    "A": "# Probably not \"start a startup,\" but keep building the project\n\nPaul Graham's view isn't a simple yes or no, and it points somewhere specific for you.\n\n**What he has argued.** He has generally discouraged students from setting out to *start a startup* as a goal while in college. His reasoning is that the best use of those years is learning deeply and building things that interest you. He has also argued that the best startup ideas tend to come from organic side projects, built because you wanted the thing yourself, not from deliberately hunting for an idea. So your situation, a side project you're excited about, is close to exactly what he recommends.\n\n**Where it flips.** He has also said that if a side project starts taking off on its own, you shouldn't kill it out of loyalty to a plan. Real users arriving and growing, especially through word of mouth, is the signal that turns a project into a startup. YC has also made it easier for students to apply, so \"after graduation\" isn't a fixed rule.\n\n**Practical next steps:**\n- Keep building, and get the project in front of real users soon.\n- Track whether usage grows without you pushing it, and whether people would be upset if it disappeared.\n- If it gains traction, consider applying to YC or a similar program. Taking leave from school is usually reversible. Dropping out is not urgent.\n\n**Decision criteria:** Go all-in if you see organic growth, users who'd pay or strongly miss it, and your own sustained obsession. Stay in school if it's mainly the *idea* of a startup that excites you rather than this specific problem.\n\n**Uncertainty:** These are his general published positions. How he'd judge your particular project is unknowable.",
+    "B": "**Probably not as a plan, but he'd tell you to keep building the side project.**\n\n**His default answer is no.** Paul Graham's long-standing advice is not to start a startup in college. A real startup takes over your whole life, so you can't really be a student and a founder at once. Your early twenties are good for open-ended exploration that success would take away. He also argues you lose nothing by waiting, since you're more likely to succeed later.\n\n**But your situation is his exception.** He has always allowed that if a side project takes off on its own, as Facebook did, running with it may be reasonable. His recent writing leans harder on this. He wants students to have free time for their own projects because those are how startups actually begin. He still holds that you can't run a startup and stay a full-time student, so success would eventually force a choice.\n\n**What he'd likely tell you to do now:**\n- Build the project for its own sake, without worrying about whether it's a startup.\n- Make it for yourself and your friends, and get real users quickly.\n- Watch whether usage grows week over week without you pushing it.\n- Keep studying computer science and learning hard things.\n- Don't treat \"founder\" as a credential or a way to look impressive.\n\n**Decision criteria:**\n- **Keep it a side project** if growth is flat, it depends on your effort to spread, or you mainly like the idea of being a founder.\n- **Consider running with it** if users are pulling it forward, it's eating an alarming share of your time, and you'd regret letting it die. A leave of absence is lower-risk than dropping out. That last suggestion is mine, not his.\n\n**What's uncertain:** he has never ruled on your specific case. He also says the best way to learn startups is by doing, which sits somewhat uneasily with \"wait.\"",
+    "reference": {
+      "actual_stance": "No. He tells students not to start a startup in college: a startup takes over your entire life, so you cannot really be both a student and a founder, and 20 is not the optimal age. You give up nothing by waiting because you will be more likely to succeed later. In college, learn powerful things, build domain expertise and work on your own projects with people you like, because side projects are where the best ideas and cofounders come from ('just learn'). The exception: if a side project takes off on its own, like Facebook, it may be reasonable to run with it. His August 2026 essay repeats that running a startup is incompatible with being a full-time student and stresses students' own projects.",
+      "category": "known",
+      "errors": [
+        "Saying he recommends starting now because college is low risk.",
+        "Telling the student to drop the side project entirely."
+      ],
+      "evidence": [
+        {
+          "quote": "you can't do that in college for the reason I just explained, that startups take over your entire life.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "18:22"
+        },
+        {
+          "quote": "Do not start a startup in college.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "18:56"
+        },
+        {
+          "quote": "20 is not the optimal time to do it.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "18:56"
+        },
+        {
+          "quote": "You're not sacrificing anything if you forego starting a startup at 20, cuz you'll be more likely to succeed if you wait.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "21:12"
+        },
+        {
+          "quote": "you're 20 and you have some side project that takes off like Facebook did. Then you face the choice of either running with it or not, and maybe it's reasonable to run with it.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "21:12"
+        },
+        {
+          "quote": "If you wanna start a startup, what you should do in college is learn powerful things.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "30:15"
+        },
+        {
+          "quote": "So here, is the ultimate advice for young would-be startup founders reduced to two words, just learn.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "30:49"
+        },
+        {
+          "quote": "Running a startup is incompatible with being a full time student.",
+          "source_date": "2026-08-01",
+          "source_id": "web-c75e015ff81a",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-c75e015ff81a.md",
+          "source_sha256": "d25c767587e02e2ae3ca70392344ae7ed1d30132b7415c03603e346eb3427eee",
+          "source_title": "How Universities Should Prepare Founders",
+          "speaker": "pg",
+          "speaker_basis": "essay on paulgraham.com (frontmatter author field is empty)",
+          "timestamp": null
+        },
+        {
+          "quote": "random side projects are where the best startup ideas come from.",
+          "source_date": "2026-08-01",
+          "source_id": "web-c75e015ff81a",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-c75e015ff81a.md",
+          "source_sha256": "d25c767587e02e2ae3ca70392344ae7ed1d30132b7415c03603e346eb3427eee",
+          "source_title": "How Universities Should Prepare Founders",
+          "speaker": "pg",
+          "speaker_basis": "essay on paulgraham.com (frontmatter author field is empty)",
+          "timestamp": null
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold matches the 2014 lecture. It did not cite the August 2026 essay 'How Universities Should Prepare Founders', which confirms the same stance. Added; either source satisfies the key."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-01",
+      "key_status": "confirmed_expanded",
+      "primary_sources": [
+        "yt-ii1jcLg-eIQ"
+      ],
+      "question": "I'm a 20-year-old CS student with a side project I'm excited about. Would Paul Graham tell me to start a startup now, while I'm still in college?",
+      "required_points": [
+        "No, do not start a startup while in college; a startup takes over your whole life, which is incompatible with being a full-time student.",
+        "Exception: if the side project takes off on its own, it may be reasonable to run with it."
+      ],
+      "supporting_points": [
+        "Waiting costs nothing; you are more likely to succeed if you wait.",
+        "Learn powerful things, get domain expertise; 'just learn'.",
+        "Keep working on your own projects; they produce the best ideas and cofounders.",
+        "The 2026 essay restates the incompatibility and the value of student projects."
+      ],
+      "uncertainty": [
+        "The main source is from 2014. The 2026 essay supports the same position, so the stance is not stale."
+      ],
+      "vault": "yc"
+    }
+  },
+  {
+    "id": "p-e359ab5393b60ed5",
+    "question": "My service business is profitable, but I'm carrying about $60k of debt. Should I pay it off or keep the cash for growth? What would Alex Hormozi say?",
+    "A": "# Pay Off the $60k or Invest in Growth?\n\n**Short answer:** Compare the debt's after-tax interest rate with the return you can *reliably* get from growth spending. Pay off whichever loses that comparison. Keep a cash buffer either way.\n\n## What Hormozi would likely say\n\nThis is an inference from his general public views, not a known answer to your specific case. Hormozi usually treats debt as a math problem, not a moral one. If you have a proven way to turn $1 into $3 or more, such as an offer with a known customer acquisition cost and lifetime value, he would likely push you to fund that engine instead of paying down cheap debt. He also stresses survival, keeping cash on hand, and not paying for growth you haven't proven yet. Whether he would favor payoff or growth for you depends entirely on your numbers.\n\n## Decision rules\n\n- **Pay it off** if the rate is above about 12–15% (credit cards, merchant cash advances, expensive term loans), if it carries a personal guarantee that worries you, or if your growth ideas are unproven.\n- **Keep the cash** if the rate is low (under about 7–8%), you have a repeatable acquisition channel with a measured return well above that rate, and you can't get financing again easily.\n- **Split it** if the case is borderline. Pay off the most expensive portion and put the rest into tests you can measure.\n\n## Next steps\n\n1. List each debt with its rate, term, prepayment penalty, and guarantee.\n2. Set aside 3–6 months of operating expenses that you don't touch.\n3. Calculate your real customer acquisition cost, lifetime value, and payback period.\n4. Run a small growth test first. Scale it only if the returns hold up.\n\n**Assumptions:** Your profit is steady, and the debt has no penalty for early repayment.",
+    "B": "**Short answer:** In most cases, pay it down aggressively, but not to zero cash, and keep funding only the growth that has proven returns.\n\n**What Hormozi would likely say:** He leans close to the Dave Ramsey end on business debt. His reasoning is that debt adds risk, and over a long horizon that risk tends to come due because businesses have slow seasons and volatility. In a consult with a profitable service business carrying about $60k, he backed the owner's plan to clear it in four to five months. He put it second on the priority list, right after a price increase. He also admits his debt aversion is partly emotional, about peace of mind, not a big financial lever. Separately, he says that if ads reliably return more than they cost and your tracking is trustworthy, you should keep spending. So his stance is \"pay off debt *and* keep doing cheap, proven fixes,\" not \"freeze growth.\" He never clearly says when borrowing to grow is justified.\n\n**Next steps:**\n1. Keep a cash reserve of roughly two to three months of operating costs.\n2. Put a fixed monthly amount toward the debt, highest interest rate first.\n3. Fund growth first with cheap wins: raise prices, improve your landing page and ads, and email past customers.\n4. Only increase spending where you can show the payback.\n\n**Things that would change this:**\n- **Pay off faster** if the rate is high (credit cards or merchant cash advances), revenue is seasonal or concentrated in a few clients, or the debt costs you sleep.\n- **Keep more cash for growth** if the rate is low and fixed, you have a channel with measured returns well above the interest rate, and you have the capacity to handle more customers.",
+    "reference": {
+      "actual_stance": "Pay it off. In the source the owner (Corey, HVAC duct cleaning, about $479k profit on $1.25M) already planned to clear the $60k in four to five months, and Hormozi approved ('Okay, good') and kept 'continue to pay off the debt' in the final plan. He calls it partly an emotional, back-of-mind issue and says he skews close to the Dave Ramsey side because debt increases risk, risk over a long horizon tends to come due, businesses have seasons and volatility, and many enduring companies such as Chick-fil-A run debt free. He did not frame it as debt instead of growth: in the same session he told Corey to keep raising ad spend while ROAS and CAC hold, after fixing the landing page and ads.",
+      "category": "fresh",
+      "errors": [
+        "Saying he advises keeping cheap debt because leverage is a tool.",
+        "Saying he told the owner to stop investing in growth until the debt is gone.",
+        "Stating the 5% and '100% in headache' figures as a firm quantified rule he gave."
+      ],
+      "evidence": [
+        {
+          "quote": "So, right now, we're allocating about 10% of our profit going towards paying off some of our debt.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "guest_corey",
+          "speaker_basis": "business owner answering Hormozi's question; content-inferred",
+          "timestamp": "0:33"
+        },
+        {
+          "quote": "Profit on that is 479,000. Uh, our net margin is 38%.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "guest_corey",
+          "speaker_basis": "business owner answering Hormozi's question; content-inferred",
+          "timestamp": "3:15"
+        },
+        {
+          "quote": "We are planning to pay off completely in the next four to five months.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "guest_corey",
+          "speaker_basis": "business owner answering Hormozi's question; content-inferred",
+          "timestamp": "8:37"
+        },
+        {
+          "quote": "Okay, good. That's one of those things that like I'd say this is more of an emotional thing",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "8:37"
+        },
+        {
+          "quote": "I tend to skew like very close to the Ramsey side and the single argument that I have around it is basically debt",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "8:37"
+        },
+        {
+          "quote": "increases risk. Risk when multiplied over a long time horizon tends to come due.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "9:10"
+        },
+        {
+          "quote": "businesses have seasons, they have volatility",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "9:10"
+        },
+        {
+          "quote": "If you look at some of the most enduring companies, a lot of like Chick-fil-A operate debt free.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "9:10"
+        },
+        {
+          "quote": "we just want to continue to spend month over month provided our ROAS and our CAC stay more or less the same.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "10:48"
+        },
+        {
+          "quote": "Two is you're going to continue to pay off the debt.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "30:45"
+        },
+        {
+          "quote": "But at least 100% in headache.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "uncertain",
+          "speaker_basis": "unlabeled >> turn after a separate '5%' turn; could be Hormozi or Corey",
+          "timestamp": "32:53"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold says paying off 'adds only about 5% to profit but removes 100% in headache' as Hormozi's argument. In the raw, '5%.' and 'But at least 100% in headache.' are separate unlabeled >> turns, so the speaker is uncertain. Demoted to a supporting point.",
+        "Gold omits that the owner had already decided to pay it off and that Hormozi approved rather than argued him into it, and that the same plan kept funding growth through ads. Added as context so answers that say 'pay it off and keep funding proven growth from cash flow' are not marked wrong.",
+        "Raw-internal inconsistency: 10% of $479k profit is about $48k a year, which does not clear $60k in four to five months. Not material to the stance."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-09",
+      "key_status": "corrected_context",
+      "primary_sources": [
+        "yt-OQf2Ba-Lp_4"
+      ],
+      "question": "My service business is profitable, but I'm carrying about $60k of debt. Should I pay it off or keep the cash for growth? What would Alex Hormozi say?",
+      "required_points": [
+        "Lean toward paying off the debt (he skews close to the Ramsey side).",
+        "Reason: debt increases risk, and risk over a long time horizon tends to come due; businesses have seasons and volatility."
+      ],
+      "supporting_points": [
+        "Enduring companies like Chick-fil-A operate debt free.",
+        "He calls it partly an emotional, back-of-mind issue.",
+        "In context the owner already planned to pay it off in four to five months from cash flow, and Hormozi approved.",
+        "Not either/or: in the same plan he kept funding proven ads while ROAS and CAC held.",
+        "Paying it off adds only a few percent to profit but removes a lot of headache (speaker of the '5%' figure is uncertain; see uncertainty)."
+      ],
+      "uncertainty": [
+        "The question gives no profit, interest rate or growth return. His stance comes from a business with about $479k annual profit, where $60k is small. Conditional answers that ask for these numbers are acceptable if they still state his lean.",
+        "yt-sL16tsGafcQ at 16:55 to 18:02 discusses acquisition/fund-level debt as leverage. That is distinct from this operating-business debt case. A conditional answer noting that distinction is not itself an error; the specific Ramsey lean and cash-flow context remain the required factual stance."
+      ],
+      "vault": "hormozi"
+    }
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "answer_family": "sol",
+  "batch_id": "newadvice12--sol--sol--batch-00",
+  "error": "RuntimeError: CLI exited 1: {\"type\":\"thread.started\",\"thread_id\":\"01a153f4-0ca4-7b51-844e-b4a9fc21c95e\"}\n{\"type\":\"turn.started\"}\n{\"type\":\"error\",\"message\":\"You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/settings/usage to purchase more credits or try again at 6:13 PM.\"}\n{\"type\":\"turn.failed\",\"error\":{\"message\":\"You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/settings/usage to purchase more credits or try again at 6:13 PM.\"}}\n",
+  "id": "p-8007bf0789999b4b--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-8007bf0789999b4b",
+  "primary_eligible": false,
+  "prompt_sha256": "945ab38a8852c5457a1da127b5742dfe90660afdfc91fd42e2e662b7f918793d",
+  "question_key": "newadvice12--advice-yc-02",
+  "status": "failed",
+  "suite": "newadvice12",
+  "verdict": null,
+  "winner": null
+}

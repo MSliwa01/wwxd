@@ -1,0 +1,73 @@
+{
+  "answer_family": "opus",
+  "batch_id": "diagnostic12--sol--opus--batch-02",
+  "error": "",
+  "id": "p-9affc45058d920b8--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-9affc45058d920b8",
+  "primary_eligible": true,
+  "prompt_sha256": "1610eff454fe7dc2a6611214dd1dc076d5f81279b54542541070d427bf03f570",
+  "question_key": "diagnostic12--hz-05",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 4,
+      "faithfulness": 4,
+      "specificity": 5,
+      "usefulness": 4
+    },
+    "B": {
+      "accuracy": 3,
+      "faithfulness": 2,
+      "specificity": 3,
+      "usefulness": 3
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "High churn in any community under six months old should not cause concern because its average is inflated.",
+        "evidence": "The source explicitly gives this age-based caveat for communities under 90 days old. It does not establish the broader six-month reassurance, and it says early churn warrants intervention if basically everyone leaves.",
+        "label": "unverified"
+      },
+      {
+        "answer": "A",
+        "claim": "Hormozi co-founded Skool.",
+        "evidence": "The packet establishes that he relays Skool data credited to Sam, but does not establish his founder status.",
+        "label": "unverified"
+      },
+      {
+        "answer": "A",
+        "claim": "Hormozi's advice includes reviewing every roughly 20 cancellations, providing a win within 24 hours, daily appearances, weekly calls, and introductions to about ten regulars.",
+        "evidence": "The packet supports onboarding, outcomes, connections, and learning from cancellations, but does not establish these specific frequencies, deadlines, or counts.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "Monthly churn of 5–10% is typical for many paid communities, especially below about $100 per month.",
+        "evidence": "The supplied data reports a 20% Skool platform average and under 10% for the best groups. It provides no price-segmented evidence establishing B's broader benchmark; the differing populations prevent treating this as a definitive contradiction.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "Most cancellations occurring in the first 30–60 days indicates an onboarding problem rather than a value problem.",
+        "evidence": "The source says churn is normally highest early and does not establish that cancellation timing alone diagnoses onboarding rather than value.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "Hormozi generally frames the membership ceiling as monthly joins divided by monthly churn.",
+        "evidence": "The formula is consistent with a constant-rate membership model, but the supplied packet does not establish its attribution to Hormozi.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-9affc45058d920b8",
+    "reason": "A gives the supplied Skool benchmarks, retention-priority threshold, and tenure-dependent churn figures. Its main gaps are extending the young-community reassurance to six months and omitting the exception for nearly universal early departures. B offers useful cohort analysis but substitutes unsupported general benchmarks and treats concentrated early cancellations as a warning without the source's normalization of early churn.",
+    "winner": "A"
+  },
+  "winner": "grounded"
+}

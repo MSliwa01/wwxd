@@ -1,0 +1,114 @@
+{
+  "actual_input_tokens": 8235,
+  "answer": "```json\n{\n  \"judgments\": [\n    {\n      \"id\": \"p-286224226a38213e\",\n      \"A\": {\"decision_quality\": 4, \"actionability\": 4, \"constraint_fit\": 4, \"reasoning\": 4},\n      \"B\": {\"decision_quality\": 5, \"actionability\": 5, \"constraint_fit\": 4, \"reasoning\": 4},\n      \"winner\": \"B\",\n      \"reason\": \"Both answers reach the same core decision: fix the process and targeting, keep cash moderate, raise equity, have founders source directly, and use agents only as a bridge. Both get the arithmetic right ($130k short of 2x, about $110k per year in extra burn for two hires, $50–60k agency fees). B also diagnoses the thin pipeline (7 interviews in 6 weeks) and sets volume targets (40–60 screens). Its fallback triggers are concrete and measurable: raise cash after 30+ screens lost on cash, use a recruiter if it can't reach 40 screens, hire one engineer if agents keep the roadmap on schedule. A's triggers and pool definition are good, but it never addresses pipeline volume, and its 1.0–1.5% equity is somewhat generous without justification. B is slightly more actionable and better diagnosed.\",\n      \"factual_objections\": []\n    },\n    {\n      \"id\": \"p-5ac1d738ea917386\",\n      \"A\": {\"decision_quality\": 5, \"actionability\": 5, \"constraint_fit\": 5, \"reasoning\": 5},\n      \"B\": {\"decision_quality\": 5, \"actionability\": 4, \"constraint_fit\": 5, \"reasoning\": 4},\n      \"winner\": \"A\",\n      \"reason\": \"Both pick Idea B for the same sound reasons: domain edge, weak LOI and investor signals, and a commoditized competitor field. Both target the real risk, the slow sales cycle, by pricing below council-approval thresholds and tying the product to grant-required plans. A's plan is more operational. It gives specific discovery questions, a manual paid-pilot approach, engineering consultancies as a distribution channel, and a fallback of becoming the planning firm. Its month-6 criteria have three branches: continue, shift to consultancies, or revisit A under stated conditions. B's plan is good and adds useful touches (rural-water associations, govtech investors, an explicit condition under which A becomes more defensible), but its kill criteria are thinner. Its claim of an advantage 'no competitor can quickly copy' is somewhat overstated.\",\n      \"factual_objections\": []\n    },\n    {\n      \"id\": \"p-ae68fdba5551b685\",\n      \"A\": {\"decision_quality\": 5, \"actionability\": 4, \"constraint_fit\": 4, \"reasoning\": 5},\n      \"B\": {\"decision_quality\": 5, \"actionability\": 5, \"constraint_fit\": 5, \"reasoning\": 4},\n      \"winner\": \"B\",\n      \"reason\": \"Both reach the same correct decision and end state. Premium goes to $2,500, standard to $500, the course is skipped, and 5 premium plus 30 standard clients gives $26,100 in exactly 50 hours, which checks out. Both show that premium at $2,000 falls short at $500 standard ($23,600, as A computes). A's fallback of 8 premium clients at $2,000 with 21 standard is correct ($25,340 in 50 hours) and creative. However, A has premium clients signing in weeks 1–3 while the price increase lands around month 3, and it never addresses the roughly two months when hours would exceed the 50-hour cap. B synchronizes premium start dates with the day-60 price change and adds a 30-day notice step if attrition falls short, which respects the hours constraint more directly. B also caps premium scope at 12 hours a month with $200/hour overflow and a 3-month minimum, and its $550 fallback math is correct ($25,100). B has one arithmetic slip on the course comparison, but it is peripheral to the decision.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"B\",\n          \"claim\": \"You'd need about 170 subscribers just to match one premium client.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"One premium client yields about $2,460 a month in profit, or $2,500 in revenue. At $49 a month, that is about 50–51 subscribers, not 170. 170 subscribers would produce about $8,330 a month, more than three premium clients.\"\n        }\n      ]\n    }\n  ]\n}\n```",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 41.033,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a03e6d6c4c4097b5bd754ec33691c9761dee83bc4212f0dfbdf45130db65830c"
+    }
+  ],
+  "batch": {
+    "blocked_pair_ids": [],
+    "chars_per_token": 2.44,
+    "eligible_pair_ids": [
+      "p-286224226a38213e",
+      "p-5ac1d738ea917386",
+      "p-ae68fdba5551b685"
+    ],
+    "estimated_input_tokens": 6913,
+    "id": "newadvice12--opus--opus--batch-00",
+    "judge_family": "opus",
+    "pair_ids": [
+      "p-286224226a38213e",
+      "p-5ac1d738ea917386",
+      "p-ae68fdba5551b685"
+    ],
+    "prompt_bytes": 16921,
+    "prompt_sha256": "3641e944fa7136d78c8ec499f9dfed19c9608ce9f4392b7776b971fcfc68b057",
+    "suite": "newadvice12"
+  },
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "decoded": {},
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 6913,
+  "event_count": 26,
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T16:19:41.397794+00:00",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "parse_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "prompt_sha256": "3641e944fa7136d78c8ec499f9dfed19c9608ce9f4392b7776b971fcfc68b057",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 6665,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 6665,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 6665,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 6665,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 4031,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 4031,
+      "output_tokens_details": {
+        "thinking_tokens": 2548
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ]
+}

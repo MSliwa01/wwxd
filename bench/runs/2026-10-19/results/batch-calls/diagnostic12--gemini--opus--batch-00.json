@@ -1,0 +1,72 @@
+{
+  "actual_input_tokens": 11796,
+  "answer": "```json\n{\n  \"judgments\": [\n    {\n      \"id\": \"p-e6ba524c4d3fa040\",\n      \"A\": {\n        \"accuracy\": 5,\n        \"specificity\": 5,\n        \"faithfulness\": 5,\n        \"usefulness\": 5\n      },\n      \"B\": {\n        \"accuracy\": 4,\n        \"specificity\": 3,\n        \"faithfulness\": 4,\n        \"usefulness\": 4\n      },\n      \"winner\": \"A\",\n      \"reason\": \"Answer A accurately captures Paul Graham's specific stance from the Stockholm talk, including the nuance about returning, the unicorn-rate data point with his three-part caveat, and his quote about Stockholm becoming the Silicon Valley of Europe. Answer B is much more generic and fails to capture the specific context of the Stockholm appearance and his detailed caveats.\",\n      \"factual_objections\": []\n    },\n    {\n      \"id\": \"p-e359ab5393b60ed5\",\n      \"A\": {\n        \"accuracy\": 5,\n        \"specificity\": 5,\n        \"faithfulness\": 5,\n        \"usefulness\": 5\n      },\n      \"B\": {\n        \"accuracy\": 4,\n        \"specificity\": 4,\n        \"faithfulness\": 4,\n        \"usefulness\": 4\n      },\n      \"winner\": \"A\",\n      \"reason\": \"Answer A correctly recognizes that this is an inference from general public views while providing a clear decision framework. Answer B asserts specific narrative details about a consult with a profitable service business carrying $60k where Hormozi backed the owner's plan, which closely mirrors the reference case study (Corey, HVAC duct cleaning), but presents it as a direct recounting rather than conditional advice, while capturing the Ramsey skew well.\",\n      \"factual_objections\": []\n    },\n    {\n      \"id\": \"p-dd85420a3336c01b\",\n      \"A\": {\n        \"accuracy\": 5,\n        \"specificity\": 5,\n        \"faithfulness\": 5,\n        \"usefulness\": 5\n      },\n      \"B\": {\n        \"accuracy\": 1,\n        \"specificity\": 2,\n        \"faithfulness\": 1,\n        \"usefulness\": 2\n      },\n      \"winner\": \"A\",\n      \"reason\": \"Answer A correctly identifies the false attribution in the prompt, noting that Sam Altman made the statement during a conversation with Garry Tan at Startup School 2026, and provides the actual reasons given (network effects). Answer B completely fails the trick question, falsely attributing the quote to Garry Tan and inventing a set of reasons not found in the source text.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"B\",\n          \"claim\": \"Garry Tan argues that the value of going through YC has risen...\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"The reference establishes that Sam Altman made this statement, not Garry Tan, and Altman explicitly noted that Garry probably couldn't say it.\"\n        }\n      ]\n    }\n  ]\n}\n```",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 2.738,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "3885bcdf310eb0b04751f15401a4540920d5f4b1bdf66a081dfd65548e74d832"
+    }
+  ],
+  "batch": {
+    "blocked_pair_ids": [],
+    "chars_per_token": 3.2,
+    "eligible_pair_ids": [
+      "p-e6ba524c4d3fa040",
+      "p-e359ab5393b60ed5",
+      "p-dd85420a3336c01b"
+    ],
+    "estimated_input_tokens": 11866,
+    "id": "diagnostic12--gemini--opus--batch-00",
+    "judge_family": "gemini",
+    "pair_ids": [
+      "p-e6ba524c4d3fa040",
+      "p-e359ab5393b60ed5",
+      "p-dd85420a3336c01b"
+    ],
+    "prompt_bytes": 37977,
+    "prompt_sha256": "86ee5308e4c1d910f39346fd9029843b9dde17ad3d65ba81689e97dc68aa140b",
+    "suite": "diagnostic12"
+  },
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "decoded": {},
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 11866,
+  "event_count": 1,
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:37:26.601127+00:00",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "parse_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "prompt_sha256": "86ee5308e4c1d910f39346fd9029843b9dde17ad3d65ba81689e97dc68aa140b",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 730,
+      "promptTokenCount": 11796,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 11796
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 12526
+    }
+  ]
+}

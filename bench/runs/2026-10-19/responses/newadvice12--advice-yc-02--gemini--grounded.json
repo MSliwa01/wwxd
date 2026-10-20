@@ -1,0 +1,59 @@
+{
+  "actual_input_tokens": 172895,
+  "answer": "Focus your year on the self-serve segment, and maintain usage-based pricing rather than pivoting to enterprise logistics contracts. \n\n### Reasoning on Runway and Focus\nYour current burn is $45,000 per month, leaving $640,000 in the bank, which grants roughly 14 months of runway. With 30 seed-stage customers paying an average of $210 monthly, current revenue sits around $6,300 per month. \n\nThe logistics contract offers $90,000 annually ($7,500 monthly), which initially looks comparable to your entire self-serve base. However, pursuing it requires building SOC 2, an on-premises deployment option, and custom fields—a massive engineering detour that will consume your entire year for a team of three. More critically, procurement takes six to seven months. Burning through roughly $300,000 of your runway during a lengthy enterprise sales cycle for just one or two deals is an existential risk for a three-person startup. \n\nConversely, your self-serve segment is growing at roughly 15% month-over-month. Focusing your year on self-serve improvements (better docs, more document types, a usage dashboard) leverages your existing product-market fit, keeps engineering focused on API expansion rather than compliance and enterprise infrastructure, and preserves your runway to reach a sustainable revenue scale organically.\n\n### Pricing Recommendation\nDo not change your pricing model. Retain usage-based pricing. Usage-based pricing aligns directly with the natural growth of early-stage startups and rewards you as their invoice volume scales. Shifting to flat enterprise contracts prematurely forfeits this upside and locks you into custom demands.\n\n### Concrete Next Steps\n1. **Allocate all engineering time** to self-serve improvements: ship the usage dashboard, expand supported document types, and polish developer documentation to accelerate integration.\n2. **Politely decline** the logistics company’s enterprise demands or offer them standard API access with zero custom deployment or SOC 2 concessions. \n3. **Double down on early-stage startup acquisition**, marketing directly to developers who integrate in a day.\n\n### Material Assumptions & Decision Criteria\n* **Assumption:** Your usage-based pricing scales naturally with your customers' growth, allowing revenue to compound without custom sales intervention.\n* **Decision Criteria:** Revisit enterprise sales only if your self-serve growth rate stalls below 5% month-over-month for two consecutive quarters *and* your runway drops below 6 months with clear, inbound enterprise demand that does not require building custom infrastructure from scratch.",
+  "arm": "grounded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 9.538,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "6e3a07a078645c4d3056d9c3dc78f5e31d838151ead5dfeb8f7b4178ad2dad9f"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 172990,
+  "event_count": 1,
+  "family": "gemini",
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:29:31.169581+00:00",
+  "format_deviations": [
+    "outside descriptive 150..300 word band around approximate 250-word instruction"
+  ],
+  "id": "newadvice12--advice-yc-02--gemini--grounded",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_sha256": "0891239e0c6d7f249ff744a285ad0f9e2fa0ab9ddab268a104324ba3c45ba250",
+  "question_key": "newadvice12--advice-yc-02",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "newadvice12",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 541,
+      "promptTokenCount": 172895,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 172895
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 173436
+    }
+  ],
+  "words": 369
+}

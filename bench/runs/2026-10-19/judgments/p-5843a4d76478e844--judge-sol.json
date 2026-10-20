@@ -1,0 +1,49 @@
+{
+  "answer_family": "opus",
+  "batch_id": "newadvice12--sol--opus--batch-00",
+  "error": "",
+  "id": "p-5843a4d76478e844--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-5843a4d76478e844",
+  "primary_eligible": true,
+  "prompt_sha256": "9d84d204c8107c06d2ccab76bc5bf0f9c0c66827b8a8aa341137afb0b65a90f8",
+  "question_key": "newadvice12--advice-yc-01",
+  "status": "ok",
+  "suite": "newadvice12",
+  "verdict": {
+    "A": {
+      "actionability": 4,
+      "constraint_fit": 4,
+      "decision_quality": 4,
+      "reasoning": 4
+    },
+    "B": {
+      "actionability": 4,
+      "constraint_fit": 4,
+      "decision_quality": 4,
+      "reasoning": 4
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "Small vet clinics decide fast and judge on quality.",
+        "evidence": "The scenario establishes neither purchasing speed nor buying criteria. Existing-system integration, budget, and workflow requirements could materially affect adoption.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "Hospital sales cycles run 6–18 months.",
+        "evidence": "The supplied information does not establish this numerical range or the hospital buyer and purchasing route to which it would apply.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-5843a4d76478e844",
+    "reason": "Both defensibly prioritize the existing usage signal, paid validation, and founder-led selling within correctly calculated runway. B gives better integration priorities and a more specific usage metric; A addresses recording consent and security and provides a clearer conversion threshold. Neither establishes its proposed pricing or acquisition targets. A too narrowly attributes churn to note quality, while B makes fundraising an automatic response to limited traction. These differences do not establish a substantive overall winner.",
+    "winner": "tie"
+  },
+  "winner": "tie"
+}

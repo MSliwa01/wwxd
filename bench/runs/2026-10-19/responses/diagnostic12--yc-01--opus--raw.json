@@ -1,0 +1,99 @@
+{
+  "actual_input_tokens": 2493,
+  "answer": "# Probably not \"start a startup,\" but keep building the project\n\nPaul Graham's view isn't a simple yes or no, and it points somewhere specific for you.\n\n**What he has argued.** He has generally discouraged students from setting out to *start a startup* as a goal while in college. His reasoning is that the best use of those years is learning deeply and building things that interest you. He has also argued that the best startup ideas tend to come from organic side projects, built because you wanted the thing yourself, not from deliberately hunting for an idea. So your situation, a side project you're excited about, is close to exactly what he recommends.\n\n**Where it flips.** He has also said that if a side project starts taking off on its own, you shouldn't kill it out of loyalty to a plan. Real users arriving and growing, especially through word of mouth, is the signal that turns a project into a startup. YC has also made it easier for students to apply, so \"after graduation\" isn't a fixed rule.\n\n**Practical next steps:**\n- Keep building, and get the project in front of real users soon.\n- Track whether usage grows without you pushing it, and whether people would be upset if it disappeared.\n- If it gains traction, consider applying to YC or a similar program. Taking leave from school is usually reversible. Dropping out is not urgent.\n\n**Decision criteria:** Go all-in if you see organic growth, users who'd pay or strongly miss it, and your own sustained obsession. Stay in school if it's mainly the *idea* of a startup that excites you rather than this specific problem.\n\n**Uncertainty:** These are his general published positions. How he'd judge your particular project is unknowable.",
+  "arm": "raw",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 12.227,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "1410fccc50818a8f9d3f9df7f7205618528cae246dcb51f71a12fe735d39356b"
+    }
+  ],
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 476,
+  "event_count": 8,
+  "family": "opus",
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:21:54.954477+00:00",
+  "format_deviations": [],
+  "id": "diagnostic12--yc-01--opus--raw",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "prompt_sha256": "c134b9fe4199f85c43b2e30824b896d9e062fb92757821de81371350c04d5fc9",
+  "question_key": "diagnostic12--yc-01",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 923,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 923,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 923,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 923,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 829,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 829,
+      "output_tokens_details": {
+        "thinking_tokens": 304
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ],
+  "words": 293
+}

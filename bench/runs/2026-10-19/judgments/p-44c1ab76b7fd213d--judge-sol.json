@@ -1,0 +1,36 @@
+{
+  "answer_family": "opus",
+  "batch_id": "newadvice12--sol--opus--batch-02",
+  "error": "",
+  "id": "p-44c1ab76b7fd213d--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-44c1ab76b7fd213d",
+  "primary_eligible": true,
+  "prompt_sha256": "62c9821c9d7f9fe9bcc025e230e62c28115ea56c3ba65509b754eca8ccb6b843",
+  "question_key": "newadvice12--advice-hz-03",
+  "status": "ok",
+  "suite": "newadvice12",
+  "verdict": {
+    "A": {
+      "actionability": 4,
+      "constraint_fit": 3,
+      "decision_quality": 4,
+      "reasoning": 3
+    },
+    "B": {
+      "actionability": 4,
+      "constraint_fit": 4,
+      "decision_quality": 4,
+      "reasoning": 4
+    },
+    "factual_objections": [],
+    "id": "p-44c1ab76b7fd213d",
+    "reason": "Both correctly reject a roughly $74,000 commitment against a $45,000 budget, and both alternative schedules add up. B better integrates inventory through a stock-triggered throttle, retains $2,700 in budget reserve, and correctly identifies December 28 as ten weeks from October 19. A's scheduled spending jumps conflict with its gradual-ramp rule. Both still need contribution margins, organic demand, and repeat-order timing to validate their thresholds; B's 800-bottle reserve and 2.5 ROAS threshold remain provisional.",
+    "winner": "B"
+  },
+  "winner": "raw"
+}

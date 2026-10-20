@@ -1,0 +1,61 @@
+{
+  "answer_family": "gemini",
+  "batch_id": "diagnostic12--sol--gemini--batch-02",
+  "error": "",
+  "id": "p-30f0a7d52b64b6ba--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-30f0a7d52b64b6ba",
+  "primary_eligible": true,
+  "prompt_sha256": "f223aff0ccd3fd601cf372b53301c493fd4020d6a8e8052dbe976aeb93aa741f",
+  "question_key": "diagnostic12--hz-05",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 4,
+      "faithfulness": 4,
+      "specificity": 4,
+      "usefulness": 4
+    },
+    "B": {
+      "accuracy": 1,
+      "faithfulness": 1,
+      "specificity": 2,
+      "usefulness": 2
+    },
+    "factual_objections": [
+      {
+        "answer": "B",
+        "claim": "A good monthly churn rate typically falls between three and seven percent.",
+        "evidence": "For the requested Hormozi benchmark, the packet gives Skool's average as 20% monthly churn and the best groups as under 10%. It explicitly identifies substituting 3–7% benchmarks as an error.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "B",
+        "claim": "A monthly churn rate above ten percent is alarming and signals broken onboarding, unmet value expectations, or poor member fit.",
+        "evidence": "The supplied benchmark averages 20% churn, with retention becoming the highest-ROI priority around 30% churn or higher. Elevated early churn is described as normal unless almost everyone leaves, so exceeding 10% does not establish a broken process.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "B",
+        "claim": "Hormozi contends that members will not leave if they receive ten times their subscription cost in value within the first week.",
+        "evidence": "The packet supports early outcomes and onboarding, but supplies no ten-times-value threshold or guarantee that members will stay.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "If churn exceeds eight percent for two consecutive months, pause marketing spend entirely.",
+        "evidence": "The supplied material establishes no eight-percent threshold, two-month rule, or instruction to stop marketing entirely.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-30f0a7d52b64b6ba",
+    "reason": "A substantially matches the 20% average, roughly 30% intervention threshold, tenure effects, and young-community caveat. It should distinguish average from good, mention that the best groups churn under 10%, and give the approximately 10% post-day-90 benchmark. B substitutes incompatible benchmarks and unsupported intervention rules that could cause unnecessary cuts to acquisition.",
+    "winner": "A"
+  },
+  "winner": "grounded"
+}

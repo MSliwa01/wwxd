@@ -1,0 +1,57 @@
+{
+  "actual_input_tokens": 109975,
+  "answer": "The premise is false. Hormozi did not tell a roofing company owner to stop door-knocking and move his budget into Google Ads. In his consulting session with the young roofing owner, he praised the owner's ability to door-knock as a core asset and told him to go all in on door-to-door sales as his primary growth engine, building a dedicated team rather than getting distracted by new channels. He did recommend Google Ads and digital marketing as a separate play for established service businesses, but for a startup relying on door-to-door sales, his advice was to double down on what already works.\n\nIf you are a service business owner weighing whether to scale door-knocking versus buying Google Ads, use the following decision criteria:\n\n- **Channel Competence:** If you already know how to acquire customers profitably through direct outreach or door-knocking, maximize that channel first. Do not add paid digital channels until your primary outbound engine is fully scaled or constrained by team size.\n- **Supply and Demand Constraints:** Determine whether your system is supply-constrained (you cannot deliver services fast enough) or demand-constrained (you lack leads). If demand is the constraint and you lack an outbound sales mechanism, digital ads are appropriate. \n- **Capital and Risk Tolerance:** Bootstrapped startups with more time and sweat equity than cash should prioritize high-volume outbound sales to preserve capital, whereas businesses with spare cash and proven unit economics should scale ad spend.",
+  "arm": "grounded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 4.155,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "ef4e087af3e194020522a59f1d73907a6b03b8c289f2b7ec5fef1bfd702804a9"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 104999,
+  "event_count": 1,
+  "family": "gemini",
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:21:41.486346+00:00",
+  "format_deviations": [],
+  "id": "diagnostic12--hz-20--gemini--grounded",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_sha256": "5210407e5211b45a487a3bb53fe5060f498b689210d22f00d27d95a6bf094345",
+  "question_key": "diagnostic12--hz-20",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 301,
+      "promptTokenCount": 109975,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 109975
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 110276
+    }
+  ],
+  "words": 237
+}

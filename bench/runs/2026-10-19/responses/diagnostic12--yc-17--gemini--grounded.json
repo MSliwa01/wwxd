@@ -1,0 +1,59 @@
+{
+  "actual_input_tokens": 172715,
+  "answer": "Garry Tan argues that the premium on doing YC is bigger than ever and that the gap between YC and second place has grown because the leverage provided by modern AI agents has dramatically amplified what individual founders and small teams can achieve. \n\nIn his view, the compounding context, custom skill files, and automated agent workflows available today allow a single founder to operate with the output of a much larger organization before ever raising a traditional round. Because execution velocity and product iteration have accelerated so radically, being plugged into the dense, high-signal network of a YC batch provides an unmatched compounding advantage. \n\nThe gap with second place widens because accelerators or programs offering merely capital or standard office space fail to replicate YC's specific concentration of outlier peers, insider knowledge, and the distinct culture required to push hard-tech and AI-native startups past the threshold of success. \n\n**Next Steps:**\n- Build and ship with an agent-native workflow rather than treating AI as mere autocomplete.\n- Focus relentlessly on user feedback and product quality rather than relying on external credentials or generic accelerator playbooks.\n\n**Material Assumptions:**\n- Agent leverage is structural and permanent, not a temporary spike.\n- Network density and peer concentration remain the primary drivers of outlier startup outcomes.\n\n**Decision Criteria:**\nRe-evaluate this stance if competing accelerators successfully build equivalent agent-native operational networks, or if founder leverage decentralizes to the point where centralized batch structures offer diminishing returns compared to remote or distributed cohorts.",
+  "arm": "grounded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 2.626,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "331deaaaed2be2fc844724765dba42ab73299efcbad9942734574cef55ce57ab"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 172763,
+  "event_count": 1,
+  "family": "gemini",
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:23:50.424124+00:00",
+  "format_deviations": [
+    "possible blinding leak: context/wiki/knowledge base mention"
+  ],
+  "id": "diagnostic12--yc-17--gemini--grounded",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_sha256": "2397290bc3ca7c41f999c6bf70027ea1c9e6f19380e35f70ef6e3e4aa3cbe0b8",
+  "question_key": "diagnostic12--yc-17",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 305,
+      "promptTokenCount": 172715,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 172715
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 173020
+    }
+  ],
+  "words": 246
+}

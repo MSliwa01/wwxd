@@ -1,0 +1,49 @@
+{
+  "answer_family": "gemini",
+  "batch_id": "diagnostic12--sol--gemini--batch-03",
+  "error": "",
+  "id": "p-ea64056372a05d6f--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-ea64056372a05d6f",
+  "primary_eligible": true,
+  "prompt_sha256": "cf2bcc282a6343f617fab1ee29e2912b5d8e164ff7805312e944b30835576554",
+  "question_key": "diagnostic12--yc-20",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 2,
+      "faithfulness": 1,
+      "specificity": 2,
+      "usefulness": 2
+    },
+    "B": {
+      "accuracy": 1,
+      "faithfulness": 1,
+      "specificity": 2,
+      "usefulness": 1
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "They observed that polite, consensus-seeking individuals often faltered, while successful founders pursued growth above all else.",
+        "evidence": "The supplied evidence identifies earnestness, determination, flexibility and cofounder relationships as selection criteria. It does not establish these attributed observations about politeness or growth above all else.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "Jessica Livingston believed that early YC needed the most aggressive, ruthless founders.",
+        "evidence": "Livingston says she carefully funded earnest people and rejected conceited applicants. Her description of hardened, aggressive and ruthless people refers to other investors, contrasted with her own soft and sensitive approach.",
+        "label": "contradicted"
+      }
+    ],
+    "id": "p-ea64056372a05d6f",
+    "reason": "A partially distinguishes determination from ruthlessness, giving it a narrow advantage. Both fail to correct the central false premise and omit Livingston's emphasis on earnestness and rejection of conceited applicants. B explicitly endorses the false attribution.",
+    "winner": "A"
+  },
+  "winner": "raw"
+}

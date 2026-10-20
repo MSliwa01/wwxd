@@ -1,0 +1,101 @@
+{
+  "actual_input_tokens": 224244,
+  "answer": "# Focus on self-serve, and don't build for logistics yet\n\n**Runway.** $640k at $45k/month gives about 14 months with no revenue. You make about $6.3k/month now. If 15% monthly growth holds, revenue reaches about $45k (break-even) around month 14, with roughly $250k still in the bank. If growth slows to 10%, you reach about $24k/month by month 14 and the runway stretches to about 19 months. In both cases self-serve is the path most likely to make you default-alive or able to raise on a growth graph.\n\n**Why the enterprise deal doesn't fit right now:**\n- SOC 2, on-prem and custom fields would take your whole three-person team.\n- Procurement takes 6–7 months, and the audit adds months more.\n- The first $90k likely arrives around months 9–12 and isn't certain.\n- Betting the year on one or two slow buyers removes your leverage and turns you into a custom-build shop.\n- Your startup customers grow and decide fast, so usage-based revenue compounds with them.\n\n**Next steps:**\n1. Ship docs, more document types and the usage dashboard, ordered by what blocks signups and expansion.\n2. Track monthly growth, net revenue retention and churn.\n3. Tell both logistics companies honestly that you'll revisit in 9–12 months. Offer a hosted pilot now if they'll pay, with no on-prem.\n4. Raise in about 6 months on the growth curve.\n\n**Pricing.** Keep usage-based pricing, but:\n- add a monthly minimum or a starter tier of about $49–99\n- raise per-document rates for new signups and watch conversion\n- publish an \"Enterprise: contact us\" tier so you learn real willingness to pay\n\nAvoid discounting so much that revenue stops telling you whether people value the product.\n\n**What would change this:**\n- Growth falls below about 8% a month for two or three months.\n- Churn among your startup customers is high.\n- A logistics buyer will sign within about 3 months, prepay, fund SOC 2, or drop the on-prem requirement.\n- You raise enough to hire a second team for enterprise.",
+  "arm": "grounded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 19.049,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "2aaedacdb23792fca070a8494146bb6b97c0a4d87a7d8ade31d9337f24bdbc8e"
+    }
+  ],
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 226872,
+  "event_count": 12,
+  "family": "opus",
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:29:27.250799+00:00",
+  "format_deviations": [
+    "outside descriptive 150..300 word band around approximate 250-word instruction"
+  ],
+  "id": "newadvice12--advice-yc-02--opus--grounded",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "prompt_sha256": "0891239e0c6d7f249ff744a285ad0f9e2fa0ab9ddab268a104324ba3c45ba250",
+  "question_key": "newadvice12--advice-yc-02",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "newadvice12",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 222674,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 222674,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 222674,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 222674,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 1545,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 1545,
+      "output_tokens_details": {
+        "thinking_tokens": 843
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ],
+  "words": 336
+}

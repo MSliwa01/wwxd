@@ -1,0 +1,74 @@
+[
+  {
+    "id": "hz-02",
+    "vault": "hormozi",
+    "question": "Should my ads admit the weaknesses of my product, and if so how do I word it? What would Alex Hormozi say?",
+    "category": "known"
+  },
+  {
+    "id": "hz-05",
+    "vault": "hormozi",
+    "question": "What's a good monthly churn rate for a paid online community, and when should I worry about it? What would Alex Hormozi say?",
+    "category": "fresh"
+  },
+  {
+    "id": "hz-09",
+    "vault": "hormozi",
+    "question": "My service business is profitable, but I'm carrying about $60k of debt. Should I pay it off or keep the cash for growth? What would Alex Hormozi say?",
+    "category": "fresh"
+  },
+  {
+    "id": "hz-11",
+    "vault": "hormozi",
+    "question": "I own a residential HVAC duct-cleaning company doing about $1.2M a year at a 38% net margin, and we close about 82% of in-home inspections. Should I keep prices where they are so I don't hurt the close rate? What would Alex Hormozi say?",
+    "category": "applied"
+  },
+  {
+    "id": "hz-16",
+    "vault": "hormozi",
+    "question": "What's the story Hormozi tells about his company being worth four times more just by listing on the NASDAQ, and the IPO equity deal he took afterward?",
+    "category": "attribution"
+  },
+  {
+    "id": "hz-20",
+    "vault": "hormozi",
+    "question": "Why did Hormozi tell that young roofing company owner to stop door-knocking and move his budget into Google Ads?",
+    "category": "abstain"
+  },
+  {
+    "id": "yc-01",
+    "vault": "yc",
+    "question": "I'm a 20-year-old CS student with a side project I'm excited about. Would Paul Graham tell me to start a startup now, while I'm still in college?",
+    "category": "known"
+  },
+  {
+    "id": "yc-05",
+    "vault": "yc",
+    "question": "I'm building a startup in Stockholm. Does Paul Graham think I really need to move to Silicon Valley?",
+    "category": "fresh"
+  },
+  {
+    "id": "yc-08",
+    "vault": "yc",
+    "question": "I've spent months pitching seed investors, polishing my deck and taking follow-up meetings. How would Michael Seibel tell me to think about fundraising?",
+    "category": "fresh"
+  },
+  {
+    "id": "yc-12",
+    "vault": "yc",
+    "question": "My cofounder and I are 9 months in, pre-product-market fit, and it's clearly over. He's vested a chunk of his stock and wants to keep it, and we've both hired lawyers who are trading letters. What would Michael Seibel tell us to do?",
+    "category": "applied"
+  },
+  {
+    "id": "yc-17",
+    "vault": "yc",
+    "question": "Why does Garry Tan say the premium on doing YC is bigger than ever and that the gap between YC and second place has grown?",
+    "category": "attribution"
+  },
+  {
+    "id": "yc-20",
+    "vault": "yc",
+    "question": "Jessica Livingston has said early YC deliberately backed the most aggressive, ruthless founders because they're the ones who win. Why did she believe that?",
+    "category": "abstain"
+  }
+]

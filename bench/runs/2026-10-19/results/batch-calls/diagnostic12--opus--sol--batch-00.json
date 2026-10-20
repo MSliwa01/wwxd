@@ -1,0 +1,114 @@
+{
+  "actual_input_tokens": 16643,
+  "answer": "```json\n{\n  \"judgments\": [\n    {\n      \"id\": \"p-d1ebfc172a92cae3\",\n      \"A\": {\"accuracy\": 2, \"specificity\": 2, \"faithfulness\": 2, \"usefulness\": 3},\n      \"B\": {\"accuracy\": 5, \"specificity\": 5, \"faithfulness\": 4, \"usefulness\": 5},\n      \"winner\": \"B\",\n      \"reason\": \"B captures the core of the source framework. It says the leaving founder should give back most stock even if vested, at roughly 1–2% for a departure under a year. It also covers a no-fault, clean split, generous severance because employees are watching, about a week and $2,000, and the exception for illegal or unethical conduct. A gets the spirit of resolving things quickly. However, it says keeping vested shares is not an unreasonable demand and floats buying back vested shares, which contradicts the source. A also omits the equity figures, the cost estimate and the severance point.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Keeping vested shares is not, by itself, an unreasonable demand.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"The source says 'regardless of your vesting... you need to make sure that that company has as much equity as possible' and 'even if you vested, like get down to under 5% of the company, if it's within the first year, under 2%.' The source framework treats keeping a large vested stake before product-market fit as the wrong outcome.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"He would push back on you to stop treating yourself as the victim.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The reference supports being generous and the 'less nice than Dalton' turn. It does not contain a quote about the staying founder treating themselves as the victim. This plausibly paraphrases the no-fault framing but cannot be confirmed from the packet.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"p-1b481a7b755f0829\",\n      \"A\": {\"accuracy\": 5, \"specificity\": 4, \"faithfulness\": 5, \"usefulness\": 5},\n      \"B\": {\"accuracy\": 1, \"specificity\": 2, \"faithfulness\": 1, \"usefulness\": 2},\n      \"winner\": \"A\",\n      \"reason\": \"A correctly rejects the false premise. It states that Hormozi advised going all in on door-to-door and building a canvassing team, which are both required points. It also mentions the two-month-old business and the shift toward repairs. B hedges that it cannot confirm the exchange, but it still explains why moving to Google Ads would make sense. It never identifies that the actual advice was the opposite, which is a listed error.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"The owner reported closing roughly one sale for every 20 doors he knocked.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The supplied evidence quotes do not include a close-rate figure. It may appear in the full transcript, but the packet does not confirm it.\"\n        },\n        {\n          \"answer\": \"A\",\n          \"claim\": \"He suggested explaining commissions as expected earnings per door.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"Neither the reference stance nor the evidence quotes mention a per-door commission framing.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"The likely reason was leverage: Google Ads could bring in prospects already looking for a roofer (implicitly accepting that Hormozi advised moving to Google Ads).\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"The source shows Hormozi saying 'you should go all in door to door' and 'the first thing we said was go all in on door to door as primary growth engine.' Per the absence check, 'Google' appears only as 'Google review.'\"\n        }\n      ]\n    },\n    {\n      \"id\": \"p-0d7a755834632ca5\",\n      \"A\": {\"accuracy\": 2, \"specificity\": 2, \"faithfulness\": 2, \"usefulness\": 3},\n      \"B\": {\"accuracy\": 5, \"specificity\": 5, \"faithfulness\": 5, \"usefulness\": 5},\n      \"winner\": \"B\",\n      \"reason\": \"B matches the source: yes, go at least for a while, and you can come back. It gives the reasons (peers, ambition, faster investors, respect from investors back home) and the half-as-likely unicorn statistic with the selection-bias caveat. It also covers YC as the route and the benefit of returning to help Stockholm. A opens with 'No—not as an absolute requirement' and steers toward staying in Stockholm depending on circumstances. That softens and partly inverts Graham's explicit 'Yes, you should... you should at least go.' A also lacks the specific points from the talk.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"No—not as an absolute requirement; Graham treats location as a meaningful advantage rather than something you must do.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"In the Stockholm talk, Graham says: 'the answer is the same now as it always is. Yes, you should. You can go there for a bit and then come back, but you should at least go.'\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"His April 2026 advice to Stockholm founders.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The source's publication date is 2026-05-13. The talk could have been delivered earlier, since publication and event dates can differ, but the packet does not confirm April 2026.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"He acknowledges his interest as YC co-founder and accepts that family can matter more than maximizing company value.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The evidence quotes do not include these statements. They may be in the full talk but cannot be confirmed from the packet.\"\n        }\n      ]\n    }\n  ]\n}\n```",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 27.037,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "4ad4d4f41e18269189b1e4b0c730a2bf66a12fa01f65983ecb9b8aa0a0824c45"
+    }
+  ],
+  "batch": {
+    "blocked_pair_ids": [],
+    "chars_per_token": 2.44,
+    "eligible_pair_ids": [
+      "p-d1ebfc172a92cae3",
+      "p-1b481a7b755f0829",
+      "p-0d7a755834632ca5"
+    ],
+    "estimated_input_tokens": 15596,
+    "id": "diagnostic12--opus--sol--batch-00",
+    "judge_family": "opus",
+    "pair_ids": [
+      "p-d1ebfc172a92cae3",
+      "p-1b481a7b755f0829",
+      "p-0d7a755834632ca5"
+    ],
+    "prompt_bytes": 38085,
+    "prompt_sha256": "edcb2b555b31468cd00bd462bb7fb70587daa2efff8e449769bb56487beda441",
+    "suite": "diagnostic12"
+  },
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "decoded": {},
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 15596,
+  "event_count": 12,
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:35:29.658834+00:00",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "parse_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "prompt_sha256": "edcb2b555b31468cd00bd462bb7fb70587daa2efff8e449769bb56487beda441",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 15073,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 15073,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 15073,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 15073,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 2895,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 2895,
+      "output_tokens_details": {
+        "thinking_tokens": 937
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ]
+}

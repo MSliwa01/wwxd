@@ -1,0 +1,114 @@
+{
+  "actual_input_tokens": 16541,
+  "answer": "```json\n{\n  \"judgments\": [\n    {\n      \"id\": \"p-347dcc25a926e232\",\n      \"A\": {\"accuracy\": 2, \"specificity\": 2, \"faithfulness\": 1, \"usefulness\": 1},\n      \"B\": {\"accuracy\": 2, \"specificity\": 2, \"faithfulness\": 2, \"usefulness\": 2},\n      \"winner\": \"B\",\n      \"reason\": \"Neither answer meets the required points. Neither says the story belongs to the Diary Of A CEO host, and neither summarizes the European listing, the banks' 4x NASDAQ claim or the $7M–$8M IPO equity. A also invents a reframing: it says Hormozi 'often recounts' the narrative and presents it as a theoretical principle he teaches, which misdescribes a concrete personal anecdote told by someone else. B correctly denies that this is Hormozi's story and that his company listed on the NASDAQ, which avoids both listed errors, though it misses that Hormozi agreed and gave his 'same work, more zeros' example. Both add unverified claims about private equity deals, so B wins on faithfulness to the attribution correction.\",\n      \"factual_objections\": [\n        {\"answer\": \"A\", \"claim\": \"The story about a valuation quadrupling by listing on the NASDAQ reflects a theoretical financial principle Hormozi frequently teaches rather than a personal anecdote.\", \"label\": \"contradicted\", \"evidence\": \"The transcript shows it is a first-person anecdote from the interviewer: 'when my company went public on a Stock Exchange in um Europe' and banks said 'the exact same business would be worth four times more' on the NASDAQ. It is not a Hormozi teaching principle.\"},\n        {\"answer\": \"A\", \"claim\": \"Alex Hormozi often recounts a specific narrative regarding valuation adjustments and liquidity events tied to this story.\", \"label\": \"contradicted\", \"evidence\": \"In the source the narrative is told by the host. Hormozi only responds '100% I thoroughly agree with everything you just said' and gives his own CRO example.\"},\n        {\"answer\": \"A\", \"claim\": \"Private equity firm American Pacific Group acquired a majority stake in Acquisition.com's portfolio operations.\", \"label\": \"unverified\", \"evidence\": \"The reference packet contains nothing about this transaction.\"},\n        {\"answer\": \"B\", \"claim\": \"Hormozi sold a majority stake in his licensing and supplement companies to a private equity firm.\", \"label\": \"unverified\", \"evidence\": \"The reference packet does not address Hormozi's liquidity events.\"},\n        {\"answer\": \"B\", \"claim\": \"Acquisition.com takes minority stakes in private small and mid-sized businesses.\", \"label\": \"unverified\", \"evidence\": \"The reference packet does not address Acquisition.com's investment structure.\"}\n      ]\n    },\n    {\n      \"id\": \"p-d55f29f798f63a11\",\n      \"A\": {\"accuracy\": 5, \"specificity\": 5, \"faithfulness\": 4, \"usefulness\": 5},\n      \"B\": {\"accuracy\": 2, \"specificity\": 3, \"faithfulness\": 2, \"usefulness\": 3},\n      \"winner\": \"A\",\n      \"reason\": \"A covers every required point:\\n- stop paying lawyers because pre-PMF stock is worthless;\\n- the leaving founder goes under 5%, and 1–2% or less within the first year, even if vested;\\n- a no-fault, clean separation.\\n\\nIt also covers supporting points: about a week at minimal cost, reasonable severance, and not making lawyers judges. It notes the misconduct exception only loosely, as an assumption. B also advises stopping the lawyer fight and negotiating directly. However, it tells the founder to keep a prorated portion of vested stock for nine months of work. That contradicts the source, which says the leaving founder should give most of it back even if vested. B also gives no percentages and misses the no-fault framing.\",\n      \"factual_objections\": [\n        {\"answer\": \"B\", \"claim\": \"Your co-founder should keep a prorated portion of his vested stock representing his nine months of work, with only unvested shares returning to the pool.\", \"label\": \"contradicted\", \"evidence\": \"The source says 'even if you vested, like get down to under 5% of the company, if it's within the first year, under 2%' and 'regardless of your vesting... make sure that that company has as much equity as possible.' Vested stock should largely be returned, not retained pro rata.\"},\n        {\"answer\": \"A\", \"claim\": \"Spending money on mediation makes no sense and risks leaving you in debt.\", \"label\": \"unverified\", \"evidence\": \"The source says paying lawyers makes no sense when stock is worth nothing. The specific claims about mediation and debt do not appear in the supplied quotes.\"}\n      ]\n    },\n    {\n      \"id\": \"p-66f97cdfd6a8bbe4\",\n      \"A\": {\"accuracy\": 4, \"specificity\": 3, \"faithfulness\": 4, \"usefulness\": 4},\n      \"B\": {\"accuracy\": 1, \"specificity\": 2, \"faithfulness\": 1, \"usefulness\": 2},\n      \"winner\": \"A\",\n      \"reason\": \"A rejects the false premise and states the actual advice: go all in on door-to-door as the primary growth engine and build a dedicated team. That matches 'go all in door to door' and the 'DDD army' line. It omits the case details (Caleb, Keys Roofing, St. Louis), the other advice and the 90-day outcome. It also adds an unverified claim that Hormozi recommended Google Ads elsewhere for established businesses. B only rejects a strawman (that Hormozi advises this 'universally'). It then accepts the premise for this case, speculates about why Hormozi 'likely gave that specific advice', and builds a rationale for paid search. That commits the listed errors of accepting the premise and inventing a Google Ads recommendation.\",\n      \"factual_objections\": [\n        {\"answer\": \"B\", \"claim\": \"Hormozi likely gave that specific advice to shift budget to Google Ads because the business had outgrown hustle-based outreach.\", \"label\": \"contradicted\", \"evidence\": \"Hormozi told the two-month-old roofing company 'you should go all in door to door' and 'the first thing we said was go all in on door to door as primary growth engine.' The absence check notes 'Google' appears in that episode only as 'Google review'.\"},\n        {\"answer\": \"A\", \"claim\": \"Hormozi did recommend Google Ads and digital marketing as a separate play for established service businesses.\", \"label\": \"unverified\", \"evidence\": \"The reference packet has no evidence of such a recommendation. The roofing episode mentions Google only as 'Google review', and no other Hormozi file in the packet addresses this.\"},\n        {\"answer\": \"A\", \"claim\": \"He praised the owner's ability to door-knock as a core asset.\", \"label\": \"unverified\", \"evidence\": \"The supplied quotes show the advice to go all in on door-to-door, but not explicit praise of the owner's door-knocking skill as a core asset.\"}\n      ]\n    }\n  ]\n}\n```",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 29.74,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7c653541bacf8512d08ed6c09592a740921aa74ade81b1ab3a6d647bad47ca58"
+    }
+  ],
+  "batch": {
+    "blocked_pair_ids": [],
+    "chars_per_token": 2.44,
+    "eligible_pair_ids": [
+      "p-347dcc25a926e232",
+      "p-d55f29f798f63a11",
+      "p-66f97cdfd6a8bbe4"
+    ],
+    "estimated_input_tokens": 15403,
+    "id": "diagnostic12--opus--gemini--batch-01",
+    "judge_family": "opus",
+    "pair_ids": [
+      "p-347dcc25a926e232",
+      "p-d55f29f798f63a11",
+      "p-66f97cdfd6a8bbe4"
+    ],
+    "prompt_bytes": 37587,
+    "prompt_sha256": "bedf7b485908455976eaef1d5d320215d8ab9c6d090c5e229db4b5e2ac2b5dcb",
+    "suite": "diagnostic12"
+  },
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "decoded": {},
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 15403,
+  "event_count": 12,
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:37:16.408453+00:00",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "parse_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "prompt_sha256": "bedf7b485908455976eaef1d5d320215d8ab9c6d090c5e229db4b5e2ac2b5dcb",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 14971,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 14971,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 14971,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 14971,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 3250,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 3250,
+      "output_tokens_details": {
+        "thinking_tokens": 905
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ]
+}

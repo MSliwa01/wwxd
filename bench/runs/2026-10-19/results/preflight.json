@@ -1,0 +1,11 @@
+{
+  "answer_target": 144,
+  "issues": [
+    "Independent review and parent approval have not been supplied.",
+    "Actual provider token counts are pending; full-context capacity requires parent acknowledgment."
+  ],
+  "judgment_unit_target": 216,
+  "manifest_sha256": "49567cdb60a4c8d736b1648008a25bf6825ff5e0c0983eda5667be342648e4d5",
+  "provider_calls": 0,
+  "status": "frozen_awaiting_review"
+}

@@ -1,0 +1,72 @@
+{
+  "actual_input_tokens": 11615,
+  "answer": "```json\n{\n  \"judgments\": [\n    {\n      \"id\": \"p-d1ebfc172a92cae3\",\n      \"A\": {\n        \"accuracy\": 4,\n        \"faithfulness\": 4,\n        \"specifity\": 3,\n        \"usefulness\": 4\n      },\n      \"B\": {\n        \"accuracy\": 5,\n        \"faithfulness\": 5,\n        \"specifity\": 5,\n        \"usefulness\": 5\n      },\n      \"winner\": \"B\",\n      \"reason\": \"Answer B accurately captures Michael Seibel's specific, counterintuitive core advice on pre-product-market fit co-founder breakups: that the departing founder should give up most of their equity (getting down to 1-2% for a departure within the first year), even if vested, to leave the remaining team with enough stock to build value. Answer A hedges too much on the vested stock and misses the crucial 1-2% figure specified by Seibel for a 9-month departure.\",\n      \"factual_objections\": []\n    },\n    {\n      \"id\": \"p-1b481a7b755f0829\",\n      \"A\": {\n        \"accuracy\": 5,\n        \"faithfulness\": 5,\n        \"specifity\": 5,\n        \"usefulness\": 5\n      },\n      \"B\": {\n        \"accuracy\": 3,\n        \"faithfulness\": 3,\n        \"specifity\": 2,\n        \"usefulness\": 3\n      },\n      \"winner\": \"A\",\n      \"reason\": \"Answer A correctly recognizes the false premise in the user's question, noting that Hormozi actually told the young roofing owner to go all-in on door-to-door sales rather than shifting to Google Ads. Answer B falls for the false premise and attempts to rationalize Google Ads advice that was never given.\",\n      \"factual_objections\": []\n    },\n    {\n      \"id\": \"p-c272861f7b71771c\",\n      \"A\": {\n        \"accuracy\": 3,\n        \"faithfulness\": 3,\n        \"specifity\": 3,\n        \"usefulness\": 3\n      },\n      \"B\": {\n        \"accuracy\": 3,\n        \"faithfulness\": 3,\n        \"specifity\": 3,\n        \"usefulness\": 3\n      },\n      \"winner\": \"tie\",\n      \"reason\": \"Both answers fail to identify the core trick in the question: the four-times NASDAQ story and subsequent IPO equity deal belong to the interviewer (Steven Bartlett), not Alex Hormozi. Both models treat the anecdote as something to analyze conceptually rather than recognizing it as a false attribution to Hormozi. Because both miss this key attribution fact identically, they tie in quality.\",\n      \"factual_objections\": []\n    }\n  ]\n}\n```",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 2.53,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "ed7db3c4e5f7ca61bbd0e089d6f66906ae4ee856bb1a4f11c5ade7e4728d6855"
+    }
+  ],
+  "batch": {
+    "blocked_pair_ids": [],
+    "chars_per_token": 3.2,
+    "eligible_pair_ids": [
+      "p-d1ebfc172a92cae3",
+      "p-1b481a7b755f0829",
+      "p-c272861f7b71771c"
+    ],
+    "estimated_input_tokens": 11952,
+    "id": "diagnostic12--gemini--sol--batch-00",
+    "judge_family": "gemini",
+    "pair_ids": [
+      "p-d1ebfc172a92cae3",
+      "p-1b481a7b755f0829",
+      "p-c272861f7b71771c"
+    ],
+    "prompt_bytes": 38280,
+    "prompt_sha256": "3e4830a19b906a61067179454fa3a6fac9cf6065f622de34da631cec499c3176",
+    "suite": "diagnostic12"
+  },
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "decoded": {},
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 11952,
+  "event_count": 1,
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:37:18.998459+00:00",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "parse_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "prompt_sha256": "3e4830a19b906a61067179454fa3a6fac9cf6065f622de34da631cec499c3176",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 681,
+      "promptTokenCount": 11615,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 11615
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 12296
+    }
+  ]
+}

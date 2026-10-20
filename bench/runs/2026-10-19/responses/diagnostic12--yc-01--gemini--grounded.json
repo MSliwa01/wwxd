@@ -1,0 +1,57 @@
+{
+  "actual_input_tokens": 172729,
+  "answer": "Paul Graham’s stance is that you should not start a startup in college. Running a startup takes over your life to a degree you cannot imagine and is fundamentally incompatible with being a full-time student. He also advises young people that their early twenties are the optimal time for open-ended exploration, curiosity, and learning powerful things out of genuine interest rather than chasing a business. Because you will be more likely to succeed later, you sacrifice nothing by waiting.\n\nHowever, there is an important exception. If you are building a side project and it takes off on its own—becoming an incipient startup—then you face a choice between running with it or dropping out, and it may be reasonable to run with it. Furthermore, universities should give students free time precisely so that student projects can occasionally turn into startups, much as Meta and Microsoft began during reading periods.\n\n**Concrete Next Steps:**\n1. Focus on your computer science studies and use college to learn powerful things out of genuine curiosity.\n2. Keep building your side project in your free time, treating it as an ambitious project rather than a formal company.\n3. Wait to see if the project experiences organic breakout traction that forces your hand.\n\n**Material Assumptions & Decision Criteria:**\nThis recommendation assumes your side project is currently a student project rather than an exploding rocket ship with immediate demand. If your project has already achieved rapid, organic growth and users are pulling it out of your hands, the rule yields to the exception: you should drop out and run with it.",
+  "arm": "grounded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 3.645,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "3bfe8948163e1e3c5a2abb6554d87856b48296c24e9b0585e41d8dcb167e1d89"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 172770,
+  "event_count": 1,
+  "family": "gemini",
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:22:04.290260+00:00",
+  "format_deviations": [],
+  "id": "diagnostic12--yc-01--gemini--grounded",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_sha256": "e49e3f9ff85d87a45f8633e2872ba2690bf618720ef51fe38487844429130b12",
+  "question_key": "diagnostic12--yc-01",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 310,
+      "promptTokenCount": 172729,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 172729
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 173039
+    }
+  ],
+  "words": 262
+}

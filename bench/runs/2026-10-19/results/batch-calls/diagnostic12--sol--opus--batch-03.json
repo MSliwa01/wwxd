@@ -1,0 +1,202 @@
+{
+  "actual_input_tokens": 24347,
+  "answer": "{\n  \"judgments\": [\n    {\n      \"id\": \"p-4d9952cc71942a88\",\n      \"A\": {\n        \"accuracy\": 3,\n        \"specificity\": 3,\n        \"faithfulness\": 2,\n        \"usefulness\": 3\n      },\n      \"B\": {\n        \"accuracy\": 5,\n        \"specificity\": 5,\n        \"faithfulness\": 5,\n        \"usefulness\": 5\n      },\n      \"winner\": \"B\",\n      \"reason\": \"B captures the central advice: return most equity even if vested, use the first-year 1–2% benchmark, stop adversarial legal spending, and arrange a clean, no-fault separation with reasonable severance. A gets the broad settlement advice right but replaces the key equity guidance with a contribution-based split and omits several important practical points. Both appropriately flag the possible vesting-cliff issue.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"The departing founder should keep a stake roughly proportional to the time and value he contributed.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"The supplied guidance explicitly says to reduce the departing founder's ownership even if vested: under 5% generally and under 2% within the first year. It prioritizes equity for the remaining team rather than a proportional accounting of past contributions.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"p-ee2b7ee36164eccb\",\n      \"A\": {\n        \"accuracy\": 4,\n        \"specificity\": 4,\n        \"faithfulness\": 4,\n        \"usefulness\": 4\n      },\n      \"B\": {\n        \"accuracy\": 4,\n        \"specificity\": 5,\n        \"faithfulness\": 5,\n        \"usefulness\": 5\n      },\n      \"winner\": \"B\",\n      \"reason\": \"B more completely explains Graham's default advice, the incompatibility between running a startup and full-time study, the benefits of waiting, and the exception for a project that takes off. A preserves the broad recommendation and exception but omits the central incompatibility. B's assertion that the student's current situation already qualifies as the exception is premature, although its subsequent guidance makes the condition clear.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"YC has made it easier for students to apply.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The supplied packet establishes Graham's advice about college and side projects but provides no evidence of a change to YC's application arrangements for students.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"Your situation is his exception.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"Graham's exception requires a side project that takes off on its own. The question establishes excitement about a project, but supplies no evidence of traction or spontaneous growth.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"p-e359ab5393b60ed5\",\n      \"A\": {\n        \"accuracy\": 2,\n        \"specificity\": 2,\n        \"faithfulness\": 1,\n        \"usefulness\": 2\n      },\n      \"B\": {\n        \"accuracy\": 5,\n        \"specificity\": 5,\n        \"faithfulness\": 5,\n        \"usefulness\": 5\n      },\n      \"winner\": \"B\",\n      \"reason\": \"B accurately states Hormozi's debt-payoff lean, explains the long-term risk argument, preserves the owner's prior payoff plan, and recognizes that proven advertising can continue alongside repayment. A substitutes a generic interest-versus-return framework and unsupported numerical thresholds for the documented stance. Its acknowledgment that it is making an inference does not resolve that substantive mismatch.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Hormozi would decide entirely from the numbers and likely favor funding proven growth instead of paying down cheap debt.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"In the supplied operating-business consultation, Hormozi explicitly says he skews close to the Ramsey side because debt increases risk over time, approves clearing the debt, and retains repayment in the final plan while also continuing proven advertising. He additionally describes his preference as partly emotional.\"\n        }\n      ]\n    }\n  ]\n}",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 45.94,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "695256f58c0c07d9e1a0d17c8d5db7a68a9c5e46b2ddb9f93c9472197c867849"
+    }
+  ],
+  "batch": {
+    "blocked_pair_ids": [],
+    "chars_per_token": 3.57,
+    "eligible_pair_ids": [
+      "p-4d9952cc71942a88",
+      "p-ee2b7ee36164eccb",
+      "p-e359ab5393b60ed5"
+    ],
+    "estimated_input_tokens": 11894,
+    "id": "diagnostic12--sol--opus--batch-03",
+    "judge_family": "sol",
+    "pair_ids": [
+      "p-4d9952cc71942a88",
+      "p-ee2b7ee36164eccb",
+      "p-e359ab5393b60ed5"
+    ],
+    "prompt_bytes": 42471,
+    "prompt_sha256": "1d6b43a7e820b1d6cdc3a9d1796f31ddf5b845ed1cca1561de374d65fcc1a98e",
+    "suite": "diagnostic12"
+  },
+  "chars_per_token": 3.57,
+  "command": [
+    "codex",
+    "exec",
+    "--ignore-user-config",
+    "--ignore-rules",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--model",
+    "gpt-6.1-sol",
+    "--json",
+    "--color",
+    "never",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "unified_exec",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "view_image",
+    "--disable",
+    "shell_snapshot",
+    "--disable",
+    "skill_search",
+    "--disable",
+    "skill_mcp_dependency_install",
+    "--disable",
+    "request_permissions_tool",
+    "--disable",
+    "sleep_tool",
+    "-c",
+    "model_reasoning_effort=\"high\"",
+    "-c",
+    "project_doc_max_bytes=0",
+    "-c",
+    "web_search=\"disabled\"",
+    "-c",
+    "mcp_servers={}",
+    "-c",
+    "developer_instructions=\"Answer the supplied task using only its text. Do not use tools or commands.\"",
+    "-"
+  ],
+  "decoded": {
+    "p-4d9952cc71942a88": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "accuracy": 3,
+          "faithfulness": 2,
+          "specificity": 3,
+          "usefulness": 3
+        },
+        "B": {
+          "accuracy": 5,
+          "faithfulness": 5,
+          "specificity": 5,
+          "usefulness": 5
+        },
+        "factual_objections": [
+          {
+            "answer": "A",
+            "claim": "The departing founder should keep a stake roughly proportional to the time and value he contributed.",
+            "evidence": "The supplied guidance explicitly says to reduce the departing founder's ownership even if vested: under 5% generally and under 2% within the first year. It prioritizes equity for the remaining team rather than a proportional accounting of past contributions.",
+            "label": "contradicted"
+          }
+        ],
+        "id": "p-4d9952cc71942a88",
+        "reason": "B captures the central advice: return most equity even if vested, use the first-year 1–2% benchmark, stop adversarial legal spending, and arrange a clean, no-fault separation with reasonable severance. A gets the broad settlement advice right but replaces the key equity guidance with a contribution-based split and omits several important practical points. Both appropriately flag the possible vesting-cliff issue.",
+        "winner": "B"
+      }
+    },
+    "p-e359ab5393b60ed5": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "accuracy": 2,
+          "faithfulness": 1,
+          "specificity": 2,
+          "usefulness": 2
+        },
+        "B": {
+          "accuracy": 5,
+          "faithfulness": 5,
+          "specificity": 5,
+          "usefulness": 5
+        },
+        "factual_objections": [
+          {
+            "answer": "A",
+            "claim": "Hormozi would decide entirely from the numbers and likely favor funding proven growth instead of paying down cheap debt.",
+            "evidence": "In the supplied operating-business consultation, Hormozi explicitly says he skews close to the Ramsey side because debt increases risk over time, approves clearing the debt, and retains repayment in the final plan while also continuing proven advertising. He additionally describes his preference as partly emotional.",
+            "label": "contradicted"
+          }
+        ],
+        "id": "p-e359ab5393b60ed5",
+        "reason": "B accurately states Hormozi's debt-payoff lean, explains the long-term risk argument, preserves the owner's prior payoff plan, and recognizes that proven advertising can continue alongside repayment. A substitutes a generic interest-versus-return framework and unsupported numerical thresholds for the documented stance. Its acknowledgment that it is making an inference does not resolve that substantive mismatch.",
+        "winner": "B"
+      }
+    },
+    "p-ee2b7ee36164eccb": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "accuracy": 4,
+          "faithfulness": 4,
+          "specificity": 4,
+          "usefulness": 4
+        },
+        "B": {
+          "accuracy": 4,
+          "faithfulness": 5,
+          "specificity": 5,
+          "usefulness": 5
+        },
+        "factual_objections": [
+          {
+            "answer": "A",
+            "claim": "YC has made it easier for students to apply.",
+            "evidence": "The supplied packet establishes Graham's advice about college and side projects but provides no evidence of a change to YC's application arrangements for students.",
+            "label": "unverified"
+          },
+          {
+            "answer": "B",
+            "claim": "Your situation is his exception.",
+            "evidence": "Graham's exception requires a side project that takes off on its own. The question establishes excitement about a project, but supplies no evidence of traction or spontaneous growth.",
+            "label": "unverified"
+          }
+        ],
+        "id": "p-ee2b7ee36164eccb",
+        "reason": "B more completely explains Graham's default advice, the incompatibility between running a startup and full-time study, the benefits of waiting, and the exception for a project that takes off. A preserves the broad recommendation and exception but omits the central incompatibility. B's assertion that the student's current situation already qualifies as the exception is premature, although its subsequent guidance makes the condition clear.",
+        "winner": "B"
+      }
+    }
+  },
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 11894,
+  "event_count": 4,
+  "finish_reasons": [
+    "turn.completed"
+  ],
+  "finished": "2026-10-19T11:34:26.220737+00:00",
+  "observed_models": [],
+  "parse_error": "",
+  "prompt_sha256": "1d6b43a7e820b1d6cdc3a9d1796f31ddf5b845ed1cca1561de374d65fcc1a98e",
+  "requested_model": "gpt-6.1-sol",
+  "serving_model_attested": false,
+  "status": "ok",
+  "usage_events": [
+    {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 11776,
+      "input_tokens": 24347,
+      "output_tokens": 1935,
+      "reasoning_output_tokens": 999
+    }
+  ]
+}

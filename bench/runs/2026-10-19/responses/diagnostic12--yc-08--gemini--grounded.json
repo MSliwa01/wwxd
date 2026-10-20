@@ -1,0 +1,57 @@
+{
+  "actual_input_tokens": 172718,
+  "answer": "Michael Seibel would tell you to stop treating fundraising as a school or a game to be won with a polished deck. He would point out that months of low-leverage pitching is a drag on your company and warn you that investors often string founders along like buyers purchasing an option, keeping meetings going just in case the startup takes off without ever intending to invest early. \n\nInstead of spending more time decksmithing, Seibel would advise you to become a company investors chase. He notes that investors chase 80 to 90 percent of their deals, meaning leverage is built in the work before any negotiation. Your immediate next steps are to pull the plug on endless follow-up meetings, return to building, and focus entirely on growth and product traction. If you have a working product that grows fast, even a terrible fundraiser with something that works will easily raise money compared to a great fundraiser with nothing. \n\nThis recommendation assumes you have a product in the market and early indicators of user pull. If you are pre-product and have no usage data, your pitch meetings are essentially customer discovery calls; in that case, the fix is to build a ridiculously simple MVP in weeks, launch it to actual users, and get feedback on the rough version rather than hiding behind a deck. The core decision criterion is your growth rate: if your metrics are flat after months of meetings, more pitch meetings will not save you, but a better product that users actually want will.",
+  "arm": "grounded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 3.537,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "ef07174adb61dcdbf9219692df32dc6c1445c174a436e1816185c6ccd1bbf1fc"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 172773,
+  "event_count": 1,
+  "family": "gemini",
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:22:51.324022+00:00",
+  "format_deviations": [],
+  "id": "diagnostic12--yc-08--gemini--grounded",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_sha256": "21ea3ff0a6fd64dd575c14a1e18970a592e31772a1f35922f56997d2d00cbece",
+  "question_key": "diagnostic12--yc-08",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 297,
+      "promptTokenCount": 172718,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 172718
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 173015
+    }
+  ],
+  "words": 255
+}

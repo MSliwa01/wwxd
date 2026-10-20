@@ -1,0 +1,99 @@
+{
+  "actual_input_tokens": 2614,
+  "answer": "**No. Don't quit now. Take the promotion and keep building on the side**, unless the next two weeks show the conditions below.\n\n**Why:** 1,400 sign-ups from two Reddit posts and one viral TikTok shows the idea gets attention. It doesn't yet show that couples keep using the app or would pay for it. Viral spikes usually fade. Nine months of savings, with no cofounder and no revenue, gives you roughly six months of real runway once you allow for a job search if it fails. That's too short to find product-market fit alone from a standing start. The promotion adds income, savings, and a stronger fallback position.\n\n**Before the end of the month:**\n1. **Check retention.** How many couples, with both partners active, used the app in the last two weeks? What does week-4 retention look like for the July cohorts?\n2. **Test willingness to pay.** Add a paid tier or a pre-order and email your most active users. Ten to twenty paying couples tell you more than 1,400 sign-ups.\n3. **Read your employment agreement.** You're building a fintech product while working at a bank. Check the IP-assignment, conflict-of-interest, and outside-activity clauses. Disclose the project if required. A promotion may tighten these rules, so ask before you sign.\n\n**Assumptions:** no meaningful revenue yet, no dependents, and the one-year commitment is a professional promise rather than a contractual penalty.\n\n**Switch to \"yes, quit\" if** most of these are true:\n- 30% or more of active couples are still engaged after four weeks.\n- People are paying, or committing to pay.\n- Growth continues without new viral posts.\n- The bank's policies would block the project if you stay.\n\nIf retention is weak, staying costs you little. Iterate on evenings and revisit the decision in a year with real data.",
+  "arm": "raw",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 14.546,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "cc415c2932deaa2dd8396c956f282cdba67e6c3ec853a71daf5dab367116f48e"
+    }
+  ],
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 617,
+  "event_count": 10,
+  "family": "opus",
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:29:45.764147+00:00",
+  "format_deviations": [],
+  "id": "newadvice12--advice-yc-03--opus--raw",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "prompt_sha256": "0563ae9f329f6baf0c82526cc984db23d9d03cc8c7d1622291e5f86c9b5cc85d",
+  "question_key": "newadvice12--advice-yc-03",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "newadvice12",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 1044,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 1044,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 1044,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 1044,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 1012,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 1012,
+      "output_tokens_details": {
+        "thinking_tokens": 425
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ],
+  "words": 298
+}

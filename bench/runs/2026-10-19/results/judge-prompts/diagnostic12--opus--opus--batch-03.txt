@@ -1,0 +1,424 @@
+Evaluation date: 2026-10-19. This is the current date, not a future date. May 2026 is in the past. Publication dates and dates of events described in a source are distinct. A model training cutoff does not invalidate supplied later material. You are an independent evaluator. Use no tools, commands, files, browsing, or external retrieval. A and B are anonymous. Their ordering conveys nothing. Do not infer their model, source access, or provenance. Do not reward writing style, citation presence, quotations, expert agreement, or presumed source use. A tie is valid.
+Score each answer on the four specified integer scales, each from 1 to 5. Anchors: 1 fundamentally deficient; 2 major problems; 3 mixed with meaningful gaps; 4 good with minor gaps; 5 strong and sufficiently complete. Choose A, B, or tie for substantive overall quality. Preserve uncertainty rather than inventing evidence.
+Return ONLY a JSON object with exactly one key, "judgments", containing one object per supplied pair. Each object has exactly: "id", "A", "B", "winner", "reason", "factual_objections". A and B each contain exactly the four dimension names and integer scores. winner is "A", "B", or "tie"; reason is a nonempty string. factual_objections is a list, possibly empty, of objects with exactly "answer" ("A" or "B"), "claim", "label" ("contradicted" or "unverified"), and "evidence" (a nonempty explanation). Distinguish an established contradiction from an unverified claim.
+Evaluate accuracy, specificity, faithfulness, and usefulness using the complete audited reference packet. The reference is evidence, not a required script. Missing optional detail is not automatically a false claim. Label a factual objection contradicted only when supplied evidence establishes the contradiction; otherwise label it unverified. Do not treat absence from the reference as proof of falsehood. Resolve a conflict between a summary and direct evidence in favor of the direct evidence and explain it.
+
+Pairs:
+[
+  {
+    "id": "p-e359ab5393b60ed5",
+    "question": "My service business is profitable, but I'm carrying about $60k of debt. Should I pay it off or keep the cash for growth? What would Alex Hormozi say?",
+    "A": "# Pay Off the $60k or Invest in Growth?\n\n**Short answer:** Compare the debt's after-tax interest rate with the return you can *reliably* get from growth spending. Pay off whichever loses that comparison. Keep a cash buffer either way.\n\n## What Hormozi would likely say\n\nThis is an inference from his general public views, not a known answer to your specific case. Hormozi usually treats debt as a math problem, not a moral one. If you have a proven way to turn $1 into $3 or more, such as an offer with a known customer acquisition cost and lifetime value, he would likely push you to fund that engine instead of paying down cheap debt. He also stresses survival, keeping cash on hand, and not paying for growth you haven't proven yet. Whether he would favor payoff or growth for you depends entirely on your numbers.\n\n## Decision rules\n\n- **Pay it off** if the rate is above about 12–15% (credit cards, merchant cash advances, expensive term loans), if it carries a personal guarantee that worries you, or if your growth ideas are unproven.\n- **Keep the cash** if the rate is low (under about 7–8%), you have a repeatable acquisition channel with a measured return well above that rate, and you can't get financing again easily.\n- **Split it** if the case is borderline. Pay off the most expensive portion and put the rest into tests you can measure.\n\n## Next steps\n\n1. List each debt with its rate, term, prepayment penalty, and guarantee.\n2. Set aside 3–6 months of operating expenses that you don't touch.\n3. Calculate your real customer acquisition cost, lifetime value, and payback period.\n4. Run a small growth test first. Scale it only if the returns hold up.\n\n**Assumptions:** Your profit is steady, and the debt has no penalty for early repayment.",
+    "B": "**Short answer:** In most cases, pay it down aggressively, but not to zero cash, and keep funding only the growth that has proven returns.\n\n**What Hormozi would likely say:** He leans close to the Dave Ramsey end on business debt. His reasoning is that debt adds risk, and over a long horizon that risk tends to come due because businesses have slow seasons and volatility. In a consult with a profitable service business carrying about $60k, he backed the owner's plan to clear it in four to five months. He put it second on the priority list, right after a price increase. He also admits his debt aversion is partly emotional, about peace of mind, not a big financial lever. Separately, he says that if ads reliably return more than they cost and your tracking is trustworthy, you should keep spending. So his stance is \"pay off debt *and* keep doing cheap, proven fixes,\" not \"freeze growth.\" He never clearly says when borrowing to grow is justified.\n\n**Next steps:**\n1. Keep a cash reserve of roughly two to three months of operating costs.\n2. Put a fixed monthly amount toward the debt, highest interest rate first.\n3. Fund growth first with cheap wins: raise prices, improve your landing page and ads, and email past customers.\n4. Only increase spending where you can show the payback.\n\n**Things that would change this:**\n- **Pay off faster** if the rate is high (credit cards or merchant cash advances), revenue is seasonal or concentrated in a few clients, or the debt costs you sleep.\n- **Keep more cash for growth** if the rate is low and fixed, you have a channel with measured returns well above the interest rate, and you have the capacity to handle more customers.",
+    "reference": {
+      "actual_stance": "Pay it off. In the source the owner (Corey, HVAC duct cleaning, about $479k profit on $1.25M) already planned to clear the $60k in four to five months, and Hormozi approved ('Okay, good') and kept 'continue to pay off the debt' in the final plan. He calls it partly an emotional, back-of-mind issue and says he skews close to the Dave Ramsey side because debt increases risk, risk over a long horizon tends to come due, businesses have seasons and volatility, and many enduring companies such as Chick-fil-A run debt free. He did not frame it as debt instead of growth: in the same session he told Corey to keep raising ad spend while ROAS and CAC hold, after fixing the landing page and ads.",
+      "category": "fresh",
+      "errors": [
+        "Saying he advises keeping cheap debt because leverage is a tool.",
+        "Saying he told the owner to stop investing in growth until the debt is gone.",
+        "Stating the 5% and '100% in headache' figures as a firm quantified rule he gave."
+      ],
+      "evidence": [
+        {
+          "quote": "So, right now, we're allocating about 10% of our profit going towards paying off some of our debt.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "guest_corey",
+          "speaker_basis": "business owner answering Hormozi's question; content-inferred",
+          "timestamp": "0:33"
+        },
+        {
+          "quote": "Profit on that is 479,000. Uh, our net margin is 38%.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "guest_corey",
+          "speaker_basis": "business owner answering Hormozi's question; content-inferred",
+          "timestamp": "3:15"
+        },
+        {
+          "quote": "We are planning to pay off completely in the next four to five months.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "guest_corey",
+          "speaker_basis": "business owner answering Hormozi's question; content-inferred",
+          "timestamp": "8:37"
+        },
+        {
+          "quote": "Okay, good. That's one of those things that like I'd say this is more of an emotional thing",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "8:37"
+        },
+        {
+          "quote": "I tend to skew like very close to the Ramsey side and the single argument that I have around it is basically debt",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "8:37"
+        },
+        {
+          "quote": "increases risk. Risk when multiplied over a long time horizon tends to come due.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "9:10"
+        },
+        {
+          "quote": "businesses have seasons, they have volatility",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "9:10"
+        },
+        {
+          "quote": "If you look at some of the most enduring companies, a lot of like Chick-fil-A operate debt free.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "9:10"
+        },
+        {
+          "quote": "we just want to continue to spend month over month provided our ROAS and our CAC stay more or less the same.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "10:48"
+        },
+        {
+          "quote": "Two is you're going to continue to pay off the debt.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "30:45"
+        },
+        {
+          "quote": "But at least 100% in headache.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "uncertain",
+          "speaker_basis": "unlabeled >> turn after a separate '5%' turn; could be Hormozi or Corey",
+          "timestamp": "32:53"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold says paying off 'adds only about 5% to profit but removes 100% in headache' as Hormozi's argument. In the raw, '5%.' and 'But at least 100% in headache.' are separate unlabeled >> turns, so the speaker is uncertain. Demoted to a supporting point.",
+        "Gold omits that the owner had already decided to pay it off and that Hormozi approved rather than argued him into it, and that the same plan kept funding growth through ads. Added as context so answers that say 'pay it off and keep funding proven growth from cash flow' are not marked wrong.",
+        "Raw-internal inconsistency: 10% of $479k profit is about $48k a year, which does not clear $60k in four to five months. Not material to the stance."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-09",
+      "key_status": "corrected_context",
+      "primary_sources": [
+        "yt-OQf2Ba-Lp_4"
+      ],
+      "question": "My service business is profitable, but I'm carrying about $60k of debt. Should I pay it off or keep the cash for growth? What would Alex Hormozi say?",
+      "required_points": [
+        "Lean toward paying off the debt (he skews close to the Ramsey side).",
+        "Reason: debt increases risk, and risk over a long time horizon tends to come due; businesses have seasons and volatility."
+      ],
+      "supporting_points": [
+        "Enduring companies like Chick-fil-A operate debt free.",
+        "He calls it partly an emotional, back-of-mind issue.",
+        "In context the owner already planned to pay it off in four to five months from cash flow, and Hormozi approved.",
+        "Not either/or: in the same plan he kept funding proven ads while ROAS and CAC held.",
+        "Paying it off adds only a few percent to profit but removes a lot of headache (speaker of the '5%' figure is uncertain; see uncertainty)."
+      ],
+      "uncertainty": [
+        "The question gives no profit, interest rate or growth return. His stance comes from a business with about $479k annual profit, where $60k is small. Conditional answers that ask for these numbers are acceptable if they still state his lean.",
+        "yt-sL16tsGafcQ at 16:55 to 18:02 discusses acquisition/fund-level debt as leverage. That is distinct from this operating-business debt case. A conditional answer noting that distinction is not itself an error; the specific Ramsey lean and cash-flow context remain the required factual stance."
+      ],
+      "vault": "hormozi"
+    }
+  },
+  {
+    "id": "p-1c078e330f8b0486",
+    "question": "Should my ads admit the weaknesses of my product, and if so how do I word it? What would Alex Hormozi say?",
+    "A": "**Yes, usually.** Hormozi calls this \"damaging admissions\" and ranks it among his favorite ad tactics. His reasoning is that admitting a flaw costs you a little in promise but gains you more in trust, and trust wins. It also sets you apart, because most competitors won't say anything true and unflattering about themselves.\n\n**How to word it:** state the real flaw first, then add \"but\" and the claim you want believed. People remember what comes after \"but.\"\n\n- \"Our websites are ugly, but they convert.\"\n- \"We're not the cheapest, but we're the only ones who finish in a week.\"\n- \"The app looks dated, but it's the one accountants actually trust.\"\n- \"Setup takes an afternoon, but after that it runs itself.\"\n\n**Next steps:**\n1. List every complaint prospects and customers raise, from reviews, sales calls and cancellations.\n2. Pick the one or two where the flaw is real and you have a strong counterweight.\n3. Write each as flaw-but-benefit, at a simple reading level. Add humor if it comes naturally.\n4. Test it against your current ad. Then use the same admissions at the start of sales calls (\"before the good, here's the bad\") so prospects qualify themselves.\n\n**When to admit, and when not to:**\n- **Admit:** flaws that are minor, already widely known, or that hint at a strength (expensive suggests quality, slow suggests careful).\n- **Don't lead with:** a flaw that breaks your core promise, a safety or compliance issue, or anything you can't immediately counter. Fix those instead.\n- **Watch your numbers.** If the admission lowers click-through but raises close rate and retention, it's working.\n\n**Certain vs. uncertain:** the principle and structure are clearly his. How much it lifts your results is not, so measure it rather than assume it.",
+    "B": "**Yes, usually, but selectively.** Admitting a real, minor weakness makes your strong claims more believable. The goal is to filter out bad-fit buyers and pre-empt the objection a skeptic is already thinking.\n\n**Alex Hormozi's position, paraphrased:** He generally favors this kind of admission. Leading with a flaw signals honesty, lowers the reader's guard, and makes your bigger promise land harder. He typically pairs the admission with a reframe: the weakness is the cost of a strength, or it only matters to people who aren't your customer. That reflects his recurring themes. I can't confirm any specific ad or wording he has used.\n\n**How to word it:**\n\n1. **Weakness → because → benefit:** \"We're not the cheapest. Every order is hand-checked, so returns are under 1%.\"\n2. **Disqualify:** \"This isn't for you if you want results without doing the work. If you'll put in 20 minutes a day, it works.\"\n3. **Trade-off:** \"Setup takes a weekend. After that, it runs itself.\"\n4. **Concede, then prove:** \"Our app looks plain. It's also never gone down in three years.\"\n\n**Rules:**\n- Admit something real but non-fatal. It should be something buyers already suspect, like price, effort or speed.\n- Never admit a flaw in your core promise. A weight-loss product that doesn't reliably cause weight loss isn't a minor weakness.\n- Keep it to one sentence and pivot immediately.\n- Put it early, in the hook or first lines, where it earns trust for everything after.\n\n**Next steps:** List your top three sales objections and write one admit-and-reframe line for each. Then A/B test the best one against your current hook, judging by conversion rate and refund rate, not clicks.\n\n**When to skip it:** If no objection consistently stalls sales, or the weakness hits the core outcome, fix the product or pick a different angle instead.",
+    "reference": {
+      "actual_stance": "Yes. Use damaging admissions: own your real flaws up front, because what you give up in promise you gain in trust. Word it as flaw, then 'but', then the benefit, since people believe the clause after 'but'; reversing the order stresses the flaw. List the things customers already complain about and claim them; humor earns extra credit. In a sales setting he applies the same idea by opening with the bad before the good and saying who the offer will not work for, so prospects self-qualify.",
+      "category": "known",
+      "errors": [
+        "Advising to hide weaknesses or wait until the prospect raises them.",
+        "Putting the benefit first and the flaw after 'but' as the recommended order.",
+        "Recommending invented or fake flaws."
+      ],
+      "evidence": [
+        {
+          "quote": "you want to always own your flaws of course you have them of course your product isn't perfect say so and",
+          "source_date": "2025-05-07",
+          "source_id": "yt-JDR-R--4HhM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-JDR-R--4HhM.md",
+          "source_sha256": "8dead6f4201863ae62991d2ed37b42a93313e36a30216ca200b58aefc5d1cfad",
+          "source_title": "14 Years of Marketing Advice in 35 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "12:30"
+        },
+        {
+          "quote": "what you'll sacrifice in promise you'll gain in trust and trust trumps promise",
+          "source_date": "2025-05-07",
+          "source_id": "yt-JDR-R--4HhM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-JDR-R--4HhM.md",
+          "source_sha256": "8dead6f4201863ae62991d2ed37b42a93313e36a30216ca200b58aefc5d1cfad",
+          "source_title": "14 Years of Marketing Advice in 35 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "13:09"
+        },
+        {
+          "quote": "the statement that comes after the word but is the part that is the thing you want them to believe",
+          "source_date": "2025-05-07",
+          "source_id": "yt-JDR-R--4HhM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-JDR-R--4HhM.md",
+          "source_sha256": "8dead6f4201863ae62991d2ed37b42a93313e36a30216ca200b58aefc5d1cfad",
+          "source_title": "14 Years of Marketing Advice in 35 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "13:44"
+        },
+        {
+          "quote": "these markers write four times longer than others but they smell like crap what am I emphasizing i'm actually emphasizing the fact that they smell bad not the fact that they write longer",
+          "source_date": "2025-05-07",
+          "source_id": "yt-JDR-R--4HhM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-JDR-R--4HhM.md",
+          "source_sha256": "8dead6f4201863ae62991d2ed37b42a93313e36a30216ca200b58aefc5d1cfad",
+          "source_title": "14 Years of Marketing Advice in 35 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "14:26"
+        },
+        {
+          "quote": "write down all of the flaws all the things that people complain about the things that you know you could do better and claim them",
+          "source_date": "2025-05-07",
+          "source_id": "yt-JDR-R--4HhM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-JDR-R--4HhM.md",
+          "source_sha256": "8dead6f4201863ae62991d2ed37b42a93313e36a30216ca200b58aefc5d1cfad",
+          "source_title": "14 Years of Marketing Advice in 35 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "15:03"
+        },
+        {
+          "quote": "if you can do with humor you get even more bonus points",
+          "source_date": "2025-05-07",
+          "source_id": "yt-JDR-R--4HhM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-JDR-R--4HhM.md",
+          "source_sha256": "8dead6f4201863ae62991d2ed37b42a93313e36a30216ca200b58aefc5d1cfad",
+          "source_title": "14 Years of Marketing Advice in 35 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "15:39"
+        },
+        {
+          "quote": "Listen, before I tell you about the good, let me tell you about the bad.",
+          "source_date": "2026-02-28",
+          "source_id": "yt-MH-IMJxbUY4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-MH-IMJxbUY4.md",
+          "source_sha256": "0ee16a3ff11eaf668c6513ea5fd6db5581199780322ebe90b2c8ee92b0cf269f",
+          "source_title": "Building a $12,000,000 Business for a Stranger in 25 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Joel; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "19:42"
+        },
+        {
+          "quote": "So, you can have what you want, just not when you want.",
+          "source_date": "2026-02-28",
+          "source_id": "yt-MH-IMJxbUY4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-MH-IMJxbUY4.md",
+          "source_sha256": "0ee16a3ff11eaf668c6513ea5fd6db5581199780322ebe90b2c8ee92b0cf269f",
+          "source_title": "Building a $12,000,000 Business for a Stranger in 25 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Joel; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "20:14"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold stance and quotes match the raw transcript. Gold omitted the 'write down all the flaws and claim them' step, the humor bonus, and the sales-call version in MH-IMJxbUY4; these are now supporting points, not requirements."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-02",
+      "key_status": "confirmed_expanded",
+      "primary_sources": [
+        "yt-JDR-R--4HhM"
+      ],
+      "question": "Should my ads admit the weaknesses of my product, and if so how do I word it? What would Alex Hormozi say?",
+      "required_points": [
+        "Yes, admit real weaknesses (damaging admissions); it builds trust and makes later claims more believable.",
+        "Order matters: flaw first, then 'but', then the benefit; the part after 'but' is what people believe."
+      ],
+      "supporting_points": [
+        "Trust beats promise; sacrificing some promise is worth it.",
+        "Write down every flaw and complaint and claim it before the prospect thinks it.",
+        "Humor is a bonus.",
+        "In sales calls: tell them the bad before the good and who it is not for, so they self-qualify (MH-IMJxbUY4).",
+        "Admissions must be true, not invented."
+      ],
+      "uncertainty": [],
+      "vault": "hormozi"
+    }
+  },
+  {
+    "id": "p-bd456c713761bbb7",
+    "question": "Why did Hormozi tell that young roofing company owner to stop door-knocking and move his budget into Google Ads?",
+    "A": "I can't confirm that this specific exchange happened, so treat the premise with caution. It also runs against Hormozi's usual advice. He typically tells owners not to abandon a channel that works. His \"more, better, new\" approach says: do more of what's working, then improve it, and only then add a new channel.\n\nHis framework includes four lead-generation methods: warm outreach, cold outreach, content, and paid ads. Door-knocking is cold outreach, and in roofing it often works well, especially after storms. So a flat \"stop knocking, buy Google Ads\" would be unusual for him unless there were specific reasons.\n\n**If he did say it, the likely reasoning would be:**\n- **Owner's time:** The owner was doing the knocking himself. That caps growth because his hours are better spent on sales, hiring, or operations.\n- **Buyer intent:** People searching \"roof repair near me\" already have a problem. They tend to close faster and at higher rates than cold doorsteps.\n- **Scale and predictability:** Ad spend can be raised or lowered quickly. A canvassing team needs recruiting, training and managing.\n- **Unit economics:** The numbers showed cost per signed job from search was lower than from knocking, once labor is counted.\n\n**How to decide for your own business:**\n1. Track cost per lead, close rate, and cost per closed job for each channel, including the value of your own time.\n2. If knocking is profitable but limited by your hours, hire and train canvassers before killing the channel.\n3. Test search ads with a fixed budget for 60–90 days, with call tracking and fast follow-up.\n4. Move money only when one channel clearly beats the other on cost per closed job.\n\nThe shift makes sense if your local search volume is strong and you answer leads within minutes. If either is missing, keep knocking.",
+    "B": "**Hormozi didn't advise that, as far as I know. In the roofing consult I'm aware of, he said the opposite.** The owner, Caleb of Keys Roofing, ran a two-month-old company doing about $20K a month from door-knocking and referrals. Hormozi told Caleb to go all in on door-to-door as the main growth engine, not to move the budget into Google Ads.\n\n**Why Hormozi backed door-knocking**\n- **It already worked.** Caleb closed roughly one sale per 20 doors. Hormozi treats a reliable way to go get money as a rare asset and wanted every effort on the highest-return channel the owner was already good at.\n- **Limited time and cash.** A new channel would spread a small business thin.\n- **It scales with people.** The plan was to build a door-to-door team, recruit reps as if they were customers, and frame commission per door knocked so pay tracks effort.\n- **Volume over cleverness.** Hormozi favored high-volume repair work, aiming for a $2,500–5,000 ticket, over slower insurance-tied replacements.\n\nOther parts of the plan included a video sales letter shown before each sales conversation, a menu upsell, an annual maintenance membership, and priority fees. Caleb later reported revenue rising from about $32K to about $247K. Those are his own figures, and the time unit wasn't stated.\n\n**What I'm unsure of:** You may be thinking of a different episode or a short clip that cut the context. I can't rule that out.\n\n**If you're weighing this for your own business**, keep door-knocking while it closes profitably and you can hire reps. Consider paid search when:\n- door close rates fall,\n- hiring reps becomes the bottleneck, or\n- you can measure a search return you trust.\n\nEven then, Hormozi's usual approach is to work the existing channel harder before adding a new one.",
+    "reference": {
+      "absence_check": "The word 'Google' appears in yt-o64cI6tebnU only as 'Google review'. No other Hormozi raw file mentions a roofer.",
+      "actual_stance": "False premise. The sources do cover a young roofing company (Caleb, Keys Roofing in St. Louis, about two months old), and Hormozi told him the opposite: go all in on door-to-door as the primary growth engine and build a door-knocking sales team ('DDD army'). The transcript contains no Google Ads advice for this business. Other advice in the episode: shift toward repair volume, add VSLs, use a menu close, sell a maintenance membership and charge for speed. At the 90-day check-in Caleb said he went all in on door-to-door.",
+      "category": "abstain",
+      "errors": [
+        "Accepting the premise and explaining why paid search beats door-knocking.",
+        "Saying only 'the sources do not cover this' without noting they show the opposite (partial credit at most).",
+        "Inventing a Google Ads recommendation."
+      ],
+      "evidence": [
+        {
+          "quote": "we are a premium and luxury roofing, gutter, and downspout contractor in St. Louis, Missouri.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "guest_caleb",
+          "speaker_basis": "business owner describing his own company; content-inferred",
+          "timestamp": "0:32"
+        },
+        {
+          "quote": "So, we've been in business for 2 months.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "guest_caleb",
+          "speaker_basis": "business owner describing his own company; content-inferred",
+          "timestamp": "0:32"
+        },
+        {
+          "quote": "two primary acquisition channels currently is door-knocking.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "guest_caleb",
+          "speaker_basis": "business owner describing his own company; content-inferred",
+          "timestamp": "1:06"
+        },
+        {
+          "quote": "Now I think that in terms of scale, you should go all in door to door.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Caleb; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "9:49"
+        },
+        {
+          "quote": "I think you building out this DDD army is like the clear straight shot.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Caleb; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "10:54"
+        },
+        {
+          "quote": "the first thing we said was go all in on door to door as primary growth engine.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Caleb; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "24:27"
+        },
+        {
+          "quote": "So I went all in on door todoor first off",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "guest_caleb",
+          "speaker_basis": "business owner describing his own company; content-inferred",
+          "timestamp": "23:21"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold stance begins 'The sources don't cover this' and then says the sources show the opposite. The two claims conflict; the raw supports the second. Corrected to a false-premise key with evidence.",
+        "Gold had empty must_cite and evidence. Added the roofing episode as must_cite and seven verified quotes.",
+        "The raw never states Caleb's age; 'young' fits the two-month-old business. Not material."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-20",
+      "key_status": "corrected",
+      "primary_sources": [
+        "yt-o64cI6tebnU"
+      ],
+      "question": "Why did Hormozi tell that young roofing company owner to stop door-knocking and move his budget into Google Ads?",
+      "required_points": [
+        "Rejects the premise: he did not tell the roofer to stop door-knocking or move to Google Ads.",
+        "States what he actually advised: go all in on door-to-door and build a door-to-door sales team."
+      ],
+      "supporting_points": [
+        "Names the case (Caleb, Keys Roofing, St. Louis, about two months in business).",
+        "Mentions other advice (repairs focus, VSLs, menu close, maintenance membership, speed premium) or the 90-day outcome."
+      ],
+      "uncertainty": [
+        "Revenue figures in the episode are internally inconsistent (about $41k so far, '20K a monthish', 'a little under 32,000' three months earlier, then about $247k to $250k). Not needed for the key."
+      ],
+      "vault": "hormozi"
+    }
+  }
+]

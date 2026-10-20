@@ -1,0 +1,61 @@
+{
+  "answer_family": "gemini",
+  "batch_id": "newadvice12--sol--gemini--batch-00",
+  "error": "",
+  "id": "p-7e85f9be6e493774--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-7e85f9be6e493774",
+  "primary_eligible": true,
+  "prompt_sha256": "9610745b0ec7eab6201bd0ba6f15fe49175800878f18d2cbc7482d0744740b29",
+  "question_key": "newadvice12--advice-hz-02",
+  "status": "ok",
+  "suite": "newadvice12",
+  "verdict": {
+    "A": {
+      "actionability": 3,
+      "constraint_fit": 3,
+      "decision_quality": 3,
+      "reasoning": 3
+    },
+    "B": {
+      "actionability": 2,
+      "constraint_fit": 3,
+      "decision_quality": 3,
+      "reasoning": 2
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "The proposed pricing changes add over $16,000 in annual profit.",
+        "evidence": "That increase assumes every groom costs $110. With 70% of bookings at the proposed $105 regular rate and 30% at $110, the average ticket is $106.50. At 156 monthly grooms, profit is $4,296.40, an annualized increase of $12,916.80 before the initial loyalty grace period.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "A",
+        "claim": "The $25 speed fee is pure margin.",
+        "evidence": "Groomers receive 40% of each ticket. Under that compensation rule, a $25 ticket surcharge contributes $15 before any additional costs.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "B",
+        "claim": "Monthly labor costs are $5,070 and monthly profit is $4,078.",
+        "evidence": "Labor is 40% of $14,820, or $5,928. Subtracting that, $1,872 in supplies and fuel, and $3,800 in fixed costs leaves $3,220.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "B",
+        "claim": "At 140 monthly grooms, the proposed pricing produces about $15,100 in revenue.",
+        "evidence": "The required customer mix is unspecified. Keeping the stated 70% regular-booking share gives an average ticket of $103 and revenue of $14,420.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-7e85f9be6e493774",
+    "reason": "A correctly calculates current profit and the hypothetical all-$110 scenario, and gives a concrete recurring-booking safeguard. However, its actual loyalty pricing produces less profit than advertised, its priority-fee proposal needs capacity safeguards, and its expansion threshold lacks economic justification. B also reasonably defers expansion, but materially miscalculates current profit, leaves booking changes undeveloped, and does not substantiate projected revenue. Neither calculates second-van break-even utilization with additional operating costs.",
+    "winner": "A"
+  },
+  "winner": "grounded"
+}

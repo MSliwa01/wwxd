@@ -1,0 +1,55 @@
+{
+  "answer_family": "gemini",
+  "batch_id": "newadvice12--sol--gemini--batch-03",
+  "error": "",
+  "id": "p-7fa860047189a558--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-7fa860047189a558",
+  "primary_eligible": true,
+  "prompt_sha256": "fcda8a3871be7e527e7dd84c0d409c7f5fbf24682e7820878b97898e18863ea8",
+  "question_key": "newadvice12--advice-yc-04",
+  "status": "ok",
+  "suite": "newadvice12",
+  "verdict": {
+    "A": {
+      "actionability": 4,
+      "constraint_fit": 4,
+      "decision_quality": 4,
+      "reasoning": 3
+    },
+    "B": {
+      "actionability": 3,
+      "constraint_fit": 3,
+      "decision_quality": 3,
+      "reasoning": 3
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "External PR around an early-stage B2B SaaS launch brings negligible signups.",
+        "evidence": "The scenario supplies no PR conversion results or buyer readership data. Declining this proposal is defensible without assuming negligible signups.",
+        "label": "unverified"
+      },
+      {
+        "answer": "A",
+        "claim": "The $1.5M seed round gives sufficient runway to prioritize product-market fit.",
+        "evidence": "Operating expenses, hiring commitments, and existing cash obligations are unspecified, so runway cannot be established from the funding amount.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "Mainstream tech and business press coverage will not drive paying customers among electrical and plumbing subcontractors.",
+        "evidence": "The supplied information does not establish that coverage would produce no paying customers or that these buyers rarely read the relevant publications.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-7fa860047189a558",
+    "reason": "A provides a complete allocation totaling $36,000, preserves half the money, and builds on channels that have already produced customers. B spreads spending across more untested activities without amounts. Its churn and acquisition-cost thresholds lack justification; with 15 customers, even one monthly cancellation exceeds 5%. A still needs measurable acquisition goals and staged spending, and both answers overstate the evidence against PR.",
+    "winner": "A"
+  },
+  "winner": "grounded"
+}

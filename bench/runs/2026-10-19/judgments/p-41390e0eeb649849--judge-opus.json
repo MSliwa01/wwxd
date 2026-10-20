@@ -1,0 +1,19 @@
+{
+  "answer_family": "gemini",
+  "batch_id": "newadvice12--opus--gemini--batch-02",
+  "error": "Answer pair ineligible: answer_incomplete, context_usage_missing",
+  "id": "p-41390e0eeb649849--judge-opus",
+  "judge_family": "opus",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-41390e0eeb649849",
+  "primary_eligible": false,
+  "prompt_sha256": "5d4c4dca9941bc6f16aa7a93e461cdf6842968fc2f06236571eb34e235e5bab9",
+  "question_key": "newadvice12--advice-hz-05",
+  "status": "blocked",
+  "suite": "newadvice12",
+  "verdict": null,
+  "winner": null
+}

@@ -1,0 +1,101 @@
+{
+  "actual_input_tokens": 224008,
+  "answer": "**Probably not as a plan, but he'd tell you to keep building the side project.**\n\n**His default answer is no.** Paul Graham's long-standing advice is not to start a startup in college. A real startup takes over your whole life, so you can't really be a student and a founder at once. Your early twenties are good for open-ended exploration that success would take away. He also argues you lose nothing by waiting, since you're more likely to succeed later.\n\n**But your situation is his exception.** He has always allowed that if a side project takes off on its own, as Facebook did, running with it may be reasonable. His recent writing leans harder on this. He wants students to have free time for their own projects because those are how startups actually begin. He still holds that you can't run a startup and stay a full-time student, so success would eventually force a choice.\n\n**What he'd likely tell you to do now:**\n- Build the project for its own sake, without worrying about whether it's a startup.\n- Make it for yourself and your friends, and get real users quickly.\n- Watch whether usage grows week over week without you pushing it.\n- Keep studying computer science and learning hard things.\n- Don't treat \"founder\" as a credential or a way to look impressive.\n\n**Decision criteria:**\n- **Keep it a side project** if growth is flat, it depends on your effort to spread, or you mainly like the idea of being a founder.\n- **Consider running with it** if users are pulling it forward, it's eating an alarming share of your time, and you'd regret letting it die. A leave of absence is lower-risk than dropping out. That last suggestion is mine, not his.\n\n**What's uncertain:** he has never ruled on your specific case. He also says the best way to learn startups is by doing, which sits somewhat uneasily with \"wait.\"",
+  "arm": "grounded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 13.345,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e9bf964a2d377254a9f23c75fd6be6b164fb22b5f1f251009aa510dd81854877"
+    }
+  ],
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 226584,
+  "event_count": 10,
+  "family": "opus",
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:22:08.341214+00:00",
+  "format_deviations": [
+    "outside descriptive 150..300 word band around approximate 250-word instruction"
+  ],
+  "id": "diagnostic12--yc-01--opus--grounded",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "prompt_sha256": "e49e3f9ff85d87a45f8633e2872ba2690bf618720ef51fe38487844429130b12",
+  "question_key": "diagnostic12--yc-01",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 222438,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 222438,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 222438,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 222438,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 960,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 960,
+      "output_tokens_details": {
+        "thinking_tokens": 400
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ],
+  "words": 323
+}

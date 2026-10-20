@@ -1,0 +1,99 @@
+{
+  "actual_input_tokens": 224129,
+  "answer": "**No. Don't quit this month. But don't sign a one-year lock-in either.**\n\n1,400 sign-ups from two Reddit posts and a TikTok shows that people are curious. It doesn't show they want the product. Viral spikes look like traction and often fade. Nine months of savings with no cofounder means you get one shot, so spend it only once the product is pulling you in, not on hope.\n\nThe promotion's one-year commitment is the real cost. It removes your option to leave if the app takes off. Keep that option open:\n\n1. **Negotiate first.** Ask your manager whether you can take the promotion without a formal tenure commitment. If yes, take it.\n2. **If they insist on the lock, decline politely** and stay in your current role. Promotions usually come around again. A product with early pull often doesn't.\n3. **Check your employment contract now.** Banks often have IP, outside-business, and conflict-of-interest clauses, and a fintech side project is exactly what they cover. Fix any problem before the app grows.\n4. **Run a 90-day test.** Track these numbers:\n   - **Retention:** what share of couples still use the app after 4 weeks, with both partners active.\n   - **Organic growth:** steady week-over-week growth (around 5% or more) without new viral posts.\n   - **Willingness to pay:** whether people pay, or pre-commit to pay.\n   - **Word of mouth:** whether users invite other couples.\n5. **Look for a cofounder** during the test, ideally someone technical or with growth skills.\n\n**Quit when** retention holds, growth continues between spikes, and users tell their friends. At that point, quit with about 8 months of runway left.\n\n**What would change my answer:**\n- If those metrics are already strong today, quit now.\n- If the bank's IP clause blocks the project, resolve that before anything else.",
+  "arm": "grounded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 20.177,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "81218aa73e902c122926126b1727598f65a36f521ec894b401bef732dae6e6c2"
+    }
+  ],
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 226725,
+  "event_count": 13,
+  "family": "opus",
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:30:03.763374+00:00",
+  "format_deviations": [],
+  "id": "newadvice12--advice-yc-03--opus--grounded",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "prompt_sha256": "c22b3a0a70ca8749a9d9b2e87b8486551d206c3a7613a2ef3725309b414f8bb9",
+  "question_key": "newadvice12--advice-yc-03",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "newadvice12",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 222559,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 222559,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 222559,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 222559,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 1515,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 1515,
+      "output_tokens_details": {
+        "thinking_tokens": 919
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ],
+  "words": 296
+}

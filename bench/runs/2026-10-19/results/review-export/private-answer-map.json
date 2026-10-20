@@ -1,0 +1,362 @@
+[
+  {
+    "id": "review-6d79b5f64458fb94",
+    "question_key": "newadvice12--advice-hz-01",
+    "response_id": "newadvice12--advice-hz-01--gemini--grounded"
+  },
+  {
+    "id": "review-4f73ce2eea8cbb1e",
+    "question_key": "newadvice12--advice-hz-01",
+    "response_id": "newadvice12--advice-hz-01--gemini--raw"
+  },
+  {
+    "id": "review-e23b6c52b8316efe",
+    "question_key": "newadvice12--advice-hz-01",
+    "response_id": "newadvice12--advice-hz-01--opus--grounded"
+  },
+  {
+    "id": "review-c19d15fa98e30e9c",
+    "question_key": "newadvice12--advice-hz-01",
+    "response_id": "newadvice12--advice-hz-01--opus--raw"
+  },
+  {
+    "id": "review-50e9be64a236da06",
+    "question_key": "newadvice12--advice-hz-01",
+    "response_id": "newadvice12--advice-hz-01--sol--grounded"
+  },
+  {
+    "id": "review-31653939f3b1fc86",
+    "question_key": "newadvice12--advice-hz-01",
+    "response_id": "newadvice12--advice-hz-01--sol--raw"
+  },
+  {
+    "id": "review-2fb2d8c50a8fbe01",
+    "question_key": "newadvice12--advice-hz-02",
+    "response_id": "newadvice12--advice-hz-02--gemini--grounded"
+  },
+  {
+    "id": "review-a158a62e3d9c3de2",
+    "question_key": "newadvice12--advice-hz-02",
+    "response_id": "newadvice12--advice-hz-02--gemini--raw"
+  },
+  {
+    "id": "review-ddb4720e76625e4f",
+    "question_key": "newadvice12--advice-hz-02",
+    "response_id": "newadvice12--advice-hz-02--opus--grounded"
+  },
+  {
+    "id": "review-3c266ef220a11f37",
+    "question_key": "newadvice12--advice-hz-02",
+    "response_id": "newadvice12--advice-hz-02--opus--raw"
+  },
+  {
+    "id": "review-677aaa4fa29263ae",
+    "question_key": "newadvice12--advice-hz-02",
+    "response_id": "newadvice12--advice-hz-02--sol--grounded"
+  },
+  {
+    "id": "review-b707692b0b812389",
+    "question_key": "newadvice12--advice-hz-02",
+    "response_id": "newadvice12--advice-hz-02--sol--raw"
+  },
+  {
+    "id": "review-aba49e4011c04e9d",
+    "question_key": "newadvice12--advice-hz-03",
+    "response_id": "newadvice12--advice-hz-03--gemini--grounded"
+  },
+  {
+    "id": "review-6d5a056f2c08c8aa",
+    "question_key": "newadvice12--advice-hz-03",
+    "response_id": "newadvice12--advice-hz-03--gemini--raw"
+  },
+  {
+    "id": "review-1b188326cd0ad03e",
+    "question_key": "newadvice12--advice-hz-03",
+    "response_id": "newadvice12--advice-hz-03--opus--grounded"
+  },
+  {
+    "id": "review-ca2f1898649d6ea7",
+    "question_key": "newadvice12--advice-hz-03",
+    "response_id": "newadvice12--advice-hz-03--opus--raw"
+  },
+  {
+    "id": "review-40682ed5dd4d7205",
+    "question_key": "newadvice12--advice-hz-03",
+    "response_id": "newadvice12--advice-hz-03--sol--grounded"
+  },
+  {
+    "id": "review-1c807c5dba75e5f1",
+    "question_key": "newadvice12--advice-hz-03",
+    "response_id": "newadvice12--advice-hz-03--sol--raw"
+  },
+  {
+    "id": "review-7fe157c17d6a6a13",
+    "question_key": "newadvice12--advice-hz-04",
+    "response_id": "newadvice12--advice-hz-04--gemini--grounded"
+  },
+  {
+    "id": "review-da29fcc3bb1298b6",
+    "question_key": "newadvice12--advice-hz-04",
+    "response_id": "newadvice12--advice-hz-04--gemini--raw"
+  },
+  {
+    "id": "review-70c7dca4ae9548f9",
+    "question_key": "newadvice12--advice-hz-04",
+    "response_id": "newadvice12--advice-hz-04--opus--grounded"
+  },
+  {
+    "id": "review-650cefd7584dce75",
+    "question_key": "newadvice12--advice-hz-04",
+    "response_id": "newadvice12--advice-hz-04--opus--raw"
+  },
+  {
+    "id": "review-3037c24a46c2ea63",
+    "question_key": "newadvice12--advice-hz-04",
+    "response_id": "newadvice12--advice-hz-04--sol--grounded"
+  },
+  {
+    "id": "review-76c14f2d58feff1f",
+    "question_key": "newadvice12--advice-hz-04",
+    "response_id": "newadvice12--advice-hz-04--sol--raw"
+  },
+  {
+    "id": "review-f660843d9984b559",
+    "question_key": "newadvice12--advice-hz-05",
+    "response_id": "newadvice12--advice-hz-05--gemini--grounded"
+  },
+  {
+    "id": "review-b8d39e371ce7e26a",
+    "question_key": "newadvice12--advice-hz-05",
+    "response_id": "newadvice12--advice-hz-05--gemini--raw"
+  },
+  {
+    "id": "review-1f95279c0daf9080",
+    "question_key": "newadvice12--advice-hz-05",
+    "response_id": "newadvice12--advice-hz-05--opus--grounded"
+  },
+  {
+    "id": "review-c8a5e6cdf5b50ba6",
+    "question_key": "newadvice12--advice-hz-05",
+    "response_id": "newadvice12--advice-hz-05--opus--raw"
+  },
+  {
+    "id": "review-093e26a91e51b522",
+    "question_key": "newadvice12--advice-hz-05",
+    "response_id": "newadvice12--advice-hz-05--sol--grounded"
+  },
+  {
+    "id": "review-78209a014e24d7bd",
+    "question_key": "newadvice12--advice-hz-05",
+    "response_id": "newadvice12--advice-hz-05--sol--raw"
+  },
+  {
+    "id": "review-69042c26f13a078c",
+    "question_key": "newadvice12--advice-hz-06",
+    "response_id": "newadvice12--advice-hz-06--gemini--grounded"
+  },
+  {
+    "id": "review-d3388e825af60df2",
+    "question_key": "newadvice12--advice-hz-06",
+    "response_id": "newadvice12--advice-hz-06--gemini--raw"
+  },
+  {
+    "id": "review-25e1c997ab08ab0c",
+    "question_key": "newadvice12--advice-hz-06",
+    "response_id": "newadvice12--advice-hz-06--opus--grounded"
+  },
+  {
+    "id": "review-ab60091eceb818c3",
+    "question_key": "newadvice12--advice-hz-06",
+    "response_id": "newadvice12--advice-hz-06--opus--raw"
+  },
+  {
+    "id": "review-3666000c2338d3a6",
+    "question_key": "newadvice12--advice-hz-06",
+    "response_id": "newadvice12--advice-hz-06--sol--grounded"
+  },
+  {
+    "id": "review-30559ce9bfa727b1",
+    "question_key": "newadvice12--advice-hz-06",
+    "response_id": "newadvice12--advice-hz-06--sol--raw"
+  },
+  {
+    "id": "review-d4d40ecfb3fa19da",
+    "question_key": "newadvice12--advice-yc-01",
+    "response_id": "newadvice12--advice-yc-01--gemini--grounded"
+  },
+  {
+    "id": "review-058cc2ffc358e804",
+    "question_key": "newadvice12--advice-yc-01",
+    "response_id": "newadvice12--advice-yc-01--gemini--raw"
+  },
+  {
+    "id": "review-dec1fb5e0255e060",
+    "question_key": "newadvice12--advice-yc-01",
+    "response_id": "newadvice12--advice-yc-01--opus--grounded"
+  },
+  {
+    "id": "review-75150f33a06b3c75",
+    "question_key": "newadvice12--advice-yc-01",
+    "response_id": "newadvice12--advice-yc-01--opus--raw"
+  },
+  {
+    "id": "review-b5640905cdaa50c7",
+    "question_key": "newadvice12--advice-yc-01",
+    "response_id": "newadvice12--advice-yc-01--sol--grounded"
+  },
+  {
+    "id": "review-1781bb2f698f0221",
+    "question_key": "newadvice12--advice-yc-01",
+    "response_id": "newadvice12--advice-yc-01--sol--raw"
+  },
+  {
+    "id": "review-de8ffd690bbc1460",
+    "question_key": "newadvice12--advice-yc-02",
+    "response_id": "newadvice12--advice-yc-02--gemini--grounded"
+  },
+  {
+    "id": "review-837d4965a9ac73c9",
+    "question_key": "newadvice12--advice-yc-02",
+    "response_id": "newadvice12--advice-yc-02--gemini--raw"
+  },
+  {
+    "id": "review-6929cf0d8497b0ce",
+    "question_key": "newadvice12--advice-yc-02",
+    "response_id": "newadvice12--advice-yc-02--opus--grounded"
+  },
+  {
+    "id": "review-4e66773c5e8add67",
+    "question_key": "newadvice12--advice-yc-02",
+    "response_id": "newadvice12--advice-yc-02--opus--raw"
+  },
+  {
+    "id": "review-b4c46a646eb27cc0",
+    "question_key": "newadvice12--advice-yc-02",
+    "response_id": "newadvice12--advice-yc-02--sol--grounded"
+  },
+  {
+    "id": "review-3fb0c95443baeb10",
+    "question_key": "newadvice12--advice-yc-02",
+    "response_id": "newadvice12--advice-yc-02--sol--raw"
+  },
+  {
+    "id": "review-9e349241f7a87018",
+    "question_key": "newadvice12--advice-yc-03",
+    "response_id": "newadvice12--advice-yc-03--gemini--grounded"
+  },
+  {
+    "id": "review-972150990e492fa6",
+    "question_key": "newadvice12--advice-yc-03",
+    "response_id": "newadvice12--advice-yc-03--gemini--raw"
+  },
+  {
+    "id": "review-86b49f2eb2a83552",
+    "question_key": "newadvice12--advice-yc-03",
+    "response_id": "newadvice12--advice-yc-03--opus--grounded"
+  },
+  {
+    "id": "review-f0708ce7b745a006",
+    "question_key": "newadvice12--advice-yc-03",
+    "response_id": "newadvice12--advice-yc-03--opus--raw"
+  },
+  {
+    "id": "review-dc6c7069fe1fb4c0",
+    "question_key": "newadvice12--advice-yc-03",
+    "response_id": "newadvice12--advice-yc-03--sol--grounded"
+  },
+  {
+    "id": "review-b8e66fbeb5cb9da1",
+    "question_key": "newadvice12--advice-yc-03",
+    "response_id": "newadvice12--advice-yc-03--sol--raw"
+  },
+  {
+    "id": "review-2698a65fa97a1840",
+    "question_key": "newadvice12--advice-yc-04",
+    "response_id": "newadvice12--advice-yc-04--gemini--grounded"
+  },
+  {
+    "id": "review-258b5eb33bcbe4ed",
+    "question_key": "newadvice12--advice-yc-04",
+    "response_id": "newadvice12--advice-yc-04--gemini--raw"
+  },
+  {
+    "id": "review-36b2a89144bf5156",
+    "question_key": "newadvice12--advice-yc-04",
+    "response_id": "newadvice12--advice-yc-04--opus--grounded"
+  },
+  {
+    "id": "review-6058aa17824252a9",
+    "question_key": "newadvice12--advice-yc-04",
+    "response_id": "newadvice12--advice-yc-04--opus--raw"
+  },
+  {
+    "id": "review-9383303bf6a99460",
+    "question_key": "newadvice12--advice-yc-04",
+    "response_id": "newadvice12--advice-yc-04--sol--grounded"
+  },
+  {
+    "id": "review-d44c27b566d954f6",
+    "question_key": "newadvice12--advice-yc-04",
+    "response_id": "newadvice12--advice-yc-04--sol--raw"
+  },
+  {
+    "id": "review-da85302df6ff58a5",
+    "question_key": "newadvice12--advice-yc-05",
+    "response_id": "newadvice12--advice-yc-05--gemini--grounded"
+  },
+  {
+    "id": "review-989be618ff8aacbe",
+    "question_key": "newadvice12--advice-yc-05",
+    "response_id": "newadvice12--advice-yc-05--gemini--raw"
+  },
+  {
+    "id": "review-45453de65eb0ae62",
+    "question_key": "newadvice12--advice-yc-05",
+    "response_id": "newadvice12--advice-yc-05--opus--grounded"
+  },
+  {
+    "id": "review-41f4c4e4550bd490",
+    "question_key": "newadvice12--advice-yc-05",
+    "response_id": "newadvice12--advice-yc-05--opus--raw"
+  },
+  {
+    "id": "review-a545da50bfdb83ea",
+    "question_key": "newadvice12--advice-yc-05",
+    "response_id": "newadvice12--advice-yc-05--sol--grounded"
+  },
+  {
+    "id": "review-19fb30e4475e2c35",
+    "question_key": "newadvice12--advice-yc-05",
+    "response_id": "newadvice12--advice-yc-05--sol--raw"
+  },
+  {
+    "id": "review-d24e0d80efb6a7dc",
+    "question_key": "newadvice12--advice-yc-06",
+    "response_id": "newadvice12--advice-yc-06--gemini--grounded"
+  },
+  {
+    "id": "review-6daf7b3784b1981b",
+    "question_key": "newadvice12--advice-yc-06",
+    "response_id": "newadvice12--advice-yc-06--gemini--raw"
+  },
+  {
+    "id": "review-216fca2db1eac888",
+    "question_key": "newadvice12--advice-yc-06",
+    "response_id": "newadvice12--advice-yc-06--opus--grounded"
+  },
+  {
+    "id": "review-9eff5385f13f35a1",
+    "question_key": "newadvice12--advice-yc-06",
+    "response_id": "newadvice12--advice-yc-06--opus--raw"
+  },
+  {
+    "id": "review-5c39aa8293961ac4",
+    "question_key": "newadvice12--advice-yc-06",
+    "response_id": "newadvice12--advice-yc-06--sol--grounded"
+  },
+  {
+    "id": "review-50b943296f7dfea0",
+    "question_key": "newadvice12--advice-yc-06",
+    "response_id": "newadvice12--advice-yc-06--sol--raw"
+  }
+]

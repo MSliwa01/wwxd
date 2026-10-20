@@ -1,0 +1,74 @@
+[
+  {
+    "id": "advice-hz-01",
+    "vault": "hormozi",
+    "domain": "offers",
+    "question": "I run a one-person bookkeeping service for Shopify stores. I have 45 clients on month-to-month plans at $400 a month. Software and payment fees cost me about $40 per client per month, and nothing else scales with the number of clients, so I clear about $16,200 a month. I work 50 hours a week and can't go above that: roughly 1 hour per client per week plus 5 hours of admin. About 8 of my clients do over $2M a year in sales, and they keep asking for help with cash-flow forecasting, inventory planning and coordinating with their tax preparer, which I now do for free when I have time. My goal is at least $25,000 a month in profit within 6 months, without hiring. I'm considering three moves: (1) raise my standard price to $500 for everyone with 60 days' notice; (2) add a premium tier at $2,000 a month for up to 5 clients, which I estimate would add 2 hours per client per week on top of the normal hour; (3) record a $49-a-month self-serve course for small stores. Which should I do, in what order, and what exactly should the premium tier include if I add it? Please give me a clear decision and show that the plan fits my hours."
+  },
+  {
+    "id": "advice-hz-02",
+    "vault": "hormozi",
+    "domain": "pricing",
+    "question": "I own a mobile dog-grooming business with one fitted van and two groomers who alternate, so the van runs 6 days a week. We do 6 grooms per van-day at an average ticket of $95. Groomers are paid 40% of each ticket, and supplies plus fuel run about $12 per groom. Fixed costs (van loan, insurance, software) are $3,800 a month. We're booked solid three and a half weeks out, about 70% of bookings are regulars who rebook every 6 to 8 weeks, and we turn away or waitlist around 15 requests a week. A second fitted van would cost $78,000, about $1,650 a month financed, and hiring and training two more groomers takes about 2 months. I want more profit this year but I don't want to lose my regulars. What should I change about pricing and booking in the next 90 days, and should I buy the second van now or wait? Make a call and show the numbers."
+  },
+  {
+    "id": "advice-hz-03",
+    "vault": "hormozi",
+    "domain": "ads",
+    "question": "We sell one product online, a vitamin C face serum at $58 a bottle, and about 30% of customers reorder within 3 months. Over the last 30 days Meta Ads Manager reports a 3.2 ROAS at $300 a day, using a 7-day-click, 1-day-view attribution window. We have $45,000 to spend on ads from now through December 31, and enough stock for about 4,000 more bottles; a reorder from our manufacturer takes 10 weeks. Our agency wants to raise spend to $1,000 a day starting this week and hold it through the end of December to catch Black Friday and the holidays. Should we approve that plan? If not, what spend plan would you run instead? I need a yes or no on the $1,000-a-day plan."
+  },
+  {
+    "id": "advice-hz-04",
+    "vault": "hormozi",
+    "domain": "customer_acquisition",
+    "question": "My commercial cleaning company does about $1.1M a year. The average contract is $2,400 a month at a 35% gross margin, and clients stay about 20 months on average. About 80% of our new contracts, roughly 4 buildings a month, come from one property-management firm. That firm was just acquired, and the new owner already uses a national cleaning vendor, so I could lose that flow within 6 months. I can spend $8,000 a month on growth, and my operations manager could take on sales part-time. The options in front of me: (a) a Google Ads agency that quotes about $150 per lead and a 12% lead-to-contract rate, plus a $2,000 monthly fee; (b) a full-time outbound sales rep at $5,500 a month all-in, aiming for 3 qualified walkthroughs a week, and we close about 30% of walkthroughs; (c) a formal referral program with other property managers and with vendors who serve the same buildings, such as HVAC, pest control and security companies. What should I do first, how should I set it up, and what should the next 6 months look like? Please commit to a plan."
+  },
+  {
+    "id": "advice-hz-05",
+    "vault": "hormozi",
+    "domain": "offers_retention",
+    "question": "I run an online strength-training membership for women over 40 at $79 a month: app-based workout plans, one live Q&A call a week, a recipe library and a private community. We have 600 members. We add about 90 new members a month, almost all from Instagram ads at about $110 per new member, and about 18% of members cancel each month, mostly in their first 60 days. My goal is 1,000 members by next October. My team's ideas are: add two more live classes a week and a meal-planning tool; cut the price to $49 to get more sign-ups; launch an annual plan; or double the ad budget. I only have the time and money to do two of these. Which two should I pick and why, and is 1,000 members by next October realistic?"
+  },
+  {
+    "id": "advice-hz-06",
+    "vault": "hormozi",
+    "domain": "first_business_decision",
+    "question": "I'm 27 and work full time as a receptionist at a dental office. I take home $3,400 a month, my expenses are $2,900, and I have $11,000 saved. I can give a side business about 20 hours a week, and I want it to replace my salary within 18 months. I have three ideas: (1) a new-patient lead-generation and appointment-setting service for dental offices, based on what I've seen of how front desks handle new-patient calls; (2) an online store for ergonomic office products, which needs about $6,000 for the first inventory order; (3) buying an existing vending-machine route for $9,000, which the seller says nets $700 a month. Which one should I pick, and what should my first 90 days look like? Please pick one."
+  },
+  {
+    "id": "advice-yc-01",
+    "vault": "yc",
+    "domain": "startup_decision_mvp",
+    "question": "My cofounder and I are both engineers. Over the last 5 weeks we used coding agents to build an AI assistant for small veterinary clinics. It records the exam and writes the clinical notes, drafts discharge instructions for pet owners, suggests inventory reorders, sends appointment reminders, helps with billing codes, adds a chat widget to the clinic website, and has about 30 smaller features. Three clinics agreed to pilot it for free. After a month, one clinic uses the note-writing every day and the other two have logged in twice each. We have $210,000 in the bank and spend about $22,000 a month. One investor told us to move to human hospitals because the market is bigger. We're choosing between three paths: keep building toward a complete practice-management system before charging anyone, cut the product down and get it into many more clinics now, or switch to hospitals. What should we do, and what should the next 8 weeks look like? We have to decide this week."
+  },
+  {
+    "id": "advice-yc-02",
+    "vault": "yc",
+    "domain": "pricing_customer_segment",
+    "question": "We're a three-person startup with an API that pulls structured data out of invoices and receipts. We have $640,000 left and burn $45,000 a month. Two kinds of customers have shown up. Seed-stage startups sign up on their own, integrate in a day and pay usage-based pricing: 30 of them, averaging $210 a month, and total monthly revenue has grown about 15% a month for the last 4 months. Separately, a large logistics company has offered a $90,000-a-year contract, but it needs SOC 2, an on-premises deployment option and custom fields, and their procurement usually takes 6 to 7 months; a second logistics company is interested on similar terms. This year we can realistically build either the enterprise requirements or self-serve improvements (better docs, more document types, a usage dashboard), not both. Which segment should we focus on, and should we change our pricing? Give us a recommendation with your reasoning on runway."
+  },
+  {
+    "id": "advice-yc-03",
+    "vault": "yc",
+    "domain": "startup_decision_quit_job",
+    "question": "I'm a product designer at a large bank. For the last 4 months I've been building, in the evenings, a budgeting app for couples who share expenses. It launched in July and has 1,400 sign-ups, mostly from two Reddit posts and one TikTok that took off. I don't have a cofounder. I have about 9 months of living expenses saved. My manager has offered me a promotion that requires committing to stay at least a year, and I have to answer by the end of the month. Should I quit and work on the app full time, or take the promotion and keep building on the side? I want a yes or no."
+  },
+  {
+    "id": "advice-yc-04",
+    "vault": "yc",
+    "domain": "customer_acquisition_launch",
+    "question": "We sell scheduling and crew-dispatch software to electrical and plumbing subcontractors. We have 15 paying customers at $400 a month, all from the founders' personal networks and two trade-association meetups. We just closed a $1.5M seed round and plan a public launch next month. A PR agency has pitched $12,000 a month, with a 3-month minimum, to get us coverage in tech and business press around the launch. Our other ideas are founder-led cold outreach to subcontractors in three metro areas, sponsoring trade-association events, and posting regular field-operations content on LinkedIn and YouTube. Should we hire the agency? If not, where should that $36,000 go? Recommend one plan for the next 3 months."
+  },
+  {
+    "id": "advice-yc-05",
+    "vault": "yc",
+    "domain": "hiring",
+    "question": "We're a 4-person startup, 2 founders and 2 engineers, building a developer tool. We raised a $3M seed round 3 months ago and need two senior backend engineers. In the last 6 weeks we interviewed 7 people and made 3 offers at $185,000 salary plus 0.5% equity; all 3 took offers from large AI companies at roughly twice the cash. Our process takes about 3 weeks from first call to offer, and the founders spend about 2 hours a week on recruiting. The options we're weighing: raise the cash offer to $240,000 and cut the equity, pay a recruiting agency 25% of first-year salary, hire a contract team overseas, or stop hiring and lean harder on coding agents with the team we have. What should we change, and which option should we choose?"
+  },
+  {
+    "id": "advice-yc-06",
+    "vault": "yc",
+    "domain": "startup_decision_idea_choice",
+    "question": "I have to choose between two startup ideas and can only do one. Idea A is an AI sales-development tool that writes and sends personalized outbound emails for B2B companies. I already have 3 letters of intent from friends' companies, two seed investors have said they would probably invest, and there are dozens of funded competitors. Idea B is software that helps small municipal water utilities, serving fewer than 10,000 people, predict pipe failures and plan repairs. I spent 4 years as a civil engineer at a water utility and know the data and the problems well, but utilities buy slowly and need council approval, and no investor I've spoken to is excited. My technical cofounder will join me on either idea. I have 14 months of savings. Which idea should we pursue, and how should we reduce the risk in the first 6 months? Please pick one."
+  }
+]

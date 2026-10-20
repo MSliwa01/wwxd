@@ -1,0 +1,189 @@
+{
+  "actual_input_tokens": 23510,
+  "answer": "{\n  \"judgments\": [\n    {\n      \"id\": \"p-69ccae723f0b51e6\",\n      \"A\": {\n        \"accuracy\": 5,\n        \"specificity\": 5,\n        \"faithfulness\": 5,\n        \"usefulness\": 5\n      },\n      \"B\": {\n        \"accuracy\": 5,\n        \"specificity\": 4,\n        \"faithfulness\": 3,\n        \"usefulness\": 4\n      },\n      \"winner\": \"A\",\n      \"reason\": \"A captures the central wording instruction: flaw first, then 'but', then the benefit. B correctly explains honest admissions and provides useful examples, but omits Hormozi's specific instruction about wording and emphasis.\",\n      \"factual_objections\": []\n    },\n    {\n      \"id\": \"p-863b75bd437bf03a\",\n      \"A\": {\n        \"accuracy\": 3,\n        \"specificity\": 3,\n        \"faithfulness\": 2,\n        \"usefulness\": 4\n      },\n      \"B\": {\n        \"accuracy\": 5,\n        \"specificity\": 5,\n        \"faithfulness\": 4,\n        \"usefulness\": 5\n      },\n      \"winner\": \"B\",\n      \"reason\": \"B accurately identifies Hormozi's repayment lean, approval of the owner's existing payoff plan, and concern about volatility and financial pressure. A offers useful financial planning advice but substitutes a return-comparison framework for his documented stance. B slightly understates the parallel growth recommendation, which included increasing ad spend while ROAS and CAC held.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Alex Hormozi would likely frame the choice around where cash produces the strongest return.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The supplied evidence establishes his repayment preference through debt risk, business volatility, and emotional burden. It does not establish the return-maximization framing attributed here, although he also supported continued profitable advertising.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"p-267a2490ac048359\",\n      \"A\": {\n        \"accuracy\": 5,\n        \"specificity\": 5,\n        \"faithfulness\": 5,\n        \"usefulness\": 5\n      },\n      \"B\": {\n        \"accuracy\": 3,\n        \"specificity\": 3,\n        \"faithfulness\": 2,\n        \"usefulness\": 3\n      },\n      \"winner\": \"A\",\n      \"reason\": \"A supplies the documented 20% average, under-10% strong performance, roughly 30% intervention threshold, and tenure-dependent declines. B provides useful measurement advice but replaces those benchmarks with unsupported operating thresholds and omits the crucial warning that elevated early churn can be normal. B explicitly separates its thresholds from Hormozi attribution, so this is not a fabricated attribution.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"B\",\n          \"claim\": \"3–5% monthly churn is generally healthy, while above 10% is usually a serious concern for an ongoing paid community.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The packet does not substantiate these general thresholds. Hormozi's supplied Skool benchmarks instead describe approximately 20% average churn, under 10% for the best groups, and approximately 30% or higher as the point to prioritize retention. Those observations do not prove B's separately offered guidelines false.\"\n        }\n      ]\n    }\n  ]\n}",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 31.048,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "5ebeadd0927687a62cb797136b4593b4a3c39c7ef249a5a9315c1e33e6e576ff"
+    }
+  ],
+  "batch": {
+    "blocked_pair_ids": [],
+    "chars_per_token": 3.57,
+    "eligible_pair_ids": [
+      "p-69ccae723f0b51e6",
+      "p-863b75bd437bf03a",
+      "p-267a2490ac048359"
+    ],
+    "estimated_input_tokens": 11245,
+    "id": "diagnostic12--sol--sol--batch-03",
+    "judge_family": "sol",
+    "pair_ids": [
+      "p-69ccae723f0b51e6",
+      "p-863b75bd437bf03a",
+      "p-267a2490ac048359"
+    ],
+    "prompt_bytes": 40223,
+    "prompt_sha256": "5f06ec555251859f39d5b981a356e1b7c0d443417cd2751f6fd7c37f8b4ce78c",
+    "suite": "diagnostic12"
+  },
+  "chars_per_token": 3.57,
+  "command": [
+    "codex",
+    "exec",
+    "--ignore-user-config",
+    "--ignore-rules",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--model",
+    "gpt-6.1-sol",
+    "--json",
+    "--color",
+    "never",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "unified_exec",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "view_image",
+    "--disable",
+    "shell_snapshot",
+    "--disable",
+    "skill_search",
+    "--disable",
+    "skill_mcp_dependency_install",
+    "--disable",
+    "request_permissions_tool",
+    "--disable",
+    "sleep_tool",
+    "-c",
+    "model_reasoning_effort=\"high\"",
+    "-c",
+    "project_doc_max_bytes=0",
+    "-c",
+    "web_search=\"disabled\"",
+    "-c",
+    "mcp_servers={}",
+    "-c",
+    "developer_instructions=\"Answer the supplied task using only its text. Do not use tools or commands.\"",
+    "-"
+  ],
+  "decoded": {
+    "p-267a2490ac048359": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "accuracy": 5,
+          "faithfulness": 5,
+          "specificity": 5,
+          "usefulness": 5
+        },
+        "B": {
+          "accuracy": 3,
+          "faithfulness": 2,
+          "specificity": 3,
+          "usefulness": 3
+        },
+        "factual_objections": [
+          {
+            "answer": "B",
+            "claim": "3–5% monthly churn is generally healthy, while above 10% is usually a serious concern for an ongoing paid community.",
+            "evidence": "The packet does not substantiate these general thresholds. Hormozi's supplied Skool benchmarks instead describe approximately 20% average churn, under 10% for the best groups, and approximately 30% or higher as the point to prioritize retention. Those observations do not prove B's separately offered guidelines false.",
+            "label": "unverified"
+          }
+        ],
+        "id": "p-267a2490ac048359",
+        "reason": "A supplies the documented 20% average, under-10% strong performance, roughly 30% intervention threshold, and tenure-dependent declines. B provides useful measurement advice but replaces those benchmarks with unsupported operating thresholds and omits the crucial warning that elevated early churn can be normal. B explicitly separates its thresholds from Hormozi attribution, so this is not a fabricated attribution.",
+        "winner": "A"
+      }
+    },
+    "p-69ccae723f0b51e6": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "accuracy": 5,
+          "faithfulness": 5,
+          "specificity": 5,
+          "usefulness": 5
+        },
+        "B": {
+          "accuracy": 5,
+          "faithfulness": 3,
+          "specificity": 4,
+          "usefulness": 4
+        },
+        "factual_objections": [],
+        "id": "p-69ccae723f0b51e6",
+        "reason": "A captures the central wording instruction: flaw first, then 'but', then the benefit. B correctly explains honest admissions and provides useful examples, but omits Hormozi's specific instruction about wording and emphasis.",
+        "winner": "A"
+      }
+    },
+    "p-863b75bd437bf03a": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "accuracy": 3,
+          "faithfulness": 2,
+          "specificity": 3,
+          "usefulness": 4
+        },
+        "B": {
+          "accuracy": 5,
+          "faithfulness": 4,
+          "specificity": 5,
+          "usefulness": 5
+        },
+        "factual_objections": [
+          {
+            "answer": "A",
+            "claim": "Alex Hormozi would likely frame the choice around where cash produces the strongest return.",
+            "evidence": "The supplied evidence establishes his repayment preference through debt risk, business volatility, and emotional burden. It does not establish the return-maximization framing attributed here, although he also supported continued profitable advertising.",
+            "label": "unverified"
+          }
+        ],
+        "id": "p-863b75bd437bf03a",
+        "reason": "B accurately identifies Hormozi's repayment lean, approval of the owner's existing payoff plan, and concern about volatility and financial pressure. A offers useful financial planning advice but substitutes a return-comparison framework for his documented stance. B slightly understates the parallel growth recommendation, which included increasing ad spend while ROAS and CAC held.",
+        "winner": "B"
+      }
+    }
+  },
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 11245,
+  "event_count": 4,
+  "finish_reasons": [
+    "turn.completed"
+  ],
+  "finished": "2026-10-19T11:33:19.832450+00:00",
+  "observed_models": [],
+  "parse_error": "",
+  "prompt_sha256": "5f06ec555251859f39d5b981a356e1b7c0d443417cd2751f6fd7c37f8b4ce78c",
+  "requested_model": "gpt-6.1-sol",
+  "serving_model_attested": false,
+  "status": "ok",
+  "usage_events": [
+    {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 11776,
+      "input_tokens": 23510,
+      "output_tokens": 1267,
+      "reasoning_output_tokens": 513
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "source_sha256": "ccbbd2fd00c7ef2c01eb32e84eb668155dddc63e4d03452302b43f4640722f4a",
+  "pairs": 72,
+  "eligible": 71,
+  "ineligible": 1,
+  "families": {
+    "sol": {
+      "eligible_pairs": 24,
+      "min_observed_expected_ratio": 0.9947197794731427,
+      "max_observed_expected_ratio": 1.0434323727892028
+    },
+    "opus": {
+      "eligible_pairs": 24,
+      "min_observed_expected_ratio": 0.9796823655847401,
+      "max_observed_expected_ratio": 1.0283440929161627
+    },
+    "gemini": {
+      "eligible_pairs": 23,
+      "min_observed_expected_ratio": 1.000371212472739,
+      "max_observed_expected_ratio": 1.0486206006861163
+    }
+  },
+  "interpretation": "Observed token deltas closely match expected full-context size. Usage is evidence of accepted input, not proof of attention or correct use."
+}

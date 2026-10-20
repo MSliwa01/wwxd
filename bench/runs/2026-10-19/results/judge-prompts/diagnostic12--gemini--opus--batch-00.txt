@@ -1,0 +1,421 @@
+Evaluation date: 2026-10-19. This is the current date, not a future date. May 2026 is in the past. Publication dates and dates of events described in a source are distinct. A model training cutoff does not invalidate supplied later material. You are an independent evaluator. Use no tools, commands, files, browsing, or external retrieval. A and B are anonymous. Their ordering conveys nothing. Do not infer their model, source access, or provenance. Do not reward writing style, citation presence, quotations, expert agreement, or presumed source use. A tie is valid.
+Score each answer on the four specified integer scales, each from 1 to 5. Anchors: 1 fundamentally deficient; 2 major problems; 3 mixed with meaningful gaps; 4 good with minor gaps; 5 strong and sufficiently complete. Choose A, B, or tie for substantive overall quality. Preserve uncertainty rather than inventing evidence.
+Return ONLY a JSON object with exactly one key, "judgments", containing one object per supplied pair. Each object has exactly: "id", "A", "B", "winner", "reason", "factual_objections". A and B each contain exactly the four dimension names and integer scores. winner is "A", "B", or "tie"; reason is a nonempty string. factual_objections is a list, possibly empty, of objects with exactly "answer" ("A" or "B"), "claim", "label" ("contradicted" or "unverified"), and "evidence" (a nonempty explanation). Distinguish an established contradiction from an unverified claim.
+Evaluate accuracy, specificity, faithfulness, and usefulness using the complete audited reference packet. The reference is evidence, not a required script. Missing optional detail is not automatically a false claim. Label a factual objection contradicted only when supplied evidence establishes the contradiction; otherwise label it unverified. Do not treat absence from the reference as proof of falsehood. Resolve a conflict between a summary and direct evidence in favor of the direct evidence and explain it.
+
+Pairs:
+[
+  {
+    "id": "p-e6ba524c4d3fa040",
+    "question": "I'm building a startup in Stockholm. Does Paul Graham think I really need to move to Silicon Valley?",
+    "A": "**Short answer: Paul Graham thinks you should at least *go* to Silicon Valley, but not necessarily move there for good.** In his April 2026 talk in Stockholm, he said founders should spend time there even if they come back. He also said that going and returning is one of the best things a founder can do for Stockholm as a startup hub.\n\n**His reasons**\n- **Peers.** There are more and better people working on the same problems, and more chance meetings that turn out valuable.\n- **Speed.** Valley investors decide faster because competition punishes waiting.\n- **Standing back home.** Investors outside the Valley tend to treat local startups as second-rate. Having been there, or getting into YC, reverses that.\n- **Calibration.** Seeing the big fish up close turns an impossible goal into a hard but definite one.\n- **Culture.** People help you for no reason, and you bring that culture home.\n\n**Caveats he raises himself**\n- YC data suggests startups that go home after YC are about half as likely to become unicorns. He discounts that figure for selection bias and higher Bay Area valuations.\n- He says family and life matter more than the company.\n- He admits that recommending YC as the best way to go sounds like talking his own book.\n\n**Concrete next steps**\n1. Apply to YC, or plan a focused stint of a few months in the Bay Area.\n2. Raise money and build relationships while you're there.\n3. Decide afterward whether to relocate or return to Stockholm.\n\n**When staying in Stockholm makes more sense**\n- Your customers, regulators or key talent are local.\n- You already have strong investor interest at home.\n- Family commitments make relocating costly.\n\n**When a longer move makes more sense**\n- You're struggling to raise money locally.\n- You lack peers working at your level.\n- Your market is US-first.\n\n**What's uncertain:** the half-as-likely figure comes without a published method. Other YC voices, such as Altman, are less sure the Bay Area premium will hold over the next decade.",
+    "B": "**Short answer:** Paul Graham's long-standing view is that you don't strictly *need* to, but your odds are meaningfully better in a major startup hub, and for most ambitious tech startups he has pointed to Silicon Valley (the Bay Area) as the best one. He treats it as a probabilistic advantage, not a requirement.\n\n**His reasoning, as I understand it:**\n- **Density:** Hubs concentrate investors, experienced founders, technical talent and acquirers, so useful chance encounters happen constantly.\n- **Ambition:** A city's culture shapes what you think is normal to attempt. Startup hubs push founders toward bigger goals.\n- **Fundraising and hiring:** Both are easier when investors and candidates are nearby.\n- **Timing:** He has suggested that being there in the earliest, most formative stage matters most, and that you can relocate later if it makes sense.\n\n**What's uncertain:** Remote work and the growth of other hubs have weakened the geographic argument somewhat since he first made it. I can't confirm how much he has updated his view recently. Stockholm is also a stronger ecosystem than most, with a record of large companies, local capital and strong engineering talent.\n\n**Decision criteria. Lean toward moving (at least temporarily) if:**\n- You need US venture capital or US customers.\n- You're raising a large seed round.\n- You lack a network of experienced founders.\n\n**Stay in Stockholm if:**\n- Your market is Nordic or European.\n- Your key hires won't relocate.\n- Local investors are already backing you.\n\n**Next steps:**\n1. Spend a focused period in the Bay Area, for example 2–3 months or an accelerator batch, before committing to a full move.\n2. Measure the difference in investor meetings, hires and customer conversations.\n3. Decide based on that evidence.",
+    "reference": {
+      "actual_stance": "Yes, at least for a while: go, and you can come back. You get the best peers, more serendipitous meetings, investors who decide faster, more respect from investors back home, and a realistic view of how good you are. Going and then actually returning is also one of the best things founders can do for Stockholm. He calls YC the optimal way to do the stint (four to six months). He cites YC data that startups going home after YC are only about half as likely to become unicorns, and discounts it three ways: selection bias, it measures valuation rather than performance, and half as well is still very good. He thinks Stockholm could become the Silicon Valley of Europe.",
+      "category": "fresh",
+      "errors": [
+        "Saying he thinks remote work makes location irrelevant.",
+        "Saying he advises moving permanently and never returning."
+      ],
+      "evidence": [
+        {
+          "quote": "And the answer is the same now as it always is. Yes, you should. You can go there for a bit and then come back, but you should at least go.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "0:36"
+        },
+        {
+          "quote": "You get the best peers.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "1:09"
+        },
+        {
+          "quote": "investors in Silicon Valley decide a lot faster.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "5:00"
+        },
+        {
+          "quote": "as long as you do actually come back, that's one of the best things you can do to help Sweden to help Stockholm thrive as a startup hub.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "16:10"
+        },
+        {
+          "quote": "Surely the optimal way to go to Silicon Valley for a bit and then come back is to do YC.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "17:16"
+        },
+        {
+          "quote": "startups that go back home after YC are only about half as likely to become unicorns.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "18:57"
+        },
+        {
+          "quote": "there's a lot of selection bias in this.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "18:57"
+        },
+        {
+          "quote": "even if you only do half as well, that's still pretty good.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "19:30"
+        },
+        {
+          "quote": "you could make it the Silicon Valley of Europe.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "20:04"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold matches raw. Added the reasons for going and the 'as long as you do actually come back' condition."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-05",
+      "key_status": "confirmed_expanded",
+      "primary_sources": [
+        "yt-QHJkUw31YX8"
+      ],
+      "question": "I'm building a startup in Stockholm. Does Paul Graham think I really need to move to Silicon Valley?",
+      "required_points": [
+        "Yes, go to Silicon Valley, at least for a while; you can come back.",
+        "Mentions the unicorn-rate caveat or the benefit of returning to help Stockholm."
+      ],
+      "supporting_points": [
+        "Reasons: best peers, serendipitous meetings, faster investors, respect back home.",
+        "YC is the optimal way to go for a bit and come back.",
+        "Startups that go home after YC are about half as likely to become unicorns, discounted for selection bias, valuation vs performance, and 'half as well is still good'.",
+        "Stockholm could become the Silicon Valley of Europe."
+      ],
+      "uncertainty": [],
+      "vault": "yc"
+    }
+  },
+  {
+    "id": "p-e359ab5393b60ed5",
+    "question": "My service business is profitable, but I'm carrying about $60k of debt. Should I pay it off or keep the cash for growth? What would Alex Hormozi say?",
+    "A": "# Pay Off the $60k or Invest in Growth?\n\n**Short answer:** Compare the debt's after-tax interest rate with the return you can *reliably* get from growth spending. Pay off whichever loses that comparison. Keep a cash buffer either way.\n\n## What Hormozi would likely say\n\nThis is an inference from his general public views, not a known answer to your specific case. Hormozi usually treats debt as a math problem, not a moral one. If you have a proven way to turn $1 into $3 or more, such as an offer with a known customer acquisition cost and lifetime value, he would likely push you to fund that engine instead of paying down cheap debt. He also stresses survival, keeping cash on hand, and not paying for growth you haven't proven yet. Whether he would favor payoff or growth for you depends entirely on your numbers.\n\n## Decision rules\n\n- **Pay it off** if the rate is above about 12–15% (credit cards, merchant cash advances, expensive term loans), if it carries a personal guarantee that worries you, or if your growth ideas are unproven.\n- **Keep the cash** if the rate is low (under about 7–8%), you have a repeatable acquisition channel with a measured return well above that rate, and you can't get financing again easily.\n- **Split it** if the case is borderline. Pay off the most expensive portion and put the rest into tests you can measure.\n\n## Next steps\n\n1. List each debt with its rate, term, prepayment penalty, and guarantee.\n2. Set aside 3–6 months of operating expenses that you don't touch.\n3. Calculate your real customer acquisition cost, lifetime value, and payback period.\n4. Run a small growth test first. Scale it only if the returns hold up.\n\n**Assumptions:** Your profit is steady, and the debt has no penalty for early repayment.",
+    "B": "**Short answer:** In most cases, pay it down aggressively, but not to zero cash, and keep funding only the growth that has proven returns.\n\n**What Hormozi would likely say:** He leans close to the Dave Ramsey end on business debt. His reasoning is that debt adds risk, and over a long horizon that risk tends to come due because businesses have slow seasons and volatility. In a consult with a profitable service business carrying about $60k, he backed the owner's plan to clear it in four to five months. He put it second on the priority list, right after a price increase. He also admits his debt aversion is partly emotional, about peace of mind, not a big financial lever. Separately, he says that if ads reliably return more than they cost and your tracking is trustworthy, you should keep spending. So his stance is \"pay off debt *and* keep doing cheap, proven fixes,\" not \"freeze growth.\" He never clearly says when borrowing to grow is justified.\n\n**Next steps:**\n1. Keep a cash reserve of roughly two to three months of operating costs.\n2. Put a fixed monthly amount toward the debt, highest interest rate first.\n3. Fund growth first with cheap wins: raise prices, improve your landing page and ads, and email past customers.\n4. Only increase spending where you can show the payback.\n\n**Things that would change this:**\n- **Pay off faster** if the rate is high (credit cards or merchant cash advances), revenue is seasonal or concentrated in a few clients, or the debt costs you sleep.\n- **Keep more cash for growth** if the rate is low and fixed, you have a channel with measured returns well above the interest rate, and you have the capacity to handle more customers.",
+    "reference": {
+      "actual_stance": "Pay it off. In the source the owner (Corey, HVAC duct cleaning, about $479k profit on $1.25M) already planned to clear the $60k in four to five months, and Hormozi approved ('Okay, good') and kept 'continue to pay off the debt' in the final plan. He calls it partly an emotional, back-of-mind issue and says he skews close to the Dave Ramsey side because debt increases risk, risk over a long horizon tends to come due, businesses have seasons and volatility, and many enduring companies such as Chick-fil-A run debt free. He did not frame it as debt instead of growth: in the same session he told Corey to keep raising ad spend while ROAS and CAC hold, after fixing the landing page and ads.",
+      "category": "fresh",
+      "errors": [
+        "Saying he advises keeping cheap debt because leverage is a tool.",
+        "Saying he told the owner to stop investing in growth until the debt is gone.",
+        "Stating the 5% and '100% in headache' figures as a firm quantified rule he gave."
+      ],
+      "evidence": [
+        {
+          "quote": "So, right now, we're allocating about 10% of our profit going towards paying off some of our debt.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "guest_corey",
+          "speaker_basis": "business owner answering Hormozi's question; content-inferred",
+          "timestamp": "0:33"
+        },
+        {
+          "quote": "Profit on that is 479,000. Uh, our net margin is 38%.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "guest_corey",
+          "speaker_basis": "business owner answering Hormozi's question; content-inferred",
+          "timestamp": "3:15"
+        },
+        {
+          "quote": "We are planning to pay off completely in the next four to five months.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "guest_corey",
+          "speaker_basis": "business owner answering Hormozi's question; content-inferred",
+          "timestamp": "8:37"
+        },
+        {
+          "quote": "Okay, good. That's one of those things that like I'd say this is more of an emotional thing",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "8:37"
+        },
+        {
+          "quote": "I tend to skew like very close to the Ramsey side and the single argument that I have around it is basically debt",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "8:37"
+        },
+        {
+          "quote": "increases risk. Risk when multiplied over a long time horizon tends to come due.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "9:10"
+        },
+        {
+          "quote": "businesses have seasons, they have volatility",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "9:10"
+        },
+        {
+          "quote": "If you look at some of the most enduring companies, a lot of like Chick-fil-A operate debt free.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "9:10"
+        },
+        {
+          "quote": "we just want to continue to spend month over month provided our ROAS and our CAC stay more or less the same.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "10:48"
+        },
+        {
+          "quote": "Two is you're going to continue to pay off the debt.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "30:45"
+        },
+        {
+          "quote": "But at least 100% in headache.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "uncertain",
+          "speaker_basis": "unlabeled >> turn after a separate '5%' turn; could be Hormozi or Corey",
+          "timestamp": "32:53"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold says paying off 'adds only about 5% to profit but removes 100% in headache' as Hormozi's argument. In the raw, '5%.' and 'But at least 100% in headache.' are separate unlabeled >> turns, so the speaker is uncertain. Demoted to a supporting point.",
+        "Gold omits that the owner had already decided to pay it off and that Hormozi approved rather than argued him into it, and that the same plan kept funding growth through ads. Added as context so answers that say 'pay it off and keep funding proven growth from cash flow' are not marked wrong.",
+        "Raw-internal inconsistency: 10% of $479k profit is about $48k a year, which does not clear $60k in four to five months. Not material to the stance."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-09",
+      "key_status": "corrected_context",
+      "primary_sources": [
+        "yt-OQf2Ba-Lp_4"
+      ],
+      "question": "My service business is profitable, but I'm carrying about $60k of debt. Should I pay it off or keep the cash for growth? What would Alex Hormozi say?",
+      "required_points": [
+        "Lean toward paying off the debt (he skews close to the Ramsey side).",
+        "Reason: debt increases risk, and risk over a long time horizon tends to come due; businesses have seasons and volatility."
+      ],
+      "supporting_points": [
+        "Enduring companies like Chick-fil-A operate debt free.",
+        "He calls it partly an emotional, back-of-mind issue.",
+        "In context the owner already planned to pay it off in four to five months from cash flow, and Hormozi approved.",
+        "Not either/or: in the same plan he kept funding proven ads while ROAS and CAC held.",
+        "Paying it off adds only a few percent to profit but removes a lot of headache (speaker of the '5%' figure is uncertain; see uncertainty)."
+      ],
+      "uncertainty": [
+        "The question gives no profit, interest rate or growth return. His stance comes from a business with about $479k annual profit, where $60k is small. Conditional answers that ask for these numbers are acceptable if they still state his lean.",
+        "yt-sL16tsGafcQ at 16:55 to 18:02 discusses acquisition/fund-level debt as leverage. That is distinct from this operating-business debt case. A conditional answer noting that distinction is not itself an error; the specific Ramsey lean and cash-flow context remain the required factual stance."
+      ],
+      "vault": "hormozi"
+    }
+  },
+  {
+    "id": "p-dd85420a3336c01b",
+    "question": "Why does Garry Tan say the premium on doing YC is bigger than ever and that the gap between YC and second place has grown?",
+    "A": "**Correction:** Garry Tan didn't make this claim. Sam Altman did, while Tan was hosting their Startup School 2026 conversation in July. Altman noted that he could say it while Tan, as YC's current head, probably couldn't. I know of no statement by either of them that the gap between YC and second place has grown. That part looks like an embellishment of the original remark.\n\n**What Altman said around the claim:**\n- It came up while discussing co-founder matching, which Altman said had once been the main limit on how many good startups YC could fund.\n- He stressed getting into networks early, because relationships take years to compound.\n- He said moving to the Bay Area was historically the best way to meet future co-founders, though he now feels less sure of that.\n- He didn't give a detailed reason why the premium is larger now.\n\n**Plausible reasons (my inference, not his stated argument):**\n- AI makes building cheap, so access to people, investors and a dense peer group matters relatively more.\n- YC acceptance raises a startup's standing with investors.\n- A batch supplies colleagues, solutions from peers, and fast-deciding early customers.\n\n**Weighing it:** The claim comes from a former YC president at YC's own event, with no supporting data. Treat it as an informed insider opinion, not evidence.\n\n**Decision criteria if you're considering YC:**\n- **Network:** YC is worth more if you lack a co-founder, Bay Area connections, or credibility with investors.\n- **Leverage:** It's worth less if you already have strong traction or a network, since your existing leverage may matter more.\n- **Next step:** Talk to recent founders from several batches and ask what they'd have lacked without YC.",
+    "B": "Garry Tan, as YC's president and CEO, argues that the value of going through YC has risen, not fallen, as startup tools have gotten cheaper. His reasoning generally runs along these lines:\n\n- **Speed matters more in the AI era.** Small teams can now build and reach revenue much faster. When winners pull ahead in months rather than years, a structured three-month sprint with intense feedback is worth more.\n- **Network effects compound.** With thousands of alumni companies, YC offers a ready base of early customers, hires, and advisors. Rival programs can copy the curriculum but not decades of accumulated network.\n- **Signal in a noisy market.** Building is cheap, so many more startups exist. Investors lean harder on trusted filters, and YC's brand plus Demo Day concentrate investor attention in a way smaller accelerators cannot.\n- **Selection and peer density.** More applicants let YC be more selective, and stronger batches make the peer group itself more valuable.\n- **Outcome data.** He points to recent batches reaching meaningful revenue unusually quickly as evidence that the advantage is widening.\n\n**What's uncertain:** This is the view of YC's own leader, so it is partly advocacy. Independent, survivorship-adjusted comparisons of YC versus other accelerators are limited. Faster revenue growth may also reflect broader AI tailwinds rather than YC itself.\n\n**If you're deciding whether to apply:** YC's premium matters most if you are a first-time founder, lack investor connections, or sell to other startups. It matters less if you already have strong traction, warm investor access, or a niche where a specialist accelerator or industry-specific investor adds more. Weigh the standard dilution against how much the network and signal would speed up your next funding round.",
+    "reference": {
+      "actual_stance": "False attribution. Sam Altman said it, in his closing conversation with Garry Tan at Startup School 2026, prefacing it with 'I can say this, Garry probably can't'. He explained the widening gap as network effects: networks put you where you meet future cofounders (he met his OpenAI cofounders years earlier), and that takes a long time to compound. Just before, he said YC's once-heretical push to move to San Francisco was clearly right, though he has less intuition about it now.",
+      "category": "attribution",
+      "errors": [
+        "Attributing the claim to Garry Tan.",
+        "Explaining it with reasons the source does not give (bigger checks, brand) as if quoted."
+      ],
+      "evidence": [
+        {
+          "quote": "it used to be very heretical that YC told people they had to move to San Francisco. And looking back, it was clearly right.",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "16:25"
+        },
+        {
+          "quote": "I also think that I I can say this, Gary probably can't. I I I think the premium on doing YC is bigger now than it's like ever been before.",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "16:56"
+        },
+        {
+          "quote": "the distance between like YC and second place is has expanded. And this is a reminder of the power of",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "16:56"
+        },
+        {
+          "quote": "network effects.",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "17:28"
+        },
+        {
+          "quote": "the people that I started OpenAI with, I met like many many years in some cases before uh starting OpenAI",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "17:28"
+        },
+        {
+          "quote": "the sooner you can put yourself just in a flow where you're going to meet the people that will be your eventual co-founders",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "17:28"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold says Altman prefaced the line 'because it would sound self-serving coming from YC's current CEO'. The raw gives the preface but not the reason. Kept as an acceptable inference, not a required point.",
+        "Captions spell the name 'Gary'; quotes keep the caption spelling."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-17",
+      "key_status": "confirmed_with_interpretation_flag",
+      "primary_sources": [
+        "yt-ZIaOBAjvc38"
+      ],
+      "question": "Why does Garry Tan say the premium on doing YC is bigger than ever and that the gap between YC and second place has grown?",
+      "required_points": [
+        "Corrects the attribution: Sam Altman said it, not Garry Tan.",
+        "Gives his reason: network effects (meeting future cofounders, compounding over time)."
+      ],
+      "supporting_points": [
+        "Prefaced with 'I can say this, Garry probably can't'.",
+        "Context: Startup School 2026 conversation with Garry Tan.",
+        "Context: moving to SF was clearly right in hindsight; he has less intuition about it now.",
+        "Inference that it would sound self-serving from YC's CEO is reasonable but not stated in the source."
+      ],
+      "uncertainty": [
+        "Speaker attribution is inferred from content (answer references OpenAI cofounders; Tan asks the questions). The description confirms the conversation format."
+      ],
+      "vault": "yc"
+    }
+  }
+]

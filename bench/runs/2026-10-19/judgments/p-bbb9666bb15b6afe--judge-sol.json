@@ -1,0 +1,43 @@
+{
+  "answer_family": "sol",
+  "batch_id": "diagnostic12--sol--sol--batch-01",
+  "error": "",
+  "id": "p-bbb9666bb15b6afe--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-bbb9666bb15b6afe",
+  "primary_eligible": false,
+  "prompt_sha256": "ef0b13b77729cf0b3a119e71b0241525d528a0d647d4eb8a52de2bfe85fd8971",
+  "question_key": "diagnostic12--yc-01",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 5,
+      "faithfulness": 5,
+      "specificity": 4,
+      "usefulness": 5
+    },
+    "B": {
+      "accuracy": 4,
+      "faithfulness": 4,
+      "specificity": 5,
+      "usefulness": 5
+    },
+    "factual_objections": [
+      {
+        "answer": "B",
+        "claim": "Graham's emphasis has shifted toward encouraging students' independent projects.",
+        "evidence": "The packet shows encouragement of independent projects in both the earlier advice and the August 2026 essay. It establishes continuity, but does not establish a shift in emphasis.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-bbb9666bb15b6afe",
+    "reason": "Both accurately convey the default advice to learn and build during college, the consuming demands of a startup, and the exception for a project that takes off. B more explicitly identifies the continuing incompatibility with full-time study, but its claim of a historical shift in emphasis is not established. Their substantive guidance is comparably useful.",
+    "winner": "tie"
+  },
+  "winner": "tie"
+}

@@ -1,0 +1,114 @@
+{
+  "actual_input_tokens": 17028,
+  "answer": "```json\n{\n  \"judgments\": [\n    {\n      \"id\": \"p-4d9952cc71942a88\",\n      \"A\": {\"accuracy\": 5, \"specificity\": 5, \"faithfulness\": 5, \"usefulness\": 5},\n      \"B\": {\"accuracy\": 3, \"specificity\": 3, \"faithfulness\": 2, \"usefulness\": 3},\n      \"winner\": \"A\",\n      \"reason\": \"A covers every required point. It says to stop the lawyer fight because pre-PMF stock is near worthless. It says equity goes back even if vested, with the under-5% norm adjusted to 1–2% or less for a first-year departure. It calls for a no-fault, clean separation. It also includes nearly all supporting points: about a week and a couple thousand dollars, generous severance because everyone is watching, not making an advisor the judge, and the misconduct exception. Its note on the vesting cliff is consistent with the reference's premise note. B also correctly calls for stopping the lawyer-led fight, raises the cliff issue, and gives sensible process steps. But B omits the core under-2%/under-5% guidance. It suggests the departing founder keep a stake 'roughly proportional to the time and value he contributed', which drifts from the source's 'even if vested, give most of it back'. It frames repurchase around unvested shares only. It also says legal leverage matters more in several scenarios, which weakens the central advice. B leaves out the severance, generosity and 'everyone is watching' points.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"B\",\n          \"claim\": \"Michael Seibel has consistently argued that cofounder conflict is among the most common reasons early startups die.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The reference packet contains no statement from Seibel on cofounder conflict as a leading cause of startup death. The claim is plausible YC lore but is not supported by the supplied evidence.\"\n        },\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Lawyers profit from your anger.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The source says paying lawyers makes no sense when the stock is worth nothing. It does not include this characterization of lawyers profiting from anger.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"p-31022a88e0319499\",\n      \"A\": {\"accuracy\": 3, \"specificity\": 2, \"faithfulness\": 2, \"usefulness\": 2},\n      \"B\": {\"accuracy\": 3, \"specificity\": 2, \"faithfulness\": 2, \"usefulness\": 2},\n      \"winner\": \"tie\",\n      \"reason\": \"Both answers correctly avoid crediting Hormozi with a NASDAQ listing or an IPO equity deal. Both suggest the 4x figure may reflect the gap in valuation multiples between public and private companies. Neither meets the main required point: the story belongs to the Diary Of A CEO host. In that story, the host's company listed on a European exchange, banks said it would be worth 4x on the NASDAQ, and the host later received IPO equity worth about $7–8M for 9–12 months of work. Neither mentions Hormozi's 'same work, more zeros' response. Both also bring in unverified side details about Hormozi's exits. A speculates about an all-stock ALAN sale as a possible source of the confusion, which could mislead. B tells the user to treat the story as an illustration rather than a real transaction, which is also misleading, because it was a real transaction by the host. Their strengths and gaps roughly cancel out.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"He sold his gym software company, ALAN, to a strategic buyer in an all-stock deal.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The reference packet does not mention ALAN or the terms of its sale, so this detail cannot be confirmed from the supplied evidence.\"\n        },\n        {\n          \"answer\": \"A\",\n          \"claim\": \"In 2021 he sold two-thirds of Prestige Labs and Gym Launch to a private equity firm for $46.2M.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The reference packet does not cover this transaction. It is not contradicted, but it cannot be verified from the evidence.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"In 2021 Hormozi sold a majority stake in Gym Launch and Prestige Labs to a private buyer for about $46 million.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The reference packet does not cover this transaction.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"If there's no filing, treat the story as an illustration of the public-versus-private multiple gap, not as a real transaction.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"The source shows a real first-person account by the host. The host's company did go public on a European exchange, and the host received IPO equity worth about $7–8M. It was a real transaction, not a hypothetical illustration, though it was the host's and not Hormozi's.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"p-c8a0257afdc78052\",\n      \"A\": {\"accuracy\": 4, \"specificity\": 3, \"faithfulness\": 3, \"usefulness\": 4},\n      \"B\": {\"accuracy\": 5, \"specificity\": 5, \"faithfulness\": 4, \"usefulness\": 5},\n      \"winner\": \"B\",\n      \"reason\": \"Both answers correctly reject the false premise. B is closer to the evidence. It names Livingston's actual criteria: earnest, determined, flexible-minded founders with a healthy cofounder relationship. It notes that conceited applicants were turned down, a required point. It also correctly separates PG's 'formidable' definition, 'someone who gets what they want in any situation', from Livingston's own views, which is exactly the confusion the reference warns about. A frames the issue mainly as determination versus ruthlessness and screening out dishonest people. It misses the earnestness and conceit specifics and adds generic claims that are not in the evidence. Neither answer mentions Livingston's own 'soft and sensitive' versus 'ruthless investors' contrast. B includes a couple of unsupported additions, independent-mindedness and benevolence toward failing founders, which slightly lowers its faithfulness score.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"YC's stated view was that bad actors tend to fail: they struggle to recruit, keep cofounders, earn customer trust and survive scrutiny.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The supplied Livingston talk covers funding earnest people and rejecting conceited ones. It does not state this rationale about bad actors failing.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"She says early YC was not money-driven and helped failing founders rather than pressing them over small outcomes.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The reference quotes Livingston describing YC as a family with herself as its mom, and herself as soft at a time when investors were aggressive. The specific claim about helping failing founders rather than squeezing them is not in the supplied evidence.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"Independent-mindedness was among her criteria, because a new idea goes against convention.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"Livingston's quoted criteria are earnest, determined and flexible-minded. Independent-mindedness does not appear in the supplied evidence.\"\n        }\n      ]\n    }\n  ]\n}\n```",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 37.857,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "013619da79b7f9fd95974740c5d865e957661effb1f3c5f102d9f1ad849b9808"
+    }
+  ],
+  "batch": {
+    "blocked_pair_ids": [],
+    "chars_per_token": 2.44,
+    "eligible_pair_ids": [
+      "p-4d9952cc71942a88",
+      "p-31022a88e0319499",
+      "p-c8a0257afdc78052"
+    ],
+    "estimated_input_tokens": 15814,
+    "id": "diagnostic12--opus--opus--batch-01",
+    "judge_family": "opus",
+    "pair_ids": [
+      "p-4d9952cc71942a88",
+      "p-31022a88e0319499",
+      "p-c8a0257afdc78052"
+    ],
+    "prompt_bytes": 38589,
+    "prompt_sha256": "057f3154ce1dba4696ce89723a0f4048c924faaf397558d02212c233a0e2c0b8",
+    "suite": "diagnostic12"
+  },
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "decoded": {},
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 15814,
+  "event_count": 15,
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:36:33.594408+00:00",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "parse_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "prompt_sha256": "057f3154ce1dba4696ce89723a0f4048c924faaf397558d02212c233a0e2c0b8",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 15458,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 15458,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 15458,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 15458,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 3933,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 3933,
+      "output_tokens_details": {
+        "thinking_tokens": 1428
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ]
+}

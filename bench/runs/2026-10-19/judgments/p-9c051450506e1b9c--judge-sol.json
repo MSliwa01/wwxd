@@ -1,0 +1,55 @@
+{
+  "answer_family": "gemini",
+  "batch_id": "diagnostic12--sol--gemini--batch-00",
+  "error": "",
+  "id": "p-9c051450506e1b9c--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-9c051450506e1b9c",
+  "primary_eligible": true,
+  "prompt_sha256": "7405724568631f4bee08e27e383913f9a45fad59bcf447847d7c1eacf04fdafb",
+  "question_key": "diagnostic12--yc-08",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 2,
+      "faithfulness": 2,
+      "specificity": 2,
+      "usefulness": 2
+    },
+    "B": {
+      "accuracy": 4,
+      "faithfulness": 4,
+      "specificity": 4,
+      "usefulness": 4
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "The definitive decision criterion is multiple competing term sheets within a two-week window; otherwise stop fundraising.",
+        "evidence": "The packet recommends building enough growth and proof points to raise quickly, but supplies no two-week deadline, competing-term-sheet requirement, or mandatory stopping rule.",
+        "label": "unverified"
+      },
+      {
+        "answer": "A",
+        "claim": "Without warm introductions, the bottleneck is distribution.",
+        "evidence": "The supplied discussion identifies company performance and fundraising leverage as central. It does not establish this diagnosis for founders without warm introductions.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "If you are pre-product and have no usage data, your investor pitch meetings are essentially customer discovery calls.",
+        "evidence": "The packet supports launching and growing instead of polishing a deck. It does not equate investor meetings with discovery involving actual customers.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-9c051450506e1b9c",
+    "reason": "B captures the central advice: stop decksmithing and prolonged meetings, build growth and proof points, and become a company investors chase. Its investor-option analogy and chase percentages are supported. A substitutes an unsupported fundraising-process prescription, particularly its rigid two-week cutoff and requirement for competing term sheets. B has minor gaps, including not explicitly defining leverage as the ability to walk away and adding unsupported pre-product advice.",
+    "winner": "B"
+  },
+  "winner": "grounded"
+}

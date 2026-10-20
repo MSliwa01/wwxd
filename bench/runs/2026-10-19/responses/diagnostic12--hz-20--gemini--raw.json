@@ -1,0 +1,57 @@
+{
+  "actual_input_tokens": 240,
+  "answer": "The premise that Alex Hormozi universally advises all young roofing companies to stop door-knocking and shift entirely to Google Ads is false. Door-knocking remains a foundational, low-cost customer acquisition strategy for startups with zero marketing capital. \n\nHormozi likely gave that specific advice because the business had outgrown hustle-based outreach and hit a capacity wall where time efficiency mattered more than raw sweat equity. When a company has accumulated baseline cash flow, founder-led door-knocking yields diminishing returns compared to building predictable, scalable acquisition systems. Shifting budget to Google Ads captures high-intent, active search traffic from homeowners actively seeking immediate repairs, which leverages capital to buy back time and scale operations faster than manual canvassing.\n\nMaterial assumptions include that the business had sufficient cash reserves to fund a digital ad campaign without immediate failure, a sales process capable of closing inbound leads, and a local market with search volume high enough to support paid acquisition. \n\nConcrete next steps for a roofing owner depend on current metrics. If daily cash flow is low and margins are tight, continue door-knocking to preserve capital while maximizing close rates. If monthly revenue consistently exceeds operating costs and labor capacity is underutilized, allocate a test budget to Google Ads while tracking cost per acquisition versus lifetime customer value.\n\nDecision criteria for the shift rely strictly on unit economics. If the cost to acquire a customer via Google Ads is lower than the blended cost of labor and time spent door-knocking, transition the budget. If digital acquisition costs outpace profit margins, return immediately to direct-sales canvassing until cash reserves stabilize.",
+  "arm": "raw",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 2.246,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "704e084b1e1cbdc09d7ab76f9741b52fcf225cefe3e1e56e116c3b877c09af0d"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 353,
+  "event_count": 1,
+  "family": "gemini",
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:21:37.289164+00:00",
+  "format_deviations": [],
+  "id": "diagnostic12--hz-20--gemini--raw",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_sha256": "ecc16a1a6007dc915902861882b872102d91a5f0ee62ae172abcec0434b0cd7a",
+  "question_key": "diagnostic12--hz-20",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 327,
+      "promptTokenCount": 240,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 240
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 567
+    }
+  ],
+  "words": 262
+}

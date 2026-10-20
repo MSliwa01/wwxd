@@ -1,0 +1,59 @@
+{
+  "actual_input_tokens": 110239,
+  "answer": "To reach your $25,000 monthly profit goal within six months without hiring, you should implement move (1) first, followed by move (2), and reject move (3). \n\nHere is the financial and operational breakdown showing why this fits your exact constraints.\n\n### Financial Math\nCurrent state: 45 clients at $400 is $18,000 revenue. Minus $40 software and payment fees per client ($1,800 total) leaves $16,200 profit. You work 50 hours a week (45 hours delivery, 5 hours admin).\nMove 1 (Raise standard price to $500 with 60 days notice): Assuming normal churn, if you retain 40 clients at $500, revenue is $20,000. Minus $1,600 in fees leaves $18,400 profit. \nMove 2 (Add a premium tier at $2,000 for up to 5 of your larger clients): Filling all 5 spots adds $10,000 in revenue. Subtract $200 in software/payment fees, leaving $9,800 in incremental profit. \nCombined: $18,400 + $9,800 = $28,200 monthly profit, surpassing your $25,000 goal.\n\n### Hour Constraint Check\nYou have 50 hours total. Currently: 45 clients × 1 hour = 45 hours delivery + 5 hours admin = 50 hours. \nAfter Move 1, assume 40 standard clients taking 40 hours. This frees up 5 hours of delivery capacity.\nFor Move 2, the 5 premium clients require an extra 2 hours per client per week on top of the normal hour (3 hours total per premium client). 5 clients × 3 hours = 15 hours. \nTotal new workload: 40 standard clients (40 hours) + 5 premium clients (15 hours) + 5 hours admin = 60 hours. To stay at your hard cap of 50 hours, drop 10 of your lowest-paying or most demanding standard clients, leaving 30 standard clients (30 hours) + 5 premium clients (15 hours) + 5 hours admin = 50 hours. \n\n### Why Reject Move 3\nRecording a $49 self-serve course violates the strategy of focusing on high-volume services competitors ignore or pulling cash forward through high-ticket personal attention. A low-priced course creates support tickets and administrative distraction without moving your income meaningfully under a no-hiring constraint.\n\n### What the Premium Tier Should Include\nYour 8 Shopify clients doing over $2M a year need specific financial oversight. The $2,000 tier must include:\n1. Monthly cash-flow forecasting to prevent inventory stockouts.\n2. Direct inventory planning frameworks tailored to Shopify cash conversion cycles.\n3. Proactive coordination with their tax preparer (quarterly tax estimates and year-end handoffs).\n4. Priority communication response times (jump the line).\n\n### Decision Criteria and Material Assumptions\nMaterial Assumptions: Raising prices to $500 will cause minor churn (dropping from 45 to 40 standard clients), and exactly 5 of your larger clients will eagerly upgrade to the $2,000 tier to get cash-flow and inventory help they currently receive for free.\nDecision Criteria: If standard clients churn at a rate higher than expected, immediately pause the price raise for existing clients and apply it only to new sign-ups. If fewer than 2 clients upgrade to the premium tier, reduce your standard client drop-off to preserve total revenue volume until the 6-month mark.",
+  "arm": "grounded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 12.087,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "07a5a9e242827144bac365928a230ab4633a1d158f55483528097b288d3823e9"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 105293,
+  "event_count": 1,
+  "family": "gemini",
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:25:00.025894+00:00",
+  "format_deviations": [
+    "outside descriptive 150..300 word band around approximate 250-word instruction"
+  ],
+  "id": "newadvice12--advice-hz-01--gemini--grounded",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_sha256": "8f8697f6580ec0daf3b36b1c9419a2a5a34eccecca1a2ea245ff8f131f7ced07",
+  "question_key": "newadvice12--advice-hz-01",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "newadvice12",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 815,
+      "promptTokenCount": 110239,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 110239
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 111054
+    }
+  ],
+  "words": 503
+}

@@ -1,0 +1,55 @@
+{
+  "answer_family": "gemini",
+  "batch_id": "newadvice12--sol--gemini--batch-02",
+  "error": "",
+  "id": "p-e36bea03e9001ed3--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-e36bea03e9001ed3",
+  "primary_eligible": true,
+  "prompt_sha256": "49dcc74361de9ff9d8484b82b092394a5d0f74e93fb17c24428a249ded21ec2b",
+  "question_key": "newadvice12--advice-yc-02",
+  "status": "ok",
+  "suite": "newadvice12",
+  "verdict": {
+    "A": {
+      "actionability": 3,
+      "constraint_fit": 3,
+      "decision_quality": 3,
+      "reasoning": 3
+    },
+    "B": {
+      "actionability": 3,
+      "constraint_fit": 4,
+      "decision_quality": 4,
+      "reasoning": 3
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "The business has existing product-market fit.",
+        "evidence": "Thirty paying customers and four months of revenue growth demonstrate traction, but retention, acquisition economics, and durability are not supplied.",
+        "label": "unverified"
+      },
+      {
+        "answer": "A",
+        "claim": "Introducing tiered subscriptions stabilizes cash flow and extends runway.",
+        "evidence": "The effect depends on tier prices, customer acceptance, usage patterns, and churn. The supplied information does not establish a revenue or runway improvement.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "The business has existing product-market fit.",
+        "evidence": "The supplied customer count and recent growth do not establish retention or a repeatable, sustainable acquisition model.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-e36bea03e9001ed3",
+    "reason": "Both reasonably prioritize self-serve given the team's capacity and enterprise sales delay. B better supports retaining usage pricing; A prescribes an immediate pricing change without evidence about willingness to pay, churn, or revenue effects. Both give the correct approximate static runway but omit growth scenarios and whether burn already includes revenue. B's requirement to wait until runway falls below six months before reconsidering enterprise is poorly matched to six-to-seven-month procurement.",
+    "winner": "B"
+  },
+  "winner": "grounded"
+}

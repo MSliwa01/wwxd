@@ -1,0 +1,72 @@
+{
+  "actual_input_tokens": 10471,
+  "answer": "```json\n{\n  \"judgments\": [\n    {\n      \"id\": \"p-66f97cdfd6a8bbe4\",\n      \"A\": {\n        \"accuracy\": 3,\n        \"specificity\": 2,\n        \"faithfulness\": 2,\n        \"usefulness\": 3\n      },\n      \"B\": {\n        \"accuracy\": 5,\n        \"specificity\": 5,\n        \"faithfulness\": 5,\n        \"usefulness\": 5\n      },\n      \"winner\": \"B\",\n      \"reason\": \"Answer B correctly recognizes that the premise is false, identifying the specific roofing owner (Caleb) and noting that Hormozi actually told him to go all-in on door-to-door sales rather than Google Ads. Answer A blindly accepts the false premise and invents a rationale for why Hormozi gave advice he never actually gave.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Hormozi likely gave that specific advice because the business had outgrown hustle-based outreach and hit a capacity wall...\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"Source material shows Hormozi explicitly told the roofing company owner to go all-in on door-to-door sales and build a 'DDD army' as his primary growth engine, rather than telling him to move his budget to Google Ads.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"p-9c051450506e1b9c\",\n      \"A\": {\n        \"accuracy\": 5,\n        \"specificity\": 5,\n        \"faithfulness\": 5,\n        \"usefulness\": 5\n      },\n      \"B\": {\n        \"accuracy\": 4,\n        \"specificity\": 4,\n        \"faithfulness\": 4,\n        \"usefulness\": 4\n      },\n      \"winner\": \"A\",\n      \"reason\": \"Answer A captures Michael Seibel's specific framing from the transcript precisely, including the concept of investors buying an option and the 80/20 to 90/10 chase statistics. Answer B introduces prescriptive advice like 'set a hard deadline of two weeks to secure a term sheet' which is standard generic venture advice rather than Seibel's specific points from the source text.\",\n      \"factual_objections\": []\n    },\n    {\n      \"id\": \"p-ce005039168f0ddd\",\n      \"A\": {\n        \"accuracy\": 4,\n        \"specificity\": 4,\n        \"faithfulness\": 4,\n        \"usefulness\": 4\n      },\n      \"B\": {\n        \"accuracy\": 4,\n        \"specificity\": 4,\n        \"faithfulness\": 4,\n        \"usefulness\": 4\n      },\n      \"winner\": \"tie\",\n      \"reason\": \"Both answers correctly explain Alex Hormozi's stance on damaging admissions (admitting product weaknesses to build trust) and capture the crucial wording mechanics (placing the flaw first, followed by 'but' and the primary benefit). Both are strong, well-structured responses that align closely with the reference material.\",\n      \"factual_objections\": []\n    }\n  ]\n}\n```",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 2.576,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "aff280cf96f2214670ed7316897a36130547171fea9f6eb140a0b3f4f71cc659"
+    }
+  ],
+  "batch": {
+    "blocked_pair_ids": [],
+    "chars_per_token": 3.2,
+    "eligible_pair_ids": [
+      "p-66f97cdfd6a8bbe4",
+      "p-9c051450506e1b9c",
+      "p-ce005039168f0ddd"
+    ],
+    "estimated_input_tokens": 10939,
+    "id": "diagnostic12--gemini--gemini--batch-03",
+    "judge_family": "gemini",
+    "pair_ids": [
+      "p-66f97cdfd6a8bbe4",
+      "p-9c051450506e1b9c",
+      "p-ce005039168f0ddd"
+    ],
+    "prompt_bytes": 35004,
+    "prompt_sha256": "9effce59e39172f741cd1d686aed0084dd118434297190dd623e79c23cf9aabc",
+    "suite": "diagnostic12"
+  },
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "decoded": {},
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 10939,
+  "event_count": 1,
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:37:45.234288+00:00",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "parse_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "prompt_sha256": "9effce59e39172f741cd1d686aed0084dd118434297190dd623e79c23cf9aabc",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 748,
+      "promptTokenCount": 10471,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 10471
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 11219
+    }
+  ]
+}

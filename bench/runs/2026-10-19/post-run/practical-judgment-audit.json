@@ -1,0 +1,1343 @@
+{
+  "scope": "Parent integration review after blind factual audit. Not a new independent rating and not a revision to primary votes.",
+  "coverage": {
+    "practical_disagreements_reviewed": 16,
+    "factual_objections_reviewed": 83,
+    "original_contradicted": 38,
+    "original_unverified": 45
+  },
+  "disagreements": [
+    {
+      "question_key": "newadvice12--advice-hz-01",
+      "answer_family": "sol",
+      "external_votes": [
+        {
+          "judge_family": "gemini",
+          "winner": "tie"
+        },
+        {
+          "judge_family": "opus",
+          "winner": "grounded"
+        }
+      ],
+      "annotation": "Both plans repair premium pricing and fit their final capacity tables. Judges differ on buffer and scope; no new established numerical error in this disagreement."
+    },
+    {
+      "question_key": "newadvice12--advice-hz-01",
+      "answer_family": "opus",
+      "external_votes": [
+        {
+          "judge_family": "gemini",
+          "winner": "tie"
+        },
+        {
+          "judge_family": "sol",
+          "winner": "grounded"
+        }
+      ],
+      "annotation": "The final main tables agree, but raw has an incorrect course comparison and a transition that can exceed the hard hour cap before termination notices expire. The broad Gemini math endorsement misses these qualifications. Grounded revises the draft five-client premium option in a labelled fallback; that is not necessarily an absolute constraint violation."
+    },
+    {
+      "question_key": "newadvice12--advice-hz-02",
+      "answer_family": "opus",
+      "external_votes": [
+        {
+          "judge_family": "gemini",
+          "winner": "tie"
+        },
+        {
+          "judge_family": "sol",
+          "winner": "raw"
+        }
+      ],
+      "annotation": "A pricing illustration and year-end staffing timing need qualification. Two months from October19 leaves some December availability, so no revenue this year is too definite. Preference also depends on how much weight to give unused van capacity."
+    },
+    {
+      "question_key": "newadvice12--advice-hz-03",
+      "answer_family": "opus",
+      "external_votes": [
+        {
+          "judge_family": "gemini",
+          "winner": "tie"
+        },
+        {
+          "judge_family": "sol",
+          "winner": "raw"
+        }
+      ],
+      "annotation": "Both reject the unaffordable plan and provide funded schedules. Gradual scaling, inventory reserve and margin assumptions receive different weight; no consensus is warranted merely because both say no."
+    },
+    {
+      "question_key": "newadvice12--advice-hz-04",
+      "answer_family": "sol",
+      "external_votes": [
+        {
+          "judge_family": "gemini",
+          "winner": "raw"
+        },
+        {
+          "judge_family": "opus",
+          "winner": "grounded"
+        }
+      ],
+      "annotation": "Conservative initial spend competes with efficient use of the fixed agency fee and the deadline. Both arithmetic paths check out; risk tolerance explains the disagreement."
+    },
+    {
+      "question_key": "newadvice12--advice-hz-04",
+      "answer_family": "opus",
+      "external_votes": [
+        {
+          "judge_family": "gemini",
+          "winner": "raw"
+        },
+        {
+          "judge_family": "sol",
+          "winner": "grounded"
+        }
+      ],
+      "annotation": "Referral rewards require room in the growth budget even if paid from gross profit. The grounded ramp also needs a continuing referral reserve. Budget completeness is a substantive qualification, not a reason to rewrite either vote."
+    },
+    {
+      "question_key": "newadvice12--advice-hz-05",
+      "answer_family": "opus",
+      "external_votes": [
+        {
+          "judge_family": "gemini",
+          "winner": "grounded"
+        },
+        {
+          "judge_family": "sol",
+          "winner": "tie"
+        }
+      ],
+      "annotation": "Raw misdescribes its annual discount, while grounded membership projections assume unstated acquisition deterioration. Annual billing and sustained engagement are distinct outcomes. Different weighting is defensible."
+    },
+    {
+      "question_key": "newadvice12--advice-hz-06",
+      "answer_family": "sol",
+      "external_votes": [
+        {
+          "judge_family": "gemini",
+          "winner": "raw"
+        },
+        {
+          "judge_family": "opus",
+          "winner": "grounded"
+        }
+      ],
+      "annotation": "Both select the same business. Tax framing and data safeguards compete with explicit time allocation and profit-based continuation criteria. No established contradiction in this preference split."
+    },
+    {
+      "question_key": "newadvice12--advice-yc-01",
+      "answer_family": "gemini",
+      "external_votes": [
+        {
+          "judge_family": "opus",
+          "winner": "raw"
+        },
+        {
+          "judge_family": "sol",
+          "winner": "grounded"
+        }
+      ],
+      "annotation": "Commercial sequencing competes with product and inactive-pilot diagnosis. An arbitrary sales target is a proposed decision rule, not an observed fact. Neither ranking is a factual correction."
+    },
+    {
+      "question_key": "newadvice12--advice-yc-03",
+      "answer_family": "sol",
+      "external_votes": [
+        {
+          "judge_family": "gemini",
+          "winner": "tie"
+        },
+        {
+          "judge_family": "opus",
+          "winner": "raw"
+        }
+      ],
+      "annotation": "Both retain employment; employer conflicts and fallback options create the difference. These are useful scenario considerations, not source-fidelity requirements."
+    },
+    {
+      "question_key": "newadvice12--advice-yc-03",
+      "answer_family": "opus",
+      "external_votes": [
+        {
+          "judge_family": "gemini",
+          "winner": "raw"
+        },
+        {
+          "judge_family": "sol",
+          "winner": "tie"
+        }
+      ],
+      "annotation": "One answer negotiates the commitment while the other answers the offered binary more directly. This is a constraint-interpretation difference, conditional on whether remaining in the present role is available."
+    },
+    {
+      "question_key": "newadvice12--advice-yc-04",
+      "answer_family": "sol",
+      "external_votes": [
+        {
+          "judge_family": "gemini",
+          "winner": "raw"
+        },
+        {
+          "judge_family": "opus",
+          "winner": "grounded"
+        }
+      ],
+      "annotation": "Both allocations total36000 and the payback arithmetic is conditional on80percent margin. The main difference is reserving evidence-gated spending and addressing launch/onboarding."
+    },
+    {
+      "question_key": "newadvice12--advice-yc-05",
+      "answer_family": "sol",
+      "external_votes": [
+        {
+          "judge_family": "gemini",
+          "winner": "tie"
+        },
+        {
+          "judge_family": "opus",
+          "winner": "grounded"
+        }
+      ],
+      "annotation": "Both improve recruiting rather than cash alone. Pipeline ownership and measurement detail favor grounded for one judge; runway specificity and revisiting declined candidates favor raw. Founder-time wording remains ambiguous."
+    },
+    {
+      "question_key": "newadvice12--advice-yc-05",
+      "answer_family": "opus",
+      "external_votes": [
+        {
+          "judge_family": "gemini",
+          "winner": "tie"
+        },
+        {
+          "judge_family": "sol",
+          "winner": "grounded"
+        }
+      ],
+      "annotation": "Flexible compensation and a measurable sourcing target compete with a stronger categorical pipeline diagnosis. Given missing burn and hiring-budget data, compensation assumptions cannot be conclusively validated."
+    },
+    {
+      "question_key": "newadvice12--advice-yc-06",
+      "answer_family": "sol",
+      "external_votes": [
+        {
+          "judge_family": "gemini",
+          "winner": "tie"
+        },
+        {
+          "judge_family": "opus",
+          "winner": "grounded"
+        }
+      ],
+      "annotation": "Both select the domain-informed product. Held-out technical validation and procurement are central. Judges differ on distribution options and realistic paid-pilot timing."
+    },
+    {
+      "question_key": "newadvice12--advice-yc-06",
+      "answer_family": "gemini",
+      "external_votes": [
+        {
+          "judge_family": "opus",
+          "winner": "raw"
+        },
+        {
+          "judge_family": "sol",
+          "winner": "tie"
+        }
+      ],
+      "annotation": "Commercial specificity competes with early feasibility work. Neither answer fully validates data quality and sales timing; tie versus raw preference is a qualitative judgment."
+    }
+  ],
+  "factual_objections": [
+    {
+      "judgment_id": "p-13be11ec2eedd729--judge-gemini",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-hz-06",
+      "response_id": "newadvice12--advice-hz-06--gemini--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "Weeks one through thirty should be spent drafting a simple service offer",
+        "evidence": "Allocating 30 weeks (over 200 days) to a 90-day plan is a clear arithmetic/timeline error.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-3fc7a9a85fe40dda--judge-opus",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-yc-03",
+      "response_id": "newadvice12--advice-yc-03--gemini--raw",
+      "original_objection": {
+        "answer": "B",
+        "claim": "Consumer fintech apps for couples face notoriously high churn and complex monetization challenges.",
+        "evidence": "This is a plausible category generalization, but nothing supplied supports it and it cannot be confirmed here.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-7e85f9be6e493774--judge-opus",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-hz-02",
+      "response_id": "newadvice12--advice-hz-02--gemini--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "Variable costs total $5,070 for labor.",
+        "evidence": "Groomer pay is 40% of $14,820, which is $5,928, not $5,070.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-7e85f9be6e493774--judge-opus",
+      "ordinal": 1,
+      "question_key": "newadvice12--advice-hz-02",
+      "response_id": "newadvice12--advice-hz-02--gemini--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "Monthly net profit of $4,078.",
+        "evidence": "$14,820 - $5,928 - $1,872 - $3,800 = $3,220. The $4,078 figure comes from the incorrect labor number.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-7e85f9be6e493774--judge-opus",
+      "ordinal": 2,
+      "question_key": "newadvice12--advice-hz-02",
+      "response_id": "newadvice12--advice-hz-02--gemini--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "At 140 grooms and about $15,100 revenue, the price change is 'significantly expanding profit margins.'",
+        "evidence": "$15,100 - 40% labor ($6,040) - $1,680 supplies - $3,800 fixed = about $3,580. That is below A's own stated $4,078 baseline. A blended ticket with 70% of clients at $100 also would not reach about $15,100 at 140 grooms.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-7e85f9be6e493774--judge-opus",
+      "ordinal": 3,
+      "question_key": "newadvice12--advice-hz-02",
+      "response_id": "newadvice12--advice-hz-02--gemini--grounded",
+      "original_objection": {
+        "answer": "B",
+        "claim": "The pricing change adds over $16,000 in annual profit.",
+        "evidence": "That figure assumes all 156 grooms are priced at $110. Under B's own plan, regulars (70%) stay at $95 for 60 days and then pay $105. The blended ticket is then about $106.50, an uplift of roughly $12.9k a year at steady state, and less during the first 90 days.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-7fa860047189a558--judge-opus",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-yc-04",
+      "response_id": "newadvice12--advice-yc-04--gemini--grounded",
+      "original_objection": {
+        "answer": "B",
+        "claim": "External PR around an early-stage B2B SaaS launch brings negligible signups.",
+        "evidence": "This is a reasonable heuristic, but it is a generalization that cannot be established or refuted from the supplied information.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-c8553b2191778e52--judge-opus",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-hz-03",
+      "response_id": "newadvice12--advice-hz-03--gemini--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "At $1,000 daily, inventory would deplete in roughly 130 days",
+        "evidence": "At the reported 3.2 ROAS, $1,000/day is about $3,200/day, or about 55 bottles/day, so 4,000 bottles last about 72 days. The 130-day figure implies a true ROAS near 1.8. A states no basis for that, though it does say platform ROAS may be overstated.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-c8553b2191778e52--judge-opus",
+      "ordinal": 1,
+      "question_key": "newadvice12--advice-hz-03",
+      "response_id": "newadvice12--advice-hz-03--gemini--grounded",
+      "original_objection": {
+        "answer": "B",
+        "claim": "$1,000 a day burns through your entire $45,000 budget in less than 45 days",
+        "evidence": "$45,000 / $1,000 per day = exactly 45 days, not less. The error is minor, and the main point that the plan exceeds the budget before December 31 stands.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-c8553b2191778e52--judge-opus",
+      "ordinal": 2,
+      "question_key": "newadvice12--advice-hz-03",
+      "response_id": "newadvice12--advice-hz-03--gemini--grounded",
+      "original_objection": {
+        "answer": "B",
+        "claim": "$1,000 daily ad spend will rapidly exhaust your 4,000-bottle inventory well before December 31",
+        "evidence": "At the reported ROAS, about 55 bottles/day would take about 72 days to use 4,000 bottles, roughly late December. The $45k budget caps spend at 45 days, or about 2,480 bottles. Reorder demand is unquantified, so 'well before' is not established.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-62531d2bc6b063c2--judge-opus",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-hz-04",
+      "response_id": "newadvice12--advice-hz-04--gemini--raw",
+      "original_objection": {
+        "answer": "B",
+        "claim": "Option A's digital agency math yields roughly 4 to 5 contracts monthly at an unsustainable $1,800 to $2,250 acquisition cost against a $48,000 lifetime value",
+        "evidence": "$8,000 − $2,000 fee = $6,000, which buys 40 leads at $150; at 12% that is 4.8 contracts, so about $1,667 per contract. Lifetime gross profit is $2,400 × 20 × 35% ≈ $16,800, roughly 10x that cost, so the cost is sustainable and comparable to the rep's (about $1,528).",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-7dc8c5481c99e43d--judge-opus",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-hz-01",
+      "response_id": "newadvice12--advice-hz-01--gemini--grounded",
+      "original_objection": {
+        "answer": "A",
+        "claim": "Combined: $18,400 + $9,800 = $28,200 monthly profit, surpassing your $25,000 goal.",
+        "evidence": "A's own hour plan keeps only 30 standard clients. 30×$460 + 5×$1,960 = $23,600, which is below the goal; the $18,400 figure assumed 40 standard clients.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-7dc8c5481c99e43d--judge-opus",
+      "ordinal": 1,
+      "question_key": "newadvice12--advice-hz-01",
+      "response_id": "newadvice12--advice-hz-01--gemini--raw",
+      "original_objection": {
+        "answer": "B",
+        "claim": "37 standard clients at $500 yield $17,010 net; 4 premium yield $7,440 net; together $24,450, hitting your baseline target.",
+        "evidence": "37×$460 = $17,020 and 4×$1,960 = $7,840, for a total of $24,860. Even B's own $24,450 is below the $25,000 target.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-7dc8c5481c99e43d--judge-opus",
+      "ordinal": 2,
+      "question_key": "newadvice12--advice-hz-01",
+      "response_id": "newadvice12--advice-hz-01--gemini--raw",
+      "original_objection": {
+        "answer": "B",
+        "claim": "This plan strictly respects your 50-hour capacity... Total time is 54 hours, which can be compressed to 50 by tightening workflows.",
+        "evidence": "54 hours exceeds the user's stated hard cap of 50. The '41 service + 5 admin − 5 freed = 42' breakdown is also internally incoherent.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-13be11ec2eedd729--judge-opus",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-hz-06",
+      "response_id": "newadvice12--advice-hz-06--gemini--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "Weeks one through thirty ... weeks thirty-one through sixty ... weeks sixty-one through ninety form the first ninety days",
+        "evidence": "Ninety weeks is not ninety days. The timeline's units contradict the stated 90-day window the user asked for.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-13be11ec2eedd729--judge-opus",
+      "ordinal": 1,
+      "question_key": "newadvice12--advice-hz-06",
+      "response_id": "newadvice12--advice-hz-06--gemini--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "The service carries the highest profit margin of the three options",
+        "evidence": "Plausible for a labor-based service, but no pricing or cost figures are given to establish it.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-e36bea03e9001ed3--judge-opus",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-yc-02",
+      "response_id": "newadvice12--advice-yc-02--gemini--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "Switching to tiered subscriptions with overages stabilizes cash flow and extends runway",
+        "evidence": "No figures show that subscription pricing would raise revenue or reduce burn. Pricing friction could instead slow self-serve signups.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-ae68fdba5551b685--judge-opus",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-hz-01",
+      "response_id": "newadvice12--advice-hz-01--opus--raw",
+      "original_objection": {
+        "answer": "B",
+        "claim": "You'd need about 170 subscribers just to match one premium client.",
+        "evidence": "One premium client yields about $2,460 a month in profit, or $2,500 in revenue. At $49 a month, that is about 50–51 subscribers, not 170. 170 subscribers would produce about $8,330 a month, more than three premium clients.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-bc5522bf9ebe6437--judge-opus",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-hz-05",
+      "response_id": "newadvice12--advice-hz-05--opus--raw",
+      "original_objection": {
+        "answer": "B",
+        "claim": "Annual price of about $690 is 'roughly two months free'.",
+        "evidence": "Twelve months at $79 is $948. Two months free would be 10 × $79 = $790. $690 is about 8.7 months of fees, or roughly 3.3 months free.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-bc5522bf9ebe6437--judge-opus",
+      "ordinal": 1,
+      "question_key": "newadvice12--advice-hz-05",
+      "response_id": "newadvice12--advice-hz-05--opus--grounded",
+      "original_objection": {
+        "answer": "A",
+        "claim": "At 10–12% churn and 140–150 new members a month, membership reaches roughly 1,100–1,250 by next October.",
+        "evidence": "Starting from 600 over 12 months, 12% churn with 140 a month gives about 1,045, and 10% churn with 150 a month gives about 1,246. The upper bound fits, but the lower bound is slightly high. Both figures assume churn drops immediately, which is unlikely.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-5843a4d76478e844--judge-opus",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-yc-01",
+      "response_id": "newadvice12--advice-yc-01--opus--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "Hospital sales cycles run 6–18 months.",
+        "evidence": "This is plausible for enterprise hospital procurement, but the range cannot be established from the material supplied.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-5843a4d76478e844--judge-opus",
+      "ordinal": 1,
+      "question_key": "newadvice12--advice-yc-01",
+      "response_id": "newadvice12--advice-yc-01--opus--grounded",
+      "original_objection": {
+        "answer": "B",
+        "claim": "A price of roughly $300–500 per vet per month.",
+        "evidence": "This may sit above prevailing vet scribe pricing. It cannot be confirmed or refuted from the material supplied.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-2917756f384a80ef--judge-opus",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-yc-02",
+      "response_id": "newadvice12--advice-yc-02--opus--grounded",
+      "original_objection": {
+        "answer": "B",
+        "claim": "If growth slows to 10%, revenue reaches about $24k/month by month 14 and the runway stretches to about 19 months.",
+        "evidence": "At a sustained 10%, revenue is about $24k at month 14 (correct), and roughly $175–190k of cash remains at that point. Net burn then falls each month (about $19k, $16k, $13k, $10k, $7k), and revenue passes $45k around month 21. Cash never runs out, so the 19-month runway understates the position.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Runway objection depends on treating45000 as expenses rather than net burn and carrying forward growth. The answer states that assumption; distinguish conservative or inconsistent projection from a guaranteed business outcome."
+    },
+    {
+      "judgment_id": "p-2917756f384a80ef--judge-opus",
+      "ordinal": 1,
+      "question_key": "newadvice12--advice-yc-02",
+      "response_id": "newadvice12--advice-yc-02--opus--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "Self-serve growth stretches runway to roughly 18–20 months.",
+        "evidence": "At 15% growth, about $310k remains at month 12 with net burn near $11k and falling, which implies break-even rather than 18–20 months. The figure only holds under unstated growth-decay assumptions, which A acknowledges loosely.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-fcf6cc7bb6e1697f--judge-opus",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-yc-03",
+      "response_id": "newadvice12--advice-yc-03--opus--grounded",
+      "original_objection": {
+        "answer": "A",
+        "claim": "Promotions usually come around again.",
+        "evidence": "This is a general assertion with no support in the scenario. Whether another promotion would be offered at this bank is unknown.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-356da658827616b5--judge-opus",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-yc-05",
+      "response_id": "newadvice12--advice-yc-05--sol--grounded",
+      "original_objection": {
+        "answer": "B",
+        "claim": "Two hours each is too little for a critical bottleneck.",
+        "evidence": "The question says the founders spend about 2 hours a week on recruiting, which may be a combined figure rather than per founder; the interpretation cannot be confirmed from the prompt.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-ea2a492baea5f02b--judge-sol",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-yc-06",
+      "response_id": "newadvice12--advice-yc-06--gemini--grounded",
+      "original_objection": {
+        "answer": "A",
+        "claim": "Domain experience and a technical cofounder provide a massive moat against copycats.",
+        "evidence": "The scenario establishes relevant experience, but supplies no evidence of durable barriers to imitation, proprietary data, or other defensibility.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-ea2a492baea5f02b--judge-sol",
+      "ordinal": 1,
+      "question_key": "newadvice12--advice-yc-06",
+      "response_id": "newadvice12--advice-yc-06--gemini--raw",
+      "original_objection": {
+        "answer": "B",
+        "claim": "The target software market is underserved and recession-resistant.",
+        "evidence": "The supplied information does not establish competitive coverage or the resilience of municipal software purchasing budgets.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-62531d2bc6b063c2--judge-sol",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-hz-04",
+      "response_id": "newadvice12--advice-hz-04--gemini--raw",
+      "original_objection": {
+        "answer": "B",
+        "claim": "The agency produces an acquisition cost of $1,800 to $2,250.",
+        "evidence": "At the full $8,000 budget, the $2,000 fee leaves $6,000 for 40 leads. A 12% conversion rate yields 4.8 contracts, giving an expected acquisition cost of approximately $1,667.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-62531d2bc6b063c2--judge-sol",
+      "ordinal": 1,
+      "question_key": "newadvice12--advice-hz-04",
+      "response_id": "newadvice12--advice-hz-04--gemini--raw",
+      "original_objection": {
+        "answer": "B",
+        "claim": "The advertising acquisition cost is unsustainable.",
+        "evidence": "The supplied economics imply $840 monthly gross profit per contract and $16,800 over 20 months. Expected advertising acquisition cost is recovered in about two months of gross profit. Other costs could affect affordability, but unsustainability is not established.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-62531d2bc6b063c2--judge-sol",
+      "ordinal": 2,
+      "question_key": "newadvice12--advice-hz-04",
+      "response_id": "newadvice12--advice-hz-04--gemini--raw",
+      "original_objection": {
+        "answer": "B",
+        "claim": "The business faces impending client churn.",
+        "evidence": "The stated threat concerns losing a source of new contracts. Loss of existing clients is not established.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-7e85f9be6e493774--judge-sol",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-hz-02",
+      "response_id": "newadvice12--advice-hz-02--gemini--grounded",
+      "original_objection": {
+        "answer": "A",
+        "claim": "The proposed pricing changes add over $16,000 in annual profit.",
+        "evidence": "That increase assumes every groom costs $110. With 70% of bookings at the proposed $105 regular rate and 30% at $110, the average ticket is $106.50. At 156 monthly grooms, profit is $4,296.40, an annualized increase of $12,916.80 before the initial loyalty grace period.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-7e85f9be6e493774--judge-sol",
+      "ordinal": 1,
+      "question_key": "newadvice12--advice-hz-02",
+      "response_id": "newadvice12--advice-hz-02--gemini--grounded",
+      "original_objection": {
+        "answer": "A",
+        "claim": "The $25 speed fee is pure margin.",
+        "evidence": "Groomers receive 40% of each ticket. Under that compensation rule, a $25 ticket surcharge contributes $15 before any additional costs.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-7e85f9be6e493774--judge-sol",
+      "ordinal": 2,
+      "question_key": "newadvice12--advice-hz-02",
+      "response_id": "newadvice12--advice-hz-02--gemini--raw",
+      "original_objection": {
+        "answer": "B",
+        "claim": "Monthly labor costs are $5,070 and monthly profit is $4,078.",
+        "evidence": "Labor is 40% of $14,820, or $5,928. Subtracting that, $1,872 in supplies and fuel, and $3,800 in fixed costs leaves $3,220.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-7e85f9be6e493774--judge-sol",
+      "ordinal": 3,
+      "question_key": "newadvice12--advice-hz-02",
+      "response_id": "newadvice12--advice-hz-02--gemini--raw",
+      "original_objection": {
+        "answer": "B",
+        "claim": "At 140 monthly grooms, the proposed pricing produces about $15,100 in revenue.",
+        "evidence": "The required customer mix is unspecified. Keeping the stated 70% regular-booking share gives an average ticket of $103 and revenue of $14,420.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-13be11ec2eedd729--judge-sol",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-hz-06",
+      "response_id": "newadvice12--advice-hz-06--gemini--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "The first ninety days consist of weeks one through thirty, thirty-one through sixty, and sixty-one through ninety.",
+        "evidence": "The stated schedule covers 90 weeks, or 630 days, rather than the requested 90 days.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-13be11ec2eedd729--judge-sol",
+      "ordinal": 1,
+      "question_key": "newadvice12--advice-hz-06",
+      "response_id": "newadvice12--advice-hz-06--gemini--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "Buying the $9,000 route leaves no emergency buffer.",
+        "evidence": "The stated $11,000 savings would leave $2,000 before additional acquisition costs. That is an inadequate buffer relative to monthly expenses, but it is not zero.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Overliteral objection:2000 remains, but that is below one month of2900 living expenses. No emergency buffer can mean no adequate buffer, not literally zero cash."
+    },
+    {
+      "judgment_id": "p-13be11ec2eedd729--judge-sol",
+      "ordinal": 2,
+      "question_key": "newadvice12--advice-hz-06",
+      "response_id": "newadvice12--advice-hz-06--gemini--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "The dental service carries the highest profit margin.",
+        "evidence": "The question supplies no service pricing, acquisition costs, delivery costs, or comparable store margins that establish this ranking.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-7dc8c5481c99e43d--judge-sol",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-hz-01",
+      "response_id": "newadvice12--advice-hz-01--gemini--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "Thirty-seven standard clients yield $17,010 net, and four premium clients yield $7,440 net.",
+        "evidence": "At the supplied $40 per-client cost, 37 × ($500 − $40) = $17,020 and 4 × ($2,000 − $40) = $7,840. Their combined profit is $24,860.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-7dc8c5481c99e43d--judge-sol",
+      "ordinal": 1,
+      "question_key": "newadvice12--advice-hz-01",
+      "response_id": "newadvice12--advice-hz-01--gemini--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "$24,450 net hits the baseline target.",
+        "evidence": "The requested minimum is $25,000; $24,450 falls short by $550.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-7dc8c5481c99e43d--judge-sol",
+      "ordinal": 2,
+      "question_key": "newadvice12--advice-hz-01",
+      "response_id": "newadvice12--advice-hz-01--gemini--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "The plan strictly respects the 50-hour capacity.",
+        "evidence": "The answer's own workload total is 54 hours. Its earlier configuration of 37 standard clients and four premium clients would require 37 + 12 + 5 = 54 hours as well.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-7dc8c5481c99e43d--judge-sol",
+      "ordinal": 3,
+      "question_key": "newadvice12--advice-hz-01",
+      "response_id": "newadvice12--advice-hz-01--gemini--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "Dropping unpaid extras frees five hours, and tightening workflows can compress the remaining workload to 50 hours.",
+        "evidence": "The question does not quantify five hours of unpaid extras or establish achievable efficiency gains. The supplied workload already allocates all 50 hours to client service and administration.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-7dc8c5481c99e43d--judge-sol",
+      "ordinal": 4,
+      "question_key": "newadvice12--advice-hz-01",
+      "response_id": "newadvice12--advice-hz-01--gemini--grounded",
+      "original_objection": {
+        "answer": "B",
+        "claim": "The combined plan produces $28,200 monthly profit while fitting the constraints.",
+        "evidence": "That profit calculation uses 40 standard clients plus five premium clients, requiring 60 weekly hours. After the answer reduces standard clients to 30 to meet the cap, profit becomes 30 × $460 + 5 × $1,960 = $23,600, below the goal.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-7dc8c5481c99e43d--judge-sol",
+      "ordinal": 5,
+      "question_key": "newadvice12--advice-hz-01",
+      "response_id": "newadvice12--advice-hz-01--gemini--grounded",
+      "original_objection": {
+        "answer": "B",
+        "claim": "Five premium clients add $9,800 in incremental profit.",
+        "evidence": "For five existing clients upgrading from the $500 standard tier, the incremental profit is 5 × ($2,000 − $500) = $7,500 with unchanged per-client costs. The $9,800 figure represents their total premium profit, not the increase from upgrading.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-e36bea03e9001ed3--judge-sol",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-yc-02",
+      "response_id": "newadvice12--advice-yc-02--gemini--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "The business has existing product-market fit.",
+        "evidence": "Thirty paying customers and four months of revenue growth demonstrate traction, but retention, acquisition economics, and durability are not supplied.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-e36bea03e9001ed3--judge-sol",
+      "ordinal": 1,
+      "question_key": "newadvice12--advice-yc-02",
+      "response_id": "newadvice12--advice-yc-02--gemini--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "Introducing tiered subscriptions stabilizes cash flow and extends runway.",
+        "evidence": "The effect depends on tier prices, customer acceptance, usage patterns, and churn. The supplied information does not establish a revenue or runway improvement.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-e36bea03e9001ed3--judge-sol",
+      "ordinal": 2,
+      "question_key": "newadvice12--advice-yc-02",
+      "response_id": "newadvice12--advice-yc-02--gemini--grounded",
+      "original_objection": {
+        "answer": "B",
+        "claim": "The business has existing product-market fit.",
+        "evidence": "The supplied customer count and recent growth do not establish retention or a repeatable, sustainable acquisition model.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-3fc7a9a85fe40dda--judge-sol",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-yc-03",
+      "response_id": "newadvice12--advice-yc-03--gemini--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "Consumer fintech apps for couples face notoriously high churn.",
+        "evidence": "Neither category-level churn evidence nor retention data for this app is supplied.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-3fc7a9a85fe40dda--judge-sol",
+      "ordinal": 1,
+      "question_key": "newadvice12--advice-yc-03",
+      "response_id": "newadvice12--advice-yc-03--gemini--grounded",
+      "original_objection": {
+        "answer": "B",
+        "claim": "The 1,400 sign-ups were driven by three viral posts rather than organic, compounding word-of-mouth growth.",
+        "evidence": "Only the TikTok is explicitly described as taking off. Most sign-ups came from three posts, but the question does not establish that both Reddit posts were viral or exclude subsequent word-of-mouth growth.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-c8553b2191778e52--judge-sol",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-hz-03",
+      "response_id": "newadvice12--advice-hz-03--gemini--grounded",
+      "original_objection": {
+        "answer": "A",
+        "claim": "Spending $1,000 daily burns through $45,000 in less than 45 days.",
+        "evidence": "$45,000 divided by $1,000 per day is exactly 45 days.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-c8553b2191778e52--judge-sol",
+      "ordinal": 1,
+      "question_key": "newadvice12--advice-hz-03",
+      "response_id": "newadvice12--advice-hz-03--gemini--grounded",
+      "original_objection": {
+        "answer": "A",
+        "claim": "The proposed spending will exhaust inventory well before December 31 and cause the business to miss peak Black Friday and holiday shopping.",
+        "evidence": "At unchanged 3.2 ROAS and $58 per bottle, 4,000 bottles cover about 72.5 days at $1,000 daily. That does not establish an early stockout or missing Black Friday. Other demand and future advertising performance are unspecified.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-c8553b2191778e52--judge-sol",
+      "ordinal": 2,
+      "question_key": "newadvice12--advice-hz-03",
+      "response_id": "newadvice12--advice-hz-03--gemini--raw",
+      "original_objection": {
+        "answer": "B",
+        "claim": "At $1,000 daily, inventory would deplete in roughly 130 days.",
+        "evidence": "Using the supplied ROAS, daily attributed revenue would be $3,200, equivalent to about 55.2 bottles. Four thousand bottles would last about 72.5 days, not 130.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-c8553b2191778e52--judge-sol",
+      "ordinal": 3,
+      "question_key": "newadvice12--advice-hz-03",
+      "response_id": "newadvice12--advice-hz-03--gemini--raw",
+      "original_objection": {
+        "answer": "B",
+        "claim": "Holiday traffic compression will cause stockouts before replenishment can arrive.",
+        "evidence": "No holiday demand forecast or other-channel sales rate is supplied. Even the constant-ROAS calculation yields about 72.5 days of inventory, slightly longer than the stated 70-day manufacturing lead time.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-7fa860047189a558--judge-sol",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-yc-04",
+      "response_id": "newadvice12--advice-yc-04--gemini--grounded",
+      "original_objection": {
+        "answer": "A",
+        "claim": "External PR around an early-stage B2B SaaS launch brings negligible signups.",
+        "evidence": "The scenario supplies no PR conversion results or buyer readership data. Declining this proposal is defensible without assuming negligible signups.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-7fa860047189a558--judge-sol",
+      "ordinal": 1,
+      "question_key": "newadvice12--advice-yc-04",
+      "response_id": "newadvice12--advice-yc-04--gemini--grounded",
+      "original_objection": {
+        "answer": "A",
+        "claim": "The $1.5M seed round gives sufficient runway to prioritize product-market fit.",
+        "evidence": "Operating expenses, hiring commitments, and existing cash obligations are unspecified, so runway cannot be established from the funding amount.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-7fa860047189a558--judge-sol",
+      "ordinal": 2,
+      "question_key": "newadvice12--advice-yc-04",
+      "response_id": "newadvice12--advice-yc-04--gemini--raw",
+      "original_objection": {
+        "answer": "B",
+        "claim": "Mainstream tech and business press coverage will not drive paying customers among electrical and plumbing subcontractors.",
+        "evidence": "The supplied information does not establish that coverage would produce no paying customers or that these buyers rarely read the relevant publications.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-9090312952e17ac2--judge-sol",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-yc-05",
+      "response_id": "newadvice12--advice-yc-05--gemini--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "At a 25% agency fee and $230,000 salary, the fee is $57,000 per hire.",
+        "evidence": "25% of $230,000 is $57,500. The discrepancy is small and does not materially change the comparison.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-9090312952e17ac2--judge-sol",
+      "ordinal": 1,
+      "question_key": "newadvice12--advice-yc-05",
+      "response_id": "newadvice12--advice-yc-05--gemini--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "Candidates are being lost because the hiring process is too slow.",
+        "evidence": "The scenario reports much higher competing cash offers, but provides no evidence that interview timing caused any rejection.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-9090312952e17ac2--judge-sol",
+      "ordinal": 2,
+      "question_key": "newadvice12--advice-yc-05",
+      "response_id": "newadvice12--advice-yc-05--gemini--grounded",
+      "original_objection": {
+        "answer": "B",
+        "claim": "The interview process and founder time investment are already efficient and are not bottlenecks.",
+        "evidence": "Seven interviews and three rejected offers do not establish that three weeks or two founder hours per week are sufficient for the hiring objective.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-9090312952e17ac2--judge-sol",
+      "ordinal": 3,
+      "question_key": "newadvice12--advice-yc-05",
+      "response_id": "newadvice12--advice-yc-05--gemini--grounded",
+      "original_objection": {
+        "answer": "B",
+        "claim": "The startup is experiencing a cash crunch.",
+        "evidence": "The company raised $3M three months ago, but current cash and burn are not supplied. A cash crunch cannot be inferred.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-2168a519e93d10c2--judge-sol",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-yc-01",
+      "response_id": "newadvice12--advice-yc-01--gemini--grounded",
+      "original_objection": {
+        "answer": "A",
+        "claim": "Failure to reach 10 to 20 paying daily-use clinics within eight weeks means veterinarians do not want the product enough.",
+        "evidence": "The scenario supplies no acquisition funnel, sales-cycle, pricing, or onboarding evidence that would distinguish insufficient demand from ineffective distribution or activation.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-2168a519e93d10c2--judge-sol",
+      "ordinal": 1,
+      "question_key": "newadvice12--advice-yc-01",
+      "response_id": "newadvice12--advice-yc-01--gemini--raw",
+      "original_objection": {
+        "answer": "B",
+        "claim": "Securing ten paying clinics establishes a viable micro-SaaS.",
+        "evidence": "At the suggested $100 monthly price, ten clinics generate $1,000 monthly against $22,000 current monthly spending. This could be useful early demand evidence, but viability additionally depends on retention, costs, acquisition economics, and growth.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-5843a4d76478e844--judge-sol",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-yc-01",
+      "response_id": "newadvice12--advice-yc-01--opus--grounded",
+      "original_objection": {
+        "answer": "A",
+        "claim": "Small vet clinics decide fast and judge on quality.",
+        "evidence": "The scenario establishes neither purchasing speed nor buying criteria. Existing-system integration, budget, and workflow requirements could materially affect adoption.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-5843a4d76478e844--judge-sol",
+      "ordinal": 1,
+      "question_key": "newadvice12--advice-yc-01",
+      "response_id": "newadvice12--advice-yc-01--opus--raw",
+      "original_objection": {
+        "answer": "B",
+        "claim": "Hospital sales cycles run 6–18 months.",
+        "evidence": "The supplied information does not establish this numerical range or the hospital buyer and purchasing route to which it would apply.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-286224226a38213e--judge-sol",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-yc-05",
+      "response_id": "newadvice12--advice-yc-05--opus--raw",
+      "original_objection": {
+        "answer": "B",
+        "claim": "Your problem isn't price.",
+        "evidence": "Three candidates accepted offers with roughly twice the cash. This supports investigating compensation and candidate targeting, but does not establish that price is irrelevant or that targeting is the sole cause.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-5ac1d738ea917386--judge-sol",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-yc-06",
+      "response_id": "newadvice12--advice-yc-06--opus--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "Many utilities need these plans for state loans and grants.",
+        "evidence": "No jurisdiction or funding-program requirements are supplied. Whether the proposed report satisfies such requirements remains unestablished.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-5ac1d738ea917386--judge-sol",
+      "ordinal": 1,
+      "question_key": "newadvice12--advice-yc-06",
+      "response_id": "newadvice12--advice-yc-06--opus--grounded",
+      "original_objection": {
+        "answer": "B",
+        "claim": "Engineering consultancies decide faster than utilities.",
+        "evidence": "Consultancies are a plausible channel to test, but the scenario provides no evidence about their purchasing speed, budgets, or willingness to adopt this tool.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-2917756f384a80ef--judge-sol",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-yc-02",
+      "response_id": "newadvice12--advice-yc-02--opus--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "The first enterprise payment likely arrives in months 9–11 because building, a SOC 2 Type II observation window and procurement must occur.",
+        "evidence": "The question specifies SOC 2 and 6–7 months of procurement, but does not specify Type II, implementation duration, payment terms or whether these activities overlap.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-2917756f384a80ef--judge-sol",
+      "ordinal": 1,
+      "question_key": "newadvice12--advice-yc-02",
+      "response_id": "newadvice12--advice-yc-02--opus--grounded",
+      "original_objection": {
+        "answer": "B",
+        "claim": "At 10% monthly revenue growth, runway stretches to about 19 months.",
+        "evidence": "Under B's assumption of $45,000 monthly expenses, revenue starting at $6,300 and growing 10% reaches operating break-even around month 21. Cash remains positive through that point, with roughly $98,000–$137,000 at its minimum depending on monthly timing, so it does not run out in month 19.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Runway objection depends on treating45000 as expenses rather than net burn and carrying forward growth. The answer states that assumption; distinguish conservative or inconsistent projection from a guaranteed business outcome."
+    },
+    {
+      "judgment_id": "p-2917756f384a80ef--judge-sol",
+      "ordinal": 2,
+      "question_key": "newadvice12--advice-yc-02",
+      "response_id": "newadvice12--advice-yc-02--opus--grounded",
+      "original_objection": {
+        "answer": "B",
+        "claim": "The first enterprise payment likely arrives around months 9–12, with the audit adding months beyond procurement.",
+        "evidence": "The supplied facts establish procurement duration but not audit type, sequencing, implementation time or payment schedule.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-f2a9010dfd46e443--judge-sol",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-yc-04",
+      "response_id": "newadvice12--advice-yc-04--opus--grounded",
+      "original_objection": {
+        "answer": "A",
+        "claim": "The buyers are not readers of tech or business press.",
+        "evidence": "The question identifies customer acquisition sources but supplies no evidence about buyers' media consumption. Those sources support prioritizing direct channels without establishing this audience claim.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-f2a9010dfd46e443--judge-sol",
+      "ordinal": 1,
+      "question_key": "newadvice12--advice-yc-04",
+      "response_id": "newadvice12--advice-yc-04--opus--raw",
+      "original_objection": {
+        "answer": "B",
+        "claim": "The buyers rarely read tech or business press, and coverage will not fill the pipeline.",
+        "evidence": "Neither readership nor likely press-generated pipeline is established by the supplied facts. Declining the agency is defensible without treating its potential contribution as known.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-ca08ae16e139e121--judge-sol",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-hz-02",
+      "response_id": "newadvice12--advice-hz-02--opus--grounded",
+      "original_objection": {
+        "answer": "B",
+        "claim": "A van bought now produces no grooms this year.",
+        "evidence": "Starting from October 19, approximately two months of hiring and training ends around December 19, leaving time for some grooms before year-end. Additional delays are possible but are not established.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-00d6a95e43d51092--judge-sol",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-hz-06",
+      "response_id": "newadvice12--advice-hz-06--opus--raw",
+      "original_objection": {
+        "answer": "B",
+        "claim": "Five to eight offices paying $600–$1,000 per month would reach about $3,400 per month in take-home pay.",
+        "evidence": "The stated range includes five offices paying $600, which produces only $3,000 in monthly revenue before expenses and taxes. Some combinations could work, but the range does not establish the claimed take-home income.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-ae68fdba5551b685--judge-sol",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-hz-01",
+      "response_id": "newadvice12--advice-hz-01--opus--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "About 170 course subscribers would be needed to match one premium client.",
+        "evidence": "At $49 per month, approximately 51 subscribers generate $2,500 in revenue. No supplied course costs justify increasing that figure to 170.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-ae68fdba5551b685--judge-sol",
+      "ordinal": 1,
+      "question_key": "newadvice12--advice-hz-01",
+      "response_id": "newadvice12--advice-hz-01--opus--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "If fewer than four clients buy premium, raising standard pricing to $550 and filling available slots provides a sufficient fallback.",
+        "evidence": "With two premium clients, the 50-hour limit permits 39 standard clients. Monthly profit would be 2 × $2,460 + 39 × $510 = $24,810, below the target. One or zero premium clients produces still less.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-ae68fdba5551b685--judge-sol",
+      "ordinal": 2,
+      "question_key": "newadvice12--advice-hz-01",
+      "response_id": "newadvice12--advice-hz-01--opus--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "Premium can start on day 60, followed by 30-day termination notices if insufficient standard clients have left.",
+        "evidence": "If all 45 clients remain and five upgrade, weekly work becomes 40 standard hours plus 15 premium hours plus five admin hours, totaling 60. Giving termination notices at that point does not preserve the stated 50-hour ceiling during the notice period.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-ae68fdba5551b685--judge-sol",
+      "ordinal": 3,
+      "question_key": "newadvice12--advice-hz-01",
+      "response_id": "newadvice12--advice-hz-01--opus--grounded",
+      "original_objection": {
+        "answer": "B",
+        "claim": "The fallback is eight premium clients at $2,000 with 21 standard clients.",
+        "evidence": "The profit and hours arithmetic is correct, but eight premium clients exceeds the proposed limit of up to five. This fallback requires explicitly revising that limit.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Five premium clients were a draft option, not an explicit absolute ceiling. A labelled eight-client contingency revises the option; do not automatically treat it as violating the hard50-hour limit."
+    },
+    {
+      "judgment_id": "p-e96dd392929b8484--judge-sol",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-hz-04",
+      "response_id": "newadvice12--advice-hz-04--opus--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "Referral rewards come out of gross profit, not the growth budget.",
+        "evidence": "The stated $6,000 advertising allocation and $2,000 events allocation already exhaust the $8,000 monthly growth budget. Paying an additional month's billing per referred contract adds growth expenditure regardless of its funding source.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "A valid budgeting concern:performance referral rewards still need funded capacity. Distinguish an unconditional simultaneous spend promise from a later reallocation or additional revenue-funded budget assumption."
+    },
+    {
+      "judgment_id": "p-e96dd392929b8484--judge-sol",
+      "ordinal": 1,
+      "question_key": "newadvice12--advice-hz-04",
+      "response_id": "newadvice12--advice-hz-04--opus--grounded",
+      "original_objection": {
+        "answer": "B",
+        "claim": "Successful ads can move to the full $8,000 while the paid referral program continues.",
+        "evidence": "Allocating the entire stated growth budget to ads leaves nothing for the proposed $1,000 referral rewards and tools. Continuing those expenditures requires a revised allocation or additional funding.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "A valid budgeting concern:performance referral rewards still need funded capacity. Distinguish an unconditional simultaneous spend promise from a later reallocation or additional revenue-funded budget assumption."
+    },
+    {
+      "judgment_id": "p-bc5522bf9ebe6437--judge-sol",
+      "ordinal": 0,
+      "question_key": "newadvice12--advice-hz-05",
+      "response_id": "newadvice12--advice-hz-05--opus--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "$690 annually is roughly two months free.",
+        "evidence": "Twelve months at $79 costs $948. A $690 price discounts $258, equivalent to approximately 3.27 months. Two months free would cost $790.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    },
+    {
+      "judgment_id": "p-bc5522bf9ebe6437--judge-sol",
+      "ordinal": 1,
+      "question_key": "newadvice12--advice-hz-05",
+      "response_id": "newadvice12--advice-hz-05--opus--raw",
+      "original_objection": {
+        "answer": "A",
+        "claim": "Lifetime revenue of about $440 against $110 acquisition cost establishes that more advertising is affordable even if acquisition costs rise.",
+        "evidence": "The revenue calculation is correct under constant churn, but delivery costs, contribution margins and cash requirements are unspecified. Revenue alone does not establish profitable acquisition or spending capacity.",
+        "label": "unverified"
+      },
+      "parent_annotation": "Preserved as unverified; corpus absence is not proof of falsehood."
+    },
+    {
+      "judgment_id": "p-bc5522bf9ebe6437--judge-sol",
+      "ordinal": 2,
+      "question_key": "newadvice12--advice-hz-05",
+      "response_id": "newadvice12--advice-hz-05--opus--grounded",
+      "original_objection": {
+        "answer": "B",
+        "claim": "With churn stuck at 18%, even doubled ads top out around 830 members.",
+        "evidence": "At the supplied $110 acquisition cost, doubling ads produces 180 additions monthly. Starting from 600, constant 18% churn yields approximately 963 members after 12 months and approaches 1,000 over time. A figure around 830 requires an additional acquisition-cost or conversion assumption.",
+        "label": "contradicted"
+      },
+      "parent_annotation": "Arithmetic or stated-constraint objection reviewed; the original label and vote are preserved."
+    }
+  ],
+  "additional_blind_review_annotation": {
+    "response_id": "newadvice12--advice-hz-01--opus--raw",
+    "type": "conditional_material_constraint_risk",
+    "finding": "Raw starts premium work on day60 and only then gives30-day termination notices if too few clients have left. With all45 clients retained and5 upgraded, the transition requires60 weekly hours until capacity is released, despite the hard50-hour cap. Delay premium starts until capacity is released. The blinded review checked the final50-hour state but omitted this transition risk. Its original five-error count is retained as the blinded finding, not advertised as an exhaustive proven error census."
+  },
+  "source_hashes": {
+    "notes/site-audit-2026-10-19/wwxd-eval-v2/post-run/mechanical-summary.json": "848a0aea7750c3865e88947fceb572943bc6d2775d4b91b5b75279ee34502bdf",
+    "notes/site-audit-2026-10-19/wwxd-eval-v2/post-run/mechanical-votes.json": "785545269aa6933cd0e3fd4574565fd3c631426c9ca62ea7fdaa9cc0fbb8a822",
+    "notes/site-audit-2026-10-19/wwxd-eval-v2/post-run/factual-review-r1.json": "e9581a3f0b7e7fdbbfe13ccc2beba961b53313578280b160cdc779094cb8b5d8"
+  },
+  "original_votes_changed": false
+}

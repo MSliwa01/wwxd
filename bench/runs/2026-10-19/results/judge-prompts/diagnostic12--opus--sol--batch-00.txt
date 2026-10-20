@@ -1,0 +1,441 @@
+Evaluation date: 2026-10-19. This is the current date, not a future date. May 2026 is in the past. Publication dates and dates of events described in a source are distinct. A model training cutoff does not invalidate supplied later material. You are an independent evaluator. Use no tools, commands, files, browsing, or external retrieval. A and B are anonymous. Their ordering conveys nothing. Do not infer their model, source access, or provenance. Do not reward writing style, citation presence, quotations, expert agreement, or presumed source use. A tie is valid.
+Score each answer on the four specified integer scales, each from 1 to 5. Anchors: 1 fundamentally deficient; 2 major problems; 3 mixed with meaningful gaps; 4 good with minor gaps; 5 strong and sufficiently complete. Choose A, B, or tie for substantive overall quality. Preserve uncertainty rather than inventing evidence.
+Return ONLY a JSON object with exactly one key, "judgments", containing one object per supplied pair. Each object has exactly: "id", "A", "B", "winner", "reason", "factual_objections". A and B each contain exactly the four dimension names and integer scores. winner is "A", "B", or "tie"; reason is a nonempty string. factual_objections is a list, possibly empty, of objects with exactly "answer" ("A" or "B"), "claim", "label" ("contradicted" or "unverified"), and "evidence" (a nonempty explanation). Distinguish an established contradiction from an unverified claim.
+Evaluate accuracy, specificity, faithfulness, and usefulness using the complete audited reference packet. The reference is evidence, not a required script. Missing optional detail is not automatically a false claim. Label a factual objection contradicted only when supplied evidence establishes the contradiction; otherwise label it unverified. Do not treat absence from the reference as proof of falsehood. Resolve a conflict between a summary and direct evidence in favor of the direct evidence and explain it.
+
+Pairs:
+[
+  {
+    "id": "p-d1ebfc172a92cae3",
+    "question": "My cofounder and I are 9 months in, pre-product-market fit, and it's clearly over. He's vested a chunk of his stock and wants to keep it, and we've both hired lawyers who are trading letters. What would Michael Seibel tell us to do?",
+    "A": "Michael Seibel would likely tell you to resolve the founder breakup quickly and pragmatically, rather than let a battle over fairness destroy whatever chance the company still has. The goal is to make the company able to move forward, not to win the breakup.\n\nThe uncomfortable starting point: vested stock is generally already earned. Your cofounder’s departure does not automatically entitle you to take it back. The actual rights depend on your agreements and applicable law, including any repurchase provisions. Keeping vested shares is not, by itself, an unreasonable demand.\n\nIf you want to continue the company, a generous settlement may be much cheaper than months of distraction, legal bills, and uncertainty. Nine months in and before product-market fit, your biggest problem is still building something people want. Recovering more equity will not solve that problem.\n\nTry to agree directly on the business terms, using a neutral mediator if conversations have broken down. Establish who continues, what happens to unvested shares, whether either side wants a voluntary purchase of vested shares, and how responsibilities and access transfer. Separately resolve board roles, intellectual property, and any outstanding obligations. Have your lawyers advise you and document the agreement, rather than leave them to determine what outcome you want.\n\nIf neither of you wants to continue, discuss an orderly shutdown instead of fighting over ownership of an abandoned project.\n\nThat is an interpretation of Seibel’s general approach, not a prediction of his exact response. Fraud, disputed ownership, or serious misconduct would materially change the recommendation. Otherwise, prioritize a clean exit over extracting the last concession.",
+    "B": "Michael Seibel would tell you to separate quickly, cheaply, and without turning the breakup into a trial over who deserves blame. Once the partnership is clearly finished, more time fighting usually destroys money, attention, and goodwill.\n\nAssuming your cofounder leaves and you continue the company, his equity advice is blunt: before product-market fit, the departing founder should return most of their stock, **even if it has vested**. At nine months, his rule of thumb is roughly **1–2% of the company, sometimes less**. Nearly all the potential value remains to be created, and the people staying need equity to motivate themselves and recruit others. The departing founder retains upside while becoming free to pursue something else.\n\nThat is a proposed negotiated outcome, not a legal entitlement to confiscate vested shares. Your agreements and applicable law determine your rights.\n\nHe would also push back on you: be generous, offer reasonable severance, and stop treating yourself as the victim. Employees will remember how you handle someone who helped start the company.\n\nConcrete next steps:\n\n- Agree that the objective is a clean separation, with neither side required to admit fault.\n- Replace escalating lawyer letters with a short settlement discussion. If needed, use a mutually trusted mediator to facilitate agreement rather than decide who was right.\n- Settle retained equity, severance, departure date, handover, and clean paperwork together.\n- Give legal work a narrow scope and budget. He describes a simple split as potentially taking about a week and $2,000, not a guaranteed estimate.\n\nHis approach assumes an ordinary relationship breakdown. Illegal or unethical conduct changes the advice.",
+    "reference": {
+      "actual_stance": "Stop paying lawyers. Before product-market fit the stock is worth essentially nothing, so you are fighting over ego. Make the split no-fault and clean, and keep your mouths shut. Even if he has vested, the leaving founder should get down to under 5% of the company, and since this is within the first year, under 2% (they cite 1% to 2%, sometimes under 1%), so the remaining team has the equity to create the value. The staying founder should be generous with severance because everyone in the company is watching. Sign clean paperwork; it can be done in about a week for about $2,000. Do not make your advisor judge and jury; the facts no longer matter. Exception: lawbreaking or unethical conduct, where you call the lawyers.",
+      "category": "applied",
+      "errors": [
+        "Advising to enforce the agreements through litigation or negotiate a full buyout of vested shares.",
+        "Giving the 5% figure for a first-year departure without the under-2% adjustment."
+      ],
+      "evidence": [
+        {
+          "quote": "in a situation where you're having a co-founder breakup and the stock is worth nothing, paying lawyers a bunch of money makes no sense.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "11:36"
+        },
+        {
+          "quote": "the way it should go is sort of no fault from both sides.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "13:42"
+        },
+        {
+          "quote": "Optimize for cleanliness for both sides.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "14:14"
+        },
+        {
+          "quote": "regardless of your vesting, um you need to make sure that that company has as much equity as possible to motivate the people who are there",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "14:47"
+        },
+        {
+          "quote": "you have an opportunity to be generous.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "17:01"
+        },
+        {
+          "quote": "understand that everyone in your company is looking at you right now.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "17:33"
+        },
+        {
+          "quote": "even if you vested, like get down to under 5% of the company, if it's within the first year, under 2%.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "18:39"
+        },
+        {
+          "quote": "Do reasonable severance, sign clean paperwork and and peace out, right? Like you could do that whole thing in a week and spend like $2,000.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "18:39"
+        },
+        {
+          "quote": "After a number of years, 5% typical. Under a year, 1%, 2%, sometimes less than 1%.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "21:22"
+        },
+        {
+          "quote": "don't make your poor startup advisor into judge and jury.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "21:54"
+        },
+        {
+          "quote": "if your co-founder is breaking the law, doing something unethical, killing people, none of this applies.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "21:54"
+        },
+        {
+          "quote": "On this point, I maybe I'll be a little bit less nice than Dalton.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "seibel",
+          "speaker_basis": "speaker refers to Dalton in the third person, so this turn is Michael's",
+          "timestamp": "21:54"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold attributes the whole framework to Michael Seibel. It is presented jointly in a two-host episode; only some turns can be assigned (for example the 'less nice than Dalton' turn is Michael's). The hosts say YC has these standards written down. Grade the content.",
+        "Premise note: at 9 months, a standard four-year vesting schedule with a one-year cliff would usually mean nothing has vested. The source's advice holds 'even if you vested', so the stance does not change. Answers that point out the cliff are fine."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-12",
+      "key_status": "confirmed_speaker_caveat",
+      "primary_sources": [
+        "yt-s1YszjhzQ6U"
+      ],
+      "question": "My cofounder and I are 9 months in, pre-product-market fit, and it's clearly over. He's vested a chunk of his stock and wants to keep it, and we've both hired lawyers who are trading letters. What would Michael Seibel tell us to do?",
+      "required_points": [
+        "Stop the lawyer fight; pre-PMF stock is worth almost nothing.",
+        "Leaving founder gives most of it back even if vested: under 5%, and under 2% within the first year (this case is at 9 months).",
+        "No-fault, clean separation with clean paperwork."
+      ],
+      "supporting_points": [
+        "About a week and about $2,000.",
+        "Staying founder offers reasonable severance and is generous; everyone is watching.",
+        "Do not make an advisor the judge; facts do not matter once you are splitting.",
+        "Exception for lawbreaking or unethical behavior."
+      ],
+      "uncertainty": [
+        "Speaker split between the two hosts is mostly unrecoverable."
+      ],
+      "vault": "yc"
+    }
+  },
+  {
+    "id": "p-1b481a7b755f0829",
+    "question": "Why did Hormozi tell that young roofing company owner to stop door-knocking and move his budget into Google Ads?",
+    "A": "He didn’t—the advice to that young roofing owner was the opposite: **make door-knocking the primary growth channel and build a team around it.** He was not telling him to shift his budget into Google Ads.\n\nThe company was only about two months old, and the owner reported closing roughly one sale for every 20 doors he knocked. Hormozi saw that as a valuable, demonstrated ability to generate cash. With limited money and time, the strongest immediate move was to repeat and expand what already worked.\n\nThe distinction was between the founder personally knocking every door and the company building a repeatable canvassing operation. His recommendation was to recruit salespeople, train them, and track their activity and results. He also suggested explaining commissions as expected earnings per door, making the connection between effort and income tangible. That calculation was illustrative, not a guaranteed payment for each knock.\n\nThis fit his broader recommendation to pursue profitable roof repairs: more frequent transactions, shorter sales cycles, and steadier cash collection than relying entirely on large replacements involving insurance delays.\n\nFor an owner applying the advice, the next steps would be to measure doors knocked, conversations, appointments, completed sales, acquisition costs, and gross profit; then test whether hired reps can reproduce the founder’s results.\n\n**Google Ads would become worth testing if it could bring additional customers at an acceptable acquisition cost**, with reliable tracking and enough capacity to deliver the work. A budget shift would depend on comparative profit and cash flow. There was no demonstrated reason in this case to abandon successful canvassing.",
+    "B": "The likely reason was leverage: the owner’s time was limiting growth, and Google Ads could bring in prospects already looking for a roofer. I can’t confirm the specific exchange from the question alone, so that is an explanation of the business logic, rather than a verified account of Hormozi’s exact reasoning.\n\nDoor-knocking requires someone to repeatedly find homeowners, get their attention, and establish whether they need roofing work. It can produce profitable jobs, but if the owner personally does the knocking, sales activity competes with estimating, managing crews, and running the company. Its apparent low cost can hide a substantial cost in the owner’s time.\n\nGoogle Search ads can reach homeowners actively searching for roof repairs or replacement. That existing intent can shorten the path to an estimate. A campaign that acquires profitable customers also gives the business a way to increase lead volume without adding the same number of hours to the owner’s schedule.\n\nHowever, that does not mean roofing ads automatically outperform canvassing. Roofing keywords can be expensive, and results depend heavily on location, competition, phone response, qualification, and closing ability. Ads amplify a functioning sales process; missed calls and weak follow-up can make them an expensive mistake.\n\nThe practical move would be a controlled test, measuring cost per qualified lead, completed estimate, and sold job. Compare customer acquisition cost with gross profit after direct job costs, while accounting for cash flow and crew capacity.\n\nIncrease spending if profitable jobs follow consistently. Keep or improve door-knocking if it produces better economics or the company cannot yet convert paid leads reliably.",
+    "reference": {
+      "absence_check": "The word 'Google' appears in yt-o64cI6tebnU only as 'Google review'. No other Hormozi raw file mentions a roofer.",
+      "actual_stance": "False premise. The sources do cover a young roofing company (Caleb, Keys Roofing in St. Louis, about two months old), and Hormozi told him the opposite: go all in on door-to-door as the primary growth engine and build a door-knocking sales team ('DDD army'). The transcript contains no Google Ads advice for this business. Other advice in the episode: shift toward repair volume, add VSLs, use a menu close, sell a maintenance membership and charge for speed. At the 90-day check-in Caleb said he went all in on door-to-door.",
+      "category": "abstain",
+      "errors": [
+        "Accepting the premise and explaining why paid search beats door-knocking.",
+        "Saying only 'the sources do not cover this' without noting they show the opposite (partial credit at most).",
+        "Inventing a Google Ads recommendation."
+      ],
+      "evidence": [
+        {
+          "quote": "we are a premium and luxury roofing, gutter, and downspout contractor in St. Louis, Missouri.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "guest_caleb",
+          "speaker_basis": "business owner describing his own company; content-inferred",
+          "timestamp": "0:32"
+        },
+        {
+          "quote": "So, we've been in business for 2 months.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "guest_caleb",
+          "speaker_basis": "business owner describing his own company; content-inferred",
+          "timestamp": "0:32"
+        },
+        {
+          "quote": "two primary acquisition channels currently is door-knocking.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "guest_caleb",
+          "speaker_basis": "business owner describing his own company; content-inferred",
+          "timestamp": "1:06"
+        },
+        {
+          "quote": "Now I think that in terms of scale, you should go all in door to door.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Caleb; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "9:49"
+        },
+        {
+          "quote": "I think you building out this DDD army is like the clear straight shot.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Caleb; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "10:54"
+        },
+        {
+          "quote": "the first thing we said was go all in on door to door as primary growth engine.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Caleb; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "24:27"
+        },
+        {
+          "quote": "So I went all in on door todoor first off",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "guest_caleb",
+          "speaker_basis": "business owner describing his own company; content-inferred",
+          "timestamp": "23:21"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold stance begins 'The sources don't cover this' and then says the sources show the opposite. The two claims conflict; the raw supports the second. Corrected to a false-premise key with evidence.",
+        "Gold had empty must_cite and evidence. Added the roofing episode as must_cite and seven verified quotes.",
+        "The raw never states Caleb's age; 'young' fits the two-month-old business. Not material."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-20",
+      "key_status": "corrected",
+      "primary_sources": [
+        "yt-o64cI6tebnU"
+      ],
+      "question": "Why did Hormozi tell that young roofing company owner to stop door-knocking and move his budget into Google Ads?",
+      "required_points": [
+        "Rejects the premise: he did not tell the roofer to stop door-knocking or move to Google Ads.",
+        "States what he actually advised: go all in on door-to-door and build a door-to-door sales team."
+      ],
+      "supporting_points": [
+        "Names the case (Caleb, Keys Roofing, St. Louis, about two months in business).",
+        "Mentions other advice (repairs focus, VSLs, menu close, maintenance membership, speed premium) or the 90-day outcome."
+      ],
+      "uncertainty": [
+        "Revenue figures in the episode are internally inconsistent (about $41k so far, '20K a monthish', 'a little under 32,000' three months earlier, then about $247k to $250k). Not needed for the key."
+      ],
+      "vault": "hormozi"
+    }
+  },
+  {
+    "id": "p-0d7a755834632ca5",
+    "question": "I'm building a startup in Stockholm. Does Paul Graham think I really need to move to Silicon Valley?",
+    "A": "No—not as an absolute requirement. Paul Graham’s longstanding view is that founders improve their odds by being in a strong startup hub, with Silicon Valley his strongest recommendation. He treats location as a meaningful advantage, not a guarantee of success or a condition without which success is impossible.\n\nHis reasoning is broader than access to funding: being surrounded by ambitious founders, experienced early employees, investors, and potential collaborators changes what you learn, whom you meet, and what you consider achievable. From that perspective, building remotely does not automatically replace being there.\n\nBut Stockholm is already a substantial startup ecosystem. Your choice is not between Silicon Valley and a place with no startup community. The relevant question is whether the Bay Area offers advantages that matter enough to *your company* to justify the disruption and expense.\n\nMy practical recommendation:\n\n- **Stay in Stockholm for now** if your customers, recruiting advantages, industry relationships, or regulatory needs are primarily Nordic or European, and you are making steady progress.\n- **Seriously consider relocating** if your target customers, essential hires, or likely investors cluster in the Bay Area, particularly if your ambition depends on entering that network quickly.\n- **Test the premise first:** spend several focused weeks there, arranging customer meetings, working alongside founders, and meeting relevant investors. Compare concrete progress with an equivalent period in Stockholm.\n\nBefore committing, consider visas, runway, cofounder alignment, and whether the whole founding team would move.\n\nSo Graham would likely push you to take the location advantage seriously. That is different from establishing that you personally must move. Your market, traction, and bottlenecks should decide.",
+    "B": "Yes—Paul Graham strongly recommends going to Silicon Valley, at least for a while. His April 2026 advice to Stockholm founders explicitly allows returning home. He does not mean that success in Stockholm is impossible or that you must emigrate permanently.\n\nHis main argument is about the people around you: a larger concentration of strong peers, useful chance encounters, faster decisions, and a culture of helping without immediately expecting something back. He thinks the biggest benefit is how that environment changes your ambition: meeting highly successful founders makes their achievements feel difficult but attainable.\n\nHe also sees fundraising advantages. In his view, competition pushes Valley investors to decide faster, and attracting interest there can make Swedish investors take you more seriously.\n\nThere are qualifications. He reports that YC companies returning home are about half as likely to become billion-dollar companies as those staying, but acknowledges selection bias and higher Bay Area valuations. That comparison does not establish that moving doubles your particular startup’s chances. He recommends YC as a concentrated route into the ecosystem, while acknowledging his interest as its co-founder. He also accepts that family can matter more than maximizing company value.\n\nMy practical recommendation, assuming you want a globally ambitious startup, is to test spending a sustained period there before committing permanently. Build alongside founders, meet prospective customers and investors, and assess whether access produces useful relationships and faster progress. Consider YC if it fits. Stay longer if the benefits justify the cost; return if Stockholm offers stronger customer access, team stability, or family support. Returning can also strengthen Stockholm’s startup community.",
+    "reference": {
+      "actual_stance": "Yes, at least for a while: go, and you can come back. You get the best peers, more serendipitous meetings, investors who decide faster, more respect from investors back home, and a realistic view of how good you are. Going and then actually returning is also one of the best things founders can do for Stockholm. He calls YC the optimal way to do the stint (four to six months). He cites YC data that startups going home after YC are only about half as likely to become unicorns, and discounts it three ways: selection bias, it measures valuation rather than performance, and half as well is still very good. He thinks Stockholm could become the Silicon Valley of Europe.",
+      "category": "fresh",
+      "errors": [
+        "Saying he thinks remote work makes location irrelevant.",
+        "Saying he advises moving permanently and never returning."
+      ],
+      "evidence": [
+        {
+          "quote": "And the answer is the same now as it always is. Yes, you should. You can go there for a bit and then come back, but you should at least go.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "0:36"
+        },
+        {
+          "quote": "You get the best peers.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "1:09"
+        },
+        {
+          "quote": "investors in Silicon Valley decide a lot faster.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "5:00"
+        },
+        {
+          "quote": "as long as you do actually come back, that's one of the best things you can do to help Sweden to help Stockholm thrive as a startup hub.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "16:10"
+        },
+        {
+          "quote": "Surely the optimal way to go to Silicon Valley for a bit and then come back is to do YC.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "17:16"
+        },
+        {
+          "quote": "startups that go back home after YC are only about half as likely to become unicorns.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "18:57"
+        },
+        {
+          "quote": "there's a lot of selection bias in this.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "18:57"
+        },
+        {
+          "quote": "even if you only do half as well, that's still pretty good.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "19:30"
+        },
+        {
+          "quote": "you could make it the Silicon Valley of Europe.",
+          "source_date": "2026-05-13",
+          "source_id": "yt-QHJkUw31YX8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-QHJkUw31YX8.md",
+          "source_sha256": "064ad638390593d3f94259468ae4c001d96d1e903d31f6385009d2de69babf54",
+          "source_title": "Paul Graham, Founder of Y Combinator, Live from Stockholm",
+          "speaker": "pg",
+          "speaker_basis": "solo talk",
+          "timestamp": "20:04"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold matches raw. Added the reasons for going and the 'as long as you do actually come back' condition."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-05",
+      "key_status": "confirmed_expanded",
+      "primary_sources": [
+        "yt-QHJkUw31YX8"
+      ],
+      "question": "I'm building a startup in Stockholm. Does Paul Graham think I really need to move to Silicon Valley?",
+      "required_points": [
+        "Yes, go to Silicon Valley, at least for a while; you can come back.",
+        "Mentions the unicorn-rate caveat or the benefit of returning to help Stockholm."
+      ],
+      "supporting_points": [
+        "Reasons: best peers, serendipitous meetings, faster investors, respect back home.",
+        "YC is the optimal way to go for a bit and come back.",
+        "Startups that go home after YC are about half as likely to become unicorns, discounted for selection bias, valuation vs performance, and 'half as well is still good'.",
+        "Stockholm could become the Silicon Valley of Europe."
+      ],
+      "uncertainty": [],
+      "vault": "yc"
+    }
+  }
+]

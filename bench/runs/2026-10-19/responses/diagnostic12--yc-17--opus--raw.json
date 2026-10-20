@@ -1,0 +1,99 @@
+{
+  "actual_input_tokens": 2483,
+  "answer": "Garry Tan, as YC's president and CEO, argues that the value of going through YC has risen, not fallen, as startup tools have gotten cheaper. His reasoning generally runs along these lines:\n\n- **Speed matters more in the AI era.** Small teams can now build and reach revenue much faster. When winners pull ahead in months rather than years, a structured three-month sprint with intense feedback is worth more.\n- **Network effects compound.** With thousands of alumni companies, YC offers a ready base of early customers, hires, and advisors. Rival programs can copy the curriculum but not decades of accumulated network.\n- **Signal in a noisy market.** Building is cheap, so many more startups exist. Investors lean harder on trusted filters, and YC's brand plus Demo Day concentrate investor attention in a way smaller accelerators cannot.\n- **Selection and peer density.** More applicants let YC be more selective, and stronger batches make the peer group itself more valuable.\n- **Outcome data.** He points to recent batches reaching meaningful revenue unusually quickly as evidence that the advantage is widening.\n\n**What's uncertain:** This is the view of YC's own leader, so it is partly advocacy. Independent, survivorship-adjusted comparisons of YC versus other accelerators are limited. Faster revenue growth may also reflect broader AI tailwinds rather than YC itself.\n\n**If you're deciding whether to apply:** YC's premium matters most if you are a first-time founder, lack investor connections, or sell to other startups. It matters less if you already have strong traction, warm investor access, or a niche where a specialist accelerator or industry-specific investor adds more. Weigh the standard dilution against how much the network and signal would speed up your next funding round.",
+  "arm": "raw",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 14.156,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "96f27497a3af8aa660175f073854b558f83544770e1a3c12a27f8e5228d5a426"
+    }
+  ],
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 466,
+  "event_count": 8,
+  "family": "opus",
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:23:45.320638+00:00",
+  "format_deviations": [],
+  "id": "diagnostic12--yc-17--opus--raw",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "prompt_sha256": "7cfbb6b052550e0fd57d87c17b22240968f9e7188575b89cd6eda351a18c7575",
+  "question_key": "diagnostic12--yc-17",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 913,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 913,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 913,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 913,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 754,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 754,
+      "output_tokens_details": {
+        "thinking_tokens": 174
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ],
+  "words": 282
+}

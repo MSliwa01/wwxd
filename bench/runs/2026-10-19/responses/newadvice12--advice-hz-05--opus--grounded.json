@@ -1,0 +1,101 @@
+{
+  "actual_input_tokens": 143787,
+  "answer": "**Pick the annual plan and the bigger ad budget, but fix retention first and scale ads in steps.**\n\n**Why:** At 18% monthly churn, you lose about 108 members a month and add 90. You're shrinking, and your ceiling is 90 ÷ 0.18 = 500 members. More sign-ups alone can't get you to 1,000 because the bucket leaks too fast. Retention is your constraint.\n\n- **Annual plan (do now):** Price it at about $790, roughly \"pay for 10 months, get 12.\" Annual members decide once instead of twelve times, so they churn far less. The upfront cash also helps pay for the extra ads. Offer it at checkout and to current members.\n- **More ads (scale gradually):** Raise spend about 25% a month, not 100% at once. Keep going only while cost per new member stays under about $140.\n- **Skip the price cut:** At $49 you'd need about 60% more members for the same revenue. It also does nothing about why people leave in the first 60 days.\n- **Skip the classes and meal tool:** More features tend to overwhelm new members, and overwhelm drives early cancellations.\n\n**Cheap fix to add alongside:** Give every new member one clear \"start here\" plan and a quick first win. Pair each one with a few active members. Ask everyone who cancels why, and fix the top reason every month.\n\n**Is 1,000 by next October realistic?** Only if both numbers move:\n- At 10–12% churn and about 140–150 new members a month, you'd reach roughly 1,100–1,250.\n- With churn stuck at 18%, even doubled ads top out around 830.\n\n**Signals to watch:**\n- If churn isn't under 13% by month three, put any ad increase into retention instead.\n- If fewer than about 20% of new sign-ups choose annual, test a stronger annual offer.\n\nThis assumes your margins can absorb a cost per new member of $110–140.",
+  "arm": "grounded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 23.034,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "6a8b4462ec77f5f39292fa3fdd4a85d926af36da6a2f18c7c75877f3a20b7db3"
+    }
+  ],
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 137914,
+  "event_count": 13,
+  "family": "opus",
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:27:35.881035+00:00",
+  "format_deviations": [
+    "outside descriptive 150..300 word band around approximate 250-word instruction"
+  ],
+  "id": "newadvice12--advice-hz-05--opus--grounded",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "prompt_sha256": "df50fa1c83ded782d820a1683dc96ccff7648c14eff99e9c4e00fcc27969372d",
+  "question_key": "newadvice12--advice-hz-05",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "newadvice12",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 142217,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 142217,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 142217,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 142217,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 1525,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 1525,
+      "output_tokens_details": {
+        "thinking_tokens": 896
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ],
+  "words": 313
+}

@@ -1,0 +1,81 @@
+{
+  "actual_input_tokens": 4872,
+  "answer": "```json\n{\n  \"judgments\": [\n    {\n      \"id\": \"p-2917756f384a80ef\",\n      \"A\": {\n        \"decision_quality\": 5,\n        \"actionability\": 5,\n        \"constraint_fit\": 5,\n        \"reasoning\": 5\n      },\n      \"B\": {\n        \"decision_quality\": 5,\n        \"actionability\": 5,\n        \"constraint_fit\": 5,\n        \"reasoning\": 5\n      },\n      \"winner\": \"tie\",\n      \"reason\": \"Both answers provide exceptionally strong, clear, and well-reasoned analyses. They correctly evaluate the startup's runway, reject the premature and resource-draining enterprise engagement, correctly size the self-serve growth trajectory, and give sound pricing and operational next steps. Their numerical calculations and strategic conclusions are nearly identical and both are top-tier.\",\n      \"factual_objections\": []\n    },\n    {\n      \"id\": \"p-44c1ab76b7fd213d\",\n      \"A\": {\n        \"decision_quality\": 5,\n        \"actionability\": 5,\n        \"constraint_fit\": 5,\n        \"reasoning\": 5\n      },\n      \"B\": {\n        \"decision_quality\": 5,\n        \"actionability\": 5,\n        \"constraint_fit\": 5,\n        \"reasoning\": 5\n      },\n      \"winner\": \"tie\",\n      \"reason\": \"Both answers provide a clear, emphatic 'No' to the $1,000/day plan, accurately point out the fatal budget overruns and inventory constraints, provide realistic alternative ad spend schedules that respect the $45,000 limit, and offer smart operational safeguards. Both responses are practically indistinguishable in high quality.\",\n      \"factual_objections\": []\n    },\n    {\n      \"id\": \"p-ca08ae16e139e121\",\n      \"A\": {\n        \"decision_quality\": 5,\n        \"actionability\": 5,\n        \"constraint_fit\": 5,\n        \"reasoning\": 5\n      },\n      \"B\": {\n        \"decision_quality\": 5,\n        \"actionability\": 5,\n        \"constraint_fit\": 5,\n        \"reasoning\": 5\n      },\n      \"winner\": \"tie\",\n      \"reason\": \"Both answers correctly evaluate the current baseline unit economics and monthly profit, recommend raising prices, identify the idle van-day as immediate uncaptured capacity, and advise waiting on the second van purchase due to hiring timelines and year-end cash impact. Their pricing suggestions and conditional triggers for the van purchase are both comprehensive and well-reasoned.\",\n      \"factual_objections\": []\n    }\n  ]\n}\n```",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "RuntimeError: CLI exited 1: HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n\n",
+      "exit_code": 1,
+      "retry_delay_seconds": 10,
+      "seconds": 15.992,
+      "stderr_sha256": "6427dcfa3fff68ce64accc6dfa795e075902882ae59cea2847753f6014718378",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "attempt": 2,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 11.741,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "92c364d7fb6822009375a32986090619e0725e5717e30ffe13829cdf239c1cef"
+    }
+  ],
+  "batch": {
+    "blocked_pair_ids": [],
+    "chars_per_token": 3.2,
+    "eligible_pair_ids": [
+      "p-2917756f384a80ef",
+      "p-44c1ab76b7fd213d",
+      "p-ca08ae16e139e121"
+    ],
+    "estimated_input_tokens": 5273,
+    "id": "newadvice12--gemini--opus--batch-02",
+    "judge_family": "gemini",
+    "pair_ids": [
+      "p-2917756f384a80ef",
+      "p-44c1ab76b7fd213d",
+      "p-ca08ae16e139e121"
+    ],
+    "prompt_bytes": 16930,
+    "prompt_sha256": "146837b50157dd4b1e2129265fe33f8bca1043a9fd054e414cf22394d94f75d5",
+    "suite": "newadvice12"
+  },
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "decoded": {},
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 5273,
+  "event_count": 1,
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T16:22:16.125217+00:00",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "parse_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "prompt_sha256": "146837b50157dd4b1e2129265fe33f8bca1043a9fd054e414cf22394d94f75d5",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 655,
+      "promptTokenCount": 4872,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 4872
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 5527
+    }
+  ]
+}

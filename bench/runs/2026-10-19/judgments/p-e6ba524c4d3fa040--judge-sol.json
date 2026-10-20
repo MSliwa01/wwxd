@@ -1,0 +1,61 @@
+{
+  "answer_family": "opus",
+  "batch_id": "diagnostic12--sol--opus--batch-01",
+  "error": "",
+  "id": "p-e6ba524c4d3fa040--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-e6ba524c4d3fa040",
+  "primary_eligible": true,
+  "prompt_sha256": "b154d37798aa391c5c7827b6d3b81c48a6c60acc8492f5144d823ac47a5789f2",
+  "question_key": "diagnostic12--yc-05",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 4,
+      "faithfulness": 4,
+      "specificity": 5,
+      "usefulness": 5
+    },
+    "B": {
+      "accuracy": 3,
+      "faithfulness": 3,
+      "specificity": 3,
+      "usefulness": 4
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "The Stockholm talk occurred in April 2026.",
+        "evidence": "The packet supplies a May 13, 2026 publication date but does not establish the event date. Publication in May neither confirms nor contradicts an April event.",
+        "label": "unverified"
+      },
+      {
+        "answer": "A",
+        "claim": "Graham says family and life matter more than the company.",
+        "evidence": "The supplied evidence does not establish this attributed statement.",
+        "label": "unverified"
+      },
+      {
+        "answer": "A",
+        "claim": "The statistic has no published method, and Altman is less sure the Bay Area premium will persist over the next decade.",
+        "evidence": "The packet establishes the statistic and Graham's qualifications, but provides neither evidence about whether a method was published nor Altman's position.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "Remote work and other hubs have weakened the geographic argument.",
+        "evidence": "The packet does not establish that effect. Graham explicitly says his recommendation remains the same; that establishes his position, without settling whether geographic advantages have objectively weakened.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-e6ba524c4d3fa040",
+    "reason": "A captures Graham's explicit recommendation to go temporarily, the benefits of returning to Stockholm, and the qualified unicorn statistic. B offers reasonable practical advice but understates his current affirmative position and omits the Stockholm-specific return benefit and statistical caveat.",
+    "winner": "A"
+  },
+  "winner": "grounded"
+}

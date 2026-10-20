@@ -1,0 +1,43 @@
+{
+  "answer_family": "opus",
+  "batch_id": "diagnostic12--sol--opus--batch-03",
+  "error": "",
+  "id": "p-e359ab5393b60ed5--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-e359ab5393b60ed5",
+  "primary_eligible": true,
+  "prompt_sha256": "1d6b43a7e820b1d6cdc3a9d1796f31ddf5b845ed1cca1561de374d65fcc1a98e",
+  "question_key": "diagnostic12--hz-09",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 2,
+      "faithfulness": 1,
+      "specificity": 2,
+      "usefulness": 2
+    },
+    "B": {
+      "accuracy": 5,
+      "faithfulness": 5,
+      "specificity": 5,
+      "usefulness": 5
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "Hormozi would decide entirely from the numbers and likely favor funding proven growth instead of paying down cheap debt.",
+        "evidence": "In the supplied operating-business consultation, Hormozi explicitly says he skews close to the Ramsey side because debt increases risk over time, approves clearing the debt, and retains repayment in the final plan while also continuing proven advertising. He additionally describes his preference as partly emotional.",
+        "label": "contradicted"
+      }
+    ],
+    "id": "p-e359ab5393b60ed5",
+    "reason": "B accurately states Hormozi's debt-payoff lean, explains the long-term risk argument, preserves the owner's prior payoff plan, and recognizes that proven advertising can continue alongside repayment. A substitutes a generic interest-versus-return framework and unsupported numerical thresholds for the documented stance. Its acknowledgment that it is making an inference does not resolve that substantive mismatch.",
+    "winner": "B"
+  },
+  "winner": "grounded"
+}

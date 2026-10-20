@@ -1,0 +1,57 @@
+{
+  "actual_input_tokens": 277,
+  "answer": "The premise that a pre-product-market fit startup nine months in requires aggressive legal posturing is false; at this stage, lawyer-driven letter wars destroy remaining value faster than any market risk. \n\nDrawing on standard startup advisory principles regarding early co-founder splits, the recommended path is to bypass legal counsel immediately and negotiate directly. Nine months in means unvested shares represent the vast majority of equity, and the company has negligible cash or IP value to fight over. Law firm billing will quickly consume whatever runway remains. \n\nYour co-founder should keep a prorated portion of his vested stock representing his nine months of work, provided he signs a clean separation agreement, releases claims, and transfers any intellectual property back to the entity. The rest of his unvested shares must return to the pool. If he refuses to compromise, your decision criteria should be the burn rate of legal fees versus the cost of a clean break. If continuing legal battle costs more than resetting the cap table or winding down, dissolve the entity, return remaining cash, and walk away.\n\nConcrete next steps:\n1. Halt lawyer correspondence immediately to freeze legal fees.\n2. Schedule a direct, off-the-record conversation with your co-founder to agree on a prorated equity split and a mutual release.\n3. Have a single, neutral corporate lawyer draft a simple termination and IP assignment agreement reflecting your direct compromise, rather than letting litigators escalate the dispute.",
+  "arm": "raw",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 1.993,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "2fb93020045a4cff61f34783a1a108e8147f2ace9104ecf70919ad1deeb18790"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 390,
+  "event_count": 1,
+  "family": "gemini",
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:23:19.042800+00:00",
+  "format_deviations": [],
+  "id": "diagnostic12--yc-12--gemini--raw",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_sha256": "c92561c6732630f5e5c0a7919a01a8acc677a661ecfa35a5f9bb6fc43c68be1a",
+  "question_key": "diagnostic12--yc-12",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 296,
+      "promptTokenCount": 277,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 277
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 573
+    }
+  ],
+  "words": 235
+}

@@ -1,0 +1,1619 @@
+[
+  {
+    "judgment_id": "p-00d6a95e43d51092--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Five to eight offices paying $600–$1,000 per month would reach about $3,400 per month in take-home pay.",
+      "evidence": "The stated range includes five offices paying $600, which produces only $3,000 in monthly revenue before expenses and taxes. Some combinations could work, but the range does not establish the claimed take-home income.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-064e3d6db2a08a82--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "If the project achieves rapid organic growth, Graham's advice becomes that you should drop out and run with it.",
+      "evidence": "Graham says that if a side project takes off, 'maybe it's reasonable to run with it.' This supports considering the opportunity, but does not establish a categorical instruction to drop out.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-064e3d6db2a08a82--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Meta and Microsoft began during reading periods.",
+      "evidence": "The supplied packet supports the importance of student projects but does not establish this specific historical timing for either company.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-064e3d6db2a08a82--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Graham would likely bypass the student's age and student status when answering.",
+      "evidence": "Graham explicitly says 'Do not start a startup in college' and '20 is not the optimal time to do it.' His 2026 essay reiterates that running a startup is incompatible with being a full-time student.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-064e3d6db2a08a82--judge-sol",
+    "ordinal": 3,
+    "original_objection": {
+      "answer": "B",
+      "claim": "A project requiring immediate full-time engineering to capture a fleeting market is sufficient reason, under Graham's advice, to leave or pause school.",
+      "evidence": "The supplied exception concerns a side project that has already taken off on its own. It does not establish engineering demands or a perceived fleeting market as independently sufficient reasons to leave school.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-0d7a755834632ca5--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Graham gave this advice to Stockholm founders in April 2026.",
+      "evidence": "The packet dates the source publication to May 13, 2026, but does not establish when the talk occurred. Publication in May neither confirms nor disproves an April event.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-0d7a755834632ca5--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Graham acknowledges his interest as YC's cofounder and accepts that family can matter more than maximizing company value.",
+      "evidence": "The supplied packet establishes his YC recommendation and qualifications about unicorn outcomes, but does not establish these additional acknowledgments.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-13be11ec2eedd729--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "The first ninety days consist of weeks one through thirty, thirty-one through sixty, and sixty-one through ninety.",
+      "evidence": "The stated schedule covers 90 weeks, or 630 days, rather than the requested 90 days.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-13be11ec2eedd729--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Buying the $9,000 route leaves no emergency buffer.",
+      "evidence": "The stated $11,000 savings would leave $2,000 before additional acquisition costs. That is an inadequate buffer relative to monthly expenses, but it is not zero.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-13be11ec2eedd729--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "A",
+      "claim": "The dental service carries the highest profit margin.",
+      "evidence": "The question supplies no service pricing, acquisition costs, delivery costs, or comparable store margins that establish this ranking.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-1b481a7b755f0829--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "The owner reported closing roughly one sale for every 20 doors knocked.",
+      "evidence": "The supplied packet establishes the company's age and successful emphasis on door-to-door sales, but does not establish this conversion rate.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-1b481a7b755f0829--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Hormozi suggested explaining commissions as expected earnings per door.",
+      "evidence": "The packet supports building a door-to-door sales team but does not supply this particular compensation explanation.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-1b481a7b755f0829--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "B",
+      "claim": "The likely reason for the recommendation was leverage through Google Ads rather than the owner's door-knocking.",
+      "evidence": "Hormozi explicitly advised going 'all in door to door' and building a 'DDD army.' The packet reports no Google Ads recommendation, and Caleb subsequently confirmed going all in on door-to-door.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-1c078e330f8b0486--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Hormozi ranks damaging admissions among his favorite advertising tactics.",
+      "evidence": "The packet establishes his endorsement and explanation of the tactic, but does not establish this ranking among his favorites.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-2168a519e93d10c2--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Failure to reach 10 to 20 paying daily-use clinics within eight weeks means veterinarians do not want the product enough.",
+      "evidence": "The scenario supplies no acquisition funnel, sales-cycle, pricing, or onboarding evidence that would distinguish insufficient demand from ineffective distribution or activation.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-2168a519e93d10c2--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Securing ten paying clinics establishes a viable micro-SaaS.",
+      "evidence": "At the suggested $100 monthly price, ten clinics generate $1,000 monthly against $22,000 current monthly spending. This could be useful early demand evidence, but viability additionally depends on retention, costs, acquisition economics, and growth.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-267a2490ac048359--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "B",
+      "claim": "3–5% monthly churn is generally healthy, while above 10% is usually a serious concern for an ongoing paid community.",
+      "evidence": "The packet does not substantiate these general thresholds. Hormozi's supplied Skool benchmarks instead describe approximately 20% average churn, under 10% for the best groups, and approximately 30% or higher as the point to prioritize retention. Those observations do not prove B's separately offered guidelines false.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-286224226a38213e--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Your problem isn't price.",
+      "evidence": "Three candidates accepted offers with roughly twice the cash. This supports investigating compensation and candidate targeting, but does not establish that price is irrelevant or that targeting is the sole cause.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-2917756f384a80ef--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "The first enterprise payment likely arrives in months 9–11 because building, a SOC 2 Type II observation window and procurement must occur.",
+      "evidence": "The question specifies SOC 2 and 6–7 months of procurement, but does not specify Type II, implementation duration, payment terms or whether these activities overlap.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-2917756f384a80ef--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "B",
+      "claim": "At 10% monthly revenue growth, runway stretches to about 19 months.",
+      "evidence": "Under B's assumption of $45,000 monthly expenses, revenue starting at $6,300 and growing 10% reaches operating break-even around month 21. Cash remains positive through that point, with roughly $98,000–$137,000 at its minimum depending on monthly timing, so it does not run out in month 19.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-2917756f384a80ef--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "B",
+      "claim": "The first enterprise payment likely arrives around months 9–12, with the audit adding months beyond procurement.",
+      "evidence": "The supplied facts establish procurement duration but not audit type, sequencing, implementation time or payment schedule.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-30f0a7d52b64b6ba--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "B",
+      "claim": "A good monthly churn rate typically falls between three and seven percent.",
+      "evidence": "For the requested Hormozi benchmark, the packet gives Skool's average as 20% monthly churn and the best groups as under 10%. It explicitly identifies substituting 3–7% benchmarks as an error.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-30f0a7d52b64b6ba--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "B",
+      "claim": "A monthly churn rate above ten percent is alarming and signals broken onboarding, unmet value expectations, or poor member fit.",
+      "evidence": "The supplied benchmark averages 20% churn, with retention becoming the highest-ROI priority around 30% churn or higher. Elevated early churn is described as normal unless almost everyone leaves, so exceeding 10% does not establish a broken process.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-30f0a7d52b64b6ba--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Hormozi contends that members will not leave if they receive ten times their subscription cost in value within the first week.",
+      "evidence": "The packet supports early outcomes and onboarding, but supplies no ten-times-value threshold or guarantee that members will stay.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-30f0a7d52b64b6ba--judge-sol",
+    "ordinal": 3,
+    "original_objection": {
+      "answer": "B",
+      "claim": "If churn exceeds eight percent for two consecutive months, pause marketing spend entirely.",
+      "evidence": "The supplied material establishes no eight-percent threshold, two-month rule, or instruction to stop marketing entirely.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-31022a88e0319499--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "In 2021 Hormozi sold a majority stake in his portfolio, mainly Gym Launch and Prestige Labs, to a private buyer for about $46 million.",
+      "evidence": "The supplied packet does not establish this transaction or its terms. It instead documents the interviewer's separate listing and equity story.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-31022a88e0319499--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "B",
+      "claim": "In 2021 Hormozi sold two-thirds of Prestige Labs and Gym Launch to a private equity firm for $46.2 million.",
+      "evidence": "The supplied packet does not establish the date, ownership fraction, buyer type, or sale amount for this transaction.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-31022a88e0319499--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Hormozi sold ALAN to a strategic buyer in an all-stock deal.",
+      "evidence": "The packet contains no evidence establishing ALAN's sale terms. This proposed explanation cannot be verified from the supplied material.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-347dcc25a926e232--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "The quadrupling story is a theoretical private-to-public valuation principle rather than a personal anecdote.",
+      "evidence": "The interviewer explicitly describes his own company's European public listing and banks saying that the same business would be worth four times more on NASDAQ. This is a personal anecdote comparing two public exchanges, not the private-to-public example A supplies.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-347dcc25a926e232--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "A",
+      "claim": "American Pacific Group acquired a majority stake in Acquisition.com's portfolio operations, producing Hormozi's major liquidity event.",
+      "evidence": "The supplied packet does not document this transaction or establish the acquired entity. It concerns the interviewer's IPO-related experience.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-347dcc25a926e232--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Hormozi has never taken a company public or listed any primary operating business on NASDAQ.",
+      "evidence": "The evidence establishes that this particular story belongs to the interviewer, but does not establish an exhaustive history of Hormozi's businesses.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-347dcc25a926e232--judge-sol",
+    "ordinal": 3,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Hormozi's primary liquidity event was selling majority stakes in his licensing and supplement companies to private equity.",
+      "evidence": "No supplied evidence documents those sales or establishes their status as his primary liquidity event.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-347dcc25a926e232--judge-sol",
+    "ordinal": 4,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Hormozi's businesses have not gone public in an IPO.",
+      "evidence": "Correcting the speaker attribution does not establish this broader historical claim; the packet supplies no comprehensive listing history.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-3dc91bfc2e1429d0--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Early YC's selection of young, technically capable, socially unpolished applicants supports this account of Livingston's position.",
+      "evidence": "The packet establishes Livingston's character criteria but does not establish this characterization of early YC applicants or its connection to her selection decisions.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-3dc91bfc2e1429d0--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Livingston's advice to prospective cofounders emphasized complementary skills and a shared moral compass.",
+      "evidence": "The packet supports her attention to cofounder relationships, but does not establish these particular elements of her advice.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-3fc7a9a85fe40dda--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Consumer fintech apps for couples face notoriously high churn.",
+      "evidence": "Neither category-level churn evidence nor retention data for this app is supplied.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-3fc7a9a85fe40dda--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "B",
+      "claim": "The 1,400 sign-ups were driven by three viral posts rather than organic, compounding word-of-mouth growth.",
+      "evidence": "Only the TikTok is explicitly described as taking off. Most sign-ups came from three posts, but the question does not establish that both Reddit posts were viral or exclude subsequent word-of-mouth growth.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-4cd02c8fbe46df26--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Garry Tan made the claim that YC's premium and its gap over second place have increased.",
+      "evidence": "Sam Altman makes the statement at 16:56, explicitly prefacing it with 'I can say this, Garry probably can't.' His following example concerns people he later founded OpenAI with.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-4cd02c8fbe46df26--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Garry Tan made the claim that YC's premium and its gap over alternative accelerators have increased.",
+      "evidence": "The direct evidence attributes the statement to Altman in conversation with Tan, including the explicit distinction 'I can say this, Garry probably can't.'",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-4cd02c8fbe46df26--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "A",
+      "claim": "The widening premium results from AI agents, custom skill files, and automated workflows amplifying founder output.",
+      "evidence": "The supplied explanation is network effects, illustrated by meeting future cofounders years before founding a company. It does not establish agent workflows or custom skill files as causes of the widening premium.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-4cd02c8fbe46df26--judge-sol",
+    "ordinal": 3,
+    "original_objection": {
+      "answer": "B",
+      "claim": "The widening premium results from AI shifting competitive advantage toward distribution, brand, and immediate access to capital.",
+      "evidence": "The passage explains the claim through relationships and network effects that compound over time. It does not establish this AI-driven shift or capital-access explanation.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-4cd02c8fbe46df26--judge-sol",
+    "ordinal": 4,
+    "original_objection": {
+      "answer": "B",
+      "claim": "YC certainly maintains a dominant market share among top-tier early-stage software startups and unmatched deployment velocity.",
+      "evidence": "The packet supplies no market-share measurements, defined comparison group, or deployment-velocity evidence supporting these assertions.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-4d9952cc71942a88--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "The departing founder should keep a stake roughly proportional to the time and value he contributed.",
+      "evidence": "The supplied guidance explicitly says to reduce the departing founder's ownership even if vested: under 5% generally and under 2% within the first year. It prioritizes equity for the remaining team rather than a proportional accounting of past contributions.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-518efde008bea979--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "If contribution margin exceeds 38%, the break-even close rate rises to around 68–70%.",
+      "evidence": "The supplied figures do not establish contribution margin or the fixed-versus-variable cost split. A higher contribution margin raises the break-even close rate, but does not establish this particular range.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-518efde008bea979--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Hormozi also pushes guarantees, bonuses, and tiers in connection with this pricing advice.",
+      "evidence": "The packet establishes his recommendation to increase this company's prices and his customer-conviction explanation. It does not establish the additional offer-building attribution; those recommendations may be reasonable independent suggestions.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-5843a4d76478e844--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Small vet clinics decide fast and judge on quality.",
+      "evidence": "The scenario establishes neither purchasing speed nor buying criteria. Existing-system integration, budget, and workflow requirements could materially affect adoption.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-5843a4d76478e844--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Hospital sales cycles run 6–18 months.",
+      "evidence": "The supplied information does not establish this numerical range or the hospital buyer and purchasing route to which it would apply.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-5a6c5a48b0f202f4--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Hormozi would advise adding a 10x premium tier and a low-priced annual maintenance membership guaranteeing yearly visits.",
+      "evidence": "The supplied HVAC evidence supports a 10% price increase and its profit implications, but does not establish these additional attributed recommendations.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-5a6c5a48b0f202f4--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "A",
+      "claim": "The company is likely sacrificing customer conviction by keeping its current prices.",
+      "evidence": "Hormozi says higher prices sometimes increase conviction. That does not establish that this company's current pricing is reducing conviction.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-5a6c5a48b0f202f4--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Hormozi typically recommends increasing prices until close rates reach 40% to 50%, and a rate above 70% means prices remain too low.",
+      "evidence": "The packet establishes neither general threshold. For this case, Hormozi proposes a 10% increase and calculates approximately 65% as the profit break-even rate, rather than prescribing a target conversion range.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-5a6c5a48b0f202f4--judge-sol",
+    "ordinal": 3,
+    "original_objection": {
+      "answer": "B",
+      "claim": "The company is convincing almost everyone who inquires.",
+      "evidence": "The supplied 82% figure applies to in-home inspections. The conversion rate across all inquiries is not supplied.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-5ac1d738ea917386--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Many utilities need these plans for state loans and grants.",
+      "evidence": "No jurisdiction or funding-program requirements are supplied. Whether the proposed report satisfies such requirements remains unestablished.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-5ac1d738ea917386--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Engineering consultancies decide faster than utilities.",
+      "evidence": "Consultancies are a plausible channel to test, but the scenario provides no evidence about their purchasing speed, budgets, or willingness to adopt this tool.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-62531d2bc6b063c2--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "B",
+      "claim": "The agency produces an acquisition cost of $1,800 to $2,250.",
+      "evidence": "At the full $8,000 budget, the $2,000 fee leaves $6,000 for 40 leads. A 12% conversion rate yields 4.8 contracts, giving an expected acquisition cost of approximately $1,667.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-62531d2bc6b063c2--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "B",
+      "claim": "The advertising acquisition cost is unsustainable.",
+      "evidence": "The supplied economics imply $840 monthly gross profit per contract and $16,800 over 20 months. Expected advertising acquisition cost is recovered in about two months of gross profit. Other costs could affect affordability, but unsustainability is not established.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-62531d2bc6b063c2--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "B",
+      "claim": "The business faces impending client churn.",
+      "evidence": "The stated threat concerns losing a source of new contracts. Loss of existing clients is not established.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-66f97cdfd6a8bbe4--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Hormozi likely advised this roofer to switch to Google Ads because the business had outgrown door-knocking and reached a capacity wall.",
+      "evidence": "Hormozi explicitly says to 'go all in door to door' and build a 'DDD army.' His recap calls door-to-door the primary growth engine, and the owner subsequently reports following that advice.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-66f97cdfd6a8bbe4--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Hormozi recommended Google Ads and digital marketing as a separate play for established service businesses.",
+      "evidence": "The packet establishes no such separate recommendation. Its absence check finds only 'Google review' in the roofing transcript; that does not establish or disprove what he recommended elsewhere.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-7dc8c5481c99e43d--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Thirty-seven standard clients yield $17,010 net, and four premium clients yield $7,440 net.",
+      "evidence": "At the supplied $40 per-client cost, 37 × ($500 − $40) = $17,020 and 4 × ($2,000 − $40) = $7,840. Their combined profit is $24,860.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-7dc8c5481c99e43d--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "A",
+      "claim": "$24,450 net hits the baseline target.",
+      "evidence": "The requested minimum is $25,000; $24,450 falls short by $550.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-7dc8c5481c99e43d--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "A",
+      "claim": "The plan strictly respects the 50-hour capacity.",
+      "evidence": "The answer's own workload total is 54 hours. Its earlier configuration of 37 standard clients and four premium clients would require 37 + 12 + 5 = 54 hours as well.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-7dc8c5481c99e43d--judge-sol",
+    "ordinal": 3,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Dropping unpaid extras frees five hours, and tightening workflows can compress the remaining workload to 50 hours.",
+      "evidence": "The question does not quantify five hours of unpaid extras or establish achievable efficiency gains. The supplied workload already allocates all 50 hours to client service and administration.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-7dc8c5481c99e43d--judge-sol",
+    "ordinal": 4,
+    "original_objection": {
+      "answer": "B",
+      "claim": "The combined plan produces $28,200 monthly profit while fitting the constraints.",
+      "evidence": "That profit calculation uses 40 standard clients plus five premium clients, requiring 60 weekly hours. After the answer reduces standard clients to 30 to meet the cap, profit becomes 30 × $460 + 5 × $1,960 = $23,600, below the goal.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-7dc8c5481c99e43d--judge-sol",
+    "ordinal": 5,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Five premium clients add $9,800 in incremental profit.",
+      "evidence": "For five existing clients upgrading from the $500 standard tier, the incremental profit is 5 × ($2,000 − $500) = $7,500 with unchanged per-client costs. The $9,800 figure represents their total premium profit, not the increase from upgrading.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-7e85f9be6e493774--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "The proposed pricing changes add over $16,000 in annual profit.",
+      "evidence": "That increase assumes every groom costs $110. With 70% of bookings at the proposed $105 regular rate and 30% at $110, the average ticket is $106.50. At 156 monthly grooms, profit is $4,296.40, an annualized increase of $12,916.80 before the initial loyalty grace period.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-7e85f9be6e493774--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "A",
+      "claim": "The $25 speed fee is pure margin.",
+      "evidence": "Groomers receive 40% of each ticket. Under that compensation rule, a $25 ticket surcharge contributes $15 before any additional costs.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-7e85f9be6e493774--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Monthly labor costs are $5,070 and monthly profit is $4,078.",
+      "evidence": "Labor is 40% of $14,820, or $5,928. Subtracting that, $1,872 in supplies and fuel, and $3,800 in fixed costs leaves $3,220.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-7e85f9be6e493774--judge-sol",
+    "ordinal": 3,
+    "original_objection": {
+      "answer": "B",
+      "claim": "At 140 monthly grooms, the proposed pricing produces about $15,100 in revenue.",
+      "evidence": "The required customer mix is unspecified. Keeping the stated 70% regular-booking share gives an average ticket of $103 and revenue of $14,420.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-7fa860047189a558--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "External PR around an early-stage B2B SaaS launch brings negligible signups.",
+      "evidence": "The scenario supplies no PR conversion results or buyer readership data. Declining this proposal is defensible without assuming negligible signups.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-7fa860047189a558--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "A",
+      "claim": "The $1.5M seed round gives sufficient runway to prioritize product-market fit.",
+      "evidence": "Operating expenses, hiring commitments, and existing cash obligations are unspecified, so runway cannot be established from the funding amount.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-7fa860047189a558--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Mainstream tech and business press coverage will not drive paying customers among electrical and plumbing subcontractors.",
+      "evidence": "The supplied information does not establish that coverage would produce no paying customers or that these buyers rarely read the relevant publications.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-863b75bd437bf03a--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Alex Hormozi would likely frame the choice around where cash produces the strongest return.",
+      "evidence": "The supplied evidence establishes his repayment preference through debt risk, business volatility, and emotional burden. It does not establish the return-maximization framing attributed here, although he also supported continued profitable advertising.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-9090312952e17ac2--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "At a 25% agency fee and $230,000 salary, the fee is $57,000 per hire.",
+      "evidence": "25% of $230,000 is $57,500. The discrepancy is small and does not materially change the comparison.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-9090312952e17ac2--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Candidates are being lost because the hiring process is too slow.",
+      "evidence": "The scenario reports much higher competing cash offers, but provides no evidence that interview timing caused any rejection.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-9090312952e17ac2--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "B",
+      "claim": "The interview process and founder time investment are already efficient and are not bottlenecks.",
+      "evidence": "Seven interviews and three rejected offers do not establish that three weeks or two founder hours per week are sufficient for the hiring objective.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-9090312952e17ac2--judge-sol",
+    "ordinal": 3,
+    "original_objection": {
+      "answer": "B",
+      "claim": "The startup is experiencing a cash crunch.",
+      "evidence": "The company raised $3M three months ago, but current cash and burn are not supplied. A cash crunch cannot be inferred.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-9affc45058d920b8--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "High churn in any community under six months old should not cause concern because its average is inflated.",
+      "evidence": "The source explicitly gives this age-based caveat for communities under 90 days old. It does not establish the broader six-month reassurance, and it says early churn warrants intervention if basically everyone leaves.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-9affc45058d920b8--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Hormozi co-founded Skool.",
+      "evidence": "The packet establishes that he relays Skool data credited to Sam, but does not establish his founder status.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-9affc45058d920b8--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Hormozi's advice includes reviewing every roughly 20 cancellations, providing a win within 24 hours, daily appearances, weekly calls, and introductions to about ten regulars.",
+      "evidence": "The packet supports onboarding, outcomes, connections, and learning from cancellations, but does not establish these specific frequencies, deadlines, or counts.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-9affc45058d920b8--judge-sol",
+    "ordinal": 3,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Monthly churn of 5–10% is typical for many paid communities, especially below about $100 per month.",
+      "evidence": "The supplied data reports a 20% Skool platform average and under 10% for the best groups. It provides no price-segmented evidence establishing B's broader benchmark; the differing populations prevent treating this as a definitive contradiction.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-9affc45058d920b8--judge-sol",
+    "ordinal": 4,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Most cancellations occurring in the first 30–60 days indicates an onboarding problem rather than a value problem.",
+      "evidence": "The source says churn is normally highest early and does not establish that cancellation timing alone diagnoses onboarding rather than value.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-9affc45058d920b8--judge-sol",
+    "ordinal": 5,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Hormozi generally frames the membership ceiling as monthly joins divided by monthly churn.",
+      "evidence": "The formula is consistent with a constant-rate membership model, but the supplied packet does not establish its attribution to Hormozi.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-9c051450506e1b9c--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "The definitive decision criterion is multiple competing term sheets within a two-week window; otherwise stop fundraising.",
+      "evidence": "The packet recommends building enough growth and proof points to raise quickly, but supplies no two-week deadline, competing-term-sheet requirement, or mandatory stopping rule.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-9c051450506e1b9c--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Without warm introductions, the bottleneck is distribution.",
+      "evidence": "The supplied discussion identifies company performance and fundraising leverage as central. It does not establish this diagnosis for founders without warm introductions.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-9c051450506e1b9c--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "B",
+      "claim": "If you are pre-product and have no usage data, your investor pitch meetings are essentially customer discovery calls.",
+      "evidence": "The packet supports launching and growing instead of polishing a deck. It does not equate investor meetings with discovery involving actual customers.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-a76ca4ad41ad1ed4--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "No, Paul Graham does not think you need to move to Silicon Valley.",
+      "evidence": "Graham directly answers this question: 'Yes, you should. You can go there for a bit and then come back, but you should at least go.' Permanent relocation is optional, but going temporarily is his explicit recommendation.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-a76ca4ad41ad1ed4--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "B",
+      "claim": "If your startup targets enterprise customers in the United States or requires massive venture capital scaling that is difficult to secure locally, a temporary or permanent move to Silicon Valley may eventually become necessary.",
+      "evidence": "The packet does not establish these conditions for necessity. Graham recommends at least a temporary stay more generally, emphasizing peers, serendipity, investor speed, and calibration.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-ae68fdba5551b685--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "About 170 course subscribers would be needed to match one premium client.",
+      "evidence": "At $49 per month, approximately 51 subscribers generate $2,500 in revenue. No supplied course costs justify increasing that figure to 170.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-ae68fdba5551b685--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "A",
+      "claim": "If fewer than four clients buy premium, raising standard pricing to $550 and filling available slots provides a sufficient fallback.",
+      "evidence": "With two premium clients, the 50-hour limit permits 39 standard clients. Monthly profit would be 2 × $2,460 + 39 × $510 = $24,810, below the target. One or zero premium clients produces still less.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-ae68fdba5551b685--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Premium can start on day 60, followed by 30-day termination notices if insufficient standard clients have left.",
+      "evidence": "If all 45 clients remain and five upgrade, weekly work becomes 40 standard hours plus 15 premium hours plus five admin hours, totaling 60. Giving termination notices at that point does not preserve the stated 50-hour ceiling during the notice period.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-ae68fdba5551b685--judge-sol",
+    "ordinal": 3,
+    "original_objection": {
+      "answer": "B",
+      "claim": "The fallback is eight premium clients at $2,000 with 21 standard clients.",
+      "evidence": "The profit and hours arithmetic is correct, but eight premium clients exceeds the proposed limit of up to five. This fallback requires explicitly revising that limit.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-af346bd1af16f08c--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Hormozi's framework dictates keeping cash whenever its investment return exceeds the debt's interest rate.",
+      "evidence": "The supplied operating-business discussion establishes his Ramsey-like lean and concern about accumulated risk. It does not establish the claimed interest-rate comparison as his governing framework.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-af346bd1af16f08c--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Allocate funds to the higher-yielding option, either debt elimination or customer acquisition.",
+      "evidence": "The actual plan included both continuing debt repayment at 30:45 and increasing advertising while ROAS and CAC held at 10:48. Presenting the advice as an either/or allocation conflicts with that combined plan.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-af346bd1af16f08c--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Whether to repay the debt depends on supply or demand constraints, with reliable acquisition returns favoring retaining cash instead.",
+      "evidence": "The source does not establish this conditional repayment framework. Hormozi approved the owner's repayment plan and separately supported funding proven ads; reliable advertising was not presented as a reason to suspend repayment.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-bbb9666bb15b6afe--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Graham's emphasis has shifted toward encouraging students' independent projects.",
+      "evidence": "The packet shows encouragement of independent projects in both the earlier advice and the August 2026 essay. It establishes continuity, but does not establish a shift in emphasis.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-bc5522bf9ebe6437--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "$690 annually is roughly two months free.",
+      "evidence": "Twelve months at $79 costs $948. A $690 price discounts $258, equivalent to approximately 3.27 months. Two months free would cost $790.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-bc5522bf9ebe6437--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Lifetime revenue of about $440 against $110 acquisition cost establishes that more advertising is affordable even if acquisition costs rise.",
+      "evidence": "The revenue calculation is correct under constant churn, but delivery costs, contribution margins and cash requirements are unspecified. Revenue alone does not establish profitable acquisition or spending capacity.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-bc5522bf9ebe6437--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "B",
+      "claim": "With churn stuck at 18%, even doubled ads top out around 830 members.",
+      "evidence": "At the supplied $110 acquisition cost, doubling ads produces 180 additions monthly. Starting from 600, constant 18% churn yields approximately 963 members after 12 months and approaches 1,000 over time. A figure around 830 requires an additional acquisition-cost or conversion assumption.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-bd456c713761bbb7--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Caleb closed roughly one sale per 20 doors, and Hormozi targeted repair tickets of $2,500–5,000.",
+      "evidence": "The supplied packet supports expanding door-knocking and emphasizing repair volume, but does not substantiate these numerical details.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-c272861f7b71771c--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "The idea behind the story is public–private valuation arbitrage.",
+      "evidence": "The host says his company had already gone public on a European exchange. The fourfold comparison concerned moving the same public business to Nasdaq, not moving from private ownership to public trading.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-c272861f7b71771c--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "B",
+      "claim": "The four-times story concerns a business receiving a higher valuation if its shares became publicly traded.",
+      "evidence": "The supplied account concerns an already publicly traded company on a European exchange and a hypothetical Nasdaq valuation.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-c272861f7b71771c--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Hormozi's 2021 majority-stake sale involving Gym Launch and Prestige Labs to American Pacific Group was associated with a $46.2 million deal.",
+      "evidence": "The supplied packet does not establish this separate transaction or its terms. It identifies the relevant equity arrangement as the host's compensation for pre-IPO marketing work.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-c272861f7b71771c--judge-sol",
+    "ordinal": 3,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Hormozi sold ALAN to a strategic buyer in an all-stock deal.",
+      "evidence": "The packet supplies no evidence about an ALAN acquisition. The IPO equity story it documents belongs to the interviewer.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-c272861f7b71771c--judge-sol",
+    "ordinal": 4,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Hormozi and Leila sold two-thirds of Gym Launch and Prestige Labs to American Pacific Group in 2021 for $46.2 million.",
+      "evidence": "The supplied evidence does not establish this separate sale, ownership fraction, or price.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-c8553b2191778e52--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Spending $1,000 daily burns through $45,000 in less than 45 days.",
+      "evidence": "$45,000 divided by $1,000 per day is exactly 45 days.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-c8553b2191778e52--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "A",
+      "claim": "The proposed spending will exhaust inventory well before December 31 and cause the business to miss peak Black Friday and holiday shopping.",
+      "evidence": "At unchanged 3.2 ROAS and $58 per bottle, 4,000 bottles cover about 72.5 days at $1,000 daily. That does not establish an early stockout or missing Black Friday. Other demand and future advertising performance are unspecified.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-c8553b2191778e52--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "B",
+      "claim": "At $1,000 daily, inventory would deplete in roughly 130 days.",
+      "evidence": "Using the supplied ROAS, daily attributed revenue would be $3,200, equivalent to about 55.2 bottles. Four thousand bottles would last about 72.5 days, not 130.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-c8553b2191778e52--judge-sol",
+    "ordinal": 3,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Holiday traffic compression will cause stockouts before replenishment can arrive.",
+      "evidence": "No holiday demand forecast or other-channel sales rate is supplied. Even the constant-ROAS calculation yields about 72.5 days of inventory, slightly longer than the stated 70-day manufacturing lead time.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-c8a0257afdc78052--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Livingston treated the cofounder relationship as the most important selection criterion.",
+      "evidence": "The packet supports attention to cofounder relationships but does not establish this ranking among her criteria.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-c8a0257afdc78052--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Livingston said conventional-minded people cannot pursue new ideas and that early YC helped failing founders rather than pressing them over small outcomes.",
+      "evidence": "These additional attributed positions are not established by the supplied evidence. Their absence does not demonstrate that they are false.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-c8a0257afdc78052--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Livingston consistently named determination as the trait that best predicts startup success.",
+      "evidence": "Her quoted criteria include determination alongside earnestness and flexible-mindedness; the packet does not establish that she ranked it as the best predictor.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-c8a0257afdc78052--judge-sol",
+    "ordinal": 3,
+    "original_objection": {
+      "answer": "B",
+      "claim": "She screened out dishonest, manipulative, or unpleasant founders, and YC's stated rationale was that bad actors fail through recruitment, trust, and reputational problems.",
+      "evidence": "The supplied evidence specifically establishes funding earnest people and rejecting conceited applicants. It does not establish these broader screening categories or the attributed institutional rationale.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-ca08ae16e139e121--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "B",
+      "claim": "A van bought now produces no grooms this year.",
+      "evidence": "Starting from October 19, approximately two months of hiring and training ends around December 19, leaving time for some grooms before year-end. Additional delays are possible but are not established.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-ce005039168f0ddd--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Admitting product weaknesses is effective provided the flaw is minor, secondary, and quickly overshadowed by a dominant benefit.",
+      "evidence": "Hormozi advises owning real flaws and listing customer complaints. The supplied evidence does not establish a minor-and-secondary-only condition or require every flaw to become a beneficial feature.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-ce005039168f0ddd--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "A",
+      "claim": "If the transparent ad repels all traffic, the weakness is too central to the core utility and must be redesigned rather than marketed.",
+      "evidence": "The packet does not establish that advertising performance alone diagnoses a fundamental product defect or necessarily requires redesign.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-d1ebfc172a92cae3--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Keeping vested shares is not, by itself, an unreasonable demand.",
+      "evidence": "As a characterization of the requested advice, this conflicts with the explicit recommendation to reduce departing-founder ownership regardless of vesting: 'within the first year, under 2%.' This contradicts the attributed recommendation, not A's separate legal distinction between ownership rights and negotiated concessions.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-d55f29f798f63a11--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Having raised capital is a condition that makes a formal equity separation matter.",
+      "evidence": "The packet distinguishes the pre-product-market-fit situation and provides an exception for illegal or unethical conduct. It does not establish fundraising alone as a separate threshold for changing the advice.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-d55f29f798f63a11--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "B",
+      "claim": "The departing founder should retain a prorated portion of vested stock representing nine months of work.",
+      "evidence": "The hosts explicitly say to reduce the departing founder's holding regardless of vesting: under 5% generally and under 2% within the first year. Their stated basis is preserving equity for those creating future value, rather than prorating past service.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-d55f29f798f63a11--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Nine months in means the company has negligible cash or intellectual property value.",
+      "evidence": "Neither the scenario nor the reference establishes the company's cash or intellectual property holdings. The statement that pre-product-market-fit stock is essentially worthless does not establish those asset values.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-db3e2e9db4864dd8--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Seibel's advice is that a seed round should take only a few weeks and follow-ups without commitments rarely convert.",
+      "evidence": "The evidence supports raising quickly once growth creates leverage and explains investors' option-like behavior. It does not establish a prescribed duration or a conversion frequency for follow-ups.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-db3e2e9db4864dd8--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Runway below about six months calls for prioritizing profitability over further pitching.",
+      "evidence": "The Justin.tv example supports the value of focusing on profitability in that situation. It does not establish a general six-month threshold.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-dd85420a3336c01b--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "The statement that the gap between YC and second place has grown looks like an embellishment.",
+      "evidence": "Altman explicitly says at 16:56 that 'the distance between like YC and second place ... has expanded.'",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-dd85420a3336c01b--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Garry Tan makes and explains the premium and widening-gap claim.",
+      "evidence": "The supplied conversation attributes the statement to Altman, who introduces it with 'I can say this, Gary probably can't.'",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-dd85420a3336c01b--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "B",
+      "claim": "His reasoning includes faster AI-era competition, investor filtering, greater selectivity, and recent batch revenue outcomes.",
+      "evidence": "The supplied explanation concerns network effects and meeting future cofounders years beforehand. It does not establish these additional arguments or the claimed appeal to revenue data.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-e2c8ec0629722c27--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Early customers, practical support, and investor competition are presented as main mechanisms explaining the speaker's claim.",
+      "evidence": "The documented explanation is network effects, illustrated by Altman meeting future OpenAI cofounders many years before founding the company. The packet does not establish these additional mechanisms as his explanation.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-e2c8ec0629722c27--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Tan made the argument that YC's premium and its lead over second place have increased.",
+      "evidence": "Altman makes the statement and explicitly introduces it with 'I can say this, Gary probably can't.'",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-e2c8ec0629722c27--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "B",
+      "claim": "The argument rests on AI increasing competition for attention, YC's admission signal, and concentrated access to capital.",
+      "evidence": "These explanations are not established by the supplied account. The stated reason is compounding network effects and access to future cofounders.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-e359ab5393b60ed5--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Hormozi would decide entirely from the numbers and likely favor funding proven growth instead of paying down cheap debt.",
+      "evidence": "In the supplied operating-business consultation, Hormozi explicitly says he skews close to the Ramsey side because debt increases risk over time, approves clearing the debt, and retains repayment in the final plan while also continuing proven advertising. He additionally describes his preference as partly emotional.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-e36bea03e9001ed3--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "The business has existing product-market fit.",
+      "evidence": "Thirty paying customers and four months of revenue growth demonstrate traction, but retention, acquisition economics, and durability are not supplied.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-e36bea03e9001ed3--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Introducing tiered subscriptions stabilizes cash flow and extends runway.",
+      "evidence": "The effect depends on tier prices, customer acceptance, usage patterns, and churn. The supplied information does not establish a revenue or runway improvement.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-e36bea03e9001ed3--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "B",
+      "claim": "The business has existing product-market fit.",
+      "evidence": "The supplied customer count and recent growth do not establish retention or a repeatable, sustainable acquisition model.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-e6ba524c4d3fa040--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "The Stockholm talk occurred in April 2026.",
+      "evidence": "The packet supplies a May 13, 2026 publication date but does not establish the event date. Publication in May neither confirms nor contradicts an April event.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-e6ba524c4d3fa040--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Graham says family and life matter more than the company.",
+      "evidence": "The supplied evidence does not establish this attributed statement.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-e6ba524c4d3fa040--judge-sol",
+    "ordinal": 2,
+    "original_objection": {
+      "answer": "A",
+      "claim": "The statistic has no published method, and Altman is less sure the Bay Area premium will persist over the next decade.",
+      "evidence": "The packet establishes the statistic and Graham's qualifications, but provides neither evidence about whether a method was published nor Altman's position.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-e6ba524c4d3fa040--judge-sol",
+    "ordinal": 3,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Remote work and other hubs have weakened the geographic argument.",
+      "evidence": "The packet does not establish that effect. Graham explicitly says his recommendation remains the same; that establishes his position, without settling whether geographic advantages have objectively weakened.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-e96dd392929b8484--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Referral rewards come out of gross profit, not the growth budget.",
+      "evidence": "The stated $6,000 advertising allocation and $2,000 events allocation already exhaust the $8,000 monthly growth budget. Paying an additional month's billing per referred contract adds growth expenditure regardless of its funding source.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-e96dd392929b8484--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Successful ads can move to the full $8,000 while the paid referral program continues.",
+      "evidence": "Allocating the entire stated growth budget to ads leaves nothing for the proposed $1,000 referral rewards and tools. Continuing those expenditures requires a revised allocation or additional funding.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-ea2a492baea5f02b--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "Domain experience and a technical cofounder provide a massive moat against copycats.",
+      "evidence": "The scenario establishes relevant experience, but supplies no evidence of durable barriers to imitation, proprietary data, or other defensibility.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-ea2a492baea5f02b--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "B",
+      "claim": "The target software market is underserved and recession-resistant.",
+      "evidence": "The supplied information does not establish competitive coverage or the resilience of municipal software purchasing budgets.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-ea64056372a05d6f--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "They observed that polite, consensus-seeking individuals often faltered, while successful founders pursued growth above all else.",
+      "evidence": "The supplied evidence identifies earnestness, determination, flexibility and cofounder relationships as selection criteria. It does not establish these attributed observations about politeness or growth above all else.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-ea64056372a05d6f--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Jessica Livingston believed that early YC needed the most aggressive, ruthless founders.",
+      "evidence": "Livingston says she carefully funded earnest people and rejected conceited applicants. Her description of hardened, aggressive and ruthless people refers to other investors, contrasted with her own soft and sensitive approach.",
+      "label": "contradicted"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-ea71360e9fe0a8de--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "At Socialcam, when it reached number two in the App Store, the deck barely mattered.",
+      "evidence": "The packet describes Socialcam as hot and supports the broader point that decks do not drive fundraising, but it does not establish a number-two App Store ranking.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-ea71360e9fe0a8de--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "A",
+      "claim": "After roughly eight months of unsuccessful fundraising, the team had about two months of runway left.",
+      "evidence": "The packet establishes eight months of fundraising followed by two productive months focused on profitability during a near-failure episode. It does not explicitly establish that exactly two months of runway remained.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-ee2b7ee36164eccb--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "YC has made it easier for students to apply.",
+      "evidence": "The supplied packet establishes Graham's advice about college and side projects but provides no evidence of a change to YC's application arrangements for students.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-ee2b7ee36164eccb--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "B",
+      "claim": "Your situation is his exception.",
+      "evidence": "Graham's exception requires a side project that takes off on its own. The question establishes excitement about a project, but supplies no evidence of traction or spontaneous growth.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-f2a9010dfd46e443--judge-sol",
+    "ordinal": 0,
+    "original_objection": {
+      "answer": "A",
+      "claim": "The buyers are not readers of tech or business press.",
+      "evidence": "The question identifies customer acquisition sources but supplies no evidence about buyers' media consumption. Those sources support prioritizing direct channels without establishing this audience claim.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  },
+  {
+    "judgment_id": "p-f2a9010dfd46e443--judge-sol",
+    "ordinal": 1,
+    "original_objection": {
+      "answer": "B",
+      "claim": "The buyers rarely read tech or business press, and coverage will not fill the pipeline.",
+      "evidence": "Neither readership nor likely press-generated pipeline is established by the supplied facts. Declining the agency is defensible without treating its potential contribution as known.",
+      "label": "unverified"
+    },
+    "vote_status": "ok"
+  }
+]

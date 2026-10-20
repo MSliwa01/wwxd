@@ -1,0 +1,72 @@
+{
+  "actual_input_tokens": 10041,
+  "answer": "```json\n{\n  \"judgments\": [\n    {\n      \"id\": \"p-064e3d6db2a08a82\",\n      \"A\": {\n        \"accuracy\": 3,\n        \"specificity\": 3,\n        \"faithfulness\": 3,\n        \"usefulness\": 3\n      },\n      \"B\": {\n        \"accuracy\": 5,\n        \"specificity\": 5,\n        \"faithfulness\": 5,\n        \"usefulness\": 5\n      },\n      \"winner\": \"B\",\n      \"reason\": \"Answer B accurately captures Paul Graham's explicit stance that students should not start startups in college because startups consume your entire life, and that waiting costs nothing. It correctly includes the crucial exception (side projects taking off organically, like Facebook). Answer A gets the core stance wrong by claiming that starting now is fine and that staying in school is just a low-risk advantage for an active startup, missing the absolute 'do not start a startup in college' rule.\",\n      \"factual_objections\": []\n    },\n    {\n      \"id\": \"p-347dcc25a926e232\",\n      \"A\": {\n        \"accuracy\": 2,\n        \"specificity\": 2,\n        \"faithfulness\": 2,\n        \"usefulness\": 3\n      },\n      \"B\": {\n        \"accuracy\": 5,\n        \"specificity\": 5,\n        \"faithfulness\": 5,\n        \"usefulness\": 5\n      },\n      \"winner\": \"B\",\n      \"reason\": \"Answer B correctly recognizes that the story about listing on the NASDAQ and quadrupling valuation belongs to the interviewer (Steven Bartlett), not Alex Hormozi, and explains the context accurately. Answer A completely misses the premise, falsely claiming Hormozi tells no such story and inventing private equity details.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Alex Hormozi tells no story about his company being worth four times more simply by listing on the NASDAQ, nor of any subsequent IPO equity deal.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"The reference establishes that the interviewer on The Diary Of A CEO told the story about his own company going public and being told it would be worth 4x more on the NASDAQ, and Hormozi agreed and discussed the principle.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"p-ea64056372a05d6f\",\n      \"A\": {\n        \"accuracy\": 1,\n        \"specificity\": 2,\n        \"faithfulness\": 1,\n        \"usefulness\": 2\n      },\n      \"B\": {\n        \"accuracy\": 5,\n        \"specificity\": 4,\n        \"faithfulness\": 5,\n        \"usefulness\": 4\n      },\n      \"winner\": \"B\",\n      \"reason\": \"Answer B successfully rejects the false premise, noting that Jessica Livingston did not seek out ruthless or aggressive personalities, but rather focused on tenacity, determination, and earnestness while actively rejecting conceited applicants. Answer A completely falls for the false premise, inventing reasons why Livingston believed in backing aggressive and ruthless founders.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Jessica Livingston believed that early YC needed the most aggressive, ruthless founders because startups face an extreme environment...\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"The reference transcript shows Livingston stated she was careful to fund only earnest people, turned down conceited ones, and described herself as soft/sensitive while characterizing other investors (not her founders) as hardened/aggressive/ruthless.\"\n        }\n      ]\n    }\n  ]\n}\n```",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 5.421,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "cf5e24ab460f95b19e687eb17d02252c6a671c0e8b5ae2cfb514ca2b6d4d021a"
+    }
+  ],
+  "batch": {
+    "blocked_pair_ids": [],
+    "chars_per_token": 3.2,
+    "eligible_pair_ids": [
+      "p-064e3d6db2a08a82",
+      "p-347dcc25a926e232",
+      "p-ea64056372a05d6f"
+    ],
+    "estimated_input_tokens": 10613,
+    "id": "diagnostic12--gemini--gemini--batch-01",
+    "judge_family": "gemini",
+    "pair_ids": [
+      "p-064e3d6db2a08a82",
+      "p-347dcc25a926e232",
+      "p-ea64056372a05d6f"
+    ],
+    "prompt_bytes": 33966,
+    "prompt_sha256": "d61d1b651a064ea78ff5d705535c03d85f1897e910a5556c5f05c70ed14328bf",
+    "suite": "diagnostic12"
+  },
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "decoded": {},
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 10613,
+  "event_count": 1,
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:37:42.598595+00:00",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "parse_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "prompt_sha256": "d61d1b651a064ea78ff5d705535c03d85f1897e910a5556c5f05c70ed14328bf",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 857,
+      "promptTokenCount": 10041,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 10041
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 10898
+    }
+  ]
+}

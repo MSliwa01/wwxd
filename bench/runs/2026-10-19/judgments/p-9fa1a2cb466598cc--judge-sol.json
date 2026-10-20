@@ -1,0 +1,36 @@
+{
+  "answer_family": "sol",
+  "batch_id": "diagnostic12--sol--sol--batch-00",
+  "error": "",
+  "id": "p-9fa1a2cb466598cc--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-9fa1a2cb466598cc",
+  "primary_eligible": false,
+  "prompt_sha256": "28c2ae49c81cf0eb69e65dc6fc5e19330910de90af8da2965a340f72541e2f64",
+  "question_key": "diagnostic12--hz-11",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 5,
+      "faithfulness": 4,
+      "specificity": 4,
+      "usefulness": 5
+    },
+    "B": {
+      "accuracy": 5,
+      "faithfulness": 3,
+      "specificity": 3,
+      "usefulness": 4
+    },
+    "factual_objections": [],
+    "id": "p-9fa1a2cb466598cc",
+    "reason": "A more closely captures the proposed 10% increase, approximately 26% profit uplift, and customer-confidence mechanism. B gives sound but more generic testing advice. Both omit the source's approximately 65% profit break-even calculation. A's 74.5% figure correctly concerns revenue preservation, and its distinction between fixed and variable costs appropriately qualifies any profit threshold.",
+    "winner": "A"
+  },
+  "winner": "grounded"
+}

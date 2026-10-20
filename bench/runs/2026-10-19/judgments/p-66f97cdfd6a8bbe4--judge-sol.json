@@ -1,0 +1,49 @@
+{
+  "answer_family": "gemini",
+  "batch_id": "diagnostic12--sol--gemini--batch-01",
+  "error": "",
+  "id": "p-66f97cdfd6a8bbe4--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-66f97cdfd6a8bbe4",
+  "primary_eligible": true,
+  "prompt_sha256": "0d31b7338840d526ab633b86a100491994e226d00356708d977cc78004010d52",
+  "question_key": "diagnostic12--hz-20",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 1,
+      "faithfulness": 1,
+      "specificity": 1,
+      "usefulness": 1
+    },
+    "B": {
+      "accuracy": 4,
+      "faithfulness": 4,
+      "specificity": 5,
+      "usefulness": 4
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "Hormozi likely advised this roofer to switch to Google Ads because the business had outgrown door-knocking and reached a capacity wall.",
+        "evidence": "Hormozi explicitly says to 'go all in door to door' and build a 'DDD army.' His recap calls door-to-door the primary growth engine, and the owner subsequently reports following that advice.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "B",
+        "claim": "Hormozi recommended Google Ads and digital marketing as a separate play for established service businesses.",
+        "evidence": "The packet establishes no such separate recommendation. Its absence check finds only 'Google review' in the roofing transcript; that does not establish or disprove what he recommended elsewhere.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-66f97cdfd6a8bbe4",
+    "reason": "B correctly rejects the specific premise and explains the actual recommendation: make door-to-door the primary growth engine and build a sales team. A rejects an unasked universal claim while accepting the false case-specific premise and inventing a rationale for switching channels. B's separate attribution about Google Ads remains unsupported.",
+    "winner": "B"
+  },
+  "winner": "grounded"
+}

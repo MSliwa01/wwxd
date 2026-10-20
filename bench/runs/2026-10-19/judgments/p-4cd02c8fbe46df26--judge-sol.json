@@ -1,0 +1,67 @@
+{
+  "answer_family": "gemini",
+  "batch_id": "diagnostic12--sol--gemini--batch-00",
+  "error": "",
+  "id": "p-4cd02c8fbe46df26--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-4cd02c8fbe46df26",
+  "primary_eligible": true,
+  "prompt_sha256": "7405724568631f4bee08e27e383913f9a45fad59bcf447847d7c1eacf04fdafb",
+  "question_key": "diagnostic12--yc-17",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 1,
+      "faithfulness": 1,
+      "specificity": 2,
+      "usefulness": 1
+    },
+    "B": {
+      "accuracy": 1,
+      "faithfulness": 1,
+      "specificity": 2,
+      "usefulness": 1
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "Garry Tan made the claim that YC's premium and its gap over second place have increased.",
+        "evidence": "Sam Altman makes the statement at 16:56, explicitly prefacing it with 'I can say this, Garry probably can't.' His following example concerns people he later founded OpenAI with.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "B",
+        "claim": "Garry Tan made the claim that YC's premium and its gap over alternative accelerators have increased.",
+        "evidence": "The direct evidence attributes the statement to Altman in conversation with Tan, including the explicit distinction 'I can say this, Garry probably can't.'",
+        "label": "contradicted"
+      },
+      {
+        "answer": "A",
+        "claim": "The widening premium results from AI agents, custom skill files, and automated workflows amplifying founder output.",
+        "evidence": "The supplied explanation is network effects, illustrated by meeting future cofounders years before founding a company. It does not establish agent workflows or custom skill files as causes of the widening premium.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "The widening premium results from AI shifting competitive advantage toward distribution, brand, and immediate access to capital.",
+        "evidence": "The passage explains the claim through relationships and network effects that compound over time. It does not establish this AI-driven shift or capital-access explanation.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "YC certainly maintains a dominant market share among top-tier early-stage software startups and unmatched deployment velocity.",
+        "evidence": "The packet supplies no market-share measurements, defined comparison group, or deployment-velocity evidence supporting these assertions.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-4cd02c8fbe46df26",
+    "reason": "Both repeat the false attribution to Garry Tan and replace the supplied explanation with unsupported AI-centered theories. Both mention networks, but neither explains Altman's central point about meeting eventual cofounders and relationships compounding over many years. Their additional accelerator-selection advice does not resolve the question.",
+    "winner": "tie"
+  },
+  "winner": "tie"
+}

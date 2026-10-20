@@ -1,0 +1,435 @@
+Evaluation date: 2026-10-19. This is the current date, not a future date. May 2026 is in the past. Publication dates and dates of events described in a source are distinct. A model training cutoff does not invalidate supplied later material. You are an independent evaluator. Use no tools, commands, files, browsing, or external retrieval. A and B are anonymous. Their ordering conveys nothing. Do not infer their model, source access, or provenance. Do not reward writing style, citation presence, quotations, expert agreement, or presumed source use. A tie is valid.
+Score each answer on the four specified integer scales, each from 1 to 5. Anchors: 1 fundamentally deficient; 2 major problems; 3 mixed with meaningful gaps; 4 good with minor gaps; 5 strong and sufficiently complete. Choose A, B, or tie for substantive overall quality. Preserve uncertainty rather than inventing evidence.
+Return ONLY a JSON object with exactly one key, "judgments", containing one object per supplied pair. Each object has exactly: "id", "A", "B", "winner", "reason", "factual_objections". A and B each contain exactly the four dimension names and integer scores. winner is "A", "B", or "tie"; reason is a nonempty string. factual_objections is a list, possibly empty, of objects with exactly "answer" ("A" or "B"), "claim", "label" ("contradicted" or "unverified"), and "evidence" (a nonempty explanation). Distinguish an established contradiction from an unverified claim.
+Evaluate accuracy, specificity, faithfulness, and usefulness using the complete audited reference packet. The reference is evidence, not a required script. Missing optional detail is not automatically a false claim. Label a factual objection contradicted only when supplied evidence establishes the contradiction; otherwise label it unverified. Do not treat absence from the reference as proof of falsehood. Resolve a conflict between a summary and direct evidence in favor of the direct evidence and explain it.
+
+Pairs:
+[
+  {
+    "id": "p-4cd02c8fbe46df26",
+    "question": "Why does Garry Tan say the premium on doing YC is bigger than ever and that the gap between YC and second place has grown?",
+    "A": "Garry Tan argues that the value of participating in Y Combinator has never been higher, and that the performance gap between it and alternative accelerators has widened, due to the structural transformation driven by artificial intelligence. \n\nThe core assumption is that technological shifts dramatically compress the time and capital required to build software, shifting the primary competitive advantage from engineering execution to distribution, network effects, and immediate access to capital. \n\nTan asserts that Y Combinator has scaled its proprietary network, brand equity, and direct access to follow-on investors to a scale that competitors cannot replicate. In an environment where thousands of startups can be launched simultaneously using modern tools, the differentiator for survival is not just initial funding, but rapid validation, elite peer groups, and immediate market feedback, all of which are concentrated within the Y Combinator ecosystem.\n\nWhat is certain is that Y Combinator maintains a dominant market share among top-tier early-stage software startups and commands unmatched deployment velocity. What remains uncertain is whether this widening gap will persist if macroeconomic tightening alters investor appetite, or if specialized accelerators in deep tech or biotech will erode Y Combinator’s software-centric dominance.\n\nConcrete next steps for founders evaluating accelerators include auditing whether their specific venture requires deep institutional networks for customer acquisition or if it relies primarily on product-led growth. Founders should compare the equity dilution demanded by Y Combinator against the actual value of its demo day network relative to alternative capital sources. \n\nThe decision criterion is straightforward: if a startup requires immediate access to top-tier venture capital and rapid brand signaling to secure early enterprise customers, the premium on Y Combinator justifies the cost. If the business model is capital-efficient and relies on specialized industry expertise, alternative domain-specific incubators may offer higher relative value despite the widening gap at the top.",
+    "B": "Garry Tan argues that the premium on doing YC is bigger than ever and that the gap between YC and second place has grown because the leverage provided by modern AI agents has dramatically amplified what individual founders and small teams can achieve. \n\nIn his view, the compounding context, custom skill files, and automated agent workflows available today allow a single founder to operate with the output of a much larger organization before ever raising a traditional round. Because execution velocity and product iteration have accelerated so radically, being plugged into the dense, high-signal network of a YC batch provides an unmatched compounding advantage. \n\nThe gap with second place widens because accelerators or programs offering merely capital or standard office space fail to replicate YC's specific concentration of outlier peers, insider knowledge, and the distinct culture required to push hard-tech and AI-native startups past the threshold of success. \n\n**Next Steps:**\n- Build and ship with an agent-native workflow rather than treating AI as mere autocomplete.\n- Focus relentlessly on user feedback and product quality rather than relying on external credentials or generic accelerator playbooks.\n\n**Material Assumptions:**\n- Agent leverage is structural and permanent, not a temporary spike.\n- Network density and peer concentration remain the primary drivers of outlier startup outcomes.\n\n**Decision Criteria:**\nRe-evaluate this stance if competing accelerators successfully build equivalent agent-native operational networks, or if founder leverage decentralizes to the point where centralized batch structures offer diminishing returns compared to remote or distributed cohorts.",
+    "reference": {
+      "actual_stance": "False attribution. Sam Altman said it, in his closing conversation with Garry Tan at Startup School 2026, prefacing it with 'I can say this, Garry probably can't'. He explained the widening gap as network effects: networks put you where you meet future cofounders (he met his OpenAI cofounders years earlier), and that takes a long time to compound. Just before, he said YC's once-heretical push to move to San Francisco was clearly right, though he has less intuition about it now.",
+      "category": "attribution",
+      "errors": [
+        "Attributing the claim to Garry Tan.",
+        "Explaining it with reasons the source does not give (bigger checks, brand) as if quoted."
+      ],
+      "evidence": [
+        {
+          "quote": "it used to be very heretical that YC told people they had to move to San Francisco. And looking back, it was clearly right.",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "16:25"
+        },
+        {
+          "quote": "I also think that I I can say this, Gary probably can't. I I I think the premium on doing YC is bigger now than it's like ever been before.",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "16:56"
+        },
+        {
+          "quote": "the distance between like YC and second place is has expanded. And this is a reminder of the power of",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "16:56"
+        },
+        {
+          "quote": "network effects.",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "17:28"
+        },
+        {
+          "quote": "the people that I started OpenAI with, I met like many many years in some cases before uh starting OpenAI",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "17:28"
+        },
+        {
+          "quote": "the sooner you can put yourself just in a flow where you're going to meet the people that will be your eventual co-founders",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "17:28"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold says Altman prefaced the line 'because it would sound self-serving coming from YC's current CEO'. The raw gives the preface but not the reason. Kept as an acceptable inference, not a required point.",
+        "Captions spell the name 'Gary'; quotes keep the caption spelling."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-17",
+      "key_status": "confirmed_with_interpretation_flag",
+      "primary_sources": [
+        "yt-ZIaOBAjvc38"
+      ],
+      "question": "Why does Garry Tan say the premium on doing YC is bigger than ever and that the gap between YC and second place has grown?",
+      "required_points": [
+        "Corrects the attribution: Sam Altman said it, not Garry Tan.",
+        "Gives his reason: network effects (meeting future cofounders, compounding over time)."
+      ],
+      "supporting_points": [
+        "Prefaced with 'I can say this, Garry probably can't'.",
+        "Context: Startup School 2026 conversation with Garry Tan.",
+        "Context: moving to SF was clearly right in hindsight; he has less intuition about it now.",
+        "Inference that it would sound self-serving from YC's CEO is reasonable but not stated in the source."
+      ],
+      "uncertainty": [
+        "Speaker attribution is inferred from content (answer references OpenAI cofounders; Tan asks the questions). The description confirms the conversation format."
+      ],
+      "vault": "yc"
+    }
+  },
+  {
+    "id": "p-d55f29f798f63a11",
+    "question": "My cofounder and I are 9 months in, pre-product-market fit, and it's clearly over. He's vested a chunk of his stock and wants to keep it, and we've both hired lawyers who are trading letters. What would Michael Seibel tell us to do?",
+    "A": "Michael Seibel would tell you to stop spending money on lawyers immediately, treat the equity as worthless before product-market fit, and negotiate a fast, cheap, no-fault co-founder breakup so you can stop wasting time. \n\nAt nine months pre-product-market fit, paying lawyers to trade letters over stock is a fight over ego, not value. Because the company has no product-market fit, the stock is currently worth nothing. Spending money on legal fees or mediation makes no sense and risks leaving you in debt. Seibel's standard advice for a pre-product-market-fit co-founder breakup is to separate within a week for minimal cost. The departing co-founder should hand back the vast majority of their vested stock—typically getting down to under 5%, and 1 to 2% (or less) if they leave within the first year—because nearly all of the company's value is still to be created by whoever stays. The person staying has to carry the company and cannot easily hedge, whereas a departing co-founder who keeps a small slice gets a free hedge. \n\nYour concrete next steps are to propose a clean, no-fault separation directly to your co-founder without lawyers as judges, offer reasonable severance if you can afford it, sign simple paperwork releasing claims, and return your energy to building or moving on. \n\n**Assumptions:** You have not crossed into legal misconduct, and the business has genuinely failed to find product-market fit. \n**Decision Criteria:** If you had strong product-market fit and significant revenue or raised capital, a formal equity separation would matter; pre-product-market fit, preserving cash and emotional energy for your next project is the only priority.",
+    "B": "The premise that a pre-product-market fit startup nine months in requires aggressive legal posturing is false; at this stage, lawyer-driven letter wars destroy remaining value faster than any market risk. \n\nDrawing on standard startup advisory principles regarding early co-founder splits, the recommended path is to bypass legal counsel immediately and negotiate directly. Nine months in means unvested shares represent the vast majority of equity, and the company has negligible cash or IP value to fight over. Law firm billing will quickly consume whatever runway remains. \n\nYour co-founder should keep a prorated portion of his vested stock representing his nine months of work, provided he signs a clean separation agreement, releases claims, and transfers any intellectual property back to the entity. The rest of his unvested shares must return to the pool. If he refuses to compromise, your decision criteria should be the burn rate of legal fees versus the cost of a clean break. If continuing legal battle costs more than resetting the cap table or winding down, dissolve the entity, return remaining cash, and walk away.\n\nConcrete next steps:\n1. Halt lawyer correspondence immediately to freeze legal fees.\n2. Schedule a direct, off-the-record conversation with your co-founder to agree on a prorated equity split and a mutual release.\n3. Have a single, neutral corporate lawyer draft a simple termination and IP assignment agreement reflecting your direct compromise, rather than letting litigators escalate the dispute.",
+    "reference": {
+      "actual_stance": "Stop paying lawyers. Before product-market fit the stock is worth essentially nothing, so you are fighting over ego. Make the split no-fault and clean, and keep your mouths shut. Even if he has vested, the leaving founder should get down to under 5% of the company, and since this is within the first year, under 2% (they cite 1% to 2%, sometimes under 1%), so the remaining team has the equity to create the value. The staying founder should be generous with severance because everyone in the company is watching. Sign clean paperwork; it can be done in about a week for about $2,000. Do not make your advisor judge and jury; the facts no longer matter. Exception: lawbreaking or unethical conduct, where you call the lawyers.",
+      "category": "applied",
+      "errors": [
+        "Advising to enforce the agreements through litigation or negotiate a full buyout of vested shares.",
+        "Giving the 5% figure for a first-year departure without the under-2% adjustment."
+      ],
+      "evidence": [
+        {
+          "quote": "in a situation where you're having a co-founder breakup and the stock is worth nothing, paying lawyers a bunch of money makes no sense.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "11:36"
+        },
+        {
+          "quote": "the way it should go is sort of no fault from both sides.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "13:42"
+        },
+        {
+          "quote": "Optimize for cleanliness for both sides.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "14:14"
+        },
+        {
+          "quote": "regardless of your vesting, um you need to make sure that that company has as much equity as possible to motivate the people who are there",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "14:47"
+        },
+        {
+          "quote": "you have an opportunity to be generous.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "17:01"
+        },
+        {
+          "quote": "understand that everyone in your company is looking at you right now.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "17:33"
+        },
+        {
+          "quote": "even if you vested, like get down to under 5% of the company, if it's within the first year, under 2%.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "18:39"
+        },
+        {
+          "quote": "Do reasonable severance, sign clean paperwork and and peace out, right? Like you could do that whole thing in a week and spend like $2,000.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "18:39"
+        },
+        {
+          "quote": "After a number of years, 5% typical. Under a year, 1%, 2%, sometimes less than 1%.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "21:22"
+        },
+        {
+          "quote": "don't make your poor startup advisor into judge and jury.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "21:54"
+        },
+        {
+          "quote": "if your co-founder is breaking the law, doing something unethical, killing people, none of this applies.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "21:54"
+        },
+        {
+          "quote": "On this point, I maybe I'll be a little bit less nice than Dalton.",
+          "source_date": "2026-07-13",
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "speaker": "seibel",
+          "speaker_basis": "speaker refers to Dalton in the third person, so this turn is Michael's",
+          "timestamp": "21:54"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold attributes the whole framework to Michael Seibel. It is presented jointly in a two-host episode; only some turns can be assigned (for example the 'less nice than Dalton' turn is Michael's). The hosts say YC has these standards written down. Grade the content.",
+        "Premise note: at 9 months, a standard four-year vesting schedule with a one-year cliff would usually mean nothing has vested. The source's advice holds 'even if you vested', so the stance does not change. Answers that point out the cliff are fine."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-12",
+      "key_status": "confirmed_speaker_caveat",
+      "primary_sources": [
+        "yt-s1YszjhzQ6U"
+      ],
+      "question": "My cofounder and I are 9 months in, pre-product-market fit, and it's clearly over. He's vested a chunk of his stock and wants to keep it, and we've both hired lawyers who are trading letters. What would Michael Seibel tell us to do?",
+      "required_points": [
+        "Stop the lawyer fight; pre-PMF stock is worth almost nothing.",
+        "Leaving founder gives most of it back even if vested: under 5%, and under 2% within the first year (this case is at 9 months).",
+        "No-fault, clean separation with clean paperwork."
+      ],
+      "supporting_points": [
+        "About a week and about $2,000.",
+        "Staying founder offers reasonable severance and is generous; everyone is watching.",
+        "Do not make an advisor the judge; facts do not matter once you are splitting.",
+        "Exception for lawbreaking or unethical behavior."
+      ],
+      "uncertainty": [
+        "Speaker split between the two hosts is mostly unrecoverable."
+      ],
+      "vault": "yc"
+    }
+  },
+  {
+    "id": "p-30f0a7d52b64b6ba",
+    "question": "What's a good monthly churn rate for a paid online community, and when should I worry about it? What would Alex Hormozi say?",
+    "A": "For a paid online community, a good monthly retention rate is around 80%, meaning a monthly churn rate of about 20%. If your monthly retention falls below 70% (yielding a monthly churn rate above 30%), retention becomes the highest-return lever in your business, and you should prioritize fixing it over acquiring new members. \n\nYou should worry about churn when your rate exceeds that 30% threshold, or when you notice a sharp drop-off during specific high-risk windows. Churn typically spikes in the first month and remains highest through day 90. If you can successfully keep members past day 90, churn generally drops significantly, and by month six it often falls to around 2%. Rather than trying to lower your average churn all at once, focus specifically on designing strategies to get members past day 90 and month six.\n\nThe perspective here treats churn as a leaky bucket. When members cancel, tag their reasons—such as price, overwhelm, or lack of engagement—and fix the top reasons after every 20 or so cancellations. At the same time, ask your most engaged, long-tenured members why they stay, and lean into those retention drivers. To combat churn proactively, front-load a fast win within the first 24 hours, simplify your offerings to reduce overwhelm, ensure the owner remains active daily, and help new members make at least one real friend in the community. \n\nConditional recommendation: If your community is less than 90 days or six months old, expect inflated churn metrics because no members have reached the low-churn tenure milestones yet; do not overhaul your business based solely on month-one churn in a young community.",
+    "B": "A good monthly churn rate for a paid online community typically falls between three and seven percent, though top-tier communities with strong engagement and locked-in annual cohorts achieve under two percent. A monthly churn rate above ten percent is alarming and signals a broken onboarding process, unmet value expectations, or a poor member-fit. \n\nAlex Hormozi argues that churn is primarily a symptom of poor customer success and inadequate initial value delivery rather than a pricing issue. He contends that if members feel they are getting ten times the value of their subscription cost within the first week, they will not leave. From his perspective, instead of lowering prices to reduce churn, operators should aggressively increase the perceived and actual value, improve onboarding speed, and create immediate wins for new joiners.\n\nMaterial assumptions include a standard monthly subscription model without long-term lock-ins, and a community size large enough for statistical significance. If your community is very small, a single cancellation can spike your percentage rate artificially. \n\nConcrete next steps: Calculate your current monthly churn by dividing the number of cancellations by total active members at the start of the month. Survey churned members immediately to identify the primary reason for leaving. Implement a mandatory onboarding checklist within the first forty-eight hours to drive early engagement. \n\nDecision criteria: If your churn remains steadily below five percent, focus your resources on scaling acquisition. If churn exceeds eight percent for two consecutive months, pause marketing spend entirely and redirect all efforts toward fixing member retention and value delivery.",
+    "reference": {
+      "actual_stance": "Using Skool platform data that he credits to Sam at Skool: average monthly retention is 80% (20% churn); the best groups churn under 10%; groups under 70% retention (30%+ churn) should make retention their top priority because it is the highest-ROI lever. Churn falls with tenure: 20%+ in months 1 to 3, about 10% or less after day 90, about 2% by month 6. So judge churn by cohort. A community younger than 90 days will show inflated churn, and high month-one churn is normal unless almost everyone leaves. Focus on getting members past month one (onboarding, expectations), day 90 (an outcome) and month 6 (connections). He says these benchmarks fit online and consumer services, not insurance-style or alarm-system subscriptions.",
+      "category": "fresh",
+      "errors": [
+        "Presenting SaaS 3 to 7% churn benchmarks as his view.",
+        "Saying high month-one churn alone means the business is broken.",
+        "Attributing the platform data to a source other than Skool."
+      ],
+      "evidence": [
+        {
+          "quote": "this isn't uh churn for like an insurance premium or an alarm system",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "1:05"
+        },
+        {
+          "quote": "the platform average across School is 80% monthly retention. So said differently, it's 20% churn.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "1:39"
+        },
+        {
+          "quote": "Now the best groups have less than 10% churn, aka 90% retention month over month. The not good groups have less than 70% retention, aka 30% or higher.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "1:39"
+        },
+        {
+          "quote": "you probably need to work on your retention more than anything else. It'll be the highest ROI lever.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "1:39"
+        },
+        {
+          "quote": "you got a double in the LTV per customer",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "2:13"
+        },
+        {
+          "quote": "Now, if you keep someone 90 days, which seems to be the first kind of big churn drop-off point, it drops to around 10% or less.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "3:53"
+        },
+        {
+          "quote": "So, it goes from like 10% to 2%.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "3:53"
+        },
+        {
+          "quote": "if your community or recurring revenue thing is less than 90 days old, then your churn is always going to be inflated",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "4:24"
+        },
+        {
+          "quote": "that's normal for it to be higher than the other months, unless basically everyone's leaving, in which case, yes, you should go fix that.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "4:57"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold matches raw. Added the scope caveat (online/consumer services, not insurance or alarm subscriptions), the under-90-days caveat and the 'unless everyone leaves' exception.",
+        "Auto-captions spell the platform 'School'; it is Skool. Quotes keep the caption spelling."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-05",
+      "key_status": "confirmed_expanded",
+      "primary_sources": [
+        "yt--j8_YCWZ05Q"
+      ],
+      "question": "What's a good monthly churn rate for a paid online community, and when should I worry about it? What would Alex Hormozi say?",
+      "required_points": [
+        "Average about 80% monthly retention (20% churn); best groups under 10% churn.",
+        "Worry when retention is under 70% (churn above 30%): retention becomes the highest-ROI fix.",
+        "Churn depends on tenure: highest in months 1 to 3, about 10% or less after day 90, about 2% by month 6."
+      ],
+      "supporting_points": [
+        "Do not overhaul the business because month-one churn is high, unless basically everyone is leaving.",
+        "A community under 90 days old will show inflated churn.",
+        "Cutting churn from 20% to 10% doubles customer lifetime value.",
+        "Benchmarks fit online/consumer services, not insurance or alarm-type subscriptions.",
+        "Tactics: first-month onboarding, a day-90 outcome, month-6 connections; ask cancellers why, look for patterns."
+      ],
+      "uncertainty": [
+        "The benchmarks are Skool platform averages relayed by Hormozi, not his own measurements. Answers that say so are correct."
+      ],
+      "vault": "hormozi"
+    }
+  }
+]

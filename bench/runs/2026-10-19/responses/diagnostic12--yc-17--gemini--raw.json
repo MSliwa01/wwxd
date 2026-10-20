@@ -1,0 +1,59 @@
+{
+  "actual_input_tokens": 243,
+  "answer": "Garry Tan argues that the value of participating in Y Combinator has never been higher, and that the performance gap between it and alternative accelerators has widened, due to the structural transformation driven by artificial intelligence. \n\nThe core assumption is that technological shifts dramatically compress the time and capital required to build software, shifting the primary competitive advantage from engineering execution to distribution, network effects, and immediate access to capital. \n\nTan asserts that Y Combinator has scaled its proprietary network, brand equity, and direct access to follow-on investors to a scale that competitors cannot replicate. In an environment where thousands of startups can be launched simultaneously using modern tools, the differentiator for survival is not just initial funding, but rapid validation, elite peer groups, and immediate market feedback, all of which are concentrated within the Y Combinator ecosystem.\n\nWhat is certain is that Y Combinator maintains a dominant market share among top-tier early-stage software startups and commands unmatched deployment velocity. What remains uncertain is whether this widening gap will persist if macroeconomic tightening alters investor appetite, or if specialized accelerators in deep tech or biotech will erode Y Combinator’s software-centric dominance.\n\nConcrete next steps for founders evaluating accelerators include auditing whether their specific venture requires deep institutional networks for customer acquisition or if it relies primarily on product-led growth. Founders should compare the equity dilution demanded by Y Combinator against the actual value of its demo day network relative to alternative capital sources. \n\nThe decision criterion is straightforward: if a startup requires immediate access to top-tier venture capital and rapid brand signaling to secure early enterprise customers, the premium on Y Combinator justifies the cost. If the business model is capital-efficient and relies on specialized industry expertise, alternative domain-specific incubators may offer higher relative value despite the widening gap at the top.",
+  "arm": "raw",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 2.366,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "1e39b5dd674ed4c59a6112398573c623d1d13e59c87158f7c157f94fa66216a1"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 356,
+  "event_count": 1,
+  "family": "gemini",
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:23:47.728970+00:00",
+  "format_deviations": [
+    "outside descriptive 150..300 word band around approximate 250-word instruction"
+  ],
+  "id": "diagnostic12--yc-17--gemini--raw",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_sha256": "7cfbb6b052550e0fd57d87c17b22240968f9e7188575b89cd6eda351a18c7575",
+  "question_key": "diagnostic12--yc-17",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 363,
+      "promptTokenCount": 243,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 243
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 606
+    }
+  ],
+  "words": 302
+}

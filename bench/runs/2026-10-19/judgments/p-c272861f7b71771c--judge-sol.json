@@ -1,0 +1,67 @@
+{
+  "answer_family": "sol",
+  "batch_id": "diagnostic12--sol--sol--batch-02",
+  "error": "",
+  "id": "p-c272861f7b71771c--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-c272861f7b71771c",
+  "primary_eligible": false,
+  "prompt_sha256": "d685ac9f7ddd641c6d31f04867412fc07ef0d3fbe03f7a80c927c9f6e73a7910",
+  "question_key": "diagnostic12--hz-16",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 2,
+      "faithfulness": 2,
+      "specificity": 2,
+      "usefulness": 2
+    },
+    "B": {
+      "accuracy": 2,
+      "faithfulness": 1,
+      "specificity": 2,
+      "usefulness": 2
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "The idea behind the story is public–private valuation arbitrage.",
+        "evidence": "The host says his company had already gone public on a European exchange. The fourfold comparison concerned moving the same public business to Nasdaq, not moving from private ownership to public trading.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "B",
+        "claim": "The four-times story concerns a business receiving a higher valuation if its shares became publicly traded.",
+        "evidence": "The supplied account concerns an already publicly traded company on a European exchange and a hypothetical Nasdaq valuation.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "A",
+        "claim": "Hormozi's 2021 majority-stake sale involving Gym Launch and Prestige Labs to American Pacific Group was associated with a $46.2 million deal.",
+        "evidence": "The supplied packet does not establish this separate transaction or its terms. It identifies the relevant equity arrangement as the host's compensation for pre-IPO marketing work.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "Hormozi sold ALAN to a strategic buyer in an all-stock deal.",
+        "evidence": "The packet supplies no evidence about an ALAN acquisition. The IPO equity story it documents belongs to the interviewer.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "Hormozi and Leila sold two-thirds of Gym Launch and Prestige Labs to American Pacific Group in 2021 for $46.2 million.",
+        "evidence": "The supplied evidence does not establish this separate sale, ownership fraction, or price.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-c272861f7b71771c",
+    "reason": "Both miss the central correction: the interviewer told this story, not Hormozi. Neither explains the European listing or the marketing work that earned equity worth about $7M–$8M after 9–12 months. Both substitute a private-versus-public valuation explanation for a comparison between exchanges. A is marginally better because it explicitly declines to identify the transaction; B introduces an unsupported ALAN acquisition as a possible connection.",
+    "winner": "A"
+  },
+  "winner": "raw"
+}

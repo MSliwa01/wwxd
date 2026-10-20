@@ -1,0 +1,61 @@
+{
+  "answer_family": "gemini",
+  "batch_id": "diagnostic12--sol--gemini--batch-01",
+  "error": "",
+  "id": "p-5a6c5a48b0f202f4--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-5a6c5a48b0f202f4",
+  "primary_eligible": true,
+  "prompt_sha256": "0d31b7338840d526ab633b86a100491994e226d00356708d977cc78004010d52",
+  "question_key": "diagnostic12--hz-11",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 3,
+      "faithfulness": 3,
+      "specificity": 4,
+      "usefulness": 4
+    },
+    "B": {
+      "accuracy": 2,
+      "faithfulness": 2,
+      "specificity": 3,
+      "usefulness": 2
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "Hormozi would advise adding a 10x premium tier and a low-priced annual maintenance membership guaranteeing yearly visits.",
+        "evidence": "The supplied HVAC evidence supports a 10% price increase and its profit implications, but does not establish these additional attributed recommendations.",
+        "label": "unverified"
+      },
+      {
+        "answer": "A",
+        "claim": "The company is likely sacrificing customer conviction by keeping its current prices.",
+        "evidence": "Hormozi says higher prices sometimes increase conviction. That does not establish that this company's current pricing is reducing conviction.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "Hormozi typically recommends increasing prices until close rates reach 40% to 50%, and a rate above 70% means prices remain too low.",
+        "evidence": "The packet establishes neither general threshold. For this case, Hormozi proposes a 10% increase and calculates approximately 65% as the profit break-even rate, rather than prescribing a target conversion range.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "The company is convincing almost everyone who inquires.",
+        "evidence": "The supplied 82% figure applies to in-home inspections. The conversion rate across all inquiries is not supplied.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-5a6c5a48b0f202f4",
+    "reason": "A captures the central recommendation, the 10% test, and the approximately 65% break-even close rate for this business. Its ancillary offer recommendations are unsupported. B substitutes unsupported conversion targets and a larger increase, missing the case-specific economics. Neither explains the roughly 25% profit increase.",
+    "winner": "A"
+  },
+  "winner": "grounded"
+}

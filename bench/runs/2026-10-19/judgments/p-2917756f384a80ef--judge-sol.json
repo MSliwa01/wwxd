@@ -1,0 +1,55 @@
+{
+  "answer_family": "opus",
+  "batch_id": "newadvice12--sol--opus--batch-01",
+  "error": "",
+  "id": "p-2917756f384a80ef--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-2917756f384a80ef",
+  "primary_eligible": true,
+  "prompt_sha256": "7ed3f695d06fff8e82862c621a2af303cd515d73a7d02d486d392004e6f2444e",
+  "question_key": "newadvice12--advice-yc-02",
+  "status": "ok",
+  "suite": "newadvice12",
+  "verdict": {
+    "A": {
+      "actionability": 4,
+      "constraint_fit": 4,
+      "decision_quality": 4,
+      "reasoning": 3
+    },
+    "B": {
+      "actionability": 4,
+      "constraint_fit": 4,
+      "decision_quality": 4,
+      "reasoning": 3
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "The first enterprise payment likely arrives in months 9–11 because building, a SOC 2 Type II observation window and procurement must occur.",
+        "evidence": "The question specifies SOC 2 and 6–7 months of procurement, but does not specify Type II, implementation duration, payment terms or whether these activities overlap.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "At 10% monthly revenue growth, runway stretches to about 19 months.",
+        "evidence": "Under B's assumption of $45,000 monthly expenses, revenue starting at $6,300 and growing 10% reaches operating break-even around month 21. Cash remains positive through that point, with roughly $98,000–$137,000 at its minimum depending on monthly timing, so it does not run out in month 19.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "B",
+        "claim": "The first enterprise payment likely arrives around months 9–12, with the audit adding months beyond procurement.",
+        "evidence": "The supplied facts establish procurement duration but not audit type, sequencing, implementation time or payment schedule.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-2917756f384a80ef",
+    "reason": "Both defensibly favor demonstrated self-serve demand over an expensive enterprise commitment and provide useful reconsideration criteria. A's proposed prices and finite runway estimate lack sufficient justification. B preserves usage pricing more cautiously but materially understates runway at 10% growth. Both should clarify whether the stated burn already includes revenue and treat enterprise implementation and payment timing as uncertain.",
+    "winner": "tie"
+  },
+  "winner": "tie"
+}

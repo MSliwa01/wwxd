@@ -1,0 +1,55 @@
+{
+  "answer_family": "sol",
+  "batch_id": "diagnostic12--sol--sol--batch-01",
+  "error": "",
+  "id": "p-1b481a7b755f0829--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-1b481a7b755f0829",
+  "primary_eligible": false,
+  "prompt_sha256": "ef0b13b77729cf0b3a119e71b0241525d528a0d647d4eb8a52de2bfe85fd8971",
+  "question_key": "diagnostic12--hz-20",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 4,
+      "faithfulness": 4,
+      "specificity": 5,
+      "usefulness": 5
+    },
+    "B": {
+      "accuracy": 2,
+      "faithfulness": 1,
+      "specificity": 2,
+      "usefulness": 2
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "The owner reported closing roughly one sale for every 20 doors knocked.",
+        "evidence": "The supplied packet establishes the company's age and successful emphasis on door-to-door sales, but does not establish this conversion rate.",
+        "label": "unverified"
+      },
+      {
+        "answer": "A",
+        "claim": "Hormozi suggested explaining commissions as expected earnings per door.",
+        "evidence": "The packet supports building a door-to-door sales team but does not supply this particular compensation explanation.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "The likely reason for the recommendation was leverage through Google Ads rather than the owner's door-knocking.",
+        "evidence": "Hormozi explicitly advised going 'all in door to door' and building a 'DDD army.' The packet reports no Google Ads recommendation, and Caleb subsequently confirmed going all in on door-to-door.",
+        "label": "contradicted"
+      }
+    ],
+    "id": "p-1b481a7b755f0829",
+    "reason": "A correctly rejects the premise and identifies the actual recommendation: expand door-to-door acquisition by building a sales team. Some supporting details are unverified. B acknowledges uncertainty but still explains a supposed advertising recommendation that the direct evidence contradicts.",
+    "winner": "A"
+  },
+  "winner": "grounded"
+}

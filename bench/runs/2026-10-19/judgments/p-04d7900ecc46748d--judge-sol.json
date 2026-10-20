@@ -1,0 +1,36 @@
+{
+  "answer_family": "sol",
+  "batch_id": "newadvice12--sol--sol--batch-02",
+  "error": "",
+  "id": "p-04d7900ecc46748d--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-04d7900ecc46748d",
+  "primary_eligible": false,
+  "prompt_sha256": "9b74437cd23a4f431fe008a1fbff752f469de66cc417f41bcb52a0a7b7c3b723",
+  "question_key": "newadvice12--advice-yc-03",
+  "status": "ok",
+  "suite": "newadvice12",
+  "verdict": {
+    "A": {
+      "actionability": 5,
+      "constraint_fit": 5,
+      "decision_quality": 5,
+      "reasoning": 5
+    },
+    "B": {
+      "actionability": 5,
+      "constraint_fit": 5,
+      "decision_quality": 5,
+      "reasoning": 5
+    },
+    "factual_objections": [],
+    "id": "p-04d7900ecc46748d",
+    "reason": "Both give the requested clear recommendation while distinguishing sign-ups from sustained household use, payment, and repeatable acquisition. Both address runway, employment restrictions, and the year-long commitment, with concrete validation steps and conditions for reconsidering. A offers a clearer fallback if the promotion blocks development; B gives more specific immediate research steps. Neither advantage materially changes the overall quality.",
+    "winner": "tie"
+  },
+  "winner": "tie"
+}

@@ -1,0 +1,49 @@
+{
+  "answer_family": "gemini",
+  "batch_id": "diagnostic12--sol--gemini--batch-02",
+  "error": "",
+  "id": "p-a76ca4ad41ad1ed4--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-a76ca4ad41ad1ed4",
+  "primary_eligible": true,
+  "prompt_sha256": "f223aff0ccd3fd601cf372b53301c493fd4020d6a8e8052dbe976aeb93aa741f",
+  "question_key": "diagnostic12--yc-05",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 3,
+      "faithfulness": 3,
+      "specificity": 4,
+      "usefulness": 3
+    },
+    "B": {
+      "accuracy": 2,
+      "faithfulness": 1,
+      "specificity": 2,
+      "usefulness": 2
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "No, Paul Graham does not think you need to move to Silicon Valley.",
+        "evidence": "Graham directly answers this question: 'Yes, you should. You can go there for a bit and then come back, but you should at least go.' Permanent relocation is optional, but going temporarily is his explicit recommendation.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "B",
+        "claim": "If your startup targets enterprise customers in the United States or requires massive venture capital scaling that is difficult to secure locally, a temporary or permanent move to Silicon Valley may eventually become necessary.",
+        "evidence": "The packet does not establish these conditions for necessity. Graham recommends at least a temporary stay more generally, emphasizing peers, serendipity, investor speed, and calibration.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-a76ca4ad41ad1ed4",
+    "reason": "A captures Graham's reasons for going, his recommendation of YC, and the possibility of returning, but its opening reverses his explicit advice and its conditions weaken his recommendation to at least go. B largely substitutes general startup-location advice for Graham's position. Neither explains the unicorn-rate caveat or clearly states how returning benefits Stockholm.",
+    "winner": "A"
+  },
+  "winner": "grounded"
+}

@@ -1,0 +1,49 @@
+{
+  "answer_family": "sol",
+  "batch_id": "diagnostic12--sol--sol--batch-00",
+  "error": "",
+  "id": "p-ea71360e9fe0a8de--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-ea71360e9fe0a8de",
+  "primary_eligible": false,
+  "prompt_sha256": "28c2ae49c81cf0eb69e65dc6fc5e19330910de90af8da2965a340f72541e2f64",
+  "question_key": "diagnostic12--yc-08",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 4,
+      "faithfulness": 5,
+      "specificity": 5,
+      "usefulness": 5
+    },
+    "B": {
+      "accuracy": 5,
+      "faithfulness": 4,
+      "specificity": 4,
+      "usefulness": 4
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "At Socialcam, when it reached number two in the App Store, the deck barely mattered.",
+        "evidence": "The packet describes Socialcam as hot and supports the broader point that decks do not drive fundraising, but it does not establish a number-two App Store ranking.",
+        "label": "unverified"
+      },
+      {
+        "answer": "A",
+        "claim": "After roughly eight months of unsuccessful fundraising, the team had about two months of runway left.",
+        "evidence": "The packet establishes eight months of fundraising followed by two productive months focused on profitability during a near-failure episode. It does not explicitly establish that exactly two months of runway remained.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-ea71360e9fe0a8de",
+    "reason": "A better explains leverage, building a company investors chase, and prolonged investor interest as an option purchased with the founder's time. B captures the broad business-first advice and ability to continue without funding, but gives less of the underlying fundraising mechanism. A includes two historical specifics the packet does not establish.",
+    "winner": "A"
+  },
+  "winner": "grounded"
+}

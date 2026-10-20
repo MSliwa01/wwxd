@@ -1,0 +1,49 @@
+{
+  "answer_family": "opus",
+  "batch_id": "newadvice12--sol--opus--batch-03",
+  "error": "",
+  "id": "p-e96dd392929b8484--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-e96dd392929b8484",
+  "primary_eligible": true,
+  "prompt_sha256": "261a4d296a97cc11532988d2d82889b98e3e5567d97677db563fa83081f5e536",
+  "question_key": "newadvice12--advice-hz-04",
+  "status": "ok",
+  "suite": "newadvice12",
+  "verdict": {
+    "A": {
+      "actionability": 4,
+      "constraint_fit": 2,
+      "decision_quality": 3,
+      "reasoning": 3
+    },
+    "B": {
+      "actionability": 4,
+      "constraint_fit": 3,
+      "decision_quality": 4,
+      "reasoning": 4
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "Referral rewards come out of gross profit, not the growth budget.",
+        "evidence": "The stated $6,000 advertising allocation and $2,000 events allocation already exhaust the $8,000 monthly growth budget. Paying an additional month's billing per referred contract adds growth expenditure regardless of its funding source.",
+        "label": "contradicted"
+      },
+      {
+        "answer": "B",
+        "claim": "Successful ads can move to the full $8,000 while the paid referral program continues.",
+        "evidence": "Allocating the entire stated growth budget to ads leaves nothing for the proposed $1,000 referral rewards and tools. Continuing those expenditures requires a revised allocation or additional funding.",
+        "label": "contradicted"
+      }
+    ],
+    "id": "p-e96dd392929b8484",
+    "reason": "Both offer a defensible ads-and-referrals test with a rep fallback. B initially budgets referral payouts, considers restrictions on property-manager incentives, and calculates replacement demand. A spends the entire budget before referral rewards and incorrectly treats those rewards as outside the growth budget. B also needs to reserve referral funding when scaling ads.",
+    "winner": "B"
+  },
+  "winner": "grounded"
+}

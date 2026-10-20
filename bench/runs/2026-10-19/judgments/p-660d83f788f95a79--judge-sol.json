@@ -1,0 +1,36 @@
+{
+  "answer_family": "sol",
+  "batch_id": "newadvice12--sol--sol--batch-02",
+  "error": "",
+  "id": "p-660d83f788f95a79--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-660d83f788f95a79",
+  "primary_eligible": false,
+  "prompt_sha256": "9b74437cd23a4f431fe008a1fbff752f469de66cc417f41bcb52a0a7b7c3b723",
+  "question_key": "newadvice12--advice-hz-01",
+  "status": "ok",
+  "suite": "newadvice12",
+  "verdict": {
+    "A": {
+      "actionability": 5,
+      "constraint_fit": 4,
+      "decision_quality": 5,
+      "reasoning": 5
+    },
+    "B": {
+      "actionability": 5,
+      "constraint_fit": 5,
+      "decision_quality": 5,
+      "reasoning": 5
+    },
+    "factual_objections": [],
+    "id": "p-660d83f788f95a79",
+    "reason": "Both correctly calculate the capacity constraint and propose viable conditional plans. B provides more profit margin while retaining two spare weekly hours, explicitly includes onboarding and handoffs within the time limit, and requires measured delivery time before expansion. A handles steady-state capacity well but leaves setup capacity less resolved. Both appropriately require demand validation before client exits.",
+    "winner": "B"
+  },
+  "winner": "grounded"
+}

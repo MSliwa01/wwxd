@@ -1,0 +1,43 @@
+{
+  "answer_family": "sol",
+  "batch_id": "diagnostic12--sol--sol--batch-03",
+  "error": "",
+  "id": "p-863b75bd437bf03a--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-863b75bd437bf03a",
+  "primary_eligible": false,
+  "prompt_sha256": "5f06ec555251859f39d5b981a356e1b7c0d443417cd2751f6fd7c37f8b4ce78c",
+  "question_key": "diagnostic12--hz-09",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 3,
+      "faithfulness": 2,
+      "specificity": 3,
+      "usefulness": 4
+    },
+    "B": {
+      "accuracy": 5,
+      "faithfulness": 4,
+      "specificity": 5,
+      "usefulness": 5
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "Alex Hormozi would likely frame the choice around where cash produces the strongest return.",
+        "evidence": "The supplied evidence establishes his repayment preference through debt risk, business volatility, and emotional burden. It does not establish the return-maximization framing attributed here, although he also supported continued profitable advertising.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-863b75bd437bf03a",
+    "reason": "B accurately identifies Hormozi's repayment lean, approval of the owner's existing payoff plan, and concern about volatility and financial pressure. A offers useful financial planning advice but substitutes a return-comparison framework for his documented stance. B slightly understates the parallel growth recommendation, which included increasing ad spend while ROAS and CAC held.",
+    "winner": "B"
+  },
+  "winner": "grounded"
+}

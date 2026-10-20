@@ -1,0 +1,244 @@
+{
+  "actual_input_tokens": 22930,
+  "answer": "{\n  \"judgments\": [\n    {\n      \"id\": \"p-9c051450506e1b9c\",\n      \"A\": {\n        \"accuracy\": 2,\n        \"specificity\": 2,\n        \"faithfulness\": 2,\n        \"usefulness\": 2\n      },\n      \"B\": {\n        \"accuracy\": 4,\n        \"specificity\": 4,\n        \"faithfulness\": 4,\n        \"usefulness\": 4\n      },\n      \"winner\": \"B\",\n      \"reason\": \"B captures the central advice: stop decksmithing and prolonged meetings, build growth and proof points, and become a company investors chase. Its investor-option analogy and chase percentages are supported. A substitutes an unsupported fundraising-process prescription, particularly its rigid two-week cutoff and requirement for competing term sheets. B has minor gaps, including not explicitly defining leverage as the ability to walk away and adding unsupported pre-product advice.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"The definitive decision criterion is multiple competing term sheets within a two-week window; otherwise stop fundraising.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The packet recommends building enough growth and proof points to raise quickly, but supplies no two-week deadline, competing-term-sheet requirement, or mandatory stopping rule.\"\n        },\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Without warm introductions, the bottleneck is distribution.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The supplied discussion identifies company performance and fundraising leverage as central. It does not establish this diagnosis for founders without warm introductions.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"If you are pre-product and have no usage data, your investor pitch meetings are essentially customer discovery calls.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The packet supports launching and growing instead of polishing a deck. It does not equate investor meetings with discovery involving actual customers.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"p-af346bd1af16f08c\",\n      \"A\": {\n        \"accuracy\": 2,\n        \"specificity\": 2,\n        \"faithfulness\": 1,\n        \"usefulness\": 2\n      },\n      \"B\": {\n        \"accuracy\": 3,\n        \"specificity\": 3,\n        \"faithfulness\": 3,\n        \"usefulness\": 3\n      },\n      \"winner\": \"B\",\n      \"reason\": \"B reproduces Hormozi's risk-over-time argument, business volatility, emotional relief, and a short repayment window. However, it makes repayment conditional on weak growth opportunities instead of clearly stating his lean toward paying off debt while continuing proven advertising. A largely replaces his position with an interest-rate-versus-return framework and presents repayment and growth as competing allocations.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Hormozi's framework dictates keeping cash whenever its investment return exceeds the debt's interest rate.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The supplied operating-business discussion establishes his Ramsey-like lean and concern about accumulated risk. It does not establish the claimed interest-rate comparison as his governing framework.\"\n        },\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Allocate funds to the higher-yielding option, either debt elimination or customer acquisition.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"The actual plan included both continuing debt repayment at 30:45 and increasing advertising while ROAS and CAC held at 10:48. Presenting the advice as an either/or allocation conflicts with that combined plan.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"Whether to repay the debt depends on supply or demand constraints, with reliable acquisition returns favoring retaining cash instead.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The source does not establish this conditional repayment framework. Hormozi approved the owner's repayment plan and separately supported funding proven ads; reliable advertising was not presented as a reason to suspend repayment.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"p-4cd02c8fbe46df26\",\n      \"A\": {\n        \"accuracy\": 1,\n        \"specificity\": 2,\n        \"faithfulness\": 1,\n        \"usefulness\": 1\n      },\n      \"B\": {\n        \"accuracy\": 1,\n        \"specificity\": 2,\n        \"faithfulness\": 1,\n        \"usefulness\": 1\n      },\n      \"winner\": \"tie\",\n      \"reason\": \"Both repeat the false attribution to Garry Tan and replace the supplied explanation with unsupported AI-centered theories. Both mention networks, but neither explains Altman's central point about meeting eventual cofounders and relationships compounding over many years. Their additional accelerator-selection advice does not resolve the question.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Garry Tan made the claim that YC's premium and its gap over second place have increased.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"Sam Altman makes the statement at 16:56, explicitly prefacing it with 'I can say this, Garry probably can't.' His following example concerns people he later founded OpenAI with.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"Garry Tan made the claim that YC's premium and its gap over alternative accelerators have increased.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"The direct evidence attributes the statement to Altman in conversation with Tan, including the explicit distinction 'I can say this, Garry probably can't.'\"\n        },\n        {\n          \"answer\": \"A\",\n          \"claim\": \"The widening premium results from AI agents, custom skill files, and automated workflows amplifying founder output.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The supplied explanation is network effects, illustrated by meeting future cofounders years before founding a company. It does not establish agent workflows or custom skill files as causes of the widening premium.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"The widening premium results from AI shifting competitive advantage toward distribution, brand, and immediate access to capital.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The passage explains the claim through relationships and network effects that compound over time. It does not establish this AI-driven shift or capital-access explanation.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"YC certainly maintains a dominant market share among top-tier early-stage software startups and unmatched deployment velocity.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The packet supplies no market-share measurements, defined comparison group, or deployment-velocity evidence supporting these assertions.\"\n        }\n      ]\n    }\n  ]\n}",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 59.749,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "acd33a176a209f24fc594528236d91110913836376a9ef63daefab71735be6b4"
+    }
+  ],
+  "batch": {
+    "blocked_pair_ids": [],
+    "chars_per_token": 3.57,
+    "eligible_pair_ids": [
+      "p-9c051450506e1b9c",
+      "p-af346bd1af16f08c",
+      "p-4cd02c8fbe46df26"
+    ],
+    "estimated_input_tokens": 11042,
+    "id": "diagnostic12--sol--gemini--batch-00",
+    "judge_family": "sol",
+    "pair_ids": [
+      "p-9c051450506e1b9c",
+      "p-af346bd1af16f08c",
+      "p-4cd02c8fbe46df26"
+    ],
+    "prompt_bytes": 39428,
+    "prompt_sha256": "7405724568631f4bee08e27e383913f9a45fad59bcf447847d7c1eacf04fdafb",
+    "suite": "diagnostic12"
+  },
+  "chars_per_token": 3.57,
+  "command": [
+    "codex",
+    "exec",
+    "--ignore-user-config",
+    "--ignore-rules",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--model",
+    "gpt-6.1-sol",
+    "--json",
+    "--color",
+    "never",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "unified_exec",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "view_image",
+    "--disable",
+    "shell_snapshot",
+    "--disable",
+    "skill_search",
+    "--disable",
+    "skill_mcp_dependency_install",
+    "--disable",
+    "request_permissions_tool",
+    "--disable",
+    "sleep_tool",
+    "-c",
+    "model_reasoning_effort=\"high\"",
+    "-c",
+    "project_doc_max_bytes=0",
+    "-c",
+    "web_search=\"disabled\"",
+    "-c",
+    "mcp_servers={}",
+    "-c",
+    "developer_instructions=\"Answer the supplied task using only its text. Do not use tools or commands.\"",
+    "-"
+  ],
+  "decoded": {
+    "p-4cd02c8fbe46df26": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "accuracy": 1,
+          "faithfulness": 1,
+          "specificity": 2,
+          "usefulness": 1
+        },
+        "B": {
+          "accuracy": 1,
+          "faithfulness": 1,
+          "specificity": 2,
+          "usefulness": 1
+        },
+        "factual_objections": [
+          {
+            "answer": "A",
+            "claim": "Garry Tan made the claim that YC's premium and its gap over second place have increased.",
+            "evidence": "Sam Altman makes the statement at 16:56, explicitly prefacing it with 'I can say this, Garry probably can't.' His following example concerns people he later founded OpenAI with.",
+            "label": "contradicted"
+          },
+          {
+            "answer": "B",
+            "claim": "Garry Tan made the claim that YC's premium and its gap over alternative accelerators have increased.",
+            "evidence": "The direct evidence attributes the statement to Altman in conversation with Tan, including the explicit distinction 'I can say this, Garry probably can't.'",
+            "label": "contradicted"
+          },
+          {
+            "answer": "A",
+            "claim": "The widening premium results from AI agents, custom skill files, and automated workflows amplifying founder output.",
+            "evidence": "The supplied explanation is network effects, illustrated by meeting future cofounders years before founding a company. It does not establish agent workflows or custom skill files as causes of the widening premium.",
+            "label": "unverified"
+          },
+          {
+            "answer": "B",
+            "claim": "The widening premium results from AI shifting competitive advantage toward distribution, brand, and immediate access to capital.",
+            "evidence": "The passage explains the claim through relationships and network effects that compound over time. It does not establish this AI-driven shift or capital-access explanation.",
+            "label": "unverified"
+          },
+          {
+            "answer": "B",
+            "claim": "YC certainly maintains a dominant market share among top-tier early-stage software startups and unmatched deployment velocity.",
+            "evidence": "The packet supplies no market-share measurements, defined comparison group, or deployment-velocity evidence supporting these assertions.",
+            "label": "unverified"
+          }
+        ],
+        "id": "p-4cd02c8fbe46df26",
+        "reason": "Both repeat the false attribution to Garry Tan and replace the supplied explanation with unsupported AI-centered theories. Both mention networks, but neither explains Altman's central point about meeting eventual cofounders and relationships compounding over many years. Their additional accelerator-selection advice does not resolve the question.",
+        "winner": "tie"
+      }
+    },
+    "p-9c051450506e1b9c": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "accuracy": 2,
+          "faithfulness": 2,
+          "specificity": 2,
+          "usefulness": 2
+        },
+        "B": {
+          "accuracy": 4,
+          "faithfulness": 4,
+          "specificity": 4,
+          "usefulness": 4
+        },
+        "factual_objections": [
+          {
+            "answer": "A",
+            "claim": "The definitive decision criterion is multiple competing term sheets within a two-week window; otherwise stop fundraising.",
+            "evidence": "The packet recommends building enough growth and proof points to raise quickly, but supplies no two-week deadline, competing-term-sheet requirement, or mandatory stopping rule.",
+            "label": "unverified"
+          },
+          {
+            "answer": "A",
+            "claim": "Without warm introductions, the bottleneck is distribution.",
+            "evidence": "The supplied discussion identifies company performance and fundraising leverage as central. It does not establish this diagnosis for founders without warm introductions.",
+            "label": "unverified"
+          },
+          {
+            "answer": "B",
+            "claim": "If you are pre-product and have no usage data, your investor pitch meetings are essentially customer discovery calls.",
+            "evidence": "The packet supports launching and growing instead of polishing a deck. It does not equate investor meetings with discovery involving actual customers.",
+            "label": "unverified"
+          }
+        ],
+        "id": "p-9c051450506e1b9c",
+        "reason": "B captures the central advice: stop decksmithing and prolonged meetings, build growth and proof points, and become a company investors chase. Its investor-option analogy and chase percentages are supported. A substitutes an unsupported fundraising-process prescription, particularly its rigid two-week cutoff and requirement for competing term sheets. B has minor gaps, including not explicitly defining leverage as the ability to walk away and adding unsupported pre-product advice.",
+        "winner": "B"
+      }
+    },
+    "p-af346bd1af16f08c": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "accuracy": 2,
+          "faithfulness": 1,
+          "specificity": 2,
+          "usefulness": 2
+        },
+        "B": {
+          "accuracy": 3,
+          "faithfulness": 3,
+          "specificity": 3,
+          "usefulness": 3
+        },
+        "factual_objections": [
+          {
+            "answer": "A",
+            "claim": "Hormozi's framework dictates keeping cash whenever its investment return exceeds the debt's interest rate.",
+            "evidence": "The supplied operating-business discussion establishes his Ramsey-like lean and concern about accumulated risk. It does not establish the claimed interest-rate comparison as his governing framework.",
+            "label": "unverified"
+          },
+          {
+            "answer": "A",
+            "claim": "Allocate funds to the higher-yielding option, either debt elimination or customer acquisition.",
+            "evidence": "The actual plan included both continuing debt repayment at 30:45 and increasing advertising while ROAS and CAC held at 10:48. Presenting the advice as an either/or allocation conflicts with that combined plan.",
+            "label": "contradicted"
+          },
+          {
+            "answer": "B",
+            "claim": "Whether to repay the debt depends on supply or demand constraints, with reliable acquisition returns favoring retaining cash instead.",
+            "evidence": "The source does not establish this conditional repayment framework. Hormozi approved the owner's repayment plan and separately supported funding proven ads; reliable advertising was not presented as a reason to suspend repayment.",
+            "label": "unverified"
+          }
+        ],
+        "id": "p-af346bd1af16f08c",
+        "reason": "B reproduces Hormozi's risk-over-time argument, business volatility, emotional relief, and a short repayment window. However, it makes repayment conditional on weak growth opportunities instead of clearly stating his lean toward paying off debt while continuing proven advertising. A largely replaces his position with an interest-rate-versus-return framework and presents repayment and growth as competing allocations.",
+        "winner": "B"
+      }
+    }
+  },
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 11042,
+  "event_count": 4,
+  "finish_reasons": [
+    "turn.completed"
+  ],
+  "finished": "2026-10-19T11:34:52.324373+00:00",
+  "observed_models": [],
+  "parse_error": "",
+  "prompt_sha256": "7405724568631f4bee08e27e383913f9a45fad59bcf447847d7c1eacf04fdafb",
+  "requested_model": "gpt-6.1-sol",
+  "serving_model_attested": false,
+  "status": "ok",
+  "usage_events": [
+    {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 0,
+      "input_tokens": 22930,
+      "output_tokens": 2500,
+      "reasoning_output_tokens": 1034
+    }
+  ]
+}

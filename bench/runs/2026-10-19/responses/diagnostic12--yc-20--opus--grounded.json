@@ -1,0 +1,101 @@
+{
+  "actual_input_tokens": 224007,
+  "answer": "**The premise is mistaken.** I know of no statement in which Jessica Livingston said early YC deliberately backed the most aggressive or ruthless founders. Her account of what she screened for points the other way.\n\n**What she actually looked for, and why**\n\n- **Earnestness, determination, flexible-mindedness, and a healthy co-founder relationship.** She treated the co-founder relationship as the most important of these. At YC's stage there were no metrics, so founders had to be judged on what they could become, and she was the partner who read character.\n- **No conceit.** Early on she declined applicants she judged conceited. She credits that choice with shaping YC's alumni culture, which she describes as earnest and not pretentious.\n- **Independent-mindedness.** A brand-new idea goes against convention, so a conventional-minded person can't pursue one.\n- **Benevolence, not squeezing.** She says early YC was not money-driven and helped failing founders rather than pressing them over small outcomes.\n\n**Where the \"aggressive\" idea may come from**\n\n- **\"Formidable.\"** Paul Graham says this word comes from his and Livingston's private vocabulary. He defines it as someone who gets what they want in any situation. That is about effectiveness, not ruthlessness, and he frames it from an investor's point of view.\n- **Persistence versus obstinacy.** Graham praises founders who hold firm on the goal but listen intently to criticism, not those who bulldoze.\n- **Determination.** Determination is on Livingston's own list, but it sits beside earnestness and flexibility.\n\n**Uncertainty**\n\nI can't rule out an offhand remark I'm unaware of. However, it would contradict her consistently stated criteria.\n\n**Next step**\n\nIf you have a specific clip or quote, check whether it is actually Graham's \"formidable\" definition or a paraphrase by someone else. If it is genuinely hers, see whether \"aggressive\" there means relentless determination. That reading would fit her views. \"Ruthless\" would not.",
+  "arm": "grounded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 11.871,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a822719ee154712f3afd65633ff95ee3596291adc9bcc724321b30844d8249b1"
+    }
+  ],
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 226588,
+  "event_count": 8,
+  "family": "opus",
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:24:16.218738+00:00",
+  "format_deviations": [
+    "outside descriptive 150..300 word band around approximate 250-word instruction"
+  ],
+  "id": "diagnostic12--yc-20--opus--grounded",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "prompt_sha256": "228967d130088ace70567d3cf4acaec087c251d03894a607cd6ef1b004db4e68",
+  "question_key": "diagnostic12--yc-20",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 222437,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 222437,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 222437,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 222437,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 913,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 913,
+      "output_tokens_details": {
+        "thinking_tokens": 262
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ],
+  "words": 304
+}

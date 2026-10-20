@@ -1,0 +1,400 @@
+Evaluation date: 2026-10-19. This is the current date, not a future date. May 2026 is in the past. Publication dates and dates of events described in a source are distinct. A model training cutoff does not invalidate supplied later material. You are an independent evaluator. Use no tools, commands, files, browsing, or external retrieval. A and B are anonymous. Their ordering conveys nothing. Do not infer their model, source access, or provenance. Do not reward writing style, citation presence, quotations, expert agreement, or presumed source use. A tie is valid.
+Score each answer on the four specified integer scales, each from 1 to 5. Anchors: 1 fundamentally deficient; 2 major problems; 3 mixed with meaningful gaps; 4 good with minor gaps; 5 strong and sufficiently complete. Choose A, B, or tie for substantive overall quality. Preserve uncertainty rather than inventing evidence.
+Return ONLY a JSON object with exactly one key, "judgments", containing one object per supplied pair. Each object has exactly: "id", "A", "B", "winner", "reason", "factual_objections". A and B each contain exactly the four dimension names and integer scores. winner is "A", "B", or "tie"; reason is a nonempty string. factual_objections is a list, possibly empty, of objects with exactly "answer" ("A" or "B"), "claim", "label" ("contradicted" or "unverified"), and "evidence" (a nonempty explanation). Distinguish an established contradiction from an unverified claim.
+Evaluate accuracy, specificity, faithfulness, and usefulness using the complete audited reference packet. The reference is evidence, not a required script. Missing optional detail is not automatically a false claim. Label a factual objection contradicted only when supplied evidence establishes the contradiction; otherwise label it unverified. Do not treat absence from the reference as proof of falsehood. Resolve a conflict between a summary and direct evidence in favor of the direct evidence and explain it.
+
+Pairs:
+[
+  {
+    "id": "p-5a6c5a48b0f202f4",
+    "question": "I own a residential HVAC duct-cleaning company doing about $1.2M a year at a 38% net margin, and we close about 82% of in-home inspections. Should I keep prices where they are so I don't hurt the close rate? What would Alex Hormozi say?",
+    "A": "Do not keep your prices where they are. \n\nAn 82% close rate is a clear signal that your service is underpriced. You are leaving margin on the table and likely sacrificing customer conviction, as higher pricing increases perceived value and trust in delivery. Raising prices can be done without hurting volume.\n\nAlex Hormozi would advise you to test a price increase, add a 10x premium tier, and introduce a low-priced annual maintenance membership to turn one-time jobs into recurring revenue and guarantee yearly visits. \n\nConcrete next steps:\n1. Raise your prices by 10% to test the impact on your close rate.\n2. Add a premium tier or priority fee for customers who want to jump the line or receive expedited service.\n3. Offer an annual maintenance membership at the end of a job, credited toward future repairs, to build recurring revenue and secure repeat inspections.\n\nMaterial assumptions:\n- Your demand exceeds or matches your current operational capacity.\n- Your high close rate stems from strong market demand and trust, not a pool of unqualified leads.\n\nDecision criteria:\nIf your close rate stays above 65% after a 10% price raise, keep the new pricing because your net profit will increase despite closing slightly fewer total deals. If your close rate drops significantly below that threshold, pause further increases and refine your offer or packaging instead.",
+    "B": "Your current metrics show an exceptionally healthy residential HVAC duct-cleaning business. Generating roughly $456,000 in net profit on $1.2M in revenue with an 82% close rate indicates strong product-market fit, excellent operational efficiency, and likely underpriced services. \n\nWhile keeping prices flat protects your high close rate, it likely leaves significant margin on the table. In value-based pricing philosophy, an 82% close rate is actually a warning sign that your prices are too low. You are frictionlessly convincing almost everyone who inquires, meaning you could be charging more, accepting a lower close rate, and netting higher absolute profit with less wear on your field crews. \n\nAlex Hormozi would likely advise you to raise your prices. His core thesis is that when demand is high and close rates are excessive, you should increase prices until your close rate drops to a healthier range, typically around 40% to 50%. The higher gross margin per job allows you to spend more on customer acquisition, deliver better service, and grow revenue without necessarily increasing job volume.\n\nConcrete next steps:\n1. Increase your pricing by 15% to 20% on your next 50 quotes.\n2. Track your close rate and total gross profit closely. \n3. If your close rate stays above 70%, your prices are still too low; test another upward adjustment.\n\nMaterial assumptions: Your lead generation costs remain stable and your capacity is currently constrained by technician hours rather than lead volume. \n\nDecision criteria: If your business relies entirely on hyper-local, word-of-mouth volume where low price is your primary competitive moat, hold prices. If you want to scale, increase prices to capture the consumer surplus you are currently giving away.",
+    "reference": {
+      "actual_stance": "No, raise prices. A close rate of 80% or more tells him there is room on price. He penciled in a 10% raise, framed as 'more asking than telling'. At this business's numbers that is roughly a 25% increase in net profit (about $100k+ a year at last year's volume), and it still makes more money as long as the close rate stays above about 65%. For a normal, non-luxury service, a higher price can raise the customer's conviction that you can deliver, and this owner's earlier 23% raise produced a higher close rate and more money. He says charging more is among the biggest levers for businesses under roughly $3M to $5M.",
+      "arithmetic_checks": [
+        "Profit $479k on $1.25M revenue (38%). A 10% raise at the same volume adds about $125k, all profit: 125/479 = +26%, consistent with 'roughly 25%' and 'a hundred plus thousand'.",
+        "Break-even close rate if costs scale with jobs: 0.82 x 479 / (479 + 125) = 0.650, matching 'more than 65%'."
+      ],
+      "category": "applied",
+      "errors": [
+        "Recommending keeping prices to protect the close rate.",
+        "Claiming the 65% break-even is a general rule rather than this business's math.",
+        "Treating the higher-price-higher-close effect as a luxury/Veblen effect."
+      ],
+      "evidence": [
+        {
+          "quote": "full end price for us is 1575 per HVAC unit.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "guest_corey",
+          "speaker_basis": "business owner answering Hormozi's question; content-inferred",
+          "timestamp": "1:05"
+        },
+        {
+          "quote": "And then our close rate is 82%.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "guest_corey",
+          "speaker_basis": "business owner answering Hormozi's question; content-inferred",
+          "timestamp": "3:47"
+        },
+        {
+          "quote": "So, you did a 23% price increase after the first time we talked to you.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "5:54"
+        },
+        {
+          "quote": "And so, that resulted in a higher close rate and more money.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "6:26"
+        },
+        {
+          "quote": "if you raise your prices, what sometimes happens is that the conviction of the customer that you can actually deliver on the promise you're making goes up.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "7:00"
+        },
+        {
+          "quote": "So whenever I hear 80% or over 80% close rates, I usually know that there's room in sale.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "8:06"
+        },
+        {
+          "quote": "Basically, what I penciled out was a 10% price raise. This is more asking than telling.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "8:06"
+        },
+        {
+          "quote": "As long as we close more than 65%, we make more money. Thing is is that 10% price raise for you equals roughly a 25% increase in net profit.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "8:06"
+        },
+        {
+          "quote": "So that'd be roughly a hundred plus thousand a year. And that's at last year's volume and profit.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "8:37"
+        },
+        {
+          "quote": "Number one is we're going to do price raise of 10%. So, around 1650 per unit.",
+          "source_date": "2026-05-08",
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "30:45"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold matches raw. Added the prior 23% raise as direct evidence for 'higher price, higher close rate'.",
+        "Raw-internal inconsistency: stated price is $1,575 per unit, but the plan says '10%, so around 1650 per unit'. 1,575 x 1.10 = about 1,733; 1,650 is about +4.8% (or 10% on $1,500). Answers should not be marked down for using either figure."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-11",
+      "key_status": "confirmed_with_correction",
+      "primary_sources": [
+        "yt-OQf2Ba-Lp_4"
+      ],
+      "question": "I own a residential HVAC duct-cleaning company doing about $1.2M a year at a 38% net margin, and we close about 82% of in-home inspections. Should I keep prices where they are so I don't hurt the close rate? What would Alex Hormozi say?",
+      "required_points": [
+        "Raise prices; an 80%+ close rate signals room on price.",
+        "About 10%; the raise still pays as long as the close rate stays above about 65%."
+      ],
+      "supporting_points": [
+        "10% raise is roughly +25% net profit at a 38% margin (about $100k+ a year).",
+        "Higher price can increase conviction that you deliver (normal goods, not Veblen goods).",
+        "The owner's earlier 23% raise increased close rate and revenue.",
+        "Framed as a suggestion ('more asking than telling')."
+      ],
+      "uncertainty": [],
+      "vault": "hormozi"
+    }
+  },
+  {
+    "id": "p-347dcc25a926e232",
+    "question": "What's the story Hormozi tells about his company being worth four times more just by listing on the NASDAQ, and the IPO equity deal he took afterward?",
+    "A": "Alex Hormozi often recounts a specific narrative regarding valuation adjustments and liquidity events, though the factual premise that he took an IPO equity deal after listing on the NASDAQ requires correction. Hormozi has never taken a traditional company public via an initial public offering, nor has he listed any of his primary operating businesses on the NASDAQ. Instead, his major liquidity event occurred when private equity firm American Pacific Group acquired a majority stake in Acquisition.com's portfolio operations, which is a private transaction rather than a public market listing. \n\nThe story regarding a valuation quadrupling simply by listing on a public exchange like the NASDAQ reflects a theoretical financial principle he frequently teaches rather than a personal anecdote. He illustrates that public companies trade at significantly higher earnings multiples than private companies due to liquidity, transparency, and access to broader capital pools. Therefore, a business generating a specific net income might command a modest multiple privately, but that same cash flow would mathematically translate to a valuation four times higher if priced at public market averages. \n\n**Material Assumptions:** Public market investor demand persistently outpaces private market liquidity, and earnings quality remains constant across transitions. \n\n**Decision Criteria:** Founders should evaluate whether the administrative overhead and regulatory compliance of public listings outweigh the multiple expansion. \n\n**Concrete Next Steps:**\n1. Calculate your current business earnings against private equity and strategic acquisition multiples.\n2. Model the cost of public readiness against potential valuation uplifts before pursuing public listings.",
+    "B": "Alex Hormozi tells no story about his company being worth four times more simply by listing on the NASDAQ, nor of any subsequent IPO equity deal. That premise is false, and his businesses have not gone public in an initial public offering. \n\nInstead, Hormozi's primary liquidity event occurred when he sold a majority stake in his licensing and supplement companies to a private equity firm rather than executing an IPO. His core business model pivots away from public listings toward private equity partnerships, such as his work with Acquisition.com, where he takes minority stakes in private small and mid-sized businesses to help them scale. \n\nIf you are evaluating whether to take a company public versus pursuing private equity or bootstrapping, your decision should hinge on your current scale, revenue predictability, and desire for operational control. Public listings make sense primarily for businesses at a massive scale that require deep public capital markets and offer broad liquidity for existing shareholders, but they introduce heavy regulatory burdens, public scrutiny, and strict reporting requirements. For smaller or privately held firms, partnering with a private equity growth investor or bootstrapping typically preserves operational agility while providing strategic capital without the friction of public markets.",
+    "reference": {
+      "actual_stance": "False attribution. The story is the interviewer's, not Hormozi's. The host of The Diary Of A CEO says his company went public on a European exchange, banks told him the same business would be worth four times more on the NASDAQ, and he later applied his social-media and marketing skills to companies heading to IPO, earning equity worth about $7M to $8M on IPO day for 9 to 12 months of work, which led to the company now called Flight Story. Hormozi only agreed and gave his own version: the biggest debt we pay is ignorance, fish where the fish are, 'same work, more zeros'. A 20% conversion lift is worth $200k to a $1M store (he takes $20k at 10%) but $20M to a $100M company (he takes $2M), 100x for the same work.",
+      "category": "attribution",
+      "errors": [
+        "Telling the story as Hormozi's own career lesson.",
+        "Saying Hormozi's company listed on the NASDAQ."
+      ],
+      "evidence": [
+        {
+          "quote": "when my company went public on a Stock Exchange in um Europe",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "host_doac_interviewer",
+          "speaker_basis": "the interviewer on The Diary Of A CEO; the raw file does not name him; content-inferred from 'my company went public' and 'flight story'",
+          "timestamp": "1:33:37"
+        },
+        {
+          "quote": "they told me that our business would be worth four times more if it was just on a different stock market if you move it to the NASDAQ the exact same business would be worth four times more",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "host_doac_interviewer",
+          "speaker_basis": "the interviewer on The Diary Of A CEO; the raw file does not name him; content-inferred from 'my company went public' and 'flight story'",
+          "timestamp": "1:34:12"
+        },
+        {
+          "quote": "I think on the day of the IPO the equity that I got for for the 9 to 12 months work that i' done was worth in the region of 7 to8 million",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "host_doac_interviewer",
+          "speaker_basis": "the interviewer on The Diary Of A CEO; the raw file does not name him; content-inferred from 'my company went public' and 'flight story'",
+          "timestamp": "1:35:51"
+        },
+        {
+          "quote": "company which is now called flight story",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "host_doac_interviewer",
+          "speaker_basis": "the interviewer on The Diary Of A CEO; the raw file does not name him; content-inferred from 'my company went public' and 'flight story'",
+          "timestamp": "1:36:23"
+        },
+        {
+          "quote": "100% I thoroughly agree with everything you just said",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "hormozi",
+          "speaker_basis": "turn change inferred from content; captions have no speaker labels",
+          "timestamp": "1:36:23"
+        },
+        {
+          "quote": "same work yeah same amount of time same Rod more zeros",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "hormozi",
+          "speaker_basis": "inferred: continues his fishing analogy and cites 'the first book'",
+          "timestamp": "1:38:03"
+        },
+        {
+          "quote": "do the same work to a business doing $100 million a year I make them $20 million for my 20% bump and I get 10% that and I make $2 million 20,000 2 million 100x same work",
+          "source_date": "2023-04-03",
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "speaker": "hormozi",
+          "speaker_basis": "inferred from content",
+          "timestamp": "1:38:38"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold names Steven Bartlett. The raw file never names the host; the channel is The Diary Of A CEO and the speaker mentions Flight Story. The identification is external knowledge and is kept as a supporting point, not a requirement."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-16",
+      "key_status": "confirmed_speaker_inferred",
+      "primary_sources": [
+        "yt-x3e73Qn6NOo"
+      ],
+      "question": "What's the story Hormozi tells about his company being worth four times more just by listing on the NASDAQ, and the IPO equity deal he took afterward?",
+      "required_points": [
+        "Says the story is not Hormozi's; it belongs to the interviewer/host.",
+        "Summarizes the host's story: European listing, banks said 4x on NASDAQ, pre-IPO equity worth about $7M to $8M for 9 to 12 months of work."
+      ],
+      "supporting_points": [
+        "Identifies the host as Steven Bartlett (external knowledge; consistent with 'Flight Story').",
+        "Hormozi agreed and gave the 'same work, more zeros' CRO example ($20k vs $2M).",
+        "The 4x NASDAQ figure was what banks told him, not an actual relisting."
+      ],
+      "uncertainty": [
+        "All speaker attribution in this transcript is inferred from content because auto-captions carry no labels. The inference is strong here (first-person European IPO and Flight Story)."
+      ],
+      "vault": "hormozi"
+    }
+  },
+  {
+    "id": "p-66f97cdfd6a8bbe4",
+    "question": "Why did Hormozi tell that young roofing company owner to stop door-knocking and move his budget into Google Ads?",
+    "A": "The premise that Alex Hormozi universally advises all young roofing companies to stop door-knocking and shift entirely to Google Ads is false. Door-knocking remains a foundational, low-cost customer acquisition strategy for startups with zero marketing capital. \n\nHormozi likely gave that specific advice because the business had outgrown hustle-based outreach and hit a capacity wall where time efficiency mattered more than raw sweat equity. When a company has accumulated baseline cash flow, founder-led door-knocking yields diminishing returns compared to building predictable, scalable acquisition systems. Shifting budget to Google Ads captures high-intent, active search traffic from homeowners actively seeking immediate repairs, which leverages capital to buy back time and scale operations faster than manual canvassing.\n\nMaterial assumptions include that the business had sufficient cash reserves to fund a digital ad campaign without immediate failure, a sales process capable of closing inbound leads, and a local market with search volume high enough to support paid acquisition. \n\nConcrete next steps for a roofing owner depend on current metrics. If daily cash flow is low and margins are tight, continue door-knocking to preserve capital while maximizing close rates. If monthly revenue consistently exceeds operating costs and labor capacity is underutilized, allocate a test budget to Google Ads while tracking cost per acquisition versus lifetime customer value.\n\nDecision criteria for the shift rely strictly on unit economics. If the cost to acquire a customer via Google Ads is lower than the blended cost of labor and time spent door-knocking, transition the budget. If digital acquisition costs outpace profit margins, return immediately to direct-sales canvassing until cash reserves stabilize.",
+    "B": "The premise is false. Hormozi did not tell a roofing company owner to stop door-knocking and move his budget into Google Ads. In his consulting session with the young roofing owner, he praised the owner's ability to door-knock as a core asset and told him to go all in on door-to-door sales as his primary growth engine, building a dedicated team rather than getting distracted by new channels. He did recommend Google Ads and digital marketing as a separate play for established service businesses, but for a startup relying on door-to-door sales, his advice was to double down on what already works.\n\nIf you are a service business owner weighing whether to scale door-knocking versus buying Google Ads, use the following decision criteria:\n\n- **Channel Competence:** If you already know how to acquire customers profitably through direct outreach or door-knocking, maximize that channel first. Do not add paid digital channels until your primary outbound engine is fully scaled or constrained by team size.\n- **Supply and Demand Constraints:** Determine whether your system is supply-constrained (you cannot deliver services fast enough) or demand-constrained (you lack leads). If demand is the constraint and you lack an outbound sales mechanism, digital ads are appropriate. \n- **Capital and Risk Tolerance:** Bootstrapped startups with more time and sweat equity than cash should prioritize high-volume outbound sales to preserve capital, whereas businesses with spare cash and proven unit economics should scale ad spend.",
+    "reference": {
+      "absence_check": "The word 'Google' appears in yt-o64cI6tebnU only as 'Google review'. No other Hormozi raw file mentions a roofer.",
+      "actual_stance": "False premise. The sources do cover a young roofing company (Caleb, Keys Roofing in St. Louis, about two months old), and Hormozi told him the opposite: go all in on door-to-door as the primary growth engine and build a door-knocking sales team ('DDD army'). The transcript contains no Google Ads advice for this business. Other advice in the episode: shift toward repair volume, add VSLs, use a menu close, sell a maintenance membership and charge for speed. At the 90-day check-in Caleb said he went all in on door-to-door.",
+      "category": "abstain",
+      "errors": [
+        "Accepting the premise and explaining why paid search beats door-knocking.",
+        "Saying only 'the sources do not cover this' without noting they show the opposite (partial credit at most).",
+        "Inventing a Google Ads recommendation."
+      ],
+      "evidence": [
+        {
+          "quote": "we are a premium and luxury roofing, gutter, and downspout contractor in St. Louis, Missouri.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "guest_caleb",
+          "speaker_basis": "business owner describing his own company; content-inferred",
+          "timestamp": "0:32"
+        },
+        {
+          "quote": "So, we've been in business for 2 months.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "guest_caleb",
+          "speaker_basis": "business owner describing his own company; content-inferred",
+          "timestamp": "0:32"
+        },
+        {
+          "quote": "two primary acquisition channels currently is door-knocking.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "guest_caleb",
+          "speaker_basis": "business owner describing his own company; content-inferred",
+          "timestamp": "1:06"
+        },
+        {
+          "quote": "Now I think that in terms of scale, you should go all in door to door.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Caleb; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "9:49"
+        },
+        {
+          "quote": "I think you building out this DDD army is like the clear straight shot.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Caleb; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "10:54"
+        },
+        {
+          "quote": "the first thing we said was go all in on door to door as primary growth engine.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Caleb; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "24:27"
+        },
+        {
+          "quote": "So I went all in on door todoor first off",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "guest_caleb",
+          "speaker_basis": "business owner describing his own company; content-inferred",
+          "timestamp": "23:21"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold stance begins 'The sources don't cover this' and then says the sources show the opposite. The two claims conflict; the raw supports the second. Corrected to a false-premise key with evidence.",
+        "Gold had empty must_cite and evidence. Added the roofing episode as must_cite and seven verified quotes.",
+        "The raw never states Caleb's age; 'young' fits the two-month-old business. Not material."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-20",
+      "key_status": "corrected",
+      "primary_sources": [
+        "yt-o64cI6tebnU"
+      ],
+      "question": "Why did Hormozi tell that young roofing company owner to stop door-knocking and move his budget into Google Ads?",
+      "required_points": [
+        "Rejects the premise: he did not tell the roofer to stop door-knocking or move to Google Ads.",
+        "States what he actually advised: go all in on door-to-door and build a door-to-door sales team."
+      ],
+      "supporting_points": [
+        "Names the case (Caleb, Keys Roofing, St. Louis, about two months in business).",
+        "Mentions other advice (repairs focus, VSLs, menu close, maintenance membership, speed premium) or the 90-day outcome."
+      ],
+      "uncertainty": [
+        "Revenue figures in the episode are internally inconsistent (about $41k so far, '20K a monthish', 'a little under 32,000' three months earlier, then about $247k to $250k). Not needed for the key."
+      ],
+      "vault": "hormozi"
+    }
+  }
+]

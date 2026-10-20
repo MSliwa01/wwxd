@@ -1,0 +1,36 @@
+{
+  "answer_family": "opus",
+  "batch_id": "newadvice12--sol--opus--batch-03",
+  "error": "",
+  "id": "p-fcf6cc7bb6e1697f--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-fcf6cc7bb6e1697f",
+  "primary_eligible": true,
+  "prompt_sha256": "261a4d296a97cc11532988d2d82889b98e3e5567d97677db563fa83081f5e536",
+  "question_key": "newadvice12--advice-yc-03",
+  "status": "ok",
+  "suite": "newadvice12",
+  "verdict": {
+    "A": {
+      "actionability": 4,
+      "constraint_fit": 4,
+      "decision_quality": 4,
+      "reasoning": 4
+    },
+    "B": {
+      "actionability": 4,
+      "constraint_fit": 4,
+      "decision_quality": 4,
+      "reasoning": 4
+    },
+    "factual_objections": [],
+    "id": "p-fcf6cc7bb6e1697f",
+    "reason": "Both defensibly recommend retaining employment until retention and payment evidence justify quitting, and both address bank employment restrictions. A better preserves flexibility around the year commitment but assumes remaining in the current role is available. B directly answers the offered choice and proposes concrete validation, but its recommendation depends on an expressly unconfirmed interpretation of the commitment. Neither establishes a decisive substantive advantage.",
+    "winner": "tie"
+  },
+  "winner": "tie"
+}

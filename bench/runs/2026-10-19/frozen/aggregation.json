@@ -1,0 +1,7 @@
+{
+  "consensus": "Two external votes agree -> that label; two different labels -> disagreement; fewer than two valid votes -> missing.",
+  "primary": "Exclude same-family judge; preserve all original scores and winner labels.",
+  "reports": "Separate suites, answer/judge matrix, both-arm dimension means, all and external votes, same-family votes, question consensus, disagreements and missing counts.",
+  "reviews": "Export blinded practical factual review for every answer; diagnostic raw wins, ties, disagreements; every factual objection. Review never rewrites primary votes.",
+  "unit": "One question within each suite and answer family; repeated judges and answer families do not create independent questions."
+}

@@ -1,0 +1,238 @@
+{
+  "actual_input_tokens": 21699,
+  "answer": "{\n  \"judgments\": [\n    {\n      \"id\": \"p-c272861f7b71771c\",\n      \"A\": {\n        \"accuracy\": 2,\n        \"specificity\": 2,\n        \"faithfulness\": 2,\n        \"usefulness\": 2\n      },\n      \"B\": {\n        \"accuracy\": 2,\n        \"specificity\": 2,\n        \"faithfulness\": 1,\n        \"usefulness\": 2\n      },\n      \"winner\": \"A\",\n      \"reason\": \"Both miss the central correction: the interviewer told this story, not Hormozi. Neither explains the European listing or the marketing work that earned equity worth about $7M–$8M after 9–12 months. Both substitute a private-versus-public valuation explanation for a comparison between exchanges. A is marginally better because it explicitly declines to identify the transaction; B introduces an unsupported ALAN acquisition as a possible connection.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"The idea behind the story is public–private valuation arbitrage.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"The host says his company had already gone public on a European exchange. The fourfold comparison concerned moving the same public business to Nasdaq, not moving from private ownership to public trading.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"The four-times story concerns a business receiving a higher valuation if its shares became publicly traded.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"The supplied account concerns an already publicly traded company on a European exchange and a hypothetical Nasdaq valuation.\"\n        },\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Hormozi's 2021 majority-stake sale involving Gym Launch and Prestige Labs to American Pacific Group was associated with a $46.2 million deal.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The supplied packet does not establish this separate transaction or its terms. It identifies the relevant equity arrangement as the host's compensation for pre-IPO marketing work.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"Hormozi sold ALAN to a strategic buyer in an all-stock deal.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The packet supplies no evidence about an ALAN acquisition. The IPO equity story it documents belongs to the interviewer.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"Hormozi and Leila sold two-thirds of Gym Launch and Prestige Labs to American Pacific Group in 2021 for $46.2 million.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The supplied evidence does not establish this separate sale, ownership fraction, or price.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"p-e2c8ec0629722c27\",\n      \"A\": {\n        \"accuracy\": 4,\n        \"specificity\": 3,\n        \"faithfulness\": 3,\n        \"usefulness\": 4\n      },\n      \"B\": {\n        \"accuracy\": 2,\n        \"specificity\": 3,\n        \"faithfulness\": 2,\n        \"usefulness\": 3\n      },\n      \"winner\": \"A\",\n      \"reason\": \"A correctly relocates the statement to YC's former president and explains compounding relationships, including meeting eventual collaborators years earlier. Naming Sam Altman and using his OpenAI cofounder example would make it more specific. Its additional mechanisms exceed the documented explanation, although it appropriately labels the AI connection as inference. B retains the false attribution to Tan and presents several unsupported explanations as his argument.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Early customers, practical support, and investor competition are presented as main mechanisms explaining the speaker's claim.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The documented explanation is network effects, illustrated by Altman meeting future OpenAI cofounders many years before founding the company. The packet does not establish these additional mechanisms as his explanation.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"Tan made the argument that YC's premium and its lead over second place have increased.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"Altman makes the statement and explicitly introduces it with 'I can say this, Gary probably can't.'\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"The argument rests on AI increasing competition for attention, YC's admission signal, and concentrated access to capital.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"These explanations are not established by the supplied account. The stated reason is compounding network effects and access to future cofounders.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"p-0d7a755834632ca5\",\n      \"A\": {\n        \"accuracy\": 3,\n        \"specificity\": 2,\n        \"faithfulness\": 2,\n        \"usefulness\": 3\n      },\n      \"B\": {\n        \"accuracy\": 4,\n        \"specificity\": 5,\n        \"faithfulness\": 4,\n        \"usefulness\": 5\n      },\n      \"winner\": \"B\",\n      \"reason\": \"B captures Graham's actual recommendation: go at least temporarily, with returning explicitly allowed. It supplies the relevant benefits, the qualified unicorn comparison, YC as an entry route, and the benefit of returning to Stockholm. A reasonably distinguishes advice from an absolute necessity, but its conditional stay-or-move recommendation substantially weakens Graham's explicit 'you should at least go' stance and omits the Stockholm-specific evidence. B's April dating is unverified; the May publication date alone does not establish the event date.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"B\",\n          \"claim\": \"Graham gave this advice to Stockholm founders in April 2026.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The packet dates the source publication to May 13, 2026, but does not establish when the talk occurred. Publication in May neither confirms nor disproves an April event.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"Graham acknowledges his interest as YC's cofounder and accepts that family can matter more than maximizing company value.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The supplied packet establishes his YC recommendation and qualifications about unicorn outcomes, but does not establish these additional acknowledgments.\"\n        }\n      ]\n    }\n  ]\n}",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 52.345,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "cb5921f393176256ec90b0b9b3bd2935ba12e2a2bd736dcf338f539f0449d8bf"
+    }
+  ],
+  "batch": {
+    "blocked_pair_ids": [],
+    "chars_per_token": 3.57,
+    "eligible_pair_ids": [
+      "p-c272861f7b71771c",
+      "p-e2c8ec0629722c27",
+      "p-0d7a755834632ca5"
+    ],
+    "estimated_input_tokens": 9802,
+    "id": "diagnostic12--sol--sol--batch-02",
+    "judge_family": "sol",
+    "pair_ids": [
+      "p-c272861f7b71771c",
+      "p-e2c8ec0629722c27",
+      "p-0d7a755834632ca5"
+    ],
+    "prompt_bytes": 35035,
+    "prompt_sha256": "d685ac9f7ddd641c6d31f04867412fc07ef0d3fbe03f7a80c927c9f6e73a7910",
+    "suite": "diagnostic12"
+  },
+  "chars_per_token": 3.57,
+  "command": [
+    "codex",
+    "exec",
+    "--ignore-user-config",
+    "--ignore-rules",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--model",
+    "gpt-6.1-sol",
+    "--json",
+    "--color",
+    "never",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "unified_exec",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "view_image",
+    "--disable",
+    "shell_snapshot",
+    "--disable",
+    "skill_search",
+    "--disable",
+    "skill_mcp_dependency_install",
+    "--disable",
+    "request_permissions_tool",
+    "--disable",
+    "sleep_tool",
+    "-c",
+    "model_reasoning_effort=\"high\"",
+    "-c",
+    "project_doc_max_bytes=0",
+    "-c",
+    "web_search=\"disabled\"",
+    "-c",
+    "mcp_servers={}",
+    "-c",
+    "developer_instructions=\"Answer the supplied task using only its text. Do not use tools or commands.\"",
+    "-"
+  ],
+  "decoded": {
+    "p-0d7a755834632ca5": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "accuracy": 3,
+          "faithfulness": 2,
+          "specificity": 2,
+          "usefulness": 3
+        },
+        "B": {
+          "accuracy": 4,
+          "faithfulness": 4,
+          "specificity": 5,
+          "usefulness": 5
+        },
+        "factual_objections": [
+          {
+            "answer": "B",
+            "claim": "Graham gave this advice to Stockholm founders in April 2026.",
+            "evidence": "The packet dates the source publication to May 13, 2026, but does not establish when the talk occurred. Publication in May neither confirms nor disproves an April event.",
+            "label": "unverified"
+          },
+          {
+            "answer": "B",
+            "claim": "Graham acknowledges his interest as YC's cofounder and accepts that family can matter more than maximizing company value.",
+            "evidence": "The supplied packet establishes his YC recommendation and qualifications about unicorn outcomes, but does not establish these additional acknowledgments.",
+            "label": "unverified"
+          }
+        ],
+        "id": "p-0d7a755834632ca5",
+        "reason": "B captures Graham's actual recommendation: go at least temporarily, with returning explicitly allowed. It supplies the relevant benefits, the qualified unicorn comparison, YC as an entry route, and the benefit of returning to Stockholm. A reasonably distinguishes advice from an absolute necessity, but its conditional stay-or-move recommendation substantially weakens Graham's explicit 'you should at least go' stance and omits the Stockholm-specific evidence. B's April dating is unverified; the May publication date alone does not establish the event date.",
+        "winner": "B"
+      }
+    },
+    "p-c272861f7b71771c": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "accuracy": 2,
+          "faithfulness": 2,
+          "specificity": 2,
+          "usefulness": 2
+        },
+        "B": {
+          "accuracy": 2,
+          "faithfulness": 1,
+          "specificity": 2,
+          "usefulness": 2
+        },
+        "factual_objections": [
+          {
+            "answer": "A",
+            "claim": "The idea behind the story is public–private valuation arbitrage.",
+            "evidence": "The host says his company had already gone public on a European exchange. The fourfold comparison concerned moving the same public business to Nasdaq, not moving from private ownership to public trading.",
+            "label": "contradicted"
+          },
+          {
+            "answer": "B",
+            "claim": "The four-times story concerns a business receiving a higher valuation if its shares became publicly traded.",
+            "evidence": "The supplied account concerns an already publicly traded company on a European exchange and a hypothetical Nasdaq valuation.",
+            "label": "contradicted"
+          },
+          {
+            "answer": "A",
+            "claim": "Hormozi's 2021 majority-stake sale involving Gym Launch and Prestige Labs to American Pacific Group was associated with a $46.2 million deal.",
+            "evidence": "The supplied packet does not establish this separate transaction or its terms. It identifies the relevant equity arrangement as the host's compensation for pre-IPO marketing work.",
+            "label": "unverified"
+          },
+          {
+            "answer": "B",
+            "claim": "Hormozi sold ALAN to a strategic buyer in an all-stock deal.",
+            "evidence": "The packet supplies no evidence about an ALAN acquisition. The IPO equity story it documents belongs to the interviewer.",
+            "label": "unverified"
+          },
+          {
+            "answer": "B",
+            "claim": "Hormozi and Leila sold two-thirds of Gym Launch and Prestige Labs to American Pacific Group in 2021 for $46.2 million.",
+            "evidence": "The supplied evidence does not establish this separate sale, ownership fraction, or price.",
+            "label": "unverified"
+          }
+        ],
+        "id": "p-c272861f7b71771c",
+        "reason": "Both miss the central correction: the interviewer told this story, not Hormozi. Neither explains the European listing or the marketing work that earned equity worth about $7M–$8M after 9–12 months. Both substitute a private-versus-public valuation explanation for a comparison between exchanges. A is marginally better because it explicitly declines to identify the transaction; B introduces an unsupported ALAN acquisition as a possible connection.",
+        "winner": "A"
+      }
+    },
+    "p-e2c8ec0629722c27": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "accuracy": 4,
+          "faithfulness": 3,
+          "specificity": 3,
+          "usefulness": 4
+        },
+        "B": {
+          "accuracy": 2,
+          "faithfulness": 2,
+          "specificity": 3,
+          "usefulness": 3
+        },
+        "factual_objections": [
+          {
+            "answer": "A",
+            "claim": "Early customers, practical support, and investor competition are presented as main mechanisms explaining the speaker's claim.",
+            "evidence": "The documented explanation is network effects, illustrated by Altman meeting future OpenAI cofounders many years before founding the company. The packet does not establish these additional mechanisms as his explanation.",
+            "label": "unverified"
+          },
+          {
+            "answer": "B",
+            "claim": "Tan made the argument that YC's premium and its lead over second place have increased.",
+            "evidence": "Altman makes the statement and explicitly introduces it with 'I can say this, Gary probably can't.'",
+            "label": "contradicted"
+          },
+          {
+            "answer": "B",
+            "claim": "The argument rests on AI increasing competition for attention, YC's admission signal, and concentrated access to capital.",
+            "evidence": "These explanations are not established by the supplied account. The stated reason is compounding network effects and access to future cofounders.",
+            "label": "unverified"
+          }
+        ],
+        "id": "p-e2c8ec0629722c27",
+        "reason": "A correctly relocates the statement to YC's former president and explains compounding relationships, including meeting eventual collaborators years earlier. Naming Sam Altman and using his OpenAI cofounder example would make it more specific. Its additional mechanisms exceed the documented explanation, although it appropriately labels the AI connection as inference. B retains the false attribution to Tan and presents several unsupported explanations as his argument.",
+        "winner": "A"
+      }
+    }
+  },
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 9802,
+  "event_count": 4,
+  "finish_reasons": [
+    "turn.completed"
+  ],
+  "finished": "2026-10-19T11:33:02.170689+00:00",
+  "observed_models": [],
+  "parse_error": "",
+  "prompt_sha256": "d685ac9f7ddd641c6d31f04867412fc07ef0d3fbe03f7a80c927c9f6e73a7910",
+  "requested_model": "gpt-6.1-sol",
+  "serving_model_attested": false,
+  "status": "ok",
+  "usage_events": [
+    {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 11776,
+      "input_tokens": 21699,
+      "output_tokens": 2270,
+      "reasoning_output_tokens": 861
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+Evaluation date: 2026-10-19. Treat this as the current date, not a future date.
+Use no tools, commands, files, browsing, or external retrieval. Use your own knowledge and reasoning, together with any supplied context, to answer the question. The absence of an exact case from supplied context is not a reason to abstain. If material inputs are missing, give a useful conditional recommendation and state the criteria that would change it.
+Write approximately 250 words. Give a direct, useful answer, concrete next steps where relevant, material assumptions, and decision criteria. Do not include quotations, citations, links, source references, expert-name appeals, or mentions of sources, a wiki, or a knowledge base. Return only the answer.
+Recommend a defensible course of action that fits the stated goal and constraints. Do not name experts. Multiple solutions can be valid; explain why yours fits this decision.
+
+Question:
+I'm a product designer at a large bank. For the last 4 months I've been building, in the evenings, a budgeting app for couples who share expenses. It launched in July and has 1,400 sign-ups, mostly from two Reddit posts and one TikTok that took off. I don't have a cofounder. I have about 9 months of living expenses saved. My manager has offered me a promotion that requires committing to stay at least a year, and I have to answer by the end of the month. Should I quit and work on the app full time, or take the promotion and keep building on the side? I want a yes or no.

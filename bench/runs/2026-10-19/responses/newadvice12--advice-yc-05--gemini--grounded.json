@@ -1,0 +1,57 @@
+{
+  "actual_input_tokens": 172861,
+  "answer": "Raise the salary offer to $240,000 and reduce the equity. \n\nYour current bottleneck is cash competitiveness against large AI companies, not your interview process or founder time investment. At 3 weeks and 2 hours a week, your process is already efficient. \n\nDo not hire a recruiting agency; paying 25% for senior engineering hires during a cash crunch diverts capital from product velocity without solving the root wage deficit. Do not stop hiring to rely solely on coding agents; building a developer tool with only two engineers and two founders risks burnout and slows iteration when you need to capture market momentum post-seed. \n\nAdjusting the compensation mix to $240,000 cash while scaling back the 0.5% equity aligns your offer closer to market realities for senior backend talent while preserving startup upside. \n\nMaterial assumptions: your seed round of $3 million can support the higher burn rate for at least 18 to 24 months, and you can source qualified candidates willing to trade some prestige and cash for early-stage impact. \n\nDecision criteria: if your runway drops below 18 months at the $240,000 salary level, immediately revert to hiring one senior engineer combined with a strong contractor, or slow hiring until post-Series A traction justifies the increased burn.",
+  "arm": "grounded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 4.011,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "6bc45d61a8f1d42a9e105e88a6b0837a1daee9ae01e82200b607c60b26fe6124"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 172928,
+  "event_count": 1,
+  "family": "gemini",
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:31:01.035624+00:00",
+  "format_deviations": [],
+  "id": "newadvice12--advice-yc-05--gemini--grounded",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_sha256": "e2a7319a6634d540a32b9015c7ba45e8116526b7a8a5aa1f90040a2db143ef3d",
+  "question_key": "newadvice12--advice-yc-05",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "newadvice12",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 276,
+      "promptTokenCount": 172861,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 172861
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 173137
+    }
+  ],
+  "words": 204
+}

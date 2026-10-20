@@ -1,0 +1,49 @@
+{
+  "answer_family": "opus",
+  "batch_id": "newadvice12--sol--opus--batch-00",
+  "error": "",
+  "id": "p-5ac1d738ea917386--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-5ac1d738ea917386",
+  "primary_eligible": true,
+  "prompt_sha256": "9d84d204c8107c06d2ccab76bc5bf0f9c0c66827b8a8aa341137afb0b65a90f8",
+  "question_key": "newadvice12--advice-yc-06",
+  "status": "ok",
+  "suite": "newadvice12",
+  "verdict": {
+    "A": {
+      "actionability": 4,
+      "constraint_fit": 3,
+      "decision_quality": 3,
+      "reasoning": 3
+    },
+    "B": {
+      "actionability": 4,
+      "constraint_fit": 4,
+      "decision_quality": 4,
+      "reasoning": 4
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "Many utilities need these plans for state loans and grants.",
+        "evidence": "No jurisdiction or funding-program requirements are supplied. Whether the proposed report satisfies such requirements remains unestablished.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "Engineering consultancies decide faster than utilities.",
+        "evidence": "Consultancies are a plausible channel to test, but the scenario provides no evidence about their purchasing speed, budgets, or willingness to adopt this tool.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-5ac1d738ea917386",
+    "reason": "Both reasonably choose B based on relevant experience and discount nonbinding interest in A. B more effectively sequences budget discovery, manual paid delivery, and consultancy distribution, with explicit continuation criteria and an alternative purchasing channel. A's instruction to avoid council approval assumes away a stated constraint, and its approval-based pivot criterion could reject the market for an already disclosed characteristic. Both leave meaningful gaps in testing data sufficiency and whether their risk rankings improve repair decisions.",
+    "winner": "B"
+  },
+  "winner": "grounded"
+}

@@ -1,0 +1,49 @@
+{
+  "answer_family": "opus",
+  "batch_id": "diagnostic12--sol--opus--batch-00",
+  "error": "",
+  "id": "p-518efde008bea979--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-518efde008bea979",
+  "primary_eligible": true,
+  "prompt_sha256": "b9bda7c4c3a7e4d5edf1b4976ac7ffa9e6eb2416c1d974d89af3e6161469ef6a",
+  "question_key": "diagnostic12--hz-11",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 4,
+      "faithfulness": 4,
+      "specificity": 4,
+      "usefulness": 4
+    },
+    "B": {
+      "accuracy": 4,
+      "faithfulness": 3,
+      "specificity": 4,
+      "usefulness": 4
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "If contribution margin exceeds 38%, the break-even close rate rises to around 68–70%.",
+        "evidence": "The supplied figures do not establish contribution margin or the fixed-versus-variable cost split. A higher contribution margin raises the break-even close rate, but does not establish this particular range.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "Hormozi also pushes guarantees, bonuses, and tiers in connection with this pricing advice.",
+        "evidence": "The packet establishes his recommendation to increase this company's prices and his customer-conviction explanation. It does not establish the additional offer-building attribution; those recommendations may be reasonable independent suggestions.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-518efde008bea979",
+    "reason": "A more closely captures the case-specific advice: a suggested 10% increase, roughly 25% more profit, approximately 65% break-even closing, and increased customer conviction. B's 15% example is mathematically reasonable under its assumptions, but its broader pricing and offer changes depart from the actual recommendation. Both appropriately recognize that fixed costs complicate the calculation.",
+    "winner": "A"
+  },
+  "winner": "grounded"
+}

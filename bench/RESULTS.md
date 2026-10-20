@@ -687,3 +687,32 @@ compile procedure for statements.
 The YC wwxd answers (all except `yc-04`) and Hormozi `hz-16` to `hz-20` were produced
 before we added `--strict-mcp-config`. None of them mention an MCP server. Every raw
 answer and every other wwxd answer ran with the flag.
+
+## Three model families, the whole wiki in the prompt
+
+This run, from October 19, asks a narrower question than the benches above: if a
+model gets a vault's complete wiki in its prompt, with no retrieval step and no
+citations in the answer, do its answers change? GPT 6.1 Sol, Opus 5.5 and Gemini
+3.5 Flash-Lite each answered 24 questions twice, with and without the wiki. Judges
+from all three families compared each pair blind, and the result counts a pair only
+when both judges from the other two families agree.
+
+Twelve questions ask for a documented position, with a checked reference packet as
+the judges' key. Twelve are new practical business scenarios, judged on decision
+quality with no key. The judges' JSON came back wrapped in code fences on 47 calls,
+which the frozen parser rejected, so the counts below come from a post-hoc reading
+that only strips the fence. The run README explains the difference.
+
+| Set | Answer model | With wiki | Without | Tie | Split | Missing |
+|---|---|---:|---:|---:|---:|---:|
+| Documented positions | Sol | 3 | 0 | 0 | 3 | 6 |
+| Documented positions | Opus | 6 | 0 | 0 | 6 | 0 |
+| Documented positions | Gemini | 10 | 1 | 1 | 0 | 0 |
+| Practical advice | Sol | 2 | 0 | 3 | 7 | 0 |
+| Practical advice | Opus | 1 | 1 | 3 | 7 | 0 |
+| Practical advice | Gemini | 6 | 3 | 0 | 2 | 1 |
+
+The wiki helped clearly on documented positions. On new practical decisions, the
+effect was small for Sol and Opus and larger for Gemini, and the blind factual
+review found material errors in Gemini answers with and without it. Method,
+reviews, all answers and judgments are in [runs/2026-10-19](runs/2026-10-19).

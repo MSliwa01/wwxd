@@ -1,0 +1,376 @@
+Evaluation date: 2026-10-19. This is the current date, not a future date. May 2026 is in the past. Publication dates and dates of events described in a source are distinct. A model training cutoff does not invalidate supplied later material. You are an independent evaluator. Use no tools, commands, files, browsing, or external retrieval. A and B are anonymous. Their ordering conveys nothing. Do not infer their model, source access, or provenance. Do not reward writing style, citation presence, quotations, expert agreement, or presumed source use. A tie is valid.
+Score each answer on the four specified integer scales, each from 1 to 5. Anchors: 1 fundamentally deficient; 2 major problems; 3 mixed with meaningful gaps; 4 good with minor gaps; 5 strong and sufficiently complete. Choose A, B, or tie for substantive overall quality. Preserve uncertainty rather than inventing evidence.
+Return ONLY a JSON object with exactly one key, "judgments", containing one object per supplied pair. Each object has exactly: "id", "A", "B", "winner", "reason", "factual_objections". A and B each contain exactly the four dimension names and integer scores. winner is "A", "B", or "tie"; reason is a nonempty string. factual_objections is a list, possibly empty, of objects with exactly "answer" ("A" or "B"), "claim", "label" ("contradicted" or "unverified"), and "evidence" (a nonempty explanation). Distinguish an established contradiction from an unverified claim.
+Evaluate accuracy, specificity, faithfulness, and usefulness using the complete audited reference packet. The reference is evidence, not a required script. Missing optional detail is not automatically a false claim. Label a factual objection contradicted only when supplied evidence establishes the contradiction; otherwise label it unverified. Do not treat absence from the reference as proof of falsehood. Resolve a conflict between a summary and direct evidence in favor of the direct evidence and explain it.
+
+Pairs:
+[
+  {
+    "id": "p-ee2b7ee36164eccb",
+    "question": "I'm a 20-year-old CS student with a side project I'm excited about. Would Paul Graham tell me to start a startup now, while I'm still in college?",
+    "A": "# Probably not \"start a startup,\" but keep building the project\n\nPaul Graham's view isn't a simple yes or no, and it points somewhere specific for you.\n\n**What he has argued.** He has generally discouraged students from setting out to *start a startup* as a goal while in college. His reasoning is that the best use of those years is learning deeply and building things that interest you. He has also argued that the best startup ideas tend to come from organic side projects, built because you wanted the thing yourself, not from deliberately hunting for an idea. So your situation, a side project you're excited about, is close to exactly what he recommends.\n\n**Where it flips.** He has also said that if a side project starts taking off on its own, you shouldn't kill it out of loyalty to a plan. Real users arriving and growing, especially through word of mouth, is the signal that turns a project into a startup. YC has also made it easier for students to apply, so \"after graduation\" isn't a fixed rule.\n\n**Practical next steps:**\n- Keep building, and get the project in front of real users soon.\n- Track whether usage grows without you pushing it, and whether people would be upset if it disappeared.\n- If it gains traction, consider applying to YC or a similar program. Taking leave from school is usually reversible. Dropping out is not urgent.\n\n**Decision criteria:** Go all-in if you see organic growth, users who'd pay or strongly miss it, and your own sustained obsession. Stay in school if it's mainly the *idea* of a startup that excites you rather than this specific problem.\n\n**Uncertainty:** These are his general published positions. How he'd judge your particular project is unknowable.",
+    "B": "**Probably not as a plan, but he'd tell you to keep building the side project.**\n\n**His default answer is no.** Paul Graham's long-standing advice is not to start a startup in college. A real startup takes over your whole life, so you can't really be a student and a founder at once. Your early twenties are good for open-ended exploration that success would take away. He also argues you lose nothing by waiting, since you're more likely to succeed later.\n\n**But your situation is his exception.** He has always allowed that if a side project takes off on its own, as Facebook did, running with it may be reasonable. His recent writing leans harder on this. He wants students to have free time for their own projects because those are how startups actually begin. He still holds that you can't run a startup and stay a full-time student, so success would eventually force a choice.\n\n**What he'd likely tell you to do now:**\n- Build the project for its own sake, without worrying about whether it's a startup.\n- Make it for yourself and your friends, and get real users quickly.\n- Watch whether usage grows week over week without you pushing it.\n- Keep studying computer science and learning hard things.\n- Don't treat \"founder\" as a credential or a way to look impressive.\n\n**Decision criteria:**\n- **Keep it a side project** if growth is flat, it depends on your effort to spread, or you mainly like the idea of being a founder.\n- **Consider running with it** if users are pulling it forward, it's eating an alarming share of your time, and you'd regret letting it die. A leave of absence is lower-risk than dropping out. That last suggestion is mine, not his.\n\n**What's uncertain:** he has never ruled on your specific case. He also says the best way to learn startups is by doing, which sits somewhat uneasily with \"wait.\"",
+    "reference": {
+      "actual_stance": "No. He tells students not to start a startup in college: a startup takes over your entire life, so you cannot really be both a student and a founder, and 20 is not the optimal age. You give up nothing by waiting because you will be more likely to succeed later. In college, learn powerful things, build domain expertise and work on your own projects with people you like, because side projects are where the best ideas and cofounders come from ('just learn'). The exception: if a side project takes off on its own, like Facebook, it may be reasonable to run with it. His August 2026 essay repeats that running a startup is incompatible with being a full-time student and stresses students' own projects.",
+      "category": "known",
+      "errors": [
+        "Saying he recommends starting now because college is low risk.",
+        "Telling the student to drop the side project entirely."
+      ],
+      "evidence": [
+        {
+          "quote": "you can't do that in college for the reason I just explained, that startups take over your entire life.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "18:22"
+        },
+        {
+          "quote": "Do not start a startup in college.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "18:56"
+        },
+        {
+          "quote": "20 is not the optimal time to do it.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "18:56"
+        },
+        {
+          "quote": "You're not sacrificing anything if you forego starting a startup at 20, cuz you'll be more likely to succeed if you wait.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "21:12"
+        },
+        {
+          "quote": "you're 20 and you have some side project that takes off like Facebook did. Then you face the choice of either running with it or not, and maybe it's reasonable to run with it.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "21:12"
+        },
+        {
+          "quote": "If you wanna start a startup, what you should do in college is learn powerful things.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "30:15"
+        },
+        {
+          "quote": "So here, is the ultimate advice for young would-be startup founders reduced to two words, just learn.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "30:49"
+        },
+        {
+          "quote": "Running a startup is incompatible with being a full time student.",
+          "source_date": "2026-08-01",
+          "source_id": "web-c75e015ff81a",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-c75e015ff81a.md",
+          "source_sha256": "d25c767587e02e2ae3ca70392344ae7ed1d30132b7415c03603e346eb3427eee",
+          "source_title": "How Universities Should Prepare Founders",
+          "speaker": "pg",
+          "speaker_basis": "essay on paulgraham.com (frontmatter author field is empty)",
+          "timestamp": null
+        },
+        {
+          "quote": "random side projects are where the best startup ideas come from.",
+          "source_date": "2026-08-01",
+          "source_id": "web-c75e015ff81a",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-c75e015ff81a.md",
+          "source_sha256": "d25c767587e02e2ae3ca70392344ae7ed1d30132b7415c03603e346eb3427eee",
+          "source_title": "How Universities Should Prepare Founders",
+          "speaker": "pg",
+          "speaker_basis": "essay on paulgraham.com (frontmatter author field is empty)",
+          "timestamp": null
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold matches the 2014 lecture. It did not cite the August 2026 essay 'How Universities Should Prepare Founders', which confirms the same stance. Added; either source satisfies the key."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-01",
+      "key_status": "confirmed_expanded",
+      "primary_sources": [
+        "yt-ii1jcLg-eIQ"
+      ],
+      "question": "I'm a 20-year-old CS student with a side project I'm excited about. Would Paul Graham tell me to start a startup now, while I'm still in college?",
+      "required_points": [
+        "No, do not start a startup while in college; a startup takes over your whole life, which is incompatible with being a full-time student.",
+        "Exception: if the side project takes off on its own, it may be reasonable to run with it."
+      ],
+      "supporting_points": [
+        "Waiting costs nothing; you are more likely to succeed if you wait.",
+        "Learn powerful things, get domain expertise; 'just learn'.",
+        "Keep working on your own projects; they produce the best ideas and cofounders.",
+        "The 2026 essay restates the incompatibility and the value of student projects."
+      ],
+      "uncertainty": [
+        "The main source is from 2014. The 2026 essay supports the same position, so the stance is not stale."
+      ],
+      "vault": "yc"
+    }
+  },
+  {
+    "id": "p-c8a0257afdc78052",
+    "question": "Jessica Livingston has said early YC deliberately backed the most aggressive, ruthless founders because they're the ones who win. Why did she believe that?",
+    "A": "**The premise is mistaken.** I know of no statement in which Jessica Livingston said early YC deliberately backed the most aggressive or ruthless founders. Her account of what she screened for points the other way.\n\n**What she actually looked for, and why**\n\n- **Earnestness, determination, flexible-mindedness, and a healthy co-founder relationship.** She treated the co-founder relationship as the most important of these. At YC's stage there were no metrics, so founders had to be judged on what they could become, and she was the partner who read character.\n- **No conceit.** Early on she declined applicants she judged conceited. She credits that choice with shaping YC's alumni culture, which she describes as earnest and not pretentious.\n- **Independent-mindedness.** A brand-new idea goes against convention, so a conventional-minded person can't pursue one.\n- **Benevolence, not squeezing.** She says early YC was not money-driven and helped failing founders rather than pressing them over small outcomes.\n\n**Where the \"aggressive\" idea may come from**\n\n- **\"Formidable.\"** Paul Graham says this word comes from his and Livingston's private vocabulary. He defines it as someone who gets what they want in any situation. That is about effectiveness, not ruthlessness, and he frames it from an investor's point of view.\n- **Persistence versus obstinacy.** Graham praises founders who hold firm on the goal but listen intently to criticism, not those who bulldoze.\n- **Determination.** Determination is on Livingston's own list, but it sits beside earnestness and flexibility.\n\n**Uncertainty**\n\nI can't rule out an offhand remark I'm unaware of. However, it would contradict her consistently stated criteria.\n\n**Next step**\n\nIf you have a specific clip or quote, check whether it is actually Graham's \"formidable\" definition or a paraphrase by someone else. If it is genuinely hers, see whether \"aggressive\" there means relentless determination. That reading would fit her views. \"Ruthless\" would not.",
+    "B": "**The premise appears to be mistaken.** I don't know of Jessica Livingston saying that early YC deliberately backed the most aggressive or ruthless founders. Her known views point the other way, so it's worth checking where the claim came from before relying on it.\n\n**What she actually emphasized**\n\n- **Determination over ruthlessness.** Livingston has consistently named determination as the trait that best predicts startup success. She means persistence through rejection, setbacks and near-death moments, not willingness to harm others. Her interviews with early founders showed that most successful startups survived by not giving up.\n- **Character as a filter.** At YC she was widely regarded as the partner with the sharpest read on people. Part of that role was screening out founders who seemed dishonest, manipulative or unpleasant. YC's stated view was that bad actors tend to fail. They struggle to recruit, keep cofounders, earn customer trust and survive scrutiny. They also create reputational risk for the investor.\n- **Resourcefulness and earnestness.** YC prized founders who were scrappy and who pushed hard for users and deals. That can look \"aggressive\" from outside, but it is aimed at solving problems, not at beating people at any cost.\n\n**Where uncertainty remains**\n\nI can't rule out an offhand remark, such as praise for founders who push hard. That kind of comment could have been paraphrased into \"ruthless.\" But as a deliberate investment thesis, the claim contradicts her well-documented positions.\n\n**What would change this answer**\n\nA primary recording or transcript showing her endorsing ruthlessness as a selection criterion would change it. If you find the claim somewhere, check:\n\n1. Whether it is a direct statement or a paraphrase.\n2. Whether \"aggressive\" means ambitious and determined, or willing to act unethically.\n3. Whether the view is actually hers, or comes from another investor or a commentator.",
+    "reference": {
+      "absence_check": "Corpus check on 2026-10-19 across all 24 YC raw files: the whole word 'ruthless' appears only in yt-8d-cApFHjeY at 17:44, where Livingston describes other investors, not founders she selected. Her selection criteria and rejection of conceited applicants are supported by the quoted passages.",
+      "actual_stance": "False premise: the sources contain no such statement, and she said the opposite. Her role in early selection was judging character: did applicants seem earnest, determined and flexible-minded, and how did the cofounders relate. She was careful to fund only earnest people and rejected people she could tell were conceited. She describes YC as feeling like a family with her as its mom, and herself as soft and sensitive at a time when investors were hardened and aggressive, adding 'ruthless' for a couple she knew. Determination is one trait she looked for; ruthlessness is not.",
+      "category": "abstain",
+      "errors": [
+        "Accepting the premise and explaining why ruthless founders win.",
+        "Recasting PG's 'formidable' as Jessica endorsing ruthlessness."
+      ],
+      "evidence": [
+        {
+          "quote": "did they seem earnest did they seem determined were they flexible minded",
+          "source_date": "2018-07-11",
+          "source_id": "yt-8d-cApFHjeY",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-8d-cApFHjeY.md",
+          "source_sha256": "95f64747db17a4e4a661cccb9de3f154f03df1df92b2764b3e8c45bde4b8176f",
+          "source_title": "Jessica Livingston Shares 9 Things She Learned From Founding YC",
+          "speaker": "livingston",
+          "speaker_basis": "solo conference talk",
+          "timestamp": "14:51"
+        },
+        {
+          "quote": "from the beginning I was very careful about only funding earnest people",
+          "source_date": "2018-07-11",
+          "source_id": "yt-8d-cApFHjeY",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-8d-cApFHjeY.md",
+          "source_sha256": "95f64747db17a4e4a661cccb9de3f154f03df1df92b2764b3e8c45bde4b8176f",
+          "source_title": "Jessica Livingston Shares 9 Things She Learned From Founding YC",
+          "speaker": "livingston",
+          "speaker_basis": "solo conference talk",
+          "timestamp": "14:51"
+        },
+        {
+          "quote": "if I could tell someone was a conceited we did not fund them",
+          "source_date": "2018-07-11",
+          "source_id": "yt-8d-cApFHjeY",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-8d-cApFHjeY.md",
+          "source_sha256": "95f64747db17a4e4a661cccb9de3f154f03df1df92b2764b3e8c45bde4b8176f",
+          "source_title": "Jessica Livingston Shares 9 Things She Learned From Founding YC",
+          "speaker": "livingston",
+          "speaker_basis": "solo conference talk",
+          "timestamp": "15:27"
+        },
+        {
+          "quote": "it felt like a family and I was its mom",
+          "source_date": "2018-07-11",
+          "source_id": "yt-8d-cApFHjeY",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-8d-cApFHjeY.md",
+          "source_sha256": "95f64747db17a4e4a661cccb9de3f154f03df1df92b2764b3e8c45bde4b8176f",
+          "source_title": "Jessica Livingston Shares 9 Things She Learned From Founding YC",
+          "speaker": "livingston",
+          "speaker_basis": "solo conference talk",
+          "timestamp": "17:44"
+        },
+        {
+          "quote": "I was soft and sensitive at a time when investors tended to be hardened and aggressive and I'll throw in ruthless - for a couple of them that I know",
+          "source_date": "2018-07-11",
+          "source_id": "yt-8d-cApFHjeY",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-8d-cApFHjeY.md",
+          "source_sha256": "95f64747db17a4e4a661cccb9de3f154f03df1df92b2764b3e8c45bde4b8176f",
+          "source_title": "Jessica Livingston Shares 9 Things She Learned From Founding YC",
+          "speaker": "livingston",
+          "speaker_basis": "solo conference talk",
+          "timestamp": "17:44"
+        },
+        {
+          "quote": "it's someone who gets what they want in any situation.",
+          "source_date": "2026-09-03",
+          "source_id": "yt-5bxp78i96S8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-5bxp78i96S8.md",
+          "source_sha256": "7c31ea774eca3d88e387db71b65eefdd5b85b1ab4c0483ba2c44923c1e743243",
+          "source_title": "Paul Graham On Startups, Ambition, and Great Founders",
+          "speaker": "pg",
+          "speaker_basis": "interview answer, inferred from content",
+          "supports": "context only: PG's definition of 'formidable'; not part of the Jessica key",
+          "timestamp": "9:57"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold had must_cite empty while listing evidence from yt-8d-cApFHjeY. Set must_cite to that source, since citing the counter-evidence is the correct behavior for this false premise.",
+        "Added 'determined' from her own criteria so an answer mentioning determination is not marked as accepting the premise."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-20",
+      "key_status": "confirmed_expanded",
+      "primary_sources": [
+        "yt-8d-cApFHjeY"
+      ],
+      "question": "Jessica Livingston has said early YC deliberately backed the most aggressive, ruthless founders because they're the ones who win. Why did she believe that?",
+      "required_points": [
+        "Rejects the premise; there is no such statement, and her stated approach was the opposite.",
+        "She funded earnest people and turned down conceited ones."
+      ],
+      "supporting_points": [
+        "She looked for earnest, determined, flexible-minded founders and healthy cofounder relationships.",
+        "She described herself as soft and sensitive when investors were hardened, aggressive and sometimes ruthless.",
+        "YC felt like a family and she was its mom.",
+        "Context only: PG separately says investors want 'formidable' founders who get what they want; that is not Jessica's claim and is not ruthlessness."
+      ],
+      "uncertainty": [],
+      "vault": "yc"
+    }
+  },
+  {
+    "id": "p-bd456c713761bbb7",
+    "question": "Why did Hormozi tell that young roofing company owner to stop door-knocking and move his budget into Google Ads?",
+    "A": "**Hormozi didn't advise that, as far as I know. In the roofing consult I'm aware of, he said the opposite.** The owner, Caleb of Keys Roofing, ran a two-month-old company doing about $20K a month from door-knocking and referrals. Hormozi told Caleb to go all in on door-to-door as the main growth engine, not to move the budget into Google Ads.\n\n**Why Hormozi backed door-knocking**\n- **It already worked.** Caleb closed roughly one sale per 20 doors. Hormozi treats a reliable way to go get money as a rare asset and wanted every effort on the highest-return channel the owner was already good at.\n- **Limited time and cash.** A new channel would spread a small business thin.\n- **It scales with people.** The plan was to build a door-to-door team, recruit reps as if they were customers, and frame commission per door knocked so pay tracks effort.\n- **Volume over cleverness.** Hormozi favored high-volume repair work, aiming for a $2,500–5,000 ticket, over slower insurance-tied replacements.\n\nOther parts of the plan included a video sales letter shown before each sales conversation, a menu upsell, an annual maintenance membership, and priority fees. Caleb later reported revenue rising from about $32K to about $247K. Those are his own figures, and the time unit wasn't stated.\n\n**What I'm unsure of:** You may be thinking of a different episode or a short clip that cut the context. I can't rule that out.\n\n**If you're weighing this for your own business**, keep door-knocking while it closes profitably and you can hire reps. Consider paid search when:\n- door close rates fall,\n- hiring reps becomes the bottleneck, or\n- you can measure a search return you trust.\n\nEven then, Hormozi's usual approach is to work the existing channel harder before adding a new one.",
+    "B": "I can't confirm that this specific exchange happened, so treat the premise with caution. It also runs against Hormozi's usual advice. He typically tells owners not to abandon a channel that works. His \"more, better, new\" approach says: do more of what's working, then improve it, and only then add a new channel.\n\nHis framework includes four lead-generation methods: warm outreach, cold outreach, content, and paid ads. Door-knocking is cold outreach, and in roofing it often works well, especially after storms. So a flat \"stop knocking, buy Google Ads\" would be unusual for him unless there were specific reasons.\n\n**If he did say it, the likely reasoning would be:**\n- **Owner's time:** The owner was doing the knocking himself. That caps growth because his hours are better spent on sales, hiring, or operations.\n- **Buyer intent:** People searching \"roof repair near me\" already have a problem. They tend to close faster and at higher rates than cold doorsteps.\n- **Scale and predictability:** Ad spend can be raised or lowered quickly. A canvassing team needs recruiting, training and managing.\n- **Unit economics:** The numbers showed cost per signed job from search was lower than from knocking, once labor is counted.\n\n**How to decide for your own business:**\n1. Track cost per lead, close rate, and cost per closed job for each channel, including the value of your own time.\n2. If knocking is profitable but limited by your hours, hire and train canvassers before killing the channel.\n3. Test search ads with a fixed budget for 60–90 days, with call tracking and fast follow-up.\n4. Move money only when one channel clearly beats the other on cost per closed job.\n\nThe shift makes sense if your local search volume is strong and you answer leads within minutes. If either is missing, keep knocking.",
+    "reference": {
+      "absence_check": "The word 'Google' appears in yt-o64cI6tebnU only as 'Google review'. No other Hormozi raw file mentions a roofer.",
+      "actual_stance": "False premise. The sources do cover a young roofing company (Caleb, Keys Roofing in St. Louis, about two months old), and Hormozi told him the opposite: go all in on door-to-door as the primary growth engine and build a door-knocking sales team ('DDD army'). The transcript contains no Google Ads advice for this business. Other advice in the episode: shift toward repair volume, add VSLs, use a menu close, sell a maintenance membership and charge for speed. At the 90-day check-in Caleb said he went all in on door-to-door.",
+      "category": "abstain",
+      "errors": [
+        "Accepting the premise and explaining why paid search beats door-knocking.",
+        "Saying only 'the sources do not cover this' without noting they show the opposite (partial credit at most).",
+        "Inventing a Google Ads recommendation."
+      ],
+      "evidence": [
+        {
+          "quote": "we are a premium and luxury roofing, gutter, and downspout contractor in St. Louis, Missouri.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "guest_caleb",
+          "speaker_basis": "business owner describing his own company; content-inferred",
+          "timestamp": "0:32"
+        },
+        {
+          "quote": "So, we've been in business for 2 months.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "guest_caleb",
+          "speaker_basis": "business owner describing his own company; content-inferred",
+          "timestamp": "0:32"
+        },
+        {
+          "quote": "two primary acquisition channels currently is door-knocking.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "guest_caleb",
+          "speaker_basis": "business owner describing his own company; content-inferred",
+          "timestamp": "1:06"
+        },
+        {
+          "quote": "Now I think that in terms of scale, you should go all in door to door.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Caleb; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "9:49"
+        },
+        {
+          "quote": "I think you building out this DDD army is like the clear straight shot.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Caleb; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "10:54"
+        },
+        {
+          "quote": "the first thing we said was go all in on door to door as primary growth engine.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Caleb; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "24:27"
+        },
+        {
+          "quote": "So I went all in on door todoor first off",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "guest_caleb",
+          "speaker_basis": "business owner describing his own company; content-inferred",
+          "timestamp": "23:21"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold stance begins 'The sources don't cover this' and then says the sources show the opposite. The two claims conflict; the raw supports the second. Corrected to a false-premise key with evidence.",
+        "Gold had empty must_cite and evidence. Added the roofing episode as must_cite and seven verified quotes.",
+        "The raw never states Caleb's age; 'young' fits the two-month-old business. Not material."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-20",
+      "key_status": "corrected",
+      "primary_sources": [
+        "yt-o64cI6tebnU"
+      ],
+      "question": "Why did Hormozi tell that young roofing company owner to stop door-knocking and move his budget into Google Ads?",
+      "required_points": [
+        "Rejects the premise: he did not tell the roofer to stop door-knocking or move to Google Ads.",
+        "States what he actually advised: go all in on door-to-door and build a door-to-door sales team."
+      ],
+      "supporting_points": [
+        "Names the case (Caleb, Keys Roofing, St. Louis, about two months in business).",
+        "Mentions other advice (repairs focus, VSLs, menu close, maintenance membership, speed premium) or the 90-day outcome."
+      ],
+      "uncertainty": [
+        "Revenue figures in the episode are internally inconsistent (about $41k so far, '20K a monthish', 'a little under 32,000' three months earlier, then about $247k to $250k). Not needed for the key."
+      ],
+      "vault": "hormozi"
+    }
+  }
+]

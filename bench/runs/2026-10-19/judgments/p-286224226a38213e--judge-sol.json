@@ -1,0 +1,43 @@
+{
+  "answer_family": "opus",
+  "batch_id": "newadvice12--sol--opus--batch-00",
+  "error": "",
+  "id": "p-286224226a38213e--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-286224226a38213e",
+  "primary_eligible": true,
+  "prompt_sha256": "9d84d204c8107c06d2ccab76bc5bf0f9c0c66827b8a8aa341137afb0b65a90f8",
+  "question_key": "newadvice12--advice-yc-05",
+  "status": "ok",
+  "suite": "newadvice12",
+  "verdict": {
+    "A": {
+      "actionability": 4,
+      "constraint_fit": 4,
+      "decision_quality": 4,
+      "reasoning": 4
+    },
+    "B": {
+      "actionability": 4,
+      "constraint_fit": 4,
+      "decision_quality": 4,
+      "reasoning": 3
+    },
+    "factual_objections": [
+      {
+        "answer": "B",
+        "claim": "Your problem isn't price.",
+        "evidence": "Three candidates accepted offers with roughly twice the cash. This supports investigating compensation and candidate targeting, but does not establish that price is irrelevant or that targeting is the sole cause.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-286224226a38213e",
+    "reason": "Both offer a defensible alternative to simply increasing cash: improve sourcing, founder involvement, and speed while retaining senior hiring. The incremental salary arithmetic is correct. A is slightly stronger because it offers compensation flexibility, a measurable sourcing target, and conditions for revisiting cash or hiring only one engineer. B categorically dismisses price despite the observed compensation gap and prescribes additional equity terms without establishing their suitability. Neither has enough financial information to validate its runway assumption or compensation budget.",
+    "winner": "A"
+  },
+  "winner": "grounded"
+}

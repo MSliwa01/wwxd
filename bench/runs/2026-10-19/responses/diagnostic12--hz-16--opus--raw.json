@@ -1,0 +1,101 @@
+{
+  "actual_input_tokens": 2491,
+  "answer": "**Short answer:** I don't know of any story in which Alex Hormozi took a company public on the NASDAQ, saw it become worth four times more from the listing alone, and then accepted equity in an IPO. As of my knowledge, none of his main companies (Gym Launch, Prestige Labs, ALAN, Skool-related ventures, or the holding company Acquisition.com) has listed on a public exchange. The question's premise is probably mistaken or blends several separate things.\n\n**What I'm fairly confident about:**\n- In 2021 Hormozi sold a majority stake in his portfolio, mainly Gym Launch and Prestige Labs, to a private buyer for about $46 million. That was a private acquisition, not an IPO.\n- He often teaches valuation multiples. A key point is that public companies usually trade at much higher multiples than comparable private ones, because public shares are liquid and private ones are not. Saying a business \"becomes worth several times more\" when it goes public is a general idea he and others use. It isn't a documented event from his own companies.\n- He regularly discusses taking equity instead of cash in deals. That is the core model of Acquisition.com. This may be the source of the \"equity deal\" part.\n\n**What's uncertain:**\n- He may have told a hypothetical, a story about a portfolio company or a friend's company, or a story from a podcast I haven't seen. Some things he said after mid-2026 may also be unknown to me.\n\n**Next steps:**\n- Find the clip or episode where you heard it and note who the company was. Check whether it was his company or an example he used.\n- Look up SEC filings or NASDAQ listings under the company's name. A real IPO leaves a public record.\n- If there's no filing, treat the story as an illustration of the public-versus-private multiple gap, not as a real transaction.",
+  "arm": "raw",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 12.096,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "b79a69ec3c75bfb49784d8beaee32d46b9b300e202c3e288a89f0fad874932c8"
+    }
+  ],
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 478,
+  "event_count": 8,
+  "family": "opus",
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:21:09.989298+00:00",
+  "format_deviations": [
+    "outside descriptive 150..300 word band around approximate 250-word instruction"
+  ],
+  "id": "diagnostic12--hz-16--opus--raw",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "prompt_sha256": "2a277110a51940f1f0afccd71209c8d16435b8fff4f98ef4f9b342bf803e9c87",
+  "question_key": "diagnostic12--hz-16",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 921,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 921,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 921,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 921,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 891,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 891,
+      "output_tokens_details": {
+        "thinking_tokens": 303
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ],
+  "words": 312
+}

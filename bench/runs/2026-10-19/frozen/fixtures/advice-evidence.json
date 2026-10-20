@@ -1,0 +1,1303 @@
+{
+  "meta": {
+    "built": "2026-10-19",
+    "private": "Not shown to answering models or to primary practical judges.",
+    "scope": "Private source support, hard arithmetic and constraint checks, and the range of defensible answers for the 12 advice cases. No case has a single mandatory recommendation.",
+    "synthetic": "Every case is a source-inspired synthetic scenario. Businesses, people and numbers are invented; only the principles come from the raw sources."
+  },
+  "cases": [
+    {
+      "id": "advice-hz-01",
+      "vault": "hormozi",
+      "domain": "offers",
+      "case_types": [
+        "tradeoff_synthesis"
+      ],
+      "inspiration": "Synthetic case. Business, prices and hours are invented. Principles drawn from: premium one-to-one tiers, anchoring and capping supply (yt-uWdIgftpvBI); repackaging for the segment that buys the top package (yt-x3e73Qn6NOo); focus on one thing (yt--JLN1d1ZKUU).",
+      "hard_checks": [
+        "Status quo: 45 x $400 = $18,000 revenue; 45 x $40 = $1,800 costs; profit $16,200; hours 45 + 5 = 50.",
+        "Option 1 alone, no churn: 45 x $460 = $20,700 profit. Short of $25,000 even if nobody leaves. With 4 clients leaving: 41 x $460 = $18,860 and 46 hours.",
+        "Option 2 alone as 5 upgrades of existing clients: $16,200 + 5 x $1,600 = $24,200 profit but 60 hours. Breaks the 50-hour cap.",
+        "Option 2 alone as 5 new clients: $26,000 profit but 65 hours. Breaks the cap.",
+        "Options 1 + 2 combined (5 upgrades at $2,000, others at $500, release the 10 smallest): 5 x $1,960 + 30 x $460 = $23,600 profit; hours 15 + 30 + 5 = 50. Fits the cap but is about $1,400 short; reaching $25,000 on this structure needs a premium price of about $2,280 or more, or a further adjustment.",
+        "Option 3: adding $8,800 a month at $49 needs about 180 paying subscribers, with no stated audience, and recording time competes with the 50-hour cap."
+      ],
+      "constraint_checks": [
+        "Any recommended plan must stay at or under 50 hours a week; a plan that adds premium work without freeing hours violates the stated constraint.",
+        "No hiring within 6 months.",
+        "A claim that a plan reaches $25,000 must hold under the stated numbers."
+      ],
+      "defensible_answers": [
+        "Premium tier first, sold to the 8 large clients, priced high enough to hit the goal, while raising standard price or releasing the smallest clients to free hours.",
+        "Raise standard price first (low effort, frees hours through churn), then launch the premium tier.",
+        "Premium tier only, priced at $2,500 or more for fewer clients, with explicit time limits, plus a price raise later.",
+        "Any order is acceptable if the hours and profit math hold and the course is either deferred or justified with a distribution plan."
+      ],
+      "credit_signals": [
+        "Notices the 50-hour cap binds and does the arithmetic.",
+        "Defines concrete premium deliverables (for example monthly cash-flow forecast, inventory plan, tax-preparer coordination, response-time commitment) and a cap on seats.",
+        "Uses the 8 large clients' existing requests as demand evidence.",
+        "Gives a clear order and a decision."
+      ],
+      "source_support": [
+        {
+          "source_id": "yt-uWdIgftpvBI",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-uWdIgftpvBI.md",
+          "source_sha256": "e96491ca066bec8b42c73a1dcb7e4924f3da42ee59e08472be4f2f65dc387fa9",
+          "source_title": "If I Started A Business in 2026, I'd Do This",
+          "source_date": "2025-12-06",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "0:00",
+          "quote": "either sell extremely expensive stuff to a select few or sell something super cheap to everyone. The middle is where people die."
+        },
+        {
+          "source_id": "yt-uWdIgftpvBI",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-uWdIgftpvBI.md",
+          "source_sha256": "e96491ca066bec8b42c73a1dcb7e4924f3da42ee59e08472be4f2f65dc387fa9",
+          "source_title": "If I Started A Business in 2026, I'd Do This",
+          "source_date": "2025-12-06",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "5:28",
+          "quote": "when you have demand, cut supply."
+        },
+        {
+          "source_id": "yt-uWdIgftpvBI",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-uWdIgftpvBI.md",
+          "source_sha256": "e96491ca066bec8b42c73a1dcb7e4924f3da42ee59e08472be4f2f65dc387fa9",
+          "source_title": "If I Started A Business in 2026, I'd Do This",
+          "source_date": "2025-12-06",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "10:19",
+          "quote": "have something that's $1,000 a month. Have something that's $10,000 one time."
+        },
+        {
+          "source_id": "yt-uWdIgftpvBI",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-uWdIgftpvBI.md",
+          "source_sha256": "e96491ca066bec8b42c73a1dcb7e4924f3da42ee59e08472be4f2f65dc387fa9",
+          "source_title": "If I Started A Business in 2026, I'd Do This",
+          "source_date": "2025-12-06",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "13:04",
+          "quote": "Likely the person that's going to spend the $1,000 is a different person."
+        },
+        {
+          "source_id": "yt-uWdIgftpvBI",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-uWdIgftpvBI.md",
+          "source_sha256": "e96491ca066bec8b42c73a1dcb7e4924f3da42ee59e08472be4f2f65dc387fa9",
+          "source_title": "If I Started A Business in 2026, I'd Do This",
+          "source_date": "2025-12-06",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "15:19",
+          "quote": "be willing to take 5 10% of your time, charge 10 times more"
+        },
+        {
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "source_date": "2023-04-03",
+          "speaker": "hormozi",
+          "speaker_basis": "podcast interview; no speaker labels, inferred from content",
+          "timestamp": "1:23:11",
+          "quote": "85% of their customers were small business owners and turned out in like three or four months 15% of their custom"
+        },
+        {
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "source_date": "2023-04-03",
+          "speaker": "hormozi",
+          "speaker_basis": "podcast interview; no speaker labels, inferred from content",
+          "timestamp": "1:23:44",
+          "quote": "package and stayed like forever and I was like hey crazy idea what if we only served these customers"
+        },
+        {
+          "source_id": "yt-x3e73Qn6NOo",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-x3e73Qn6NOo.md",
+          "source_sha256": "1d87aa8429df9ce1ca01794c1b1c4861370374a0624d197a6a20c5b272af617b",
+          "source_title": "The Man That Makes Millionaires: How To Turn $1,000 Into $100 Million!: Alex Hormozi | E235",
+          "source_date": "2023-04-03",
+          "speaker": "hormozi",
+          "speaker_basis": "podcast interview; no speaker labels, inferred from content",
+          "timestamp": "1:23:44",
+          "quote": "were able to 10x our prices"
+        }
+      ],
+      "judging_notes": [
+        "Judge usefulness for this person's stated goal and constraints. Matching the source's stance is not required.",
+        "Several recommendations are defensible; do not lower a score because the answer differs from the source-inspired direction.",
+        "Hard errors are arithmetic mistakes, plans that break a stated constraint, and invented facts about the user's situation."
+      ]
+    },
+    {
+      "id": "advice-hz-02",
+      "vault": "hormozi",
+      "domain": "pricing",
+      "case_types": [
+        "tradeoff_synthesis"
+      ],
+      "inspiration": "Synthetic case. Numbers invented. Principles drawn from: supply-constrained vs demand-constrained diagnosis (yt-OQf2Ba-Lp_4); charging for speed and priority when supply-constrained (yt-o64cI6tebnU); raising price when demand exceeds supply (yt-uWdIgftpvBI).",
+      "hard_checks": [
+        "Current: 6 grooms x 26 van-days = 156 grooms a month; profit per groom $95 - $38 - $12 = $45; 156 x $45 = $7,020; minus $3,800 fixed = $3,220 a month.",
+        "Groomer pay is 40% of the ticket, so a price rise is shared: at +15% ($109.25) profit per groom is 0.6 x 109.25 - 12 = $53.55, +$8.55 per groom, about +$1,334 a month (+41%) if volume holds.",
+        "Second van demand: 15 requests a week is about 65 grooms a month, about 42% of a second van's 156-groom capacity. At $45 each that is about $2,925 a month against $1,650 financing, before added insurance or marketing, and after a 2-month hiring and training lag."
+      ],
+      "constraint_checks": [
+        "Retain regulars: a plan that raises regulars' prices sharply without a transition or communication plan ignores the stated concern.",
+        "90-day window for pricing and booking changes."
+      ],
+      "defensible_answers": [
+        "Raise prices for new clients now and for regulars after notice or at a smaller step; add a paid priority or short-notice fee; wait on the van until the waitlist proves it can fill most of a second van.",
+        "Buy the second van now if the owner can fill it through marketing, with the utilization math shown; acceptable if the plan addresses the fill-rate gap and hiring lag.",
+        "Add a recurring membership or prepaid plan for regulars combined with a price increase."
+      ],
+      "credit_signals": [
+        "Identifies the business as supply-constrained.",
+        "Accounts for the 40% groomer share when computing price-rise gains.",
+        "Checks second-van utilization rather than assuming full demand.",
+        "Gives an explicit van decision."
+      ],
+      "source_support": [
+        {
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "source_date": "2026-05-08",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "3:47",
+          "quote": "I think the first problem I try to delineate is this is a supply constraint business or a demand constraint business."
+        },
+        {
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "source_date": "2026-05-08",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "4:19",
+          "quote": "they're trying to fix a problem that's already a problem that if you fix it, makes your existing problem worse."
+        },
+        {
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "source_date": "2026-08-29",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Caleb; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "18:33",
+          "quote": "But literally just reshifting the order of the work by allowing people to spend more to go first"
+        },
+        {
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "source_date": "2026-08-29",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Caleb; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "20:10",
+          "quote": "especially if you're supply constraint, meaning you have more people who want your stuff than you have the ability to do, add speed incentives"
+        },
+        {
+          "source_id": "yt-uWdIgftpvBI",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-uWdIgftpvBI.md",
+          "source_sha256": "e96491ca066bec8b42c73a1dcb7e4924f3da42ee59e08472be4f2f65dc387fa9",
+          "source_title": "If I Started A Business in 2026, I'd Do This",
+          "source_date": "2025-12-06",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "5:28",
+          "quote": "when you have demand, cut supply."
+        }
+      ],
+      "judging_notes": [
+        "Judge usefulness for this person's stated goal and constraints. Matching the source's stance is not required.",
+        "Several recommendations are defensible; do not lower a score because the answer differs from the source-inspired direction.",
+        "Hard errors are arithmetic mistakes, plans that break a stated constraint, and invented facts about the user's situation."
+      ]
+    },
+    {
+      "id": "advice-hz-03",
+      "vault": "hormozi",
+      "domain": "ads",
+      "case_types": [
+        "missing_critical_input"
+      ],
+      "inspiration": "Synthetic case. Numbers invented. Principles drawn from: spend more only while ROAS and CAC hold and attribution is verified (yt-OQf2Ba-Lp_4); scaling into a spend wall where CPA rises and creative caps spend (yt-MH-IMJxbUY4); spending as much as possible while staying at break-even or better (yt-tGhe3sBuk34).",
+      "missing_critical_inputs": [
+        "Contribution margin per order (product cost, shipping, payment fees, returns). Without it the break-even ROAS is unknown: break-even ROAS = 1 / contribution margin. At 30% margin break-even is 3.33, so the reported 3.2 loses money; at 60% it is 1.67, so 3.2 is comfortably profitable.",
+        "Whether the platform-reported 3.2 matches blended results (total revenue / total ad spend) given view-through attribution."
+      ],
+      "how_good_answers_handle_it": "Ask for or state the margin assumption and give the decision as a rule (for example scale only if contribution margin is above about 31% and blended returns confirm the platform number), or make the call conditional with thresholds. An unconditional 'scale to $1,000' or 'never scale' without addressing margin should score lower.",
+      "hard_checks": [
+        "October 19 through December 31, 2026 is 74 days. $1,000 a day for 74 days is $74,000, above the $45,000 budget; at $1,000 a day the budget runs out after 45 days. The average affordable rate over the whole period is about $608 a day.",
+        "At 3.2 ROAS, $1,000 a day is about $3,200 revenue, about 55 bottles a day; 45 days is about 2,480 bottles. Spending the full $45,000 at 3.2 ROAS sells about 2,480 bottles, under the 4,000 in stock, but reorders from the 30% repeat rate add demand and a new production run takes 10 weeks.",
+        "Every answer and judge receives the explicit evaluation date 2026-10-19. Counting October 19 through December 31 inclusively gives 74 days. Accept roughly 70 to 75 days with a reasonable counting convention, while checking that $45,000 cannot fund $1,000 a day for the whole remaining period.",
+        "ROAS at 3.3x the spend is unlikely to stay at 3.2; any plan should step up spend and watch CPA."
+      ],
+      "constraint_checks": [
+        "$45,000 total ad budget through December 31.",
+        "Inventory of about 4,000 bottles with a 10-week reorder lead time.",
+        "User asked for a yes or no on the $1,000-a-day plan."
+      ],
+      "defensible_answers": [
+        "No as stated (budget does not cover it), with a stepped plan that front-loads or concentrates spend around Black Friday within $45,000, conditional on margin.",
+        "Yes for a limited window (for example Black Friday through Cyber Monday) if margin clears break-even, with stop rules.",
+        "No until margin and blended returns are confirmed, then scale stepwise."
+      ],
+      "credit_signals": [
+        "Flags missing margin and computes or explains break-even ROAS.",
+        "Catches the budget arithmetic.",
+        "Mentions attribution or blended returns.",
+        "Checks inventory and reorder timing."
+      ],
+      "source_support": [
+        {
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "source_date": "2026-05-08",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "10:48",
+          "quote": "we just want to continue to spend month over month provided our ROAS and our CAC stay more or less the same."
+        },
+        {
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "source_date": "2026-05-08",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "11:21",
+          "quote": "Now, if you're not sure, then you have a data problem. So, you got to go make sure the attribution's right. But, if you know that's where the money's coming from, by all means, spend more."
+        },
+        {
+          "source_id": "yt-MH-IMJxbUY4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-MH-IMJxbUY4.md",
+          "source_sha256": "0ee16a3ff11eaf668c6513ea5fd6db5581199780322ebe90b2c8ee92b0cf269f",
+          "source_title": "Building a $12,000,000 Business for a Stranger in 25 Minutes",
+          "source_date": "2026-02-28",
+          "speaker": "guest_joel",
+          "speaker_basis": "business owner describing his own results; content-inferred",
+          "timestamp": "2:12",
+          "quote": "I spent 150 grand last month and it got 10% extra book sales."
+        },
+        {
+          "source_id": "yt-MH-IMJxbUY4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-MH-IMJxbUY4.md",
+          "source_sha256": "0ee16a3ff11eaf668c6513ea5fd6db5581199780322ebe90b2c8ee92b0cf269f",
+          "source_title": "Building a $12,000,000 Business for a Stranger in 25 Minutes",
+          "source_date": "2026-02-28",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Joel; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "12:00",
+          "quote": "the creative unlock is usually why someone gets limited."
+        },
+        {
+          "source_id": "yt-MH-IMJxbUY4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-MH-IMJxbUY4.md",
+          "source_sha256": "0ee16a3ff11eaf668c6513ea5fd6db5581199780322ebe90b2c8ee92b0cf269f",
+          "source_title": "Building a $12,000,000 Business for a Stranger in 25 Minutes",
+          "source_date": "2026-02-28",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Joel; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "13:06",
+          "quote": "as soon as you hit you try to break through this wall, your CPA goes up because the new creative's not good enough."
+        },
+        {
+          "source_id": "yt-tGhe3sBuk34",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-tGhe3sBuk34.md",
+          "source_sha256": "3d01c807444dd661479d11eb6cb61c2af472bd131083f0d1d27a9614d7a13f98",
+          "source_title": "My final update",
+          "source_date": "2025-08-15",
+          "speaker": "hormozi",
+          "speaker_basis": "vlog with team members; line inferred from content",
+          "timestamp": "8:17",
+          "quote": "the goal is to spend as much money as humanly possible uh while maintaining break even or better."
+        }
+      ],
+      "judging_notes": [
+        "Judge usefulness for this person's stated goal and constraints. Matching the source's stance is not required.",
+        "Several recommendations are defensible; do not lower a score because the answer differs from the source-inspired direction.",
+        "Hard errors are arithmetic mistakes, plans that break a stated constraint, and invented facts about the user's situation."
+      ]
+    },
+    {
+      "id": "advice-hz-04",
+      "vault": "hormozi",
+      "domain": "customer_acquisition",
+      "case_types": [
+        "tradeoff_synthesis"
+      ],
+      "inspiration": "Synthetic case. Numbers invented. Principles drawn from: affiliate partner offers, referral limits and a full-time owner per channel (yt-OQf2Ba-Lp_4); single-channel dependence and squeezing the existing channel first (yt-MH-IMJxbUY4); one owned lead channel as the priority (yt--JLN1d1ZKUU).",
+      "hard_checks": [
+        "Lifetime gross profit per contract: $2,400 x 35% x 20 months = $16,800.",
+        "Account base: $1.1M / 12 / $2,400 is about 38 accounts; at a 20-month average life about 1.9 leave a month. New contracts are about 5 a month (4 from the partner). Without the partner, about 1 new a month against about 1.9 leaving, so the business shrinks.",
+        "Google Ads option within $8,000: $2,000 fee + $6,000 media = 40 leads x 12% = 4.8 contracts, about $1,667 per contract all-in ($1,250 media only).",
+        "Sales rep: 3 walkthroughs a week is about 13 a month x 30% = 3.9 contracts, about $1,410 per contract at full productivity, before ramp time.",
+        "Both paid options cost under 10% of lifetime gross profit per contract, so the decision turns on speed, reliability and capacity more than unit economics."
+      ],
+      "constraint_checks": [
+        "$8,000 a month growth budget.",
+        "Ops manager is part-time on sales.",
+        "Referral loss may happen within 6 months."
+      ],
+      "defensible_answers": [
+        "Start the referral/affiliate program with a concrete partner offer and a named owner, plus try to keep the acquired firm's business; add one paid channel.",
+        "Hire the outbound rep first (predictable, controllable channel) and run referrals part-time.",
+        "Google Ads first for speed, while building referrals; acceptable if lead quality risk is addressed."
+      ],
+      "credit_signals": [
+        "Does the LTV and CAC math.",
+        "Recognizes the business shrinks without replacing the partner flow.",
+        "Gives partners a real incentive rather than 'ask for referrals'.",
+        "Assigns ownership and a timeline; addresses retaining the acquired partner."
+      ],
+      "source_support": [
+        {
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "source_date": "2026-05-08",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "24:45",
+          "quote": "most of times if you want to have like a true kind of affiliate partner program, we need to have some sort of offer for them."
+        },
+        {
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "source_date": "2026-05-08",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "25:50",
+          "quote": "Referrals everyone promises, no one delivers."
+        },
+        {
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "source_date": "2026-05-08",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "28:02",
+          "quote": "it's unlikely that you're going to have sufficient referral volume to send them all enough business."
+        },
+        {
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "source_date": "2026-05-08",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "29:39",
+          "quote": "I don't think you're going to be able to do both of these."
+        },
+        {
+          "source_id": "yt-OQf2Ba-Lp_4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-OQf2Ba-Lp_4.md",
+          "source_sha256": "b22a61ace53c8901a52e7784279bc9377e3017c277902e0dd23e5552e89e613a",
+          "source_title": "Building a $2,500,000 Business for a Stranger in 36 Minutes",
+          "source_date": "2026-05-08",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Corey; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "30:12",
+          "quote": "for each of these things, you basically need someone who's full-time in charge of that."
+        },
+        {
+          "source_id": "yt-MH-IMJxbUY4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-MH-IMJxbUY4.md",
+          "source_sha256": "0ee16a3ff11eaf668c6513ea5fd6db5581199780322ebe90b2c8ee92b0cf269f",
+          "source_title": "Building a $12,000,000 Business for a Stranger in 25 Minutes",
+          "source_date": "2026-02-28",
+          "speaker": "guest_joel",
+          "speaker_basis": "business owner describing his own problem; content-inferred",
+          "timestamp": "2:12",
+          "quote": "So, our biggest problem right now, single channel advertising."
+        },
+        {
+          "source_id": "yt-MH-IMJxbUY4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-MH-IMJxbUY4.md",
+          "source_sha256": "0ee16a3ff11eaf668c6513ea5fd6db5581199780322ebe90b2c8ee92b0cf269f",
+          "source_title": "Building a $12,000,000 Business for a Stranger in 25 Minutes",
+          "source_date": "2026-02-28",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Joel; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "5:27",
+          "quote": "I feel like there's a lot more that you can work on the existing one by like a lot."
+        },
+        {
+          "source_id": "yt--JLN1d1ZKUU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--JLN1d1ZKUU.md",
+          "source_sha256": "77517facac01ba2b6098415faf2076e885fb9f113be781c0f3f450a5d843902c",
+          "source_title": "Less is More: The Magic of a Simple Business",
+          "source_date": "2025-05-22",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "3:52",
+          "quote": "if we had a dedicated lead channel that we owned, that one thing would change everything."
+        }
+      ],
+      "judging_notes": [
+        "Judge usefulness for this person's stated goal and constraints. Matching the source's stance is not required.",
+        "Several recommendations are defensible; do not lower a score because the answer differs from the source-inspired direction.",
+        "Hard errors are arithmetic mistakes, plans that break a stated constraint, and invented facts about the user's situation."
+      ]
+    },
+    {
+      "id": "advice-hz-05",
+      "vault": "hormozi",
+      "domain": "offers_retention",
+      "case_types": [
+        "tradeoff_synthesis"
+      ],
+      "inspiration": "Synthetic case. Numbers invented. Principles drawn from: growth as joins minus cancels, annual plans, overwhelm as a churn driver, price objections from non-ideal customers (yt--j8_YCWZ05Q); subtracting features to cut overwhelm (yt--JLN1d1ZKUU). Distinct from diagnostic hz-05: this case asks for a decision under arithmetic, not a benchmark.",
+      "hard_checks": [
+        "Steady state = new per month / monthly churn = 90 / 0.18 = 500 members. The membership is shrinking: next month is 600 x 0.82 + 90 = 582.",
+        "Twelve-month projection, m(next) = m x (1 - churn) + new: current inputs give about 509; doubling acquisition to 180 a month at 18% churn gives about 963; halving churn to 9% at 90 a month gives about 871; both together give about 1,549.",
+        "So 1,000 by next October needs both more acquisition and lower churn, or a much larger change in one of them. Doubling ad spend at the same $110 cost per member is optimistic.",
+        "Revenue per member at 18% churn: about 1 / 0.18 = 5.6 months x $79 = $439, about 4x the $110 acquisition cost. At $49, each member brings 38% less, so about 61% more members are needed for the same revenue."
+      ],
+      "constraint_checks": [
+        "Choose exactly two of the four ideas.",
+        "Goal date about 12 months out."
+      ],
+      "defensible_answers": [
+        "Annual plan plus doubled ads, with first-60-day onboarding fixes inside the existing product.",
+        "Annual plan plus an onboarding/retention fix, arguing more features add overwhelm; doubles ads later.",
+        "Doubling ads plus annual plan, with the projection showing the shortfall if churn does not move.",
+        "Picking the feature additions is defensible only with a reason they would reduce early churn; the price cut needs a reason to expect much lower churn or much higher conversion."
+      ],
+      "credit_signals": [
+        "Computes the steady state or projection and answers the realism question honestly.",
+        "Targets early-tenure churn.",
+        "Picks two and explains the tradeoff."
+      ],
+      "source_support": [
+        {
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "source_date": "2026-03-24",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "0:33",
+          "quote": "your MRR, meaning your monthly recurring revenue, grows when new members are greater than churn members."
+        },
+        {
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "source_date": "2026-03-24",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "7:08",
+          "quote": "If you can only do one thing that gets people to stay, why would you do five?"
+        },
+        {
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "source_date": "2026-03-24",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "8:46",
+          "quote": "If non-ideal people say it's too expensive, just ignore it."
+        },
+        {
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "source_date": "2026-03-24",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "9:18",
+          "quote": "The number one reason people churn, outside of price, is overwhelm."
+        },
+        {
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "source_date": "2026-03-24",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "15:52",
+          "quote": "annual always has lower churn than monthly"
+        },
+        {
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "source_date": "2026-03-24",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "16:26",
+          "quote": "16 16 or 17% which is usually buy 10 get two"
+        }
+      ],
+      "judging_notes": [
+        "Judge usefulness for this person's stated goal and constraints. Matching the source's stance is not required.",
+        "Several recommendations are defensible; do not lower a score because the answer differs from the source-inspired direction.",
+        "Hard errors are arithmetic mistakes, plans that break a stated constraint, and invented facts about the user's situation."
+      ]
+    },
+    {
+      "id": "advice-hz-06",
+      "vault": "hormozi",
+      "domain": "first_business_decision",
+      "case_types": [
+        "tradeoff_synthesis"
+      ],
+      "inspiration": "Synthetic case. Numbers invented. Principles drawn from: cutting costs, using the hours around a job, choosing a skill people already pay for, one product to one avatar on one channel (yt-jfW6gL6hKhk); selling time one-to-one at a high price early (yt-uWdIgftpvBI); payment terms and outcome-based pricing (yt-rMJIOK_FgJk).",
+      "hard_checks": [
+        "Monthly surplus: $3,400 - $2,900 = $500.",
+        "Vending route: $9,000 is 82% of savings; payback at the claimed $700 a month is about 12.9 months; replacing $3,400 a month would need about 5 routes, which the savings cannot fund within 18 months without more capital. The $700 is the seller's unverified claim.",
+        "Store: $6,000 inventory is 55% of savings before ads or returns.",
+        "Dental lead-generation service: low capital, uses the person's direct experience of the buyer."
+      ],
+      "constraint_checks": [
+        "About 20 hours a week while employed.",
+        "$11,000 savings, $500 monthly surplus.",
+        "Goal: replace a $3,400 monthly take-home within 18 months.",
+        "User asked to pick one."
+      ],
+      "defensible_answers": [
+        "Dental lead-generation/appointment-setting service, with a 90-day plan to sign the first offices (possibly the current employer's network), priced per booked patient or per month, upfront or outcome-based.",
+        "Vending route only with strong due diligence (verify statements, visit machines) and an honest note that it will not replace salary in 18 months alone.",
+        "Online store only with a plan to test demand before buying full inventory."
+      ],
+      "credit_signals": [
+        "Uses the savings and payback arithmetic.",
+        "Flags the seller's unverified income claim.",
+        "Gives a concrete 90-day plan with customer acquisition steps.",
+        "Notes employment conflicts (for example soliciting the employer's competitors or patients) if relevant."
+      ],
+      "source_support": [
+        {
+          "source_id": "yt-jfW6gL6hKhk",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-jfW6gL6hKhk.md",
+          "source_sha256": "4958f309a165e6cbda0dc57c83d7fd37bfe3bd5134d84b6d92c3eca46dce9f9a",
+          "source_title": "If I Wanted to Make My First $100K in 2026, I’d Do This",
+          "source_date": "2026-03-04",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "0:32",
+          "quote": "The first step is that we have to cut all costs, so that we can take more risk."
+        },
+        {
+          "source_id": "yt-jfW6gL6hKhk",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-jfW6gL6hKhk.md",
+          "source_sha256": "4958f309a165e6cbda0dc57c83d7fd37bfe3bd5134d84b6d92c3eca46dce9f9a",
+          "source_title": "If I Wanted to Make My First $100K in 2026, I’d Do This",
+          "source_date": "2026-03-04",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "3:14",
+          "quote": "Your nine-to-five job is not killing your dreams."
+        },
+        {
+          "source_id": "yt-jfW6gL6hKhk",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-jfW6gL6hKhk.md",
+          "source_sha256": "4958f309a165e6cbda0dc57c83d7fd37bfe3bd5134d84b6d92c3eca46dce9f9a",
+          "source_title": "If I Wanted to Make My First $100K in 2026, I’d Do This",
+          "source_date": "2026-03-04",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "7:34",
+          "quote": "go find what people are already paying for"
+        },
+        {
+          "source_id": "yt-jfW6gL6hKhk",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-jfW6gL6hKhk.md",
+          "source_sha256": "4958f309a165e6cbda0dc57c83d7fd37bfe3bd5134d84b6d92c3eca46dce9f9a",
+          "source_title": "If I Wanted to Make My First $100K in 2026, I’d Do This",
+          "source_date": "2026-03-04",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "8:09",
+          "quote": "you want to sell one product or service to one avatar on one channel until you make $1 million."
+        },
+        {
+          "source_id": "yt-uWdIgftpvBI",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-uWdIgftpvBI.md",
+          "source_sha256": "e96491ca066bec8b42c73a1dcb7e4924f3da42ee59e08472be4f2f65dc387fa9",
+          "source_title": "If I Started A Business in 2026, I'd Do This",
+          "source_date": "2025-12-06",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "1:06",
+          "quote": "one of the simplest ways to create an expensive offer is to sell your time one-on-one, even if it's unscalable."
+        },
+        {
+          "source_id": "yt-rMJIOK_FgJk",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-rMJIOK_FgJk.md",
+          "source_sha256": "b574f835f44d9470b49d6e3b577e40481ffa0926428371a7b2fbb80e305db8f9",
+          "source_title": "The 6 Levels of Making Money",
+          "source_date": "2026-03-09",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "3:17",
+          "quote": "third tier, which is you pay, then I work."
+        },
+        {
+          "source_id": "yt-rMJIOK_FgJk",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-rMJIOK_FgJk.md",
+          "source_sha256": "b574f835f44d9470b49d6e3b577e40481ffa0926428371a7b2fbb80e305db8f9",
+          "source_title": "The 6 Levels of Making Money",
+          "source_date": "2026-03-09",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "6:37",
+          "quote": "So if I say you don't pay me until you're top three in Google Maps rankings"
+        }
+      ],
+      "judging_notes": [
+        "Judge usefulness for this person's stated goal and constraints. Matching the source's stance is not required.",
+        "Several recommendations are defensible; do not lower a score because the answer differs from the source-inspired direction.",
+        "Hard errors are arithmetic mistakes, plans that break a stated constraint, and invented facts about the user's situation."
+      ]
+    },
+    {
+      "id": "advice-yc-01",
+      "vault": "yc",
+      "domain": "startup_decision_mvp",
+      "case_types": [
+        "tradeoff_synthesis"
+      ],
+      "inspiration": "Synthetic case. Business and numbers invented. Principles drawn from: deleting most features built with coding agents, building what users pull (yt-rQtrzBcf_Us); launch quickly, keep the user and problem and fix the solution (yt-1hHMwLxN6EM); slow buyers such as hospitals (web-19ac0b6d18d2).",
+      "hard_checks": [
+        "Runway: $210,000 / $22,000 is about 9.5 months.",
+        "Pilot signal: 1 of 3 clinics uses one feature (note-writing) daily; the other two logged in twice each."
+      ],
+      "constraint_checks": [
+        "Decision this week; plan for 8 weeks.",
+        "Two engineers; no stated sales or clinical staff."
+      ],
+      "defensible_answers": [
+        "Cut to note-writing (the feature with daily use), charge for it, and put it into many more clinics now.",
+        "Cut down and go deeper with the three pilots first to find why two clinics did not adopt, then expand.",
+        "Hospitals only with a credible argument about access and sales cycle given 9.5 months of runway; weaker but not automatically wrong."
+      ],
+      "credit_signals": [
+        "Treats the one daily-used feature as the signal.",
+        "Proposes charging early to test value.",
+        "Addresses runway when weighing a long-cycle market.",
+        "Gives a concrete 8-week plan with measurable targets."
+      ],
+      "source_support": [
+        {
+          "source_id": "yt-rQtrzBcf_Us",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-rQtrzBcf_Us.md",
+          "source_sha256": "953190a52f1037c9835d46972c7462284f0bb2f6cc51ec53bfa54e379c8bf6ad",
+          "source_title": "How to Build an MVP in the AI Coding Era",
+          "source_date": "2026-05-18",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "1:06",
+          "quote": "it is so much easier to build features that for me to launch that, I had to delete 80% of the features that I built in the MVP."
+        },
+        {
+          "source_id": "yt-rQtrzBcf_Us",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-rQtrzBcf_Us.md",
+          "source_sha256": "953190a52f1037c9835d46972c7462284f0bb2f6cc51ec53bfa54e379c8bf6ad",
+          "source_title": "How to Build an MVP in the AI Coding Era",
+          "source_date": "2026-05-18",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "4:19",
+          "quote": "it should be because users are pulling you towards building more stuff, I think, and not because Codex could crank it out."
+        },
+        {
+          "source_id": "yt-rQtrzBcf_Us",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-rQtrzBcf_Us.md",
+          "source_sha256": "953190a52f1037c9835d46972c7462284f0bb2f6cc51ec53bfa54e379c8bf6ad",
+          "source_title": "How to Build an MVP in the AI Coding Era",
+          "source_date": "2026-05-18",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "6:27",
+          "quote": "Less features, more usage."
+        },
+        {
+          "source_id": "yt-1hHMwLxN6EM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-1hHMwLxN6EM.md",
+          "source_sha256": "21501297dd13705bdb847b6f5466786606cd85b898b433120f5d0befe5dfb75d",
+          "source_title": "Michael Seibel - How to Plan an MVP",
+          "source_date": "2019-08-01",
+          "speaker": "seibel",
+          "speaker_basis": "solo Startup School lecture; speaker introduces himself as Michael",
+          "timestamp": "1:41",
+          "quote": "launch something bad quickly"
+        },
+        {
+          "source_id": "yt-1hHMwLxN6EM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-1hHMwLxN6EM.md",
+          "source_sha256": "21501297dd13705bdb847b6f5466786606cd85b898b433120f5d0befe5dfb75d",
+          "source_title": "Michael Seibel - How to Plan an MVP",
+          "source_date": "2019-08-01",
+          "speaker": "seibel",
+          "speaker_basis": "solo Startup School lecture; speaker introduces himself as Michael",
+          "timestamp": "3:19",
+          "quote": "hold the problem you're solving tightly, hold the customer tightly, hold the solution you're building loosely."
+        },
+        {
+          "source_id": "yt-1hHMwLxN6EM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-1hHMwLxN6EM.md",
+          "source_sha256": "21501297dd13705bdb847b6f5466786606cd85b898b433120f5d0befe5dfb75d",
+          "source_title": "Michael Seibel - How to Plan an MVP",
+          "source_date": "2019-08-01",
+          "speaker": "seibel",
+          "speaker_basis": "solo Startup School lecture; speaker introduces himself as Michael",
+          "timestamp": "3:53",
+          "quote": "keep the mechanic. Keep the problem."
+        },
+        {
+          "source_id": "web-19ac0b6d18d2",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-19ac0b6d18d2.md",
+          "source_sha256": "98c7640dca74c5f7a640e10858613300264805247e203d013ad7d393ef469f72",
+          "source_title": "Making Startups Powerful",
+          "source_date": "2026-09-01",
+          "speaker": "pg",
+          "speaker_basis": "essay on paulgraham.com (frontmatter author field is empty)",
+          "timestamp": null,
+          "quote": "Whereas selling to customers like hospitals and school districts is like walking through mud."
+        }
+      ],
+      "judging_notes": [
+        "Judge usefulness for this person's stated goal and constraints. Matching the source's stance is not required.",
+        "Several recommendations are defensible; do not lower a score because the answer differs from the source-inspired direction.",
+        "Hard errors are arithmetic mistakes, plans that break a stated constraint, and invented facts about the user's situation."
+      ]
+    },
+    {
+      "id": "advice-yc-02",
+      "vault": "yc",
+      "domain": "pricing_customer_segment",
+      "case_types": [
+        "tradeoff_synthesis"
+      ],
+      "inspiration": "Synthetic case. Numbers invented. Principles drawn from: selling to early-stage companies with usage pricing, slow enterprise sales, pricing cheaply at first without losing the payment signal (web-19ac0b6d18d2); depending on one big customer and custom work (yt-7TU636F_yVQ); growth rate as the key number (web-278ac10fa14b).",
+      "hard_checks": [
+        "Runway: $640,000 / $45,000 is about 14.2 months.",
+        "Current monthly revenue: 30 x $210 = $6,300.",
+        "If 15% monthly growth continued: about $33,700 after 12 months (x5.35) and about $44,600 after 14 months; break-even at $45,000 would arrive around month 15, just past runway. So the self-serve path likely still needs a raise, which the growth rate would support.",
+        "Enterprise: $90,000 a year is $7,500 a month, and only after a 6 to 7 month procurement plus the SOC 2 and on-prem work; roughly 7 months of runway left when the first payment could start."
+      ],
+      "constraint_checks": [
+        "Build capacity for only one of the two roadmaps this year.",
+        "14 months of runway."
+      ],
+      "defensible_answers": [
+        "Focus on self-serve startups, keep usage pricing (possibly with a minimum or volume tiers), and keep enterprise conversations warm without building custom requirements.",
+        "Pursue the two logistics companies if they can be signed with paid pilots or prepayment that fund SOC 2, with a clear stop date.",
+        "Hybrid only if it avoids the custom on-prem build this year."
+      ],
+      "credit_signals": [
+        "Does runway and growth arithmetic.",
+        "Notes the risk that 15% growth will not persist.",
+        "Discusses pricing concretely (usage tiers, minimums, enterprise price floor).",
+        "Addresses the risk of custom work for one customer."
+      ],
+      "source_support": [
+        {
+          "source_id": "web-19ac0b6d18d2",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-19ac0b6d18d2.md",
+          "source_sha256": "98c7640dca74c5f7a640e10858613300264805247e203d013ad7d393ef469f72",
+          "source_title": "Making Startups Powerful",
+          "source_date": "2026-09-01",
+          "speaker": "pg",
+          "speaker_basis": "essay on paulgraham.com (frontmatter author field is empty)",
+          "timestamp": null,
+          "quote": "But if you get them as customers at the very beginning and you charge based on usage, your revenues will grow at startup rates."
+        },
+        {
+          "source_id": "web-19ac0b6d18d2",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-19ac0b6d18d2.md",
+          "source_sha256": "98c7640dca74c5f7a640e10858613300264805247e203d013ad7d393ef469f72",
+          "source_title": "Making Startups Powerful",
+          "source_date": "2026-09-01",
+          "speaker": "pg",
+          "speaker_basis": "essay on paulgraham.com (frontmatter author field is empty)",
+          "timestamp": null,
+          "quote": "Now you're doing enterprise sales, which takes forever and is notoriously not a domain where the best product wins."
+        },
+        {
+          "source_id": "web-19ac0b6d18d2",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-19ac0b6d18d2.md",
+          "source_sha256": "98c7640dca74c5f7a640e10858613300264805247e203d013ad7d393ef469f72",
+          "source_title": "Making Startups Powerful",
+          "source_date": "2026-09-01",
+          "speaker": "pg",
+          "speaker_basis": "essay on paulgraham.com (frontmatter author field is empty)",
+          "timestamp": null,
+          "quote": "I generally advise startups to sell as cheaply as they need to at first; get all the users, then worry about your margins."
+        },
+        {
+          "source_id": "web-19ac0b6d18d2",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-19ac0b6d18d2.md",
+          "source_sha256": "98c7640dca74c5f7a640e10858613300264805247e203d013ad7d393ef469f72",
+          "source_title": "Making Startups Powerful",
+          "source_date": "2026-09-01",
+          "speaker": "pg",
+          "speaker_basis": "essay on paulgraham.com (frontmatter author field is empty)",
+          "timestamp": null,
+          "quote": "if you give away too much, you lose the signal that customers send by paying you."
+        },
+        {
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "source_date": "2026-10-05",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "12:18",
+          "quote": "you're over the barrel of um doing custom for them."
+        },
+        {
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "source_date": "2026-10-05",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "12:18",
+          "quote": "You might be moving further away from product market fit without realizing it."
+        },
+        {
+          "source_id": "web-278ac10fa14b",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-278ac10fa14b.md",
+          "source_sha256": "7e1e8e8c4a7646f97b59245ec122e5568ee1989d8d4d1f638d1ac9878dd88f28",
+          "source_title": "How to Earn a Billion Dollars",
+          "source_date": "2026-06-01",
+          "speaker": "pg",
+          "speaker_basis": "essay on paulgraham.com (frontmatter author field is empty)",
+          "timestamp": null,
+          "quote": "Now you see why, when I meet a founder, the first thing I ask about is their growth rate."
+        }
+      ],
+      "judging_notes": [
+        "Judge usefulness for this person's stated goal and constraints. Matching the source's stance is not required.",
+        "Several recommendations are defensible; do not lower a score because the answer differs from the source-inspired direction.",
+        "Hard errors are arithmetic mistakes, plans that break a stated constraint, and invented facts about the user's situation."
+      ]
+    },
+    {
+      "id": "advice-yc-03",
+      "vault": "yc",
+      "domain": "startup_decision_quit_job",
+      "case_types": [
+        "missing_critical_input"
+      ],
+      "inspiration": "Synthetic case. Details invented. Principles drawn from: growth rate as the first question and word of mouth as its cause (web-278ac10fa14b); getting people to use the product (yt-1hHMwLxN6EM); solo founders and losing faith (yt-s1YszjhzQ6U).",
+      "missing_critical_inputs": [
+        "Whether people keep using the app: weekly or monthly active couples and retention by sign-up cohort. 1,400 sign-ups from three viral posts says little about whether the product works.",
+        "Organic growth rate since the spikes, and whether anyone pays or would pay."
+      ],
+      "how_good_answers_handle_it": "Name the missing usage and growth numbers and give a decision rule tied to them (for example quit only if a meaningful share of couples still use it weekly after a month and sign-ups keep growing without new viral posts), or ask for them before answering. An unconditional yes or no based on sign-up count alone should score lower. A yes or no is still expected once the rule is stated.",
+      "hard_checks": [
+        "9 months of expenses saved; the promotion requires a 12-month commitment, decision due at month end."
+      ],
+      "constraint_checks": [
+        "User asked for a yes or no.",
+        "Solo founder."
+      ],
+      "defensible_answers": [
+        "Conditional yes: quit if retention and organic growth clear stated thresholds; otherwise take the promotion and keep building.",
+        "Take the promotion and keep building with explicit milestones, if the answer explains why the evidence is not yet strong enough.",
+        "Quit, if the answer addresses the runway and the missing retention evidence with a test plan for the first months."
+      ],
+      "credit_signals": [
+        "Separates sign-ups from active use.",
+        "Asks for or conditions on retention and growth.",
+        "Addresses the no-cofounder risk and the 9-month runway.",
+        "Notices the one-year commitment cost of the promotion."
+      ],
+      "source_support": [
+        {
+          "source_id": "web-278ac10fa14b",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-278ac10fa14b.md",
+          "source_sha256": "7e1e8e8c4a7646f97b59245ec122e5568ee1989d8d4d1f638d1ac9878dd88f28",
+          "source_title": "How to Earn a Billion Dollars",
+          "source_date": "2026-06-01",
+          "speaker": "pg",
+          "speaker_basis": "essay on paulgraham.com (frontmatter author field is empty)",
+          "timestamp": null,
+          "quote": "Now you see why, when I meet a founder, the first thing I ask about is their growth rate."
+        },
+        {
+          "source_id": "web-278ac10fa14b",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-278ac10fa14b.md",
+          "source_sha256": "7e1e8e8c4a7646f97b59245ec122e5568ee1989d8d4d1f638d1ac9878dd88f28",
+          "source_title": "How to Earn a Billion Dollars",
+          "source_date": "2026-06-01",
+          "speaker": "pg",
+          "speaker_basis": "essay on paulgraham.com (frontmatter author field is empty)",
+          "timestamp": null,
+          "quote": "To grow at a consistent rate every month, you have to make something so good that people tell their friends about it."
+        },
+        {
+          "source_id": "yt-1hHMwLxN6EM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-1hHMwLxN6EM.md",
+          "source_sha256": "21501297dd13705bdb847b6f5466786606cd85b898b433120f5d0befe5dfb75d",
+          "source_title": "Michael Seibel - How to Plan an MVP",
+          "source_date": "2019-08-01",
+          "speaker": "seibel",
+          "speaker_basis": "solo Startup School lecture; speaker introduces himself as Michael",
+          "timestamp": "2:14",
+          "quote": "Get anyone using your product."
+        },
+        {
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "source_date": "2026-07-13",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "2:11",
+          "quote": "the number one cause of death when you're a founder is it just sort of dies on the vine and you run out of hope and you give up on it."
+        },
+        {
+          "source_id": "yt-s1YszjhzQ6U",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-s1YszjhzQ6U.md",
+          "source_sha256": "dca086ba75d605bceba26f3d8f26fa4eee5f7498dde04bb2347e1ea13ff0376d",
+          "source_title": "Do You Need a Co-Founder for Your Startup?",
+          "source_date": "2026-07-13",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "3:14",
+          "quote": "there is no way you can get around not having someone to talk to all the time to bounce ideas off of."
+        }
+      ],
+      "judging_notes": [
+        "Judge usefulness for this person's stated goal and constraints. Matching the source's stance is not required.",
+        "Several recommendations are defensible; do not lower a score because the answer differs from the source-inspired direction.",
+        "Hard errors are arithmetic mistakes, plans that break a stated constraint, and invented facts about the user's situation."
+      ]
+    },
+    {
+      "id": "advice-yc-04",
+      "vault": "yc",
+      "domain": "customer_acquisition_launch",
+      "case_types": [],
+      "inspiration": "Synthetic case. Details invented. Principles drawn from: press driving few sign-ups, telling your own story, outbound worth replying to (yt-7TU636F_yVQ); getting customers before a press launch (yt-1hHMwLxN6EM); fewer, better conversations and distinctive writing (yt-rQtrzBcf_Us).",
+      "hard_checks": [
+        "$36,000 = 3 months x $12,000 = 90 customer-months at $400. If customers stayed 24 months, the agency would need to produce about 4 retained customers to recover its fee in revenue (36,000 / (400 x 24) = 3.75). Customer lifetime is not given, so this is an illustration."
+      ],
+      "constraint_checks": [
+        "Recommend one plan for 3 months.",
+        "Launch planned next month."
+      ],
+      "defensible_answers": [
+        "Skip the tech-press agency; put the money into founder-led outreach in the three metros and trade-association presence, with content as support.",
+        "A smaller, trade-press-focused PR effort aimed at subcontractors can be defensible if justified by how the buyers find vendors.",
+        "Hire the agency only with a measurable target and a plan to track sign-ups from coverage; weak but acceptable if the measurement is real."
+      ],
+      "credit_signals": [
+        "Matches the channel to where subcontractors actually are.",
+        "Uses the existing 15 customers (referrals, case studies).",
+        "Sets measurable targets for the 3 months."
+      ],
+      "source_support": [
+        {
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "source_date": "2026-10-05",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "20:28",
+          "quote": "And it is shocking how little um getting press helps a startup."
+        },
+        {
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "source_date": "2026-10-05",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "21:38",
+          "quote": "tell your own story"
+        },
+        {
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "source_date": "2026-10-05",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "22:12",
+          "quote": "when I read your email outbound, would you if you received this email, would you want to kill the company who sent it or would you want to respond?"
+        },
+        {
+          "source_id": "yt-1hHMwLxN6EM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-1hHMwLxN6EM.md",
+          "source_sha256": "21501297dd13705bdb847b6f5466786606cd85b898b433120f5d0befe5dfb75d",
+          "source_title": "Michael Seibel - How to Plan an MVP",
+          "source_date": "2019-08-01",
+          "speaker": "seibel",
+          "speaker_basis": "solo Startup School lecture; speaker introduces himself as Michael",
+          "timestamp": "10:39",
+          "quote": "Let's push the press launch off and let's push the get any customers launch really really soon."
+        },
+        {
+          "source_id": "yt-rQtrzBcf_Us",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-rQtrzBcf_Us.md",
+          "source_sha256": "953190a52f1037c9835d46972c7462284f0bb2f6cc51ec53bfa54e379c8bf6ad",
+          "source_title": "How to Build an MVP in the AI Coding Era",
+          "source_date": "2026-05-18",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "5:22",
+          "quote": "a smaller number of high-quality conversations where you really listen"
+        },
+        {
+          "source_id": "yt-rQtrzBcf_Us",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-rQtrzBcf_Us.md",
+          "source_sha256": "953190a52f1037c9835d46972c7462284f0bb2f6cc51ec53bfa54e379c8bf6ad",
+          "source_title": "How to Build an MVP in the AI Coding Era",
+          "source_date": "2026-05-18",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "10:15",
+          "quote": "Versus if you take the time to write really unique stuff, you can build a following."
+        }
+      ],
+      "judging_notes": [
+        "Judge usefulness for this person's stated goal and constraints. Matching the source's stance is not required.",
+        "Several recommendations are defensible; do not lower a score because the answer differs from the source-inspired direction.",
+        "Hard errors are arithmetic mistakes, plans that break a stated constraint, and invented facts about the user's situation."
+      ]
+    },
+    {
+      "id": "advice-yc-05",
+      "vault": "yc",
+      "domain": "hiring",
+      "case_types": [
+        "tradeoff_synthesis"
+      ],
+      "inspiration": "Synthetic case. Numbers invented. Principles drawn from: hiring pipelines, competing with other startups rather than big companies, selling responsibility, same-day offers, hiring effort on par with sales (yt-7TU636F_yVQ); small teams with agents (yt-eRrc1pUY5oU).",
+      "hard_checks": [
+        "Agency fee: 25% x $185,000 = $46,250 per hire, $92,500 for two (about 3.1% of the $3M seed).",
+        "Raising cash to $240,000: +$55,000 a year per hire, +$110,000 a year for two.",
+        "Funnel: 7 interviews, 3 offers, 0 accepts. Founders spend about 2 hours a week on recruiting."
+      ],
+      "constraint_checks": [
+        "Two senior backend roles; competing offers at about 2x cash."
+      ],
+      "defensible_answers": [
+        "Fix the process first: far larger pipeline, much more founder time, faster offers, target candidates who want early-stage responsibility rather than big-lab cash; adjust comp moderately.",
+        "Raise cash and keep equity meaningful if the candidates they want really price on cash; acceptable with the cost math.",
+        "Hire one and lean on coding agents for the rest, if the answer argues what the agents can and cannot cover.",
+        "Agency or overseas contractors with clear quality and management tradeoffs."
+      ],
+      "credit_signals": [
+        "Diagnoses the pipeline size and founder time, not only compensation.",
+        "Does the cost math for the options.",
+        "Recommends an explicit option."
+      ],
+      "source_support": [
+        {
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "source_date": "2026-10-05",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "15:01",
+          "quote": "the biggest issue is they don't have a pipeline."
+        },
+        {
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "source_date": "2026-10-05",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "16:40",
+          "quote": "you're probably competing against that other early stage startup, not Google"
+        },
+        {
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "source_date": "2026-10-05",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "16:40",
+          "quote": "You can tell them about all the responsibility they're going to have"
+        },
+        {
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "source_date": "2026-10-05",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "17:45",
+          "quote": "you probably should be putting as much effort into that as you are into sales."
+        },
+        {
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "source_date": "2026-10-05",
+          "speaker": "seibel",
+          "speaker_basis": "inferred: speaker co-founded Socialcam and Justin.tv, which the video description assigns to Michael Seibel",
+          "timestamp": "18:51",
+          "quote": "if someone was good, we had a printed and signed offer letter"
+        },
+        {
+          "source_id": "yt-eRrc1pUY5oU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-eRrc1pUY5oU.md",
+          "source_sha256": "8fbe28db43b55d62bb3d34a14fa14c17e184af284e64e9193975c5504b9b07ed",
+          "source_title": "Garry Tan: Own Your Intelligence",
+          "source_date": "2026-08-06",
+          "speaker": "tan",
+          "speaker_basis": "solo talk",
+          "timestamp": "21:56",
+          "quote": "When they crossed $15 million in annualized revenue, they were 15 people."
+        }
+      ],
+      "judging_notes": [
+        "Judge usefulness for this person's stated goal and constraints. Matching the source's stance is not required.",
+        "Several recommendations are defensible; do not lower a score because the answer differs from the source-inspired direction.",
+        "Hard errors are arithmetic mistakes, plans that break a stated constraint, and invented facts about the user's situation."
+      ]
+    },
+    {
+      "id": "advice-yc-06",
+      "vault": "yc",
+      "domain": "startup_decision_idea_choice",
+      "case_types": [
+        "tradeoff_synthesis"
+      ],
+      "inspiration": "Synthetic case. Details invented. Principles drawn from: low ambition and crowded AI sales tools, credible low-leap pitches rooted in what you know (yt-ozhRhElbVcI); slow buyers and starting with a faster-deciding subset (web-19ac0b6d18d2); understanding users deeply (web-278ac10fa14b).",
+      "hard_checks": [
+        "14 months of savings against utility procurement that needs council approval: a plan that depends on closing municipal contracts in months 1 to 6 without a way around procurement does not fit the runway."
+      ],
+      "constraint_checks": [
+        "Pick one idea.",
+        "First 6 months of de-risking."
+      ],
+      "defensible_answers": [
+        "Idea B, starting with buyers that decide faster (for example consulting engineers serving utilities, private water operators, or paid pilots under small-purchase limits) and using domain expertise.",
+        "Idea A, with a sharp differentiation thesis and a plan to convert the LOIs into paying customers quickly; acceptable if it addresses competition.",
+        "Either, if the answer weighs the tradeoff (speed of feedback and funding vs domain advantage and competition) and gives concrete 6-month milestones."
+      ],
+      "credit_signals": [
+        "Weighs domain expertise against crowded competition.",
+        "Addresses the slow-buyer problem concretely.",
+        "Questions the strength of LOIs from friends.",
+        "Makes an explicit choice."
+      ],
+      "source_support": [
+        {
+          "source_id": "yt-ozhRhElbVcI",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ozhRhElbVcI.md",
+          "source_sha256": "0592186cae27f26ed9df59b1617d80cc0d6e95ee898e0c1d0daeb06e808a1d12",
+          "source_title": "Low Ambition is Killing Your Startup",
+          "source_date": "2026-08-05",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "0:00",
+          "quote": "Whereas building the 17th AI SDR might raise you your $2 million seed round"
+        },
+        {
+          "source_id": "yt-ozhRhElbVcI",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ozhRhElbVcI.md",
+          "source_sha256": "0592186cae27f26ed9df59b1617d80cc0d6e95ee898e0c1d0daeb06e808a1d12",
+          "source_title": "Low Ambition is Killing Your Startup",
+          "source_date": "2026-08-05",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "2:13",
+          "quote": "Almost nothing in this video we're going to talk about is relevant to a un-venture funded company."
+        },
+        {
+          "source_id": "yt-ozhRhElbVcI",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ozhRhElbVcI.md",
+          "source_sha256": "0592186cae27f26ed9df59b1617d80cc0d6e95ee898e0c1d0daeb06e808a1d12",
+          "source_title": "Low Ambition is Killing Your Startup",
+          "source_date": "2026-08-05",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "13:08",
+          "quote": "The ambition has to be combined with a simple pitch"
+        },
+        {
+          "source_id": "yt-ozhRhElbVcI",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ozhRhElbVcI.md",
+          "source_sha256": "0592186cae27f26ed9df59b1617d80cc0d6e95ee898e0c1d0daeb06e808a1d12",
+          "source_title": "Low Ambition is Killing Your Startup",
+          "source_date": "2026-08-05",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "14:43",
+          "quote": "make very simple low leap of faith arguments on how you'll be able to do it."
+        },
+        {
+          "source_id": "web-19ac0b6d18d2",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-19ac0b6d18d2.md",
+          "source_sha256": "98c7640dca74c5f7a640e10858613300264805247e203d013ad7d393ef469f72",
+          "source_title": "Making Startups Powerful",
+          "source_date": "2026-09-01",
+          "speaker": "pg",
+          "speaker_basis": "essay on paulgraham.com (frontmatter author field is empty)",
+          "timestamp": null,
+          "quote": "Whenever I meet a startup selling to customers like that, I ask if there's some way they could at least start by selling to a subset of the market that decides faster."
+        },
+        {
+          "source_id": "web-278ac10fa14b",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-278ac10fa14b.md",
+          "source_sha256": "7e1e8e8c4a7646f97b59245ec122e5568ee1989d8d4d1f638d1ac9878dd88f28",
+          "source_title": "How to Earn a Billion Dollars",
+          "source_date": "2026-06-01",
+          "speaker": "pg",
+          "speaker_basis": "essay on paulgraham.com (frontmatter author field is empty)",
+          "timestamp": null,
+          "quote": "The key to starting a successful startup is to understand some group of users so well that you can make exactly what they want."
+        }
+      ],
+      "judging_notes": [
+        "Judge usefulness for this person's stated goal and constraints. Matching the source's stance is not required.",
+        "Several recommendations are defensible; do not lower a score because the answer differs from the source-inspired direction.",
+        "Hard errors are arithmetic mistakes, plans that break a stated constraint, and invented facts about the user's situation."
+      ]
+    }
+  ]
+}

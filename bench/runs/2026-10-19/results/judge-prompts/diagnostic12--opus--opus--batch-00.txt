@@ -1,0 +1,396 @@
+Evaluation date: 2026-10-19. This is the current date, not a future date. May 2026 is in the past. Publication dates and dates of events described in a source are distinct. A model training cutoff does not invalidate supplied later material. You are an independent evaluator. Use no tools, commands, files, browsing, or external retrieval. A and B are anonymous. Their ordering conveys nothing. Do not infer their model, source access, or provenance. Do not reward writing style, citation presence, quotations, expert agreement, or presumed source use. A tie is valid.
+Score each answer on the four specified integer scales, each from 1 to 5. Anchors: 1 fundamentally deficient; 2 major problems; 3 mixed with meaningful gaps; 4 good with minor gaps; 5 strong and sufficiently complete. Choose A, B, or tie for substantive overall quality. Preserve uncertainty rather than inventing evidence.
+Return ONLY a JSON object with exactly one key, "judgments", containing one object per supplied pair. Each object has exactly: "id", "A", "B", "winner", "reason", "factual_objections". A and B each contain exactly the four dimension names and integer scores. winner is "A", "B", or "tie"; reason is a nonempty string. factual_objections is a list, possibly empty, of objects with exactly "answer" ("A" or "B"), "claim", "label" ("contradicted" or "unverified"), and "evidence" (a nonempty explanation). Distinguish an established contradiction from an unverified claim.
+Evaluate accuracy, specificity, faithfulness, and usefulness using the complete audited reference packet. The reference is evidence, not a required script. Missing optional detail is not automatically a false claim. Label a factual objection contradicted only when supplied evidence establishes the contradiction; otherwise label it unverified. Do not treat absence from the reference as proof of falsehood. Resolve a conflict between a summary and direct evidence in favor of the direct evidence and explain it.
+
+Pairs:
+[
+  {
+    "id": "p-ee2b7ee36164eccb",
+    "question": "I'm a 20-year-old CS student with a side project I'm excited about. Would Paul Graham tell me to start a startup now, while I'm still in college?",
+    "A": "# Probably not \"start a startup,\" but keep building the project\n\nPaul Graham's view isn't a simple yes or no, and it points somewhere specific for you.\n\n**What he has argued.** He has generally discouraged students from setting out to *start a startup* as a goal while in college. His reasoning is that the best use of those years is learning deeply and building things that interest you. He has also argued that the best startup ideas tend to come from organic side projects, built because you wanted the thing yourself, not from deliberately hunting for an idea. So your situation, a side project you're excited about, is close to exactly what he recommends.\n\n**Where it flips.** He has also said that if a side project starts taking off on its own, you shouldn't kill it out of loyalty to a plan. Real users arriving and growing, especially through word of mouth, is the signal that turns a project into a startup. YC has also made it easier for students to apply, so \"after graduation\" isn't a fixed rule.\n\n**Practical next steps:**\n- Keep building, and get the project in front of real users soon.\n- Track whether usage grows without you pushing it, and whether people would be upset if it disappeared.\n- If it gains traction, consider applying to YC or a similar program. Taking leave from school is usually reversible. Dropping out is not urgent.\n\n**Decision criteria:** Go all-in if you see organic growth, users who'd pay or strongly miss it, and your own sustained obsession. Stay in school if it's mainly the *idea* of a startup that excites you rather than this specific problem.\n\n**Uncertainty:** These are his general published positions. How he'd judge your particular project is unknowable.",
+    "B": "**Probably not as a plan, but he'd tell you to keep building the side project.**\n\n**His default answer is no.** Paul Graham's long-standing advice is not to start a startup in college. A real startup takes over your whole life, so you can't really be a student and a founder at once. Your early twenties are good for open-ended exploration that success would take away. He also argues you lose nothing by waiting, since you're more likely to succeed later.\n\n**But your situation is his exception.** He has always allowed that if a side project takes off on its own, as Facebook did, running with it may be reasonable. His recent writing leans harder on this. He wants students to have free time for their own projects because those are how startups actually begin. He still holds that you can't run a startup and stay a full-time student, so success would eventually force a choice.\n\n**What he'd likely tell you to do now:**\n- Build the project for its own sake, without worrying about whether it's a startup.\n- Make it for yourself and your friends, and get real users quickly.\n- Watch whether usage grows week over week without you pushing it.\n- Keep studying computer science and learning hard things.\n- Don't treat \"founder\" as a credential or a way to look impressive.\n\n**Decision criteria:**\n- **Keep it a side project** if growth is flat, it depends on your effort to spread, or you mainly like the idea of being a founder.\n- **Consider running with it** if users are pulling it forward, it's eating an alarming share of your time, and you'd regret letting it die. A leave of absence is lower-risk than dropping out. That last suggestion is mine, not his.\n\n**What's uncertain:** he has never ruled on your specific case. He also says the best way to learn startups is by doing, which sits somewhat uneasily with \"wait.\"",
+    "reference": {
+      "actual_stance": "No. He tells students not to start a startup in college: a startup takes over your entire life, so you cannot really be both a student and a founder, and 20 is not the optimal age. You give up nothing by waiting because you will be more likely to succeed later. In college, learn powerful things, build domain expertise and work on your own projects with people you like, because side projects are where the best ideas and cofounders come from ('just learn'). The exception: if a side project takes off on its own, like Facebook, it may be reasonable to run with it. His August 2026 essay repeats that running a startup is incompatible with being a full-time student and stresses students' own projects.",
+      "category": "known",
+      "errors": [
+        "Saying he recommends starting now because college is low risk.",
+        "Telling the student to drop the side project entirely."
+      ],
+      "evidence": [
+        {
+          "quote": "you can't do that in college for the reason I just explained, that startups take over your entire life.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "18:22"
+        },
+        {
+          "quote": "Do not start a startup in college.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "18:56"
+        },
+        {
+          "quote": "20 is not the optimal time to do it.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "18:56"
+        },
+        {
+          "quote": "You're not sacrificing anything if you forego starting a startup at 20, cuz you'll be more likely to succeed if you wait.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "21:12"
+        },
+        {
+          "quote": "you're 20 and you have some side project that takes off like Facebook did. Then you face the choice of either running with it or not, and maybe it's reasonable to run with it.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "21:12"
+        },
+        {
+          "quote": "If you wanna start a startup, what you should do in college is learn powerful things.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "30:15"
+        },
+        {
+          "quote": "So here, is the ultimate advice for young would-be startup founders reduced to two words, just learn.",
+          "source_date": "2014-09-30",
+          "source_id": "yt-ii1jcLg-eIQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ii1jcLg-eIQ.md",
+          "source_sha256": "9b08dc178e14645f09f4e35b17ae0ff9c6fb81667de34e373e36b5364d5bac1e",
+          "source_title": "Lecture 3 - Before the Startup (Paul Graham)",
+          "speaker": "pg",
+          "speaker_basis": "solo lecture",
+          "timestamp": "30:49"
+        },
+        {
+          "quote": "Running a startup is incompatible with being a full time student.",
+          "source_date": "2026-08-01",
+          "source_id": "web-c75e015ff81a",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-c75e015ff81a.md",
+          "source_sha256": "d25c767587e02e2ae3ca70392344ae7ed1d30132b7415c03603e346eb3427eee",
+          "source_title": "How Universities Should Prepare Founders",
+          "speaker": "pg",
+          "speaker_basis": "essay on paulgraham.com (frontmatter author field is empty)",
+          "timestamp": null
+        },
+        {
+          "quote": "random side projects are where the best startup ideas come from.",
+          "source_date": "2026-08-01",
+          "source_id": "web-c75e015ff81a",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/web-c75e015ff81a.md",
+          "source_sha256": "d25c767587e02e2ae3ca70392344ae7ed1d30132b7415c03603e346eb3427eee",
+          "source_title": "How Universities Should Prepare Founders",
+          "speaker": "pg",
+          "speaker_basis": "essay on paulgraham.com (frontmatter author field is empty)",
+          "timestamp": null
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold matches the 2014 lecture. It did not cite the August 2026 essay 'How Universities Should Prepare Founders', which confirms the same stance. Added; either source satisfies the key."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-01",
+      "key_status": "confirmed_expanded",
+      "primary_sources": [
+        "yt-ii1jcLg-eIQ"
+      ],
+      "question": "I'm a 20-year-old CS student with a side project I'm excited about. Would Paul Graham tell me to start a startup now, while I'm still in college?",
+      "required_points": [
+        "No, do not start a startup while in college; a startup takes over your whole life, which is incompatible with being a full-time student.",
+        "Exception: if the side project takes off on its own, it may be reasonable to run with it."
+      ],
+      "supporting_points": [
+        "Waiting costs nothing; you are more likely to succeed if you wait.",
+        "Learn powerful things, get domain expertise; 'just learn'.",
+        "Keep working on your own projects; they produce the best ideas and cofounders.",
+        "The 2026 essay restates the incompatibility and the value of student projects."
+      ],
+      "uncertainty": [
+        "The main source is from 2014. The 2026 essay supports the same position, so the stance is not stale."
+      ],
+      "vault": "yc"
+    }
+  },
+  {
+    "id": "p-dd85420a3336c01b",
+    "question": "Why does Garry Tan say the premium on doing YC is bigger than ever and that the gap between YC and second place has grown?",
+    "A": "Garry Tan, as YC's president and CEO, argues that the value of going through YC has risen, not fallen, as startup tools have gotten cheaper. His reasoning generally runs along these lines:\n\n- **Speed matters more in the AI era.** Small teams can now build and reach revenue much faster. When winners pull ahead in months rather than years, a structured three-month sprint with intense feedback is worth more.\n- **Network effects compound.** With thousands of alumni companies, YC offers a ready base of early customers, hires, and advisors. Rival programs can copy the curriculum but not decades of accumulated network.\n- **Signal in a noisy market.** Building is cheap, so many more startups exist. Investors lean harder on trusted filters, and YC's brand plus Demo Day concentrate investor attention in a way smaller accelerators cannot.\n- **Selection and peer density.** More applicants let YC be more selective, and stronger batches make the peer group itself more valuable.\n- **Outcome data.** He points to recent batches reaching meaningful revenue unusually quickly as evidence that the advantage is widening.\n\n**What's uncertain:** This is the view of YC's own leader, so it is partly advocacy. Independent, survivorship-adjusted comparisons of YC versus other accelerators are limited. Faster revenue growth may also reflect broader AI tailwinds rather than YC itself.\n\n**If you're deciding whether to apply:** YC's premium matters most if you are a first-time founder, lack investor connections, or sell to other startups. It matters less if you already have strong traction, warm investor access, or a niche where a specialist accelerator or industry-specific investor adds more. Weigh the standard dilution against how much the network and signal would speed up your next funding round.",
+    "B": "**Correction:** Garry Tan didn't make this claim. Sam Altman did, while Tan was hosting their Startup School 2026 conversation in July. Altman noted that he could say it while Tan, as YC's current head, probably couldn't. I know of no statement by either of them that the gap between YC and second place has grown. That part looks like an embellishment of the original remark.\n\n**What Altman said around the claim:**\n- It came up while discussing co-founder matching, which Altman said had once been the main limit on how many good startups YC could fund.\n- He stressed getting into networks early, because relationships take years to compound.\n- He said moving to the Bay Area was historically the best way to meet future co-founders, though he now feels less sure of that.\n- He didn't give a detailed reason why the premium is larger now.\n\n**Plausible reasons (my inference, not his stated argument):**\n- AI makes building cheap, so access to people, investors and a dense peer group matters relatively more.\n- YC acceptance raises a startup's standing with investors.\n- A batch supplies colleagues, solutions from peers, and fast-deciding early customers.\n\n**Weighing it:** The claim comes from a former YC president at YC's own event, with no supporting data. Treat it as an informed insider opinion, not evidence.\n\n**Decision criteria if you're considering YC:**\n- **Network:** YC is worth more if you lack a co-founder, Bay Area connections, or credibility with investors.\n- **Leverage:** It's worth less if you already have strong traction or a network, since your existing leverage may matter more.\n- **Next step:** Talk to recent founders from several batches and ask what they'd have lacked without YC.",
+    "reference": {
+      "actual_stance": "False attribution. Sam Altman said it, in his closing conversation with Garry Tan at Startup School 2026, prefacing it with 'I can say this, Garry probably can't'. He explained the widening gap as network effects: networks put you where you meet future cofounders (he met his OpenAI cofounders years earlier), and that takes a long time to compound. Just before, he said YC's once-heretical push to move to San Francisco was clearly right, though he has less intuition about it now.",
+      "category": "attribution",
+      "errors": [
+        "Attributing the claim to Garry Tan.",
+        "Explaining it with reasons the source does not give (bigger checks, brand) as if quoted."
+      ],
+      "evidence": [
+        {
+          "quote": "it used to be very heretical that YC told people they had to move to San Francisco. And looking back, it was clearly right.",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "16:25"
+        },
+        {
+          "quote": "I also think that I I can say this, Gary probably can't. I I I think the premium on doing YC is bigger now than it's like ever been before.",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "16:56"
+        },
+        {
+          "quote": "the distance between like YC and second place is has expanded. And this is a reminder of the power of",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "16:56"
+        },
+        {
+          "quote": "network effects.",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "17:28"
+        },
+        {
+          "quote": "the people that I started OpenAI with, I met like many many years in some cases before uh starting OpenAI",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "17:28"
+        },
+        {
+          "quote": "the sooner you can put yourself just in a flow where you're going to meet the people that will be your eventual co-founders",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "17:28"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold says Altman prefaced the line 'because it would sound self-serving coming from YC's current CEO'. The raw gives the preface but not the reason. Kept as an acceptable inference, not a required point.",
+        "Captions spell the name 'Gary'; quotes keep the caption spelling."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-17",
+      "key_status": "confirmed_with_interpretation_flag",
+      "primary_sources": [
+        "yt-ZIaOBAjvc38"
+      ],
+      "question": "Why does Garry Tan say the premium on doing YC is bigger than ever and that the gap between YC and second place has grown?",
+      "required_points": [
+        "Corrects the attribution: Sam Altman said it, not Garry Tan.",
+        "Gives his reason: network effects (meeting future cofounders, compounding over time)."
+      ],
+      "supporting_points": [
+        "Prefaced with 'I can say this, Garry probably can't'.",
+        "Context: Startup School 2026 conversation with Garry Tan.",
+        "Context: moving to SF was clearly right in hindsight; he has less intuition about it now.",
+        "Inference that it would sound self-serving from YC's CEO is reasonable but not stated in the source."
+      ],
+      "uncertainty": [
+        "Speaker attribution is inferred from content (answer references OpenAI cofounders; Tan asks the questions). The description confirms the conversation format."
+      ],
+      "vault": "yc"
+    }
+  },
+  {
+    "id": "p-db3e2e9db4864dd8",
+    "question": "I've spent months pitching seed investors, polishing my deck and taking follow-up meetings. How would Michael Seibel tell me to think about fundraising?",
+    "A": "**He would tell you that months of pitching, polishing and follow-ups usually signals a leverage problem, not a pitch problem.** His core view is that fundraising goes well when investors are chasing you. That happens because the company is visibly working: growing, with users who care. A better deck rarely changes the outcome. He has said investors pursue most of the deals they actually do, and that founders get strung along when an investor wants to keep an option open in case you take off. Every extra meeting you take makes that takeoff less likely, because it pulls you away from building.\n\nHe has his own example. At Justin.tv he spent about eight months failing to raise. With two months of runway left, the team turned to making the company profitable and got more done in those two months than in the whole fundraise.\n\n**Next steps he'd likely push:**\n- **Set a deadline.** Give the raise two to three weeks, then stop.\n- **Ask for a clear yes or no.** Treat repeated follow-ups without a term sheet as a no.\n- **Spend the reclaimed time on users and growth.** Talk to customers, ship, and track your weekly growth rate.\n- **Cut burn** so runway isn't forcing the timing.\n- **Raise again when you have proof points** that make the pitch almost unnecessary.\n\n**What would change the advice:**\n- **Strong, steady growth but investors still pass:** look at who you're targeting and how you're framing the company. The deck itself is the last thing to fix.\n- **A capital-heavy business** (hardware, regulated industries): you may need money before traction. Raise against a specific milestone.\n- **Runway under about six months:** prioritize reaching profitability over continuing to pitch.\n\n**Caveat:** this reconstructs his stated public views. It isn't his read on your particular company, and he also sits on the investor side of the table.",
+    "B": "Michael Seibel's view, as expressed in years of advice to founders, is roughly this: **fundraising is a distraction you endure to get back to building, not the job itself.** Months of pitching suggests the process has become the work, and that is the problem to fix.\n\n**How that view applies to your situation**\n\n- **Compress the timeline.** A seed round should be a short, intense sprint of a few weeks: line up many meetings close together, create momentum, and close. A raise that drags for months usually means the market is giving you an answer.\n- **Treat \"maybe\" as \"no.\"** Follow-up meetings without a commitment rarely convert. Investors who are excited move quickly.\n- **The deck isn't the bottleneck.** A clear, simple explanation of what you do, who it's for, and evidence that people want it matters far more than polish. More deck iterations won't overcome weak traction.\n- **Progress is the best pitch.** If you can't raise, stop and spend the next stretch building, launching, and talking to users. Revenue or strong usage growth changes conversations far more than better slides.\n- **Raise enough to reach the next real milestone.** Don't over-optimize valuation; take reasonable terms from people who are truly in.\n\n**Next steps**\n\n1. Set a hard deadline, such as three weeks, for your current process.\n2. Ask the investors you've met what specific milestone would make them commit.\n3. If nothing closes, pause fundraising and focus on that milestone.\n\n**Assumptions and uncertainty:** This reflects Seibel's well-known general advice, not a prediction of what they would say about your specific company. If you already have strong traction and are stalling only on terms or a lead investor, the advice shifts toward finding a lead quickly rather than pausing.",
+    "reference": {
+      "actual_stance": "Fundraising comes down to leverage, meaning your ability to walk away, and the deck is not doing the work. Ask whether you are growing; if you are not growing or not launched, deck work may be the biggest waste of your time. The effective way to raise is to grow so fast, with so many proof points, that you can raise quickly with little preparation. Michael's own evidence: when Socialcam was hot he asked investors what share of deals they chase versus take from the front door, and every answer was between 80/20 and 90/10 chase; at Justin.tv he spent eight months fundraising without success, and the two months of forced focus on profitability that followed got far more done. Investors who string founders along for months are in effect buying an option on them.",
+      "category": "fresh",
+      "errors": [
+        "Recommending a bigger investor list and a tighter deck as the main fix.",
+        "Inventing statistics not in the source."
+      ],
+      "evidence": [
+        {
+          "quote": "If you're not growing and not launched, in many ways, working on this deck could be the biggest waste",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "2:48"
+        },
+        {
+          "quote": "the deck isn't doing the work at all.",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "3:21"
+        },
+        {
+          "quote": "Leverage is also another way of thinking about is your ability to walk away.",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "3:54"
+        },
+        {
+          "quote": "the way to be very effective at fundraising is to be growing so quickly and have so many proof points that your startup is working",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "5:02"
+        },
+        {
+          "quote": "one of the times we almost died at Justin TV you know I had spent the eight months prior trying to fundra",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "seibel",
+          "speaker_basis": "inferred: speaker co-founded Socialcam and Justin.tv, which the video description assigns to Michael Seibel",
+          "timestamp": "6:44"
+        },
+        {
+          "quote": "And the amount of we got done in that two months versus slinging decks",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "seibel",
+          "speaker_basis": "inferred: speaker co-founded Socialcam and Justin.tv, which the video description assigns to Michael Seibel",
+          "timestamp": "6:44"
+        },
+        {
+          "quote": "it's sort of like you're buying an option.",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "8:57"
+        },
+        {
+          "quote": "And the answers I got only varied between 8020 chase and 9010 chase.",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "seibel",
+          "speaker_basis": "inferred: speaker co-founded Socialcam and Justin.tv, which the video description assigns to Michael Seibel",
+          "timestamp": "10:03"
+        },
+        {
+          "quote": "if you can invest that time in making your company something that investors will chase after versus decksmithing,",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "seibel",
+          "speaker_basis": "inferred: speaker co-founded Socialcam and Justin.tv, which the video description assigns to Michael Seibel",
+          "timestamp": "10:03"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold attributes everything to Michael Seibel. The episode is a two-host conversation with unlabeled captions. The Socialcam poll and the Justin.tv story are Michael's (he co-founded both). The leverage definition, the deck lines and the 'buying an option' point come from the joint conversation and may be Dalton's. Grade the content; do not penalize an answer that credits the episode to both hosts."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-08",
+      "key_status": "confirmed_speaker_caveat",
+      "primary_sources": [
+        "yt-7TU636F_yVQ"
+      ],
+      "question": "I've spent months pitching seed investors, polishing my deck and taking follow-up meetings. How would Michael Seibel tell me to think about fundraising?",
+      "required_points": [
+        "Stop polishing the deck; it is not doing the work. Leverage (traction, growth, ability to walk away) decides fundraising.",
+        "Spend the time building, launching, talking to users and growing, so investors chase you."
+      ],
+      "supporting_points": [
+        "Investors chase 80% to 90% of their deals (his Socialcam-era poll).",
+        "Justin.tv: eight months of failed fundraising vs two productive months focused on profitability.",
+        "Being strung along for months means the investor is buying an option on you.",
+        "Raise fast at the end, with little prep, once things are working."
+      ],
+      "uncertainty": [
+        "Speaker split between Dalton Caldwell and Michael Seibel is not recoverable from the captions except where noted."
+      ],
+      "vault": "yc"
+    }
+  }
+]

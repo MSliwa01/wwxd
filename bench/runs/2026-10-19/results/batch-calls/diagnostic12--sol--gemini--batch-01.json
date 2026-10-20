@@ -1,0 +1,244 @@
+{
+  "actual_input_tokens": 22570,
+  "answer": "{\n  \"judgments\": [\n    {\n      \"id\": \"p-5a6c5a48b0f202f4\",\n      \"A\": {\n        \"accuracy\": 3,\n        \"specificity\": 4,\n        \"faithfulness\": 3,\n        \"usefulness\": 4\n      },\n      \"B\": {\n        \"accuracy\": 2,\n        \"specificity\": 3,\n        \"faithfulness\": 2,\n        \"usefulness\": 2\n      },\n      \"winner\": \"A\",\n      \"reason\": \"A captures the central recommendation, the 10% test, and the approximately 65% break-even close rate for this business. Its ancillary offer recommendations are unsupported. B substitutes unsupported conversion targets and a larger increase, missing the case-specific economics. Neither explains the roughly 25% profit increase.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Hormozi would advise adding a 10x premium tier and a low-priced annual maintenance membership guaranteeing yearly visits.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The supplied HVAC evidence supports a 10% price increase and its profit implications, but does not establish these additional attributed recommendations.\"\n        },\n        {\n          \"answer\": \"A\",\n          \"claim\": \"The company is likely sacrificing customer conviction by keeping its current prices.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"Hormozi says higher prices sometimes increase conviction. That does not establish that this company's current pricing is reducing conviction.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"Hormozi typically recommends increasing prices until close rates reach 40% to 50%, and a rate above 70% means prices remain too low.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The packet establishes neither general threshold. For this case, Hormozi proposes a 10% increase and calculates approximately 65% as the profit break-even rate, rather than prescribing a target conversion range.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"The company is convincing almost everyone who inquires.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The supplied 82% figure applies to in-home inspections. The conversion rate across all inquiries is not supplied.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"p-347dcc25a926e232\",\n      \"A\": {\n        \"accuracy\": 2,\n        \"specificity\": 1,\n        \"faithfulness\": 2,\n        \"usefulness\": 1\n      },\n      \"B\": {\n        \"accuracy\": 3,\n        \"specificity\": 1,\n        \"faithfulness\": 2,\n        \"usefulness\": 2\n      },\n      \"winner\": \"B\",\n      \"reason\": \"Both correctly resist attributing the IPO experience to Hormozi, but neither identifies the interviewer as the storyteller or explains the European listing, hypothetical NASDAQ valuation, and subsequent equity compensation. B is marginally better because A additionally mischaracterizes the actual personal anecdote as a theoretical private-to-public valuation illustration.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"The quadrupling story is a theoretical private-to-public valuation principle rather than a personal anecdote.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"The interviewer explicitly describes his own company's European public listing and banks saying that the same business would be worth four times more on NASDAQ. This is a personal anecdote comparing two public exchanges, not the private-to-public example A supplies.\"\n        },\n        {\n          \"answer\": \"A\",\n          \"claim\": \"American Pacific Group acquired a majority stake in Acquisition.com's portfolio operations, producing Hormozi's major liquidity event.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The supplied packet does not document this transaction or establish the acquired entity. It concerns the interviewer's IPO-related experience.\"\n        },\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Hormozi has never taken a company public or listed any primary operating business on NASDAQ.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The evidence establishes that this particular story belongs to the interviewer, but does not establish an exhaustive history of Hormozi's businesses.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"Hormozi's primary liquidity event was selling majority stakes in his licensing and supplement companies to private equity.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"No supplied evidence documents those sales or establishes their status as his primary liquidity event.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"Hormozi's businesses have not gone public in an IPO.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"Correcting the speaker attribution does not establish this broader historical claim; the packet supplies no comprehensive listing history.\"\n        }\n      ]\n    },\n    {\n      \"id\": \"p-66f97cdfd6a8bbe4\",\n      \"A\": {\n        \"accuracy\": 1,\n        \"specificity\": 1,\n        \"faithfulness\": 1,\n        \"usefulness\": 1\n      },\n      \"B\": {\n        \"accuracy\": 4,\n        \"specificity\": 5,\n        \"faithfulness\": 4,\n        \"usefulness\": 4\n      },\n      \"winner\": \"B\",\n      \"reason\": \"B correctly rejects the specific premise and explains the actual recommendation: make door-to-door the primary growth engine and build a sales team. A rejects an unasked universal claim while accepting the false case-specific premise and inventing a rationale for switching channels. B's separate attribution about Google Ads remains unsupported.\",\n      \"factual_objections\": [\n        {\n          \"answer\": \"A\",\n          \"claim\": \"Hormozi likely advised this roofer to switch to Google Ads because the business had outgrown door-knocking and reached a capacity wall.\",\n          \"label\": \"contradicted\",\n          \"evidence\": \"Hormozi explicitly says to 'go all in door to door' and build a 'DDD army.' His recap calls door-to-door the primary growth engine, and the owner subsequently reports following that advice.\"\n        },\n        {\n          \"answer\": \"B\",\n          \"claim\": \"Hormozi recommended Google Ads and digital marketing as a separate play for established service businesses.\",\n          \"label\": \"unverified\",\n          \"evidence\": \"The packet establishes no such separate recommendation. Its absence check finds only 'Google review' in the roofing transcript; that does not establish or disprove what he recommended elsewhere.\"\n        }\n      ]\n    }\n  ]\n}",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 64.534,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "577f14523e8179ce3e8bc50e9b814fff62ad5ce4ecf467b7c6f0afdab5db484c"
+    }
+  ],
+  "batch": {
+    "blocked_pair_ids": [],
+    "chars_per_token": 3.57,
+    "eligible_pair_ids": [
+      "p-5a6c5a48b0f202f4",
+      "p-347dcc25a926e232",
+      "p-66f97cdfd6a8bbe4"
+    ],
+    "estimated_input_tokens": 10298,
+    "id": "diagnostic12--sol--gemini--batch-01",
+    "judge_family": "sol",
+    "pair_ids": [
+      "p-5a6c5a48b0f202f4",
+      "p-347dcc25a926e232",
+      "p-66f97cdfd6a8bbe4"
+    ],
+    "prompt_bytes": 36762,
+    "prompt_sha256": "0d31b7338840d526ab633b86a100491994e226d00356708d977cc78004010d52",
+    "suite": "diagnostic12"
+  },
+  "chars_per_token": 3.57,
+  "command": [
+    "codex",
+    "exec",
+    "--ignore-user-config",
+    "--ignore-rules",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--model",
+    "gpt-6.1-sol",
+    "--json",
+    "--color",
+    "never",
+    "--disable",
+    "shell_tool",
+    "--disable",
+    "unified_exec",
+    "--disable",
+    "multi_agent",
+    "--disable",
+    "apps",
+    "--disable",
+    "plugins",
+    "--disable",
+    "view_image",
+    "--disable",
+    "shell_snapshot",
+    "--disable",
+    "skill_search",
+    "--disable",
+    "skill_mcp_dependency_install",
+    "--disable",
+    "request_permissions_tool",
+    "--disable",
+    "sleep_tool",
+    "-c",
+    "model_reasoning_effort=\"high\"",
+    "-c",
+    "project_doc_max_bytes=0",
+    "-c",
+    "web_search=\"disabled\"",
+    "-c",
+    "mcp_servers={}",
+    "-c",
+    "developer_instructions=\"Answer the supplied task using only its text. Do not use tools or commands.\"",
+    "-"
+  ],
+  "decoded": {
+    "p-347dcc25a926e232": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "accuracy": 2,
+          "faithfulness": 2,
+          "specificity": 1,
+          "usefulness": 1
+        },
+        "B": {
+          "accuracy": 3,
+          "faithfulness": 2,
+          "specificity": 1,
+          "usefulness": 2
+        },
+        "factual_objections": [
+          {
+            "answer": "A",
+            "claim": "The quadrupling story is a theoretical private-to-public valuation principle rather than a personal anecdote.",
+            "evidence": "The interviewer explicitly describes his own company's European public listing and banks saying that the same business would be worth four times more on NASDAQ. This is a personal anecdote comparing two public exchanges, not the private-to-public example A supplies.",
+            "label": "contradicted"
+          },
+          {
+            "answer": "A",
+            "claim": "American Pacific Group acquired a majority stake in Acquisition.com's portfolio operations, producing Hormozi's major liquidity event.",
+            "evidence": "The supplied packet does not document this transaction or establish the acquired entity. It concerns the interviewer's IPO-related experience.",
+            "label": "unverified"
+          },
+          {
+            "answer": "A",
+            "claim": "Hormozi has never taken a company public or listed any primary operating business on NASDAQ.",
+            "evidence": "The evidence establishes that this particular story belongs to the interviewer, but does not establish an exhaustive history of Hormozi's businesses.",
+            "label": "unverified"
+          },
+          {
+            "answer": "B",
+            "claim": "Hormozi's primary liquidity event was selling majority stakes in his licensing and supplement companies to private equity.",
+            "evidence": "No supplied evidence documents those sales or establishes their status as his primary liquidity event.",
+            "label": "unverified"
+          },
+          {
+            "answer": "B",
+            "claim": "Hormozi's businesses have not gone public in an IPO.",
+            "evidence": "Correcting the speaker attribution does not establish this broader historical claim; the packet supplies no comprehensive listing history.",
+            "label": "unverified"
+          }
+        ],
+        "id": "p-347dcc25a926e232",
+        "reason": "Both correctly resist attributing the IPO experience to Hormozi, but neither identifies the interviewer as the storyteller or explains the European listing, hypothetical NASDAQ valuation, and subsequent equity compensation. B is marginally better because A additionally mischaracterizes the actual personal anecdote as a theoretical private-to-public valuation illustration.",
+        "winner": "B"
+      }
+    },
+    "p-5a6c5a48b0f202f4": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "accuracy": 3,
+          "faithfulness": 3,
+          "specificity": 4,
+          "usefulness": 4
+        },
+        "B": {
+          "accuracy": 2,
+          "faithfulness": 2,
+          "specificity": 3,
+          "usefulness": 2
+        },
+        "factual_objections": [
+          {
+            "answer": "A",
+            "claim": "Hormozi would advise adding a 10x premium tier and a low-priced annual maintenance membership guaranteeing yearly visits.",
+            "evidence": "The supplied HVAC evidence supports a 10% price increase and its profit implications, but does not establish these additional attributed recommendations.",
+            "label": "unverified"
+          },
+          {
+            "answer": "A",
+            "claim": "The company is likely sacrificing customer conviction by keeping its current prices.",
+            "evidence": "Hormozi says higher prices sometimes increase conviction. That does not establish that this company's current pricing is reducing conviction.",
+            "label": "unverified"
+          },
+          {
+            "answer": "B",
+            "claim": "Hormozi typically recommends increasing prices until close rates reach 40% to 50%, and a rate above 70% means prices remain too low.",
+            "evidence": "The packet establishes neither general threshold. For this case, Hormozi proposes a 10% increase and calculates approximately 65% as the profit break-even rate, rather than prescribing a target conversion range.",
+            "label": "unverified"
+          },
+          {
+            "answer": "B",
+            "claim": "The company is convincing almost everyone who inquires.",
+            "evidence": "The supplied 82% figure applies to in-home inspections. The conversion rate across all inquiries is not supplied.",
+            "label": "unverified"
+          }
+        ],
+        "id": "p-5a6c5a48b0f202f4",
+        "reason": "A captures the central recommendation, the 10% test, and the approximately 65% break-even close rate for this business. Its ancillary offer recommendations are unsupported. B substitutes unsupported conversion targets and a larger increase, missing the case-specific economics. Neither explains the roughly 25% profit increase.",
+        "winner": "A"
+      }
+    },
+    "p-66f97cdfd6a8bbe4": {
+      "error": "",
+      "status": "ok",
+      "verdict": {
+        "A": {
+          "accuracy": 1,
+          "faithfulness": 1,
+          "specificity": 1,
+          "usefulness": 1
+        },
+        "B": {
+          "accuracy": 4,
+          "faithfulness": 4,
+          "specificity": 5,
+          "usefulness": 4
+        },
+        "factual_objections": [
+          {
+            "answer": "A",
+            "claim": "Hormozi likely advised this roofer to switch to Google Ads because the business had outgrown door-knocking and reached a capacity wall.",
+            "evidence": "Hormozi explicitly says to 'go all in door to door' and build a 'DDD army.' His recap calls door-to-door the primary growth engine, and the owner subsequently reports following that advice.",
+            "label": "contradicted"
+          },
+          {
+            "answer": "B",
+            "claim": "Hormozi recommended Google Ads and digital marketing as a separate play for established service businesses.",
+            "evidence": "The packet establishes no such separate recommendation. Its absence check finds only 'Google review' in the roofing transcript; that does not establish or disprove what he recommended elsewhere.",
+            "label": "unverified"
+          }
+        ],
+        "id": "p-66f97cdfd6a8bbe4",
+        "reason": "B correctly rejects the specific premise and explains the actual recommendation: make door-to-door the primary growth engine and build a sales team. A rejects an unasked universal claim while accepting the false case-specific premise and inventing a rationale for switching channels. B's separate attribution about Google Ads remains unsupported.",
+        "winner": "B"
+      }
+    }
+  },
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 10298,
+  "event_count": 4,
+  "finish_reasons": [
+    "turn.completed"
+  ],
+  "finished": "2026-10-19T11:35:02.562405+00:00",
+  "observed_models": [],
+  "parse_error": "",
+  "prompt_sha256": "0d31b7338840d526ab633b86a100491994e226d00356708d977cc78004010d52",
+  "requested_model": "gpt-6.1-sol",
+  "serving_model_attested": false,
+  "status": "ok",
+  "usage_events": [
+    {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 0,
+      "input_tokens": 22570,
+      "output_tokens": 2896,
+      "reasoning_output_tokens": 1472
+    }
+  ]
+}

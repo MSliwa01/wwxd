@@ -1,0 +1,59 @@
+{
+  "actual_input_tokens": 110212,
+  "answer": "To protect your cleaning company from losing 80% of your new contracts, commit to a staged, multi-channel outbound and referral strategy rather than relying on a single untested agency. Your current constraint is demand concentration, and your primary operational lever is your operations manager taking on sales part-time within your $8,000 monthly growth budget. \n\n### What to Do First\nStart with Option (c): formalize a referral program with complementary vendors (HVAC, pest control, security) and other property managers. This costs virtually nothing, leverages existing trust, and attacks the same building decision-makers. In parallel, allocate a portion of your budget to test Option (b): bring on a full-time outbound sales rep at $5,500 a month to drive commercial walkthroughs. Do not hire the Google Ads agency yet; agency fees and unproven lead-to-contract rates introduce unnecessary early friction and cash burn compared to direct outbound and warm networks.\n\n### Setup and Execution\n1. **Outbound Rep (Option b):** Set a strict quota of 3 qualified walkthroughs a week. Equip your rep with a targeted list of local property management firms and commercial real estate agents. Have your operations manager train the rep on your building profile, pricing, and 35% gross margin targets.\n2. **Vendor Referral Program (Option c):** Reach out to non-competing vendors servicing your current buildings. Offer a straightforward, financially rewarding referral fee or reciprocal lead-swap agreement for every closed commercial contract they introduce. \n3. **Internal Sales Support:** Utilize your operations manager's part-time sales capacity to handle incoming walkthroughs, refine closing scripts, and manage the new rep's pipeline oversight.\n\n### The Next 6 Months\n- **Months 1–2:** Stand up the outbound rep and launch the vendor referral network. Absorb the $5,500 monthly rep cost and use the remaining $2,500 of your growth budget for tooling, lists, and partner incentives. Track walkthrough conversion rates closely against your target 30% close rate.\n- **Months 3–4:** Assess the rep's output. If they hit the target of 3 walkthroughs a week (yielding roughly 3–4 new contracts a month at your $2,400 average), you will completely replace the lost volume from the acquired property-management firm before the 6-month window closes. \n- **Months 5–6:** If outbound and referrals successfully stabilize your pipeline and your operations manager reaches capacity constraints, reallocate any surplus budget to test targeted digital acquisition (such as Google Ads) only after your foundational channels are producing reliably.\n\n### Material Assumptions & Decision Criteria\nThis plan assumes your operations manager can effectively manage the rep without sacrificing current operational quality, and that commercial cleaning buyers in your market respond to direct B2B outreach. \n\n**Decision Criteria to Pivot:** If the outbound rep fails to generate at least 1 qualified walkthrough per week after 60 days, terminate the role, reabsorb the function into your operations manager's part-time capacity, and immediately reallocate the full $8,000 budget to test Option (a) with a performance-accountable digital agency or alternative paid acquisition channels.",
+  "arm": "grounded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 5.595,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "ad0bd0815cf15f35cf30d412500ac72513ca82836d9ac4f6c5c5cd4c335b00c4"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 105267,
+  "event_count": 1,
+  "family": "gemini",
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:26:47.034287+00:00",
+  "format_deviations": [
+    "outside descriptive 150..300 word band around approximate 250-word instruction"
+  ],
+  "id": "newadvice12--advice-hz-04--gemini--grounded",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_sha256": "9cf453134f63244539252e2c7d22616dbb8cf6897c1d832975e74e5d1542d18e",
+  "question_key": "newadvice12--advice-hz-04",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "newadvice12",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 681,
+      "promptTokenCount": 110212,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 110212
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 110893
+    }
+  ],
+  "words": 481
+}

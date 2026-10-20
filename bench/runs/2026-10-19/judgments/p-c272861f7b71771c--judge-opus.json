@@ -1,0 +1,19 @@
+{
+  "answer_family": "sol",
+  "batch_id": "diagnostic12--opus--sol--batch-01",
+  "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "id": "p-c272861f7b71771c--judge-opus",
+  "judge_family": "opus",
+  "order": [
+    "grounded",
+    "raw"
+  ],
+  "pair_id": "p-c272861f7b71771c",
+  "primary_eligible": true,
+  "prompt_sha256": "dbfe7df0d74f793db198e7c9c40d66ed5befacf0105193ffb40473a821b57e45",
+  "question_key": "diagnostic12--hz-16",
+  "status": "failed",
+  "suite": "diagnostic12",
+  "verdict": null,
+  "winner": null
+}

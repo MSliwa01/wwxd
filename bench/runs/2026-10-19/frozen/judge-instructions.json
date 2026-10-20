@@ -1,0 +1,21 @@
+{
+  "common": "Evaluation date: 2026-10-19. This is the current date, not a future date. May 2026 is in the past. Publication dates and dates of events described in a source are distinct. A model training cutoff does not invalidate supplied later material. You are an independent evaluator. Use no tools, commands, files, browsing, or external retrieval. A and B are anonymous. Their ordering conveys nothing. Do not infer their model, source access, or provenance. Do not reward writing style, citation presence, quotations, expert agreement, or presumed source use. A tie is valid.\nScore each answer on the four specified integer scales, each from 1 to 5. Anchors: 1 fundamentally deficient; 2 major problems; 3 mixed with meaningful gaps; 4 good with minor gaps; 5 strong and sufficiently complete. Choose A, B, or tie for substantive overall quality. Preserve uncertainty rather than inventing evidence.\nReturn ONLY a JSON object with exactly one key, \"judgments\", containing one object per supplied pair. Each object has exactly: \"id\", \"A\", \"B\", \"winner\", \"reason\", \"factual_objections\". A and B each contain exactly the four dimension names and integer scores. winner is \"A\", \"B\", or \"tie\"; reason is a nonempty string. factual_objections is a list, possibly empty, of objects with exactly \"answer\" (\"A\" or \"B\"), \"claim\", \"label\" (\"contradicted\" or \"unverified\"), and \"evidence\" (a nonempty explanation). Distinguish an established contradiction from an unverified claim.\n",
+  "dimensions": {
+    "diagnostic12": [
+      "accuracy",
+      "specificity",
+      "faithfulness",
+      "usefulness"
+    ],
+    "newadvice12": [
+      "decision_quality",
+      "actionability",
+      "constraint_fit",
+      "reasoning"
+    ]
+  },
+  "suite": {
+    "diagnostic12": "Evaluate accuracy, specificity, faithfulness, and usefulness using the complete audited reference packet. The reference is evidence, not a required script. Missing optional detail is not automatically a false claim. Label a factual objection contradicted only when supplied evidence establishes the contradiction; otherwise label it unverified. Do not treat absence from the reference as proof of falsehood. Resolve a conflict between a summary and direct evidence in favor of the direct evidence and explain it.\n",
+    "newadvice12": "You see only the question and the two answers. Evaluate decision_quality (a defensible recommendation), actionability (concrete steps and decision criteria), constraint_fit (stated goals, resources and material assumptions), and reasoning (coherent logic and arithmetic). Reward useful, defensible decisions under the scenario's goals and constraints, not agreement with a named expert. Check arithmetic and explicit constraints directly. Missing unstated inputs permit conditional recommendations. A checkable claim you cannot establish as false is unverified, not contradicted. These are judgments of advice quality, not measured business outcomes.\n"
+  }
+}

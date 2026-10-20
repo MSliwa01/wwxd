@@ -1,0 +1,49 @@
+{
+  "answer_family": "gemini",
+  "batch_id": "diagnostic12--sol--gemini--batch-02",
+  "error": "",
+  "id": "p-ce005039168f0ddd--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-ce005039168f0ddd",
+  "primary_eligible": true,
+  "prompt_sha256": "f223aff0ccd3fd601cf372b53301c493fd4020d6a8e8052dbe976aeb93aa741f",
+  "question_key": "diagnostic12--hz-02",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 3,
+      "faithfulness": 3,
+      "specificity": 3,
+      "usefulness": 3
+    },
+    "B": {
+      "accuracy": 5,
+      "faithfulness": 5,
+      "specificity": 5,
+      "usefulness": 5
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "Admitting product weaknesses is effective provided the flaw is minor, secondary, and quickly overshadowed by a dominant benefit.",
+        "evidence": "Hormozi advises owning real flaws and listing customer complaints. The supplied evidence does not establish a minor-and-secondary-only condition or require every flaw to become a beneficial feature.",
+        "label": "unverified"
+      },
+      {
+        "answer": "A",
+        "claim": "If the transparent ad repels all traffic, the weakness is too central to the core utility and must be redesigned rather than marketed.",
+        "evidence": "The packet does not establish that advertising performance alone diagnoses a fundamental product defect or necessarily requires redesign.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-ce005039168f0ddd",
+    "reason": "B gives the essential wording rule: a true flaw first, then 'but', then the benefit people should believe. It also captures trust, existing complaints, humor, and buyer qualification. A broadly supports admissions but omits the crucial wording mechanism and adds unsupported restrictions and diagnostic conclusions.",
+    "winner": "B"
+  },
+  "winner": "grounded"
+}

@@ -1,0 +1,397 @@
+Evaluation date: 2026-10-19. This is the current date, not a future date. May 2026 is in the past. Publication dates and dates of events described in a source are distinct. A model training cutoff does not invalidate supplied later material. You are an independent evaluator. Use no tools, commands, files, browsing, or external retrieval. A and B are anonymous. Their ordering conveys nothing. Do not infer their model, source access, or provenance. Do not reward writing style, citation presence, quotations, expert agreement, or presumed source use. A tie is valid.
+Score each answer on the four specified integer scales, each from 1 to 5. Anchors: 1 fundamentally deficient; 2 major problems; 3 mixed with meaningful gaps; 4 good with minor gaps; 5 strong and sufficiently complete. Choose A, B, or tie for substantive overall quality. Preserve uncertainty rather than inventing evidence.
+Return ONLY a JSON object with exactly one key, "judgments", containing one object per supplied pair. Each object has exactly: "id", "A", "B", "winner", "reason", "factual_objections". A and B each contain exactly the four dimension names and integer scores. winner is "A", "B", or "tie"; reason is a nonempty string. factual_objections is a list, possibly empty, of objects with exactly "answer" ("A" or "B"), "claim", "label" ("contradicted" or "unverified"), and "evidence" (a nonempty explanation). Distinguish an established contradiction from an unverified claim.
+Evaluate accuracy, specificity, faithfulness, and usefulness using the complete audited reference packet. The reference is evidence, not a required script. Missing optional detail is not automatically a false claim. Label a factual objection contradicted only when supplied evidence establishes the contradiction; otherwise label it unverified. Do not treat absence from the reference as proof of falsehood. Resolve a conflict between a summary and direct evidence in favor of the direct evidence and explain it.
+
+Pairs:
+[
+  {
+    "id": "p-66f97cdfd6a8bbe4",
+    "question": "Why did Hormozi tell that young roofing company owner to stop door-knocking and move his budget into Google Ads?",
+    "A": "The premise that Alex Hormozi universally advises all young roofing companies to stop door-knocking and shift entirely to Google Ads is false. Door-knocking remains a foundational, low-cost customer acquisition strategy for startups with zero marketing capital. \n\nHormozi likely gave that specific advice because the business had outgrown hustle-based outreach and hit a capacity wall where time efficiency mattered more than raw sweat equity. When a company has accumulated baseline cash flow, founder-led door-knocking yields diminishing returns compared to building predictable, scalable acquisition systems. Shifting budget to Google Ads captures high-intent, active search traffic from homeowners actively seeking immediate repairs, which leverages capital to buy back time and scale operations faster than manual canvassing.\n\nMaterial assumptions include that the business had sufficient cash reserves to fund a digital ad campaign without immediate failure, a sales process capable of closing inbound leads, and a local market with search volume high enough to support paid acquisition. \n\nConcrete next steps for a roofing owner depend on current metrics. If daily cash flow is low and margins are tight, continue door-knocking to preserve capital while maximizing close rates. If monthly revenue consistently exceeds operating costs and labor capacity is underutilized, allocate a test budget to Google Ads while tracking cost per acquisition versus lifetime customer value.\n\nDecision criteria for the shift rely strictly on unit economics. If the cost to acquire a customer via Google Ads is lower than the blended cost of labor and time spent door-knocking, transition the budget. If digital acquisition costs outpace profit margins, return immediately to direct-sales canvassing until cash reserves stabilize.",
+    "B": "The premise is false. Hormozi did not tell a roofing company owner to stop door-knocking and move his budget into Google Ads. In his consulting session with the young roofing owner, he praised the owner's ability to door-knock as a core asset and told him to go all in on door-to-door sales as his primary growth engine, building a dedicated team rather than getting distracted by new channels. He did recommend Google Ads and digital marketing as a separate play for established service businesses, but for a startup relying on door-to-door sales, his advice was to double down on what already works.\n\nIf you are a service business owner weighing whether to scale door-knocking versus buying Google Ads, use the following decision criteria:\n\n- **Channel Competence:** If you already know how to acquire customers profitably through direct outreach or door-knocking, maximize that channel first. Do not add paid digital channels until your primary outbound engine is fully scaled or constrained by team size.\n- **Supply and Demand Constraints:** Determine whether your system is supply-constrained (you cannot deliver services fast enough) or demand-constrained (you lack leads). If demand is the constraint and you lack an outbound sales mechanism, digital ads are appropriate. \n- **Capital and Risk Tolerance:** Bootstrapped startups with more time and sweat equity than cash should prioritize high-volume outbound sales to preserve capital, whereas businesses with spare cash and proven unit economics should scale ad spend.",
+    "reference": {
+      "absence_check": "The word 'Google' appears in yt-o64cI6tebnU only as 'Google review'. No other Hormozi raw file mentions a roofer.",
+      "actual_stance": "False premise. The sources do cover a young roofing company (Caleb, Keys Roofing in St. Louis, about two months old), and Hormozi told him the opposite: go all in on door-to-door as the primary growth engine and build a door-knocking sales team ('DDD army'). The transcript contains no Google Ads advice for this business. Other advice in the episode: shift toward repair volume, add VSLs, use a menu close, sell a maintenance membership and charge for speed. At the 90-day check-in Caleb said he went all in on door-to-door.",
+      "category": "abstain",
+      "errors": [
+        "Accepting the premise and explaining why paid search beats door-knocking.",
+        "Saying only 'the sources do not cover this' without noting they show the opposite (partial credit at most).",
+        "Inventing a Google Ads recommendation."
+      ],
+      "evidence": [
+        {
+          "quote": "we are a premium and luxury roofing, gutter, and downspout contractor in St. Louis, Missouri.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "guest_caleb",
+          "speaker_basis": "business owner describing his own company; content-inferred",
+          "timestamp": "0:32"
+        },
+        {
+          "quote": "So, we've been in business for 2 months.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "guest_caleb",
+          "speaker_basis": "business owner describing his own company; content-inferred",
+          "timestamp": "0:32"
+        },
+        {
+          "quote": "two primary acquisition channels currently is door-knocking.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "guest_caleb",
+          "speaker_basis": "business owner describing his own company; content-inferred",
+          "timestamp": "1:06"
+        },
+        {
+          "quote": "Now I think that in terms of scale, you should go all in door to door.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Caleb; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "9:49"
+        },
+        {
+          "quote": "I think you building out this DDD army is like the clear straight shot.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Caleb; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "10:54"
+        },
+        {
+          "quote": "the first thing we said was go all in on door to door as primary growth engine.",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Caleb; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "24:27"
+        },
+        {
+          "quote": "So I went all in on door todoor first off",
+          "source_date": "2026-08-29",
+          "source_id": "yt-o64cI6tebnU",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-o64cI6tebnU.md",
+          "source_sha256": "e47712077d3654cbba161fcdd0551a9cafafaaad596997aaf1eb6665002e1675",
+          "source_title": "How I Would Build a $10M Service Business (If I Had to Start Over)",
+          "speaker": "guest_caleb",
+          "speaker_basis": "business owner describing his own company; content-inferred",
+          "timestamp": "23:21"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold stance begins 'The sources don't cover this' and then says the sources show the opposite. The two claims conflict; the raw supports the second. Corrected to a false-premise key with evidence.",
+        "Gold had empty must_cite and evidence. Added the roofing episode as must_cite and seven verified quotes.",
+        "The raw never states Caleb's age; 'young' fits the two-month-old business. Not material."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-20",
+      "key_status": "corrected",
+      "primary_sources": [
+        "yt-o64cI6tebnU"
+      ],
+      "question": "Why did Hormozi tell that young roofing company owner to stop door-knocking and move his budget into Google Ads?",
+      "required_points": [
+        "Rejects the premise: he did not tell the roofer to stop door-knocking or move to Google Ads.",
+        "States what he actually advised: go all in on door-to-door and build a door-to-door sales team."
+      ],
+      "supporting_points": [
+        "Names the case (Caleb, Keys Roofing, St. Louis, about two months in business).",
+        "Mentions other advice (repairs focus, VSLs, menu close, maintenance membership, speed premium) or the 90-day outcome."
+      ],
+      "uncertainty": [
+        "Revenue figures in the episode are internally inconsistent (about $41k so far, '20K a monthish', 'a little under 32,000' three months earlier, then about $247k to $250k). Not needed for the key."
+      ],
+      "vault": "hormozi"
+    }
+  },
+  {
+    "id": "p-9c051450506e1b9c",
+    "question": "I've spent months pitching seed investors, polishing my deck and taking follow-up meetings. How would Michael Seibel tell me to think about fundraising?",
+    "A": "Michael Seibel would tell you to stop treating fundraising as a school or a game to be won with a polished deck. He would point out that months of low-leverage pitching is a drag on your company and warn you that investors often string founders along like buyers purchasing an option, keeping meetings going just in case the startup takes off without ever intending to invest early. \n\nInstead of spending more time decksmithing, Seibel would advise you to become a company investors chase. He notes that investors chase 80 to 90 percent of their deals, meaning leverage is built in the work before any negotiation. Your immediate next steps are to pull the plug on endless follow-up meetings, return to building, and focus entirely on growth and product traction. If you have a working product that grows fast, even a terrible fundraiser with something that works will easily raise money compared to a great fundraiser with nothing. \n\nThis recommendation assumes you have a product in the market and early indicators of user pull. If you are pre-product and have no usage data, your pitch meetings are essentially customer discovery calls; in that case, the fix is to build a ridiculously simple MVP in weeks, launch it to actual users, and get feedback on the rough version rather than hiding behind a deck. The core decision criterion is your growth rate: if your metrics are flat after months of meetings, more pitch meetings will not save you, but a better product that users actually want will.",
+    "B": "Spending months pitching seed investors and taking endless follow-up meetings is a classic sign of a fundraising process that has lost momentum. Michael Seibel would diagnose this situation with brutal clarity: if you are still fundraising after months, you are likely not running a tight process, your metrics do not support a venture-scale growth story, or you are confusing polite investor interest with a genuine commitment. \n\nThe core mindset shift required here is to treat fundraising as a binary, compressed event rather than a continuous sales campaign. Investors thrive on urgency and fear of missing out. If they know you have been on the market for months without closing a lead, their interest plummets. \n\nConcrete next steps begin with an immediate pause on new outreach. You must review your metrics to determine if the business is actually growing fast enough to warrant seed capital. If the metrics are strong, your pitch or targeting is flawed; if the metrics are weak, you must stop fundraising entirely and focus on product and revenue until the numbers compel action. Set a hard deadline of two weeks to secure a term sheet from your warmest existing conversations. If that fails, pull the plug, cut your burn rate, and get back to building.\n\nThis advice assumes your product addresses a real market and you have access to a functional network of founders and angels. If you lack warm intros entirely, your bottleneck is distribution, not just the pitch. The definitive decision criterion is simple: multiple, competing term sheets within a two-week window mean you continue; months of endless feedback meetings mean you stop.",
+    "reference": {
+      "actual_stance": "Fundraising comes down to leverage, meaning your ability to walk away, and the deck is not doing the work. Ask whether you are growing; if you are not growing or not launched, deck work may be the biggest waste of your time. The effective way to raise is to grow so fast, with so many proof points, that you can raise quickly with little preparation. Michael's own evidence: when Socialcam was hot he asked investors what share of deals they chase versus take from the front door, and every answer was between 80/20 and 90/10 chase; at Justin.tv he spent eight months fundraising without success, and the two months of forced focus on profitability that followed got far more done. Investors who string founders along for months are in effect buying an option on them.",
+      "category": "fresh",
+      "errors": [
+        "Recommending a bigger investor list and a tighter deck as the main fix.",
+        "Inventing statistics not in the source."
+      ],
+      "evidence": [
+        {
+          "quote": "If you're not growing and not launched, in many ways, working on this deck could be the biggest waste",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "2:48"
+        },
+        {
+          "quote": "the deck isn't doing the work at all.",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "3:21"
+        },
+        {
+          "quote": "Leverage is also another way of thinking about is your ability to walk away.",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "3:54"
+        },
+        {
+          "quote": "the way to be very effective at fundraising is to be growing so quickly and have so many proof points that your startup is working",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "5:02"
+        },
+        {
+          "quote": "one of the times we almost died at Justin TV you know I had spent the eight months prior trying to fundra",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "seibel",
+          "speaker_basis": "inferred: speaker co-founded Socialcam and Justin.tv, which the video description assigns to Michael Seibel",
+          "timestamp": "6:44"
+        },
+        {
+          "quote": "And the amount of we got done in that two months versus slinging decks",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "seibel",
+          "speaker_basis": "inferred: speaker co-founded Socialcam and Justin.tv, which the video description assigns to Michael Seibel",
+          "timestamp": "6:44"
+        },
+        {
+          "quote": "it's sort of like you're buying an option.",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "caldwell_or_seibel",
+          "speaker_basis": "two-host show; captions have no speaker labels",
+          "timestamp": "8:57"
+        },
+        {
+          "quote": "And the answers I got only varied between 8020 chase and 9010 chase.",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "seibel",
+          "speaker_basis": "inferred: speaker co-founded Socialcam and Justin.tv, which the video description assigns to Michael Seibel",
+          "timestamp": "10:03"
+        },
+        {
+          "quote": "if you can invest that time in making your company something that investors will chase after versus decksmithing,",
+          "source_date": "2026-10-05",
+          "source_id": "yt-7TU636F_yVQ",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-7TU636F_yVQ.md",
+          "source_sha256": "b43f7c4961af610055ae58b4507ea50ec8ac647c4549a5ac482a4889c7af30b3",
+          "source_title": "How Founders Win at Fundraising, Sales, and Hiring",
+          "speaker": "seibel",
+          "speaker_basis": "inferred: speaker co-founded Socialcam and Justin.tv, which the video description assigns to Michael Seibel",
+          "timestamp": "10:03"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold attributes everything to Michael Seibel. The episode is a two-host conversation with unlabeled captions. The Socialcam poll and the Justin.tv story are Michael's (he co-founded both). The leverage definition, the deck lines and the 'buying an option' point come from the joint conversation and may be Dalton's. Grade the content; do not penalize an answer that credits the episode to both hosts."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-08",
+      "key_status": "confirmed_speaker_caveat",
+      "primary_sources": [
+        "yt-7TU636F_yVQ"
+      ],
+      "question": "I've spent months pitching seed investors, polishing my deck and taking follow-up meetings. How would Michael Seibel tell me to think about fundraising?",
+      "required_points": [
+        "Stop polishing the deck; it is not doing the work. Leverage (traction, growth, ability to walk away) decides fundraising.",
+        "Spend the time building, launching, talking to users and growing, so investors chase you."
+      ],
+      "supporting_points": [
+        "Investors chase 80% to 90% of their deals (his Socialcam-era poll).",
+        "Justin.tv: eight months of failed fundraising vs two productive months focused on profitability.",
+        "Being strung along for months means the investor is buying an option on you.",
+        "Raise fast at the end, with little prep, once things are working."
+      ],
+      "uncertainty": [
+        "Speaker split between Dalton Caldwell and Michael Seibel is not recoverable from the captions except where noted."
+      ],
+      "vault": "yc"
+    }
+  },
+  {
+    "id": "p-ce005039168f0ddd",
+    "question": "Should my ads admit the weaknesses of my product, and if so how do I word it? What would Alex Hormozi say?",
+    "A": "Yes, ads should admit product weaknesses because doing so builds trust, and trust beats out promises. Flaws and complaints should be front-loaded to disarm skepticism. \n\nTo word a damaging admission, use the formula: state a true, damaging thing plainly, then pivot immediately using \"but\" to introduce the primary claim you want the prospect to believe. Acknowledge what people complain about or what your product does not do, and ideally deliver the admission with humor. This approach proves honesty, qualifies buyers up front, and makes subsequent claims far more believable. \n\nMaterial assumptions: This advice assumes you are selling to a market sensitive to exaggerated claims and that your core offer already delivers its primary value despite the stated flaw. \n\nDecision criteria: If your product's weakness is a deal-breaking functional failure for your target audience, fix the product before advertising it. If the weakness is a minor trade-off, inconvenience, or aesthetic downside that is standard in your category, admit it openly to stand out from competitors who hide their flaws.",
+    "B": "Admitting product weaknesses in ads is an effective strategy that builds immediate trust and disarms skepticism, provided the flaw is minor, secondary, and quickly overshadowed by a dominant benefit. While the premise assumes perfection is required to sell, consumers actually respond better to authentic transparency. \n\nAlex Hormozi would likely argue that pointing out a flaw filters out unqualified buyers, increases conversion rates among ideal customers, and reframes the weakness as a deliberate feature or trade-off for a massive core benefit. \n\nTo word it effectively, use a pivot formula that acknowledges the limitation immediately, minimizes its impact, and pivots back to the primary value proposition. For example, state that the product lacks a certain complex feature, which actually makes it faster and easier to use than bloated alternatives.\n\nMaterial assumptions include that the product delivers on its core promise, the weakness is not a deal-breaking core failure, and the target audience values honesty over hype. If the product has fundamental structural defects or safety issues, do not highlight them; instead, fix the product first. \n\nConcrete next steps:\n1. Identify the most common objection prospects raise about your product.\n2. Draft a script opening that acknowledges this objection head-on.\n3. Immediately follow the confession with the context that makes the weakness irrelevant or beneficial to the right buyer.\n4. Test the ad against a standard glossy version to measure return on ad spend.\n\nThe decision criterion is conversion lift: if the transparent ad lowers cost-per-acquisition by filtering for higher-intent buyers, scale it. If it simply repels all traffic, the weakness is too central to the core utility and must be redesigned rather than marketed.",
+    "reference": {
+      "actual_stance": "Yes. Use damaging admissions: own your real flaws up front, because what you give up in promise you gain in trust. Word it as flaw, then 'but', then the benefit, since people believe the clause after 'but'; reversing the order stresses the flaw. List the things customers already complain about and claim them; humor earns extra credit. In a sales setting he applies the same idea by opening with the bad before the good and saying who the offer will not work for, so prospects self-qualify.",
+      "category": "known",
+      "errors": [
+        "Advising to hide weaknesses or wait until the prospect raises them.",
+        "Putting the benefit first and the flaw after 'but' as the recommended order.",
+        "Recommending invented or fake flaws."
+      ],
+      "evidence": [
+        {
+          "quote": "you want to always own your flaws of course you have them of course your product isn't perfect say so and",
+          "source_date": "2025-05-07",
+          "source_id": "yt-JDR-R--4HhM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-JDR-R--4HhM.md",
+          "source_sha256": "8dead6f4201863ae62991d2ed37b42a93313e36a30216ca200b58aefc5d1cfad",
+          "source_title": "14 Years of Marketing Advice in 35 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "12:30"
+        },
+        {
+          "quote": "what you'll sacrifice in promise you'll gain in trust and trust trumps promise",
+          "source_date": "2025-05-07",
+          "source_id": "yt-JDR-R--4HhM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-JDR-R--4HhM.md",
+          "source_sha256": "8dead6f4201863ae62991d2ed37b42a93313e36a30216ca200b58aefc5d1cfad",
+          "source_title": "14 Years of Marketing Advice in 35 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "13:09"
+        },
+        {
+          "quote": "the statement that comes after the word but is the part that is the thing you want them to believe",
+          "source_date": "2025-05-07",
+          "source_id": "yt-JDR-R--4HhM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-JDR-R--4HhM.md",
+          "source_sha256": "8dead6f4201863ae62991d2ed37b42a93313e36a30216ca200b58aefc5d1cfad",
+          "source_title": "14 Years of Marketing Advice in 35 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "13:44"
+        },
+        {
+          "quote": "these markers write four times longer than others but they smell like crap what am I emphasizing i'm actually emphasizing the fact that they smell bad not the fact that they write longer",
+          "source_date": "2025-05-07",
+          "source_id": "yt-JDR-R--4HhM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-JDR-R--4HhM.md",
+          "source_sha256": "8dead6f4201863ae62991d2ed37b42a93313e36a30216ca200b58aefc5d1cfad",
+          "source_title": "14 Years of Marketing Advice in 35 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "14:26"
+        },
+        {
+          "quote": "write down all of the flaws all the things that people complain about the things that you know you could do better and claim them",
+          "source_date": "2025-05-07",
+          "source_id": "yt-JDR-R--4HhM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-JDR-R--4HhM.md",
+          "source_sha256": "8dead6f4201863ae62991d2ed37b42a93313e36a30216ca200b58aefc5d1cfad",
+          "source_title": "14 Years of Marketing Advice in 35 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "15:03"
+        },
+        {
+          "quote": "if you can do with humor you get even more bonus points",
+          "source_date": "2025-05-07",
+          "source_id": "yt-JDR-R--4HhM",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-JDR-R--4HhM.md",
+          "source_sha256": "8dead6f4201863ae62991d2ed37b42a93313e36a30216ca200b58aefc5d1cfad",
+          "source_title": "14 Years of Marketing Advice in 35 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video on the Alex Hormozi channel",
+          "timestamp": "15:39"
+        },
+        {
+          "quote": "Listen, before I tell you about the good, let me tell you about the bad.",
+          "source_date": "2026-02-28",
+          "source_id": "yt-MH-IMJxbUY4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-MH-IMJxbUY4.md",
+          "source_sha256": "0ee16a3ff11eaf668c6513ea5fd6db5581199780322ebe90b2c8ee92b0cf269f",
+          "source_title": "Building a $12,000,000 Business for a Stranger in 25 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Joel; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "19:42"
+        },
+        {
+          "quote": "So, you can have what you want, just not when you want.",
+          "source_date": "2026-02-28",
+          "source_id": "yt-MH-IMJxbUY4",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt-MH-IMJxbUY4.md",
+          "source_sha256": "0ee16a3ff11eaf668c6513ea5fd6db5581199780322ebe90b2c8ee92b0cf269f",
+          "source_title": "Building a $12,000,000 Business for a Stranger in 25 Minutes",
+          "speaker": "hormozi",
+          "speaker_basis": "consulting episode with guest Joel; unlabeled >> turns, advisory line inferred from content",
+          "timestamp": "20:14"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold stance and quotes match the raw transcript. Gold omitted the 'write down all the flaws and claim them' step, the humor bonus, and the sales-call version in MH-IMJxbUY4; these are now supporting points, not requirements."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-02",
+      "key_status": "confirmed_expanded",
+      "primary_sources": [
+        "yt-JDR-R--4HhM"
+      ],
+      "question": "Should my ads admit the weaknesses of my product, and if so how do I word it? What would Alex Hormozi say?",
+      "required_points": [
+        "Yes, admit real weaknesses (damaging admissions); it builds trust and makes later claims more believable.",
+        "Order matters: flaw first, then 'but', then the benefit; the part after 'but' is what people believe."
+      ],
+      "supporting_points": [
+        "Trust beats promise; sacrificing some promise is worth it.",
+        "Write down every flaw and complaint and claim it before the prospect thinks it.",
+        "Humor is a bonus.",
+        "In sales calls: tell them the bad before the good and who it is not for, so they self-qualify (MH-IMJxbUY4).",
+        "Admissions must be true, not invented."
+      ],
+      "uncertainty": [],
+      "vault": "hormozi"
+    }
+  }
+]

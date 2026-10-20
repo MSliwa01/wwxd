@@ -1,0 +1,57 @@
+{
+  "actual_input_tokens": 245,
+  "answer": "A good monthly churn rate for a paid online community typically falls between three and seven percent, though top-tier communities with strong engagement and locked-in annual cohorts achieve under two percent. A monthly churn rate above ten percent is alarming and signals a broken onboarding process, unmet value expectations, or a poor member-fit. \n\nAlex Hormozi argues that churn is primarily a symptom of poor customer success and inadequate initial value delivery rather than a pricing issue. He contends that if members feel they are getting ten times the value of their subscription cost within the first week, they will not leave. From his perspective, instead of lowering prices to reduce churn, operators should aggressively increase the perceived and actual value, improve onboarding speed, and create immediate wins for new joiners.\n\nMaterial assumptions include a standard monthly subscription model without long-term lock-ins, and a community size large enough for statistical significance. If your community is very small, a single cancellation can spike your percentage rate artificially. \n\nConcrete next steps: Calculate your current monthly churn by dividing the number of cancellations by total active members at the start of the month. Survey churned members immediately to identify the primary reason for leaving. Implement a mandatory onboarding checklist within the first forty-eight hours to drive early engagement. \n\nDecision criteria: If your churn remains steadily below five percent, focus your resources on scaling acquisition. If churn exceeds eight percent for two consecutive months, pause marketing spend entirely and redirect all efforts toward fixing member retention and value delivery.",
+  "arm": "raw",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 1.928,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "1c3e27a0ca88daa362b1d5760055499d4f6d24cb1d8af1add8ce7f56c1f4d3cd"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 356,
+  "event_count": 1,
+  "family": "gemini",
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:19:55.212924+00:00",
+  "format_deviations": [],
+  "id": "diagnostic12--hz-05--gemini--raw",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_sha256": "269fa9d57bb662e893385e14143f4a5d4a6275f79565ae3f23d9c4dd175063e9",
+  "question_key": "diagnostic12--hz-05",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 303,
+      "promptTokenCount": 245,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 245
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 548
+    }
+  ],
+  "words": 254
+}

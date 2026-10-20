@@ -1,0 +1,101 @@
+{
+  "actual_input_tokens": 143613,
+  "answer": "**Hormozi didn't advise that, as far as I know. In the roofing consult I'm aware of, he said the opposite.** The owner, Caleb of Keys Roofing, ran a two-month-old company doing about $20K a month from door-knocking and referrals. Hormozi told Caleb to go all in on door-to-door as the main growth engine, not to move the budget into Google Ads.\n\n**Why Hormozi backed door-knocking**\n- **It already worked.** Caleb closed roughly one sale per 20 doors. Hormozi treats a reliable way to go get money as a rare asset and wanted every effort on the highest-return channel the owner was already good at.\n- **Limited time and cash.** A new channel would spread a small business thin.\n- **It scales with people.** The plan was to build a door-to-door team, recruit reps as if they were customers, and frame commission per door knocked so pay tracks effort.\n- **Volume over cleverness.** Hormozi favored high-volume repair work, aiming for a $2,500–5,000 ticket, over slower insurance-tied replacements.\n\nOther parts of the plan included a video sales letter shown before each sales conversation, a menu upsell, an annual maintenance membership, and priority fees. Caleb later reported revenue rising from about $32K to about $247K. Those are his own figures, and the time unit wasn't stated.\n\n**What I'm unsure of:** You may be thinking of a different episode or a short clip that cut the context. I can't rule that out.\n\n**If you're weighing this for your own business**, keep door-knocking while it closes profitably and you can hire reps. Consider paid search when:\n- door close rates fall,\n- hiring reps becomes the bottleneck, or\n- you can measure a search return you trust.\n\nEven then, Hormozi's usual approach is to work the existing channel harder before adding a new one.",
+  "arm": "grounded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 12.015,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7e4da94ed48e185f13639514b56c6351c7dcc9df271f766aaa80b9105a1b2bf1"
+    }
+  ],
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 137704,
+  "event_count": 8,
+  "family": "opus",
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:21:42.687121+00:00",
+  "format_deviations": [
+    "possible blinding leak: context/wiki/knowledge base mention"
+  ],
+  "id": "diagnostic12--hz-20--opus--grounded",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "prompt_sha256": "5210407e5211b45a487a3bb53fe5060f498b689210d22f00d27d95a6bf094345",
+  "question_key": "diagnostic12--hz-20",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 142043,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 142043,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 142043,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 142043,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 833,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 833,
+      "output_tokens_details": {
+        "thinking_tokens": 224
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ],
+  "words": 299
+}

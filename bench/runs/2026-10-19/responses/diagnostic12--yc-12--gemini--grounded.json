@@ -1,0 +1,57 @@
+{
+  "actual_input_tokens": 172749,
+  "answer": "Michael Seibel would tell you to stop spending money on lawyers immediately, treat the equity as worthless before product-market fit, and negotiate a fast, cheap, no-fault co-founder breakup so you can stop wasting time. \n\nAt nine months pre-product-market fit, paying lawyers to trade letters over stock is a fight over ego, not value. Because the company has no product-market fit, the stock is currently worth nothing. Spending money on legal fees or mediation makes no sense and risks leaving you in debt. Seibel's standard advice for a pre-product-market-fit co-founder breakup is to separate within a week for minimal cost. The departing co-founder should hand back the vast majority of their vested stock—typically getting down to under 5%, and 1 to 2% (or less) if they leave within the first year—because nearly all of the company's value is still to be created by whoever stays. The person staying has to carry the company and cannot easily hedge, whereas a departing co-founder who keeps a small slice gets a free hedge. \n\nYour concrete next steps are to propose a clean, no-fault separation directly to your co-founder without lawyers as judges, offer reasonable severance if you can afford it, sign simple paperwork releasing claims, and return your energy to building or moving on. \n\n**Assumptions:** You have not crossed into legal misconduct, and the business has genuinely failed to find product-market fit. \n**Decision Criteria:** If you had strong product-market fit and significant revenue or raised capital, a formal equity separation would matter; pre-product-market fit, preserving cash and emotional energy for your next project is the only priority.",
+  "arm": "grounded",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 4.359,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e114ba28e3acab09a430c0c325a38d8ab945c182ddb82dff6b0dc96e43b09ec7"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 172798,
+  "event_count": 1,
+  "family": "gemini",
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:23:23.467288+00:00",
+  "format_deviations": [],
+  "id": "diagnostic12--yc-12--gemini--grounded",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_sha256": "5f8617d94afeea468d0634ec4eccbb4f4619cd0c2ea3773fefa1257cf0a8c155",
+  "question_key": "diagnostic12--yc-12",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "diagnostic12",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 355,
+      "promptTokenCount": 172749,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 172749
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 173104
+    }
+  ],
+  "words": 263
+}

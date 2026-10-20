@@ -1,0 +1,57 @@
+{
+  "actual_input_tokens": 504,
+  "answer": "To reach $25,000 monthly profit in six months without hiring, reject the course, raise standard prices, and launch the premium tier. The self-serve course requires marketing scale and time you lack. \n\nFirst, issue 60-day notice to raise standard fees to $500 for the 37 standard clients, yielding $17,010 net after fees. Second, launch the $2,000 premium tier immediately for 4 of your high-revenue clients, capturing $7,440 net. Together, this yields $24,450 net, hitting your baseline target. Adding one more premium client later clears $26,310, surpassing the goal.\n\nThis plan strictly respects your 50-hour capacity. Standard clients take 42 hours (41 hours service plus 5 admin hours minus 5 hours freed by dropping unpaid extras). The 4 premium clients take 12 hours (3 hours each weekly). Total time is 54 hours, which can be compressed to 50 by tightening workflows.\n\nThe premium tier must explicitly include weekly cash-flow forecasting, SKU-level inventory planning, and proactive coordination with their tax preparers, formalizing the free work you currently donate. \n\n**Next Steps & Criteria:**\n1. Draft the price increase notice today.\n2. Pitch the premium tier to your 4 largest clients this week using a formal service agreement.\n3. If more than 4 clients accept the premium tier, offload 2 standard clients per extra premium client to protect your 50-hour limit. \n\nMaterial assumptions: churn from the price hike remains under 10 percent, and high-revenue clients readily convert to the premium tier to solve their forecasting needs.",
+  "arm": "raw",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 2.143,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "2205d442d7e554d355c61d616f98098cae16461967e6987f482c420af163f0d6"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 646,
+  "event_count": 1,
+  "family": "gemini",
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:24:47.867672+00:00",
+  "format_deviations": [],
+  "id": "newadvice12--advice-hz-01--gemini--raw",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_sha256": "5b0838f06c5e83076fcd4fa1139884beba7ed7d89a04c3e4376259d115565e15",
+  "question_key": "newadvice12--advice-hz-01",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "newadvice12",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 373,
+      "promptTokenCount": 504,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 504
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 877
+    }
+  ],
+  "words": 241
+}

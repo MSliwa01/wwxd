@@ -1,0 +1,55 @@
+{
+  "answer_family": "opus",
+  "batch_id": "diagnostic12--sol--opus--batch-00",
+  "error": "",
+  "id": "p-31022a88e0319499--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-31022a88e0319499",
+  "primary_eligible": true,
+  "prompt_sha256": "b9bda7c4c3a7e4d5edf1b4976ac7ffa9e6eb2416c1d974d89af3e6161469ef6a",
+  "question_key": "diagnostic12--hz-16",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 3,
+      "faithfulness": 2,
+      "specificity": 2,
+      "usefulness": 2
+    },
+    "B": {
+      "accuracy": 3,
+      "faithfulness": 2,
+      "specificity": 2,
+      "usefulness": 2
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "In 2021 Hormozi sold a majority stake in his portfolio, mainly Gym Launch and Prestige Labs, to a private buyer for about $46 million.",
+        "evidence": "The supplied packet does not establish this transaction or its terms. It instead documents the interviewer's separate listing and equity story.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "In 2021 Hormozi sold two-thirds of Prestige Labs and Gym Launch to a private equity firm for $46.2 million.",
+        "evidence": "The supplied packet does not establish the date, ownership fraction, buyer type, or sale amount for this transaction.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "Hormozi sold ALAN to a strategic buyer in an all-stock deal.",
+        "evidence": "The packet contains no evidence establishing ALAN's sale terms. This proposed explanation cannot be verified from the supplied material.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-31022a88e0319499",
+    "reason": "Both appropriately question attributing a NASDAQ listing to Hormozi, but neither identifies or explains the documented story. The direct evidence attributes it to the interviewer: a European listing, banks' hypothetical fourfold NASDAQ valuation, and pre-IPO work yielding equity worth approximately $7–8 million after 9–12 months. Neither answer supplies these central facts; their alternative explanations and exit histories do not resolve the question.",
+    "winner": "tie"
+  },
+  "winner": "tie"
+}

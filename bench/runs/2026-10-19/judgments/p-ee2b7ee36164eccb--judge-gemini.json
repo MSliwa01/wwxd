@@ -1,0 +1,19 @@
+{
+  "answer_family": "opus",
+  "batch_id": "diagnostic12--gemini--opus--batch-01",
+  "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "id": "p-ee2b7ee36164eccb--judge-gemini",
+  "judge_family": "gemini",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-ee2b7ee36164eccb",
+  "primary_eligible": true,
+  "prompt_sha256": "d8b3ce25f191a31c83642cc17271fdb3de83d5b14a23ba453417903c4f277557",
+  "question_key": "diagnostic12--yc-01",
+  "status": "failed",
+  "suite": "diagnostic12",
+  "verdict": null,
+  "winner": null
+}

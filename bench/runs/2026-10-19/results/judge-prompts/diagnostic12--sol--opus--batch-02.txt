@@ -1,0 +1,368 @@
+Evaluation date: 2026-10-19. This is the current date, not a future date. May 2026 is in the past. Publication dates and dates of events described in a source are distinct. A model training cutoff does not invalidate supplied later material. You are an independent evaluator. Use no tools, commands, files, browsing, or external retrieval. A and B are anonymous. Their ordering conveys nothing. Do not infer their model, source access, or provenance. Do not reward writing style, citation presence, quotations, expert agreement, or presumed source use. A tie is valid.
+Score each answer on the four specified integer scales, each from 1 to 5. Anchors: 1 fundamentally deficient; 2 major problems; 3 mixed with meaningful gaps; 4 good with minor gaps; 5 strong and sufficiently complete. Choose A, B, or tie for substantive overall quality. Preserve uncertainty rather than inventing evidence.
+Return ONLY a JSON object with exactly one key, "judgments", containing one object per supplied pair. Each object has exactly: "id", "A", "B", "winner", "reason", "factual_objections". A and B each contain exactly the four dimension names and integer scores. winner is "A", "B", or "tie"; reason is a nonempty string. factual_objections is a list, possibly empty, of objects with exactly "answer" ("A" or "B"), "claim", "label" ("contradicted" or "unverified"), and "evidence" (a nonempty explanation). Distinguish an established contradiction from an unverified claim.
+Evaluate accuracy, specificity, faithfulness, and usefulness using the complete audited reference packet. The reference is evidence, not a required script. Missing optional detail is not automatically a false claim. Label a factual objection contradicted only when supplied evidence establishes the contradiction; otherwise label it unverified. Do not treat absence from the reference as proof of falsehood. Resolve a conflict between a summary and direct evidence in favor of the direct evidence and explain it.
+
+Pairs:
+[
+  {
+    "id": "p-dd85420a3336c01b",
+    "question": "Why does Garry Tan say the premium on doing YC is bigger than ever and that the gap between YC and second place has grown?",
+    "A": "**Correction:** Garry Tan didn't make this claim. Sam Altman did, while Tan was hosting their Startup School 2026 conversation in July. Altman noted that he could say it while Tan, as YC's current head, probably couldn't. I know of no statement by either of them that the gap between YC and second place has grown. That part looks like an embellishment of the original remark.\n\n**What Altman said around the claim:**\n- It came up while discussing co-founder matching, which Altman said had once been the main limit on how many good startups YC could fund.\n- He stressed getting into networks early, because relationships take years to compound.\n- He said moving to the Bay Area was historically the best way to meet future co-founders, though he now feels less sure of that.\n- He didn't give a detailed reason why the premium is larger now.\n\n**Plausible reasons (my inference, not his stated argument):**\n- AI makes building cheap, so access to people, investors and a dense peer group matters relatively more.\n- YC acceptance raises a startup's standing with investors.\n- A batch supplies colleagues, solutions from peers, and fast-deciding early customers.\n\n**Weighing it:** The claim comes from a former YC president at YC's own event, with no supporting data. Treat it as an informed insider opinion, not evidence.\n\n**Decision criteria if you're considering YC:**\n- **Network:** YC is worth more if you lack a co-founder, Bay Area connections, or credibility with investors.\n- **Leverage:** It's worth less if you already have strong traction or a network, since your existing leverage may matter more.\n- **Next step:** Talk to recent founders from several batches and ask what they'd have lacked without YC.",
+    "B": "Garry Tan, as YC's president and CEO, argues that the value of going through YC has risen, not fallen, as startup tools have gotten cheaper. His reasoning generally runs along these lines:\n\n- **Speed matters more in the AI era.** Small teams can now build and reach revenue much faster. When winners pull ahead in months rather than years, a structured three-month sprint with intense feedback is worth more.\n- **Network effects compound.** With thousands of alumni companies, YC offers a ready base of early customers, hires, and advisors. Rival programs can copy the curriculum but not decades of accumulated network.\n- **Signal in a noisy market.** Building is cheap, so many more startups exist. Investors lean harder on trusted filters, and YC's brand plus Demo Day concentrate investor attention in a way smaller accelerators cannot.\n- **Selection and peer density.** More applicants let YC be more selective, and stronger batches make the peer group itself more valuable.\n- **Outcome data.** He points to recent batches reaching meaningful revenue unusually quickly as evidence that the advantage is widening.\n\n**What's uncertain:** This is the view of YC's own leader, so it is partly advocacy. Independent, survivorship-adjusted comparisons of YC versus other accelerators are limited. Faster revenue growth may also reflect broader AI tailwinds rather than YC itself.\n\n**If you're deciding whether to apply:** YC's premium matters most if you are a first-time founder, lack investor connections, or sell to other startups. It matters less if you already have strong traction, warm investor access, or a niche where a specialist accelerator or industry-specific investor adds more. Weigh the standard dilution against how much the network and signal would speed up your next funding round.",
+    "reference": {
+      "actual_stance": "False attribution. Sam Altman said it, in his closing conversation with Garry Tan at Startup School 2026, prefacing it with 'I can say this, Garry probably can't'. He explained the widening gap as network effects: networks put you where you meet future cofounders (he met his OpenAI cofounders years earlier), and that takes a long time to compound. Just before, he said YC's once-heretical push to move to San Francisco was clearly right, though he has less intuition about it now.",
+      "category": "attribution",
+      "errors": [
+        "Attributing the claim to Garry Tan.",
+        "Explaining it with reasons the source does not give (bigger checks, brand) as if quoted."
+      ],
+      "evidence": [
+        {
+          "quote": "it used to be very heretical that YC told people they had to move to San Francisco. And looking back, it was clearly right.",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "16:25"
+        },
+        {
+          "quote": "I also think that I I can say this, Gary probably can't. I I I think the premium on doing YC is bigger now than it's like ever been before.",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "16:56"
+        },
+        {
+          "quote": "the distance between like YC and second place is has expanded. And this is a reminder of the power of",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "16:56"
+        },
+        {
+          "quote": "network effects.",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "17:28"
+        },
+        {
+          "quote": "the people that I started OpenAI with, I met like many many years in some cases before uh starting OpenAI",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "17:28"
+        },
+        {
+          "quote": "the sooner you can put yourself just in a flow where you're going to meet the people that will be your eventual co-founders",
+          "source_date": "2026-07-28",
+          "source_id": "yt-ZIaOBAjvc38",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-ZIaOBAjvc38.md",
+          "source_sha256": "787a4fcc4e7ff821a33f2f298af5cdf77768a84d074a00cb561c38ce3852bf3c",
+          "source_title": "Sam Altman: \"Never a Better Time to Do a Startup\"",
+          "speaker": "altman",
+          "speaker_basis": "conversation with Garry Tan; answer inferred from content (refers to people he started OpenAI with)",
+          "timestamp": "17:28"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold says Altman prefaced the line 'because it would sound self-serving coming from YC's current CEO'. The raw gives the preface but not the reason. Kept as an acceptable inference, not a required point.",
+        "Captions spell the name 'Gary'; quotes keep the caption spelling."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-17",
+      "key_status": "confirmed_with_interpretation_flag",
+      "primary_sources": [
+        "yt-ZIaOBAjvc38"
+      ],
+      "question": "Why does Garry Tan say the premium on doing YC is bigger than ever and that the gap between YC and second place has grown?",
+      "required_points": [
+        "Corrects the attribution: Sam Altman said it, not Garry Tan.",
+        "Gives his reason: network effects (meeting future cofounders, compounding over time)."
+      ],
+      "supporting_points": [
+        "Prefaced with 'I can say this, Garry probably can't'.",
+        "Context: Startup School 2026 conversation with Garry Tan.",
+        "Context: moving to SF was clearly right in hindsight; he has less intuition about it now.",
+        "Inference that it would sound self-serving from YC's CEO is reasonable but not stated in the source."
+      ],
+      "uncertainty": [
+        "Speaker attribution is inferred from content (answer references OpenAI cofounders; Tan asks the questions). The description confirms the conversation format."
+      ],
+      "vault": "yc"
+    }
+  },
+  {
+    "id": "p-c8a0257afdc78052",
+    "question": "Jessica Livingston has said early YC deliberately backed the most aggressive, ruthless founders because they're the ones who win. Why did she believe that?",
+    "A": "**The premise is mistaken.** I know of no statement in which Jessica Livingston said early YC deliberately backed the most aggressive or ruthless founders. Her account of what she screened for points the other way.\n\n**What she actually looked for, and why**\n\n- **Earnestness, determination, flexible-mindedness, and a healthy co-founder relationship.** She treated the co-founder relationship as the most important of these. At YC's stage there were no metrics, so founders had to be judged on what they could become, and she was the partner who read character.\n- **No conceit.** Early on she declined applicants she judged conceited. She credits that choice with shaping YC's alumni culture, which she describes as earnest and not pretentious.\n- **Independent-mindedness.** A brand-new idea goes against convention, so a conventional-minded person can't pursue one.\n- **Benevolence, not squeezing.** She says early YC was not money-driven and helped failing founders rather than pressing them over small outcomes.\n\n**Where the \"aggressive\" idea may come from**\n\n- **\"Formidable.\"** Paul Graham says this word comes from his and Livingston's private vocabulary. He defines it as someone who gets what they want in any situation. That is about effectiveness, not ruthlessness, and he frames it from an investor's point of view.\n- **Persistence versus obstinacy.** Graham praises founders who hold firm on the goal but listen intently to criticism, not those who bulldoze.\n- **Determination.** Determination is on Livingston's own list, but it sits beside earnestness and flexibility.\n\n**Uncertainty**\n\nI can't rule out an offhand remark I'm unaware of. However, it would contradict her consistently stated criteria.\n\n**Next step**\n\nIf you have a specific clip or quote, check whether it is actually Graham's \"formidable\" definition or a paraphrase by someone else. If it is genuinely hers, see whether \"aggressive\" there means relentless determination. That reading would fit her views. \"Ruthless\" would not.",
+    "B": "**The premise appears to be mistaken.** I don't know of Jessica Livingston saying that early YC deliberately backed the most aggressive or ruthless founders. Her known views point the other way, so it's worth checking where the claim came from before relying on it.\n\n**What she actually emphasized**\n\n- **Determination over ruthlessness.** Livingston has consistently named determination as the trait that best predicts startup success. She means persistence through rejection, setbacks and near-death moments, not willingness to harm others. Her interviews with early founders showed that most successful startups survived by not giving up.\n- **Character as a filter.** At YC she was widely regarded as the partner with the sharpest read on people. Part of that role was screening out founders who seemed dishonest, manipulative or unpleasant. YC's stated view was that bad actors tend to fail. They struggle to recruit, keep cofounders, earn customer trust and survive scrutiny. They also create reputational risk for the investor.\n- **Resourcefulness and earnestness.** YC prized founders who were scrappy and who pushed hard for users and deals. That can look \"aggressive\" from outside, but it is aimed at solving problems, not at beating people at any cost.\n\n**Where uncertainty remains**\n\nI can't rule out an offhand remark, such as praise for founders who push hard. That kind of comment could have been paraphrased into \"ruthless.\" But as a deliberate investment thesis, the claim contradicts her well-documented positions.\n\n**What would change this answer**\n\nA primary recording or transcript showing her endorsing ruthlessness as a selection criterion would change it. If you find the claim somewhere, check:\n\n1. Whether it is a direct statement or a paraphrase.\n2. Whether \"aggressive\" means ambitious and determined, or willing to act unethically.\n3. Whether the view is actually hers, or comes from another investor or a commentator.",
+    "reference": {
+      "absence_check": "Corpus check on 2026-10-19 across all 24 YC raw files: the whole word 'ruthless' appears only in yt-8d-cApFHjeY at 17:44, where Livingston describes other investors, not founders she selected. Her selection criteria and rejection of conceited applicants are supported by the quoted passages.",
+      "actual_stance": "False premise: the sources contain no such statement, and she said the opposite. Her role in early selection was judging character: did applicants seem earnest, determined and flexible-minded, and how did the cofounders relate. She was careful to fund only earnest people and rejected people she could tell were conceited. She describes YC as feeling like a family with her as its mom, and herself as soft and sensitive at a time when investors were hardened and aggressive, adding 'ruthless' for a couple she knew. Determination is one trait she looked for; ruthlessness is not.",
+      "category": "abstain",
+      "errors": [
+        "Accepting the premise and explaining why ruthless founders win.",
+        "Recasting PG's 'formidable' as Jessica endorsing ruthlessness."
+      ],
+      "evidence": [
+        {
+          "quote": "did they seem earnest did they seem determined were they flexible minded",
+          "source_date": "2018-07-11",
+          "source_id": "yt-8d-cApFHjeY",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-8d-cApFHjeY.md",
+          "source_sha256": "95f64747db17a4e4a661cccb9de3f154f03df1df92b2764b3e8c45bde4b8176f",
+          "source_title": "Jessica Livingston Shares 9 Things She Learned From Founding YC",
+          "speaker": "livingston",
+          "speaker_basis": "solo conference talk",
+          "timestamp": "14:51"
+        },
+        {
+          "quote": "from the beginning I was very careful about only funding earnest people",
+          "source_date": "2018-07-11",
+          "source_id": "yt-8d-cApFHjeY",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-8d-cApFHjeY.md",
+          "source_sha256": "95f64747db17a4e4a661cccb9de3f154f03df1df92b2764b3e8c45bde4b8176f",
+          "source_title": "Jessica Livingston Shares 9 Things She Learned From Founding YC",
+          "speaker": "livingston",
+          "speaker_basis": "solo conference talk",
+          "timestamp": "14:51"
+        },
+        {
+          "quote": "if I could tell someone was a conceited we did not fund them",
+          "source_date": "2018-07-11",
+          "source_id": "yt-8d-cApFHjeY",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-8d-cApFHjeY.md",
+          "source_sha256": "95f64747db17a4e4a661cccb9de3f154f03df1df92b2764b3e8c45bde4b8176f",
+          "source_title": "Jessica Livingston Shares 9 Things She Learned From Founding YC",
+          "speaker": "livingston",
+          "speaker_basis": "solo conference talk",
+          "timestamp": "15:27"
+        },
+        {
+          "quote": "it felt like a family and I was its mom",
+          "source_date": "2018-07-11",
+          "source_id": "yt-8d-cApFHjeY",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-8d-cApFHjeY.md",
+          "source_sha256": "95f64747db17a4e4a661cccb9de3f154f03df1df92b2764b3e8c45bde4b8176f",
+          "source_title": "Jessica Livingston Shares 9 Things She Learned From Founding YC",
+          "speaker": "livingston",
+          "speaker_basis": "solo conference talk",
+          "timestamp": "17:44"
+        },
+        {
+          "quote": "I was soft and sensitive at a time when investors tended to be hardened and aggressive and I'll throw in ruthless - for a couple of them that I know",
+          "source_date": "2018-07-11",
+          "source_id": "yt-8d-cApFHjeY",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-8d-cApFHjeY.md",
+          "source_sha256": "95f64747db17a4e4a661cccb9de3f154f03df1df92b2764b3e8c45bde4b8176f",
+          "source_title": "Jessica Livingston Shares 9 Things She Learned From Founding YC",
+          "speaker": "livingston",
+          "speaker_basis": "solo conference talk",
+          "timestamp": "17:44"
+        },
+        {
+          "quote": "it's someone who gets what they want in any situation.",
+          "source_date": "2026-09-03",
+          "source_id": "yt-5bxp78i96S8",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/yc/raw/yt-5bxp78i96S8.md",
+          "source_sha256": "7c31ea774eca3d88e387db71b65eefdd5b85b1ab4c0483ba2c44923c1e743243",
+          "source_title": "Paul Graham On Startups, Ambition, and Great Founders",
+          "speaker": "pg",
+          "speaker_basis": "interview answer, inferred from content",
+          "supports": "context only: PG's definition of 'formidable'; not part of the Jessica key",
+          "timestamp": "9:57"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold had must_cite empty while listing evidence from yt-8d-cApFHjeY. Set must_cite to that source, since citing the counter-evidence is the correct behavior for this false premise.",
+        "Added 'determined' from her own criteria so an answer mentioning determination is not marked as accepting the premise."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/yc-ask12.yaml",
+      "gold_sha256": "19988bdab5353a34a0c6ee840ca23552c6818ff7d76e852f4be9bab75e220290",
+      "id": "yc-20",
+      "key_status": "confirmed_expanded",
+      "primary_sources": [
+        "yt-8d-cApFHjeY"
+      ],
+      "question": "Jessica Livingston has said early YC deliberately backed the most aggressive, ruthless founders because they're the ones who win. Why did she believe that?",
+      "required_points": [
+        "Rejects the premise; there is no such statement, and her stated approach was the opposite.",
+        "She funded earnest people and turned down conceited ones."
+      ],
+      "supporting_points": [
+        "She looked for earnest, determined, flexible-minded founders and healthy cofounder relationships.",
+        "She described herself as soft and sensitive when investors were hardened, aggressive and sometimes ruthless.",
+        "YC felt like a family and she was its mom.",
+        "Context only: PG separately says investors want 'formidable' founders who get what they want; that is not Jessica's claim and is not ruthlessness."
+      ],
+      "uncertainty": [],
+      "vault": "yc"
+    }
+  },
+  {
+    "id": "p-9affc45058d920b8",
+    "question": "What's a good monthly churn rate for a paid online community, and when should I worry about it? What would Alex Hormozi say?",
+    "A": "# Monthly churn benchmarks for a paid community\n\nFor a paid online community:\n\n- **Under 10% monthly churn** is excellent.\n- **Around 20%** (about 80% retention) is typical.\n- **Above 30%** means fewer than 7 in 10 members stay each month. At that point retention is probably your highest-return problem, ahead of acquisition.\n\nHalving churn roughly doubles lifetime value, so small improvements matter a lot.\n\n## When to worry\n\nLook at churn by member tenure, not just the overall average. Churn is normally highest in months one to three. It drops to around 10% after day 90 and to around 2% by month six. So:\n\n- **Worry** if members who have stayed past 90 days still leave at high rates. That suggests the core value isn't landing.\n- **Don't panic** about high month-one churn, or high churn in a community under six months old. A new community has no long-tenured members yet, so its average looks worse than it really is. Don't overhaul everything because of it.\n- **Track joins against cancels every month.** Call the business growing, flat or declining based on which is bigger.\n\n## Hormozi's likely advice\n\nMake it your goal to get members past day 90 and month six, rather than pushing the average down. In practice:\n\n1. **Ask why people leave.** Message everyone who cancels, tag the reason, and fix the top one or two reasons every 20 or so cancels.\n2. **Ask your longest members why they stay**, then do more of that.\n3. **Cut overwhelm.** Offer less, and get new members a quick win within 24 hours.\n4. **Build belonging.** Show up daily, run one weekly live call, and introduce newcomers to about ten regulars.\n5. **Add a discounted annual plan.** Add a cheaper tier only if your ideal members say price is the problem.\n\n## Caveats\n\nThese benchmarks come from averages on Skool, a platform Hormozi co-founded and promotes, so they aren't neutral industry data. They fit online consumer services, but not every niche. High-ticket or professional communities should aim lower than 10%.",
+    "B": "# Monthly Churn for a Paid Online Community\n\n**Rough benchmarks (these are general patterns, not hard standards):**\n- **Under 5%:** Strong. This usually means members get ongoing value, not just a one-time payoff.\n- **5–10%:** Typical for many paid communities, especially those priced under about $100/month.\n- **Over 10%:** A warning sign. At 15% or more, you're replacing your whole membership roughly every 6–7 months.\n\nContext changes these numbers. Low-price hobby communities churn more than high-ticket professional ones. Annual plans hide churn until renewal. Communities built around a single outcome, like \"launch your first product,\" churn naturally once members succeed.\n\n**When to worry:**\n- Churn is rising for two or three months in a row.\n- Most cancellations happen in the first 30–60 days. This points to an onboarding problem rather than a value problem.\n- Churn is high enough that acquisition can't outpace it, so growth stalls.\n- The cost to acquire a member is more than about a third of their lifetime value.\n\n**Hormozi's likely framing:** Alex Hormozi generally treats churn as the ceiling on your business. Your maximum size is roughly new members per month divided by monthly churn. So 100 joins a month at 10% churn caps you near 1,000 members. He emphasizes these levers:\n- Fixing the first days of membership through fast wins and personal touchpoints.\n- Raising perceived value before cutting price.\n- Diagnosing why people leave before adding more marketing.\n\nThat's a fair summary of his general approach, not a specific statement about your situation.\n\n**Next steps:**\n1. Calculate churn by joining cohort, not just as a blended average.\n2. Survey or call members who cancel.\n3. Map when cancellations happen and fix the biggest drop-off point first.",
+    "reference": {
+      "actual_stance": "Using Skool platform data that he credits to Sam at Skool: average monthly retention is 80% (20% churn); the best groups churn under 10%; groups under 70% retention (30%+ churn) should make retention their top priority because it is the highest-ROI lever. Churn falls with tenure: 20%+ in months 1 to 3, about 10% or less after day 90, about 2% by month 6. So judge churn by cohort. A community younger than 90 days will show inflated churn, and high month-one churn is normal unless almost everyone leaves. Focus on getting members past month one (onboarding, expectations), day 90 (an outcome) and month 6 (connections). He says these benchmarks fit online and consumer services, not insurance-style or alarm-system subscriptions.",
+      "category": "fresh",
+      "errors": [
+        "Presenting SaaS 3 to 7% churn benchmarks as his view.",
+        "Saying high month-one churn alone means the business is broken.",
+        "Attributing the platform data to a source other than Skool."
+      ],
+      "evidence": [
+        {
+          "quote": "this isn't uh churn for like an insurance premium or an alarm system",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "1:05"
+        },
+        {
+          "quote": "the platform average across School is 80% monthly retention. So said differently, it's 20% churn.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "1:39"
+        },
+        {
+          "quote": "Now the best groups have less than 10% churn, aka 90% retention month over month. The not good groups have less than 70% retention, aka 30% or higher.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "1:39"
+        },
+        {
+          "quote": "you probably need to work on your retention more than anything else. It'll be the highest ROI lever.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "1:39"
+        },
+        {
+          "quote": "you got a double in the LTV per customer",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "2:13"
+        },
+        {
+          "quote": "Now, if you keep someone 90 days, which seems to be the first kind of big churn drop-off point, it drops to around 10% or less.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "3:53"
+        },
+        {
+          "quote": "So, it goes from like 10% to 2%.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "3:53"
+        },
+        {
+          "quote": "if your community or recurring revenue thing is less than 90 days old, then your churn is always going to be inflated",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "4:24"
+        },
+        {
+          "quote": "that's normal for it to be higher than the other months, unless basically everyone's leaving, in which case, yes, you should go fix that.",
+          "source_date": "2026-03-24",
+          "source_id": "yt--j8_YCWZ05Q",
+          "source_path": "/home/mateusz/wwxd-lab/vaults/hormozi/raw/yt--j8_YCWZ05Q.md",
+          "source_sha256": "7d94704fc84af4df1b0e4c7e1cbe4822e6c0f0041666cbc8174f45a6f4d40262",
+          "source_title": "How to Get Your Customers to Stay FOREVER",
+          "speaker": "hormozi",
+          "speaker_basis": "solo video; he relays Skool platform data credited to Sam (Skool)",
+          "timestamp": "4:57"
+        }
+      ],
+      "gold_discrepancies": [
+        "Gold matches raw. Added the scope caveat (online/consumer services, not insurance or alarm subscriptions), the under-90-days caveat and the 'unless everyone leaves' exception.",
+        "Auto-captions spell the platform 'School'; it is Skool. Quotes keep the caption spelling."
+      ],
+      "gold_file": "/home/mateusz/Desktop/pyprograms/wwxd/bench/gold/hormozi-ask12.yaml",
+      "gold_sha256": "8bcb94efac68890dd6bfa11bd3e56d9bc70f83f128f74754f48db8a7203d732e",
+      "id": "hz-05",
+      "key_status": "confirmed_expanded",
+      "primary_sources": [
+        "yt--j8_YCWZ05Q"
+      ],
+      "question": "What's a good monthly churn rate for a paid online community, and when should I worry about it? What would Alex Hormozi say?",
+      "required_points": [
+        "Average about 80% monthly retention (20% churn); best groups under 10% churn.",
+        "Worry when retention is under 70% (churn above 30%): retention becomes the highest-ROI fix.",
+        "Churn depends on tenure: highest in months 1 to 3, about 10% or less after day 90, about 2% by month 6."
+      ],
+      "supporting_points": [
+        "Do not overhaul the business because month-one churn is high, unless basically everyone is leaving.",
+        "A community under 90 days old will show inflated churn.",
+        "Cutting churn from 20% to 10% doubles customer lifetime value.",
+        "Benchmarks fit online/consumer services, not insurance or alarm-type subscriptions.",
+        "Tactics: first-month onboarding, a day-90 outcome, month-6 connections; ask cancellers why, look for patterns."
+      ],
+      "uncertainty": [
+        "The benchmarks are Skool platform averages relayed by Hormozi, not his own measurements. Answers that say so are correct."
+      ],
+      "vault": "hormozi"
+    }
+  }
+]

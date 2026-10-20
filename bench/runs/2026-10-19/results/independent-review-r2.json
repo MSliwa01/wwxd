@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "manifest_sha256": "49567cdb60a4c8d736b1648008a25bf6825ff5e0c0983eda5667be342648e4d5",
+  "reviewer": "independent Opus5.5 high r2",
+  "date": "2026-10-19",
+  "scope": "Read-only diff recheck of run/ against archived manifest d47e8886...; no provider or credential-loader calls, no answer generation, no approval.",
+  "checks": {
+    "harness": true,
+    "fixture_provenance": true,
+    "reference_coverage": true,
+    "wiki_coverage": true,
+    "prompt_equivalence": true,
+    "model_settings": true
+  },
+  "verified": [
+    "MANIFEST.sha256 equals sha256(manifest.json) = 49567cdb...; all 308 frozen_files, 288 external_inputs, 8 script_files and README hashes match on disk; no untracked frozen files.",
+    "fixtures/SHA256SUMS verifies; questions.json identical to r1 archive; PROTOCOL.md identical to frozen copy.",
+    "All 240 wiki pages and both context files byte-identical to r1 archive.",
+    "All 24 raw prompts byte-identical to r1; all 24 grounded prompts equal r1 grounded + CONTEXT_TRAILER only, so the arms differ only by appended prefix+context+trailer.",
+    "Six r1 should-fix items are implemented: Opus requires subtype success + stop_reason end_turn (terminal_reason None/completed/end_turn); Gemini STOP only; compaction check on type/subtype/item.type; Sol allows only reasoning/agent_message items; per-family chars/token estimates and paired 0.5x-2.0x token-delta eligibility; source-ID/wiki/context leak flags; trailing reminder; Gemini concurrency 1 with 429 >=60s, retryDelay capped 120s.",
+    "Normal terminal cases: all 108 pilot attempt logs (36 per family) parse ok under the new rules (Sol turn.completed, Opus success/end_turn/completed, Gemini STOP) and all yield integer actual_input_tokens.",
+    "Paired-token eligibility: pilot grounded-minus-raw deltas fall at 0.98-1.02x of the frozen per-family estimate for all 36 pairs, well inside 0.5-2.0x, so the tolerance does not spuriously exclude normal pairs. Expected delta covers prefix+context+trailer. Ineligible pairs stay in the denominator, receive blocked judgment rows and are excluded from primary_eligible; report.py rechecks both.",
+    "Retry semantics: timeouts, 429/5xx and network errors are retryable at most once; parser/content, truncation, non-STOP/non-end_turn, context, tool and model-mismatch failures are not. Each attempt journals its retry delay before sleeping.",
+    "Capacity: max per-family estimate + 8192 output allowance is 163265 (Sol, 500000), 235082 (Opus, 1000000), 181196 (Gemini, 1048576).",
+    "No APPROVED.json present; integrity.approved() gates every provider path. Models, effort, no-tool CLI flags and Gemini no-generation-override are unchanged from r1."
+  ],
+  "notes": [
+    "Non-blocking: for Opus, a nonzero CLI exit with empty stderr passes stdout to transport_failure, and the init event's \"permissionMode\" matches the 'permission' exclusion, so the outer Opus transport retry is in practice unreachable. r1 behaved the same (stdout tail also included the init event). The direction is conservative: fewer retries, failures kept and visible, not tied to arm or outcome. The Claude CLI's internal retries still apply.",
+    "Non-blocking: Sol now treats any non-reasoning/non-agent_message item (e.g., a non-fatal Codex 'error' item) as an isolation failure. That is stricter and not retried, but no pilot log contains such items.",
+    "Cosmetic: two gold_discrepancies notes in references.json still say 'must_cite', one saying citing counter-evidence is correct behavior. The diagnostic judges see this. It affects both arms equally, and JUDGE_BASE forbids rewarding citations.",
+    "Cosmetic: run_tasks uses a 3-worker pool with per-family semaphores, so queued Gemini tasks can briefly hold idle workers. This only costs throughput; it cannot deadlock."
+  ],
+  "blockers": []
+}

@@ -1,0 +1,57 @@
+{
+  "actual_input_tokens": 399,
+  "answer": "Choose idea one, the dental lead-generation and appointment-setting service. \n\nThis option directly leverages your unique industry insights, requires near-zero startup capital, and carries the highest profit margin to replace your $3,400 monthly salary within eighteen months. Idea two ties up over half your savings in illiquid inventory with thin retail margins. Idea three requires almost all your cash for an acquisition that yields only $700 monthly, leaving no emergency buffer and offering poor scalability relative to your time.\n\nYour material assumptions are that local dental practices will pay for qualified patient leads and that you can securely handle patient data. Your decision criteria rest on cash preservation, speed to first revenue, and leveraging existing domain expertise. If you lack basic sales confidence, you could pivot to the vending route, provided you verify the seller's financial records first.\n\nYour first ninety days should follow a strict timeline. Weeks one through thirty should be spent drafting a simple service offer and defining your pricing structure, ideally a flat monthly retainer plus a bonus per booked appointment. Weeks thirty-one through sixty require you to map out fifty local dental clinics that suffer from poor phone etiquette or slow callback times, using your industry knowledge to pinpoint friction. Weeks sixty-one through ninety involve direct outreach through cold calling and visiting offices during off-peak hours to pitch your pilot program to three prospective clients at a discounted rate to secure testimonials. Concurrently, register your business entity and set aside twenty percent of any early revenue for taxes.",
+  "arm": "raw",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 10.193,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "27e58ee7a7681b2ca33b9b57ea5357987112d2e398a05da98cf0df72d08ffc6a"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 513,
+  "event_count": 1,
+  "family": "gemini",
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:28:07.624126+00:00",
+  "format_deviations": [],
+  "id": "newadvice12--advice-hz-06--gemini--raw",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_sha256": "06080d0d47e662fade18eea0528201366f81e5d52e5d552d9077073f5062a365",
+  "question_key": "newadvice12--advice-hz-06",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "newadvice12",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 304,
+      "promptTokenCount": 399,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 399
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 703
+    }
+  ],
+  "words": 252
+}

@@ -1,0 +1,57 @@
+{
+  "actual_input_tokens": 389,
+  "answer": "You are losing candidates because your compensation lags the market and your hiring process is too slow for top-tier talent. At 2 hours per week from founders, your pipeline volume is insufficient to absorb rejections. \n\nThe correct path is to raise cash compensation to $230,000, slightly lower the equity to 0.4%, and dramatically compress your interview loop to under seven days. Large tech firms win on cash and speed. You cannot match their cash, so you must beat them on speed, mission alignment, and autonomy. \n\nDo not hire a recruiting agency; at 25%, you pay $57,000 per hire while retaining a slow internal process. Do not hire an overseas contract team for core architecture; it will slow down your current engineers with code review and integration debt. Do not rely solely on coding agents; current models accelerate implementation but cannot architect complex distributed systems or own technical roadmap decisions. \n\nInstead, founders must immediately increase recruiting time to 8 hours per week each. Reframe the pitch around early technical ownership and direct impact on product-market fit. \n\nIf this adjusted cash offer still fails to secure candidates within 30 days, your material assumption about seed runway efficiency is broken. The decision criteria then shifts: pause direct hiring, engage a specialized fractional engineering partner for senior backend execution, and re-evaluate a larger Series A financing to support market-rate talent acquisition before burning through your seed runway.",
+  "arm": "raw",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 7.444,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "d9196b7e668674bb421342a43af27c9cc908470a200e54f296428eb226fb25c6"
+    }
+  ],
+  "chars_per_token": 3.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/mateusz/Desktop/pyprograms/cv/notes/site-audit-2026-10-19/wwxd-eval-v2/run/scripts/gemini_once.py",
+    "gemini-3.5-flash-lite"
+  ],
+  "effort": "provider defaults; no effort or generation override",
+  "error": "",
+  "estimated_input_tokens": 521,
+  "event_count": 1,
+  "family": "gemini",
+  "finish_reasons": [
+    "STOP"
+  ],
+  "finished": "2026-10-19T11:30:56.958060+00:00",
+  "format_deviations": [],
+  "id": "newadvice12--advice-yc-05--gemini--raw",
+  "observed_models": [
+    "gemini-3.5-flash-lite"
+  ],
+  "prompt_sha256": "089b8526f641c2bbf5b50392a0d426c8f82b6b289da1b22bc91fb9812b1557da",
+  "question_key": "newadvice12--advice-yc-05",
+  "requested_model": "gemini-3.5-flash-lite",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "newadvice12",
+  "usage_events": [
+    {
+      "candidatesTokenCount": 300,
+      "promptTokenCount": 389,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 389
+        }
+      ],
+      "serviceTier": "standard",
+      "totalTokenCount": 689
+    }
+  ],
+  "words": 233
+}

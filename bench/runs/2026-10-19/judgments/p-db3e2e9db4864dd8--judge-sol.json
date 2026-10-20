@@ -1,0 +1,49 @@
+{
+  "answer_family": "opus",
+  "batch_id": "diagnostic12--sol--opus--batch-01",
+  "error": "",
+  "id": "p-db3e2e9db4864dd8--judge-sol",
+  "judge_family": "sol",
+  "order": [
+    "raw",
+    "grounded"
+  ],
+  "pair_id": "p-db3e2e9db4864dd8",
+  "primary_eligible": true,
+  "prompt_sha256": "b154d37798aa391c5c7827b6d3b81c48a6c60acc8492f5144d823ac47a5789f2",
+  "question_key": "diagnostic12--yc-08",
+  "status": "ok",
+  "suite": "diagnostic12",
+  "verdict": {
+    "A": {
+      "accuracy": 4,
+      "faithfulness": 3,
+      "specificity": 3,
+      "usefulness": 4
+    },
+    "B": {
+      "accuracy": 4,
+      "faithfulness": 4,
+      "specificity": 5,
+      "usefulness": 4
+    },
+    "factual_objections": [
+      {
+        "answer": "A",
+        "claim": "Seibel's advice is that a seed round should take only a few weeks and follow-ups without commitments rarely convert.",
+        "evidence": "The evidence supports raising quickly once growth creates leverage and explains investors' option-like behavior. It does not establish a prescribed duration or a conversion frequency for follow-ups.",
+        "label": "unverified"
+      },
+      {
+        "answer": "B",
+        "claim": "Runway below about six months calls for prioritizing profitability over further pitching.",
+        "evidence": "The Justin.tv example supports the value of focusing on profitability in that situation. It does not establish a general six-month threshold.",
+        "label": "unverified"
+      }
+    ],
+    "id": "p-db3e2e9db4864dd8",
+    "reason": "B better explains the central mechanism: company progress creates leverage and investor pursuit, while prolonged follow-ups give investors an option. Its Justin.tv example accurately supports that explanation. A recognizes the distraction and importance of traction but gives greater emphasis to fundraising process tactics. Both add timing prescriptions not established by the packet.",
+    "winner": "B"
+  },
+  "winner": "grounded"
+}

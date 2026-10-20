@@ -1,0 +1,101 @@
+{
+  "actual_input_tokens": 2729,
+  "answer": "**Recommendation: focus on self-serve this year, keep the logistics deals warm without building for them, and restructure pricing.**\n\n**Runway math**\n- $640k ÷ $45k = about 14 months of cash.\n- Self-serve is $6,300/month today. At 15% monthly growth it reaches about $34k/month in 12 months and brings in about $200k cumulatively. That stretches runway to roughly 18–20 months, or near break-even if growth holds.\n- Growth will decay, but even 8–10% a month materially extends runway.\n- The enterprise deal pays $7.5k/month, and the first dollar likely lands around month 9–11: building plus a SOC 2 Type II observation window plus 6–7 months of procurement. That is close to when you'd need to be fundraising, and it carries real risk of slipping.\n- On-prem plus custom fields will also tie up a three-person team long after the sale.\n\n**Why self-serve fits**\nSelf-serve compounds, gives you investor-legible growth metrics for a raise around months 6–8, and doesn't depend on one buyer's timeline. The planned docs, document types and dashboard directly drive activation and expansion.\n\n**Enterprise, kept warm**\n- Offer the logistics companies a hosted pilot now.\n- Ask for an LOI or a paid design-partner fee.\n- Start cheap SOC 2 readiness (policies, automation tooling) only if it's low-effort.\n- Skip on-prem entirely.\n\n**Pricing changes**\n- **Introduce tiers.** $210 average is low for invoice extraction. Use a free or low trial, then plans at roughly $99, $299 and $799 with included volume. Charge overage above that.\n- **Add a monthly minimum** and an annual prepay discount to pull cash forward.\n- **Grandfather existing customers** for 6 months.\n- **Gate premium features** such as the dashboard, extra document types and webhooks to higher tiers.\n\n**Revisit enterprise if:**\n- Monthly growth stays below about 7% for three months, or\n- A logistics buyer prepays enough to fund the build, or\n- Both companies sign binding commitments together worth over $180k a year.",
+  "arm": "raw",
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "",
+      "exit_code": 0,
+      "retry_delay_seconds": null,
+      "seconds": 16.142,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e715f168c2218010a7b754ecd6d96667d12155b396f711d36c03c1eb61714ee2"
+    }
+  ],
+  "chars_per_token": 2.44,
+  "command": [
+    "claude",
+    "-p",
+    "--model",
+    "claude-opus-5-5",
+    "--effort",
+    "high",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--tools",
+    "",
+    "--strict-mcp-config",
+    "--settings",
+    "{\"disableAllHooks\":true}",
+    "--safe-mode",
+    "--restricted",
+    "--disable-slash-commands",
+    "--no-session-persistence",
+    "--no-chrome",
+    "--permission-prompts",
+    "none"
+  ],
+  "effort": "high",
+  "error": "",
+  "estimated_input_tokens": 764,
+  "event_count": 10,
+  "family": "opus",
+  "finish_reasons": [
+    "success",
+    "end_turn",
+    "completed"
+  ],
+  "finished": "2026-10-19T11:29:08.157619+00:00",
+  "format_deviations": [
+    "outside descriptive 150..300 word band around approximate 250-word instruction"
+  ],
+  "id": "newadvice12--advice-yc-02--opus--raw",
+  "observed_models": [
+    "claude-opus-5-5"
+  ],
+  "prompt_sha256": "61a14aedfb8bb6c121d5366ac1458634b38f68c12c40610364049fea7f4d97f1",
+  "question_key": "newadvice12--advice-yc-02",
+  "requested_model": "claude-opus-5-5",
+  "serving_model_attested": true,
+  "status": "ok",
+  "suite": "newadvice12",
+  "usage_events": [
+    {
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 1159,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "cache_creation_input_tokens": 1159,
+      "cache_read_input_tokens": 1568,
+      "fallback_credit": null,
+      "inference_geo": "global",
+      "input_tokens": 2,
+      "iterations": [
+        {
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 1159,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "cache_creation_input_tokens": 1159,
+          "cache_read_input_tokens": 1568,
+          "input_tokens": 2,
+          "output_tokens": 1224,
+          "type": "message"
+        }
+      ],
+      "output_tokens": 1224,
+      "output_tokens_details": {
+        "thinking_tokens": 502
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": "standard",
+      "speed": "standard"
+    }
+  ],
+  "words": 320
+}
