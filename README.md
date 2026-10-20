@@ -4,9 +4,14 @@
 [![Python 3.10 to 3.13](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue)](https://github.com/MSliwa01/wwxd/blob/main/pyproject.toml)
 [![MIT license](https://img.shields.io/badge/license-MIT-green)](https://github.com/MSliwa01/wwxd/blob/main/LICENSE)
 
-What would X do? wwxd turns a person's talks, podcasts and essays into a wiki of
-their positions, with every quote checked against the source. Your agent then
-answers the way that person would, and shows you where they said it.
+Build a source-linked knowledge base from expert talks, podcasts and essays,
+then use it as context in conversations with a language model. wwxd discovers
+and fetches sources, an agent organises them into a Markdown wiki, and the CLI
+checks quoted passages against the originals.
+
+Compare how experts approach a problem, explore where they disagree and trace
+an answer back to what they actually said. "What would X do?" is one way to use
+the knowledge base.
 
 Answers are inferred from public sources by a language model. They are not
 statements by these people, and none of them is affiliated with or endorses wwxd.
@@ -64,40 +69,38 @@ The full answer is question `op-hz-06` in
 
 ## Results
 
-On 40 questions across a Hormozi vault and a Y Combinator vault, a blind judge
-preferred the wwxd answer every time.
+The [October 19 three-model evaluation](bench/runs/2026-10-19/README.md) compares
+answers to the same question with and without the complete knowledge base.
+It includes 12 questions about documented positions and 12 new practical
+business decisions, with blind judging by two external model families for
+each answer family.
 
-| Blind judge, 1 to 5 | Opus 5.5 alone | Opus 5.5 + wwxd |
-|---|---|---|
-| Accuracy | 2.7 | 5.0 |
-| Specificity (vs. generic advice) | 2.0 | 4.9 |
-| Faithfulness | 3.2 | 4.6 |
-| Preferred by the judge | 0 of 40 | 40 of 40 |
+The knowledge base helped clearly with documented positions. On new practical
+decisions, the effect was smaller and depended on the model. This distinction
+matters: recalling an expert's position and giving useful advice are different
+tests.
 
-Three more judges scored the same pairs: Claude Haiku 5.5 (40 of 40 for wwxd), and
-from other model families NVIDIA Nemotron 3 Ultra (39 of 40) and Muse Spark 1.3 (35
-of 36), so this isn't one model grading itself. A judge from Google, Gemini 3.5 Flash
-Lite, preferred wwxd on 34 of 40 with no access to the transcripts
-([details](https://github.com/MSliwa01/wwxd/blob/main/bench/RESULTS.md#a-judge-from-google)).
-A script checked the 160 quotes in the wwxd answers against the transcripts and found
-158 verbatim. The other 2 were video titles.
+Questions, prompts, A/B order and aggregation rules were frozen before answering.
+The published run includes saved answers, judgments, input-context checks and
+source audits. Its report preserves the strict result and separately labels a
+post-hoc analysis that normalises Markdown-wrapped judge output. Failed calls,
+invalid judgments and missing comparisons remain visible.
 
-![Five judges from four labs preferred wwxd on 34 of 40 up to 40 of 40 pairs](https://raw.githubusercontent.com/MSliwa01/wwxd/main/docs/img/chart-judges.png)
+Read the [method, results and limitations](bench/runs/2026-10-19/README.md).
+The findings cover two vaults and this question set.
 
-The other benches are in [docs/benchmarks.md](https://github.com/MSliwa01/wwxd/blob/main/docs/benchmarks.md),
-and the full numbers, setup and caveats in [bench/RESULTS.md](https://github.com/MSliwa01/wwxd/blob/main/bench/RESULTS.md).
+### Earlier evaluations, October 2026
 
-- Told to be decisive "as X", Opus stops hedging but invents its reasons. On 24
-  opinion questions, four judges ranked wwxd first in 93 of 93 judgments.
-- Against Opus with web search, judges preferred wwxd on 34 to 39 of 40 pairs (Muse
-  Spark: 33 of 35). Search mostly finds other people's summaries.
-- On questions the people never answered, every judgment ranked a wwxd answer first.
-- wwxd doesn't predict. A vault of older sources was no better than raw Opus at
-  guessing positions the people took later.
+In an earlier test on 40 questions about the views documented in a Hormozi vault
+and a Y Combinator vault, a blind Gemini judge preferred the grounded answer on
+34 of 40 questions. A script found 158 of 160 cited quotes verbatim in the
+transcripts; the other two were video titles. These are separate runs with a
+different evaluation design.
 
-These runs used Opus 5.5. Sonnet 5.5 works about as well for compiling and nearly as
-well for answering, and Haiku 5.5 ranked last of the three
-([details](https://github.com/MSliwa01/wwxd/blob/main/docs/models-and-cost.md)).
+The earlier [results and caveats](bench/RESULTS.md) and
+[benchmark overview](docs/benchmarks.md) remain available. A held-out test of
+later opinions found no improvement over the model alone: a knowledge base
+of past statements does not establish how a person will think in the future.
 
 ## How it works
 
