@@ -72,6 +72,17 @@ def test_claim_skips_and_releases(vault):
     assert parallel.claim(vault) == IDS[0]
 
 
+def test_claim_rechecks_status_after_taking_it(vault, monkeypatch):
+    # A worker read sources.yaml, then another worker compiled IDS[0] and released it.
+    stale = vault.load_sources()
+    mark_compiled(str(vault.path), IDS[0])
+    reads = iter([stale])
+    real = vault.load_sources
+    monkeypatch.setattr(vault, "load_sources", lambda: next(reads, None) or real())
+    assert parallel.claim(vault) == IDS[1]
+    assert not (parallel.claims_dir(vault) / IDS[0]).exists()
+
+
 @pytest.mark.skipif(os.name == "nt", reason="on Windows claims are never treated as stale")
 def test_stale_claims_are_cleared(vault):
     parallel.claim(vault, pid=2**22 + 12345)  # no such process

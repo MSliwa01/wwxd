@@ -73,6 +73,12 @@ def claim(vault: Vault, pid: int | None = None, skip: frozenset[str] | set[str] 
             (root / source.id).mkdir()
         except FileExistsError:
             continue
+        # Our list may predate another worker compiling this source and releasing its
+        # claim (it marks compiled before releasing), so check again now that we hold it.
+        current = next((s.status for s in vault.load_sources() if s.id == source.id), None)
+        if current != "fetched":
+            (root / source.id).rmdir()
+            continue
         (root / source.id / "pid").write_text(str(pid or os.getpid()))
         return source.id
     return None
